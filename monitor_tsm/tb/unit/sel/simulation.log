@@ -1,0 +1,32 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\sim.vvp
+ASSERT_HITS 0 S5_3_reset_ready spec 5.3 hits=4
+ASSERT_HITS 1 S5_3_reset_valid spec 5.3 hits=4
+ASSERT_HITS 2 S5_3_reset_data spec 5.3 hits=4
+ASSERT_HITS 3 S5_3_invalid_zero spec 5.3 hits=131333
+ASSERT_HITS 4 S5_3_ready_known spec 5.3 hits=393998
+ASSERT_HITS 5 S5_3_valid_known spec 5.3 hits=393998
+ASSERT_HITS 6 S5_3_valid_data_known spec 5.3 hits=262665
+ASSERT_HITS 7 S5_3_single_outstanding spec 5.3 hits=262665
+ASSERT_HITS 8 S5_3_accept_completes_1cy spec 5.3 hits=65667
+ASSERT_HITS 9 S5_3_atomic_response spec 5.3 hits=65667
+ASSERT_HITS 10 S5_3_stall_valid spec 5.3 hits=196998
+ASSERT_HITS 11 S5_3_stall_payload spec 5.3 hits=196998
+ASSERT_HITS 12 S5_3_stall_blocks_req spec 5.3 hits=196998
+ASSERT_HITS 13 S5_3_consume_valid spec 5.3 hits=65666
+ASSERT_HITS 14 S5_3_consume_payload spec 5.3 hits=65666
+ASSERT_HITS 15 S5_3_no_unsolicited spec 5.3 hits=65667
+ASSERT_HITS 16 S5_3_idle_ready spec 5.3 hits=65665
+ASSERT_HITS 17 S5_3_release_ready spec 5.3 hits=2
+ASSERT_HITS 18 B7_candidate_range spec 5.5.7/9.2 hits=262665
+ASSERT_HITS 19 B7_finite_jerk spec 5.5.7/9.2 hits=262341
+ASSERT_HITS 20 B7_label_conditional spec 5.5.7/9.2 hits=262341
+ASSERT_HITS 21 B7_empty_mitigation spec 5.5.7/9.2 hits=324
+ASSERT_HITS 22 B7_selected_accepted spec 5.5.7/9.2 hits=262341
+ASSERT_HITS 23 B7_library_priority spec 5.5.7/9.2 hits=262341
+ASSERT_HITS 24 B7_candidate_exact spec 5.5.7/9.2 hits=262665
+ASSERT_HITS 25 B7_label_exact spec 5.5.7/9.2 hits=262665
+PASS sel: golden=128/128 rows=65664 assertions=26 requests=65667 responses=65666 cycles=394002
+assertion failures: 0, assertions never exercised: 0
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\tb_m_tsmx_sel.sv:460: $finish called at 4334024000 (1ps)
+
+EXIT 0

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-29T10:25:06Z",
+  "old_sha256": "06f78e2967433634fbdd1fbcc268683b5dff6371e962844aa4b8138b93dd097c",
+  "new_sha256": "2aea0d1ae65677ed73ccab83debe8cfd38636a7c7a3672856f304782b9a57346",
+  "changed_functions": [
+    "b1_ingress",
+    "b9_cert",
+    "reusable"
+  ],
+  "basis": "Static time-contract and accumulated-rounding proof; no fit to test data. Lease .5s is frozen P5 fresh_validity, not a tuned threshold.",
+  "domain_proof": "P5 decision ego.t rounds to now. All leases are .5s or expiry fault .06s relative to generated. New-packet apply>=now whenever B1 admits (freeze at cycle5 equality; later freeze B1 stale). Reusable gets phase_reuse=True, requires committed apply<=now; short lease yields phase<.5s, n<=25 and computed x_error remains640. Every registered V1/V3 decision path unchanged; V2 B2/B3/B4/B7 ASTs unchanged from preceding revision.",
+  "position_error_proof": "For n<=640 steps <=.02s, lower integration error <=n + ceil(.02*n*(n-1)/2)+11 spatial LSB, <=4741; velocity error<=n<=640. max(640,bound) preserves original margin on all short P5 leases.",
+  "threshold_fit": false
+}

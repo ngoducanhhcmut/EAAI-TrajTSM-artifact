@@ -1,0 +1,80 @@
+```text
+COMMAND C:\Users\TransformerDA\AppData\Local\Programs\Python\Python313\python.exe -B C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\.agents\skills\vlsit-rtl-generator\scripts\vlsit_rtl_check.py coverage
+== checked by this script (51)
+  SCP-01   no testbench/verification constructs (also P14, P19)
+  NAM-TBL  naming table of section 2: module, ports, reg_/w_, PARA_/LPARA_, types, enums, u_, gen_, p_com_/p_ff_
+  NAM-07   every defined name is at most 30 characters
+  NAM-08   full words from the abbreviation table (warning, heuristic)
+  TYP-02   input wire / output logic / inout wire
+  TYP-01   no signed or two-state hardware types (P21, P22)
+  PAR-01   parameter logic [31:0] PARA_*, localparam logic [31:0] LPARA_* in the parameter port list
+  PAR-02   three comment lines above every parameter
+  PAR-03   magic numbers (P10) as warnings
+  ENM-01   logic-based enum with explicit values, *_type_def
+  ENM-03   FSM case has a default (recovery state)
+  ENM-04   FSM state signal names
+  ENM-05   FSM state members ENUM_ST_*
+  COM-02   every signal assigned in an always_comb has an unconditional default (heuristic, see COM-07)
+  COM-07   no inferred latch: a signal assigned only inside if / case of an always_comb is an error; lint LATCH is an error
+  COM-03   every case has default; no casex
+  COM-04   'x only in the default of a full casez
+  R-019    no if / else-if chain with three or more conditions: use case or casez
+  COM-06   functions are automatic (P9 side effects stay manual)
+  ARI-04   for loop index is an int declared in the for header
+  SEQ-01   always_ff, nonblocking, one clock per process
+  HIE-01   one module per file, file name equals module name
+  HIE-02   a top with instances has no logic of its own (warning)
+  HIE-03   named connections only (P13)
+  HIE-05   genvar declared in the generate-for header
+  FIL-01   file header fields
+  FIL-02   ANSI module declaration
+  FIL-03   no tab characters (P29)
+  SEC-8.1  timescale 1ns/1ps is present
+  CMT-01   a comment before every process and instance (warning)
+  CMT-05   comment lines of at most 100 characters
+  P1       no delay controls
+  P2       no initial
+  P3       no casex
+  P4       no defparam
+  P6       no plain always
+  P7       no always_latch; no latch inferred by an always_comb (see COM-07)
+  P11      no package, import, interface
+  P12      no `define / `undef
+  P13      no positional or .* connections
+  P14      no testbench system tasks
+  P17      inout only in pad/IO modules (warning)
+  P18      commented-out code (warning)
+  P19      no SVA in RTL
+  P20      no reg / wire / integer declarations
+  P21      no bit, byte, shortint, int, longint outside for headers
+  P22      no signed
+  P24      no 'z outside pad modules
+  P25      no synthesis pragmas
+  P26      no hierarchical references, force, fork ...
+  P27      no real, string, event, class, queues
+== checked by lint (vlsit_lint_rtl.py) (6)
+  TYP-03   default_nettype none / undeclared identifiers (P5)
+  COM-05   no combinational loops (P23)
+  ARI-01   explicit operand sizes (width warnings)
+  P5       implicit nets
+  P8       multiple drivers
+  P23      combinational loops
+== checked by reading the RTL (15)
+  NAM-01   zero-based indices of replicated names
+  NAM-05   active-low non-reset signals end in _n
+  COM-01   one process owns each output
+  SEQ-02   next-state in always_comb, registered in always_ff
+  SEQ-04   control and valid state are reset
+  RST-01   one reset style per process
+  RST-02   reset synchronizers in dedicated modules
+  CLK-01   CDC structures (P28)
+  P9       function side effects
+  P15      clock gating by logic
+  P16      both-edge state
+  P28      logic around synchronizers
+  PRT-01   protocol port names
+  SCP-02   synthesis environment record
+  CHK-11   tapeout checklist of section 11
+
+EXIT 0
+```

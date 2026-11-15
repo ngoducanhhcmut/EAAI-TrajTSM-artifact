@@ -1,0 +1,60 @@
+identical 255, different 1, incomplete 0
+  blind_tsmx/928770dcdf3f5f25_blind_tsmx.jsonl first difference at line 147
+determinism rc=1
+{
+ "dump_files": 256,
+ "calls": {
+  "blind_tsmx/b3": 17005,
+  "blind_tsmx/b4": 17017,
+  "none_tsmx/b3": 13737,
+  "none_tsmx/b4": 13749,
+  "stale_tsmx/b3": 12523,
+  "stale_tsmx/b4": 12535,
+  "stale_tsmxc/b3": 2570,
+  "stale_tsmxc/b4": 2582
+ },
+ "distinct_b4": 34767,
+ "distinct_b3": 35633,
+ "over32_fail_closed": 0,
+ "distinct_b3_accept": 15286,
+ "distinct_b3_reject": 20347,
+ "b4_reasons": {
+  "ok": 34767
+ },
+ "rtl_sources_sha256": {
+  "mrmgen/m_tsmx_mrmgen.sv": "aa78feb7f4f6c044c6e8a8a9ff4c4455aecc92393a18c181f47525c4d85d1804",
+  "geom/m_tsmx_geom.sv": "5698dd539c4d817ed12e61859f6c2443672c56355aa481d2f93dd72d6883211b",
+  "geom/m_tsmx_geom_su.sv": "751b275322243bc0840c441590bde2a97c25098ee52a89b0a3f252ad00809fd7",
+  "arith/m_tsmx_arith.sv": "fd59dbe2dbba1059047de2303597f02f44a1cb1b02d4c27451cc20546162c2f8",
+  "arith/m_tsmx_arith_div.sv": "927090be6cd724585a3eae0763df698043c673a8693e0afa8769c080143111aa"
+ }
+}
+shards 24
+vectors rc=0
+mrmgen/shard_0: PASS jobs=6439/6439 nuplan=3000 wall_s=588
+mrmgen/shard_1: PASS jobs=6439/6439 nuplan=3000 wall_s=615
+mrmgen/shard_2: PASS jobs=6439/6439 nuplan=3000 wall_s=610
+mrmgen/shard_3: PASS jobs=6439/6439 nuplan=3000 wall_s=595
+mrmgen/shard_4: PASS jobs=6439/6439 nuplan=3000 wall_s=584
+mrmgen/shard_5: PASS jobs=6439/6439 nuplan=3000 wall_s=650
+mrmgen/shard_6: PASS jobs=6439/6439 nuplan=3000 wall_s=705
+mrmgen/shard_7: PASS jobs=6439/6439 nuplan=3000 wall_s=796
+mrmgen/shard_8: PASS jobs=6439/6439 nuplan=3000 wall_s=901
+mrmgen/shard_9: PASS jobs=6439/6439 nuplan=3000 wall_s=936
+mrmgen/shard_10: PASS jobs=6439/6439 nuplan=3000 wall_s=1041
+mrmgen/shard_11: PASS jobs=5206/5206 nuplan=1767 wall_s=708
+geom/shard_0: PASS jobs=6123/6123 nuplan=3000 wall_s=46
+geom/shard_1: PASS jobs=6123/6123 nuplan=3000 wall_s=55
+geom/shard_2: PASS jobs=6123/6123 nuplan=3000 wall_s=52
+geom/shard_3: PASS jobs=6123/6123 nuplan=3000 wall_s=58
+geom/shard_4: PASS jobs=6123/6123 nuplan=3000 wall_s=56
+geom/shard_5: PASS jobs=6123/6123 nuplan=3000 wall_s=62
+geom/shard_6: PASS jobs=6123/6123 nuplan=3000 wall_s=75
+geom/shard_7: PASS jobs=6123/6123 nuplan=3000 wall_s=88
+geom/shard_8: PASS jobs=6123/6123 nuplan=3000 wall_s=101
+geom/shard_9: PASS jobs=6123/6123 nuplan=3000 wall_s=102
+geom/shard_10: PASS jobs=6123/6123 nuplan=3000 wall_s=125
+geom/shard_11: PASS jobs=5756/5756 nuplan=2633 wall_s=128
+distinct nuPlan calls verified on RTL: B4 34767/34767, B3 35633/35633
+ALL PASS
+check rc=0

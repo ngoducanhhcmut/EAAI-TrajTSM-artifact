@@ -1,0 +1,14 @@
+[
+  {
+    "name": "fsm_twohot",
+    "assertion": 18,
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "brake_low",
+    "assertion": 17,
+    "killed": true,
+    "exit": 1
+  }
+]

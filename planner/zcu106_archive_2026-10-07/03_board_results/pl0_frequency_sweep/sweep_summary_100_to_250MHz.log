@@ -1,0 +1,44 @@
+# 07/10/2026 — scripts/board_pl0_sweep.py: quet clock PL0 (VLA-Traj) bang PL0_REF_CTRL (IOPLL 1500 MHz / div), cung bitstream v2d.
+# Timing ky (Vivado) o 150 MHz; nguong loi that tren board nam giua 214,3 va 250 MHz. TSM (PL2 187,5 MHz) khong doi.
+# Dong dau (100 MHz) nam o phan tren cua output, bi cat; ket qua 100 MHz xem full_demo/uart_full_demo_100MHz_DAT.log va bang tong ket.
+# ----- NGUYEN VAN (khong chinh sua) -----
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': True, 'wp': ('35/35', '21'), 'a': '35/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '44.09'}
+=== PL0 = 150.0 MHz (div 10) ===
+  xsdb: PL0_REF_CTRL = 0x01010A00 -> PL0 = 150.0 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': True, 'wp': ('35/35', '21'), 'a': '35/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '40.10'}
+=== PL0 = 166.7 MHz (div 9) ===
+  xsdb: PL0_REF_CTRL = 0x01010900 -> PL0 = 166.7 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': True, 'wp': ('35/35', '21'), 'a': '35/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '36.15'}
+=== PL0 = 187.5 MHz (div 8) ===
+  xsdb: PL0_REF_CTRL = 0x01010800 -> PL0 = 187.5 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': True, 'wp': ('35/35', '21'), 'a': '35/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '32.13'}
+=== PL0 = 214.3 MHz (div 7) ===
+  xsdb: PL0_REF_CTRL = 0x01010700 -> PL0 = 214.3 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': True, 'wp': ('35/35', '21'), 'a': '35/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '28.13'}
+=== PL0 = 250.0 MHz (div 6) ===
+  xsdb: PL0_REF_CTRL = 0x01010600 -> PL0 = 250.0 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING
+  -> {'ok': False, 'wp': ('0/35', '18640201'), 'a': '24/35', 'b': '15/15', 'c': '3/3', 'tsm': '8.00 .. 8.00', 'traj': '24.14', 'why': 'khong thay DEMO: DAT', 'tail': [' 9 | (  22.59,   -1.48) | KHONG     | 24.15   | VETO    | GRANT    | 8.00  <-- LECH', '10 | (  22.11,   -1.70) | KHONG     | 24.14   | VETO    | GRANT    | 8.00  <-- LECH', '14 | (  22.29,   -1.56) | KHONG     | 24.14   | VETO    | GRANT    | 8.00  <-- LECH', '15 | (  22.29,   -1.73) | KHONG     | 24.14   | VETO    | GRANT    | 8.00  <-- LECH', '16 | (  22.48,   -1.63) | KHONG     | 24.14   | VETO    | GRANT    | 8.00  <-- LECH']}
+=== TONG KET QUET PL0 ===
+ 100.0 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 60.06 ms | TSM 8.00 .. 8.00 ms
+ 136.4 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 44.09 ms | TSM 8.00 .. 8.00 ms
+ 150.0 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 40.10 ms | TSM 8.00 .. 8.00 ms
+ 166.7 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 36.15 ms | TSM 8.00 .. 8.00 ms
+ 187.5 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 32.13 ms | TSM 8.00 .. 8.00 ms
+ 214.3 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 28.13 ms | TSM 8.00 .. 8.00 ms
+ 250.0 MHz: SAI | WP ('0/35', '18640201') | TSM[A] 24/35 | [B] 15/15 | [C] 3/3 | Traj 24.14 ms | TSM 8.00 .. 8.00 ms  (khong thay DEMO: DAT)
+tra PL0 ve 100 MHz ...
+  xsdb: PL0_REF_CTRL = 0x01010F00 -> PL0 = 100.0 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING

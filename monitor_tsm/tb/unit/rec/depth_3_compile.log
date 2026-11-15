@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\iverilog.exe -g2012 -s tb_m_tsmx_rec -P tb_m_tsmx_rec.DEPTH=3 -I C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\depth_3.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\rec\m_tsmx_rec.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\rec\m_tsmx_rec.sv:120: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\rec\m_tsmx_rec.sv:120: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\rec\m_tsmx_rec.sv:144: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\rec\m_tsmx_rec.sv:171: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+
+EXIT 0

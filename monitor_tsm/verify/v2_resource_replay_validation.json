@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "equal_fields": {
+    "inputs": true,
+    "counts": true,
+    "accepted": true,
+    "counterexamples": true,
+    "examples": true,
+    "min_separation_residual": true
+  },
+  "inputs": 1000000,
+  "counterexamples": 0,
+  "external_peak": 27570176,
+  "monitor_pid_scope": 27848,
+  "old_model_results_sha256": "9e786db55377a61fd55419858e9dcb7aec27674d4f0a7e773ac50554cdb4f224",
+  "new_results_sha256": "e9f1951a5000f17c90f0f7b0011b35f2ed30bba1b5ee214051a23c0bdef28eea",
+  "model_sha256": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+  "note": "Same 1M inputs replayed on final revision; not new independent statistical samples. External monitor replaces invalid internal ctypes counters."
+}

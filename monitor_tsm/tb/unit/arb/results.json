@@ -1,0 +1,269 @@
+{
+  "baseline": true,
+  "assertions": 36,
+  "mutants": [
+    {
+      "id": 0,
+      "name": "reset_ready",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 1,
+      "name": "reset_valid",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 2,
+      "name": "reset_payload",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 3,
+      "name": "reset_brake",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 4,
+      "name": "invalid_zero",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 5,
+      "name": "no_overlap",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 6,
+      "name": "latency_one",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 7,
+      "name": "whole_command",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 8,
+      "name": "hold_valid",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 9,
+      "name": "hold_payload",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 10,
+      "name": "consume_valid",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 11,
+      "name": "consume_zero",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 12,
+      "name": "idle_ready",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 13,
+      "name": "idle_no_spurious_response",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 14,
+      "name": "accepted_busy",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 15,
+      "name": "brake_model",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 16,
+      "name": "override_immediate",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 17,
+      "name": "sticky_revocation",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 18,
+      "name": "override_frame_stable",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 19,
+      "name": "reserved_zero",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 20,
+      "name": "field_source",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 21,
+      "name": "field_mode",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 22,
+      "name": "field_label",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 23,
+      "name": "field_candidate",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 24,
+      "name": "field_seq",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 25,
+      "name": "field_apply",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 26,
+      "name": "field_expiry",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 27,
+      "name": "field_plan",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 28,
+      "name": "field_certificate",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 29,
+      "name": "field_parking",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 30,
+      "name": "field_override",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 31,
+      "name": "L3_fixed15",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 32,
+      "name": "nominal_record",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 33,
+      "name": "backup_epoch",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 34,
+      "name": "fallback_candidate",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "id": 35,
+      "name": "parking_hold",
+      "killed": true,
+      "exit": 1
+    }
+  ],
+  "source_mutants": [
+    {
+      "name": "wrong_L3_profile",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "wrong_backup_apply",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "wrong_expiry",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "missing_pending_guard",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "instant_selected",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "stall_ignored",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "override_not_sticky",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "drop_hash_bit",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "no_immediate_override",
+      "killed": true,
+      "exit": 1
+    }
+  ]
+}

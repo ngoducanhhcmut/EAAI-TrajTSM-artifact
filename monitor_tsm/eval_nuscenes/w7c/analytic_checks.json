@@ -1,0 +1,5 @@
+{
+  "empty_world": true,
+  "rear_hold_collision": true,
+  "VA_swept_cover_exact_integer_endpoints": true
+}

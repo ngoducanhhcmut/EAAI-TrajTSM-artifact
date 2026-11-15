@@ -1,0 +1,746 @@
+{
+  "passed": true,
+  "n": 148,
+  "cases": [
+    {
+      "block": "b1",
+      "name": "ok",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_0",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_0",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_0",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_0",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_0",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_0",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_0",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_0",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_0",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "crc",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_100000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_1",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_1",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_1",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_1",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_1",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_1",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_1",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_1",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "ok",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_110000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_2",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_2",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_2",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_2",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_2",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_2",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_2",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_2",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "overflow",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_150000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_3",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_3",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_3",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_3",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_3",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_3",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_3",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_3",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "deadline",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_160000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_4",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_4",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_4",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_4",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_4",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_4",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_4",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_4",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "range_schema",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_-100000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_5",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_5",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_5",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_5",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_5",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_5",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_5",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_5",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "numeric",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_-110000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_6",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_6",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_6",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_6",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_6",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_6",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_6",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_6",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "freshness",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_-160000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_7",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_7",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_7",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_7",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_7",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_7",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_7",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_7",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "freshness",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_1",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_8",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_8",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_8",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_8",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_8",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_8",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_8",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_8",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "range_schema",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_-1",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_9",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_9",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_9",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_9",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_9",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_9",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_9",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_9",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "snapshot",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_1000000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_10",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_10",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_10",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_10",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_10",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_10",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_10",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_10",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "timeout",
+      "pass_": true
+    },
+    {
+      "block": "b2",
+      "name": "tube_offset_-1000000",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "objects_11",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "profile_11",
+      "pass_": true
+    },
+    {
+      "block": "b7",
+      "name": "pool_11",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "transition_11",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "tamper_11",
+      "pass_": true
+    },
+    {
+      "block": "b10",
+      "name": "ring_11",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "parity_11",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "cycle_11",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "timestamp_wrap",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "seq_wrap",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "clock_reset",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "no_sample_freeze",
+      "pass_": true
+    },
+    {
+      "block": "b1",
+      "name": "motion_freeze",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "object_overflow",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "lane_boundary",
+      "pass_": true
+    },
+    {
+      "block": "b3",
+      "name": "interior_min",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "bad_range",
+      "pass_": true
+    },
+    {
+      "block": "b4",
+      "name": "phase_straddle",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "first_fault",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "startup_no_backup",
+      "pass_": true
+    },
+    {
+      "block": "b8",
+      "name": "reset_mrm",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "executor_expiry",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "ack_timeout",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "replay",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "toctou",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "onehot",
+      "pass_": true
+    },
+    {
+      "block": "b13",
+      "name": "cross_lane",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_3",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_4",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_5",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_6",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_10",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "apply_tail_binding_20",
+      "pass_": true
+    },
+    {
+      "block": "system",
+      "name": "multi_object_accept",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "world_toctou",
+      "pass_": true
+    },
+    {
+      "block": "b9",
+      "name": "map_toctou",
+      "pass_": true
+    }
+  ]
+}

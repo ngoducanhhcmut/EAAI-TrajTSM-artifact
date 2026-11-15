@@ -1,0 +1,502 @@
+{
+  "data": {
+    "counts": {
+      "accept_difference": 0,
+      "candidate_difference": 0,
+      "cycles": 14900,
+      "different": 18,
+      "freshness/freshness|L1/L2|b2_j2/b2_j2": 18,
+      "mode_difference": 18,
+      "unsafe_accept": 0
+    },
+    "examples": [
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.6133881639789347,
+          "lv": 8.799999999999999,
+          "lx": 50.7274400229909,
+          "t": 0.8,
+          "v": 9.777287729914688,
+          "x": 7.929687218783508
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.6133881639789347,
+          "lv": 8.799999999999999,
+          "lx": 50.7274400229909,
+          "t": 0.8,
+          "v": 9.777287729914688,
+          "x": 7.929687218783508
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.6133881639789347,
+          "lv": 8.799999999999999,
+          "lx": 50.7274400229909,
+          "t": 0.8,
+          "v": 9.777287729914688,
+          "x": 7.929687218783508
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.23338816397893464,
+          "lv": 9.6,
+          "lx": 48.88744002299089,
+          "t": 0.6,
+          "v": 9.863965362710472,
+          "x": 5.964241909520992
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.41338816397893474,
+          "lv": 9.2,
+          "lx": 49.82744002299089,
+          "t": 0.7000000000000001,
+          "v": 9.83062654631258,
+          "x": 6.9491315049721445
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.6133881639789347,
+          "lv": 8.799999999999999,
+          "lx": 50.7274400229909,
+          "t": 0.8,
+          "v": 9.777287729914688,
+          "x": 7.929687218783508
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      }
+    ]
+  },
+  "hash": "670fe78d25773e23ee6abb87230ee8b4f5e58a90c5c1525371c19ec62475526b"
+}

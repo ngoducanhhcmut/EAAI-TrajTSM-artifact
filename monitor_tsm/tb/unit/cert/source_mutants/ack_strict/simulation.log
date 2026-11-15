@@ -1,0 +1,8 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\source_mutants\ack_strict\sim.vvp
+EXIT 1
+BOOT complete
+PROGRESS cert job=0 cycles=68
+PROGRESS cert job=1000 cycles=5568
+ASSERT_FAIL 9 atomic_status spec5.3 cycle=6297 got=20 expected=1e
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:154: R-025 assertion failed
+       Time: 69266000  Scope: tb_m_tsmx_cert.tick

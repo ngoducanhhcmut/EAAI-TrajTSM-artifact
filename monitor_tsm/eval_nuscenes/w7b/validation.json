@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "plans": 44607,
+    "SAFE": 14303,
+    "GT_TRUNCATED": 22049,
+    "UNSAFE": 5699,
+    "UNKNOWN": 2556,
+    "new_VA_unsafe_evidence_verified": 244,
+    "golden_separation_sides_verified": 3020,
+    "rounding_side_corrections": 0
+  },
+  "note": "Independent recurrence check of every attributed separation side; complete profile coverage and hold monotonicity verified."
+}

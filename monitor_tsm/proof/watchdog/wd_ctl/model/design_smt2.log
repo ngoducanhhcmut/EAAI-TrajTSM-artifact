@@ -1,0 +1,376 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `m_tsmx_engine'. Setting top module to m_tsmx_engine.
+
+2.1. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_ingress
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_csr
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_math
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+
+2.2. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_ingress
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_csr
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_math
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+Removed 0 unused modules.
+Module m_tsmx_engine directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+     9489 wire bits
+       15 public wires
+     9489 public wire bits
+       12 ports
+     9471 port bits
+        3 cells
+        3   $anyseq
+
+=== $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+     9489 wire bits
+       15 public wires
+     9489 public wire bits
+       12 ports
+     9471 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_arb ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       14 wires
+     7868 wire bits
+       14 public wires
+     7868 public wire bits
+       10 ports
+     5868 port bits
+        4 cells
+        4   $anyseq
+
+=== m_tsmx_cert ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+     2928 wire bits
+       11 public wires
+     2928 public wire bits
+        8 ports
+     2918 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_csr ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       35 wires
+      289 wire bits
+       35 public wires
+      289 public wire bits
+       25 ports
+      243 port bits
+       10 cells
+       10   $anyseq
+
+=== m_tsmx_engine ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1266 wires
+   606429 wire bits
+      399 public wires
+   327543 public wire bits
+       43 ports
+    47882 port bits
+     1187 cells
+       14   $add
+        7   $and
+       84   $anyinit
+        2   $anyseq
+        9   $assert
+        3   $assume
+      105   $eq
+       16   $ff
+        8   $ge
+        4   $gt
+        7   $le
+       95   $logic_and
+       38   $logic_not
+       37   $logic_or
+        7   $lt
+        1   $mem_v2
+        2   $mod
+        3   $mul
+      625   $mux
+       18   $ne
+        6   $not
+        6   $or
+       41   $pmux
+        3   $reduce_bool
+       14   $reduce_or
+       12   $reduce_xor
+        1   $shl
+       19   $sub
+       13 submodules
+        1   $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        1   $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        1   m_tsmx_arb
+        1   m_tsmx_cert
+        1   m_tsmx_csr
+        1   m_tsmx_hash
+        1   m_tsmx_health_lane
+        1   m_tsmx_ingress
+        1   m_tsmx_math
+        1   m_tsmx_rec
+        1   m_tsmx_sel
+        1   m_tsmx_splice
+        1   m_tsmx_supervisor
+
+=== m_tsmx_hash ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+     9020 wire bits
+       12 public wires
+     9020 public wire bits
+        9 ports
+     8729 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_health_lane ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+    33834 wire bits
+       11 public wires
+    33834 public wire bits
+        8 ports
+    33831 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_ingress ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+     2062 wire bits
+       11 public wires
+     2062 public wire bits
+        8 ports
+     1720 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_math ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       21 wires
+    27092 wire bits
+       21 public wires
+    27092 public wire bits
+       15 ports
+    18089 port bits
+        6 cells
+        6   $anyseq
+
+=== m_tsmx_rec ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+     3256 wire bits
+       20 public wires
+     3256 public wire bits
+       14 ports
+     2164 port bits
+        6 cells
+        6   $anyseq
+
+=== m_tsmx_sel ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       56 wire bits
+       11 public wires
+       56 public wire bits
+        8 ports
+       38 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_splice ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+      826 wire bits
+       11 public wires
+      826 public wire bits
+        8 ports
+      823 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_supervisor ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       68 wire bits
+       11 public wires
+       68 public wire bits
+        8 ports
+       58 port bits
+        3 cells
+        3   $anyseq
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1240 m_tsmx_engine
+        3 $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        3 $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        4 m_tsmx_arb
+        3 m_tsmx_cert
+       10 m_tsmx_csr
+        3 m_tsmx_hash
+        3 m_tsmx_health_lane
+        3 m_tsmx_ingress
+        6 m_tsmx_math
+        6 m_tsmx_rec
+        3 m_tsmx_sel
+        3 m_tsmx_splice
+        3 m_tsmx_supervisor
+
+        +----------Count including submodules.
+        | 
+     1464 wires
+   712706 wire bits
+      597 public wires
+   433820 public wire bits
+      188 ports
+   141305 port bits
+        - memories
+        - memory bits
+        - processes
+     1240 cells
+       14   $add
+        7   $and
+       84   $anyinit
+       55   $anyseq
+        9   $assert
+        3   $assume
+      105   $eq
+       16   $ff
+        8   $ge
+        4   $gt
+        7   $le
+       95   $logic_and
+       38   $logic_not
+       37   $logic_or
+        7   $lt
+        1   $mem_v2
+        2   $mod
+        3   $mul
+      625   $mux
+       18   $ne
+        6   $not
+        6   $or
+       41   $pmux
+        3   $reduce_bool
+       14   $reduce_or
+       12   $reduce_xor
+        1   $shl
+       19   $sub
+       13 submodules
+        1   $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        1   $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        1   m_tsmx_arb
+        1   m_tsmx_cert
+        1   m_tsmx_csr
+        1   m_tsmx_hash
+        1   m_tsmx_health_lane
+        1   m_tsmx_ingress
+        1   m_tsmx_math
+        1   m_tsmx_rec
+        1   m_tsmx_sel
+        1   m_tsmx_splice
+        1   m_tsmx_supervisor
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module m_tsmx_supervisor.
+Creating SMT-LIBv2 representation of module m_tsmx_splice.
+Creating SMT-LIBv2 representation of module m_tsmx_sel.
+Creating SMT-LIBv2 representation of module m_tsmx_math.
+Creating SMT-LIBv2 representation of module m_tsmx_rec.
+Creating SMT-LIBv2 representation of module m_tsmx_hash.
+Creating SMT-LIBv2 representation of module m_tsmx_ingress.
+Creating SMT-LIBv2 representation of module m_tsmx_health_lane.
+Creating SMT-LIBv2 representation of module m_tsmx_csr.
+Creating SMT-LIBv2 representation of module m_tsmx_cert.
+Creating SMT-LIBv2 representation of module m_tsmx_arb.
+Creating SMT-LIBv2 representation of module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Creating SMT-LIBv2 representation of module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Creating SMT-LIBv2 representation of module m_tsmx_engine.
+
+End of script. Logfile hash: 0989baf700, time: 2.74s, user: 2.27s, system: 0.26s, MEM: 103.84 MB peak
+Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 96% 2x write_smt2 (2 sec), 2% 2x read_rtlil (0 sec), ...

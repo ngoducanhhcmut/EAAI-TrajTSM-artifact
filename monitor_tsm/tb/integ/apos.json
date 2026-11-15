@@ -1,0 +1,5762 @@
+[
+  {
+    "group": "apos",
+    "name": "0:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "0:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "0:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "0:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "0:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "0:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "1:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "1:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "1:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "1:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "1:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "1:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "2:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "2:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "2:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "2:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "2:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "2:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "3:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "3:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "3:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "3:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "3:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "3:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "4:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "4:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "4:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "4:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "4:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "4:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "5:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "5:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "5:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "5:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "5:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "5:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "6:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "6:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "6:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "6:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "6:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "6:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "7:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "7:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "7:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "7:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "7:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "7:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "8:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "8:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "8:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "8:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "8:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "8:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "9:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "9:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "9:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "9:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "9:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "9:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "10:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "10:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "10:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "10:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "10:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "10:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "11:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "11:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "11:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "11:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "11:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "11:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "12:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "12:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "12:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "12:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "12:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "12:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "13:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "13:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "13:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "13:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "13:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "13:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "14:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "14:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "14:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "14:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "14:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "14:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "15:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "15:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "15:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "15:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "15:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "15:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "16:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "16:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "16:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "16:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "16:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "16:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "17:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "17:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "17:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "17:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "17:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "17:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "18:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "18:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "18:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "18:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "18:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "18:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "19:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "19:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "19:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "19:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "19:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "19:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "20:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "20:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "20:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "20:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "20:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "20:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "21:0:clear",
+    "response": {
+      "accept": false,
+      "reason": "ftti_budget",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "21:1:clear",
+    "response": {
+      "accept": false,
+      "reason": "ftti_budget",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "21:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "21:3:clear",
+    "response": {
+      "accept": false,
+      "reason": "ftti_budget",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "21:4:clear",
+    "response": {
+      "accept": false,
+      "reason": "ftti_budget",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "21:5:clear",
+    "response": {
+      "accept": false,
+      "reason": "ftti_budget",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "22:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "22:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "22:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "22:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "22:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "22:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "23:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "23:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "23:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "23:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "23:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "23:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "24:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "24:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "24:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "24:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "24:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "24:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "25:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "25:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "25:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "25:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "25:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "25:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "26:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "26:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "26:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "26:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "26:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "26:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "27:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "27:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "27:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "27:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "27:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "27:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "28:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "28:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "28:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "28:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "28:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "28:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "29:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "29:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "29:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "29:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "29:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "29:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "30:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "30:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "30:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "30:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "30:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "30:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "31:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "31:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "31:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "31:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "31:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "31:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "32:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "32:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "32:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "32:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "32:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "32:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "33:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "33:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "33:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "33:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "33:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "33:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "34:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "34:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "34:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "34:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "34:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "34:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "35:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "35:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "35:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "35:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "35:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "35:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "36:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "36:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "36:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "36:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "36:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "36:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "37:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "37:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "37:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "37:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "37:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "37:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "38:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "38:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "38:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "38:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "38:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "38:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "39:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "39:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "39:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "39:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "39:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "39:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "40:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "40:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "40:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "40:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "40:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "40:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "41:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "41:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "41:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "41:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "41:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "41:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "42:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "42:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "42:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "42:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "42:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "42:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "43:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "43:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "43:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "43:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "43:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "43:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "44:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "44:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "44:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "44:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "44:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "44:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "45:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "45:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "45:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "45:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "45:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "45:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "46:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "46:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "46:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "46:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "46:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "46:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "47:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "47:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "47:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "47:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "47:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "47:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "48:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "48:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "48:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "48:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "48:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "48:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "49:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "49:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "49:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "49:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "49:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "49:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "50:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "50:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "50:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "50:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "50:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "50:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "51:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "51:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "51:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "51:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "51:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "51:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "52:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "52:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "52:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "52:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "52:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "52:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "53:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "53:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "53:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "53:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "53:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "53:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "54:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "54:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "54:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "54:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "54:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "54:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "55:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "55:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "55:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "55:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "55:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "55:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "56:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "56:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "56:2:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "56:3:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "56:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "56:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "57:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "57:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "57:2:splice",
+    "response": {
+      "accept": false,
+      "reason": "splice",
+      "mode": "L1",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "57:3:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "57:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "57:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 1,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "58:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "58:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "58:2:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "L0",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "58:3:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "58:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "58:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "59:0:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  },
+  {
+    "group": "apos",
+    "name": "59:1:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 20000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "59:2:crc",
+    "response": {
+      "accept": false,
+      "reason": "crc",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 40000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "59:3:stale",
+    "response": {
+      "accept": false,
+      "reason": "freshness",
+      "mode": "L1",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": true,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 60000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "59:4:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 80000,
+    "reset": false
+  },
+  {
+    "group": "apos",
+    "name": "59:5:clear",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "committed",
+      "heartbeat": true
+    },
+    "now": 100000,
+    "reset": false
+  }
+]

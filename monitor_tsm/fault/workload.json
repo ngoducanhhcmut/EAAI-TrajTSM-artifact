@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "file": "job0.mem",
+    "source": "tb/integ/reg300_board.mem",
+    "row": 0,
+    "accept": 1,
+    "source_sha256": "cbc81c1f8cf8a4777b011047d170fdf459bfbdde9c3a8eac5c386393655c74eb"
+  },
+  {
+    "id": 1,
+    "file": "job1.mem",
+    "source": "tb/integ/reg300_board.mem",
+    "row": 128,
+    "accept": 0,
+    "source_sha256": "cbc81c1f8cf8a4777b011047d170fdf459bfbdde9c3a8eac5c386393655c74eb"
+  },
+  {
+    "id": 2,
+    "file": "job2.mem",
+    "source": "tb/integ/apos.mem",
+    "row": 0,
+    "accept": 1,
+    "source_sha256": "69a31c1c2b185cb5073af5775080ff9c8924a98294cd8bb8d4f1d98efe7b7dd0"
+  },
+  {
+    "id": 3,
+    "file": "job3.mem",
+    "source": "tb/integ/apos.mem",
+    "row": 126,
+    "accept": 0,
+    "source_sha256": "69a31c1c2b185cb5073af5775080ff9c8924a98294cd8bb8d4f1d98efe7b7dd0"
+  }
+]

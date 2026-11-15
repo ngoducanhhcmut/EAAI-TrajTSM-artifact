@@ -1,0 +1,502 @@
+{
+  "data": {
+    "counts": {
+      "accept_difference": 0,
+      "candidate_difference": 0,
+      "cycles": 14142,
+      "different": 18,
+      "freshness/freshness|L1/L2|b2_j2/b2_j2": 18,
+      "mode_difference": 18,
+      "unsafe_accept": 0
+    },
+    "examples": [
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.38000000000000006,
+          "lv": 6.799999999999999,
+          "lx": 29.511962685037155,
+          "t": 0.8,
+          "v": 7.96,
+          "x": 6.3973200000000014
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.38000000000000006,
+          "lv": 6.799999999999999,
+          "lx": 29.511962685037155,
+          "t": 0.8,
+          "v": 7.96,
+          "x": 6.3973200000000014
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.38000000000000006,
+          "lv": 6.799999999999999,
+          "lx": 29.511962685037155,
+          "t": 0.8,
+          "v": 7.96,
+          "x": 6.3973200000000014
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": 0,
+          "lv": 7.6,
+          "lx": 28.07196268503717,
+          "t": 0.6,
+          "v": 8.0,
+          "x": 4.800000000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.6
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.1800000000000001,
+          "lv": 7.199999999999999,
+          "lx": 28.81196268503717,
+          "t": 0.7000000000000001,
+          "v": 7.990000000000001,
+          "x": 5.599660000000002
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.7
+      },
+      {
+        "candidate": [
+          "b2_j2",
+          "b2_j2"
+        ],
+        "ego": {
+          "a": -0.38000000000000006,
+          "lv": 6.799999999999999,
+          "lx": 29.511962685037155,
+          "t": 0.8,
+          "v": 7.96,
+          "x": 6.3973200000000014
+        },
+        "golden": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L2",
+          "reason": "freshness"
+        },
+        "ref": {
+          "accept": false,
+          "independent_brake": true,
+          "mode": "L1",
+          "reason": "freshness"
+        },
+        "t": 0.8
+      }
+    ]
+  },
+  "hash": "07002ad4b94fa785395a511b836ce442dd12cd23e50d836bd58b1e539a36cef7"
+}

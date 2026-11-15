@@ -1,0 +1,54 @@
+{
+  "head": {
+    "text": "Separate decision transactions: recovery and degraded levels"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "accept",
+      "wave": "111000000000"
+    },
+    {
+      "name": "health",
+      "wave": "111111110000"
+    },
+    {
+      "name": "reuse",
+      "wave": "000100000000"
+    },
+    {
+      "name": "fallback",
+      "wave": "000010000000"
+    },
+    {
+      "name": "mode",
+      "wave": "======..==..",
+      "data": [
+        "RECOVERY",
+        "RECOVERY",
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "HOLD",
+        "L3"
+      ]
+    },
+    {
+      "name": "good",
+      "wave": "====........",
+      "data": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ]
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

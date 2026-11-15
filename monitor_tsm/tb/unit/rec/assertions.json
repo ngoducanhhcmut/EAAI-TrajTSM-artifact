@@ -1,0 +1,218 @@
+[
+  {
+    "id": 0,
+    "name": "S5_3_reset_ready",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 1,
+    "name": "S5_3_reset_valid",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 2,
+    "name": "S5_3_reset_data",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 3,
+    "name": "S5_3_invalid_zero",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 4,
+    "name": "S5_3_ready_known",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 5,
+    "name": "S5_3_valid_known",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 6,
+    "name": "S5_3_valid_data_known",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 7,
+    "name": "S5_3_single_outstanding",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 8,
+    "name": "S5_3_accept_completes_1cy",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 9,
+    "name": "S5_3_atomic_response",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 10,
+    "name": "S5_3_stall_valid",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 11,
+    "name": "S5_3_stall_payload",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 12,
+    "name": "S5_3_stall_blocks_req",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 13,
+    "name": "S5_3_consume_valid",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 14,
+    "name": "S5_3_consume_payload",
+    "clause": "5.3",
+    "injected_net": "data"
+  },
+  {
+    "id": 15,
+    "name": "S5_3_no_unsolicited",
+    "clause": "5.3",
+    "injected_net": "valid"
+  },
+  {
+    "id": 16,
+    "name": "S5_3_idle_ready",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 17,
+    "name": "S5_3_release_ready",
+    "clause": "5.3",
+    "injected_net": "ready"
+  },
+  {
+    "id": 18,
+    "name": "B10_lost_exact",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "data"
+  },
+  {
+    "id": 19,
+    "name": "B10_saturation",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "data"
+  },
+  {
+    "id": 20,
+    "name": "B10_reset_log_ready",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_ready"
+  },
+  {
+    "id": 21,
+    "name": "B10_reset_log_valid",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_valid"
+  },
+  {
+    "id": 22,
+    "name": "B10_reset_log_data",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 23,
+    "name": "B10_log_invalid_zero",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 24,
+    "name": "B10_log_ready_known",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_ready"
+  },
+  {
+    "id": 25,
+    "name": "B10_log_valid_known",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_valid"
+  },
+  {
+    "id": 26,
+    "name": "B10_log_data_known",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 27,
+    "name": "B10_log_single",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_ready"
+  },
+  {
+    "id": 28,
+    "name": "B10_read_completes_1cy",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_valid"
+  },
+  {
+    "id": 29,
+    "name": "B10_prewrite_snapshot",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 30,
+    "name": "B10_log_stall_valid",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_valid"
+  },
+  {
+    "id": 31,
+    "name": "B10_log_stall_data",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 32,
+    "name": "B10_log_consumed_valid",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_valid"
+  },
+  {
+    "id": 33,
+    "name": "B10_log_consumed_data",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  },
+  {
+    "id": 34,
+    "name": "B10_write_while_log_stall",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "valid"
+  },
+  {
+    "id": 35,
+    "name": "B10_invalid_index",
+    "clause": "5.5.10 / 9.2",
+    "injected_net": "log_data"
+  }
+]

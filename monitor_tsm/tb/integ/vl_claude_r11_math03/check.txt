@@ -1,0 +1,18 @@
+erDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith_div.sv
+WARN module m_tsmx_bad_health_para is instantiated but defined in none of the files
+
+CHECKED BY THIS SCRIPT (lint or manual): see `coverage`.
+wrote /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/I1_RULES.md
+RESULT: PASS
+
+e state
+  P28      logic around synchronizers
+  PRT-01   protocol port names
+  SCP-02   synthesis environment record
+  CHK-11   tapeout checklist of section 11
+
+6:0]
+... more in the log
+log: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/I1_LINT_DETAIL_13.md
+RESULT: PASS (0 errors, 86 warnings)
+

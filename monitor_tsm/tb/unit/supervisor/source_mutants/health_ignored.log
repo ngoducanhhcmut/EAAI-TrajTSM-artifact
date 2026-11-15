@@ -1,0 +1,6 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.vvp
+ASSERT_FAIL 9 S5_3_atomic_response cycle=772 actual=66 expected=67
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\tb_m_tsmx_supervisor.sv:164: R-025 assertion failed
+       Time: 8487000  Scope: tb_m_tsmx_supervisor.tick
+
+EXIT 1

@@ -1,0 +1,22 @@
+[
+  [
+    "candidate_zero_wrong",
+    "LPARA_CAND_0 = 32'd0",
+    "LPARA_CAND_0 = 32'd1"
+  ],
+  [
+    "instant_mask_removed",
+    "i_req_data & 16'(LPARA_ACCEPT_MASK)",
+    "i_req_data"
+  ],
+  [
+    "mitigation_label_wrong",
+    "LPARA_LABEL_MIT = 32'd2",
+    "LPARA_LABEL_MIT = 32'd1"
+  ],
+  [
+    "response_ignores_stall",
+    "if (i_rsp_ready)",
+    "if (1'b1)"
+  ]
+]

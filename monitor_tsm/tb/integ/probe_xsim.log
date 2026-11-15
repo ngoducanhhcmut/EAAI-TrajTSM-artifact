@@ -1,0 +1,29 @@
+COMMAND: C:\Vivado\Vivado\2023.2\bin\xsim.bat probe_csr --runall
+ECHO is off.
+ECHO is off.
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/probe_csr/xsim_script.tcl
+# xsim {probe_csr} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+probe time=5000 rst=0 reg=0 nxt=x ar=0 data=00000000
+probe time=15000 rst=0 reg=0 nxt=x ar=0 data=00000000
+probe time=25000 rst=0 reg=0 nxt=x ar=0 data=00000000
+probe time=35000 rst=0 reg=0 nxt=x ar=0 data=00000000
+probe time=45000 rst=1 reg=0 nxt=x ar=1 data=00000000
+probe time=55000 rst=1 reg=x nxt=x ar=x data=00000000
+probe time=65000 rst=1 reg=x nxt=x ar=x data=00000000
+probe time=75000 rst=1 reg=x nxt=x ar=x data=00000000
+probe time=85000 rst=1 reg=x nxt=x ar=x data=00000000
+Fatal: CSR probe
+Time: 90 ns  Iteration: 0  Process: /tb_probe_csr/Initial30_6  Scope: tb_probe_csr  File: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_probe_csr.sv Line: 49
+$finish called at time : 90 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 30 00:23:05 2026...

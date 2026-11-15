@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\source_mutants\instant.vvp +START=271 +LIMIT=45
+JOB 271 cycles=718 rows=22
+ASSERT_FAIL 20 S5_3_B4_row_vlo job=272 cycle=1162 actual=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001 expected=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\tb_m_tsmx_mrmgen.sv:42: R-025 assertion failure
+       Time: 12788000  Scope: tb_m_tsmx_mrmgen.check
+
+EXIT 1

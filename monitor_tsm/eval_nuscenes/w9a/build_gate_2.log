@@ -1,0 +1,28 @@
+[NuScenesLite] Loading v1.0-trainval from C:\Users\TransformerDA\Downloads\vla_new_arch\eval\data\nuscenes ...
+  scene.json ...
+  log.json ...
+  sample.json ...
+  Loading from cache: _nuscenes_lite_v2.pkl ...
+[NuScenesLite] Ready (cached): 850 scenes, 34149 samples, 34149 ego_poses, 1166187 annotations.
+build_gate 2 64 / 1355
+build_gate 2 128 / 1355
+build_gate 2 192 / 1355
+build_gate 2 256 / 1355
+build_gate 2 320 / 1355
+build_gate 2 384 / 1355
+build_gate 2 448 / 1355
+build_gate 2 512 / 1355
+build_gate 2 576 / 1355
+build_gate 2 640 / 1355
+build_gate 2 704 / 1355
+build_gate 2 768 / 1355
+build_gate 2 832 / 1355
+build_gate 2 896 / 1355
+build_gate 2 960 / 1355
+build_gate 2 1024 / 1355
+build_gate 2 1088 / 1355
+build_gate 2 1152 / 1355
+build_gate 2 1216 / 1355
+build_gate 2 1280 / 1355
+build_gate 2 1344 / 1355
+build_gate 2 1355 / 1355

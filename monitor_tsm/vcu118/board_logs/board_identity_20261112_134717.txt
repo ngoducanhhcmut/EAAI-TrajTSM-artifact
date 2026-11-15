@@ -1,0 +1,31 @@
+time: 2026-11-12 13:47:18 +0700  hw_server: 172.28.76.34:3122
+target: 172.28.76.34:3122/xilinx_tcf/Digilent/<JTAG_SERIAL>
+PART                                                                       string        true       xcvu9p
+IDCODE_HEX                                                                 string        true       14B31093
+PROGRAM.FILE                                                               string        false
+PARTIAL_PROBES.FILES                                                       string*       false
+REGISTER.CONFIG_STATUS.SLR0.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.COR0.SLR0.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR0.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.SLR1.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR1.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.SLR2.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR2.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.DNA.SLR0                                                          string        true       0x000000004002000001716e884c10c2c5
+REGISTER.DNA.SLR1                                                          string        true       0x0000000040020000017166800570e285
+REGISTER.DNA.SLR2                                                          string        true       0x000000004002000001716e884c10c305
+REGISTER.IR.BIT02_ISC_DONE                                                 string        true       1
+REGISTER.IR.BIT05_DONE                                                     string        true       1
+REGISTER.USERCODE.SLR0                                                     string        true       0xffffffff
+REGISTER.USERCODE.SLR1                                                     string        true       0xffffffff
+REGISTER.USERCODE.SLR2                                                     string        true       0xffffffff
+REGISTER.EFUSE.FUSE_DNA                                                    string        true       4002000001716E884C10C2C5
+REGISTER.EFUSE.DNA_PORT                                                    string        true       4002000001716E884C10C2C5

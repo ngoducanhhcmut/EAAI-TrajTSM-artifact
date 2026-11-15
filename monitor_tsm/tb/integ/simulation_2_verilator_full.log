@@ -1,0 +1,83 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_2/Vtb_m_tsmx_top +FILE=vectors.mem
+PASS top CSR/AXI smoke
+JOB 0 PASS cycles=645411
+TIMING job=0 fallback=ffff tail=ffff max_rows=61 stream_hits=1446 objects=0
+JOB 1 PASS cycles=299319
+TIMING job=1 fallback=ffff tail=0000 max_rows=62 stream_hits=653 objects=0
+JOB 2 PASS cycles=435000
+TIMING job=2 fallback=ffff tail=ffff max_rows=36 stream_hits=901 objects=0
+JOB 3 PASS cycles=259820
+TIMING job=3 fallback=ffff tail=0000 max_rows=53 stream_hits=551 objects=0
+JOB 4 PASS cycles=470264
+TIMING job=4 fallback=ffff tail=ffff max_rows=38 stream_hits=997 objects=0
+JOB 5 PASS cycles=335570
+TIMING job=5 fallback=ffff tail=0000 max_rows=64 stream_hits=749 objects=0
+JOB 6 PASS cycles=649444
+TIMING job=6 fallback=ffff tail=ffff max_rows=64 stream_hits=1464 objects=0
+JOB 7 PASS cycles=248490
+TIMING job=7 fallback=ffff tail=0000 max_rows=41 stream_hits=531 objects=0
+JOB 8 PASS cycles=603293
+TIMING job=8 fallback=ffff tail=ffff max_rows=56 stream_hits=1343 objects=0
+JOB 9 PASS cycles=230485
+TIMING job=9 fallback=ffff tail=0000 max_rows=33 stream_hits=470 objects=0
+JOB 10 PASS cycles=528592
+TIMING job=10 fallback=ffff tail=ffff max_rows=51 stream_hits=1138 objects=0
+JOB 11 PASS cycles=304984
+TIMING job=11 fallback=ffff tail=0000 max_rows=67 stream_hits=663 objects=0
+JOB 12 PASS cycles=393123
+TIMING job=12 fallback=ffff tail=ffff max_rows=25 stream_hits=799 objects=0
+JOB 13 PASS cycles=317666
+TIMING job=13 fallback=ffff tail=0000 max_rows=62 stream_hits=712 objects=0
+JOB 14 PASS cycles=591256
+TIMING job=14 fallback=ffff tail=ffff max_rows=61 stream_hits=1291 objects=0
+JOB 15 PASS cycles=210444
+TIMING job=15 fallback=ffff tail=0000 max_rows=34 stream_hits=426 objects=0
+JOB 16 PASS cycles=455826
+TIMING job=16 fallback=ffff tail=ffff max_rows=40 stream_hits=956 objects=0
+JOB 17 PASS cycles=214718
+TIMING job=17 fallback=ffff tail=0000 max_rows=30 stream_hits=439 objects=0
+JOB 18 PASS cycles=713499
+TIMING job=18 fallback=ffff tail=ffff max_rows=71 stream_hits=1625 objects=0
+JOB 19 PASS cycles=205968
+TIMING job=19 fallback=ffff tail=0000 max_rows=30 stream_hits=420 objects=0
+JOB 20 PASS cycles=430524
+TIMING job=20 fallback=ffff tail=ffff max_rows=36 stream_hits=887 objects=0
+JOB 21 PASS cycles=253611
+TIMING job=21 fallback=ffff tail=0000 max_rows=45 stream_hits=540 objects=0
+JOB 22 PASS cycles=466876
+TIMING job=22 fallback=ffff tail=ffff max_rows=36 stream_hits=988 objects=0
+JOB 23 PASS cycles=372870
+TIMING job=23 fallback=ffff tail=0000 max_rows=74 stream_hits=835 objects=0
+JOB 24 PASS cycles=540388
+TIMING job=24 fallback=ffff tail=ffff max_rows=52 stream_hits=1169 objects=0
+JOB 25 PASS cycles=240626
+TIMING job=25 fallback=ffff tail=0000 max_rows=39 stream_hits=510 objects=0
+JOB 26 PASS cycles=605935
+TIMING job=26 fallback=ffff tail=ffff max_rows=62 stream_hits=1341 objects=0
+JOB 27 PASS cycles=282010
+TIMING job=27 fallback=ffff tail=0000 max_rows=48 stream_hits=612 objects=0
+JOB 28 PASS cycles=496514
+TIMING job=28 fallback=ffff tail=ffff max_rows=39 stream_hits=1065 objects=0
+JOB 29 PASS cycles=246252
+TIMING job=29 fallback=ffff tail=0000 max_rows=48 stream_hits=516 objects=0
+JOB 30 PASS cycles=577766
+TIMING job=30 fallback=ffff tail=ffff max_rows=48 stream_hits=1250 objects=0
+JOB 31 PASS cycles=205121
+TIMING job=31 fallback=ffff tail=0000 max_rows=31 stream_hits=415 objects=0
+JOB 32 PASS cycles=443711
+TIMING job=32 fallback=ffff tail=ffff max_rows=30 stream_hits=918 objects=0
+JOB 33 PASS cycles=318222
+TIMING job=33 fallback=ffff tail=0000 max_rows=60 stream_hits=708 objects=0
+JOB 34 PASS cycles=677248
+TIMING job=34 fallback=ffff tail=ffff max_rows=70 stream_hits=1539 objects=0
+JOB 35 PASS cycles=273854
+TIMING job=35 fallback=ffff tail=0000 max_rows=49 stream_hits=597 objects=0
+JOB 36 PASS cycles=318145
+TIMING job=36 fallback=ffff tail=0000 max_rows=62 stream_hits=696 objects=0
+JOB 37 PASS cycles=222178
+TIMING job=37 fallback=ffff tail=0000 max_rows=34 stream_hits=460 objects=0
+JOB 38 PASS cycles=481594
+TIMING job=38 fallback=ffff tail=ffff max_rows=44 stream_hits=1022 objects=0
+JOB 39 PASS cycles=248389
+TIMING job=39 fallback=ffff tail=0000 max_rows=43 stream_hits=528 objects=0
+J

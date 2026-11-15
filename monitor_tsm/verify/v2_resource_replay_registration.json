@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-29T12:06:39Z",
+  "purpose": "Full same-seed V2 replay on final hardened revision with external Get-Process RAM monitor. Not new statistical samples; no tuning.",
+  "n": 1000000,
+  "seed": 1947283103,
+  "old_result_sha256": "9e786db55377a61fd55419858e9dcb7aec27674d4f0a7e773ac50554cdb4f224",
+  "model_sha256": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+  "generator_sha256": "06550ff91c6d7e85c0a4b1209aba158f3dc6aa5d5e8c09c4c2f96b3fbe3630c1",
+  "comparison_fields": [
+    "inputs",
+    "counts",
+    "accepted",
+    "counterexamples",
+    "examples",
+    "min_separation_residual"
+  ]
+}

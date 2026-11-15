@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\sim.vvp +MUTANT=25
+INJECT 25 B7_label_exact: DUT output data stuck-X
+ASSERT_FAIL 25 B7_label_exact cycle=4 actual=xxxx expected=0001
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\tb_m_tsmx_sel.sv:372: R-025 assertion failed
+       Time: 40000  Scope: tb_m_tsmx_sel.tick
+
+EXIT 1

@@ -1,0 +1,5 @@
+PASS top CSR/AXI smoke
+RSP job=0 actual=056c3c0856 expected=056c3c0a56 reason=43
+ASSERT_FAIL 6 TOP_BRAKE_FLAG:spec5.3/6.1/10.1/15 job=0 cycle=125
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_m_tsmx_top.sv:168: assertion failure
+       Time: 1250000  Scope: tb_m_tsmx_top.ck

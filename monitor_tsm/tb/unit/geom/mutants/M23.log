@@ -1,0 +1,28 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\sim.vvp +MUTANT=23 +START=128 +LIMIT=40
+JOB 128 cycles=614 rows=22 objects=1
+JOB 129 cycles=614 rows=22 objects=1
+JOB 130 cycles=440 rows=22 objects=1
+JOB 131 cycles=614 rows=22 objects=1
+JOB 132 cycles=33 rows=22 objects=1
+JOB 133 cycles=33 rows=22 objects=1
+JOB 134 cycles=614 rows=22 objects=1
+JOB 135 cycles=468 rows=22 objects=1
+JOB 136 cycles=585 rows=22 objects=1
+JOB 137 cycles=615 rows=22 objects=1
+JOB 138 cycles=33 rows=2 objects=1
+JOB 139 cycles=33 rows=2 objects=1
+JOB 140 cycles=33 rows=2 objects=1
+JOB 141 cycles=33 rows=2 objects=1
+JOB 142 cycles=34 rows=2 objects=1
+JOB 143 cycles=33 rows=2 objects=1
+JOB 144 cycles=33 rows=2 objects=1
+JOB 145 cycles=34 rows=2 objects=1
+JOB 146 cycles=34 rows=2 objects=1
+JOB 147 cycles=35 rows=2 objects=1
+JOB 148 cycles=29 rows=22 objects=0
+INJECT 23 S5_5_6_preflight_margin DUT output bit flip
+ASSERT_FAIL 23 S5_5_6_preflight_margin job=148 cycle=5057 got=0fffffffffffffffe1400 expected=0ffffffffffffffff1400
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:352: R-025 assertion failed
+       Time: 50566000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

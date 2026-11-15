@@ -1,0 +1,3 @@
+check rc=1
+full2 rc=0
+worst8 rc=0

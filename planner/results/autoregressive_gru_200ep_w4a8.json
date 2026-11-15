@@ -1,0 +1,33 @@
+{
+  "num_scenes": 150,
+  "num_calib_scenes": 200,
+  "nuscenes_split": "val",
+  "distill_epochs": 0,
+  "distill_lambda": 0.5,
+  "distill_lr": 0.0005,
+  "include_lane_tokens": true,
+  "include_target_token_proxy": false,
+  "rmse_xy_fp32_pre_qad": 3.2025387287139893,
+  "rmse_xy_fp32": 3.2025387287139893,
+  "rmse_xy_w4a8": 3.188406467437744,
+  "target_m": 0.3,
+  "pass": false,
+  "quant_gap_m": -0.014132261276245117,
+  "quant_error_m": 0.26886919140815735,
+  "ade_fp32": 1.977563738822937,
+  "ade_w4a8": 1.9684785604476929,
+  "fde_fp32": 3.2068281173706055,
+  "fde_w4a8": 3.1891353130340576,
+  "per_waypoint_rmse_w4a8": [
+    1.1748967170715332,
+    2.3233542442321777,
+    3.4850621223449707,
+    4.662587642669678
+  ],
+  "horizons_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ]
+}

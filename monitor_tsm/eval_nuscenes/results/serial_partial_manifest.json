@@ -1,0 +1,7 @@
+{
+  "code_sha256": "94fbdc8fdfe70df04a3146a9fd9c958719d8cd33fa2bf9682ec47b26f78916ed",
+  "protocol_sha256": "6ff1c14093f04a471c2480de9a205edbbc1acf442d0652c72af85c0f5026b17b",
+  "checkpoint_sha256": "a154d9978c5f75538a53e108ecaf5863e9cb35bc2d7263e1ea8a491243e29e14",
+  "limit": 0,
+  "dataset": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\eval\\data\\nuscenes"
+}

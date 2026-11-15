@@ -1,0 +1,12 @@
+COMMAND C:\Users\TransformerDA\AppData\Local\Programs\Python\Python313\python.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\.agents\skills\vlsit-rtl-generator\scripts\vlsit_lint_rtl.py lint C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\filelist_R1.f --top m_tsmx_sel
+No tool that can lint was found. Options to get one (tell the user, install nothing unasked):
+  1. OSS CAD Suite (recommended): one download of ~600 MB, no administrator rights, contains verilator, slang, yosys,
+     iverilog. Download oss-cad-suite-windows-x64-<date>.tgz from
+     https://github.com/YosysHQ/oss-cad-suite-build/releases, unpack to C:\Tools, then run environment.ps1.
+  2. MSYS2: pacman -S mingw-w64-ucrt-x86_64-verilator (smaller, needs MSYS2 and its shell).
+  3. WSL (Ubuntu): sudo apt-get install -y verilator (a Linux environment inside Windows).
+  4. Conda: conda install -c conda-forge verilator (needs Miniconda).
+Without a lint tool the rule check still runs and the report must say 'lint not run'.
+RESULT: NO LINT TOOL (lint not run)
+
+EXIT 3

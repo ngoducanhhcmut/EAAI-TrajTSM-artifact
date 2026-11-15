@@ -1,0 +1,32 @@
+{
+ "v2": {
+  "counts": {
+   "b2": 50000,
+   "b3": 50000,
+   "b4": 50000,
+   "b7": 50000
+  },
+  "accepted": {
+   "b7": 36201,
+   "b3": 42563,
+   "b4": 49804,
+   "b2": 21886
+  },
+  "counterexamples": 0
+ },
+ "v2_s": 244.5,
+ "multicell": {
+  "n": 20000,
+  "both": 13824,
+  "new_only_UNSAFE": 0,
+  "old_only": 6,
+  "neither": 6170,
+  "max_margin_drop_um": 50304,
+  "exceptions": 0
+ },
+ "single_cell": {
+  "n": 100000,
+  "unsound": 0,
+  "max_conservatism_m": 0.049818585
+ }
+}

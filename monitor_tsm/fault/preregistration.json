@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-11-05T05:58:09.418919+00:00",
+  "phase": "before registered fault outcomes; diagnostic deposit probe excluded",
+  "files": {
+    "CAMPAIGN.md": "6875d830696210556deae76c188f8d0bdd81d70b936f50c46daf8e78d7eb50a5",
+    "faults.json": "4d8c32e3d870245eff7e6e943f727c72c9e21ef52265315dd53416afd22d749f",
+    "inventory.json": "90b03c6ce6d08cb284c880dce4acc35096104412683d841e49d62ac7b5af810b",
+    "workload.json": "c8c98d4131cffd3273f2d648a34458b579fe1add72e7b8cbc23af96a3588e2f0",
+    "classify.py": "9e35605907c7bc5c322681d7484b2d6c5b4c72403da8c405a7166f4c60a16454",
+    "tb_fault.sv": "d85c1df672312a380a93a497868aaa882701f0f1bf15f574d0dd7f849fae3cc2"
+  }
+}

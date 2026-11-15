@@ -1,0 +1,6 @@
+CHAIN_CFG tick=1 exec_ack=1 ackdly_us=1000 txstall_cyc=5000000 contend=0 soft=1
+BRAKE_RISE job=0 cyc=0 time_us=0 cyc_after_40ms_cross=-1
+PASS top CSR/AXI smoke
+BOARDUP polls=5032 cyc=25287
+BOARDUP polls=5032 cyc=50479
+BOARDVEC job=0 reset=1 time=00000000 ack=0 seq=00000000

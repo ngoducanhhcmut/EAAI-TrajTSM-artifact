@@ -1,0 +1,30 @@
+[
+  {
+    "returncode": 1,
+    "seconds": 2.577,
+    "log": "source_mutants/parity/simulation.log",
+    "name": "parity",
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 2.467,
+    "log": "source_mutants/lane/simulation.log",
+    "name": "lane",
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.932,
+    "log": "source_mutants/onehot/simulation.log",
+    "name": "onehot",
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.72,
+    "log": "source_mutants/stop/simulation.log",
+    "name": "stop",
+    "killed": true
+  }
+]

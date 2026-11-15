@@ -1,0 +1,14 @@
+{
+  "float_literals": 0,
+  "imports": [
+    "from dataclasses import dataclass, replace, asdict",
+    "from hashlib import sha256",
+    "import json",
+    "import zlib",
+    "from functools import lru_cache",
+    "from functools import cmp_to_key"
+  ],
+  "pass": true,
+  "source_sha256": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+  "true_divisions": 0
+}

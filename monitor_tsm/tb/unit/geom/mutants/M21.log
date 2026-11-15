@@ -1,0 +1,10 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\sim.vvp +MUTANT=21 +START=128 +LIMIT=40
+JOB 128 cycles=614 rows=22 objects=1
+JOB 129 cycles=614 rows=22 objects=1
+JOB 130 cycles=440 rows=22 objects=1
+INJECT 21 S5_5_6_rejected DUT output bit flip
+ASSERT_FAIL 21 S5_5_6_rejected job=130 cycle=1677 got=1fffffffffffb6c1f180f expected=0fffffffffffb6c1f180f
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:328: R-025 assertion failed
+       Time: 16766000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

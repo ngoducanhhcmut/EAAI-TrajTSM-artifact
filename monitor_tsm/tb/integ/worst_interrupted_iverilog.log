@@ -1,0 +1,2 @@
+COMMAND: vvp -i C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\top_8.vvp +LIMIT=1 +FILE=worst.mem +ALLOW_INACTIVE +WORST
+PASS top CSR/AXI smoke

@@ -1,0 +1,54 @@
+{
+  "seed": 9009,
+  "total": 11186,
+  "counts": {
+    "golden": 128,
+    "edge": 20,
+    "extra": 3386,
+    "boundary": 7560,
+    "isolated": 82,
+    "precedence": 10
+  },
+  "reasons": {
+    "ok": 597,
+    "binding": 1669,
+    "pending": 901,
+    "committed": 485,
+    "expiry_at_executor": 1490,
+    "expiry": 923,
+    "lease_bound": 2746,
+    "late_apply": 1696,
+    "context_binding": 151,
+    "replay": 102,
+    "timeout": 205,
+    "ack_timeout": 221
+  },
+  "adapter_rejects": [
+    "adapter_now_-1",
+    "adapter_t_a_-1",
+    "adapter_t_e_-1",
+    "adapter_seq_-1",
+    "adapter_generated_-1",
+    "adapter_now_4294967296",
+    "adapter_t_a_4294967296",
+    "adapter_t_e_4294967296",
+    "adapter_seq_4294967296",
+    "adapter_generated_4294967296",
+    "adapter_now_-9223372036854775808",
+    "adapter_t_a_-9223372036854775808",
+    "adapter_t_e_-9223372036854775808",
+    "adapter_seq_-9223372036854775808",
+    "adapter_generated_-9223372036854775808",
+    "adapter_now_True",
+    "adapter_t_a_True",
+    "adapter_t_e_True",
+    "adapter_seq_True",
+    "adapter_generated_True"
+  ],
+  "sources": {
+    "b9.hex": "c0961d9505161e632d9804fcb38c3a49082eeda0c8e1644404f9ecd00345f566",
+    "b9.json": "cba11bcdfcbc3270964cfae8ebda82364421dfe475a996e56b732969b5ae3923",
+    "b9.ports.jsonl": "95f4ff4b0168eecdb7dd5a91f7dfe5744641053d35580b9057daa3b6dd2c8dff",
+    "edges.ports.jsonl": "ae64b588bdafcb44725544132ec42588d522b1a362513fd7c36becb8977a9a8c"
+  }
+}

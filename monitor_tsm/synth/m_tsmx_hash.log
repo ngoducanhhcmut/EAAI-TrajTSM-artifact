@@ -1,0 +1,292 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Oct 30 07:14:42 2026
+# Process ID: 15752
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth
+# Command line: vivado.exe -mode batch -notrace -nojournal -log m_tsmx_hash.log -source ooc_m_tsmx_hash.tcl
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_hash.log
+# Journal file: 
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source ooc_m_tsmx_hash.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 476.930 ; gain = 180.012
+Command: synth_design -top m_tsmx_hash -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Using part: xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26096
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 923.789 ; gain = 442.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_hash' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_hash.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_codec' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_codec_core' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:14]
+	Parameter PARA_HASH_BYTES bound to: 32768 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:143]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_codec_core' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_codec' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_hash' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_hash.sv:15]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1058.328 ; gain = 577.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1058.328 ; gain = 577.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1058.328 ; gain = 577.465
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_hash'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            ENUM_ST_BOOT |                             0001 |                             0001
+            ENUM_ST_IDLE |                             0010 |                             0010
+            ENUM_ST_SEND |                             0100 |                             0100
+            ENUM_ST_WAIT |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_hash'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 1989.031 ; gain = 1508.168
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 13    
+	   4 Input   32 Bit       Adders := 1     
+	   5 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   3 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 1     
++---XORs : 
+	   3 Input     32 Bit         XORs := 5     
+	   2 Input     32 Bit         XORs := 37    
++---Registers : 
+	             1024 Bit    Registers := 1     
+	              512 Bit    Registers := 1     
+	              289 Bit    Registers := 1     
+	              256 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input 1024 Bit        Muxes := 2     
+	   6 Input 1024 Bit        Muxes := 1     
+	   6 Input  512 Bit        Muxes := 1     
+	   2 Input  512 Bit        Muxes := 2     
+	   4 Input  512 Bit        Muxes := 1     
+	   6 Input  289 Bit        Muxes := 1     
+	   2 Input  289 Bit        Muxes := 6     
+	   4 Input  289 Bit        Muxes := 1     
+	   6 Input  256 Bit        Muxes := 2     
+	   2 Input  256 Bit        Muxes := 3     
+	   4 Input  256 Bit        Muxes := 1     
+	   5 Input   45 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 43    
+	   2 Input   16 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 13    
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   3 Input    3 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 18    
+	   6 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 18    
+	   2 Input    1 Bit        Muxes := 53    
+	   4 Input    1 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:53 ; elapsed = 00:01:48 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|m_tsmx_codec_core | sha_k      | 64x32         | LUT            | 
+|m_tsmx_codec_core | sha_k      | 64x32         | LUT            | 
++------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:01:49 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:01 ; elapsed = 00:01:56 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:14 ; elapsed = 00:02:10 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:15 ; elapsed = 00:02:10 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:18 ; elapsed = 00:02:13 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    83|
+|2     |LUT1   |     5|
+|3     |LUT2   |   852|
+|4     |LUT3   |   548|
+|5     |LUT4   |   481|
+|6     |LUT5   |   630|
+|7     |LUT6   |  4195|
+|8     |MUXF7  |  1088|
+|9     |MUXF8  |   512|
+|10    |FDCE   | 10685|
+|11    |FDPE   |   305|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+------------------+------+
+|      |Instance         |Module            |Cells |
++------+-----------------+------------------+------+
+|1     |top              |                  | 19384|
+|2     |  u_codec        |m_tsmx_codec      | 10854|
+|3     |    u_codec_core |m_tsmx_codec_core | 10822|
++------+-----------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+Synthesis Optimization Complete : Time (s): cpu = 00:02:18 ; elapsed = 00:02:14 . Memory (MB): peak = 2206.566 ; gain = 1725.703
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.628 . Memory (MB): peak = 2206.566 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1683 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2206.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f9feb355
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:29 ; elapsed = 00:02:28 . Memory (MB): peak = 2206.566 ; gain = 1729.637
+create_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2206.566 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "i_clk_core" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 3909.188 ; gain = 1702.621
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 07:19:09 2026...

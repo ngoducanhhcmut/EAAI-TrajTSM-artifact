@@ -1,0 +1,87 @@
+{
+  "V1": {
+    "IC": 200,
+    "compare": "shadow golden on every reference decision input; mode/accept/candidate union; commit mirrored at physical .02 steps",
+    "faults": [
+      "wrong",
+      "freeze",
+      "nan",
+      "timeout",
+      "stale",
+      "splice_delay",
+      "splice_speed",
+      "expiry",
+      "ack",
+      "overflow",
+      "compute_delay"
+    ],
+    "gate": "union disagreement <= .005 and zero golden accept/reference safety reject",
+    "models": [
+      "F2",
+      "F3"
+    ],
+    "rollouts": 22000,
+    "schedules": [
+      "burst1",
+      "burst3",
+      "burst10",
+      "intermittent",
+      "persistent"
+    ]
+  },
+  "V2": {
+    "allocation": "250000 cases per B2/B3/B4/B7; random plus deterministic boundaries",
+    "gate": "zero counterexamples; random testing is not a universal proof",
+    "n": 1000000,
+    "oracle": "independent Fraction continuous stop-clipped quadratic/sample-hold model; all accepted cases checked"
+  },
+  "V3": {
+    "IC": 100,
+    "bootstrap": 2000,
+    "gate": "front=0; separately F2,F3,pooled: CI includes zero OR upper<=0",
+    "models": [
+      "F2",
+      "F3"
+    ],
+    "paired_rollouts": 11000,
+    "wrapper": "unchanged run/dynamics/follower; replace Executor, geometry, choose, select_tail, seal_tail only"
+  },
+  "assumptions": [
+    "100ms sample-hold midpoint jerk ramp (same actuator abstraction as P5bd2)",
+    "axis-aligned straight lane; no yaw; bounded longitudinal actors, tracking uncertainty in footprints",
+    "hold checked 2s beyond zero speed; stationary/no reverse front actors",
+    "serial timestamp/seq modular difference valid within half of uint32 period"
+  ],
+  "budget": {
+    "bytes": 2000000000,
+    "seconds": 21600,
+    "workers": 1
+  },
+  "registration_hash": "cff3c3480a22b69383c8911ec793ec2865d0883ee1d284a8d27559b874093d19",
+  "scenario_hashes": {
+    "v1": "75c8a7cad1994b262450eca0d52338045b1a472b21bac4c7e8f2610c3d3fa606",
+    "v3": "87523cbc151114cbe444d0518a9fb805f5a123ecd67b03175cdc003b0f4f06b5"
+  },
+  "seeds": {
+    "bootstrap": 1947283104,
+    "v1": 1947283101,
+    "v2": 1947283103,
+    "v3": 1947283102,
+    "vectors": 1947283105
+  },
+  "sources": {
+    "tsm2_pilot/src/tsm2/baselines/support_adaptive.py": "e98c14bf639821b5a9210cb624395e05c91fc28b8e098335f5ea09691a99bfec",
+    "tsm2_pilot/src/tsm2/numeric.py": "068fc0075d4172dd0aa59219be34b209cdc3fe04d9670edd2816cfb5337fc28d",
+    "tsm2_pilot/src/tsm2/p5/candidates.py": "f80d0b0ff47c856c199c040e8653f32bf509e17b61790267bab9079e48f0a708",
+    "tsm2_pilot/src/tsm2/p5/contract_v2.py": "694b21dbb0c7db4e710f3709006c52caec2c3106d034dcd1d73efc422ee46a4c",
+    "tsm2_pilot/src/tsm2/p5/dynamics.py": "ef648ce8ba2bdfe5148bf48751a0746304485e8b5a40de110c631554cd14c418",
+    "tsm2_pilot/src/tsm2/p5/executor_ref.py": "c065e1ffcdd31f5d26704417bbf334bb87ac9737c9a3c7cf9c50c30f3f98d42d",
+    "tsm2_pilot/src/tsm2/p5/executor_ref_v2.py": "76b55fcaabd3794346910f2d42932e7aa6edec42ec649f423bcd31fa4da9761e",
+    "tsm2_pilot/src/tsm2/p5/p5bd_v2.py": "e27c8c53845f44f5a4bc07d17a3a6cca695766d7b9f52af35c53e85c0d9e835f",
+    "tsm_research/P5bd2_REPORT.md": "1e932cf1036a4389dd6a8e65566bc93f8225e07c7a524f07e55019472d1f6ca7",
+    "tsm_research/TSM_X_DESIGN_v2.md": "76ebf1722c8367f544ffc502a53d5aad4529b8ce842f3b6f703e08f85ea8e9d8",
+    "tsmx_hw/PLAN.md": "1d356496e56ef92f55b6e855defb16454fa184b75d1185b9ad1c8758a3154915"
+  },
+  "stopping": "checkpoint each IC; stop before 6h, incomplete stages INCONCLUSIVE; no tuning on test",
+  "utc": "2026-10-29T06:57:52Z"
+}

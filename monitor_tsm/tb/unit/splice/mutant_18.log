@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\sim.vvp +MUTANT=18 +LIMIT=10
+INJECT 18 release_no_stale: flipped DUT output valid
+ASSERT_FAIL 18 release_no_stale cycle=3 age=0 expected=0 actual=0
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\tb_m_tsmx_splice.sv:248: R-025 assertion failed
+       Time: 28000  Scope: tb_m_tsmx_splice.tick
+
+EXIT 1

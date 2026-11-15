@@ -1,0 +1,15 @@
+worst8 rc=0
+DONE
+worst2 rc=1
+DONE2
+worst4 rc=1
+DONE4
+check rc=0
+control8 rc=0
+reg300 rc=0
+DONE_REG
+worst2 rc=0
+DONE2
+worst4 rc=0
+DONE4
+DONE24

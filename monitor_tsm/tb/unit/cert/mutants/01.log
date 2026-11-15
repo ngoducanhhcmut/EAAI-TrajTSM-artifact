@@ -1,0 +1,6 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\sim.vvp +MUTANT=1
+EXIT 1
+INJECT 1 reset_valid
+ASSERT_FAIL 1 reset_valid spec5.3 cycle=1 got=00 expected=00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:66: R-025 assertion failed
+       Time: 6001  Scope: tb_m_tsmx_cert.tick

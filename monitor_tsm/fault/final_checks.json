@@ -1,0 +1,14 @@
+{
+  "frozen_files_unchanged": {
+    "CAMPAIGN.md": true,
+    "faults.json": true,
+    "inventory.json": true,
+    "workload.json": true,
+    "classify.py": true,
+    "tb_fault.sv": true
+  },
+  "report_lines": 28,
+  "actual_injections": 3,
+  "required_minimum_met": false,
+  "verilator_verified": false
+}

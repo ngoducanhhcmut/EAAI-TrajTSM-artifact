@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 01:41:39 2026
+# Process ID: 7540
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_2/behav/xsim
+# Command line: xsim.exe -log sim_net.log -mode tcl -source {xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_2/behav/xsim/sim_net.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_2/behav/xsim\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl
+# xsim {tb_tsm_sysbd_behav} -autoloadwcfg -tclbatch {tb_tsm_sysbd.tcl}
+Time resolution is 1 ps
+source tb_tsm_sysbd.tcl
+## run all
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_cpu.inst
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_mem.inst
+=== TSM SYSBD: NETLIST tong hop (system_hmao_engine_0_2), 1 ca
+[ 0]       H0261 truoc start GPIO1=0x00000000 | GPIO1=0x0000c802 -> VETO  fault=0x48 step=0 obs=0 | 8.002 ms | AR hep=9 rong=0 beat=353 rerr=0 | mong doi VETO  fault=0x00  FAIL
+=== KET QUA: PASS 0 / FAIL 1 / 1 ca
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+$finish called at time : 8023715 ns : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/system/tb_tsm_sysbd.sv" Line 191
+run: Time (s): cpu = 00:00:01 ; elapsed = 01:45:55 . Memory (MB): peak = 243.824 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 471712 KB (Peak: 471712 KB), Simulation CPU Usage: 6166171 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 03:27:36 2026...

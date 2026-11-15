@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-29T12:27:13Z",
+  "old_sha256": "324e214bf3939a24619602aacb221c59c3ccb7d67ae248641cf72527534b2f03",
+  "new_sha256": "ff067d4a74945ba81aec470e93704cf8684456b1f54145088f38f7e1623cc0ea",
+  "reason": "Registration compared Python tuple fixtures with JSON lists; canonicalize CASES through JSON before equality. Failure was before any directed case execution. Run function AST and all cases/expectations unchanged.",
+  "run_ast_identical": true,
+  "cases": {
+    "corrupt_row_positions": [
+      9223372036854775807,
+      9223372036854775806,
+      -9223372036854775808,
+      -9223372036854775807
+    ],
+    "ego_clock_offsets": [
+      -150001,
+      -150000,
+      -1,
+      0,
+      1,
+      150000
+    ],
+    "fractional_accel_actor_x": [
+      -100000000,
+      100000000
+    ],
+    "interior_gaps": [
+      498000,
+      499000,
+      500000,
+      500001,
+      501000,
+      502000,
+      502500,
+      502501,
+      503000,
+      510000
+    ],
+    "invalid_live_offsets": [
+      -1,
+      1,
+      -100000
+    ],
+    "lane_offsets": [
+      -800001,
+      -800000,
+      -799999,
+      0,
+      799999,
+      800000,
+      800001
+    ],
+    "lease_lengths": [
+      20000,
+      100001,
+      120001,
+      499999,
+      500000,
+      500001,
+      1000000,
+      10000000
+    ],
+    "past_apply_delays": [
+      -1,
+      -2,
+      -1000,
+      -100000,
+      -150000,
+      -1000000
+    ],
+    "rear": [
+      [
+        20,
+        0,
+        true
+      ],
+      [
+        20,
+        1,
+        true
+      ],
+      [
+        20,
+        10,
+        false
+      ],
+      [
+        6,
+        0,
+        true
+      ],
+      [
+        5,
+        0,
+        false
+      ],
+      [
+        5,
+        1,
+        false
+      ],
+      [
+        10,
+        2,
+        true
+      ],
+      [
+        10,
+        3,
+        false
+      ],
+      [
+        25,
+        10,
+        false
+      ],
+      [
+        40,
+        10,
+        true
+      ]
+    ],
+    "selector_masks": [
+      0,
+      65535,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768,
+      24,
+      20,
+      6,
+      4608
+    ],
+    "system_modes": [
+      "RECOVERY",
+      "RECOVERY",
+      "L0",
+      "L1",
+      "L1",
+      "L1",
+      "L2",
+      "L3",
+      "HOLD",
+      "L3"
+    ],
+    "wrap_offsets": [
+      0,
+      1,
+      19999,
+      20000,
+      39999,
+      40000,
+      99999,
+      100000,
+      499999,
+      500000,
+      500001
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+"""Read-only golden replay and R7 independent random/boundary stimulus, seed 7007."""
+import sys,json,random,hashlib
+from pathlib import Path
+from collections import Counter
+sys.dont_write_bytecode=True
+HERE=Path(__file__).resolve().parent
+HW=HERE.parents[2]
+sys.path[:0]=[str(HW/'golden'),str(HW.parent/'tsm2_pilot/vendor')]
+from tsmx_golden import model as g
+import vectors as legacy
+
+def pack(fields):
+    n=0
+    for v,w in fields:n=(n<<w)|(int(v)&((1<<w)-1))
+    return n
+
+def main():
+    cases=[];sources=Counter();reasons=Counter();hashes={}
+    def emit(d,source,fixture=None):
+        tr=g.Trajectory(**d['traj']);objs=tuple(g.Motion(**o) for o in d.get('objects',[]))
+        cfg={k:d[k] for k in ('lane','y','half_width','lateral_error','reserve') if k in d}
+        out=g.b3_geom(tr,objs,**cfg)
+        if fixture is not None:
+            for k,v in g.asdict(out).items():assert fixture[k]==v,(source,k,fixture,v)
+        cases.append((d,out));sources[source]+=1;reasons[out.reason]+=1
+    for name in ('b3.ports.jsonl','edges.ports.jsonl'):
+        p=HW/'vectors'/name;hashes[name]=hashlib.sha256(p.read_bytes()).hexdigest()
+        for line in p.read_text().splitlines():
+            f=json.loads(line)
+            if name.startswith('edges') and f['block']!='b3':continue
+            emit(f['input'],'edge' if name.startswith('edges') else 'golden',f['output'])
+    meta=json.loads((HW/'vectors/b3.json').read_text())
+    for line in (HW/'vectors/b3.hex').read_text().splitlines():
+        word=int(line,16);vals=[]
+        for f in meta['fields']:
+            v=(word>>f['lsb'])&((1<<f['bits'])-1)
+            if f['signed'] and v>>(f['bits']-1):v-=1<<f['bits']
+            vals.append(v)
+        exp,_=legacy.evaluate('b3',vals[:9]);assert vals[9:]==exp
+        x,v,a,ox,ov,now,cid,fault,seq=vals[:9]
+        emit(dict(traj=g.asdict(g.b4_mrmgen(x,v,a,cid)),objects=[g.asdict(g.Motion(ox,ov,0,4800000,0,-4000000))]),'legacy')
+    def base(rows=None,objects=None,**cfg):
+        return dict(traj=dict(accept=True,reason='ok',stop=-1,rows=rows or [(0,0,0,1000000,1000000,-2000000,2000000),(100000,90000,90000,800000,800000,0,0)]),objects=objects if objects is not None else [g.asdict(g.Motion(20000000,0))],**cfg)
+    # Equality, both stop events, fractional stationary point and split boundary.
+    for gap in [5299999,5300000,5300001,10000000000,-10000000000]:
+        for event in [0,1,49999,50000,99999,100000,100001,12800000]:
+            emit(base(objects=[g.asdict(g.Motion(gap,1000000,-8000000,4800000,event,2000000))]),'directed')
+    # FORMATS boundaries and overflowing s64/s32 encodings must reject before arithmetic.
+    for col,values in [(0,[-1,0,25600000,25600001,0x7fffffff]),(1,[-(1<<63),-(1<<63)+1,-10070000001,-10070000000,10070000000,(1<<63)-1]),(2,[-1,0,10070000001]),(3,[-(1<<31),-1,0,20000000,20000001]),(4,[-1,0,20000000,20000001]),(5,[-(1<<31),-8000001,-8000000,0,1,2000000,2000001]),(6,[-1,0,8000000,8000001])]:
+        for v in values:
+            d=base();rr=[list(r) for r in d['traj']['rows']];rr[-1][col]=v;d['traj']['rows']=rr;emit(d,'boundary')
+    for key,vals in dict(x=[-(1<<63),-10000000001,10000000001,(1<<63)-1],v=[-1,20000000,20000001],a=[-8000001,-8000000,2000000,2000001],after_a=[-8000001,2000001],length=[0,1,20000000,20000001],event=[-1,12800000,12800001]).items():
+        for val in vals:
+            ob=g.asdict(g.Motion(20000000,0));ob[key]=val;emit(base(objects=[ob]),'boundary')
+    for key,vals in dict(lane=[[-10000000001,1800000],[-1,-2],[-1,1]],y=[-10000000001,10000000001],half_width=[0,10000000,10000001],lateral_error=[-1,1000000,1000001],reserve=[-1,0,10000000,10000001]).items():
+        for val in vals:emit(base(**{key:val}),'boundary')
+    for count in [0,1,2,32,33]:emit(base(objects=[g.asdict(g.Motion(100000000,0))]*count),'directed')
+    for h in [0,1,99999,100000,100001,12800000,12800001]:
+        emit(base(rows=[(0,0,0,0,0,0,0),(h,0,0,0,0,0,0)]),'boundary')
+    for n in [0,1]:
+        d=base();d['traj']['rows']=d['traj']['rows'][:n];emit(d,'directed')
+    # Later invalid endpoint wins speculative separation; trajectory wins all numeric faults.
+    for accept in [False,True]:
+        d=base(objects=[g.asdict(g.Motion(0,0))]);d['traj']['accept']=accept
+        d['traj']['rows'][-1]=(100000,1<<62,1<<62,0,0,0,0);emit(d,'directed')
+    rng=random.Random(7007)
+    for i in range(2200):
+        x=rng.randrange(-10000000000,10000000001);v=rng.randrange(20000001)
+        a=-rng.randrange(8000001);jerk=rng.randrange(8000001);n=rng.choice([2,3,4])
+        origin=rng.randrange(129)*100000
+        rr=[(origin+k*100000,x+k*100000,x+k*100000+rng.randrange(10),v,v+rng.randrange(10),a,jerk) for k in range(n)]
+        obs=[]
+        for j in range(rng.choice([0,1,1,2,4])):
+            obs.append(g.asdict(g.Motion(x+rng.randrange(-100000000,100000001),rng.randrange(20000001),rng.randrange(-8000000,2000001),rng.randrange(1,20000001),rng.choice([0,50000,100000,150000,200000,12800000]),rng.randrange(-8000000,2000001))))
+        d=base(rr,obs)
+        if i%17==0:d['traj']['accept']=False
+        if i%19==0:
+            rr[-1]=tuple(list(rr[-1][:4])+[20000001]+list(rr[-1][5:]))
+        emit(d,'random')
+    # A8 (02/11): trajectory rows with positive acceleration (0, +2] m/s^2, real mrmgen tails included
+    rng2=random.Random(0x41384745)
+    for i in range(500):
+        x=rng2.randrange(-10000000000,10000000001);v=rng2.randrange(18000001)
+        a=rng2.randrange(1,2000001);jerk=rng2.randrange(8000001);n=rng2.choice([2,3,4])
+        origin=rng2.randrange(129)*100000
+        rr=[(origin+k*100000,x+k*100000,x+k*100000+rng2.randrange(10),v,v+rng2.randrange(10),a,jerk) for k in range(n)]
+        obs=[g.asdict(g.Motion(x+rng2.randrange(-100000000,100000001),rng2.randrange(20000001),rng2.randrange(-8000000,2000001),rng2.randrange(1,20000001),rng2.choice([0,50000,100000,150000,200000,12800000]),rng2.randrange(-8000000,2000001))) for _ in range(rng2.choice([0,1,1,2,4]))]
+        emit(base(rr,obs),'random_apos')
+    for cid in range(0,16,3):
+        tr=g.b4_mrmgen(0,rng2.randrange(10000001),rng2.randrange(1,2000001),cid)
+        if tr.accept and len(tr.rows)<=129:
+            emit(base(list(tr.rows),[g.asdict(g.Motion(60000000,0))]),'mrm_apos')
+    # Full load: every cell splits for a different actor; verifies sustained actor-cell service.
+    rr=[(k*100000,0,0,0,0,0,0) for k in range(129)]
+    obs=[g.asdict(g.Motion(1000000000+j*1000,0,0,4800000,50000+j*100000,0)) for j in range(32)]
+    emit(base(rr,obs),'budget32')
+    rr=[(0,0,0,0,0,0,0),(100000,0,0,0,0,0,0)]
+    obs=[g.asdict(g.Motion(1000000000+j*1000,0,0,4800000,50000,0)) for j in range(32)]
+    emit(base(rr,obs),'split32')
+    jobs=[];rows=[]
+    for idx,(d,o) in enumerate(cases):
+        tr=d['traj'];cid=idx%16;epoch=idx*17
+        lane=g.pack_lane(**{k:d[k] for k in ('lane','y','half_width','lateral_error','reserve') if k in d})
+        obs=d.get('objects',[])
+        # Spec 9.2 requires rejection before narrowing original noninteger fields.
+        # B3 has no schema bit: encode an invalid extent so object_range survives packing.
+        obs=[dict(ob,length=0) if any(type(v) is not int for v in ob.values()) else ob for ob in obs]
+        adapted=g.b3_geom(g.Trajectory(**tr),tuple(g.Motion(**ob) for ob in obs),
+                         **{k:d[k] for k in ('lane','y','half_width','lateral_error','reserve') if k in d})
+        assert adapted==o,('adapter changed semantic result',idx,adapted,o)
+        world=pack([(len(obs),8)]+[(int.from_bytes(g.pack_motion(ob),'big'),256) for ob in obs[:32]]+[(0,256)]*max(0,32-len(obs)))
+        req=pack([(cid,8),(epoch,32),(world,8200),(int.from_bytes(lane,'big'),384)])
+        start=len(rows)
+        for k,r in enumerate(tr['rows']):rows.append(pack([(cid,8),(epoch,32),(k,8),(int.from_bytes(g.pack_row(r),'big'),352),(int(k==len(tr['rows'])-1),1)]))
+        term=pack([(tr['accept'],1),(g.REASONS.index(tr['reason']) if tr['reason'] in g.REASONS else 0,8),(tr['stop']>=0,1),(max(0,tr['stop']),32),(len(tr['rows']),8)])
+        rsp=pack([(o.accept,1),(o.margin,64),(g.REASONS.index(o.reason),8),(o.steps,8)])
+        jobs.append(pack([(req,8624),(term,50),(rsp,81),(start,32),(len(tr['rows']),8)]))
+    (HERE/'jobs.mem').write_text(''.join(f'{j:02199x}\n' for j in jobs))
+    (HERE/'rows.mem').write_text(''.join(f'{j:0101x}\n' for j in rows))
+    (HERE/'vectors_meta.svh').write_text(f'localparam N={len(jobs)}, R={len(rows)};\n')
+    result=dict(total=len(jobs),rows=len(rows),sources=sources,reasons=reasons,sha256=hashes,seed=7007)
+    (HERE/'vectors.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+if __name__=='__main__':main()

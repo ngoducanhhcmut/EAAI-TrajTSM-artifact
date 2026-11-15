@@ -1,0 +1,17 @@
+{
+  "sel": {
+    "rows": 65664,
+    "golden": 128,
+    "bits": 32
+  },
+  "supervisor": {
+    "rows": 8320,
+    "golden": 128,
+    "bits": 52
+  },
+  "rec": {
+    "rows": 1704,
+    "golden": 128,
+    "bits": 2157
+  }
+}

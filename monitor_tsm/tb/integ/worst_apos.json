@@ -1,0 +1,18 @@
+[
+  {
+    "group": "worst",
+    "name": "two_full_sweeps_32_objects_apos",
+    "response": {
+      "accept": true,
+      "reason": "ok",
+      "mode": "RECOVERY",
+      "candidate": 0,
+      "label": "CERT-FRONT/REAR-COND",
+      "independent_brake": false,
+      "commit": "no_pending",
+      "heartbeat": true
+    },
+    "now": 0,
+    "reset": true
+  }
+]

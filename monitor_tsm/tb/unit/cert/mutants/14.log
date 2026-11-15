@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\sim.vvp +MUTANT=14
+EXIT 1
+BOOT complete
+INJECT 14 consume_payload
+ASSERT_FAIL 14 consume_payload spec5.3 cycle=59 got=01 expected=00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:209: R-025 assertion failed
+       Time: 648001  Scope: tb_m_tsmx_cert.tick

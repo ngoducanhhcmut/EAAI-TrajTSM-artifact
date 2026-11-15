@@ -1,0 +1,3 @@
+COMMAND verilator --binary --timing --assert -Wno-fatal --top-module tb_m_tsmx_ingress --Mdir C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\obj_dir -IC:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\arith\m_tsmx_arith_div.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\arith\m_tsmx_arith.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\ingress\m_tsmx_ingress.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\tb_m_tsmx_ingress.sv
+NOT RUN: Verilator unavailable in PATH. R-015.
+EXIT 3

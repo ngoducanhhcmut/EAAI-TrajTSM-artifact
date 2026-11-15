@@ -1,0 +1,14 @@
+{
+  "data": {
+    "counts": {
+      "accept_difference": 0,
+      "candidate_difference": 0,
+      "cycles": 10402,
+      "different": 0,
+      "mode_difference": 0,
+      "unsafe_accept": 0
+    },
+    "examples": []
+  },
+  "hash": "26096239707be16ad7d9354d6f33658ae1597079da732411df43ba831bd74e7e"
+}

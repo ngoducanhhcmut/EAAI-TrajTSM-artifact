@@ -1,0 +1,34 @@
+[
+  {
+    "group": "smoke",
+    "name": "live_or_clock_0",
+    "response": {
+      "accept": false,
+      "reason": "ego_live",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "ego_live",
+      "heartbeat": false
+    },
+    "now": 1000,
+    "reset": true
+  },
+  {
+    "group": "smoke",
+    "name": "live_or_clock_1",
+    "response": {
+      "accept": false,
+      "reason": "clock_reset",
+      "mode": "L3",
+      "candidate": 15,
+      "label": "MITIGATION",
+      "independent_brake": true,
+      "commit": "clock_reset",
+      "heartbeat": false
+    },
+    "now": 999,
+    "reset": false
+  }
+]

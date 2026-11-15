@@ -1,0 +1,1 @@
+localparam N=6439, R=143292, GOLDEN=128, EDGE=0;

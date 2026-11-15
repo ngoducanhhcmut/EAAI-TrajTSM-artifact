@@ -1,0 +1,2 @@
+NOT RUN: Verilator5 unavailable; no tool installed.
+See README.md for --binary --timing --assert command.

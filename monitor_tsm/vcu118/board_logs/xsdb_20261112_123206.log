@@ -1,0 +1,22 @@
+hw_server 172.28.76.34:3122 targets:
+  1  xcvu9p
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+     4  Legacy Debug Hub
+program system_wrapper_joint.bit
+DDRLOAD planner_bert_weights.bin       mb=0x80000000 bytes=6291456 ms=25615 first=FE1E5F64/FE1E5F64 last=E343EE4F/E343EE4F OK
+DDRLOAD planner_pos_emb.bin            mb=0x80600000 bytes=131072 ms=806 first=BEC2C01B/BEC2C01B last=3F283B51/3F283B51 OK
+DDRLOAD planner_gru_bias.bin           mb=0x817D2000 bytes=8192 ms=294 first=3E4CD31B/3E4CD31B last=BDA55A46/BDA55A46 OK
+DDRLOAD planner_gru_weights.bin        mb=0x817D4000 bytes=786432 ms=3362 first=F31BFEFE/F31BFEFE last=41131F12/41131F12 OK
+DDRLOAD planner_gru_wout_staging.bin   mb=0x81894000 bytes=8192 ms=288 first=BE64EAA0/BE64EAA0 last=00000000/00000000 OK
+DDRLOAD planner_gru_scale_zp.bin       mb=0x818A0000 bytes=6144 ms=226 first=05000B00/05000B00 last=04000600/04000600 OK
+DDRLOAD planner_gru_wp_proj.bin        mb=0x818A8000 bytes=6144 ms=222 first=BD382CB8/BD382CB8 last=BD737D1A/BD737D1A OK
+DDRLOAD planner_param_a.bin            mb=0x81900000 bytes=65536 ms=490 first=39A0E836/39A0E836 last=3CF89DC0/3CF89DC0 OK
+DDRLOAD planner_param_b.bin            mb=0x81910000 bytes=131072 ms=747 first=3D06D848/3D06D848 last=3EB28A69/3EB28A69 OK
+DDRLOAD planner_param_c.bin            mb=0x81930000 bytes=32768 ms=332 first=3E2A0281/3E2A0281 last=00000000/00000000 OK
+DDRLOAD wm_bank.bin                    mb=0x90000000 bytes=573440 ms=1934 first=00000014/00000014 last=00000000/00000000 OK
+DDRLOAD tsm_req.bin                    mb=0x91000000 bytes=1159200 ms=3600 first=80380100/80380100 last=00000000/00000000 OK
+DDRLOAD tsm_meta.bin                   mb=0x91200000 bytes=6624 ms=218 first=00000001/00000001 last=00000000/00000000 OK
+DDRLOAD wp_golden.bin                  mb=0x91210000 bytes=1120 ms=200 first=40866631/40866631 last=BD44CBD6/BD44CBD6 OK
+DDR images loaded in 38.481 s
+firmware running; results arrive on the UART (board_capture.py). xsdb log: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/board_logs/xsdb_20261112_123206.log

@@ -1,0 +1,10 @@
+bert_weights 00000000 393216
+pos_emb 00600000 8192
+param_a 01900000 4096
+param_b 01910000 8192
+param_c 01930000 2048
+gru_bias 017d2000 512
+gru_weights 017d4000 49152
+gru_wout_staging 01894000 512
+gru_scale_zp 018a0000 384
+gru_wp_proj 018a8000 384

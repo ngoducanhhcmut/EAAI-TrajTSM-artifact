@@ -1,0 +1,49 @@
+COMMAND: vvp simulation.vvp +NOGAPS
+PROGRESS codec 0/5648 cycles=128
+PROGRESS codec 1000/5648 cycles=104821
+PROGRESS codec 2000/5648 cycles=260833
+PROGRESS codec 3000/5648 cycles=528745
+PROGRESS codec 4000/5648 cycles=952873
+PROGRESS codec 5000/5648 cycles=1479203
+ASSERT 0 reset_ready spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 1 reset_valid spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 2 reset_data spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 3 invalid_zero spec5.3/5.5.2/7/10.3 hits=1753195
+ASSERT 4 ready_known spec5.3/5.5.2/7/10.3 hits=1775963
+ASSERT 5 valid_known spec5.3/5.5.2/7/10.3 hits=1775963
+ASSERT 6 response_known spec5.3/5.5.2/7/10.3 hits=22768
+ASSERT 7 no_ready_response spec5.3/5.5.2/7/10.3 hits=22768
+ASSERT 8 stall_valid spec5.3/5.5.2/7/10.3 hits=17120
+ASSERT 9 stall_payload spec5.3/5.5.2/7/10.3 hits=17120
+ASSERT 10 crc_no_digest spec5.3/5.5.2/7/10.3 hits=7170
+ASSERT 11 sha_no_crc spec5.3/5.5.2/7/10.3 hits=15357
+ASSERT 12 fault_zero spec5.3/5.5.2/7/10.3 hits=241
+ASSERT 13 fault_exact spec5.3/5.5.2/7/10.3 hits=22768
+ASSERT 14 crc_exact spec5.3/5.5.2/7/10.3 hits=7186
+ASSERT 15 sha_word_0 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 16 sha_word_1 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 17 sha_word_2 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 18 sha_word_3 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 19 sha_word_4 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 20 sha_word_5 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 21 sha_word_6 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 22 sha_word_7 spec5.3/5.5.2/7/10.3 hits=15582
+ASSERT 23 bounded_response spec5.3/5.5.2/7/10.3 hits=12
+ASSERT 24 no_early_response spec5.3/5.5.2/7/10.3 hits=1195673
+ASSERT 25 last_blocks_input spec5.3/5.5.2/7/10.3 hits=531221
+ASSERT 26 response_has_job spec5.3/5.5.2/7/10.3 hits=11301
+ASSERT 27 whole_response spec5.3/5.5.2/7/10.3 hits=22768
+ASSERT 28 crc_fault_zero spec5.3/5.5.2/7/10.3 hits=241
+ASSERT 29 reset_inflight spec5.3/5.5.2/7/10.3 hits=8
+LATENCY op=0 max=22
+LATENCY op=1 max=82
+LATENCY op=2 max=148
+LATENCY op=3 max=1138
+LATENCY op=4 max=214
+LATENCY op=5 max=8192
+LATENCY op=6 max=33874
+assertion failures: 0, assertions never exercised: 0
+PASS codec: golden=5648/5648 assertions=30 cycles=1775973
+tb_m_tsmx_codec.sv:535: $finish called at 10655838000 (1ps)
+
+EXIT: 0

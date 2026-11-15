@@ -1,0 +1,14 @@
+# 06/10/2026 — scripts/board_test_ddr.tcl voi psu_init ZCU106 goc (UDIMM x8 4Gb).
+# DINH CHINH: PGSR0=0x80084FFF co bit 19 = VERR (loi VREF training), script luc do in nham la 'ZCERR' (da sua script).
+# ----- NGUYEN VAN (khong chinh sua) -----
+=== BUOC 1: thanh ghi trang thai DDR (DDRC 0xFD07_xxxx, DDR PHY 0xFD08_xxxx) ===
+DDRC STAT   (0xFD070004) = 0x00000001 -> che do hoat dong = 1 (Binh thuong (Normal))
+PHY  PGSR0  (0xFD080030) = 0x80084FFF
+  buoc training da xong : IDONE PLDONE DCDONE ZCDONE DIDONE WLDONE QSGDONE WLADONE RDDONE WDDONE REDONE WEDONE
+  co LOI training       : ZCERR
+=> KET LUAN BUOC 1: DDR KHONG vao trang thai hoat dong binh thuong / training bao loi.
+
+=== BUOC 2: ghi roi doc lai DDR (dung ngay khi doc bi treo) ===
+  DOC 0x00100008: TREO / LOI (Memory read error at 0x100008. AP transaction timeout)
+Ket qua: dung 2 word, sai 0 word, va bus bi treo khi truy cap DDR
+=> KET LUAN BUOC 2: DDR KHONG doc/ghi dung. (Nho tat/bat lai nguon board.)

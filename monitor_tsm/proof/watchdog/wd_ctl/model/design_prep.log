@@ -1,0 +1,206 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Found 0 SCCs in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Found 0 SCCs in module m_tsmx_arb.
+Found 0 SCCs in module m_tsmx_cert.
+Found 0 SCCs in module m_tsmx_csr.
+Found 0 SCCs in module m_tsmx_engine.
+Found 0 SCCs in module m_tsmx_hash.
+Found 0 SCCs in module m_tsmx_health_lane.
+Found 0 SCCs in module m_tsmx_ingress.
+Found 0 SCCs in module m_tsmx_math.
+Found 0 SCCs in module m_tsmx_rec.
+Found 0 SCCs in module m_tsmx_sel.
+Found 0 SCCs in module m_tsmx_splice.
+Found 0 SCCs in module m_tsmx_supervisor.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_csr..
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Removed 31 unused cells and 31 unused wires.
+<suppressed ~32 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_csr..
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep...
+Checking module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep...
+Checking module m_tsmx_arb...
+Checking module m_tsmx_cert...
+Checking module m_tsmx_csr...
+Checking module m_tsmx_engine...
+Checking module m_tsmx_hash...
+Checking module m_tsmx_health_lane...
+Checking module m_tsmx_ingress...
+Checking module m_tsmx_math...
+Checking module m_tsmx_rec...
+Checking module m_tsmx_sel...
+Checking module m_tsmx_splice...
+Checking module m_tsmx_supervisor...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_csr.
+Optimizing module m_tsmx_engine.
+<suppressed ~1 debug messages>
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_math.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_supervisor.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 1256 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1251 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Removed a total of 5 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_csr..
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Removed 53 unused cells and 111 unused wires.
+<suppressed ~107 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_csr..
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Removed 0 unused cells and 86 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 1f84722eb8, time: 551.09s, user: 543.47s, system: 2.68s, MEM: 381.77 MB peak
+Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 94% 1x check (516 sec), 3% 1x formalff (20 sec), ...

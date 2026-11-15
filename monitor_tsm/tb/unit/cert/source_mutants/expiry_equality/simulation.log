@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\source_mutants\expiry_equality\sim.vvp
+EXIT 1
+BOOT complete
+PROGRESS cert job=0 cycles=68
+ASSERT_FAIL 9 atomic_status spec5.3 cycle=819 got=1f expected=1d
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:154: R-025 assertion failed
+       Time: 9008000  Scope: tb_m_tsmx_cert.tick

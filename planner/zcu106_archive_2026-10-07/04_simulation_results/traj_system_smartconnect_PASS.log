@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 23:18:53 2026
+# Process ID: 17984
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_traj/prj/traj_sysbd.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log traj_sysbd.log -mode tcl -source {xsim.dir/tb_traj_sysbd_behav/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_traj/prj/traj_sysbd.sim/sim_1/behav/xsim/traj_sysbd.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_traj/prj/traj_sysbd.sim/sim_1/behav/xsim\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_traj_sysbd_behav/xsim_script.tcl
+# xsim {tb_traj_sysbd_behav} -autoloadwcfg -tclbatch {tb_traj_sysbd.tcl}
+Time resolution is 1 ps
+source tb_traj_sysbd.tcl
+## run all
+XilinxAXIVIP: Found at Path: tb_traj_sysbd.u_bd.traj_ifc_i.axi_vip_mem.inst
+[AG] assertion BAT: weight_loader.sv tb_traj_sysbd.u_dut.u_wrap.u_planning_top.wl_inst
+[AG] assertion BAT: bert_weight_loader.sv tb_traj_sysbd.u_dut.u_wrap.u_planning_top.bert_wl_inst
+[AG] assertion BAT: uram_arbiter.sv tb_traj_sysbd.u_dut.u_wrap.u_planning_top.u_uram_arb
+=== TRAJ SYSBD: nap DDR ===
+  nap ddr_bert_weights.hex -> 0x00000000 (393216 dong 128 bit)
+  nap ddr_pos_emb.hex -> 0x00600000 (8192 dong 128 bit)
+  nap ddr_param_a.hex -> 0x01900000 (4096 dong 128 bit)
+  nap ddr_param_b.hex -> 0x01910000 (8192 dong 128 bit)
+  nap ddr_param_c.hex -> 0x01930000 (2048 dong 128 bit)
+  nap ddr_gru_bias.hex -> 0x017d2000 (512 dong 128 bit)
+  nap ddr_gru_weights.hex -> 0x017d4000 (49152 dong 128 bit)
+  nap ddr_gru_wout_staging.hex -> 0x01894000 (512 dong 128 bit)
+  nap ddr_gru_scale_zp.hex -> 0x018a0000 (384 dong 128 bit)
+  nap ddr_gru_wp_proj.hex -> 0x018a8000 (384 dong 128 bit)
+  nap s00_wm.hex -> 0x00640000 (1024 dong 128 bit)
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_traj_sysbd.u_dut.u_wrap.u_planning_top.u_uram_xpm.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_traj_sysbd/u_dut/u_wrap/u_planning_top/u_uram_xpm/xpm_memory_base_inst/Initial302_1210  Scope: tb_traj_sysbd.u_dut.u_wrap.u_planning_top.u_uram_xpm.xpm_memory_base_inst.config_drc  File: C:\Vivado\Vivado\2023.2\data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 510
+[497 ns] nha reset PL -> Traj tu nap trong so tu DDR
+  AXI-Lite AW truoc W : doc lai 0x12345678 DAT
+  AXI-Lite W truoc AW : doc lai 0x9abcdef0 DAT
+  AXI-Lite cung luc   : doc lai 0x0badf00d DAT
+[3928290 ns] STATUS=0x00000500 sau khi nap trong so (16065 AR, rerr=0, proto=0)
+[TSC] t=49387744 ns  PASS  traj_valid=1
+[49387757 ns] xong suy luan sau 6819588 chu ky (45.46 ms @150 MHz)
+  WP word 0: FPGA-RTL 0x40866631  E2E-35/35 0x40866631  trung
+  WP word 1: FPGA-RTL 0xbdfef8d5  E2E-35/35 0xbdfef8d5  trung
+  WP word 2: FPGA-RTL 0x4104f77c  E2E-35/35 0x4104f77c  trung
+  WP word 3: FPGA-RTL 0xbe01e630  E2E-35/35 0xbe01e630  trung
+  WP word 4: FPGA-RTL 0x41445c64  E2E-35/35 0x41445c64  trung
+  WP word 5: FPGA-RTL 0xbe55f9e6  E2E-35/35 0xbe55f9e6  trung
+  WP word 6: FPGA-RTL 0x417e949e  E2E-35/35 0x417e949e  trung
+  WP word 7: FPGA-RTL 0xbe5de4ae  E2E-35/35 0xbe5de4ae  trung
+=== KET QUA: AXI-Lite 5/5 | CSR khong phan hoi 0 | waypoint khac 0/8 | AXI proto 0 | RRESP loi 0 | 17758 AR
+==== TRAJ SYSBD: DAT ====
+Executing Axi4 End Of Simulation checks
+$finish called at time : 49388050701 ps : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/system/tb_traj_sysbd.sv" Line 179
+run: Time (s): cpu = 00:00:03 ; elapsed = 02:48:24 . Memory (MB): peak = 203.320 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 4165564 KB (Peak: 4165564 KB), Simulation CPU Usage: 9839296 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 02:07:27 2026...

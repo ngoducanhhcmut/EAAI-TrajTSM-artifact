@@ -1,0 +1,27 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_control_8/Vtb_tsmx_control_phy
+TIMER 0 boundary PASS
+TIMER 1 boundary PASS
+TIMER 2 boundary PASS
+TIMER 3 boundary PASS
+TIMER 4 boundary PASS
+TIMER 5 boundary PASS
+TIMER 6 boundary PASS
+TIMER 7 boundary PASS
+TIMER 8 boundary PASS
+TIMER 9 boundary PASS
+TIMER 10 boundary PASS
+TIMER 11 boundary PASS
+TIMER 12 no_tick PASS
+TIMER 13 aligned_tick PASS
+TIMER 14 wrong_ack_before_timeout PASS
+TIMER 15 wrong_ack_at_timeout PASS
+TIMER 16 early_ack_not_retained PASS
+TIMER 17 early_ack_not_retained PASS
+TIMER 18 early_ack_not_retained PASS
+PASS cached timer probes=19
+PASS physical deadline clocks=1875000 brake=1
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_tsmx_control_phy.sv:533: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 49ms; walltime 554.707 s; speed 88.054 us/s
+- Verilator: cpu 506.432 s on 1 threads; allocated 5 MB
+

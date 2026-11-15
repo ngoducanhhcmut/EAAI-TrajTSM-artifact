@@ -1,0 +1,11 @@
+COMMAND C:\iverilog\bin\iverilog.exe -g2012 -s tb_m_tsmx_supervisor -I C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\tb_m_tsmx_supervisor.sv
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\source_mutants\health_ignored.sv:92: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+
+EXIT 0

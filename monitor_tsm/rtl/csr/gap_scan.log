@@ -1,0 +1,9 @@
+COMMAND: py -3.13 .agents/skills/vlsit-rtl-generator/scripts/vlsit_spec_gaps.py gaps tsmx_hw/spec/TSMX_Design_Specification.md
+spec: tsmx_hw/spec/TSMX_Design_Specification.md | sections found: 50 | gaps: 6 BLOCK, 0 INFO
+G-001 [BLOCK] sec 1.1 line - missing section: Purpose and scope
+G-002 [BLOCK] sec 2.3 line - missing section: Compliance declaration
+G-003 [BLOCK] sec 7.1 line - missing section: Clock domains
+G-004 [BLOCK] sec 7.3 line - missing section: Reset domains and sequencing
+G-005 [BLOCK] sec 14.2 line - missing section: RTL hierarchy
+G-006 [BLOCK] sec 14.3 line - missing section: Synthesis assumptions
+RESULT: GAPS - ask the designer about every BLOCK gap before writing RTL.

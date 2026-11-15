@@ -1,0 +1,9 @@
+{
+  "oracle_vs_golden_envelope_rows": 6986,
+  "pilot_frames_compared_exact": 200,
+  "pilot_odd_waypoints_compared_exact": 145,
+  "rtl_frames": 0,
+  "rtl_plans_replayed": 0,
+  "rtl_invalid_velocity_plans": 0,
+  "rtl_overflow_plans": 0
+}

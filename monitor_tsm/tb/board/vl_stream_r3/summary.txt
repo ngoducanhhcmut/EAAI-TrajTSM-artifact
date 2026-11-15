@@ -1,0 +1,5 @@
+compile rc=0 s=119
+sub133 rc=1
+DONE_sub
+reg300_board rc=0
+DONE_full

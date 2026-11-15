@@ -1,0 +1,30 @@
+Icarus regression: eight exhaustive disjoint shards; commands/exits in shard logs.
+Measured production latency: guard=2; complete sweep=178 cycles.
+Measured unstalled II: guard=3; complete sweep=179 cycles.
+Assertion mutants killed24/24; source mutants killed5/5.
+ASSERT_HITS 0 total=260
+ASSERT_HITS 1 total=260
+ASSERT_HITS 2 total=260
+ASSERT_HITS 3 total=17014732
+ASSERT_HITS 4 total=23486
+ASSERT_HITS 5 total=23486
+ASSERT_HITS 6 total=23486
+ASSERT_HITS 7 total=17690
+ASSERT_HITS 8 total=17690
+ASSERT_HITS 9 total=17690
+ASSERT_HITS 10 total=5796
+ASSERT_HITS 11 total=5796
+ASSERT_HITS 12 total=8766
+ASSERT_HITS 13 total=8896
+ASSERT_HITS 14 total=17000040
+ASSERT_HITS 15 total=5916
+ASSERT_HITS 16 total=10310
+ASSERT_HITS 17 total=13176
+ASSERT_HITS 18 total=130
+ASSERT_HITS 19 total=6218
+ASSERT_HITS 20 total=112904
+ASSERT_HITS 21 total=17000040
+ASSERT_HITS 22 total=23486
+ASSERT_HITS 23 total=130
+assertion failures: 0, assertions never exercised: 0
+PASS splice: golden=128/128 edges=18/18 hex=128/128 extra=4494/4494 total=5736/5736

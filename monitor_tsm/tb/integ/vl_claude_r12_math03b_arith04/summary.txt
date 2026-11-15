@@ -1,0 +1,5 @@
+check rc=0
+control8 rc=0
+reg300 rc=1
+worst2 rc=0
+DONE_REG

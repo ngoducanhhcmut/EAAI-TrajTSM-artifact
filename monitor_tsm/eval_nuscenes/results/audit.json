@@ -1,0 +1,12 @@
+{
+  "oracle_vs_golden_envelope_rows": 6986,
+  "pilot_frames_compared_exact": 200,
+  "pilot_odd_waypoints_compared_exact": 145,
+  "full_frame_count": 29049,
+  "scenes": 850,
+  "primary_metric_counts_independently_recomputed": true,
+  "rtl_frames": 300,
+  "rtl_plans_replayed": 771,
+  "rtl_invalid_velocity_plans": 264,
+  "rtl_overflow_plans": 0
+}

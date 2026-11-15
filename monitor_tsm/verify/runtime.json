@@ -1,0 +1,46 @@
+[
+  {
+    "peak_rss": 0,
+    "seconds": 136.11484350000683,
+    "stage": "preintegration_v2_interrupted"
+  },
+  {
+    "peak_rss": 0,
+    "seconds": 143.50878190000367,
+    "stage": "pre_world_binding_v2_interrupted"
+  },
+  {
+    "peak_rss": 0,
+    "seconds": 1117.8764389999997,
+    "stage": "v2"
+  },
+  {
+    "completed": 200,
+    "peak_rss": 0,
+    "seconds": 11760.943583200002,
+    "stage": "v1"
+  },
+  {
+    "completed": 7,
+    "note": "Conservative wall estimate from external process start, including startup/stop overhead",
+    "peak_rss": 0,
+    "seconds": 694.304542,
+    "stage": "v3_pre_cache_interrupted"
+  },
+  {
+    "peak_rss": 0,
+    "seconds": 38.831801199994516,
+    "stage": "pure_cache_validation"
+  },
+  {
+    "completed": 100,
+    "peak_rss": 0,
+    "seconds": 3299.5737429,
+    "stage": "v3"
+  },
+  {
+    "peak_rss": 0,
+    "seconds": 1085.633960600011,
+    "stage": "v2"
+  }
+]

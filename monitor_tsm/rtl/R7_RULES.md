@@ -1,0 +1,37 @@
+# RTL rule check
+
+Files: m_tsmx_geom.sv, m_tsmx_geom_adv.sv, m_tsmx_geom_swept.sv
+
+| Level | Rule | File:line | Finding |
+|---|---|---|---|
+| WARN | HIE-02 | m_tsmx_geom.sv:16 | module has instances and also logic; a structural top should contain instances only (HIE-02) |
+| WARN | HIE-02 | m_tsmx_geom_adv.sv:16 | module has instances and also logic; a structural top should contain instances only (HIE-02) |
+| WARN | HIE-02 | m_tsmx_geom_swept.sv:16 | module has instances and also logic; a structural top should contain instances only (HIE-02) |
+| WARN | PAR-03 | m_tsmx_geom.sv:108 | literal 96 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:111 | literal 128 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:114 | literal 32'd25600000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:115 | literal 64'd10070000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:116 | literal 64'd10070000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:117 | literal 32'd20000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:118 | literal 32 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom.sv:119 | literal 32'd8000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:53 | literal 3'd4 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:56 | literal 3'd4 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:57 | literal 3'd2 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:58 | literal 32 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:61 | literal 96'd2000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:62 | literal 96'd2000000000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:63 | literal 96'd1000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_adv.sv:64 | literal 96'd2 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:49 | literal 64 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:50 | literal 128'd2000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:52 | literal 128'd2000000000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:54 | literal 128'd1000000 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:56 | literal 128'd2 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:68 | literal 96 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:69 | literal 3'd7 may be a magic number (P10); name it with a parameter, localparam or enum member |
+| WARN | PAR-03 | m_tsmx_geom_swept.sv:76 | literal 3'd2 may be a magic number (P10); name it with a parameter, localparam or enum member |
+
+Rules failed: none
+Rules warned: HIE-02, PAR-03
+Rules clean: ARI-04, CMT-01, CMT-05, COM-02, COM-03, COM-04, COM-06, COM-07, ENM-01, ENM-03, ENM-04, ENM-05, FIL-01, FIL-02, FIL-03, HIE-01, HIE-03, HIE-05, NAM-07, NAM-08, NAM-TBL, P1, P11, P12, P13, P14, P17, P18, P19, P2, P20, P21, P22, P24, P25, P26, P27, P29, P3, P4, P6, P7, PAR-01, PAR-02, R-019, SCP-01, SEC-8.1, SEQ-01, TYP-02

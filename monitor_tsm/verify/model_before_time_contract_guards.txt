@@ -1,0 +1,535 @@
+from dataclasses import dataclass, replace, asdict
+from hashlib import sha256
+import json
+import zlib
+from functools import lru_cache
+
+S = T = 1_000_000
+DT = 100_000
+NAN = -(1 << 63)
+MASK = (1 << 32)-1
+LIBRARY = tuple((b*S, j*S if j else 0, f'b{b}_j{j or "instant"}')
+                for b in (2,4,6,8) for j in (2,4,8,0))
+MODES = ('L0','L1','L2','L3','HOLD','RECOVERY')
+
+def checked(x, bits=64):
+    if type(x) is not int or not -(1 << (bits-1)) < x < (1 << (bits-1)):
+        raise ValueError('numeric_overflow')
+    return x
+
+def ceildiv(n,d):
+    assert d > 0
+    checked(n,256)
+    return -((-n)//d)
+
+def digest(x):
+    return sha256(json.dumps(x, sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+def canonical(x):
+    return json.dumps(x,sort_keys=True,separators=(',',':')).encode()
+
+def elapsed(a,b):
+    """Signed serial-number difference; caller must stay inside half a wrap."""
+    return ((a-b+(1<<31)) & MASK)-(1<<31)
+
+@dataclass(frozen=True)
+class Ego:
+    t: int
+    x: int
+    v: int
+    a: int
+    lx: int
+    lv: int
+
+@dataclass(frozen=True)
+class Plan:
+    seq: int
+    snapshot: Ego
+    generated: int
+    apply: int
+    x: int
+    v: int
+    a: int
+    tail: int = 15
+    compute: int = 5000
+    count: int = 2
+    schema: int = 1
+
+@dataclass(frozen=True)
+class Packet:
+    plan: Plan
+    crc: int
+    snapshot_ids: tuple = (0,0,0)
+    schema: int = 1
+
+def packet(p, ids=(0,0,0)):
+    body = dict(plan=asdict(p),snapshot_ids=ids,schema=1)
+    return Packet(p,zlib.crc32(canonical(body)),ids)
+
+@dataclass(frozen=True)
+class Ingress:
+    seq: int = -1
+    last_time: int = -1
+    last_sample: int = -1
+    signature: tuple = ()
+    freeze_since: int = 0
+    freeze_x: int = 0
+
+def b1_ingress(state, now, ego, pkt):
+    """Pure admission; clock/sequence use 32-bit serial arithmetic."""
+    if state.last_time >= 0 and elapsed(now,state.last_time) < 0:
+        return state, 'clock_reset'
+    if pkt is None:
+        reason = 'freeze_no_sample' if state.last_sample >= 0 and elapsed(now,state.last_sample)>=300000 else 'timeout'
+        return state,reason
+    p=pkt.plan
+    try:
+        for st in (ego,p.snapshot):
+            for val in asdict(st).values(): checked(val)
+            if not (0<=st.t<=MASK and abs(st.x)<=10000*S and abs(st.lx)<=10000*S
+                    and 0<=st.v<=10*S and 0<=st.lv<=10*S and -8*S<=st.a<=0):
+                return state,'range_schema'
+        for val in (now,p.seq,p.generated,p.apply,p.x,p.v,p.a,p.compute,p.count,p.tail,p.schema): checked(val)
+    except (ValueError,TypeError): return state,'numeric'
+    if not (0<=now<=MASK and 0<=p.seq<=MASK and 0<=p.generated<=MASK and 0<=p.apply<=MASK
+            and abs(p.x)<=10000*S and 0<=p.v<=10*S and -8*S<=p.a<=0
+            and 0<=p.tail<16 and p.schema==pkt.schema==1): return state,'range_schema'
+    if not 2<=p.count<=32: return state,'overflow'
+    if not 0<=p.compute<=10000: return state,'deadline'
+    if (len(pkt.snapshot_ids)!=3 or len(set(pkt.snapshot_ids))!=1
+            or any(type(i) is not int or not 0<=i<=MASK for i in pkt.snapshot_ids)): return state,'snapshot'
+    body=dict(plan=asdict(p),snapshot_ids=pkt.snapshot_ids,schema=pkt.schema)
+    if zlib.crc32(canonical(body))!=pkt.crc: return state,'crc'
+    if state.seq>=0 and elapsed(p.seq,state.seq)<=0: return state,'sequence'
+    if not (0<=elapsed(now,p.snapshot.t)<=150000 and elapsed(now,p.generated)>=0
+            and elapsed(p.generated,p.snapshot.t)>=0): return state,'freshness'
+    sig=(p.x,p.v,p.a,p.tail)
+    if sig==state.signature and elapsed(now,state.freeze_since)>=300000 and abs(ego.x-state.freeze_x)>200000:
+        return state,'freeze'
+    new=replace(state,seq=p.seq,last_time=now,last_sample=p.snapshot.t)
+    if sig!=state.signature: new=replace(new,signature=sig,freeze_since=now,freeze_x=ego.x)
+    return new,'ok'
+
+def disp(v,a,n,d=1,up=False):
+    """Stop-clipped constant-acceleration displacement at rational n/d ticks."""
+    if a<0 and n*(-a)>=v*T*d:
+        num,den=v*v,-2*a
+    else:
+        num,den=2*v*n*T*d+a*n*n,2*T*T*d*d
+    checked(num,256); checked(den,256)
+    return ceildiv(num,den) if up else num//den
+
+def advance(x,v,a,h,up=False):
+    checked(x); checked(v); checked(a)
+    if not (0<=v<=20*S and -8*S<=a<=2*S and 0<=h<=12800000): raise ValueError('motion_range')
+    dx=disp(v,a,h,up=up)
+    nv=max(0,ceildiv(v*T+a*h,T) if up else (v*T+a*h)//T)
+    return checked(x+dx),nv
+
+def swept(gap,va,aa,vb,ab,h):
+    """Lower bound of exact continuous bumper gap, including both stop events.
+
+    Enumerate endpoints, stops and relative stationary point on every stop phase.
+    Candidate times are rational (integer numerator/denominator); displacement is
+    rounded down for actor a, up for b. Thus result <= exact min by <2 LSB.
+    """
+    cuts=[(0,1),(h,1)]
+    for v,a in ((va,aa),(vb,ab)):
+        if a<0 and 0<v*T<h*(-a): cuts.append((v*T,-a))
+    from functools import cmp_to_key
+    cuts.sort(key=cmp_to_key(lambda u,w: (u[0]*w[1]>w[0]*u[1])-(u[0]*w[1]<w[0]*u[1])))
+    points=list(cuts)
+    for l,r in zip(cuts,cuts[1:]):
+        # Active accelerations on the open interval. At a stop the next phase is zero.
+        ea=aa if not (aa<0 and va*T*l[1]<=l[0]*(-aa)) else 0
+        eb=ab if not (ab<0 and vb*T*l[1]<=l[0]*(-ab)) else 0
+        ua=va if ea else (0 if aa<0 else va)
+        ub=vb if eb else (0 if ab<0 else vb)
+        den=ea-eb; num=-(ua-ub)*T
+        if den<0: num,den=-num,-den
+        if den and l[0]*den < num*l[1] and num*r[1]<r[0]*den: points.append((num,den))
+    return min(gap+disp(va,aa,n,d)-disp(vb,ab,n,d,True) for n,d in points)
+
+def b2_splice(ego,plan):
+    if not (abs(ego.x)<=10000*S and 0<=ego.v<=10*S and -8*S<=ego.a<=0
+            and abs(plan.x)<=10000*S and 0<=plan.v<=10*S):return False
+    delay=elapsed(plan.apply,ego.t)
+    # A NEW packet cannot splice into its past. Only reusable() may evaluate an
+    # already committed backup in its original phase; never restart that epoch.
+    if delay<0:return False
+    if delay>100000 or not -8*S<=plan.a<=0: return False
+    xs=[]; vs=[]
+    try:
+        for dx in (-50000,50000):
+            for dv in (-50000,50000):
+                for da in (-100000,100000):
+                    v=max(0,ego.v+dv); a=min(0,max(-8*S,ego.a+da))
+                    xl,vl=advance(ego.x+dx,v,a,delay)
+                    xh,vh=advance(ego.x+dx,v,a,delay,True)
+                    xs.extend((xl,xh)); vs.extend((vl,vh))
+        return min(xs)>=plan.x-160000 and max(xs)<=plan.x+160000 and min(vs)>=plan.v-200000 and max(vs)<=plan.v+200000
+    except ValueError: return False
+
+def profile_a(cid,elapsed_ticks,initial=0):
+    b,j,_=LIBRARY[cid]
+    if j==0:return -b
+    change=j*max(0,elapsed_ticks)//T
+    return min(0,max(initial-change,min(initial+change,-b)))
+
+def ramp_integrals(v,a,j,target,h):
+    """Exact integer numerator/denominator for continuous capped ramp at h ticks."""
+    d=abs(j) if j else 1
+    n=min(h*d,abs(target-a)*T) if j else 0
+    # Integral a = a*h + j*(tau*h-tau²/2); integral twice a.
+    vd=2*T*T*d*d
+    vn=v*vd+2*a*h*T*d*d+j*(2*n*h*d-n*n)
+    xd=6*T*T*T*d*d*d
+    xn=6*v*h*T*T*d*d*d+3*a*h*h*T*d*d*d+j*((h*d)**3-(h*d-n)**3)
+    checked(vn,256);checked(xn,256)
+    return xn,xd,vn,vd
+
+def continuous_advance(x,v,a,j,target,h,up=False):
+    xn,xd,vn,vd=ramp_integrals(v,a,j,target,h)
+    if vn<0:
+        lo,hi=0,h
+        while hi-lo>1:
+            mid=(lo+hi)//2
+            if ramp_integrals(v,a,j,target,mid)[2]>=0:lo=mid
+            else:hi=mid
+        xn,xd,_,_=ramp_integrals(v,a,j,target,lo)
+        dx=ceildiv(xn,xd)+ceildiv(v,T) if up else xn//xd
+        return checked(x+dx),0
+    return checked(x+(ceildiv(xn,xd) if up else xn//xd)),max(0,ceildiv(vn,vd) if up else vn//vd)
+
+@dataclass(frozen=True)
+class Motion:
+    x: int
+    v: int
+    a: int = 0
+    length: int = 4800000
+    event: int = 0
+    after_a: int = 0
+
+@dataclass(frozen=True)
+class GeomResult:
+    accept: bool
+    margin: int
+    reason: str
+    steps: int
+
+@dataclass(frozen=True)
+class Trajectory:
+    accept: bool
+    rows: tuple  # phase ticks, xlo/xhi, vlo/vhi, midpoint acceleration, |jerk| bound
+    stop: int
+    reason: str
+
+def b4_mrmgen(x,v,a,cid,phase=0,limit=128):
+    """Continuous jerk-limited ramp, exact capped-ramp integral, stop + 2s hold.
+
+    Rows carry midpoint a AND a Lipschitz jerk bound; B3 inflates the midpoint
+    quadratic to cover the continuous curve. Instant explicitly waives jerk.
+    Phase is absolute time from original apply; it never restarts the ramp.
+    """
+    if not (0<=cid<16 and abs(x)<=10000*S and 0<=v<=10*S and -8*S<=a<=0
+            and 0<=phase<=12800000 and phase%DT==0 and 1<=limit<=128):return Trajectory(False,(),-1,'range')
+    xl=xh=x; vl=vh=v; rows=[]; stop=-1
+    for k in range(limit):
+        t=phase+k*DT
+        b,j,_=LIBRARY[cid]
+        start=0 if vh==0 else a if t<DT else profile_a(cid,t-DT,a)
+        cmd=0 if vh==0 else a if t<DT else profile_a(cid,t-DT+DT//2,a)
+        signed=0 if t<DT or vh==0 or start==-b else -j if start>-b else j
+        bound=abs(signed)
+        # Non-grid phase may straddle the prefix/ramp transition: reject rather
+        # than silently use the wrong epoch. Physical decision phase is 100ms.
+        if t<DT<t+DT:return Trajectory(False,tuple(rows),-1,'phase_alignment')
+        if not j and t>=DT:start=cmd
+        rows.append((t,xl,xh,vl,vh,cmd,bound))
+        xl,vl=continuous_advance(xl,vl,start,signed,-b,DT)
+        xh,vh=continuous_advance(xh,vh,start,signed,-b,DT,True)
+        if vh==0 and stop<0:stop=t+DT
+        if stop>=0 and t+DT>=stop+2*T:
+            rows.append((t+DT,xl,xh,vl,vh,0,0))
+            return Trajectory(True,tuple(rows),stop,'ok')
+    return Trajectory(False,tuple(rows),stop,'horizon')
+
+def b3_geom(traj,objects,lane=(-1800000,1800000),y=0,half_width=950000,
+            lateral_error=50000,reserve=500000):
+    """Sequential lane/longitudinal separation. Objects may be ahead OR behind.
+
+    Object event time is relative to trajectory first row. Its acceleration may
+    change once there; intervals are split at that event, with outward bounds.
+    Object extent and tracking error are included in length. No relevance truncation.
+    """
+    if not traj.accept or not 2<=len(traj.rows)<=129:return GeomResult(False,-1,'trajectory',0)
+    if not (len(lane)==2 and -10000*S<=lane[0]<=lane[1]<=10000*S and abs(y)<=10000*S
+            and 0<half_width<=10*S and 0<=lateral_error<=S and 0<=reserve<=10*S):
+        return GeomResult(False,-1,'lane_range',0)
+    if len(objects)>32:return GeomResult(False,-1,'object_overflow',0)
+    if lane[0]>y-half_width-lateral_error or lane[1]<y+half_width+lateral_error:
+        return GeomResult(False,-1,'lane',0)
+    if any(not (abs(o.x)<=10000*S and 0<=o.v<=20*S and -8*S<=o.a<=2*S
+                and -8*S<=o.after_a<=2*S and 0<=o.event<=12800000
+                and 0<o.length<=20*S) for o in objects):return GeomResult(False,-1,'object_range',0)
+    horizon=traj.rows[-1][0]-traj.rows[0][0]
+    if not 0<horizon<=12800000:return GeomResult(False,-1,'horizon',0)
+    if any(o.v+ceildiv(max(0,o.a,o.after_a)*horizon,T)>20*S for o in objects):
+        return GeomResult(False,-1,'object_speed_bound',0)
+    states=[(o.x,o.x,o.v,o.v) for o in objects]; minimum=10000*S
+    origin=traj.rows[0][0]
+    for k,(row,nxt) in enumerate(zip(traj.rows,traj.rows[1:])):
+        t,xl,xh,vl,vh,a,jerk=row; h=nxt[0]-t
+        if not 0<h<=DT:return GeomResult(False,-1,'time',k)
+        if not (-(1<<63)<xl<=xh<(1<<63) and 0<=vl<=vh<=20*S and -8*S<=a<=0
+                and 0<=jerk<=8*S):return GeomResult(False,-1,'numeric',k)
+        # |a(u)-a(h/2)| <= J |u-h/2| + 1 LSB. Twice integrated
+        # absolute error <= J*h³/8 + h²/2 LSB; stop clipping is monotone.
+        inflate=ceildiv(jerk*h*h*h,8*T*T*T)+ceildiv(h*h,2*T*T)
+        for i,o in enumerate(objects):
+            ol,oh,ovl,ovh=states[i]
+            pieces=[0,h]
+            event=o.event-(t-origin)
+            if 0<event<h:pieces.insert(1,event)
+            exl,exh,evl,evh=xl-inflate,xh+inflate,vl,vh
+            ahead=ol>=xh
+            for left,right in zip(pieces,pieces[1:]):
+                width=right-left
+                oa=o.a if t-origin+left<o.event else o.after_a
+                if ahead: g=swept(ol-exh-o.length,ovl,oa,evh,a,width)
+                else:g=swept(exl-oh-o.length,evl,a,ovh,oa,width)
+                minimum=min(minimum,g-reserve)
+                if g<reserve:return GeomResult(False,g-reserve,'separation',k+1)
+                ol,ovl=advance(ol,ovl,oa,width);oh,ovh=advance(oh,ovh,oa,width,True)
+                exl,evl=advance(exl,evl,a,width);exh,evh=advance(exh,evh,a,width,True)
+            states[i]=(ol,oh,ovl,ovh)
+    return GeomResult(True,minimum,'ok',len(traj.rows)-1)
+
+def b7_select(results):
+    # A3/d2 finite jerk pool; instant candidates are diagnostic/mitigation only.
+    pool=[i for i,r in enumerate(results) if i<16 and LIBRARY[i][1] and r.accept]
+    if not pool:return 15,'MITIGATION'
+    return min(pool,key=lambda i:(LIBRARY[i][0],LIBRARY[i][1],LIBRARY[i][2])),'CERT-FRONT/REAR-COND'
+
+def lead_motion(ego,lead):
+    return Motion(ego.lx,ego.lv,0,4800000,max(0,500000-ego.t),-4*S if lead=='braking' else 0)
+
+@lru_cache(maxsize=4096)
+def select(ego,lead,phase=0):
+    # Early-out equals b7_select because library enumeration has A3 order.
+    for cid in range(16):
+        if not LIBRARY[cid][1]:continue
+        tr=b4_mrmgen(ego.x,ego.v,ego.a,cid,phase)
+        if b3_geom(tr,(lead_motion(ego,lead),)).accept:return cid,'CERT-FRONT/REAR-COND'
+    return 15,'MITIGATION'
+
+@dataclass(frozen=True)
+class Certificate:
+    snapshot: str
+    trajectory: str
+    t_a: int
+    t_e: int
+    capability: int = 1
+    config: int = 1
+    controller: int = 1
+    scope: int = 1
+    context: str = ''
+    seal: str = ''
+
+def cert_seal(c):
+    d=asdict(c);d.pop('seal');return digest(d)
+
+def context_digest(objects=(),lane=(-1800000,1800000)):
+    return digest(dict(objects=[asdict(o) for o in objects],lane=lane,frame=1,units=1))
+
+def certify(p,expiry,objects=(),lane=(-1800000,1800000)):
+    c=Certificate(digest(asdict(p.snapshot)),digest(asdict(p)),p.apply,expiry,
+                  context=context_digest(objects,lane))
+    return replace(c,seal=cert_seal(c))
+
+def b9_cert(p,c,now,at_executor=False,issued=None,ack=False,expected_seq=None,expected_context=None):
+    if p is None or c is None:return 'timeout'
+    if any(type(v) is not int or not 0<=v<=MASK for v in (now,c.t_a,c.t_e,p.seq)):
+        return 'range_schema'
+    if (c.seal!=cert_seal(c) or c.snapshot!=digest(asdict(p.snapshot)) or c.trajectory!=digest(asdict(p))
+            or c.t_a!=p.apply or (c.capability,c.config,c.controller,c.scope)!=(1,1,1,1)):return 'binding'
+    if expected_seq is not None and p.seq!=expected_seq:return 'replay'
+    if expected_context is not None and c.context!=expected_context:return 'context_binding'
+    remaining=elapsed(c.t_e,now)
+    if at_executor:
+        if remaining<=0:return 'expiry_at_executor'
+        if issued is not None and elapsed(now,issued)>=40000 and not ack:return 'ack_timeout'
+        return 'committed' if ack and elapsed(now,p.apply)>=0 else 'pending'
+    if remaining<=20000 or elapsed(c.t_e,p.apply)<=20000:return 'expiry'
+    return 'ok'
+
+@dataclass(frozen=True)
+class Supervisor:
+    mode: str = 'L3'
+    good: int = 0
+    backup: tuple = ()
+    pending: tuple = ()
+    ingress: Ingress = Ingress()
+    fault_latched: bool = False
+    events: tuple = ()
+    events_lost: int = 0
+
+def b8_fsm(state,accept,v,reusable=False,fallback=True,capability=True,reset=False,health=True):
+    if reset or not health:
+        return replace(state,mode='HOLD' if v==0 else 'L3',good=0,pending=(),backup=(),fault_latched=True)
+    if accept:
+        good=min(3,state.good+1)
+        return replace(state,good=good,mode='L0' if good==3 else 'RECOVERY',fault_latched=False)
+    mode='HOLD' if v==0 else 'L1' if reusable and capability else 'L2' if fallback and capability else 'L3'
+    return replace(state,mode=mode,good=0,pending=(),fault_latched=True)
+
+@dataclass(frozen=True)
+class Recorder:
+    events: tuple = ()
+    lost: int = 0
+    capacity: int = 64
+
+def b10_rec(state,event):
+    if not 1<=state.capacity<=1024:raise ValueError('capacity')
+    if not (isinstance(event,tuple) and len(event)<=4 and all(
+            type(v) is int and -(1<<63)<v<(1<<63) or isinstance(v,str) and len(v)<=32 for v in event)):
+        return replace(state,lost=min(MASK,state.lost+1))
+    events=state.events+(event,)
+    return Recorder(events[-state.capacity:],min(MASK,state.lost+int(len(events)>state.capacity)),state.capacity)
+
+def b13_health(words=(),parities=(),lane_pair=(True,True),fsm_onehot=1,bist=True):
+    if len(words)!=len(parities) or any(type(w) is not int or not 0<=w<=MASK for w in words):return False
+    if any((w.bit_count()&1)!=p for w,p in zip(words,parities)):return False
+    if lane_pair[0]!=lane_pair[1] or not (0<fsm_onehot<64 and fsm_onehot&(fsm_onehot-1)==0):return False
+    if bist:
+        tr=b4_mrmgen(0,S,0,0)
+        if not tr.accept or tr.stop!=1100000 or tr.rows[-1]!=(3100000,766660,766670,0,0,0,0):return False
+        clear=b3_geom(tr,(Motion(20*S,0),))
+        blocked=b3_geom(tr,(Motion(4*S,0),))
+        if not clear.accept or blocked.accept:return False
+    return True
+
+def reaction_safe(ego,rear_ftti=1<<30):
+    if rear_ftti<=285000:return False
+    # Conservative coast .285 then brake8, front brakes4 immediately.
+    xh,vh=advance(ego.x,ego.v,0,285000,True)
+    ll,lv=advance(ego.lx,ego.lv,-4*S,285000)
+    return (swept(ego.lx-ego.x-4800000,ego.lv,-4*S,ego.v,0,285000)>=500000
+            and swept(ll-xh-4800000,lv,-4*S,vh,-8*S,3000000)>=500000)
+
+def phase_state(p,when):
+    h=elapsed(when,p.apply)
+    if h<0:return p.x,p.v
+    x,v=p.x,p.v
+    # Continuous B4 replay at the ORIGINAL epoch; no timestamp refresh.
+    for t in range(0,min(h,12800000),20000):
+        step=min(20000,h-t)
+        b,j,_=LIBRARY[p.tail]
+        a=p.a if t<DT else profile_a(p.tail,t-DT,p.a)
+        signed=0 if t<DT or a==-b else -j if a>-b else j
+        if not j and t>=DT:a=-b
+        x,v=continuous_advance(x,v,a,signed,-b,step)
+    return x,v
+
+def reusable(state,now,ego):
+    if not state.backup:return False
+    p,c=state.backup
+    if b9_cert(p,c,now)!='ok' or elapsed(c.t_e,now)<=120000:return False
+    px,pv=phase_state(p,now)
+    # 640 spatial LSB + velocity accumulation <=640 LSB; two-sided tracking.
+    return abs(ego.x-px)+50000+640<=160000 and abs(ego.v-pv)+50000+640<=200000
+
+def nominal_geom(p,lead):
+    if p is None:return False
+    snap=p.snapshot; delay=max(0,elapsed(p.apply,snap.t))
+    if delay>500000:return False
+    lm=lead_motion(snap,lead)
+    # Split actor's braking event before apply.
+    first=min(delay,lm.event)
+    lx,lv=advance(lm.x,lm.v,lm.a,first)
+    lx,lv=advance(lx,lv,lm.after_a,delay-first)
+    tr=b4_mrmgen(p.x,p.v,p.a,15)
+    obj=Motion(lx,lv,lm.a,lm.length,max(0,lm.event-delay),lm.after_a)
+    return b3_geom(tr,(obj,)).accept
+
+def plan_tail(p,lead):
+    """Certify the tail in APPLY coordinates, including delay before its prefix."""
+    snap=p.snapshot;delay=max(0,elapsed(p.apply,snap.t))
+    if delay>100000:return 15,'MITIGATION'
+    lm=lead_motion(snap,lead);first=min(delay,lm.event)
+    lx,lv=advance(lm.x,lm.v,lm.a,first)
+    lx,lv=advance(lx,lv,lm.after_a,delay-first)
+    return select(Ego(p.apply,p.x,p.v,p.a,lx,lv),lead)
+
+def propagated_objects(objects,delay,ego_x):
+    result=[]
+    for o in objects:
+        h=min(delay,o.event)
+        upper=o.x<ego_x
+        x,v=advance(o.x,o.v,o.a,h,upper)
+        x,v=advance(x,v,o.after_a,delay-h,upper)
+        result.append(replace(o,x=x,v=v,event=max(0,o.event-delay)))
+    return tuple(result)
+
+def select_world(ego,objects,lane):
+    for cid in range(16):
+        if LIBRARY[cid][1] and b3_geom(b4_mrmgen(ego.x,ego.v,ego.a,cid),objects,lane).accept:
+            return cid,'CERT-FRONT/REAR-COND'
+    return 15,'MITIGATION'
+
+def tsmx_cycle(state,inputs):
+    """Pure 100ms supervisor transaction. Executor delivery is an explicit input.
+
+    now/ego/pkt/cert/lead, capability, rear_ftti, reset, health and ack.
+    ack applies to the previously issued immutable pending plan, before admission.
+    """
+    now=inputs['now'];ego=inputs['ego'];pkt=inputs.get('pkt');c=inputs.get('cert')
+    explicit_world='objects' in inputs or 'lane' in inputs
+    objects=tuple(inputs.get('objects',()))
+    lane=inputs.get('lane',(-1800000,1800000))
+    context=context_digest(objects,lane)
+    effective_objects=objects if 'objects' in inputs else (lead_motion(ego,inputs.get('lead','stationary')),)
+    cap=inputs.get('capability',True)
+    health=inputs.get('health',True) and b13_health(**inputs.get('health_inputs',{}))
+    commit='no_pending'
+    if state.pending:
+        issued,p,old=state.pending
+        commit=b9_cert(p,old,now,True,issued,inputs.get('ack',False),p.seq)
+        if commit=='committed':state=replace(state,backup=(p,old),pending=())
+        elif commit!='pending':state=replace(state,pending=())
+    ing,reason=b1_ingress(state.ingress,now,ego,pkt)
+    p=pkt.plan if pkt else None
+    if reason=='ok':reason=b9_cert(p,c,now,expected_context=context)
+    if reason=='ok' and not b2_splice(ego,p):reason='splice'
+    if reason=='ok' and not reaction_safe(ego,inputs.get('rear_ftti',1<<30)):reason='ftti_budget'
+    if reason=='ok' and not nominal_geom(p,inputs.get('lead','stationary')):reason='geometry'
+    if not cap:reason='capability'
+    if not health:reason='health'
+    if inputs.get('reset'):reason='reset'
+    cid,label=(select_world(ego,effective_objects,lane) if explicit_world else select(ego,inputs.get('lead','stationary')))
+    tail=15
+    if reason=='ok':
+        if explicit_world:
+            delay=max(0,elapsed(p.apply,ego.t))
+            xl,vl=advance(ego.x,ego.v,ego.a,delay)
+            xh,vh=advance(ego.x,ego.v,ego.a,delay,True)
+            bridge=Trajectory(True,((0,ego.x,ego.x,ego.v,ego.v,ego.a,0),
+                                    (delay,xl,xh,vl,vh,ego.a,0)),-1,'bridge')
+            bridge_ok=delay==0 or b3_geom(bridge,effective_objects,lane).accept
+            future=propagated_objects(effective_objects,delay,ego.x)
+            tail,_=select_world(Ego(p.apply,p.x,p.v,p.a,ego.lx,ego.lv),future,lane)
+            if not bridge_ok:tail=15
+        else:tail,_=plan_tail(p,inputs.get('lead','stationary'))
+        if tail==15:reason='no_backup'
+    ok=reason=='ok'
+    reuse=reusable(state,now,ego) and cap and health
+    state=b8_fsm(state,ok,ego.v,reuse,cid!=15,cap,inputs.get('reset',False),health)
+    if ok:
+        # Seal actual mild tail before publishing; mitigation is never a backup.
+        pp=replace(p,tail=tail)
+        state=replace(state,ingress=ing,pending=(now,pp,certify(pp,c.t_e,objects,lane)) if tail!=15 else ())
+    else:state=replace(state,ingress=replace(state.ingress,last_time=now))
+    rec=b10_rec(Recorder(state.events,state.events_lost),(now,reason,state.mode,cid))
+    state=replace(state,events=rec.events,events_lost=rec.lost)
+    return state,dict(accept=ok,reason=reason,mode=state.mode,candidate=cid,label=label,
+                      independent_brake=not ok,commit=commit,heartbeat=health)

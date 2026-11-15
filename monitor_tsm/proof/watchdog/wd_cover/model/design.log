@@ -1,0 +1,2940 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: stubs.sv
+Parsing formal SystemVerilog input from `stubs.sv' to AST representation.
+Storing AST representation for module `$abstract\m_tsmx_ingress'.
+Storing AST representation for module `$abstract\m_tsmx_splice'.
+Storing AST representation for module `$abstract\m_tsmx_cert'.
+Storing AST representation for module `$abstract\m_tsmx_sel'.
+Storing AST representation for module `$abstract\m_tsmx_supervisor'.
+Storing AST representation for module `$abstract\m_tsmx_arb'.
+Storing AST representation for module `$abstract\m_tsmx_rec'.
+Storing AST representation for module `$abstract\m_tsmx_health_lane'.
+Storing AST representation for module `$abstract\m_tsmx_hash'.
+Storing AST representation for module `$abstract\m_tsmx_math'.
+Storing AST representation for module `$abstract\m_tsmx_sweep'.
+Storing AST representation for module `$abstract\m_tsmx_csr'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: engine_cov.sv
+Parsing formal SystemVerilog input from `engine_cov.sv' to AST representation.
+Storing AST representation for module `$abstract\m_tsmx_engine'.
+Successfully finished Verilog frontend.
+Parameter \PARA_G = 2
+Parameter \PARA_P = 2
+Parameter \PARA_DIRECT = 0
+
+3. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_engine'.
+Parameter \PARA_G = 2
+Parameter \PARA_P = 2
+Parameter \PARA_DIRECT = 0
+Generating RTLIL representation for module `$paramod$9a601f58edd079360b84d4f8b72e5eb144ec11bf\m_tsmx_engine'.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_engine'.
+Generating RTLIL representation for module `\m_tsmx_engine'.
+
+4.2.1. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+
+4.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_csr'.
+Generating RTLIL representation for module `\m_tsmx_csr'.
+Parameter \PARA_G = 1
+Parameter \PARA_P = 1
+
+4.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_sweep'.
+Parameter \PARA_G = 1
+Parameter \PARA_P = 1
+Generating RTLIL representation for module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Parameter \PARA_G = 2
+Parameter \PARA_P = 2
+
+4.2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_sweep'.
+Parameter \PARA_G = 2
+Parameter \PARA_P = 2
+Generating RTLIL representation for module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+
+4.2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_math'.
+Generating RTLIL representation for module `\m_tsmx_math'.
+
+4.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_hash'.
+Generating RTLIL representation for module `\m_tsmx_hash'.
+
+4.2.7. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_health_lane'.
+Generating RTLIL representation for module `\m_tsmx_health_lane'.
+
+4.2.8. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_rec'.
+Generating RTLIL representation for module `\m_tsmx_rec'.
+
+4.2.9. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_arb'.
+Generating RTLIL representation for module `\m_tsmx_arb'.
+
+4.2.10. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_supervisor'.
+Generating RTLIL representation for module `\m_tsmx_supervisor'.
+
+4.2.11. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_sel'.
+Generating RTLIL representation for module `\m_tsmx_sel'.
+
+4.2.12. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_cert'.
+Generating RTLIL representation for module `\m_tsmx_cert'.
+
+4.2.13. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_splice'.
+Generating RTLIL representation for module `\m_tsmx_splice'.
+
+4.2.14. Executing AST frontend in derive mode using pre-parsed AST for module `\m_tsmx_ingress'.
+Generating RTLIL representation for module `\m_tsmx_ingress'.
+
+4.2.15. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_csr
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     \m_tsmx_math
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_ingress
+
+4.2.16. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_csr
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     \m_tsmx_math
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_ingress
+Removing unused module `$abstract\m_tsmx_engine'.
+Removing unused module `$abstract\m_tsmx_csr'.
+Removing unused module `$abstract\m_tsmx_sweep'.
+Removing unused module `$abstract\m_tsmx_math'.
+Removing unused module `$abstract\m_tsmx_hash'.
+Removing unused module `$abstract\m_tsmx_health_lane'.
+Removing unused module `$abstract\m_tsmx_rec'.
+Removing unused module `$abstract\m_tsmx_arb'.
+Removing unused module `$abstract\m_tsmx_supervisor'.
+Removing unused module `$abstract\m_tsmx_sel'.
+Removing unused module `$abstract\m_tsmx_cert'.
+Removing unused module `$abstract\m_tsmx_splice'.
+Removing unused module `$abstract\m_tsmx_ingress'.
+Removed 13 unused modules.
+Module m_tsmx_engine directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.3. Executing PROC pass (convert processes to netlists).
+
+4.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $engine_cov.sv:1566$proc$1230 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:1562$proc$1226 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:1360$proc$1213 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:1353$proc$1211 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:1310$proc$1175 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:1168$proc$1173 in module m_tsmx_engine.
+Marked 141 switch rules as full_case in process $engine_cov.sv:497$proc$766 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:413$proc$765 in module m_tsmx_engine.
+Marked 2 switch rules as full_case in process $engine_cov.sv:352$proc$764 in module m_tsmx_engine.
+Marked 1 switch rules as full_case in process $engine_cov.sv:340$proc$754 in module m_tsmx_engine.
+Removed a total of 0 dead cases.
+
+4.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 84 redundant assignments.
+Promoted 209 assignments to connections.
+
+4.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\m_tsmx_engine.$engine_cov.sv:1556$proc$1344'.
+  Set init value: \f_prev_count = 0
+Found init rule in `\m_tsmx_engine.$engine_cov.sv:1555$proc$1343'.
+  Set init value: \f_prev_active = 1'0
+Found init rule in `\m_tsmx_engine.$engine_cov.sv:1554$proc$1342'.
+  Set init value: \f_init = 1'1
+
+4.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \i_rst_n_core in `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+Found async reset \i_rst_n_core in `\m_tsmx_engine.$engine_cov.sv:1353$proc$1211'.
+Found async reset \i_rst_n_core in `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+Found async reset \i_rst_n_core in `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+
+4.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~150 debug messages>
+
+4.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1556$proc$1344'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1555$proc$1343'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1554$proc$1342'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:334$proc$1336'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:333$proc$1330'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:332$proc$1324'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:330$proc$1318'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:328$proc$1312'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:326$proc$1305'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:324$proc$1298'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:322$proc$1291'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:321$proc$1284'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:315$proc$1278'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:314$proc$1272'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1566$proc$1230'.
+     1/11: \W8_EN
+     2/11: \W7_EN
+     3/11: \W4_EN
+     4/11: \W6_EN
+     5/11: \W9_EN
+     6/11: \W5_EN
+     7/11: \W3_EN
+     8/11: \W2_EN
+     9/11: \W1_EN
+    10/11: \C2_EN
+    11/11: \C1_EN
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1562$proc$1226'.
+     1/2: $engine_cov.sv:1564$assume$1229_EN
+     2/2: $engine_cov.sv:1563$assume$1227_EN
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1557$proc$1225'.
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+     1/6: $0\reg_xerr[31:0]
+     2/6: $0\reg_xmprod[64:0]
+     3/6: $0\reg_xm[31:0]
+     4/6: $0\reg_xn[31:0]
+     5/6: $0\reg_xprod[64:0]
+     6/6: $0\reg_xph[31:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1353$proc$1211'.
+     1/2: $0\reg_sts_data[114:0]
+     2/2: $0\reg_sts_valid[0:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+     1/10: $0\reg_ms_nprop[0:0]
+     2/10: $0\reg_ss_tail[0:0]
+     3/10: $0\reg_ss_nom[0:0]
+     4/10: $0\reg_hs_reseal[0:0]
+     5/10: $0\reg_hs_newh[0:0]
+     6/10: $0\reg_hs_seal[0:0]
+     7/10: $0\reg_hs_traj[0:0]
+     8/10: $0\reg_hs_snap[0:0]
+     9/10: $0\reg_hs_ctx[0:0]
+    10/10: $0\reg_hs_crc[0:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+     1/67: $0\reg_log_drops[31:0]
+     2/67: $0\reg_replay_event[1055:0]
+     3/67: $0\reg_replay_full[0:0]
+     4/67: $0\reg_lane_good[0:0]
+     5/67: $0\reg_dup_result[0:0]
+     6/67: $0\reg_main_done[0:0]
+     7/67: $0\reg_dup_done[0:0]
+     8/67: $0\reg_main_sent[0:0]
+     9/67: $0\reg_dup_sent[0:0]
+    10/67: $0\reg_csr_rst[0:0]
+    11/67: $0\reg_bist_wait[0:0]
+    12/67: $0\reg_ctrl_par[0:0]
+    13/67: $0\reg_backup_cert_par[0:0]
+    14/67: $0\reg_backup_plan_par[0:0]
+    15/67: $0\reg_pending_cert_par[0:0]
+    16/67: $0\reg_pending_plan_par[0:0]
+    17/67: $0\reg_ing_par[0:0]
+    18/67: $0\reg_timer_valid[0:0]
+    19/67: $0\reg_timer_code[7:0]
+    20/67: $0\reg_heartbeat_en[0:0]
+    21/67: $0\reg_heartbeat[0:0]
+    22/67: $0\reg_heartbeat_time[31:0]
+    23/67: $0\reg_tick_valid[0:0]
+    24/67: $0\reg_tick[31:0]
+    25/67: $0\reg_live_bad[0:0]
+    26/67: $0\reg_override[0:0]
+    27/67: $0\reg_deadline[0:0]
+    28/67: $0\reg_lost[31:0]
+    29/67: $0\reg_count[31:0]
+    30/67: $0\reg_cmd_valid[0:0]
+    31/67: $0\reg_cmd[1896:0]
+    32/67: $0\reg_resp_valid[0:0]
+    33/67: $0\reg_final_rsp[37:0]
+    34/67: $0\reg_resp_data[37:0]
+    35/67: $0\reg_new_cert[1216:0]
+    36/67: $0\reg_new_plan[559:0]
+    37/67: $0\reg_seal[255:0]
+    38/67: $0\reg_trajectory[255:0]
+    39/67: $0\reg_snapshot[255:0]
+    40/67: $0\reg_context[255:0]
+    41/67: $0\reg_bridge[703:0]
+    42/67: $0\reg_lead[8199:0]
+    43/67: $0\reg_lane[383:0]
+    44/67: $0\reg_world[8199:0]
+    45/67: $0\reg_reuse[0:0]
+    46/67: $0\reg_healthy[0:0]
+    47/67: $0\reg_tail[7:0]
+    48/67: $0\reg_label[7:0]
+    49/67: $0\reg_cid[7:0]
+    50/67: $0\reg_commit[7:0]
+    51/67: $0\reg_reason[7:0]
+    52/67: $0\reg_backup_cert[1216:0]
+    53/67: $0\reg_backup_plan[559:0]
+    54/67: $0\reg_backup_valid[0:0]
+    55/67: $0\reg_issued[31:0]
+    56/67: $0\reg_pending_cert[1216:0]
+    57/67: $0\reg_pending_plan[559:0]
+    58/67: $0\reg_pending_valid[0:0]
+    59/67: $0\reg_fault[0:0]
+    60/67: $0\reg_good[1:0]
+    61/67: $0\reg_mode[2:0]
+    62/67: $0\reg_proposal[331:0]
+    63/67: $0\reg_ing[331:0]
+    64/67: $0\reg_active[0:0]
+    65/67: $0\reg_parse_reason[7:0]
+    66/67: $0\reg_req[44672:0]
+    67/67: $0\reg_fsm_ctrl_current_state[75:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+     1/547: $1\w_ctrl_par_nxt[0:0]
+     2/547: $1\w_backup_cert_par_nxt[0:0]
+     3/547: $1\w_backup_plan_par_nxt[0:0]
+     4/547: $1\w_pending_cert_par_nxt[0:0]
+     5/547: $1\w_pending_plan_par_nxt[0:0]
+     6/547: $1\w_ing_par_nxt[0:0]
+     7/547: $92\w_fsm_ctrl_nxt_state[75:0]
+     8/547: $8\w_live_bad_nxt[0:0]
+     9/547: $12\w_commit_nxt[7:0]
+    10/547: $43\w_reason_nxt[7:0]
+    11/547: $91\w_fsm_ctrl_nxt_state[75:0]
+    12/547: $7\w_live_bad_nxt[0:0]
+    13/547: $11\w_commit_nxt[7:0]
+    14/547: $42\w_reason_nxt[7:0]
+    15/547: $9\w_cmd_nxt[1896:0]
+    16/547: $9\w_cmd_valid_nxt[0:0]
+    17/547: $13\w_heartbeat_nxt[0:0]
+    18/547: $10\w_heartbeat_en_nxt[0:0]
+    19/547: $8\w_healthy_nxt[0:0]
+    20/547: $8\w_fault_nxt[0:0]
+    21/547: $8\w_good_nxt[1:0]
+    22/547: $8\w_mode_nxt[2:0]
+    23/547: $13\w_backup_valid_nxt[0:0]
+    24/547: $13\w_pending_valid_nxt[0:0]
+    25/547: $17\w_override_nxt[0:0]
+    26/547: $90\w_fsm_ctrl_nxt_state[75:0]
+    27/547: $8\w_cmd_nxt[1896:0]
+    28/547: $8\w_cmd_valid_nxt[0:0]
+    29/547: $6\w_live_bad_nxt[0:0]
+    30/547: $10\w_commit_nxt[7:0]
+    31/547: $41\w_reason_nxt[7:0]
+    32/547: $5\w_csr_rst_nxt[0:0]
+    33/547: $4\w_ing_nxt[331:0]
+    34/547: $4\w_csr_rst_nxt[0:0]
+    35/547: $5\w_live_bad_nxt[0:0]
+    36/547: $7\w_cmd_valid_nxt[0:0]
+    37/547: $7\w_cmd_nxt[1896:0]
+    38/547: $9\w_commit_nxt[7:0]
+    39/547: $40\w_reason_nxt[7:0]
+    40/547: $89\w_fsm_ctrl_nxt_state[75:0]
+    41/547: $3\w_csr_rst_nxt[0:0]
+    42/547: $4\w_live_bad_nxt[0:0]
+    43/547: $6\w_cmd_valid_nxt[0:0]
+    44/547: $6\w_cmd_nxt[1896:0]
+    45/547: $8\w_commit_nxt[7:0]
+    46/547: $39\w_reason_nxt[7:0]
+    47/547: $3\w_ing_nxt[331:0]
+    48/547: $88\w_fsm_ctrl_nxt_state[75:0]
+    49/547: $7\w_fault_nxt[0:0]
+    50/547: $7\w_good_nxt[1:0]
+    51/547: $7\w_mode_nxt[2:0]
+    52/547: $12\w_heartbeat_nxt[0:0]
+    53/547: $9\w_heartbeat_en_nxt[0:0]
+    54/547: $12\w_backup_valid_nxt[0:0]
+    55/547: $12\w_pending_valid_nxt[0:0]
+    56/547: $16\w_override_nxt[0:0]
+    57/547: $8\w_sts_data[114:0]
+    58/547: $8\w_sts_valid[0:0]
+    59/547: $87\w_fsm_ctrl_nxt_state[75:0]
+    60/547: $6\w_resp_valid_nxt[0:0]
+    61/547: $5\w_final_rsp_nxt[37:0]
+    62/547: $6\w_resp_data_nxt[37:0]
+    63/547: $5\w_cmd_nxt[1896:0]
+    64/547: $5\w_cmd_valid_nxt[0:0]
+    65/547: $15\w_override_nxt[0:0]
+    66/547: $11\w_backup_valid_nxt[0:0]
+    67/547: $11\w_pending_valid_nxt[0:0]
+    68/547: $6\w_fault_nxt[0:0]
+    69/547: $6\w_good_nxt[1:0]
+    70/547: $6\w_mode_nxt[2:0]
+    71/547: $5\w_active_nxt[0:0]
+    72/547: $7\w_commit_nxt[7:0]
+    73/547: $38\w_reason_nxt[7:0]
+    74/547: $4\w_deadline_nxt[0:0]
+    75/547: $7\w_sts_data[114:0]
+    76/547: $7\w_sts_valid[0:0]
+    77/547: $14\w_override_nxt[0:0]
+    78/547: $3\w_deadline_nxt[0:0]
+    79/547: $4\w_cmd_valid_nxt[0:0]
+    80/547: $4\w_cmd_nxt[1896:0]
+    81/547: $5\w_resp_valid_nxt[0:0]
+    82/547: $4\w_final_rsp_nxt[37:0]
+    83/547: $5\w_resp_data_nxt[37:0]
+    84/547: $6\w_commit_nxt[7:0]
+    85/547: $37\w_reason_nxt[7:0]
+    86/547: $10\w_backup_valid_nxt[0:0]
+    87/547: $10\w_pending_valid_nxt[0:0]
+    88/547: $5\w_fault_nxt[0:0]
+    89/547: $5\w_good_nxt[1:0]
+    90/547: $5\w_mode_nxt[2:0]
+    91/547: $4\w_active_nxt[0:0]
+    92/547: $86\w_fsm_ctrl_nxt_state[75:0]
+    93/547: $3\w_count_nxt[31:0]
+    94/547: $85\w_fsm_ctrl_nxt_state[75:0]
+    95/547: $4\w_resp_valid_nxt[0:0]
+    96/547: $3\w_final_rsp_nxt[37:0]
+    97/547: $4\w_resp_data_nxt[37:0]
+    98/547: $84\w_fsm_ctrl_nxt_state[75:0]
+    99/547: $6\w_sts_data[114:0]
+   100/547: $6\w_sts_valid[0:0]
+   101/547: $3\w_resp_valid_nxt[0:0]
+   102/547: $2\w_final_rsp_nxt[37:0]
+   103/547: $3\w_resp_data_nxt[37:0]
+   104/547: $3\w_active_nxt[0:0]
+   105/547: $83\w_fsm_ctrl_nxt_state[75:0]
+   106/547: $3\w_cmd_valid_nxt[0:0]
+   107/547: $3\w_cmd_nxt[1896:0]
+   108/547: $82\w_fsm_ctrl_nxt_state[75:0]
+   109/547: $11\w_heartbeat_nxt[0:0]
+   110/547: $10\w_heartbeat_nxt[0:0]
+   111/547: $7\w_heartbeat_time_nxt[31:0]
+   112/547: $13\w_override_nxt[0:0]
+   113/547: $12\w_override_nxt[0:0]
+   114/547: $81\w_fsm_ctrl_nxt_state[75:0]
+   115/547: $3\w_lost_nxt[31:0]
+   116/547: $80\w_fsm_ctrl_nxt_state[75:0]
+   117/547: $79\w_fsm_ctrl_nxt_state[75:0]
+   118/547: $36\w_reason_nxt[7:0]
+   119/547: $35\w_reason_nxt[7:0]
+   120/547: $78\w_fsm_ctrl_nxt_state[75:0]
+   121/547: $2\w_issued_nxt[31:0]
+   122/547: $9\w_pending_valid_nxt[0:0]
+   123/547: $2\w_pending_plan_nxt[559:0]
+   124/547: $2\w_pending_cert_nxt[1216:0]
+   125/547: $2\w_new_cert_nxt[1216:0]
+   126/547: $77\w_fsm_ctrl_nxt_state[75:0]
+   127/547: $76\w_fsm_ctrl_nxt_state[75:0]
+   128/547: $34\w_reason_nxt[7:0]
+   129/547: $33\w_reason_nxt[7:0]
+   130/547: $75\w_fsm_ctrl_nxt_state[75:0]
+   131/547: $3\w_trajectory_nxt[255:0]
+   132/547: $74\w_fsm_ctrl_nxt_state[75:0]
+   133/547: $2\w_new_plan_nxt[559:0] [559:80]
+   134/547: $2\w_new_plan_nxt[559:0] [71:0]
+   135/547: $2\w_ing_nxt[331:0]
+   136/547: $2\w_new_plan_nxt[559:0] [79:72]
+   137/547: $73\w_fsm_ctrl_nxt_state[75:0]
+   138/547: $9\w_backup_valid_nxt[0:0]
+   139/547: $8\w_pending_valid_nxt[0:0]
+   140/547: $72\w_fsm_ctrl_nxt_state[75:0]
+   141/547: $8\w_backup_valid_nxt[0:0]
+   142/547: $7\w_pending_valid_nxt[0:0]
+   143/547: $2\w_csr_rst_nxt[0:0]
+   144/547: $4\w_fault_nxt[0:0]
+   145/547: $4\w_good_nxt[1:0]
+   146/547: $4\w_mode_nxt[2:0]
+   147/547: $71\w_fsm_ctrl_nxt_state[75:0]
+   148/547: $70\w_fsm_ctrl_nxt_state[75:0]
+   149/547: $4\w_reuse_nxt[0:0]
+   150/547: $2\f_abs$func$engine_cov.sv:1008$699.$result[63:0]$1060
+   151/547: $2\f_abs$func$engine_cov.sv:1008$699.w_x[63:0]$1061
+   152/547: $2\f_abs$func$engine_cov.sv:1007$698.$result[63:0]$1058
+   153/547: $2\f_abs$func$engine_cov.sv:1007$698.w_x[63:0]$1059
+   154/547: $69\w_fsm_ctrl_nxt_state[75:0]
+   155/547: $68\w_fsm_ctrl_nxt_state[75:0]
+   156/547: $67\w_fsm_ctrl_nxt_state[75:0]
+   157/547: $3\w_reuse_nxt[0:0]
+   158/547: $2\f_diff$func$engine_cov.sv:991$697.$result[31:0]$1048
+   159/547: $2\f_diff$func$engine_cov.sv:991$697.w_b[31:0]$1050
+   160/547: $2\f_diff$func$engine_cov.sv:991$697.w_a[31:0]$1049
+   161/547: $2\f_diff$func$engine_cov.sv:991$696.$result[31:0]$1045
+   162/547: $2\f_diff$func$engine_cov.sv:991$696.w_b[31:0]$1047
+   163/547: $2\f_diff$func$engine_cov.sv:991$696.w_a[31:0]$1046
+   164/547: $66\w_fsm_ctrl_nxt_state[75:0]
+   165/547: $65\w_fsm_ctrl_nxt_state[75:0]
+   166/547: $32\w_reason_nxt[7:0]
+   167/547: $64\w_fsm_ctrl_nxt_state[75:0]
+   168/547: $31\w_reason_nxt[7:0]
+   169/547: $3\w_tail_nxt[7:0]
+   170/547: $63\w_fsm_ctrl_nxt_state[75:0]
+   171/547: $62\w_fsm_ctrl_nxt_state[75:0]
+   172/547: $4\w_context_nxt[255:0]
+   173/547: $61\w_fsm_ctrl_nxt_state[75:0]
+   174/547: $60\w_fsm_ctrl_nxt_state[75:0]
+   175/547: $59\w_fsm_ctrl_nxt_state[75:0]
+   176/547: $30\w_reason_nxt[7:0]
+   177/547: $58\w_fsm_ctrl_nxt_state[75:0]
+   178/547: $29\w_reason_nxt[7:0]
+   179/547: $57\w_fsm_ctrl_nxt_state[75:0]
+   180/547: $56\w_fsm_ctrl_nxt_state[75:0]
+   181/547: $55\w_fsm_ctrl_nxt_state[75:0]
+   182/547: $2\w_bridge_nxt[703:0]
+   183/547: $54\w_fsm_ctrl_nxt_state[75:0]
+   184/547: $53\w_fsm_ctrl_nxt_state[75:0]
+   185/547: $52\w_fsm_ctrl_nxt_state[75:0]
+   186/547: $28\w_reason_nxt[7:0]
+   187/547: $51\w_fsm_ctrl_nxt_state[75:0]
+   188/547: $2\f_diff$func$engine_cov.sv:915$695.w_b[31:0]$1027
+   189/547: $2\f_diff$func$engine_cov.sv:915$695.w_a[31:0]$1026
+   190/547: $2\f_diff$func$engine_cov.sv:915$695.$result[31:0]$1025
+   191/547: $2\f_diff$func$engine_cov.sv:914$694.w_b[31:0]$1024
+   192/547: $2\f_diff$func$engine_cov.sv:914$694.w_a[31:0]$1023
+   193/547: $2\f_diff$func$engine_cov.sv:914$694.$result[31:0]$1022
+   194/547: $27\w_reason_nxt[7:0]
+   195/547: $50\w_fsm_ctrl_nxt_state[75:0]
+   196/547: $3\w_label_nxt[7:0]
+   197/547: $3\w_cid_nxt[7:0]
+   198/547: $49\w_fsm_ctrl_nxt_state[75:0]
+   199/547: $9\w_heartbeat_nxt[0:0]
+   200/547: $8\w_heartbeat_en_nxt[0:0]
+   201/547: $11\w_override_nxt[0:0]
+   202/547: $26\w_reason_nxt[7:0]
+   203/547: $7\w_healthy_nxt[0:0]
+   204/547: $48\w_fsm_ctrl_nxt_state[75:0]
+   205/547: $7\w_heartbeat_en_nxt[0:0]
+   206/547: $8\w_heartbeat_nxt[0:0]
+   207/547: $10\w_override_nxt[0:0]
+   208/547: $6\w_healthy_nxt[0:0]
+   209/547: $25\w_reason_nxt[7:0]
+   210/547: $2\w_lane_good_nxt[0:0]
+   211/547: $2\w_dup_done_nxt[0:0]
+   212/547: $2\w_dup_result_nxt[0:0]
+   213/547: $2\w_main_done_nxt[0:0]
+   214/547: $3\w_context_nxt[255:0]
+   215/547: $47\w_fsm_ctrl_nxt_state[75:0]
+   216/547: $2\w_dup_sent_nxt[0:0]
+   217/547: $2\w_main_sent_nxt[0:0]
+   218/547: $24\w_reason_nxt[7:0]
+   219/547: $23\w_reason_nxt[7:0]
+   220/547: $22\w_reason_nxt[7:0]
+   221/547: $21\w_reason_nxt[7:0]
+   222/547: $46\w_fsm_ctrl_nxt_state[75:0]
+   223/547: $20\w_reason_nxt[7:0]
+   224/547: $45\w_fsm_ctrl_nxt_state[75:0]
+   225/547: $44\w_fsm_ctrl_nxt_state[75:0]
+   226/547: $43\w_fsm_ctrl_nxt_state[75:0]
+   227/547: $3\w_math_delay[31:0]
+   228/547: $42\w_fsm_ctrl_nxt_state[75:0]
+   229/547: $19\w_reason_nxt[7:0]
+   230/547: $41\w_fsm_ctrl_nxt_state[75:0]
+   231/547: $2\f_diff$func$engine_cov.sv:844$692.w_b[31:0]$997
+   232/547: $2\f_diff$func$engine_cov.sv:844$692.w_a[31:0]$996
+   233/547: $2\f_diff$func$engine_cov.sv:844$692.$result[31:0]$995
+   234/547: $2\f_diff$func$engine_cov.sv:843$691.w_b[31:0]$994
+   235/547: $2\f_diff$func$engine_cov.sv:843$691.w_a[31:0]$993
+   236/547: $2\f_diff$func$engine_cov.sv:843$691.$result[31:0]$992
+   237/547: $2\w_math_delay[31:0]
+   238/547: $18\w_reason_nxt[7:0]
+   239/547: $17\w_reason_nxt[7:0]
+   240/547: $40\w_fsm_ctrl_nxt_state[75:0]
+   241/547: $16\w_reason_nxt[7:0]
+   242/547: $39\w_fsm_ctrl_nxt_state[75:0]
+   243/547: $38\w_fsm_ctrl_nxt_state[75:0]
+   244/547: $15\w_reason_nxt[7:0]
+   245/547: $37\w_fsm_ctrl_nxt_state[75:0]
+   246/547: $14\w_reason_nxt[7:0]
+   247/547: $36\w_fsm_ctrl_nxt_state[75:0]
+   248/547: $35\w_fsm_ctrl_nxt_state[75:0]
+   249/547: $34\w_fsm_ctrl_nxt_state[75:0]
+   250/547: $13\w_reason_nxt[7:0]
+   251/547: $33\w_fsm_ctrl_nxt_state[75:0]
+   252/547: $32\w_fsm_ctrl_nxt_state[75:0]
+   253/547: $12\w_reason_nxt[7:0]
+   254/547: $11\w_reason_nxt[7:0]
+   255/547: $31\w_fsm_ctrl_nxt_state[75:0]
+   256/547: $3\w_seal_nxt[255:0]
+   257/547: $30\w_fsm_ctrl_nxt_state[75:0]
+   258/547: $29\w_fsm_ctrl_nxt_state[75:0]
+   259/547: $10\w_reason_nxt[7:0]
+   260/547: $9\w_reason_nxt[7:0]
+   261/547: $28\w_fsm_ctrl_nxt_state[75:0]
+   262/547: $2\w_trajectory_nxt[255:0]
+   263/547: $27\w_fsm_ctrl_nxt_state[75:0]
+   264/547: $26\w_fsm_ctrl_nxt_state[75:0]
+   265/547: $8\w_reason_nxt[7:0]
+   266/547: $7\w_reason_nxt[7:0]
+   267/547: $25\w_fsm_ctrl_nxt_state[75:0]
+   268/547: $2\w_snapshot_nxt[255:0]
+   269/547: $24\w_fsm_ctrl_nxt_state[75:0]
+   270/547: $23\w_fsm_ctrl_nxt_state[75:0]
+   271/547: $6\w_reason_nxt[7:0]
+   272/547: $5\w_reason_nxt[7:0]
+   273/547: $22\w_fsm_ctrl_nxt_state[75:0]
+   274/547: $2\w_context_nxt[255:0]
+   275/547: $21\w_fsm_ctrl_nxt_state[75:0]
+   276/547: $20\w_fsm_ctrl_nxt_state[75:0]
+   277/547: $19\w_fsm_ctrl_nxt_state[75:0]
+   278/547: $4\w_reason_nxt[7:0]
+   279/547: $2\w_proposal_nxt[331:0]
+   280/547: $18\w_fsm_ctrl_nxt_state[75:0]
+   281/547: $17\w_fsm_ctrl_nxt_state[75:0]
+   282/547: $2\w_seal_nxt[255:0]
+   283/547: $16\w_fsm_ctrl_nxt_state[75:0]
+   284/547: $6\w_pending_valid_nxt[0:0]
+   285/547: $5\w_backup_cert_nxt[1216:0]
+   286/547: $5\w_backup_plan_nxt[559:0]
+   287/547: $7\w_backup_valid_nxt[0:0]
+   288/547: $15\w_fsm_ctrl_nxt_state[75:0]
+   289/547: $5\w_pending_valid_nxt[0:0]
+   290/547: $4\w_backup_cert_nxt[1216:0]
+   291/547: $4\w_backup_plan_nxt[559:0]
+   292/547: $6\w_backup_valid_nxt[0:0]
+   293/547: $5\w_commit_nxt[7:0]
+   294/547: $14\w_fsm_ctrl_nxt_state[75:0]
+   295/547: $9\w_override_nxt[0:0]
+   296/547: $7\w_heartbeat_nxt[0:0]
+   297/547: $6\w_heartbeat_en_nxt[0:0]
+   298/547: $13\w_fsm_ctrl_nxt_state[75:0]
+   299/547: $3\w_timer_valid_nxt[0:0]
+   300/547: $4\w_commit_nxt[7:0]
+   301/547: $12\w_fsm_ctrl_nxt_state[75:0]
+   302/547: $5\w_healthy_nxt[0:0]
+   303/547: $11\w_fsm_ctrl_nxt_state[75:0]
+   304/547: $6\w_heartbeat_nxt[0:0]
+   305/547: $5\w_heartbeat_en_nxt[0:0]
+   306/547: $3\w_fault_nxt[0:0]
+   307/547: $3\w_good_nxt[1:0]
+   308/547: $3\w_mode_nxt[2:0]
+   309/547: $5\w_backup_valid_nxt[0:0]
+   310/547: $4\w_pending_valid_nxt[0:0]
+   311/547: $8\w_override_nxt[0:0]
+   312/547: $10\w_fsm_ctrl_nxt_state[75:0]
+   313/547: $4\w_heartbeat_en_nxt[0:0]
+   314/547: $5\w_heartbeat_nxt[0:0]
+   315/547: $7\w_override_nxt[0:0]
+   316/547: $4\w_backup_valid_nxt[0:0]
+   317/547: $3\w_pending_valid_nxt[0:0]
+   318/547: $2\w_fault_nxt[0:0]
+   319/547: $2\w_good_nxt[1:0]
+   320/547: $2\w_mode_nxt[2:0]
+   321/547: $5\w_sts_data[114:0]
+   322/547: $5\w_sts_valid[0:0]
+   323/547: $4\w_healthy_nxt[0:0]
+   324/547: $3\w_bist_wait_nxt[0:0]
+   325/547: $9\w_fsm_ctrl_nxt_state[75:0]
+   326/547: $8\w_fsm_ctrl_nxt_state[75:0]
+   327/547: $4\w_sts_data[114:0]
+   328/547: $4\w_sts_valid[0:0]
+   329/547: $2\w_lost_nxt[31:0]
+   330/547: $5\w_replay_full_nxt[0:0]
+   331/547: $6\w_log_drops_nxt[31:0]
+   332/547: $7\w_fsm_ctrl_nxt_state[75:0]
+   333/547: $5\w_log_drops_nxt[31:0]
+   334/547: $4\w_replay_full_nxt[0:0]
+   335/547: $6\w_fsm_ctrl_nxt_state[75:0]
+   336/547: $4\w_heartbeat_nxt[0:0]
+   337/547: $3\w_heartbeat_en_nxt[0:0]
+   338/547: $6\w_override_nxt[0:0]
+   339/547: $3\w_healthy_nxt[0:0]
+   340/547: $3\w_lane_nxt[383:0]
+   341/547: $3\w_world_nxt[8199:0]
+   342/547: $6\w_heartbeat_time_nxt[31:0]
+   343/547: $6\w_tick_nxt[31:0]
+   344/547: $3\f_mod20k$func$engine_cov.sv:641$690.$result[31:0]$955
+   345/547: $3\f_mod20k$func$engine_cov.sv:641$690.w_v[31:0]$956
+   346/547: $5\w_tick_valid_nxt[0:0]
+   347/547: $5\w_fsm_ctrl_nxt_state[75:0]
+   348/547: $3\w_heartbeat_nxt[0:0]
+   349/547: $2\w_heartbeat_en_nxt[0:0]
+   350/547: $5\w_override_nxt[0:0]
+   351/547: $3\w_live_bad_nxt[0:0]
+   352/547: $2\w_healthy_nxt[0:0]
+   353/547: $2\f_mod20k$func$engine_cov.sv:641$690.w_v[31:0]$951
+   354/547: $2\f_mod20k$func$engine_cov.sv:641$690.$result[31:0]$950
+   355/547: $5\w_heartbeat_time_nxt[31:0]
+   356/547: $4\w_tick_valid_nxt[0:0]
+   357/547: $5\w_tick_nxt[31:0]
+   358/547: $3\w_commit_nxt[7:0]
+   359/547: $3\w_reason_nxt[7:0]
+   360/547: $2\w_lead_nxt[8199:0]
+   361/547: $2\w_lane_nxt[383:0]
+   362/547: $2\w_world_nxt[8199:0]
+   363/547: $4\w_fsm_ctrl_nxt_state[75:0]
+   364/547: $3\w_fsm_ctrl_nxt_state[75:0]
+   365/547: $4\w_heartbeat_time_nxt[31:0]
+   366/547: $4\w_tick_nxt[31:0]
+   367/547: $3\f_mod20k$func$engine_cov.sv:624$689.$result[31:0]$932
+   368/547: $3\f_mod20k$func$engine_cov.sv:624$689.w_v[31:0]$933
+   369/547: $3\w_tick_valid_nxt[0:0]
+   370/547: $2\w_fsm_ctrl_nxt_state[75:0]
+   371/547: $3\w_sts_data[114:0]
+   372/547: $3\w_sts_valid[0:0]
+   373/547: $2\f_mod20k$func$engine_cov.sv:624$689.w_v[31:0]$930
+   374/547: $2\f_mod20k$func$engine_cov.sv:624$689.$result[31:0]$929
+   375/547: $3\w_heartbeat_time_nxt[31:0]
+   376/547: $2\w_tick_valid_nxt[0:0]
+   377/547: $3\w_tick_nxt[31:0]
+   378/547: $2\w_tail_nxt[7:0]
+   379/547: $2\w_label_nxt[7:0]
+   380/547: $2\w_cid_nxt[7:0]
+   381/547: $2\w_reuse_nxt[0:0]
+   382/547: $2\w_commit_nxt[7:0]
+   383/547: $2\w_reason_nxt[7:0]
+   384/547: $2\w_live_bad_nxt[0:0]
+   385/547: $2\w_deadline_nxt[0:0]
+   386/547: $2\w_count_nxt[31:0]
+   387/547: $2\w_active_nxt[0:0]
+   388/547: $2\w_parse_reason_nxt[7:0]
+   389/547: $2\w_req_nxt[44672:0]
+   390/547: $1\w_fsm_ctrl_nxt_state[75:0]
+   391/547: $1\f_diff$func$engine_cov.sv:1075$703.w_b[31:0]$927
+   392/547: $1\f_diff$func$engine_cov.sv:1075$703.w_a[31:0]$926
+   393/547: $1\f_diff$func$engine_cov.sv:1075$703.$result[31:0]$925
+   394/547: $1\f_diff$func$engine_cov.sv:1074$702.w_b[31:0]$924
+   395/547: $1\f_diff$func$engine_cov.sv:1074$702.w_a[31:0]$923
+   396/547: $1\f_diff$func$engine_cov.sv:1074$702.$result[31:0]$922
+   397/547: $1\f_diff$func$engine_cov.sv:1072$701.w_b[31:0]$921
+   398/547: $1\f_diff$func$engine_cov.sv:1072$701.w_a[31:0]$920
+   399/547: $1\f_diff$func$engine_cov.sv:1072$701.$result[31:0]$919
+   400/547: $1\f_diff$func$engine_cov.sv:1071$700.w_b[31:0]$918
+   401/547: $1\f_diff$func$engine_cov.sv:1071$700.w_a[31:0]$917
+   402/547: $1\f_diff$func$engine_cov.sv:1071$700.$result[31:0]$916
+   403/547: $1\f_abs$func$engine_cov.sv:1008$699.w_x[63:0]$915
+   404/547: $1\f_abs$func$engine_cov.sv:1008$699.$result[63:0]$914
+   405/547: $1\f_abs$func$engine_cov.sv:1007$698.w_x[63:0]$913
+   406/547: $1\f_abs$func$engine_cov.sv:1007$698.$result[63:0]$912
+   407/547: $1\f_diff$func$engine_cov.sv:991$697.w_b[31:0]$911
+   408/547: $1\f_diff$func$engine_cov.sv:991$697.w_a[31:0]$910
+   409/547: $1\f_diff$func$engine_cov.sv:991$697.$result[31:0]$909
+   410/547: $1\f_diff$func$engine_cov.sv:991$696.w_b[31:0]$908
+   411/547: $1\f_diff$func$engine_cov.sv:991$696.w_a[31:0]$907
+   412/547: $1\f_diff$func$engine_cov.sv:991$696.$result[31:0]$906
+   413/547: $1\f_diff$func$engine_cov.sv:915$695.w_b[31:0]$905
+   414/547: $1\f_diff$func$engine_cov.sv:915$695.w_a[31:0]$904
+   415/547: $1\f_diff$func$engine_cov.sv:915$695.$result[31:0]$903
+   416/547: $1\f_diff$func$engine_cov.sv:914$694.w_b[31:0]$902
+   417/547: $1\f_diff$func$engine_cov.sv:914$694.w_a[31:0]$901
+   418/547: $1\f_diff$func$engine_cov.sv:914$694.$result[31:0]$900
+   419/547: $1\f_diff$func$engine_cov.sv:851$693.w_b[31:0]$899
+   420/547: $1\f_diff$func$engine_cov.sv:851$693.w_a[31:0]$898
+   421/547: $1\f_diff$func$engine_cov.sv:851$693.$result[31:0]$897
+   422/547: $1\f_diff$func$engine_cov.sv:844$692.w_b[31:0]$896
+   423/547: $1\f_diff$func$engine_cov.sv:844$692.w_a[31:0]$895
+   424/547: $1\f_diff$func$engine_cov.sv:844$692.$result[31:0]$894
+   425/547: $1\f_diff$func$engine_cov.sv:843$691.w_b[31:0]$893
+   426/547: $1\f_diff$func$engine_cov.sv:843$691.w_a[31:0]$892
+   427/547: $1\f_diff$func$engine_cov.sv:843$691.$result[31:0]$891
+   428/547: $1\f_mod20k$func$engine_cov.sv:641$690.w_v[31:0]$890
+   429/547: $1\f_mod20k$func$engine_cov.sv:641$690.$result[31:0]$889
+   430/547: $1\f_mod20k$func$engine_cov.sv:624$689.w_v[31:0]$888
+   431/547: $1\f_mod20k$func$engine_cov.sv:624$689.$result[31:0]$887
+   432/547: $1\w_dup_req_valid[0:0]
+   433/547: $1\w_sweep_kind[1:0]
+   434/547: $1\w_sweep_req_valid[0:0]
+   435/547: $1\w_math_delay[31:0]
+   436/547: $1\w_math_op[2:0]
+   437/547: $1\w_math_req_valid[0:0]
+   438/547: $1\w_hash_len[10:0]
+   439/547: $1\w_hash_op[7:0]
+   440/547: $1\w_hash_req_valid[0:0]
+   441/547: $2\w_sts_data[114:0]
+   442/547: $2\w_sts_valid[0:0]
+   443/547: $1\w_health_req_data[33823:0]
+   444/547: $1\w_health_req_valid[0:0]
+   445/547: $1\w_rec_req_data[1055:0]
+   446/547: $1\w_rec_req_valid[0:0]
+   447/547: $1\w_arb_req_data[3862:0]
+   448/547: $1\w_arb_req_valid[0:0]
+   449/547: $1\w_b8_req_data[43:0]
+   450/547: $1\w_b8_req_valid[0:0]
+   451/547: $1\w_b7_req_data[15:0]
+   452/547: $1\w_b7_req_valid[0:0]
+   453/547: $1\w_b9_req_data[2903:0]
+   454/547: $1\w_b9_req_valid[0:0]
+   455/547: $1\w_b2_req_data[815:0]
+   456/547: $1\w_b2_req_valid[0:0]
+   457/547: $1\w_b1_req_data[1373:0]
+   458/547: $1\w_b1_req_valid[0:0]
+   459/547: $4\w_log_drops_nxt[31:0]
+   460/547: $3\w_replay_full_nxt[0:0]
+   461/547: $1\w_lane_good_nxt[0:0]
+   462/547: $1\w_dup_result_nxt[0:0]
+   463/547: $1\w_main_done_nxt[0:0]
+   464/547: $1\w_dup_done_nxt[0:0]
+   465/547: $1\w_main_sent_nxt[0:0]
+   466/547: $1\w_dup_sent_nxt[0:0]
+   467/547: $1\w_csr_rst_nxt[0:0]
+   468/547: $2\w_bist_wait_nxt[0:0]
+   469/547: $2\w_timer_valid_nxt[0:0]
+   470/547: $1\w_heartbeat_en_nxt[0:0]
+   471/547: $2\w_heartbeat_nxt[0:0]
+   472/547: $2\w_heartbeat_time_nxt[31:0]
+   473/547: $1\w_tick_valid_nxt[0:0]
+   474/547: $2\w_tick_nxt[31:0]
+   475/547: $1\w_live_bad_nxt[0:0]
+   476/547: $4\w_override_nxt[0:0]
+   477/547: $1\w_deadline_nxt[0:0]
+   478/547: $1\w_lost_nxt[31:0]
+   479/547: $1\w_count_nxt[31:0]
+   480/547: $2\w_cmd_valid_nxt[0:0]
+   481/547: $2\w_cmd_nxt[1896:0]
+   482/547: $2\w_resp_valid_nxt[0:0]
+   483/547: $1\w_final_rsp_nxt[37:0]
+   484/547: $2\w_resp_data_nxt[37:0]
+   485/547: $1\w_new_cert_nxt[1216:0]
+   486/547: $1\w_new_plan_nxt[559:0]
+   487/547: $1\w_seal_nxt[255:0]
+   488/547: $1\w_trajectory_nxt[255:0]
+   489/547: $1\w_snapshot_nxt[255:0]
+   490/547: $1\w_context_nxt[255:0]
+   491/547: $1\w_bridge_nxt[703:0]
+   492/547: $1\w_lead_nxt[8199:0]
+   493/547: $1\w_lane_nxt[383:0]
+   494/547: $1\w_world_nxt[8199:0]
+   495/547: $1\w_reuse_nxt[0:0]
+   496/547: $1\w_healthy_nxt[0:0]
+   497/547: $1\w_tail_nxt[7:0]
+   498/547: $1\w_label_nxt[7:0]
+   499/547: $1\w_cid_nxt[7:0]
+   500/547: $1\w_commit_nxt[7:0]
+   501/547: $1\w_reason_nxt[7:0]
+   502/547: $3\w_backup_cert_nxt[1216:0]
+   503/547: $3\w_backup_plan_nxt[559:0]
+   504/547: $3\w_backup_valid_nxt[0:0]
+   505/547: $1\w_issued_nxt[31:0]
+   506/547: $1\w_pending_cert_nxt[1216:0]
+   507/547: $1\w_pending_plan_nxt[559:0]
+   508/547: $2\w_pending_valid_nxt[0:0]
+   509/547: $1\w_fault_nxt[0:0]
+   510/547: $1\w_good_nxt[1:0]
+   511/547: $1\w_mode_nxt[2:0]
+   512/547: $1\w_proposal_nxt[331:0]
+   513/547: $1\w_ing_nxt[331:0]
+   514/547: $1\w_active_nxt[0:0]
+   515/547: $1\w_parse_reason_nxt[7:0]
+   516/547: $1\w_req_nxt[44672:0]
+   517/547: $2\w_backup_cert_nxt[1216:0]
+   518/547: $2\w_backup_plan_nxt[559:0]
+   519/547: $2\w_backup_valid_nxt[0:0]
+   520/547: $3\w_override_nxt[0:0]
+   521/547: $1\w_sts_data[114:0]
+   522/547: $1\w_sts_valid[0:0]
+   523/547: $2\w_override_nxt[0:0]
+   524/547: $1\w_backup_cert_nxt[1216:0]
+   525/547: $1\w_backup_plan_nxt[559:0]
+   526/547: $1\w_backup_valid_nxt[0:0]
+   527/547: $1\w_pending_valid_nxt[0:0]
+   528/547: $1\w_timer_code_nxt[7:0]
+   529/547: $1\w_timer_valid_nxt[0:0]
+   530/547: $1\w_heartbeat_time_nxt[31:0]
+   531/547: $1\w_heartbeat_nxt[0:0]
+   532/547: $1\w_override_nxt[0:0]
+   533/547: $1\w_tick_nxt[31:0]
+   534/547: $1\f_mod20k$func$engine_cov.sv:598$684.$result[31:0]$856
+   535/547: $1\f_mod20k$func$engine_cov.sv:598$684.w_v[31:0]$857
+   536/547: $1\w_cmd_nxt[1896:0]
+   537/547: $1\w_cmd_valid_nxt[0:0]
+   538/547: $1\w_resp_data_nxt[37:0]
+   539/547: $1\w_resp_valid_nxt[0:0]
+   540/547: $3\w_log_drops_nxt[31:0]
+   541/547: $2\w_replay_event_nxt[1055:0]
+   542/547: $2\w_replay_full_nxt[0:0]
+   543/547: $2\w_log_drops_nxt[31:0]
+   544/547: $1\w_log_drops_nxt[31:0]
+   545/547: $1\w_replay_event_nxt[1055:0]
+   546/547: $1\w_replay_full_nxt[0:0]
+   547/547: $1\w_bist_wait_nxt[0:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:413$proc$765'.
+     1/1: $1\w_fsm_valid[0:0]
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+     1/3: $1\w_event_mode[255:0]
+     2/3: $1\w_mode_len[5:0]
+     3/3: { $1\w_event_reason[255:0] $1\w_reason_len[5:0] }
+Creating decoders for process `\m_tsmx_engine.$engine_cov.sv:340$proc$754'.
+     1/1: $1\w_timer_code[7:0]
+
+4.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:334$683.$result' from process `\m_tsmx_engine.$engine_cov.sv:334$proc$1336'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:333$682.$result' from process `\m_tsmx_engine.$engine_cov.sv:333$proc$1330'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:332$681.$result' from process `\m_tsmx_engine.$engine_cov.sv:332$proc$1324'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:330$680.$result' from process `\m_tsmx_engine.$engine_cov.sv:330$proc$1318'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:328$679.$result' from process `\m_tsmx_engine.$engine_cov.sv:328$proc$1312'.
+No latch inferred for signal `\m_tsmx_engine.\f_lt$func$engine_cov.sv:326$678.$result' from process `\m_tsmx_engine.$engine_cov.sv:326$proc$1305'.
+No latch inferred for signal `\m_tsmx_engine.\f_lt$func$engine_cov.sv:324$677.$result' from process `\m_tsmx_engine.$engine_cov.sv:324$proc$1298'.
+No latch inferred for signal `\m_tsmx_engine.\f_abs$func$engine_cov.sv:322$676.$result' from process `\m_tsmx_engine.$engine_cov.sv:322$proc$1291'.
+No latch inferred for signal `\m_tsmx_engine.\f_abs$func$engine_cov.sv:321$675.$result' from process `\m_tsmx_engine.$engine_cov.sv:321$proc$1284'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:315$674.$result' from process `\m_tsmx_engine.$engine_cov.sv:315$proc$1278'.
+No latch inferred for signal `\m_tsmx_engine.\f_diff$func$engine_cov.sv:314$673.$result' from process `\m_tsmx_engine.$engine_cov.sv:314$proc$1272'.
+No latch inferred for signal `\m_tsmx_engine.\o_req_ready' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_rsp_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_rsp_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_brake' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_heartbeat' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_cmd_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\o_cmd_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_fsm_ctrl_nxt_state' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_req_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_parse_reason_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_active_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_ing_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_proposal_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_mode_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_good_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_fault_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_pending_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_pending_plan_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_pending_cert_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_issued_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_backup_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_backup_plan_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_backup_cert_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_reason_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_commit_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_cid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_label_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_tail_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_healthy_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_reuse_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_world_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_lane_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_lead_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_bridge_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_context_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_snapshot_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_trajectory_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_seal_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_new_plan_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_new_cert_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_resp_data_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_final_rsp_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_resp_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_cmd_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_cmd_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_count_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_lost_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_deadline_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_override_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_live_bad_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_tick_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_tick_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_heartbeat_time_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_heartbeat_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_heartbeat_en_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_timer_code_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_timer_valid_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_ing_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_pending_plan_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_pending_cert_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_backup_plan_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_backup_cert_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_ctrl_par_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_bist_wait_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_csr_rst_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_dup_sent_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_main_sent_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_dup_done_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_main_done_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_dup_result_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_lane_good_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_replay_full_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_replay_event_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_log_drops_nxt' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b1_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b1_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b2_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b2_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b9_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b9_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b7_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b7_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b8_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_b8_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_arb_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_arb_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_rec_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_rec_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_health_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_health_req_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_sts_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_sts_data' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_hash_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_hash_op' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_hash_len' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_math_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_math_op' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_math_delay' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_math_plan' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_sweep_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_sweep_kind' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_dup_req_valid' from process `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+No latch inferred for signal `\m_tsmx_engine.\w_fsm_valid' from process `\m_tsmx_engine.$engine_cov.sv:413$proc$765'.
+No latch inferred for signal `\m_tsmx_engine.\w_event_reason' from process `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+No latch inferred for signal `\m_tsmx_engine.\w_event_mode' from process `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+No latch inferred for signal `\m_tsmx_engine.\w_reason_len' from process `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+No latch inferred for signal `\m_tsmx_engine.\w_mode_len' from process `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+No latch inferred for signal `\m_tsmx_engine.\w_timer_code' from process `\m_tsmx_engine.$engine_cov.sv:340$proc$754'.
+
+4.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\m_tsmx_engine.\f_init' using process `\m_tsmx_engine.$engine_cov.sv:1557$proc$1225'.
+  created $dff cell `$procdff$21231' with positive edge clock.
+Creating register for signal `\m_tsmx_engine.\f_prev_active' using process `\m_tsmx_engine.$engine_cov.sv:1557$proc$1225'.
+  created $dff cell `$procdff$21232' with positive edge clock.
+Creating register for signal `\m_tsmx_engine.\f_prev_count' using process `\m_tsmx_engine.$engine_cov.sv:1557$proc$1225'.
+  created $dff cell `$procdff$21233' with positive edge clock.
+Creating register for signal `\m_tsmx_engine.\reg_xph' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21238' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_xn' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21243' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_xm' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21248' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_xerr' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21253' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_xprod' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21258' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_xmprod' using process `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+  created $adff cell `$procdff$21263' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_sts_valid' using process `\m_tsmx_engine.$engine_cov.sv:1353$proc$1211'.
+  created $adff cell `$procdff$21268' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_sts_data' using process `\m_tsmx_engine.$engine_cov.sv:1353$proc$1211'.
+  created $adff cell `$procdff$21273' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_crc' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21278' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_ctx' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21283' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_snap' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21288' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_traj' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21293' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_seal' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21298' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_newh' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21303' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_hs_reseal' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21308' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ss_nom' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21313' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ss_tail' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21318' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ms_nprop' using process `\m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+  created $adff cell `$procdff$21323' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_fsm_ctrl_current_state' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21328' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_req' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21333' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_parse_reason' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21338' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_active' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21343' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ing' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21348' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_proposal' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21353' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_mode' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21358' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_good' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21363' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_fault' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21368' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_pending_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21373' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_pending_plan' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21378' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_pending_cert' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21383' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_issued' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21388' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_backup_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21393' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_backup_plan' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21398' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_backup_cert' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21403' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_reason' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21408' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_commit' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21413' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_cid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21418' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_label' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21423' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_tail' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21428' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_healthy' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21433' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_reuse' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21438' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_world' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21443' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_lane' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21448' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_lead' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21453' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_bridge' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21458' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_context' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21463' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_snapshot' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21468' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_trajectory' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21473' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_seal' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21478' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_new_plan' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21483' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_new_cert' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21488' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_resp_data' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21493' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_final_rsp' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21498' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_resp_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21503' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_cmd' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21508' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_cmd_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21513' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_count' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21518' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_lost' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21523' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_deadline' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21528' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_override' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21533' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_live_bad' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21538' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_tick' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21543' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_tick_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21548' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_heartbeat_time' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21553' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_heartbeat' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21558' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_heartbeat_en' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21563' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_timer_code' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21568' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_timer_valid' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21573' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ing_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21578' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_pending_plan_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21583' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_pending_cert_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21588' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_backup_plan_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21593' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_backup_cert_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21598' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_ctrl_par' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21603' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_bist_wait' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21608' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_csr_rst' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21613' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_dup_sent' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21618' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_main_sent' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21623' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_dup_done' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21628' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_main_done' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21633' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_dup_result' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21638' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_lane_good' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21643' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_replay_full' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21648' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_replay_event' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21653' with positive edge clock and positive level reset.
+Creating register for signal `\m_tsmx_engine.\reg_log_drops' using process `\m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+  created $adff cell `$procdff$21658' with positive edge clock and positive level reset.
+
+4.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1556$proc$1344'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1555$proc$1343'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1554$proc$1342'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:334$proc$1336'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:333$proc$1330'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:332$proc$1324'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:330$proc$1318'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:328$proc$1312'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:326$proc$1305'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:324$proc$1298'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:322$proc$1291'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:321$proc$1284'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:315$proc$1278'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:314$proc$1272'.
+Found and cleaned up 4 empty switches in `\m_tsmx_engine.$engine_cov.sv:1566$proc$1230'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1566$proc$1230'.
+Found and cleaned up 1 empty switch in `\m_tsmx_engine.$engine_cov.sv:1562$proc$1226'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1562$proc$1226'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1557$proc$1225'.
+Found and cleaned up 1 empty switch in `\m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1360$proc$1213'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1353$proc$1211'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1310$proc$1175'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:1168$proc$1173'.
+Found and cleaned up 141 empty switches in `\m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:497$proc$766'.
+Found and cleaned up 1 empty switch in `\m_tsmx_engine.$engine_cov.sv:413$proc$765'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:413$proc$765'.
+Found and cleaned up 2 empty switches in `\m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:352$proc$764'.
+Found and cleaned up 1 empty switch in `\m_tsmx_engine.$engine_cov.sv:340$proc$754'.
+Removing empty process `m_tsmx_engine.$engine_cov.sv:340$proc$754'.
+Cleaned up 151 empty switches.
+
+4.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+<suppressed ~273 debug messages>
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.4. Executing FUTURE pass.
+
+4.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module m_tsmx_engine...
+Checking module m_tsmx_ingress...
+Checking module m_tsmx_splice...
+Checking module m_tsmx_cert...
+Checking module m_tsmx_sel...
+Checking module m_tsmx_supervisor...
+Checking module m_tsmx_arb...
+Checking module m_tsmx_rec...
+Checking module m_tsmx_health_lane...
+Checking module m_tsmx_hash...
+Checking module m_tsmx_math...
+Checking module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep...
+Checking module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep...
+Checking module m_tsmx_csr...
+Found and reported 0 problems.
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+Removed 290 unused cells and 2013 unused wires.
+<suppressed ~306 debug messages>
+
+4.8. Executing OPT pass (performing simple optimizations).
+
+4.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 2024 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1418 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1409 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1408 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+<suppressed ~1848 debug messages>
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Removed a total of 616 cells.
+
+4.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \m_tsmx_engine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $procmux$15251: \reg_tick_valid -> 1'1
+      Replacing known input bits on port B of cell $procmux$21187: \reg_replay_full -> 1'1
+      Replacing known input bits on port A of cell $engine_cov.sv:295$ternary$1304: \reg_req [44512] -> 1'0
+      Replacing known input bits on port A of cell $engine_cov.sv:306$ternary$1297: \reg_req [44480:44417] -> { 1'0 \reg_req [44479:44417] }
+      Replacing known input bits on port A of cell $engine_cov.sv:306$ternary$1290: \reg_req [44608:44545] -> { 1'0 \reg_req [44607:44545] }
+      Replacing known input bits on port A of cell $engine_cov.sv:306$ternary$1069: $engine_cov.sv:1008$sub$1066_Y -> { 1'0 $engine_cov.sv:1008$sub$1066_Y [62:0] }
+      Replacing known input bits on port A of cell $engine_cov.sv:306$ternary$1065: $engine_cov.sv:1007$sub$1062_Y -> { 1'0 $engine_cov.sv:1007$sub$1062_Y [62:0] }
+      Replacing known input bits on port A of cell $engine_cov.sv:951$ternary$1039: \w_delay -> { 1'0 \w_delay [30:0] }
+      Replacing known input bits on port A of cell $engine_cov.sv:925$ternary$1035: \w_delay -> { 1'0 \w_delay [30:0] }
+      Replacing known input bits on port A of cell $procmux$5397: $engine_cov.sv:303$sub$1003_Y -> { 1'0 $engine_cov.sv:303$sub$1003_Y [30:0] }
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$12842.
+    dead port 1/2 on $mux $procmux$12840.
+    dead port 2/2 on $mux $procmux$12760.
+    dead port 1/2 on $mux $procmux$12758.
+    dead port 2/2 on $mux $procmux$12678.
+    dead port 1/2 on $mux $procmux$12676.
+    dead port 2/2 on $mux $procmux$12596.
+    dead port 1/2 on $mux $procmux$12594.
+    dead port 2/2 on $mux $procmux$12514.
+    dead port 1/2 on $mux $procmux$12512.
+    dead port 2/2 on $mux $procmux$12432.
+    dead port 2/2 on $mux $procmux$12354.
+    dead port 2/2 on $mux $procmux$12276.
+    dead port 2/2 on $mux $procmux$12198.
+    dead port 2/2 on $mux $procmux$12196.
+    dead port 2/2 on $mux $procmux$12117.
+    dead port 2/2 on $mux $procmux$12115.
+    dead port 2/2 on $mux $procmux$12036.
+    dead port 2/2 on $mux $procmux$11959.
+    dead port 2/2 on $mux $procmux$11882.
+    dead port 2/2 on $mux $procmux$11805.
+    dead port 2/2 on $mux $procmux$11728.
+    dead port 2/2 on $mux $procmux$11652.
+    dead port 2/2 on $mux $procmux$11577.
+    dead port 2/2 on $mux $procmux$11502.
+    dead port 2/2 on $mux $procmux$11427.
+    dead port 2/2 on $mux $procmux$11352.
+    dead port 2/2 on $mux $procmux$11277.
+    dead port 2/2 on $mux $procmux$11202.
+    dead port 2/2 on $mux $procmux$11127.
+    dead port 2/2 on $mux $procmux$11052.
+    dead port 2/2 on $mux $procmux$10977.
+    dead port 2/2 on $mux $procmux$10902.
+    dead port 2/2 on $mux $procmux$10827.
+    dead port 2/2 on $mux $procmux$10752.
+    dead port 2/2 on $mux $procmux$10677.
+    dead port 2/2 on $mux $procmux$10675.
+    dead port 2/2 on $mux $procmux$10599.
+    dead port 2/2 on $mux $procmux$10597.
+    dead port 2/2 on $mux $procmux$10521.
+    dead port 2/2 on $mux $procmux$10519.
+    dead port 2/2 on $mux $procmux$10443.
+    dead port 2/2 on $mux $procmux$10441.
+    dead port 2/2 on $mux $procmux$10365.
+    dead port 2/2 on $mux $procmux$10363.
+    dead port 2/2 on $mux $procmux$10287.
+    dead port 2/2 on $mux $procmux$10285.
+    dead port 2/2 on $mux $procmux$10209.
+    dead port 2/2 on $mux $procmux$10207.
+    dead port 2/2 on $mux $procmux$10131.
+    dead port 2/2 on $mux $procmux$10129.
+    dead port 2/2 on $mux $procmux$10053.
+    dead port 2/2 on $mux $procmux$9979.
+    dead port 2/2 on $mux $procmux$9906.
+    dead port 2/2 on $mux $procmux$9833.
+    dead port 2/2 on $mux $procmux$9761.
+    dead port 2/2 on $mux $procmux$9689.
+    dead port 2/2 on $mux $procmux$9617.
+    dead port 2/2 on $mux $procmux$9545.
+    dead port 2/2 on $mux $procmux$9473.
+    dead port 2/2 on $mux $procmux$9401.
+    dead port 2/2 on $mux $procmux$9330.
+    dead port 2/2 on $mux $procmux$9260.
+    dead port 2/2 on $mux $procmux$9190.
+    dead port 2/2 on $mux $procmux$9120.
+    dead port 2/2 on $mux $procmux$9050.
+    dead port 2/2 on $mux $procmux$8980.
+    dead port 2/2 on $mux $procmux$8910.
+    dead port 2/2 on $mux $procmux$8908.
+    dead port 2/2 on $mux $procmux$8837.
+    dead port 2/2 on $mux $procmux$8835.
+    dead port 2/2 on $mux $procmux$8764.
+    dead port 2/2 on $mux $procmux$8762.
+    dead port 2/2 on $mux $procmux$8691.
+    dead port 2/2 on $mux $procmux$8689.
+    dead port 2/2 on $mux $procmux$8618.
+    dead port 2/2 on $mux $procmux$8549.
+    dead port 2/2 on $mux $procmux$8481.
+    dead port 2/2 on $mux $procmux$8413.
+    dead port 2/2 on $mux $procmux$8346.
+    dead port 2/2 on $mux $procmux$8280.
+    dead port 2/2 on $mux $procmux$8214.
+    dead port 2/2 on $mux $procmux$8148.
+    dead port 2/2 on $mux $procmux$8083.
+    dead port 2/2 on $mux $procmux$8019.
+    dead port 2/2 on $mux $procmux$7956.
+    dead port 2/2 on $mux $procmux$7893.
+    dead port 2/2 on $mux $procmux$7830.
+    dead port 2/2 on $mux $procmux$7828.
+    dead port 2/2 on $mux $procmux$7764.
+    dead port 2/2 on $mux $procmux$7762.
+    dead port 2/2 on $mux $procmux$7698.
+    dead port 2/2 on $mux $procmux$7636.
+    dead port 2/2 on $mux $procmux$7575.
+    dead port 2/2 on $mux $procmux$7514.
+    dead port 2/2 on $mux $procmux$7453.
+    dead port 2/2 on $mux $procmux$7451.
+    dead port 2/2 on $mux $procmux$7389.
+    dead port 2/2 on $mux $procmux$7387.
+    dead port 2/2 on $mux $procmux$7325.
+    dead port 2/2 on $mux $procmux$7265.
+    dead port 2/2 on $mux $procmux$7206.
+    dead port 2/2 on $mux $procmux$7147.
+    dead port 2/2 on $mux $procmux$7088.
+    dead port 2/2 on $mux $procmux$7086.
+    dead port 2/2 on $mux $procmux$7026.
+    dead port 2/2 on $mux $procmux$7024.
+    dead port 2/2 on $mux $procmux$6964.
+    dead port 2/2 on $mux $procmux$6906.
+    dead port 2/2 on $mux $procmux$6849.
+    dead port 2/2 on $mux $procmux$6792.
+    dead port 2/2 on $mux $procmux$6735.
+    dead port 2/2 on $mux $procmux$6733.
+    dead port 2/2 on $mux $procmux$6675.
+    dead port 2/2 on $mux $procmux$6673.
+    dead port 2/2 on $mux $procmux$6615.
+    dead port 2/2 on $mux $procmux$6559.
+    dead port 2/2 on $mux $procmux$6504.
+    dead port 2/2 on $mux $procmux$21189.
+    dead port 2/2 on $mux $procmux$6449.
+    dead port 2/2 on $mux $procmux$6395.
+    dead port 2/2 on $mux $procmux$6342.
+    dead port 2/2 on $mux $procmux$6290.
+    dead port 2/2 on $mux $procmux$6238.
+    dead port 2/2 on $mux $procmux$6236.
+    dead port 2/2 on $mux $procmux$6183.
+    dead port 2/2 on $mux $procmux$6132.
+    dead port 2/2 on $mux $procmux$6082.
+    dead port 2/2 on $mux $procmux$6033.
+    dead port 2/2 on $mux $procmux$5984.
+    dead port 2/2 on $mux $procmux$5982.
+    dead port 2/2 on $mux $procmux$5932.
+    dead port 2/2 on $mux $procmux$5884.
+    dead port 2/2 on $mux $procmux$5549.
+    dead port 2/2 on $mux $procmux$5501.
+    dead port 1/2 on $mux $procmux$5499.
+    dead port 2/2 on $mux $procmux$5450.
+    dead port 1/2 on $mux $procmux$5448.
+    dead port 2/2 on $mux $procmux$5399.
+    dead port 2/2 on $mux $procmux$5352.
+    dead port 2/2 on $mux $procmux$5305.
+    dead port 2/2 on $mux $procmux$5259.
+    dead port 2/2 on $mux $procmux$5214.
+    dead port 2/2 on $mux $procmux$5170.
+    dead port 2/2 on $mux $procmux$5126.
+    dead port 2/2 on $mux $procmux$5124.
+    dead port 2/2 on $mux $procmux$5079.
+    dead port 2/2 on $mux $procmux$5036.
+    dead port 2/2 on $mux $procmux$4993.
+    dead port 2/2 on $mux $procmux$4950.
+    dead port 2/2 on $mux $procmux$4908.
+    dead port 2/2 on $mux $procmux$4866.
+    dead port 2/2 on $mux $procmux$4783.
+    dead port 2/2 on $mux $procmux$4701.
+    dead port 2/2 on $mux $procmux$21111.
+    dead port 2/2 on $mux $procmux$4660.
+    dead port 2/2 on $mux $procmux$4619.
+    dead port 2/2 on $mux $procmux$4578.
+    dead port 2/2 on $mux $procmux$4537.
+    dead port 2/2 on $mux $procmux$4496.
+    dead port 2/2 on $mux $procmux$4455.
+    dead port 2/2 on $mux $procmux$4414.
+    dead port 2/2 on $mux $procmux$4373.
+    dead port 2/2 on $mux $procmux$4371.
+    dead port 2/2 on $mux $procmux$4329.
+    dead port 2/2 on $mux $procmux$4327.
+    dead port 2/2 on $mux $procmux$4285.
+    dead port 2/2 on $mux $procmux$4283.
+    dead port 2/2 on $mux $procmux$4241.
+    dead port 2/2 on $mux $procmux$4239.
+    dead port 2/2 on $mux $procmux$4197.
+    dead port 2/2 on $mux $procmux$4195.
+    dead port 2/2 on $mux $procmux$4153.
+    dead port 2/2 on $mux $procmux$4113.
+    dead port 2/2 on $mux $procmux$4074.
+    dead port 2/2 on $mux $procmux$4035.
+    dead port 2/2 on $mux $procmux$21105.
+    dead port 2/2 on $mux $procmux$3996.
+    dead port 2/2 on $mux $procmux$3730.
+    dead port 2/2 on $mux $procmux$3692.
+    dead port 1/2 on $mux $procmux$3690.
+    dead port 2/2 on $mux $procmux$3651.
+    dead port 1/2 on $mux $procmux$3649.
+    dead port 2/2 on $mux $procmux$3610.
+    dead port 1/2 on $mux $procmux$3608.
+    dead port 1/2 on $mux $procmux$3605.
+    dead port 2/2 on $mux $procmux$3566.
+    dead port 2/2 on $mux $procmux$3529.
+    dead port 2/2 on $mux $procmux$3493.
+    dead port 2/2 on $mux $procmux$3457.
+    dead port 2/2 on $mux $procmux$3422.
+    dead port 2/2 on $mux $procmux$3388.
+    dead port 2/2 on $mux $procmux$3355.
+    dead port 2/2 on $mux $procmux$3322.
+    dead port 2/2 on $mux $procmux$3320.
+    dead port 2/2 on $mux $procmux$3286.
+    dead port 2/2 on $mux $procmux$3254.
+    dead port 2/2 on $mux $procmux$3223.
+    dead port 2/2 on $mux $procmux$3193.
+    dead port 2/2 on $mux $procmux$16855.
+    dead port 2/2 on $mux $procmux$3164.
+    dead port 2/2 on $mux $procmux$3135.
+    dead port 2/2 on $mux $procmux$3107.
+    dead port 2/2 on $mux $procmux$16775.
+    dead port 2/2 on $mux $procmux$3080.
+    dead port 2/2 on $mux $procmux$3053.
+    dead port 2/2 on $mux $procmux$3026.
+    dead port 2/2 on $mux $procmux$16695.
+    dead port 2/2 on $mux $procmux$3024.
+    dead port 2/2 on $mux $procmux$2996.
+    dead port 2/2 on $mux $procmux$2970.
+    dead port 2/2 on $mux $procmux$16615.
+    dead port 2/2 on $mux $procmux$21195.
+    dead port 2/2 on $mux $procmux$21099.
+    dead port 2/2 on $mux $procmux$16535.
+    dead port 2/2 on $mux $procmux$16455.
+    dead port 2/2 on $mux $procmux$2801.
+    dead port 2/2 on $mux $procmux$2777.
+    dead port 2/2 on $mux $procmux$2753.
+    dead port 2/2 on $mux $procmux$16375.
+    dead port 2/2 on $mux $procmux$2730.
+    dead port 2/2 on $mux $procmux$16295.
+    dead port 2/2 on $mux $procmux$2624.
+    dead port 2/2 on $mux $procmux$16215.
+    dead port 2/2 on $mux $procmux$2603.
+    dead port 2/2 on $mux $procmux$2582.
+    dead port 2/2 on $mux $procmux$2562.
+    dead port 2/2 on $mux $procmux$16135.
+    dead port 2/2 on $mux $procmux$2543.
+    dead port 2/2 on $mux $procmux$2524.
+    dead port 2/2 on $mux $procmux$2505.
+    dead port 2/2 on $mux $procmux$16055.
+    dead port 2/2 on $mux $procmux$2486.
+    dead port 2/2 on $mux $procmux$2467.
+    dead port 2/2 on $mux $procmux$2448.
+    dead port 2/2 on $mux $procmux$15975.
+    dead port 2/2 on $mux $procmux$2429.
+    dead port 2/2 on $mux $procmux$2427.
+    dead port 2/2 on $mux $procmux$2407.
+    dead port 2/2 on $mux $procmux$2405.
+    dead port 2/2 on $mux $procmux$2385.
+    dead port 2/2 on $mux $procmux$15895.
+    dead port 2/2 on $mux $procmux$2367.
+    dead port 2/2 on $mux $procmux$2349.
+    dead port 2/2 on $mux $procmux$2331.
+    dead port 2/2 on $mux $procmux$15815.
+    dead port 2/2 on $mux $procmux$2313.
+    dead port 2/2 on $mux $procmux$2295.
+    dead port 2/2 on $mux $procmux$2278.
+    dead port 2/2 on $mux $procmux$15735.
+    dead port 2/2 on $mux $procmux$2262.
+    dead port 2/2 on $mux $procmux$2246.
+    dead port 2/2 on $mux $procmux$2230.
+    dead port 2/2 on $mux $procmux$2228.
+    dead port 2/2 on $mux $procmux$2211.
+    dead port 2/2 on $mux $procmux$2209.
+    dead port 2/2 on $mux $procmux$2192.
+    dead port 2/2 on $mux $procmux$2178.
+    dead port 2/2 on $mux $procmux$2165.
+    dead port 2/2 on $mux $procmux$2152.
+    dead port 2/2 on $mux $procmux$2139.
+    dead port 2/2 on $mux $procmux$15495.
+    dead port 2/2 on $mux $procmux$2126.
+    dead port 2/2 on $mux $procmux$2113.
+    dead port 2/2 on $mux $procmux$2100.
+    dead port 2/2 on $mux $procmux$15415.
+    dead port 2/2 on $mux $procmux$2087.
+    dead port 2/2 on $mux $procmux$2085.
+    dead port 2/2 on $mux $procmux$2071.
+    dead port 2/2 on $mux $procmux$2069.
+    dead port 2/2 on $mux $procmux$2055.
+    dead port 2/2 on $mux $procmux$15335.
+    dead port 2/2 on $mux $procmux$2043.
+    dead port 2/2 on $mux $procmux$2032.
+    dead port 2/2 on $mux $procmux$2021.
+    dead port 2/2 on $mux $procmux$15255.
+    dead port 2/2 on $mux $procmux$2011.
+    dead port 2/2 on $mux $procmux$2001.
+    dead port 2/2 on $mux $procmux$15253.
+    dead port 2/2 on $mux $procmux$1991.
+    dead port 2/2 on $mux $procmux$1981.
+    dead port 2/2 on $mux $procmux$1971.
+    dead port 2/2 on $mux $procmux$1962.
+    dead port 2/2 on $mux $procmux$1954.
+    dead port 2/2 on $mux $procmux$1946.
+    dead port 2/2 on $mux $procmux$1938.
+    dead port 2/2 on $mux $procmux$1931.
+    dead port 2/2 on $mux $procmux$1924.
+    dead port 2/2 on $mux $procmux$1917.
+    dead port 2/2 on $mux $procmux$15006.
+    dead port 2/2 on $mux $procmux$1910.
+    dead port 2/2 on $mux $procmux$1903.
+    dead port 2/2 on $mux $procmux$15004.
+    dead port 2/2 on $mux $procmux$1896.
+    dead port 2/2 on $mux $procmux$1889.
+    dead port 2/2 on $mux $procmux$14923.
+    dead port 2/2 on $mux $procmux$1887.
+    dead port 2/2 on $mux $procmux$1879.
+    dead port 2/2 on $mux $procmux$1877.
+    dead port 2/2 on $mux $procmux$1869.
+    dead port 2/2 on $mux $procmux$14921.
+    dead port 2/2 on $mux $procmux$1867.
+    dead port 2/2 on $mux $procmux$1859.
+    dead port 2/2 on $mux $procmux$1796.
+    dead port 2/2 on $mux $procmux$1790.
+    dead port 2/2 on $mux $procmux$1784.
+    dead port 2/2 on $mux $procmux$1778.
+    dead port 2/2 on $mux $procmux$1772.
+    dead port 2/2 on $mux $procmux$1766.
+    dead port 2/2 on $mux $procmux$1760.
+    dead port 2/2 on $mux $procmux$1754.
+    dead port 2/2 on $mux $procmux$1748.
+    dead port 2/2 on $mux $procmux$1742.
+    dead port 2/2 on $mux $procmux$1736.
+    dead port 2/2 on $mux $procmux$1730.
+    dead port 2/2 on $mux $procmux$1724.
+    dead port 2/2 on $mux $procmux$1718.
+    dead port 2/2 on $mux $procmux$1712.
+    dead port 2/2 on $mux $procmux$1706.
+    dead port 2/2 on $mux $procmux$1700.
+    dead port 2/2 on $mux $procmux$1694.
+    dead port 2/2 on $mux $procmux$1640.
+    dead port 2/2 on $mux $procmux$1634.
+    dead port 2/2 on $mux $procmux$1628.
+    dead port 2/2 on $mux $procmux$1622.
+    dead port 2/2 on $mux $procmux$1616.
+    dead port 2/2 on $mux $procmux$1610.
+    dead port 2/2 on $mux $procmux$1604.
+    dead port 2/2 on $mux $procmux$1598.
+    dead port 2/2 on $mux $procmux$1592.
+    dead port 1/2 on $mux $procmux$1590.
+    dead port 2/2 on $mux $procmux$1583.
+    dead port 1/2 on $mux $procmux$1581.
+    dead port 2/2 on $mux $procmux$1574.
+    dead port 1/2 on $mux $procmux$1572.
+    dead port 2/2 on $mux $procmux$1565.
+    dead port 1/2 on $mux $procmux$1563.
+    dead port 2/2 on $mux $procmux$1556.
+    dead port 1/2 on $mux $procmux$1554.
+    dead port 2/2 on $mux $procmux$1547.
+    dead port 1/2 on $mux $procmux$1545.
+    dead port 2/2 on $mux $procmux$1538.
+    dead port 1/2 on $mux $procmux$1536.
+    dead port 1/2 on $mux $procmux$1484.
+    dead port 1/2 on $mux $procmux$1478.
+    dead port 1/2 on $mux $procmux$1472.
+    dead port 1/2 on $mux $procmux$1466.
+    dead port 2/2 on $mux $procmux$14840.
+    dead port 2/2 on $mux $procmux$14760.
+    dead port 2/2 on $mux $procmux$21175.
+    dead port 2/2 on $mux $procmux$14680.
+    dead port 2/2 on $mux $procmux$21093.
+    dead port 2/2 on $mux $procmux$14601.
+    dead port 2/2 on $mux $procmux$14443.
+    dead port 2/2 on $mux $procmux$13086.
+    dead port 2/2 on $mux $procmux$14364.
+    dead port 2/2 on $mux $procmux$14285.
+    dead port 2/2 on $mux $procmux$14206.
+    dead port 2/2 on $mux $procmux$14127.
+    dead port 2/2 on $mux $procmux$13006.
+    dead port 2/2 on $mux $procmux$21177.
+    dead port 2/2 on $mux $procmux$13890.
+    dead port 2/2 on $mux $procmux$13811.
+    dead port 2/2 on $mux $procmux$13732.
+    dead port 2/2 on $mux $procmux$13653.
+    dead port 2/2 on $mux $procmux$13574.
+    dead port 2/2 on $mux $procmux$13495.
+    dead port 2/2 on $mux $procmux$13416.
+    dead port 2/2 on $mux $procmux$13414.
+    dead port 1/2 on $mux $procmux$13004.
+    dead port 2/2 on $mux $procmux$12924.
+    dead port 2/2 on $mux $procmux$21183.
+    dead port 2/2 on $mux $procmux$13170.
+    dead port 2/2 on $mux $procmux$13168.
+    dead port 2/2 on $mux $procmux$13088.
+    dead port 1/2 on $mux $procmux$12922.
+Running muxtree optimizer on module \m_tsmx_ingress..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_splice..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_cert..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_sel..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_supervisor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_arb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_rec..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_health_lane..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_hash..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_math..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_csr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 376 multiplexer ports.
+<suppressed ~4338 debug messages>
+
+4.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \m_tsmx_engine.
+    New ctrl vector for $pmux cell $procmux$18674: $auto$opt_reduce.cc:137:opt_pmux$21660
+    New ctrl vector for $pmux cell $procmux$18627: $auto$opt_reduce.cc:137:opt_pmux$21662
+    New ctrl vector for $pmux cell $procmux$18601: $auto$opt_reduce.cc:137:opt_pmux$21664
+    New ctrl vector for $pmux cell $procmux$18231: { $auto$opt_reduce.cc:137:opt_pmux$21666 $procmux$19288_CMP }
+    New ctrl vector for $pmux cell $procmux$18529: $auto$opt_reduce.cc:137:opt_pmux$21668
+    New ctrl vector for $pmux cell $procmux$18509: $auto$opt_reduce.cc:137:opt_pmux$21670
+    New ctrl vector for $pmux cell $procmux$18437: $auto$opt_reduce.cc:137:opt_pmux$21672
+    New ctrl vector for $pmux cell $procmux$18346: $auto$opt_reduce.cc:137:opt_pmux$21674
+    New ctrl vector for $pmux cell $procmux$18330: { $auto$opt_reduce.cc:137:opt_pmux$21678 $auto$opt_reduce.cc:137:opt_pmux$21676 $procmux$18351_CMP $procmux$18352_CMP }
+    New ctrl vector for $pmux cell $procmux$18313: { $auto$opt_reduce.cc:137:opt_pmux$21682 $auto$opt_reduce.cc:137:opt_pmux$21680 $procmux$18351_CMP $procmux$18352_CMP $procmux$18353_CMP }
+    New ctrl vector for $pmux cell $procmux$18298: $auto$opt_reduce.cc:137:opt_pmux$21684
+    New ctrl vector for $pmux cell $procmux$18253: { $procmux$21211_CMP [59] $procmux$18300_CMP $procmux$18301_CMP $procmux$18302_CMP }
+  Optimizing cells in module \m_tsmx_engine.
+  Optimizing cells in module \m_tsmx_ingress.
+  Optimizing cells in module \m_tsmx_splice.
+  Optimizing cells in module \m_tsmx_cert.
+  Optimizing cells in module \m_tsmx_sel.
+  Optimizing cells in module \m_tsmx_supervisor.
+  Optimizing cells in module \m_tsmx_arb.
+  Optimizing cells in module \m_tsmx_rec.
+  Optimizing cells in module \m_tsmx_health_lane.
+  Optimizing cells in module \m_tsmx_hash.
+  Optimizing cells in module \m_tsmx_math.
+  Optimizing cells in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+  Optimizing cells in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+  Optimizing cells in module \m_tsmx_csr.
+Performed a total of 14 changes.
+
+4.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 1043 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1021 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Computing hashes of 1016 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+<suppressed ~81 debug messages>
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Removed a total of 27 cells.
+
+4.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+Removed 0 unused cells and 939 unused wires.
+<suppressed ~1 debug messages>
+
+4.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \m_tsmx_engine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \m_tsmx_ingress..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_splice..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_cert..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_sel..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_supervisor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_arb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_rec..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_health_lane..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_hash..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_math..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_csr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~2284 debug messages>
+
+4.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \m_tsmx_engine.
+    New ctrl vector for $pmux cell $procmux$19803: $auto$opt_reduce.cc:137:opt_pmux$21686
+    New ctrl vector for $pmux cell $procmux$19997: $auto$opt_reduce.cc:137:opt_pmux$21688
+    New ctrl vector for $pmux cell $procmux$20586: { $auto$opt_reduce.cc:137:opt_pmux$21690 $procmux$16880_CMP $procmux$16886_CMP $procmux$16891_CMP $procmux$16894_CMP $procmux$16896_CMP $procmux$16897_CMP $procmux$16901_CMP $procmux$16902_CMP $procmux$16905_CMP $procmux$16908_CMP $procmux$16919_CMP $procmux$12515_CMP $engine_cov.sv:1137$eq$1148_Y }
+    New ctrl vector for $pmux cell $procmux$18253: { $procmux$16900_CMP $auto$opt_reduce.cc:137:opt_pmux$21692 $engine_cov.sv:1365$eq$1215_Y }
+  Optimizing cells in module \m_tsmx_engine.
+  Optimizing cells in module \m_tsmx_ingress.
+  Optimizing cells in module \m_tsmx_splice.
+  Optimizing cells in module \m_tsmx_cert.
+  Optimizing cells in module \m_tsmx_sel.
+  Optimizing cells in module \m_tsmx_supervisor.
+  Optimizing cells in module \m_tsmx_arb.
+  Optimizing cells in module \m_tsmx_rec.
+  Optimizing cells in module \m_tsmx_health_lane.
+  Optimizing cells in module \m_tsmx_hash.
+  Optimizing cells in module \m_tsmx_math.
+  Optimizing cells in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+  Optimizing cells in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+  Optimizing cells in module \m_tsmx_csr.
+Performed a total of 4 changes.
+
+4.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 1020 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Removed a total of 0 cells.
+
+4.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+
+4.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.8.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \m_tsmx_engine..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \m_tsmx_ingress..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_splice..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_cert..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_sel..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_supervisor..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_arb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_rec..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_health_lane..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_hash..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_math..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \m_tsmx_csr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~2214 debug messages>
+
+4.8.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \m_tsmx_engine.
+  Optimizing cells in module \m_tsmx_ingress.
+  Optimizing cells in module \m_tsmx_splice.
+  Optimizing cells in module \m_tsmx_cert.
+  Optimizing cells in module \m_tsmx_sel.
+  Optimizing cells in module \m_tsmx_supervisor.
+  Optimizing cells in module \m_tsmx_arb.
+  Optimizing cells in module \m_tsmx_rec.
+  Optimizing cells in module \m_tsmx_health_lane.
+  Optimizing cells in module \m_tsmx_hash.
+  Optimizing cells in module \m_tsmx_math.
+  Optimizing cells in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+  Optimizing cells in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+  Optimizing cells in module \m_tsmx_csr.
+Performed a total of 0 changes.
+
+4.8.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 1020 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Removed a total of 0 cells.
+
+4.8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+
+4.8.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.8.20. Finished fast OPT passes. (There is nothing left to do.)
+
+4.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 address bits (of 32) from memory init port m_tsmx_engine.$auto$mem.cc:349:emit$1401 ($auto$proc_rom.cc:155:do_switch$1399).
+Removed top 17 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:300$mod$957 ($mod).
+Removed top 17 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:300$mod$858 ($mod).
+Removed top 22 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:317$gt$720 ($gt).
+Removed top 6 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:318$add$721 ($add).
+Removed top 28 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:318$add$722 ($add).
+Removed top 30 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:321$le$725 ($le).
+Removed top 30 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:322$le$727 ($le).
+Removed top 8 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:323$le$729 ($le).
+Removed top 8 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:323$le$731 ($le).
+Removed top 17 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:331$ge$741 ($ge).
+Removed top 3 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:338$eq$749 ($eq).
+Removed top 3 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:338$eq$751 ($eq).
+Removed top 16 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:343$ge$760 ($ge).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:594$add$853 ($add).
+Removed top 22 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:603$ge$878 ($ge).
+Removed top 2 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:606$ne$881 ($ne).
+Removed top 3 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:613$eq$884 ($eq).
+Removed top 3 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:612$ne$886 ($ne).
+Removed top 2 bits (of 8) from mux cell m_tsmx_engine.$engine_cov.sv:637$ternary$953 ($mux).
+Removed top 13 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:651$lt$960 ($lt).
+Removed top 13 bits (of 32) from port A of cell m_tsmx_engine.$engine_cov.sv:651$sub$961 ($sub).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:670$sub$965 ($sub).
+Removed top 5 bits (of 6) from port A of cell m_tsmx_engine.$engine_cov.sv:702$shl$975 ($shl).
+Removed top 3 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:726$eq$984 ($eq).
+Removed top 2 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:727$ne$985 ($ne).
+Removed top 13 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:844$gt$1001 ($gt).
+Removed top 7 bits (of 8) from mux cell m_tsmx_engine.$engine_cov.sv:895$ternary$1020 ($mux).
+Removed top 15 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:915$gt$1032 ($gt).
+Removed top 1 bits (of 32) from mux cell m_tsmx_engine.$engine_cov.sv:951$ternary$1039 ($mux).
+Removed top 4 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:975$eq$1040 ($eq).
+Removed top 15 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:991$gt$1056 ($gt).
+Removed top 63 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:306$add$1064 ($add).
+Removed top 32 bits (of 64) from port A of cell m_tsmx_engine.$engine_cov.sv:1008$sub$1066 ($sub).
+Removed top 32 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1008$sub$1066 ($sub).
+Removed top 31 bits (of 64) from port Y of cell m_tsmx_engine.$engine_cov.sv:1008$sub$1066 ($sub).
+Removed top 63 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:306$add$1068 ($add).
+Removed top 48 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1007$add$1070 ($add).
+Removed top 32 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1007$add$1071 ($add).
+Removed top 46 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1007$le$1072 ($le).
+Removed top 48 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1008$add$1074 ($add).
+Removed top 46 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:1008$le$1075 ($le).
+Removed top 4 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:1013$ne$1080 ($ne).
+Removed top 1 bits (of 3) from port B of cell m_tsmx_engine.$engine_cov.sv:1069$eq$1088 ($eq).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1118$add$1142 ($add).
+Removed top 11 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1119$eq$1143 ($eq).
+Removed top 63 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1316$eq$1177 ($eq).
+Removed top 58 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1317$eq$1178 ($eq).
+Removed top 56 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1318$eq$1179 ($eq).
+Removed top 54 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1319$eq$1180 ($eq).
+Removed top 52 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1320$eq$1181 ($eq).
+Removed top 11 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1321$eq$1182 ($eq).
+Removed top 8 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1322$eq$1183 ($eq).
+Removed top 39 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1323$eq$1184 ($eq).
+Removed top 24 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1324$eq$1185 ($eq).
+Removed top 41 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1325$eq$1186 ($eq).
+Removed top 13 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1338$lt$1202 ($lt).
+Removed top 13 bits (of 32) from port A of cell m_tsmx_engine.$engine_cov.sv:1338$sub$1203 ($sub).
+Removed top 17 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1366$add$1217 ($add).
+Removed top 33 bits (of 65) from port A of cell m_tsmx_engine.$engine_cov.sv:1367$mul$1218 ($mul).
+Removed top 32 bits (of 65) from port B of cell m_tsmx_engine.$engine_cov.sv:1367$mul$1218 ($mul).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1369$sub$1219 ($sub).
+Removed top 25 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1369$add$1221 ($add).
+Removed top 33 bits (of 65) from port A of cell m_tsmx_engine.$engine_cov.sv:1370$mul$1222 ($mul).
+Removed top 32 bits (of 65) from port B of cell m_tsmx_engine.$engine_cov.sv:1370$mul$1222 ($mul).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1570$ge$1236 ($ge).
+Removed top 11 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1570$le$1237 ($le).
+Removed top 74 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1573$ne$1241 ($ne).
+Removed top 75 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1574$ne$1242 ($ne).
+Removed top 72 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1575$ne$1244 ($ne).
+Removed top 71 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1576$ne$1246 ($ne).
+Removed top 70 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1577$ne$1248 ($ne).
+Removed top 69 bits (of 76) from port B of cell m_tsmx_engine.$engine_cov.sv:1578$ne$1250 ($ne).
+Removed top 5 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:1584$eq$1261 ($eq).
+Removed top 31 bits (of 32) from port B of cell m_tsmx_engine.$engine_cov.sv:1589$add$1266 ($add).
+Removed top 5 bits (of 8) from port B of cell m_tsmx_engine.$engine_cov.sv:1594$eq$1270 ($eq).
+Removed top 63 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:306$add$1289 ($add).
+Removed top 63 bits (of 64) from port B of cell m_tsmx_engine.$engine_cov.sv:306$add$1296 ($add).
+Removed top 43 bits (of 64) from port A of cell m_tsmx_engine.$engine_cov.sv:295$lt$1310 ($lt).
+Removed top 6 bits (of 76) from mux cell m_tsmx_engine.$procmux$2067 ($mux).
+Removed top 961 bits (of 1217) from mux cell m_tsmx_engine.$procmux$2176 ($mux).
+Removed top 9 bits (of 76) from mux cell m_tsmx_engine.$procmux$2207 ($mux).
+Removed top 6 bits (of 76) from mux cell m_tsmx_engine.$procmux$2383 ($mux).
+Removed top 14 bits (of 76) from mux cell m_tsmx_engine.$procmux$2751 ($mux).
+Removed top 14 bits (of 76) from mux cell m_tsmx_engine.$procmux$2994 ($mux).
+Removed top 26 bits (of 76) from mux cell m_tsmx_engine.$procmux$3455 ($mux).
+Removed top 24 bits (of 76) from mux cell m_tsmx_engine.$procmux$3602 ($mux).
+Removed top 20 bits (of 76) from mux cell m_tsmx_engine.$procmux$3646 ($mux).
+Removed top 20 bits (of 76) from mux cell m_tsmx_engine.$procmux$3728 ($mux).
+Removed top 1 bits (of 32) from mux cell m_tsmx_engine.$procmux$5397 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$5445 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$5547 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$6181 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$6447 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$6671 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$7022 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$7385 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$7760 ($mux).
+Removed top 37 bits (of 76) from mux cell m_tsmx_engine.$procmux$8146 ($mux).
+Removed top 63 bits (of 76) from mux cell m_tsmx_engine.$procmux$9687 ($mux).
+Removed top 66 bits (of 76) from mux cell m_tsmx_engine.$procmux$12509 ($mux).
+Removed top 14 bits (of 76) from mux cell m_tsmx_engine.$procmux$13493 ($mux).
+Removed top 17 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16876_CMP0 ($eq).
+Removed top 40 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16899_CMP0 ($eq).
+Removed top 45 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16904_CMP0 ($eq).
+Removed top 48 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16907_CMP0 ($eq).
+Removed top 59 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16918_CMP0 ($eq).
+Removed top 75 bits (of 76) from port B of cell m_tsmx_engine.$procmux$16934_CMP0 ($eq).
+Removed top 24 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18232_CMP0 ($eq).
+Removed top 28 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18233_CMP0 ($eq).
+Removed top 39 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18235_CMP0 ($eq).
+Removed top 26 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18300_CMP0 ($eq).
+Removed top 31 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18301_CMP0 ($eq).
+Removed top 41 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18302_CMP0 ($eq).
+Removed top 44 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18303_CMP0 ($eq).
+Removed top 5 bits (of 8) from mux cell m_tsmx_engine.$procmux$18330 ($pmux).
+Removed top 8 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18347_CMP0 ($eq).
+Removed top 11 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18348_CMP0 ($eq).
+Removed top 52 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18349_CMP0 ($eq).
+Removed top 54 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18350_CMP0 ($eq).
+Removed top 56 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18351_CMP0 ($eq).
+Removed top 58 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18352_CMP0 ($eq).
+Removed top 63 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18353_CMP0 ($eq).
+Removed top 68 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18510_CMP0 ($eq).
+Removed top 70 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18511_CMP0 ($eq).
+Removed top 6 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18530_CMP0 ($eq).
+Removed top 3 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18543_CMP0 ($eq).
+Removed top 14 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18577_CMP0 ($eq).
+Removed top 22 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18628_CMP0 ($eq).
+Removed top 34 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18629_CMP0 ($eq).
+Removed top 19 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18675_CMP0 ($eq).
+Removed top 50 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18676_CMP0 ($eq).
+Removed top 65 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18677_CMP0 ($eq).
+Removed top 47 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18777_CMP0 ($eq).
+Removed top 61 bits (of 76) from port B of cell m_tsmx_engine.$procmux$18905_CMP0 ($eq).
+Removed top 72 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19055_CMP0 ($eq).
+Removed top 36 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19288_CMP0 ($eq).
+Removed top 4 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19715_CMP0 ($eq).
+Removed top 5 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19804_CMP0 ($eq).
+Removed top 71 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19805_CMP0 ($eq).
+Removed top 2 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19892_CMP0 ($eq).
+Removed top 9 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19915_CMP0 ($eq).
+Removed top 62 bits (of 76) from port B of cell m_tsmx_engine.$procmux$19985_CMP0 ($eq).
+Removed top 23 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20083_CMP0 ($eq).
+Removed top 30 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20118_CMP0 ($eq).
+Removed top 15 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20364_CMP0 ($eq).
+Removed top 18 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20365_CMP0 ($eq).
+Removed top 20 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20366_CMP0 ($eq).
+Removed top 67 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20406_CMP0 ($eq).
+Removed top 33 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20506_CMP0 ($eq).
+Removed top 66 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20575_CMP0 ($eq).
+Removed top 10 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20588_CMP0 ($eq).
+Removed top 21 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20589_CMP0 ($eq).
+Removed top 27 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20590_CMP0 ($eq).
+Removed top 32 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20591_CMP0 ($eq).
+Removed top 35 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20592_CMP0 ($eq).
+Removed top 37 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20593_CMP0 ($eq).
+Removed top 38 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20594_CMP0 ($eq).
+Removed top 42 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20595_CMP0 ($eq).
+Removed top 43 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20596_CMP0 ($eq).
+Removed top 46 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20597_CMP0 ($eq).
+Removed top 49 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20598_CMP0 ($eq).
+Removed top 51 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20599_CMP0 ($eq).
+Removed top 53 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20600_CMP0 ($eq).
+Removed top 55 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20601_CMP0 ($eq).
+Removed top 57 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20602_CMP0 ($eq).
+Removed top 73 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20604_CMP0 ($eq).
+Removed top 7 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20797_CMP0 ($eq).
+Removed top 64 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20799_CMP0 ($eq).
+Removed top 13 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20850_CMP0 ($eq).
+Removed top 69 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20851_CMP0 ($eq).
+Removed top 60 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20914_CMP0 ($eq).
+Removed top 12 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20929_CMP0 ($eq).
+Removed top 1 bits (of 76) from port B of cell m_tsmx_engine.$procmux$20933_CMP0 ($eq).
+Removed top 74 bits (of 76) from port B of cell m_tsmx_engine.$procmux$21088_CMP0 ($eq).
+Removed top 29 bits (of 76) from port B of cell m_tsmx_engine.$procmux$21211_CMP46 ($eq).
+Removed top 25 bits (of 76) from port B of cell m_tsmx_engine.$procmux$21211_CMP50 ($eq).
+Removed top 16 bits (of 76) from port B of cell m_tsmx_engine.$procmux$21211_CMP59 ($eq).
+Removed top 3 bits (of 256) from mux cell m_tsmx_engine.$procmux$21213 ($pmux).
+Removed top 1 bits (of 3) from port B of cell m_tsmx_engine.$procmux$21216_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell m_tsmx_engine.$procmux$21217_CMP0 ($eq).
+Removed top 2 bits (of 6) from mux cell m_tsmx_engine.$procmux$21220 ($pmux).
+Removed top 2 bits (of 3) from port B of cell m_tsmx_engine.$procmux$21228_CMP0 ($eq).
+Removed top 2 bits (of 8) from mux cell m_tsmx_engine.$procmux$21227 ($pmux).
+Removed top 1 bits (of 2) from port B of cell m_tsmx_engine.$procmux$21229_CMP0 ($eq).
+Removed top 26 bits (of 76) from wire m_tsmx_engine.$56\w_fsm_ctrl_nxt_state[75:0].
+Removed top 1 bits (of 32) from wire m_tsmx_engine.$engine_cov.sv:925$ternary$1035_Y.
+Removed top 24 bits (of 76) from wire m_tsmx_engine.$53\w_fsm_ctrl_nxt_state[75:0].
+Removed top 20 bits (of 76) from wire m_tsmx_engine.$52\w_fsm_ctrl_nxt_state[75:0].
+Removed top 20 bits (of 76) from wire m_tsmx_engine.$51\w_fsm_ctrl_nxt_state[75:0].
+Removed top 7 bits (of 8) from wire m_tsmx_engine.$engine_cov.sv:895$ternary$1020_Y.
+Removed top 1 bits (of 32) from wire m_tsmx_engine.$3\w_math_delay[31:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$42\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$41\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$38\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$35\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$32\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$29\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$26\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$23\w_fsm_ctrl_nxt_state[75:0].
+Removed top 37 bits (of 76) from wire m_tsmx_engine.$20\w_fsm_ctrl_nxt_state[75:0].
+Removed top 63 bits (of 76) from wire m_tsmx_engine.$13\w_fsm_ctrl_nxt_state[75:0].
+Removed top 66 bits (of 76) from wire m_tsmx_engine.$6\w_fsm_ctrl_nxt_state[75:0].
+Removed top 2 bits (of 8) from wire m_tsmx_engine.$engine_cov.sv:637$ternary$953_Y.
+Removed top 14 bits (of 76) from wire m_tsmx_engine.$5\w_fsm_ctrl_nxt_state[75:0].
+Removed top 6 bits (of 76) from wire m_tsmx_engine.$79\w_fsm_ctrl_nxt_state[75:0].
+Removed top 9 bits (of 76) from wire m_tsmx_engine.$76\w_fsm_ctrl_nxt_state[75:0].
+Removed top 6 bits (of 76) from wire m_tsmx_engine.$73\w_fsm_ctrl_nxt_state[75:0].
+Removed top 14 bits (of 76) from wire m_tsmx_engine.$68\w_fsm_ctrl_nxt_state[75:0].
+Removed top 14 bits (of 76) from wire m_tsmx_engine.$65\w_fsm_ctrl_nxt_state[75:0].
+Removed top 2 bits (of 6) from wire m_tsmx_engine.w_mode_len.
+Removed top 3 bits (of 256) from wire m_tsmx_engine.w_event_mode.
+Removed top 5 bits (of 8) from wire m_tsmx_engine.w_hash_op.
+Removed top 2 bits (of 8) from wire m_tsmx_engine.w_timer_code.
+
+4.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+Removed 0 unused cells and 29 unused wires.
+<suppressed ~1 debug messages>
+
+4.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.12. Executing OPT pass (performing simple optimizations).
+
+4.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module m_tsmx_engine.
+Optimizing module m_tsmx_ingress.
+Optimizing module m_tsmx_splice.
+Optimizing module m_tsmx_cert.
+Optimizing module m_tsmx_sel.
+Optimizing module m_tsmx_supervisor.
+Optimizing module m_tsmx_arb.
+Optimizing module m_tsmx_rec.
+Optimizing module m_tsmx_health_lane.
+Optimizing module m_tsmx_hash.
+Optimizing module m_tsmx_math.
+Optimizing module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep.
+Optimizing module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep.
+Optimizing module m_tsmx_csr.
+
+4.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\m_tsmx_engine'.
+Computing hashes of 1019 cells of `\m_tsmx_engine'.
+Finding duplicate cells in `\m_tsmx_engine'.
+Finding identical cells in module `\m_tsmx_ingress'.
+Computing hashes of 3 cells of `\m_tsmx_ingress'.
+Finding duplicate cells in `\m_tsmx_ingress'.
+Finding identical cells in module `\m_tsmx_splice'.
+Computing hashes of 3 cells of `\m_tsmx_splice'.
+Finding duplicate cells in `\m_tsmx_splice'.
+Finding identical cells in module `\m_tsmx_cert'.
+Computing hashes of 3 cells of `\m_tsmx_cert'.
+Finding duplicate cells in `\m_tsmx_cert'.
+Finding identical cells in module `\m_tsmx_sel'.
+Computing hashes of 3 cells of `\m_tsmx_sel'.
+Finding duplicate cells in `\m_tsmx_sel'.
+Finding identical cells in module `\m_tsmx_supervisor'.
+Computing hashes of 3 cells of `\m_tsmx_supervisor'.
+Finding duplicate cells in `\m_tsmx_supervisor'.
+Finding identical cells in module `\m_tsmx_arb'.
+Computing hashes of 4 cells of `\m_tsmx_arb'.
+Finding duplicate cells in `\m_tsmx_arb'.
+Finding identical cells in module `\m_tsmx_rec'.
+Computing hashes of 6 cells of `\m_tsmx_rec'.
+Finding duplicate cells in `\m_tsmx_rec'.
+Finding identical cells in module `\m_tsmx_health_lane'.
+Computing hashes of 3 cells of `\m_tsmx_health_lane'.
+Finding duplicate cells in `\m_tsmx_health_lane'.
+Finding identical cells in module `\m_tsmx_hash'.
+Computing hashes of 3 cells of `\m_tsmx_hash'.
+Finding duplicate cells in `\m_tsmx_hash'.
+Finding identical cells in module `\m_tsmx_math'.
+Computing hashes of 6 cells of `\m_tsmx_math'.
+Finding duplicate cells in `\m_tsmx_math'.
+Finding identical cells in module `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep'.
+Finding identical cells in module `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Computing hashes of 3 cells of `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding duplicate cells in `$paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep'.
+Finding identical cells in module `\m_tsmx_csr'.
+Computing hashes of 10 cells of `\m_tsmx_csr'.
+Finding duplicate cells in `\m_tsmx_csr'.
+Removed a total of 0 cells.
+
+4.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \m_tsmx_engine..
+Finding unused cells or wires in module \m_tsmx_ingress..
+Finding unused cells or wires in module \m_tsmx_splice..
+Finding unused cells or wires in module \m_tsmx_cert..
+Finding unused cells or wires in module \m_tsmx_sel..
+Finding unused cells or wires in module \m_tsmx_supervisor..
+Finding unused cells or wires in module \m_tsmx_arb..
+Finding unused cells or wires in module \m_tsmx_rec..
+Finding unused cells or wires in module \m_tsmx_health_lane..
+Finding unused cells or wires in module \m_tsmx_hash..
+Finding unused cells or wires in module \m_tsmx_math..
+Finding unused cells or wires in module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep..
+Finding unused cells or wires in module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep..
+Finding unused cells or wires in module \m_tsmx_csr..
+
+4.12.4. Finished fast OPT passes.
+
+4.13. Executing SORT pass.
+
+4.14. Printing statistics.
+
+=== $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+     9489 wire bits
+       15 public wires
+     9489 public wire bits
+       12 ports
+     9471 port bits
+        3 cells
+        3   $anyseq
+
+=== $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+     9489 wire bits
+       15 public wires
+     9489 public wire bits
+       12 ports
+     9471 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_arb ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       14 wires
+     7868 wire bits
+       14 public wires
+     7868 public wire bits
+       10 ports
+     5868 port bits
+        4 cells
+        4   $anyseq
+
+=== m_tsmx_cert ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+     2928 wire bits
+       11 public wires
+     2928 public wire bits
+        8 ports
+     2918 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_csr ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       35 wires
+      289 wire bits
+       35 public wires
+      289 public wire bits
+       25 ports
+      243 port bits
+       10 cells
+       10   $anyseq
+
+=== m_tsmx_engine ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1139 wires
+   478546 wire bits
+      368 public wires
+   264424 public wire bits
+       43 ports
+    47882 port bits
+     1006 cells
+       14   $add
+       84   $adff
+        7   $and
+       13   $check
+        3   $dff
+      105   $eq
+        8   $ge
+        4   $gt
+        7   $le
+       97   $logic_and
+       38   $logic_not
+       37   $logic_or
+        7   $lt
+        1   $mem_v2
+        2   $mod
+        3   $mul
+      457   $mux
+       18   $ne
+        5   $not
+        6   $or
+       41   $pmux
+        3   $reduce_bool
+       14   $reduce_or
+       12   $reduce_xor
+        1   $shl
+       19   $sub
+       13 submodules
+        1   $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        1   $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        1   m_tsmx_arb
+        1   m_tsmx_cert
+        1   m_tsmx_csr
+        1   m_tsmx_hash
+        1   m_tsmx_health_lane
+        1   m_tsmx_ingress
+        1   m_tsmx_math
+        1   m_tsmx_rec
+        1   m_tsmx_sel
+        1   m_tsmx_splice
+        1   m_tsmx_supervisor
+
+=== m_tsmx_hash ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+     9020 wire bits
+       12 public wires
+     9020 public wire bits
+        9 ports
+     8729 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_health_lane ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+    33834 wire bits
+       11 public wires
+    33834 public wire bits
+        8 ports
+    33831 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_ingress ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+     2062 wire bits
+       11 public wires
+     2062 public wire bits
+        8 ports
+     1720 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_math ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       21 wires
+    27092 wire bits
+       21 public wires
+    27092 public wire bits
+       15 ports
+    18089 port bits
+        6 cells
+        6   $anyseq
+
+=== m_tsmx_rec ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+     3256 wire bits
+       20 public wires
+     3256 public wire bits
+       14 ports
+     2164 port bits
+        6 cells
+        6   $anyseq
+
+=== m_tsmx_sel ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       56 wire bits
+       11 public wires
+       56 public wire bits
+        8 ports
+       38 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_splice ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+      826 wire bits
+       11 public wires
+      826 public wire bits
+        8 ports
+      823 port bits
+        3 cells
+        3   $anyseq
+
+=== m_tsmx_supervisor ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       11 wires
+       68 wire bits
+       11 public wires
+       68 public wire bits
+        8 ports
+       58 port bits
+        3 cells
+        3   $anyseq
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1059 m_tsmx_engine
+        3 $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        3 $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        4 m_tsmx_arb
+        3 m_tsmx_cert
+       10 m_tsmx_csr
+        3 m_tsmx_hash
+        3 m_tsmx_health_lane
+        3 m_tsmx_ingress
+        6 m_tsmx_math
+        6 m_tsmx_rec
+        3 m_tsmx_sel
+        3 m_tsmx_splice
+        3 m_tsmx_supervisor
+
+        +----------Count including submodules.
+        | 
+     1337 wires
+   584823 wire bits
+      566 public wires
+   370701 public wire bits
+      188 ports
+   141305 port bits
+        - memories
+        - memory bits
+        - processes
+     1059 cells
+       14   $add
+       84   $adff
+        7   $and
+       53   $anyseq
+       13   $check
+        3   $dff
+      105   $eq
+        8   $ge
+        4   $gt
+        7   $le
+       97   $logic_and
+       38   $logic_not
+       37   $logic_or
+        7   $lt
+        1   $mem_v2
+        2   $mod
+        3   $mul
+      457   $mux
+       18   $ne
+        5   $not
+        6   $or
+       41   $pmux
+        3   $reduce_bool
+       14   $reduce_or
+       12   $reduce_xor
+        1   $shl
+       19   $sub
+       13 submodules
+        1   $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+        1   $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+        1   m_tsmx_arb
+        1   m_tsmx_cert
+        1   m_tsmx_csr
+        1   m_tsmx_hash
+        1   m_tsmx_health_lane
+        1   m_tsmx_ingress
+        1   m_tsmx_math
+        1   m_tsmx_rec
+        1   m_tsmx_sel
+        1   m_tsmx_splice
+        1   m_tsmx_supervisor
+
+4.15. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep...
+Checking module $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep...
+Checking module m_tsmx_arb...
+Checking module m_tsmx_cert...
+Checking module m_tsmx_csr...
+Checking module m_tsmx_engine...
+Checking module m_tsmx_hash...
+Checking module m_tsmx_health_lane...
+Checking module m_tsmx_ingress...
+Checking module m_tsmx_math...
+Checking module m_tsmx_rec...
+Checking module m_tsmx_sel...
+Checking module m_tsmx_splice...
+Checking module m_tsmx_supervisor...
+Found and reported 0 problems.
+
+5. Executing ASYNC2SYNC pass.
+Replacing m_tsmx_engine.$procdff$21238 ($adff): ARST=\i_rst_n_core, D=$0\reg_xph[31:0], Q=\reg_xph
+Replacing m_tsmx_engine.$procdff$21243 ($adff): ARST=\i_rst_n_core, D={ 14'00000000000000 \reg_xprod [64:47] }, Q=\reg_xn
+Replacing m_tsmx_engine.$procdff$21248 ($adff): ARST=\i_rst_n_core, D=$0\reg_xm[31:0], Q=\reg_xm
+Replacing m_tsmx_engine.$procdff$21253 ($adff): ARST=\i_rst_n_core, D=\w_xerr, Q=\reg_xerr
+Replacing m_tsmx_engine.$procdff$21258 ($adff): ARST=\i_rst_n_core, D=$0\reg_xprod[64:0], Q=\reg_xprod
+Replacing m_tsmx_engine.$procdff$21263 ($adff): ARST=\i_rst_n_core, D=$0\reg_xmprod[64:0], Q=\reg_xmprod
+Replacing m_tsmx_engine.$procdff$21268 ($adff): ARST=\i_rst_n_core, D=\w_sts_valid, Q=\reg_sts_valid
+Replacing m_tsmx_engine.$procdff$21273 ($adff): ARST=\i_rst_n_core, D=\w_sts_data, Q=\reg_sts_data
+Replacing m_tsmx_engine.$procdff$21278 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_crc[0:0], Q=\reg_hs_crc
+Replacing m_tsmx_engine.$procdff$21283 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_ctx[0:0], Q=\reg_hs_ctx
+Replacing m_tsmx_engine.$procdff$21288 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_snap[0:0], Q=\reg_hs_snap
+Replacing m_tsmx_engine.$procdff$21293 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_traj[0:0], Q=\reg_hs_traj
+Replacing m_tsmx_engine.$procdff$21298 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_seal[0:0], Q=\reg_hs_seal
+Replacing m_tsmx_engine.$procdff$21303 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_newh[0:0], Q=\reg_hs_newh
+Replacing m_tsmx_engine.$procdff$21308 ($adff): ARST=\i_rst_n_core, D=$0\reg_hs_reseal[0:0], Q=\reg_hs_reseal
+Replacing m_tsmx_engine.$procdff$21313 ($adff): ARST=\i_rst_n_core, D=$0\reg_ss_nom[0:0], Q=\reg_ss_nom
+Replacing m_tsmx_engine.$procdff$21318 ($adff): ARST=\i_rst_n_core, D=$0\reg_ss_tail[0:0], Q=\reg_ss_tail
+Replacing m_tsmx_engine.$procdff$21323 ($adff): ARST=\i_rst_n_core, D=$0\reg_ms_nprop[0:0], Q=\reg_ms_nprop
+Replacing m_tsmx_engine.$procdff$21328 ($adff): ARST=\i_rst_n_core, D=\w_fsm_ctrl_nxt_state, Q=\reg_fsm_ctrl_current_state
+Replacing m_tsmx_engine.$procdff$21333 ($adff): ARST=\i_rst_n_core, D=\w_req_nxt, Q=\reg_req
+Replacing m_tsmx_engine.$procdff$21338 ($adff): ARST=\i_rst_n_core, D=\w_parse_reason_nxt, Q=\reg_parse_reason
+Replacing m_tsmx_engine.$procdff$21343 ($adff): ARST=\i_rst_n_core, D=\w_active_nxt, Q=\reg_active
+Replacing m_tsmx_engine.$procdff$21348 ($adff): ARST=\i_rst_n_core, D=\w_ing_nxt, Q=\reg_ing
+Replacing m_tsmx_engine.$procdff$21353 ($adff): ARST=\i_rst_n_core, D=\w_proposal_nxt, Q=\reg_proposal
+Replacing m_tsmx_engine.$procdff$21358 ($adff): ARST=\i_rst_n_core, D=\w_mode_nxt, Q=\reg_mode
+Replacing m_tsmx_engine.$procdff$21363 ($adff): ARST=\i_rst_n_core, D=\w_good_nxt, Q=\reg_good
+Replacing m_tsmx_engine.$procdff$21368 ($adff): ARST=\i_rst_n_core, D=\w_fault_nxt, Q=\reg_fault
+Replacing m_tsmx_engine.$procdff$21373 ($adff): ARST=\i_rst_n_core, D=\w_pending_valid_nxt, Q=\reg_pending_valid
+Replacing m_tsmx_engine.$procdff$21378 ($adff): ARST=\i_rst_n_core, D=\w_pending_plan_nxt, Q=\reg_pending_plan
+Replacing m_tsmx_engine.$procdff$21383 ($adff): ARST=\i_rst_n_core, D=\w_pending_cert_nxt, Q=\reg_pending_cert
+Replacing m_tsmx_engine.$procdff$21388 ($adff): ARST=\i_rst_n_core, D=\w_issued_nxt, Q=\reg_issued
+Replacing m_tsmx_engine.$procdff$21393 ($adff): ARST=\i_rst_n_core, D=\w_backup_valid_nxt, Q=\reg_backup_valid
+Replacing m_tsmx_engine.$procdff$21398 ($adff): ARST=\i_rst_n_core, D=\w_backup_plan_nxt, Q=\reg_backup_plan
+Replacing m_tsmx_engine.$procdff$21403 ($adff): ARST=\i_rst_n_core, D=\w_backup_cert_nxt, Q=\reg_backup_cert
+Replacing m_tsmx_engine.$procdff$21408 ($adff): ARST=\i_rst_n_core, D=\w_reason_nxt, Q=\reg_reason
+Replacing m_tsmx_engine.$procdff$21413 ($adff): ARST=\i_rst_n_core, D=\w_commit_nxt, Q=\reg_commit
+Replacing m_tsmx_engine.$procdff$21418 ($adff): ARST=\i_rst_n_core, D=\w_cid_nxt, Q=\reg_cid
+Replacing m_tsmx_engine.$procdff$21423 ($adff): ARST=\i_rst_n_core, D=\w_label_nxt, Q=\reg_label
+Replacing m_tsmx_engine.$procdff$21428 ($adff): ARST=\i_rst_n_core, D=\w_tail_nxt, Q=\reg_tail
+Replacing m_tsmx_engine.$procdff$21433 ($adff): ARST=\i_rst_n_core, D=\w_healthy_nxt, Q=\reg_healthy
+Replacing m_tsmx_engine.$procdff$21438 ($adff): ARST=\i_rst_n_core, D=\w_reuse_nxt, Q=\reg_reuse
+Replacing m_tsmx_engine.$procdff$21443 ($adff): ARST=\i_rst_n_core, D=\w_world_nxt, Q=\reg_world
+Replacing m_tsmx_engine.$procdff$21448 ($adff): ARST=\i_rst_n_core, D=\w_lane_nxt, Q=\reg_lane
+Replacing m_tsmx_engine.$procdff$21458 ($adff): ARST=\i_rst_n_core, D=\w_bridge_nxt, Q=\reg_bridge
+Replacing m_tsmx_engine.$procdff$21463 ($adff): ARST=\i_rst_n_core, D=\w_context_nxt, Q=\reg_context
+Replacing m_tsmx_engine.$procdff$21468 ($adff): ARST=\i_rst_n_core, D=\w_snapshot_nxt, Q=\reg_snapshot
+Replacing m_tsmx_engine.$procdff$21473 ($adff): ARST=\i_rst_n_core, D=\w_trajectory_nxt, Q=\reg_trajectory
+Replacing m_tsmx_engine.$procdff$21478 ($adff): ARST=\i_rst_n_core, D=\w_seal_nxt, Q=\reg_seal
+Replacing m_tsmx_engine.$procdff$21483 ($adff): ARST=\i_rst_n_core, D=\w_new_plan_nxt, Q=\reg_new_plan
+Replacing m_tsmx_engine.$procdff$21488 ($adff): ARST=\i_rst_n_core, D=\w_new_cert_nxt, Q=\reg_new_cert
+Replacing m_tsmx_engine.$procdff$21493 ($adff): ARST=\i_rst_n_core, D=\w_resp_data_nxt, Q=\reg_resp_data
+Replacing m_tsmx_engine.$procdff$21498 ($adff): ARST=\i_rst_n_core, D=\w_final_rsp_nxt, Q=\reg_final_rsp
+Replacing m_tsmx_engine.$procdff$21503 ($adff): ARST=\i_rst_n_core, D=\w_resp_valid_nxt, Q=\reg_resp_valid
+Replacing m_tsmx_engine.$procdff$21508 ($adff): ARST=\i_rst_n_core, D=\w_cmd_nxt, Q=\reg_cmd
+Replacing m_tsmx_engine.$procdff$21513 ($adff): ARST=\i_rst_n_core, D=\w_cmd_valid_nxt, Q=\reg_cmd_valid
+Replacing m_tsmx_engine.$procdff$21518 ($adff): ARST=\i_rst_n_core, D=\w_count_nxt, Q=\reg_count
+Replacing m_tsmx_engine.$procdff$21523 ($adff): ARST=\i_rst_n_core, D=\w_lost_nxt, Q=\reg_lost
+Replacing m_tsmx_engine.$procdff$21528 ($adff): ARST=\i_rst_n_core, D=\w_deadline_nxt, Q=\reg_deadline
+Replacing m_tsmx_engine.$procdff$21533 ($adff): ARST=\i_rst_n_core, D=\w_override_nxt, Q=\reg_override
+Replacing m_tsmx_engine.$procdff$21538 ($adff): ARST=\i_rst_n_core, D=\w_live_bad_nxt, Q=\reg_live_bad
+Replacing m_tsmx_engine.$procdff$21543 ($adff): ARST=\i_rst_n_core, D=\w_tick_nxt, Q=\reg_tick
+Replacing m_tsmx_engine.$procdff$21548 ($adff): ARST=\i_rst_n_core, D=\w_tick_valid_nxt, Q=\reg_tick_valid
+Replacing m_tsmx_engine.$procdff$21553 ($adff): ARST=\i_rst_n_core, D=\w_heartbeat_time_nxt, Q=\reg_heartbeat_time
+Replacing m_tsmx_engine.$procdff$21558 ($adff): ARST=\i_rst_n_core, D=\w_heartbeat_nxt, Q=\reg_heartbeat
+Replacing m_tsmx_engine.$procdff$21563 ($adff): ARST=\i_rst_n_core, D=\w_heartbeat_en_nxt, Q=\reg_heartbeat_en
+Replacing m_tsmx_engine.$procdff$21568 ($adff): ARST=\i_rst_n_core, D=\w_timer_code_nxt, Q=\reg_timer_code
+Replacing m_tsmx_engine.$procdff$21573 ($adff): ARST=\i_rst_n_core, D=\w_timer_valid_nxt, Q=\reg_timer_valid
+Replacing m_tsmx_engine.$procdff$21578 ($adff): ARST=\i_rst_n_core, D=\w_ing_par_nxt, Q=\reg_ing_par
+Replacing m_tsmx_engine.$procdff$21583 ($adff): ARST=\i_rst_n_core, D=\w_pending_plan_par_nxt, Q=\reg_pending_plan_par
+Replacing m_tsmx_engine.$procdff$21588 ($adff): ARST=\i_rst_n_core, D=\w_pending_cert_par_nxt, Q=\reg_pending_cert_par
+Replacing m_tsmx_engine.$procdff$21593 ($adff): ARST=\i_rst_n_core, D=\w_backup_plan_par_nxt, Q=\reg_backup_plan_par
+Replacing m_tsmx_engine.$procdff$21598 ($adff): ARST=\i_rst_n_core, D=\w_backup_cert_par_nxt, Q=\reg_backup_cert_par
+Replacing m_tsmx_engine.$procdff$21603 ($adff): ARST=\i_rst_n_core, D=\w_ctrl_par_nxt, Q=\reg_ctrl_par
+Replacing m_tsmx_engine.$procdff$21608 ($adff): ARST=\i_rst_n_core, D=\w_bist_wait_nxt, Q=\reg_bist_wait
+Replacing m_tsmx_engine.$procdff$21613 ($adff): ARST=\i_rst_n_core, D=\w_csr_rst_nxt, Q=\reg_csr_rst
+Replacing m_tsmx_engine.$procdff$21618 ($adff): ARST=\i_rst_n_core, D=\w_dup_sent_nxt, Q=\reg_dup_sent
+Replacing m_tsmx_engine.$procdff$21623 ($adff): ARST=\i_rst_n_core, D=\w_main_sent_nxt, Q=\reg_main_sent
+Replacing m_tsmx_engine.$procdff$21628 ($adff): ARST=\i_rst_n_core, D=\w_dup_done_nxt, Q=\reg_dup_done
+Replacing m_tsmx_engine.$procdff$21633 ($adff): ARST=\i_rst_n_core, D=\w_main_done_nxt, Q=\reg_main_done
+Replacing m_tsmx_engine.$procdff$21638 ($adff): ARST=\i_rst_n_core, D=\w_dup_result_nxt, Q=\reg_dup_result
+Replacing m_tsmx_engine.$procdff$21643 ($adff): ARST=\i_rst_n_core, D=\w_lane_good_nxt, Q=\reg_lane_good
+Replacing m_tsmx_engine.$procdff$21648 ($adff): ARST=\i_rst_n_core, D=\w_replay_full_nxt, Q=\reg_replay_full
+Replacing m_tsmx_engine.$procdff$21653 ($adff): ARST=\i_rst_n_core, D=\w_replay_event_nxt, Q=\reg_replay_event
+Replacing m_tsmx_engine.$procdff$21658 ($adff): ARST=\i_rst_n_core, D=\w_log_drops_nxt, Q=\reg_log_drops
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `m_tsmx_engine'. Setting top module to m_tsmx_engine.
+
+6.1. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_ingress
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_csr
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_math
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+
+6.2. Analyzing design hierarchy..
+Top module:  \m_tsmx_engine
+Used module:     \m_tsmx_arb
+Used module:     \m_tsmx_ingress
+Used module:     \m_tsmx_splice
+Used module:     \m_tsmx_sel
+Used module:     \m_tsmx_supervisor
+Used module:     \m_tsmx_cert
+Used module:     \m_tsmx_health_lane
+Used module:     \m_tsmx_rec
+Used module:     \m_tsmx_csr
+Used module:     \m_tsmx_hash
+Used module:     \m_tsmx_math
+Used module:     $paramod$6a84a8205ab940c776e113d2ad553de98f7c8420\m_tsmx_sweep
+Used module:     $paramod$4542f037d60f5901a63ec10ecea38e89d6dbce08\m_tsmx_sweep
+Removed 0 unused modules.
+Module m_tsmx_engine directly or indirectly contains formal properties -> setting "keep" attribute.
+
+7. Executing jny backend.
+
+8. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: b3481b3b69, time: 940.43s, user: 923.31s, system: 5.03s, MEM: 635.35 MB peak
+Yosys 0.70+219 (git sha1 5053d0e26, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 61% 2x check (571 sec), 34% 1x proc_mux (322 sec), ...

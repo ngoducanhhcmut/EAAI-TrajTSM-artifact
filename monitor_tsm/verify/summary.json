@@ -1,0 +1,10 @@
+{
+  "gates": {
+    "G1a": "PASS",
+    "G1b": "PASS",
+    "G1c": "PASS",
+    "G1d": "PASS",
+    "G1e": "PASS"
+  },
+  "registration_hash": "cff3c3480a22b69383c8911ec793ec2865d0883ee1d284a8d27559b874093d19"
+}

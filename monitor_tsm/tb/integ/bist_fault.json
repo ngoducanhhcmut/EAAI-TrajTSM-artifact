@@ -1,0 +1,14 @@
+{
+  "response": {
+    "accept": false,
+    "reason": "health",
+    "mode": "L3",
+    "candidate": 0,
+    "label": "CERT-FRONT/REAR-COND",
+    "independent_brake": true,
+    "commit": "no_pending",
+    "heartbeat": false
+  },
+  "fault": "dedicated BIST returned stop=0 instead of1100000; no protected source edit",
+  "oracle": "tsmx_cycle with health=False; driven health=True plus internal BIST fault"
+}

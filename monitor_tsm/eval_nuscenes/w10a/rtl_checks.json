@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "shards": [
+    {
+      "shard": 0,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6130,
+      "max_cycles": 827901,
+      "admission_decisions": {
+        "H": {
+          "range_schema": 66,
+          "ego_live": 76,
+          "ok": 78,
+          "splice": 68,
+          "no_backup": 54,
+          "ftti_budget": 13,
+          "timeout": 1
+        },
+        "T": {
+          "range_schema": 66,
+          "ego_live": 76,
+          "ok": 78,
+          "splice": 68,
+          "no_backup": 55,
+          "ftti_budget": 12,
+          "timeout": 1
+        }
+      }
+    },
+    {
+      "shard": 1,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6128,
+      "max_cycles": 812946,
+      "admission_decisions": {
+        "H": {
+          "ego_live": 70,
+          "ok": 141,
+          "splice": 69,
+          "range_schema": 47,
+          "no_backup": 36,
+          "ftti_budget": 5,
+          "timeout": 8
+        },
+        "T": {
+          "ego_live": 70,
+          "ok": 140,
+          "splice": 69,
+          "range_schema": 47,
+          "no_backup": 36,
+          "ftti_budget": 4,
+          "timeout": 10
+        }
+      }
+    },
+    {
+      "shard": 2,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 5978,
+      "max_cycles": 825802,
+      "admission_decisions": {
+        "H": {
+          "ok": 137,
+          "ego_live": 63,
+          "range_schema": 56,
+          "splice": 77,
+          "no_backup": 36,
+          "timeout": 14,
+          "ftti_budget": 3
+        },
+        "T": {
+          "ok": 136,
+          "ego_live": 63,
+          "range_schema": 56,
+          "splice": 77,
+          "no_backup": 37,
+          "timeout": 14,
+          "ftti_budget": 3
+        }
+      }
+    },
+    {
+      "shard": 3,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6148,
+      "max_cycles": 819763,
+      "admission_decisions": {
+        "H": {
+          "ok": 137,
+          "range_schema": 55,
+          "splice": 76,
+          "ego_live": 56,
+          "timeout": 15,
+          "no_backup": 49,
+          "ftti_budget": 6
+        },
+        "T": {
+          "ok": 136,
+          "range_schema": 55,
+          "splice": 76,
+          "ego_live": 56,
+          "timeout": 15,
+          "no_backup": 50,
+          "ftti_budget": 6
+        }
+      }
+    },
+    {
+      "shard": 4,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6148,
+      "max_cycles": 803800,
+      "admission_decisions": {
+        "H": {
+          "ok": 102,
+          "range_schema": 63,
+          "splice": 75,
+          "no_backup": 77,
+          "ego_live": 58,
+          "ftti_budget": 2,
+          "timeout": 10
+        },
+        "T": {
+          "ok": 102,
+          "range_schema": 63,
+          "splice": 75,
+          "no_backup": 78,
+          "ego_live": 58,
+          "ftti_budget": 1,
+          "timeout": 10
+        }
+      }
+    },
+    {
+      "shard": 5,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 5978,
+      "max_cycles": 829729,
+      "admission_decisions": {
+        "H": {
+          "no_backup": 54,
+          "ego_live": 77,
+          "range_schema": 52,
+          "splice": 71,
+          "timeout": 1,
+          "ok": 101,
+          "ftti_budget": 6
+        },
+        "T": {
+          "no_backup": 56,
+          "ego_live": 77,
+          "range_schema": 52,
+          "splice": 71,
+          "timeout": 1,
+          "ok": 99,
+          "ftti_budget": 6
+        }
+      }
+    },
+    {
+      "shard": 6,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6128,
+      "max_cycles": 830054,
+      "admission_decisions": {
+        "H": {
+          "ok": 152,
+          "splice": 70,
+          "ego_live": 73,
+          "range_schema": 35,
+          "no_backup": 29,
+          "timeout": 7,
+          "ftti_budget": 2
+        },
+        "T": {
+          "ok": 152,
+          "splice": 70,
+          "ego_live": 73,
+          "range_schema": 35,
+          "no_backup": 29,
+          "timeout": 7,
+          "ftti_budget": 2
+        }
+      }
+    },
+    {
+      "shard": 7,
+      "passed": true,
+      "errors": [],
+      "jobs_passed": 6152,
+      "max_cycles": 809297,
+      "admission_decisions": {
+        "H": {
+          "splice": 72,
+          "ok": 151,
+          "ego_live": 67,
+          "range_schema": 58,
+          "timeout": 3,
+          "ftti_budget": 3,
+          "no_backup": 57
+        },
+        "T": {
+          "splice": 72,
+          "ok": 151,
+          "ego_live": 67,
+          "range_schema": 58,
+          "timeout": 3,
+          "ftti_budget": 3,
+          "no_backup": 57
+        }
+      }
+    }
+  ],
+  "total_jobs": 48790,
+  "decision_tallies": {
+    "H": {
+      "range_schema": 432,
+      "ego_live": 540,
+      "ok": 999,
+      "splice": 578,
+      "no_backup": 392,
+      "ftti_budget": 40,
+      "timeout": 59
+    },
+    "T": {
+      "range_schema": 432,
+      "ego_live": 540,
+      "ok": 994,
+      "splice": 578,
+      "no_backup": 398,
+      "ftti_budget": 37,
+      "timeout": 61
+    }
+  },
+  "admission_outcomes": {
+    "H": {
+      "attempts": 3040,
+      "fallback": 694,
+      "mitigation": 1323,
+      "accepted": 999,
+      "hold": 24
+    },
+    "T": {
+      "attempts": 3040,
+      "fallback": 697,
+      "mitigation": 1325,
+      "accepted": 994,
+      "hold": 24
+    }
+  },
+  "cycle_meaning": "TB CSR cycle count equals observed response latency; no golden absolute cycle prediction"
+}

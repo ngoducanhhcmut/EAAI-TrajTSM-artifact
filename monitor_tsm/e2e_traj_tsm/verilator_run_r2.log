@@ -1,0 +1,285 @@
+[AG] assertion BAT: uram_arbiter.sv tb_e2e_traj_tsm.planner.dut.u_uram_arb
+[AG] assertion BAT: bert_weight_loader.sv tb_e2e_traj_tsm.planner.dut.bert_wl_inst
+[AG] assertion BAT: weight_loader.sv tb_e2e_traj_tsm.planner.dut.wl_inst
+[TSC] t=42256577000  PASS  traj_valid=1
+PLANNER_PASS frame=0 cycles=5966347
+TSM_PASS job=0 time_us=80000 engine_cycles=350337 stream_cycles=350337
+TSM_PASS job=1 time_us=100000 engine_cycles=347871 stream_cycles=347871
+TSM_PASS job=2 time_us=200000 engine_cycles=287096 stream_cycles=287096
+TSM_PASS job=3 time_us=300000 engine_cycles=275606 stream_cycles=275606
+TSM_PASS job=4 time_us=400000 engine_cycles=264680 stream_cycles=264680
+TSM_PASS job=5 time_us=500000 engine_cycles=252424 stream_cycles=252424
+[TSC] t=99899752000  PASS  traj_valid=1
+PLANNER_PASS frame=1 cycles=5966652
+TSM_PASS job=6 time_us=580435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=7 time_us=600435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=8 time_us=700435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=9 time_us=800435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=10 time_us=900435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=11 time_us=1000435 engine_cycles=11 stream_cycles=11
+[TSC] t=139765065000  PASS  traj_valid=1
+PLANNER_PASS frame=2 cycles=5966896
+TSM_PASS job=12 time_us=1080303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=13 time_us=1100303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=14 time_us=1200303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=15 time_us=1300303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=16 time_us=1400303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=17 time_us=1500303 engine_cycles=11 stream_cycles=11
+[TSC] t=179632018000  FAULT flags=100000  traj_valid=0
+PLANNER_PASS frame=3 cycles=5967140
+TSM_PASS job=18 time_us=1580179 engine_cycles=365681 stream_cycles=365681
+TSM_PASS job=19 time_us=1600179 engine_cycles=364082 stream_cycles=364082
+TSM_PASS job=20 time_us=1700179 engine_cycles=283248 stream_cycles=283248
+TSM_PASS job=21 time_us=1800179 engine_cycles=271758 stream_cycles=271758
+TSM_PASS job=22 time_us=1900179 engine_cycles=259300 stream_cycles=259300
+TSM_PASS job=23 time_us=2000179 engine_cycles=248778 stream_cycles=248778
+[TSC] t=237426372000  FAULT flags=100000  traj_valid=0
+PLANNER_PASS frame=4 cycles=5967079
+TSM_PASS job=24 time_us=2080602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=25 time_us=2100602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=26 time_us=2200602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=27 time_us=2300602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=28 time_us=2400602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=29 time_us=2500602 engine_cycles=11 stream_cycles=11
+[TSC] t=277295351000  PASS  traj_valid=1
+PLANNER_PASS frame=5 cycles=5967445
+TSM_PASS job=30 time_us=2581040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=31 time_us=2601040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=32 time_us=2701040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=33 time_us=2801040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=34 time_us=2901040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=35 time_us=3001040 engine_cycles=11 stream_cycles=11
+[TSC] t=317164737000  PASS  traj_valid=1
+PLANNER_PASS frame=6 cycles=5967506
+TSM_PASS job=36 time_us=3081476 engine_cycles=383754 stream_cycles=383754
+TSM_PASS job=37 time_us=3101476 engine_cycles=382155 stream_cycles=382155
+TSM_PASS job=38 time_us=3201476 engine_cycles=295134 stream_cycles=295134
+TSM_PASS job=39 time_us=3301476 engine_cycles=282676 stream_cycles=282676
+TSM_PASS job=40 time_us=3401476 engine_cycles=270622 stream_cycles=270622
+TSM_PASS job=41 time_us=3501476 engine_cycles=258728 stream_cycles=258728
+[TSC] t=375766190000  PASS  traj_valid=1
+PLANNER_PASS frame=7 cycles=5967811
+TSM_PASS job=42 time_us=3581343 engine_cycles=740583 stream_cycles=740583
+TSM_PASS job=43 time_us=3601343 engine_cycles=369034 stream_cycles=369034
+TSM_PASS job=44 time_us=3701343 engine_cycles=370366 stream_cycles=370366
+TSM_PASS job=45 time_us=3801343 engine_cycles=367377 stream_cycles=367377
+TSM_PASS job=46 time_us=3901343 engine_cycles=359174 stream_cycles=359174
+TSM_PASS job=47 time_us=4001343 engine_cycles=357668 stream_cycles=357668
+[TSC] t=441279784000  PASS  traj_valid=1
+PLANNER_PASS frame=8 cycles=5967933
+TSM_PASS job=48 time_us=4081234 engine_cycles=732841 stream_cycles=732841
+TSM_PASS job=49 time_us=4101234 engine_cycles=367831 stream_cycles=367831
+TSM_PASS job=50 time_us=4201234 engine_cycles=367126 stream_cycles=367126
+TSM_PASS job=51 time_us=4301234 engine_cycles=363977 stream_cycles=363977
+TSM_PASS job=52 time_us=4401234 engine_cycles=355471 stream_cycles=355471
+TSM_PASS job=53 time_us=4501234 engine_cycles=354141 stream_cycles=354141
+[TSC] t=506564822000  PASS  traj_valid=1
+PLANNER_PASS frame=9 cycles=5967872
+TSM_PASS job=54 time_us=4580561 engine_cycles=708025 stream_cycles=708025
+TSM_PASS job=55 time_us=4600561 engine_cycles=362435 stream_cycles=362435
+TSM_PASS job=56 time_us=4700561 engine_cycles=363565 stream_cycles=363565
+TSM_PASS job=57 time_us=4800561 engine_cycles=361081 stream_cycles=361081
+TSM_PASS job=58 time_us=4900561 engine_cycles=351708 stream_cycles=351708
+TSM_PASS job=59 time_us=5000561 engine_cycles=350075 stream_cycles=350075
+[TSC] t=571404471000  PASS  traj_valid=1
+PLANNER_PASS frame=10 cycles=5967811
+TSM_PASS job=60 time_us=5080430 engine_cycles=340079 stream_cycles=340079
+TSM_PASS job=61 time_us=5100430 engine_cycles=335058 stream_cycles=335058
+TSM_PASS job=62 time_us=5200430 engine_cycles=331329 stream_cycles=331329
+TSM_PASS job=63 time_us=5300430 engine_cycles=328366 stream_cycles=328366
+TSM_PASS job=64 time_us=5400430 engine_cycles=326228 stream_cycles=326228
+TSM_PASS job=65 time_us=5500430 engine_cycles=320504 stream_cycles=320504
+[TSC] t=631089241000  PASS  traj_valid=1
+PLANNER_PASS frame=11 cycles=5967567
+TSM_PASS job=66 time_us=5580300 engine_cycles=11 stream_cycles=11
+TSM_PASS job=67 time_us=5600300 engine_cycles=11 stream_cycles=11
+TSM_PASS job=68 time_us=5700300 engine_cycles=11 stream_cycles=11
+TSM_PASS job=69 time_us=5800300 engine_cycles=11 stream_cycles=11
+TSM_PASS job=70 time_us=5900300 engine_cycles=11 stream_cycles=11
+TSM_PASS job=71 time_us=6000300 engine_cycles=11 stream_cycles=11
+[TSC] t=670959034000  PASS  traj_valid=1
+PLANNER_PASS frame=12 cycles=5967567
+TSM_PASS job=72 time_us=6080176 engine_cycles=616184 stream_cycles=616184
+TSM_PASS job=73 time_us=6100176 engine_cycles=322690 stream_cycles=322690
+TSM_PASS job=74 time_us=6200176 engine_cycles=325857 stream_cycles=325857
+TSM_PASS job=75 time_us=6300176 engine_cycles=322506 stream_cycles=322506
+TSM_PASS job=76 time_us=6400176 engine_cycles=314564 stream_cycles=314564
+[TSC] t=729832559000  PASS  traj_valid=1
+PLANNER_PASS frame=13 cycles=5967750
+TSM_PASS job=77 time_us=6479435 engine_cycles=560170 stream_cycles=560170
+TSM_PASS job=78 time_us=6499435 engine_cycles=295316 stream_cycles=295316
+TSM_PASS job=79 time_us=6599435 engine_cycles=297515 stream_cycles=297515
+TSM_PASS job=80 time_us=6699435 engine_cycles=293760 stream_cycles=293760
+TSM_PASS job=81 time_us=6799435 engine_cycles=283158 stream_cycles=283158
+TSM_PASS job=82 time_us=6899435 engine_cycles=282594 stream_cycles=282594
+[TSC] t=789828039000  PASS  traj_valid=1
+PLANNER_PASS frame=14 cycles=5967750
+TSM_PASS job=83 time_us=6979309 engine_cycles=251276 stream_cycles=251276
+TSM_PASS job=84 time_us=6999309 engine_cycles=244361 stream_cycles=244361
+TSM_PASS job=85 time_us=7099309 engine_cycles=241297 stream_cycles=241297
+TSM_PASS job=86 time_us=7199309 engine_cycles=236802 stream_cycles=236802
+TSM_PASS job=87 time_us=7299309 engine_cycles=233073 stream_cycles=233073
+TSM_PASS job=88 time_us=7399309 engine_cycles=227509 stream_cycles=227509
+[TSC] t=844041571000  PASS  traj_valid=1
+PLANNER_PASS frame=15 cycles=5967750
+TSM_PASS job=89 time_us=7479195 engine_cycles=234828 stream_cycles=234828
+TSM_PASS job=90 time_us=7499195 engine_cycles=228376 stream_cycles=228376
+TSM_PASS job=91 time_us=7599195 engine_cycles=224041 stream_cycles=224041
+TSM_PASS job=92 time_us=7699195 engine_cycles=223679 stream_cycles=223679
+TSM_PASS job=93 time_us=7799195 engine_cycles=217450 stream_cycles=217450
+TSM_PASS job=94 time_us=7899195 engine_cycles=213620 stream_cycles=213620
+[TSC] t=897331861000  PASS  traj_valid=1
+PLANNER_PASS frame=16 cycles=5967750
+TSM_PASS job=95 time_us=7979046 engine_cycles=520902 stream_cycles=520902
+TSM_PASS job=96 time_us=7999046 engine_cycles=254415 stream_cycles=254415
+TSM_PASS job=97 time_us=8099046 engine_cycles=257279 stream_cycles=257279
+TSM_PASS job=98 time_us=8199046 engine_cycles=254593 stream_cycles=254593
+TSM_PASS job=99 time_us=8299046 engine_cycles=247257 stream_cycles=247257
+TSM_PASS job=100 time_us=8399046 engine_cycles=246954 stream_cycles=246954
+[TSC] t=955016619000  PASS  traj_valid=1
+PLANNER_PASS frame=17 cycles=5967811
+TSM_PASS job=101 time_us=8429144 engine_cycles=511020 stream_cycles=511020
+TSM_PASS job=102 time_us=8449144 engine_cycles=255894 stream_cycles=255894
+TSM_PASS job=103 time_us=8549144 engine_cycles=257689 stream_cycles=257689
+TSM_PASS job=104 time_us=8649144 engine_cycles=255870 stream_cycles=255870
+TSM_PASS job=105 time_us=8749144 engine_cycles=247566 stream_cycles=247566
+TSM_PASS job=106 time_us=8849144 engine_cycles=247364 stream_cycles=247364
+[TSC] t=1012641409000  PASS  traj_valid=1
+PLANNER_PASS frame=18 cycles=5967811
+TSM_PASS job=107 time_us=8929589 engine_cycles=538133 stream_cycles=538133
+TSM_PASS job=108 time_us=8949589 engine_cycles=259825 stream_cycles=259825
+TSM_PASS job=109 time_us=9049589 engine_cycles=261923 stream_cycles=261923
+TSM_PASS job=110 time_us=9149589 engine_cycles=259338 stream_cycles=259338
+TSM_PASS job=111 time_us=9249589 engine_cycles=251497 stream_cycles=251497
+TSM_PASS job=112 time_us=9349589 engine_cycles=251497 stream_cycles=251497
+[TSC] t=1070735112000  PASS  traj_valid=1
+PLANNER_PASS frame=19 cycles=5967933
+TSM_PASS job=113 time_us=9429998 engine_cycles=541862 stream_cycles=541862
+TSM_PASS job=114 time_us=9449998 engine_cycles=268916 stream_cycles=268916
+TSM_PASS job=115 time_us=9549998 engine_cycles=275509 stream_cycles=275509
+TSM_PASS job=116 time_us=9649998 engine_cycles=272924 stream_cycles=272924
+TSM_PASS job=117 time_us=9749998 engine_cycles=263652 stream_cycles=263652
+TSM_PASS job=118 time_us=9849998 engine_cycles=265647 stream_cycles=265647
+[TSC] t=1129492189000  PASS  traj_valid=1
+PLANNER_PASS frame=20 cycles=5967994
+TSM_PASS job=119 time_us=9930430 engine_cycles=239365 stream_cycles=239365
+TSM_PASS job=120 time_us=9950430 engine_cycles=237164 stream_cycles=237164
+TSM_PASS job=121 time_us=10050430 engine_cycles=236238 stream_cycles=236238
+TSM_PASS job=122 time_us=10150430 engine_cycles=233031 stream_cycles=233031
+TSM_PASS job=123 time_us=10250430 engine_cycles=227568 stream_cycles=227568
+TSM_PASS job=124 time_us=10350430 engine_cycles=225312 stream_cycles=225312
+TSM_PASS job=125 time_us=10450430 engine_cycles=223679 stream_cycles=223679
+[TSC] t=1185602985000  PASS  traj_valid=1
+PLANNER_PASS frame=21 cycles=5968055
+TSM_PASS job=126 time_us=10480632 engine_cycles=599796 stream_cycles=599796
+TSM_PASS job=127 time_us=10500632 engine_cycles=285829 stream_cycles=285829
+TSM_PASS job=128 time_us=10600632 engine_cycles=289156 stream_cycles=289156
+TSM_PASS job=129 time_us=10700632 engine_cycles=287438 stream_cycles=287438
+TSM_PASS job=130 time_us=10800632 engine_cycles=279033 stream_cycles=279033
+TSM_PASS job=131 time_us=10900632 engine_cycles=278629 stream_cycles=278629
+[TSC] t=1245675403000  PASS  traj_valid=1
+PLANNER_PASS frame=22 cycles=5968238
+TSM_PASS job=132 time_us=10982574 engine_cycles=615722 stream_cycles=615722
+TSM_PASS job=133 time_us=11002574 engine_cycles=308708 stream_cycles=308708
+TSM_PASS job=134 time_us=11102574 engine_cycles=312035 stream_cycles=312035
+TSM_PASS job=135 time_us=11202574 engine_cycles=310014 stream_cycles=310014
+TSM_PASS job=136 time_us=11302574 engine_cycles=302939 stream_cycles=302939
+TSM_PASS job=137 time_us=11402574 engine_cycles=302737 stream_cycles=302737
+[TSC] t=1307070557000  PASS  traj_valid=1
+PLANNER_PASS frame=23 cycles=5968238
+TSM_PASS job=138 time_us=11480946 engine_cycles=11 stream_cycles=11
+TSM_PASS job=139 time_us=11500946 engine_cycles=11 stream_cycles=11
+TSM_PASS job=140 time_us=11600946 engine_cycles=11 stream_cycles=11
+TSM_PASS job=141 time_us=11700946 engine_cycles=11 stream_cycles=11
+TSM_PASS job=142 time_us=11800946 engine_cycles=11 stream_cycles=11
+TSM_PASS job=143 time_us=11900946 engine_cycles=11 stream_cycles=11
+[TSC] t=1346945635000  PASS  traj_valid=1
+PLANNER_PASS frame=24 cycles=5968360
+TSM_PASS job=144 time_us=11980807 engine_cycles=11 stream_cycles=11
+TSM_PASS job=145 time_us=12000807 engine_cycles=11 stream_cycles=11
+TSM_PASS job=146 time_us=12100807 engine_cycles=11 stream_cycles=11
+TSM_PASS job=147 time_us=12200807 engine_cycles=11 stream_cycles=11
+TSM_PASS job=148 time_us=12300807 engine_cycles=11 stream_cycles=11
+TSM_PASS job=149 time_us=12400807 engine_cycles=11 stream_cycles=11
+[TSC] t=1386820721000  PASS  traj_valid=1
+PLANNER_PASS frame=25 cycles=5968360
+TSM_PASS job=150 time_us=12480143 engine_cycles=301020 stream_cycles=301020
+TSM_PASS job=151 time_us=12500143 engine_cycles=295999 stream_cycles=295999
+TSM_PASS job=152 time_us=12600143 engine_cycles=295637 stream_cycles=295637
+TSM_PASS job=153 time_us=12700143 engine_cycles=292472 stream_cycles=292472
+TSM_PASS job=154 time_us=12800143 engine_cycles=291344 stream_cycles=291344
+TSM_PASS job=155 time_us=12900143 engine_cycles=290839 stream_cycles=290839
+[TSC] t=1444368245000  PASS  traj_valid=1
+PLANNER_PASS frame=26 cycles=5968360
+TSM_PASS job=156 time_us=12980016 engine_cycles=300559 stream_cycles=300559
+TSM_PASS job=157 time_us=13000016 engine_cycles=300757 stream_cycles=300757
+TSM_PASS job=158 time_us=13100016 engine_cycles=298661 stream_cycles=298661
+TSM_PASS job=159 time_us=13200016 engine_cycles=298358 stream_cycles=298358
+TSM_PASS job=160 time_us=13300016 engine_cycles=297693 stream_cycles=297693
+TSM_PASS job=161 time_us=13400016 engine_cycles=295496 stream_cycles=295496
+[TSC] t=1502157499000  PASS  traj_valid=1
+PLANNER_PASS frame=27 cycles=5968299
+TSM_PASS job=162 time_us=13479900 engine_cycles=686472 stream_cycles=686472
+TSM_PASS job=163 time_us=13499900 engine_cycles=327670 stream_cycles=327670
+TSM_PASS job=164 time_us=13599900 engine_cycles=329364 stream_cycles=329364
+TSM_PASS job=165 time_us=13699900 engine_cycles=328109 stream_cycles=328109
+TSM_PASS job=166 time_us=13799900 engine_cycles=319140 stream_cycles=319140
+TSM_PASS job=167 time_us=13899900 engine_cycles=317608 stream_cycles=317608
+[TSC] t=1565115549000  PASS  traj_valid=1
+PLANNER_PASS frame=28 cycles=5968360
+TSM_PASS job=168 time_us=13929460 engine_cycles=369599 stream_cycles=369599
+TSM_PASS job=169 time_us=13949460 engine_cycles=369393 stream_cycles=369393
+TSM_PASS job=170 time_us=14049460 engine_cycles=371388 stream_cycles=371388
+TSM_PASS job=171 time_us=14149460 engine_cycles=376590 stream_cycles=376590
+TSM_PASS job=172 time_us=14249460 engine_cycles=378686 stream_cycles=378686
+TSM_PASS job=173 time_us=14349460 engine_cycles=379553 stream_cycles=379553
+TSM_PASS job=174 time_us=14449460 engine_cycles=383383 stream_cycles=383383
+[TSC] t=1631290725000  PASS  traj_valid=1
+PLANNER_PASS frame=29 cycles=5968360
+TSM_PASS job=175 time_us=14479647 engine_cycles=696695 stream_cycles=696695
+TSM_PASS job=176 time_us=14499647 engine_cycles=334631 stream_cycles=334631
+TSM_PASS job=177 time_us=14599647 engine_cycles=336325 stream_cycles=336325
+TSM_PASS job=178 time_us=14699647 engine_cycles=332570 stream_cycles=332570
+TSM_PASS job=179 time_us=14799647 engine_cycles=326000 stream_cycles=326000
+TSM_PASS job=180 time_us=14899647 engine_cycles=325234 stream_cycles=325234
+[TSC] t=1694678885000  PASS  traj_valid=1
+PLANNER_PASS frame=30 cycles=5968238
+TSM_PASS job=181 time_us=14979544 engine_cycles=302782 stream_cycles=302782
+TSM_PASS job=182 time_us=14999544 engine_cycles=302315 stream_cycles=302315
+TSM_PASS job=183 time_us=15099544 engine_cycles=297416 stream_cycles=297416
+TSM_PASS job=184 time_us=15199544 engine_cycles=292256 stream_cycles=292256
+TSM_PASS job=185 time_us=15299544 engine_cycles=288426 stream_cycles=288426
+TSM_PASS job=186 time_us=15399544 engine_cycles=282399 stream_cycles=282399
+[TSC] t=1752208838000  PASS  traj_valid=1
+PLANNER_PASS frame=31 cycles=5968299
+TSM_PASS job=187 time_us=15479403 engine_cycles=304449 stream_cycles=304449
+TSM_PASS job=188 time_us=15499403 engine_cycles=304748 stream_cycles=304748
+TSM_PASS job=189 time_us=15599403 engine_cycles=300413 stream_cycles=300413
+TSM_PASS job=190 time_us=15699403 engine_cycles=295817 stream_cycles=295817
+TSM_PASS job=191 time_us=15799403 engine_cycles=291524 stream_cycles=291524
+TSM_PASS job=192 time_us=15899403 engine_cycles=287391 stream_cycles=287391
+[TSC] t=1809924239000  PASS  traj_valid=1
+PLANNER_PASS frame=32 cycles=5967994
+TSM_PASS job=193 time_us=15979276 engine_cycles=360737 stream_cycles=360737
+TSM_PASS job=194 time_us=15999276 engine_cycles=360733 stream_cycles=360733
+TSM_PASS job=195 time_us=16099276 engine_cycles=362164 stream_cycles=362164
+TSM_PASS job=196 time_us=16199276 engine_cycles=363191 stream_cycles=363191
+TSM_PASS job=197 time_us=16299276 engine_cycles=363393 stream_cycles=363393
+TSM_PASS job=198 time_us=16399276 engine_cycles=364824 stream_cycles=364824
+[TSC] t=1871546637000  PASS  traj_valid=1
+PLANNER_PASS frame=33 cycles=5967994
+TSM_PASS job=199 time_us=16479723 engine_cycles=745660 stream_cycles=745660
+TSM_PASS job=200 time_us=16499723 engine_cycles=359526 stream_cycles=359526
+TSM_PASS job=201 time_us=16599723 engine_cycles=361321 stream_cycles=361321
+TSM_PASS job=202 time_us=16699723 engine_cycles=357507 stream_cycles=357507
+TSM_PASS job=203 time_us=16799723 engine_cycles=349969 stream_cycles=349969
+TSM_PASS job=204 time_us=16899723 engine_cycles=349767 stream_cycles=349767
+[TSC] t=1936656525000  PASS  traj_valid=1
+PLANNER_PASS frame=34 cycles=5968055
+TSM_PASS job=205 time_us=16980155 engine_cycles=759328 stream_cycles=759328
+TSM_PASS job=206 time_us=17000155 engine_cycles=362395 stream_cycles=362395
+E2E_PASS frames=35 jobs=207
+- tb_e2e_traj_tsm.sv:94: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 2s; walltime 61628.360 s; speed 31.607 us/s
+- Verilator: cpu 57908.090 s on 1 threads; allocated 18 MB

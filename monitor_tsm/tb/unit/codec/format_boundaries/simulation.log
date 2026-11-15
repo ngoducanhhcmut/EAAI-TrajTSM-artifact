@@ -1,0 +1,41 @@
+PROGRESS codec 0/263 cycles=129
+ASSERT 0 reset_ready spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 1 reset_valid spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 2 reset_data spec5.3/5.5.2/7/10.3 hits=10
+ASSERT 3 invalid_zero spec5.3/5.5.2/7/10.3 hits=158309
+ASSERT 4 ready_known spec5.3/5.5.2/7/10.3 hits=159456
+ASSERT 5 valid_known spec5.3/5.5.2/7/10.3 hits=159456
+ASSERT 6 response_known spec5.3/5.5.2/7/10.3 hits=1147
+ASSERT 7 no_ready_response spec5.3/5.5.2/7/10.3 hits=1147
+ASSERT 8 stall_valid spec5.3/5.5.2/7/10.3 hits=884
+ASSERT 9 stall_payload spec5.3/5.5.2/7/10.3 hits=884
+ASSERT 10 crc_no_digest spec5.3/5.5.2/7/10.3 hits=76
+ASSERT 11 sha_no_crc spec5.3/5.5.2/7/10.3 hits=1055
+ASSERT 12 fault_zero spec5.3/5.5.2/7/10.3 hits=16
+ASSERT 13 fault_exact spec5.3/5.5.2/7/10.3 hits=1147
+ASSERT 14 crc_exact spec5.3/5.5.2/7/10.3 hits=84
+ASSERT 15 sha_word_0 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 16 sha_word_1 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 17 sha_word_2 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 18 sha_word_3 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 19 sha_word_4 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 20 sha_word_5 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 21 sha_word_6 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 22 sha_word_7 spec5.3/5.5.2/7/10.3 hits=1063
+ASSERT 23 bounded_response spec5.3/5.5.2/7/10.3 hits=12
+ASSERT 24 no_early_response spec5.3/5.5.2/7/10.3 hits=128509
+ASSERT 25 last_blocks_input spec5.3/5.5.2/7/10.3 hits=30325
+ASSERT 26 response_has_job spec5.3/5.5.2/7/10.3 hits=539
+ASSERT 27 whole_response spec5.3/5.5.2/7/10.3 hits=1147
+ASSERT 28 crc_fault_zero spec5.3/5.5.2/7/10.3 hits=16
+ASSERT 29 reset_inflight spec5.3/5.5.2/7/10.3 hits=8
+LATENCY op=0 max=22
+LATENCY op=1 max=82
+LATENCY op=2 max=148
+LATENCY op=3 max=1133
+LATENCY op=4 max=214
+LATENCY op=5 max=33
+LATENCY op=6 max=5855
+assertion failures: 0, assertions never exercised: 0
+PASS codec: golden=263/263 assertions=30 cycles=159466
+tb_m_tsmx_codec.sv:535: $finish called at 956796000 (1ps)

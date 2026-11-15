@@ -1,0 +1,46 @@
+{
+  "total": 2586,
+  "assertion_hits": [
+    246,
+    246,
+    246,
+    246,
+    246,
+    638933,
+    7816,
+    7816,
+    7816,
+    4861,
+    4861,
+    2955,
+    2955,
+    2996,
+    2508,
+    2508,
+    1968,
+    1968,
+    1285,
+    1285,
+    1285,
+    738,
+    738,
+    644241,
+    645464,
+    638933
+  ],
+  "mutants": 26,
+  "source_mutants": 4,
+  "rtl_sha256": {
+    "m_tsmx_health.sv": "f0944fcd0e613b0618c2b0669a4dd710a79ee16ce6d0593776783eecba5e5ebd",
+    "m_tsmx_health_bist.sv": "194a9b9630854567e063127286db4cb29ea8ed714c89f769ac0e31242f476982",
+    "m_tsmx_health_lane.sv": "78ada981bc4ee68cc764a134bec3ab17b4fc4ca5c9cbe79166bacf82e3de024c"
+  },
+  "latency": [
+    2,
+    3088
+  ],
+  "ii": [
+    3,
+    3090
+  ]
+}

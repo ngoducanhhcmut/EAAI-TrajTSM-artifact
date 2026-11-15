@@ -1,0 +1,132 @@
+[
+  {
+    "returncode": 1,
+    "seconds": 77.651,
+    "log": "verilator_mutant_00.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 77.852,
+    "log": "verilator_mutant_01.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 69.167,
+    "log": "verilator_mutant_02.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 67.76,
+    "log": "verilator_mutant_03.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 72.88,
+    "log": "verilator_mutant_04.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 72.397,
+    "log": "verilator_mutant_05.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 69.409,
+    "log": "verilator_mutant_06.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 76.493,
+    "log": "verilator_mutant_07.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 84.684,
+    "log": "verilator_mutant_08.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 78.494,
+    "log": "verilator_mutant_09.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 79.652,
+    "log": "verilator_mutant_10.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 73.766,
+    "log": "verilator_mutant_11.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 75.937,
+    "log": "verilator_mutant_12.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 79.561,
+    "log": "verilator_mutant_13.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 68.505,
+    "log": "verilator_mutant_14.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 80.738,
+    "log": "verilator_mutant_15.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 74.977,
+    "log": "verilator_mutant_16.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 78.069,
+    "log": "verilator_mutant_17.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 75.745,
+    "log": "verilator_mutant_18.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 77.106,
+    "log": "verilator_mutant_19.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 88.668,
+    "log": "verilator_mutant_20.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 85.707,
+    "log": "verilator_mutant_21.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 78.048,
+    "log": "verilator_mutant_22.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 75.693,
+    "log": "verilator_mutant_23.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 79.444,
+    "log": "verilator_mutant_24.log"
+  },
+  {
+    "returncode": 1,
+    "seconds": 76.56,
+    "log": "verilator_mutant_25.log"
+  }
+]

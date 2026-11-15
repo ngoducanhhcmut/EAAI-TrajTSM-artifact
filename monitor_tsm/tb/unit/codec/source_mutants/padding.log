@@ -1,0 +1,7 @@
+COMMAND: vvp source_mutants\padding.vvp
+PROGRESS codec 0/5648 cycles=129
+ASSERT_FAIL 15 sha_word_0 spec5.3/5.5.2/7/10.3 job=2 cycle=374 actual=000000000644e48cd1e1cf304614dbab8b90b9fdadedca957c2468a606319e4eade7d8adf expected=000000000b9a5fa45eaa4ce8ae2bc9416c7fa80fdd066e48dda54fccb97197f0b47548809
+FATAL: tb_m_tsmx_codec.sv:233: R-025 assertion failed
+       Time: 2245000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

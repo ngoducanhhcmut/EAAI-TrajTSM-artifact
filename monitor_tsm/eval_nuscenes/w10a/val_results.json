@@ -1,0 +1,608 @@
+{
+  "E0": {
+    "H": {
+      "metrics": {
+        "acceptance": {
+          "n": 1252,
+          "denominator": 3040,
+          "rate_pct": 41.18421052631579,
+          "ci95_pct": [
+            36.5681241510151,
+            45.52744704139126
+          ]
+        },
+        "false_accept": {
+          "n": 3,
+          "denominator": 247,
+          "rate_pct": 1.214574898785425,
+          "ci95_pct": [
+            0.0,
+            3.054022313564295
+          ]
+        },
+        "false_reject": {
+          "n": 1427,
+          "denominator": 2673,
+          "rate_pct": 53.3857089412645,
+          "ci95_pct": [
+            48.82257183515646,
+            58.26880866763181
+          ]
+        },
+        "oracle_unknown": 120
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.007644900771425155,
+          "p95": 0.02078943751752637,
+          "max": 0.07054629837348614
+        },
+        "velocity_error_mps": {
+          "mean": 0.06314442983872873,
+          "p95": 0.1820780831881328,
+          "max": 0.4445700294723576
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.6415718010385973,
+          "p95": 5.316922507560476,
+          "max": 21.31436361283188
+        },
+        "n": 3040,
+        "position_over_16cm": 0,
+        "velocity_over_20cmps": 102,
+        "either_over_tolerance": 102,
+        "b2_reject": 687
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "range_schema": 474,
+        "ego_live": 540,
+        "no_backup": 524,
+        "ok": 1252,
+        "timeout": 57,
+        "splice": 155,
+        "ftti_budget": 38
+      },
+      "all_job_reasons": {
+        "range_schema": 474,
+        "timeout": 5849,
+        "ego_live": 5408,
+        "no_backup": 524,
+        "ok": 1252,
+        "freeze_no_sample": 10695,
+        "splice": 155,
+        "ftti_budget": 38
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 3489,
+        "L2": 6913,
+        "L3": 9435,
+        "HOLD": 3306,
+        "RECOVERY": 1252
+      },
+      "commits": {
+        "no_pending": 17735,
+        "ego_live": 5408,
+        "committed": 1252
+      },
+      "outcomes": {
+        "mitigation": 1320,
+        "fallback": 441,
+        "accepted": 1252,
+        "hold": 27,
+        "attempts": 3040,
+        "admitted": 2026
+      },
+      "b1_reasons": {
+        "range_schema": 1014,
+        "ok": 2026
+      },
+      "scenes_with_admissions": 143
+    },
+    "T": {
+      "metrics": {
+        "acceptance": {
+          "n": 427,
+          "denominator": 3040,
+          "rate_pct": 14.046052631578947,
+          "ci95_pct": [
+            12.014234666979087,
+            16.107943964243972
+          ]
+        },
+        "false_accept": {
+          "n": 1,
+          "denominator": 236,
+          "rate_pct": 0.423728813559322,
+          "ci95_pct": [
+            0.0,
+            1.3423571192102806
+          ]
+        },
+        "false_reject": {
+          "n": 2208,
+          "denominator": 2634,
+          "rate_pct": 83.82687927107061,
+          "ci95_pct": [
+            81.60625318924001,
+            86.13112218784019
+          ]
+        },
+        "oracle_unknown": 170
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.037671141298335986,
+          "p95": 0.08775068461016425,
+          "max": 1.000875764203208
+        },
+        "velocity_error_mps": {
+          "mean": 0.3781390556355474,
+          "p95": 0.8888801814596937,
+          "max": 9.968953875504257
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.8396499687004708,
+          "p95": 5.5316504797786,
+          "max": 20.641520454513728
+        },
+        "n": 3040,
+        "position_over_16cm": 61,
+        "velocity_over_20cmps": 1721,
+        "either_over_tolerance": 1721,
+        "b2_reject": 2209
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "no_backup": 202,
+        "ego_live": 540,
+        "splice": 1232,
+        "range_schema": 567,
+        "ok": 427,
+        "timeout": 61,
+        "ftti_budget": 11
+      },
+      "all_job_reasons": {
+        "no_backup": 202,
+        "timeout": 7927,
+        "ego_live": 5368,
+        "splice": 1232,
+        "range_schema": 567,
+        "ok": 427,
+        "freeze_no_sample": 8661,
+        "ftti_budget": 11
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 1252,
+        "L2": 10249,
+        "L3": 9405,
+        "HOLD": 3062,
+        "RECOVERY": 427
+      },
+      "commits": {
+        "no_pending": 18600,
+        "ego_live": 5368,
+        "committed": 427
+      },
+      "outcomes": {
+        "mitigation": 1325,
+        "fallback": 1251,
+        "accepted": 427,
+        "hold": 37,
+        "attempts": 3040,
+        "admitted": 1933
+      },
+      "b1_reasons": {
+        "ok": 1933,
+        "range_schema": 1107
+      },
+      "scenes_with_admissions": 143
+    }
+  },
+  "E1": {
+    "H": {
+      "metrics": {
+        "acceptance": {
+          "n": 990,
+          "denominator": 3040,
+          "rate_pct": 32.56578947368421,
+          "ci95_pct": [
+            28.664444262652705,
+            36.36378692523112
+          ]
+        },
+        "false_accept": {
+          "n": 3,
+          "denominator": 230,
+          "rate_pct": 1.3043478260869565,
+          "ci95_pct": [
+            0.0,
+            3.3816425120772946
+          ]
+        },
+        "false_reject": {
+          "n": 1642,
+          "denominator": 2616,
+          "rate_pct": 62.76758409785933,
+          "ci95_pct": [
+            58.7474289311127,
+            67.0528905462314
+          ]
+        },
+        "oracle_unknown": 194
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.01193769330446838,
+          "p95": 0.03407481725534729,
+          "max": 0.10061142576124382
+        },
+        "velocity_error_mps": {
+          "mean": 0.10407203566583516,
+          "p95": 0.302675602939983,
+          "max": 0.8765594381731954
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.6602759670245968,
+          "p95": 5.278621700527252,
+          "max": 21.3989538411533
+        },
+        "n": 3040,
+        "position_over_16cm": 0,
+        "velocity_over_20cmps": 441,
+        "either_over_tolerance": 441,
+        "b2_reject": 1171
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "range_schema": 521,
+        "ego_live": 540,
+        "no_backup": 395,
+        "splice": 511,
+        "timeout": 57,
+        "ok": 990,
+        "ftti_budget": 26
+      },
+      "all_job_reasons": {
+        "range_schema": 521,
+        "timeout": 6136,
+        "ego_live": 5516,
+        "no_backup": 395,
+        "splice": 511,
+        "ok": 990,
+        "freeze_no_sample": 10300,
+        "ftti_budget": 26
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 2743,
+        "L2": 7925,
+        "L3": 9545,
+        "HOLD": 3192,
+        "RECOVERY": 990
+      },
+      "commits": {
+        "no_pending": 17889,
+        "ego_live": 5516,
+        "committed": 990
+      },
+      "outcomes": {
+        "mitigation": 1321,
+        "fallback": 700,
+        "accepted": 990,
+        "hold": 29,
+        "attempts": 3040,
+        "admitted": 1979
+      },
+      "b1_reasons": {
+        "range_schema": 1061,
+        "ok": 1979
+      },
+      "scenes_with_admissions": 143
+    },
+    "T": {
+      "metrics": {
+        "acceptance": {
+          "n": 474,
+          "denominator": 3040,
+          "rate_pct": 15.592105263157896,
+          "ci95_pct": [
+            13.322471532021428,
+            17.826662836716455
+          ]
+        },
+        "false_accept": {
+          "n": 3,
+          "denominator": 247,
+          "rate_pct": 1.214574898785425,
+          "ci95_pct": [
+            0.0,
+            2.5536999374217744
+          ]
+        },
+        "false_reject": {
+          "n": 2155,
+          "denominator": 2626,
+          "rate_pct": 82.06397562833206,
+          "ci95_pct": [
+            79.65297871256394,
+            84.5938124872263
+          ]
+        },
+        "oracle_unknown": 167
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.03340445165473607,
+          "p95": 0.07209522470870026,
+          "max": 0.9976511901449214
+        },
+        "velocity_error_mps": {
+          "mean": 0.34589224423902765,
+          "p95": 0.7808264622786316,
+          "max": 9.930680301044314
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.7695275302839935,
+          "p95": 5.394410737040243,
+          "max": 21.126991810813344
+        },
+        "n": 3040,
+        "position_over_16cm": 64,
+        "velocity_over_20cmps": 1583,
+        "either_over_tolerance": 1583,
+        "b2_reject": 2150
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "range_schema": 541,
+        "ego_live": 540,
+        "splice": 1235,
+        "ok": 474,
+        "no_backup": 173,
+        "timeout": 61,
+        "ftti_budget": 16
+      },
+      "all_job_reasons": {
+        "range_schema": 541,
+        "timeout": 7437,
+        "ego_live": 5247,
+        "splice": 1235,
+        "ok": 474,
+        "freeze_no_sample": 9272,
+        "no_backup": 173,
+        "ftti_budget": 16
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 1383,
+        "L2": 10205,
+        "L3": 9293,
+        "HOLD": 3040,
+        "RECOVERY": 474
+      },
+      "commits": {
+        "no_pending": 18674,
+        "ego_live": 5247,
+        "committed": 474
+      },
+      "outcomes": {
+        "mitigation": 1325,
+        "fallback": 1208,
+        "accepted": 474,
+        "hold": 33,
+        "attempts": 3040,
+        "admitted": 1959
+      },
+      "b1_reasons": {
+        "range_schema": 1081,
+        "ok": 1959
+      },
+      "scenes_with_admissions": 143
+    }
+  },
+  "E2": {
+    "H": {
+      "metrics": {
+        "acceptance": {
+          "n": 999,
+          "denominator": 3040,
+          "rate_pct": 32.86184210526316,
+          "ci95_pct": [
+            29.004129579864625,
+            36.59986892504136
+          ]
+        },
+        "false_accept": {
+          "n": 4,
+          "denominator": 271,
+          "rate_pct": 1.4760147601476015,
+          "ci95_pct": [
+            0.0,
+            3.187250996015936
+          ]
+        },
+        "false_reject": {
+          "n": 1691,
+          "denominator": 2686,
+          "rate_pct": 62.95606850335071,
+          "ci95_pct": [
+            58.983199848987404,
+            67.15079759043338
+          ]
+        },
+        "oracle_unknown": 83
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.006057192068695718,
+          "p95": 0.019433138971089635,
+          "max": 0.08979104474179778
+        },
+        "velocity_error_mps": {
+          "mean": 0.15810159142519734,
+          "p95": 0.4945162579593521,
+          "max": 2.4136866693872845
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.6598996911963377,
+          "p95": 5.278621700527252,
+          "max": 21.3989538411533
+        },
+        "n": 3040,
+        "position_over_16cm": 0,
+        "velocity_over_20cmps": 897,
+        "either_over_tolerance": 897,
+        "b2_reject": 1424
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "no_backup": 392,
+        "ego_live": 540,
+        "range_schema": 432,
+        "splice": 578,
+        "timeout": 59,
+        "ok": 999,
+        "ftti_budget": 40
+      },
+      "all_job_reasons": {
+        "no_backup": 392,
+        "timeout": 5774,
+        "ego_live": 5352,
+        "range_schema": 432,
+        "splice": 578,
+        "ok": 999,
+        "freeze_no_sample": 10828,
+        "ftti_budget": 40
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 2714,
+        "L2": 8083,
+        "L3": 9381,
+        "HOLD": 3218,
+        "RECOVERY": 999
+      },
+      "commits": {
+        "no_pending": 18044,
+        "ego_live": 5352,
+        "committed": 999
+      },
+      "outcomes": {
+        "mitigation": 1323,
+        "fallback": 694,
+        "accepted": 999,
+        "hold": 24,
+        "attempts": 3040,
+        "admitted": 2068
+      },
+      "b1_reasons": {
+        "ok": 2068,
+        "range_schema": 972
+      },
+      "scenes_with_admissions": 143
+    },
+    "T": {
+      "metrics": {
+        "acceptance": {
+          "n": 994,
+          "denominator": 3040,
+          "rate_pct": 32.69736842105263,
+          "ci95_pct": [
+            28.866453384187523,
+            36.439380608588394
+          ]
+        },
+        "false_accept": {
+          "n": 3,
+          "denominator": 282,
+          "rate_pct": 1.0638297872340425,
+          "ci95_pct": [
+            0.0,
+            2.713442222423309
+          ]
+        },
+        "false_reject": {
+          "n": 1684,
+          "denominator": 2675,
+          "rate_pct": 62.953271028037385,
+          "ci95_pct": [
+            59.02949926277536,
+            67.12802659116724
+          ]
+        },
+        "oracle_unknown": 83
+      },
+      "derivative_errors": {
+        "position_error_m": {
+          "mean": 0.006057192068695718,
+          "p95": 0.019433138971089635,
+          "max": 0.08979104474179778
+        },
+        "velocity_error_mps": {
+          "mean": 0.15810159142519734,
+          "p95": 0.4945162579593521,
+          "max": 2.4136866693872845
+        },
+        "acceleration_error_mps2": {
+          "mean": 1.7689980353806223,
+          "p95": 5.394410737040243,
+          "max": 21.126991810813344
+        },
+        "n": 3040,
+        "position_over_16cm": 0,
+        "velocity_over_20cmps": 897,
+        "either_over_tolerance": 897,
+        "b2_reject": 1424
+      },
+      "jobs": 24395,
+      "admission_reasons": {
+        "no_backup": 398,
+        "ego_live": 540,
+        "range_schema": 432,
+        "splice": 578,
+        "timeout": 61,
+        "ok": 994,
+        "ftti_budget": 37
+      },
+      "all_job_reasons": {
+        "no_backup": 398,
+        "timeout": 5741,
+        "ego_live": 5197,
+        "range_schema": 432,
+        "splice": 578,
+        "ok": 994,
+        "freeze_no_sample": 11018,
+        "ftti_budget": 37
+      },
+      "occupancy": {
+        "L0": 0,
+        "L1": 2769,
+        "L2": 8397,
+        "L3": 9245,
+        "HOLD": 2990,
+        "RECOVERY": 994
+      },
+      "commits": {
+        "no_pending": 18204,
+        "ego_live": 5197,
+        "committed": 994
+      },
+      "outcomes": {
+        "mitigation": 1325,
+        "fallback": 697,
+        "accepted": 994,
+        "hold": 24,
+        "attempts": 3040,
+        "admitted": 2068
+      },
+      "b1_reasons": {
+        "ok": 2068,
+        "range_schema": 972
+      },
+      "scenes_with_admissions": 143
+    }
+  }
+}

@@ -1,0 +1,44 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\measure.vvp +START=281 +LIMIT=5 +NOSTALL=1
+JOB 281 cycles=718 rows=22
+JOB 282 cycles=792 rows=23
+JOB 283 cycles=1918 rows=52
+JOB 284 cycles=1438 rows=40
+JOB 285 cycles=874 rows=25
+ASSERT 0 S5_3_B4_reset_ready spec5.3/5.5.5/9.2 hits=12
+ASSERT 1 S5_3_B4_reset_rsp_valid spec5.3/5.5.5/9.2 hits=12
+ASSERT 2 S5_3_B4_reset_row_valid spec5.3/5.5.5/9.2 hits=12
+ASSERT 3 S5_3_B4_reset_rsp_zero spec5.3/5.5.5/9.2 hits=12
+ASSERT 4 S5_3_B4_reset_row_zero spec5.3/5.5.5/9.2 hits=12
+ASSERT 5 S5_3_B4_invalid_rsp_zero spec5.3/5.5.5/9.2 hits=6066
+ASSERT 6 S5_3_B4_invalid_row_zero spec5.3/5.5.5/9.2 hits=5787
+ASSERT 7 S5_3_B4_row_blocks_req spec5.3/5.5.5/9.2 hits=284
+ASSERT 8 S5_3_B4_rsp_blocks_req spec5.3/5.5.5/9.2 hits=5
+ASSERT 9 S5_3_B4_row_stall_valid spec5.3/5.5.5/9.2 hits=118
+ASSERT 10 S5_3_B4_row_stall_data spec5.3/5.5.5/9.2 hits=118
+ASSERT 11 S5_3_B4_rsp_stall_valid spec5.3/5.5.5/9.2 hits=0
+ASSERT 12 S5_3_B4_rsp_stall_data spec5.3/5.5.5/9.2 hits=0
+ASSERT 13 S5_3_B4_row_candidate spec5.3/5.5.5/9.2 hits=284
+ASSERT 14 S5_3_B4_row_epoch spec5.3/5.5.5/9.2 hits=284
+ASSERT 15 S5_3_B4_row_index spec5.3/5.5.5/9.2 hits=284
+ASSERT 16 S5_3_B4_row_padding spec5.3/5.5.5/9.2 hits=284
+ASSERT 17 S5_3_B4_row_phase spec5.3/5.5.5/9.2 hits=284
+ASSERT 18 S5_3_B4_row_xlo spec5.3/5.5.5/9.2 hits=284
+ASSERT 19 S5_3_B4_row_xhi spec5.3/5.5.5/9.2 hits=284
+ASSERT 20 S5_3_B4_row_vlo spec5.3/5.5.5/9.2 hits=284
+ASSERT 21 S5_3_B4_row_vhi spec5.3/5.5.5/9.2 hits=284
+ASSERT 22 S5_3_B4_row_midpoint spec5.3/5.5.5/9.2 hits=284
+ASSERT 23 S5_3_B4_row_jerk spec5.3/5.5.5/9.2 hits=284
+ASSERT 24 S5_3_B4_row_last spec5.3/5.5.5/9.2 hits=284
+ASSERT 25 S5_3_B4_terminal_accept spec5.3/5.5.5/9.2 hits=5
+ASSERT 26 S5_3_B4_terminal_reason spec5.3/5.5.5/9.2 hits=5
+ASSERT 27 S5_3_B4_terminal_stop_valid spec5.3/5.5.5/9.2 hits=5
+ASSERT 28 S5_3_B4_terminal_stop spec5.3/5.5.5/9.2 hits=5
+ASSERT 29 S5_3_B4_terminal_row_count spec5.3/5.5.5/9.2 hits=5
+ASSERT 30 S5_3_B4_row_exact spec5.3/5.5.5/9.2 hits=284
+ASSERT 31 S5_3_B4_terminal_exact spec5.3/5.5.5/9.2 hits=5
+LATENCY min=718 max=1918 II min=719 max=1919 row_gap_max=70 nostall=1
+MEASUREMENT no-stall: stall assertions may be inactive
+PASS mrmgen: golden=5/5 rows=162 assertions=32 cycles=6083
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\tb_m_tsmx_mrmgen.sv:199: $finish called at 66919000 (1ps)
+
+EXIT 0

@@ -1,0 +1,31 @@
+[NuScenesLite] Loading v1.0-trainval from C:\Users\TransformerDA\Downloads\vla_new_arch\eval\data\nuscenes ...
+  scene.json ...
+  log.json ...
+  sample.json ...
+  Loading from cache: _nuscenes_lite_v2.pkl ...
+[NuScenesLite] Ready (cached): 850 scenes, 34149 samples, 34149 ego_poses, 1166187 annotations.
+nap nuScenes trainval: 6 s
+bo sung rotation/lop cho 192041 annotation VAL: 114 s
+  0/5419  116 s
+  250/5419  170 s
+  500/5419  233 s
+  750/5419  307 s
+  1000/5419  378 s
+  1250/5419  443 s
+  1500/5419  499 s
+  1750/5419  562 s
+  2000/5419  627 s
+  2250/5419  699 s
+  2500/5419  769 s
+  2750/5419  833 s
+  3000/5419  898 s
+  3250/5419  966 s
+  3500/5419  1026 s
+  3750/5419  1087 s
+  4000/5419  1154 s
+  4250/5419  1208 s
+  4500/5419  1258 s
+  4750/5419  1311 s
+  5000/5419  1353 s
+  5250/5419  1387 s
+XONG: 5419 mau (giu 5419), 139221 vat the, 1413 s

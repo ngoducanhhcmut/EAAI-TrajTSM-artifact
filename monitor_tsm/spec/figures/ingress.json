@@ -1,0 +1,39 @@
+{
+  "head": {
+    "text": "Ingress: success, stall and CRC reject"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "valid",
+      "wave": "01..01...0.."
+    },
+    {
+      "name": "ready",
+      "wave": "0..101...0.."
+    },
+    {
+      "name": "data",
+      "wave": "=...=....=..",
+      "data": [
+        "pkt1",
+        "badCRC",
+        "idle"
+      ]
+    },
+    {
+      "name": "accepted",
+      "wave": "000100000000"
+    },
+    {
+      "name": "reject",
+      "wave": "000000001000"
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

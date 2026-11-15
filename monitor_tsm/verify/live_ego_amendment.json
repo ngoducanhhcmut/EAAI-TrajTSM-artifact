@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T10:50:49Z",
+  "old_sha256": "2aea0d1ae65677ed73ccab83debe8cfd38636a7c7a3672856f304782b9a57346",
+  "new_sha256": "d286b4cb4b064e642b7bcbd7f1f88acefbc79fd82da92e550173e3d23c538810",
+  "only_changed_existing_function": "tsmx_cycle",
+  "added": "live_ego_valid",
+  "basis": "Static fault-class review: fallback and phase reuse require a live ego estimate at the decision epoch. Invalid live ego/clock rollback must use L3, not planner-fault L1/L2.",
+  "domain_proof": "Every P5 ego.t rounds to the decision now; six numeric fields remain within the registered ODD and decision times are monotonic. New early branch never fires on registered V1/V3. No block function B1/B2/B3/B4/B7/B8/B9/B10/B13, generator, selector or tested numerical arithmetic changed.",
+  "interface": "Supervisor now is the live estimate epoch. Raw dated measurements must be projected by the external estimator to this epoch, within H3 uncertainty; otherwise output is explicit MITIGATION. B2 standalone retains delayed reachability API.",
+  "threshold_fit": false
+}

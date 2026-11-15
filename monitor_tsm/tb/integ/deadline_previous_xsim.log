@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Oct 29 22:42:51 2026
+# Process ID: 28420
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ
+# Command line: xsim.exe -mode tcl -source {xsim.dir/control_2/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/xsim.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/control_2/xsim_script.tcl
+# xsim {control_2} -testplusarg DEADLINE_ONLY -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS physical deadline clocks=1875000 brake=1
+$finish called at time : 18750370 ns : File "C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_control_xsim_2.sv" Line 417
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:08:36 . Memory (MB): peak = 202.605 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 16976 KB (Peak: 16976 KB), Simulation CPU Usage: 505921 ms
+INFO: [Common 17-206] Exiting xsim at Thu Oct 29 22:51:31 2026...

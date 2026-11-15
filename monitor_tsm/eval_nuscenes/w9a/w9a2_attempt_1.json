@@ -1,0 +1,5 @@
+{
+  "status": "STOPPED",
+  "error": "RuntimeError('RQ1 tolerance gate failed at index 4672; full run prohibited')",
+  "runtime_seconds": 428.5929999999935
+}

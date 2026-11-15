@@ -1,0 +1,167 @@
+{
+  "assertions": [
+    {
+      "id": 0,
+      "killed": true,
+      "log": "mutants\\M00.log"
+    },
+    {
+      "id": 1,
+      "killed": true,
+      "log": "mutants\\M01.log"
+    },
+    {
+      "id": 2,
+      "killed": true,
+      "log": "mutants\\M02.log"
+    },
+    {
+      "id": 3,
+      "killed": true,
+      "log": "mutants\\M03.log"
+    },
+    {
+      "id": 4,
+      "killed": true,
+      "log": "mutants\\M04.log"
+    },
+    {
+      "id": 5,
+      "killed": true,
+      "log": "mutants\\M05.log"
+    },
+    {
+      "id": 6,
+      "killed": true,
+      "log": "mutants\\M06.log"
+    },
+    {
+      "id": 7,
+      "killed": true,
+      "log": "mutants\\M07.log"
+    },
+    {
+      "id": 8,
+      "killed": true,
+      "log": "mutants\\M08.log"
+    },
+    {
+      "id": 9,
+      "killed": true,
+      "log": "mutants\\M09.log"
+    },
+    {
+      "id": 10,
+      "killed": true,
+      "log": "mutants\\M10.log"
+    },
+    {
+      "id": 11,
+      "killed": true,
+      "log": "mutants\\M11.log"
+    },
+    {
+      "id": 12,
+      "killed": true,
+      "log": "mutants\\M12.log"
+    },
+    {
+      "id": 13,
+      "killed": true,
+      "log": "mutants\\M13.log"
+    },
+    {
+      "id": 14,
+      "killed": true,
+      "log": "mutants\\M14.log"
+    },
+    {
+      "id": 15,
+      "killed": true,
+      "log": "mutants\\M15.log"
+    },
+    {
+      "id": 16,
+      "killed": true,
+      "log": "mutants\\M16.log"
+    },
+    {
+      "id": 17,
+      "killed": true,
+      "log": "mutants\\M17.log"
+    },
+    {
+      "id": 18,
+      "killed": true,
+      "log": "mutants\\M18.log"
+    },
+    {
+      "id": 19,
+      "killed": true,
+      "log": "mutants\\M19.log"
+    },
+    {
+      "id": 20,
+      "killed": true,
+      "log": "mutants\\M20.log"
+    },
+    {
+      "id": 21,
+      "killed": true,
+      "log": "mutants\\M21.log"
+    },
+    {
+      "id": 22,
+      "killed": true,
+      "log": "mutants\\M22.log"
+    },
+    {
+      "id": 23,
+      "killed": true,
+      "log": "mutants\\M23.log"
+    },
+    {
+      "id": 24,
+      "killed": true,
+      "log": "mutants\\M24.log"
+    },
+    {
+      "id": 25,
+      "killed": true,
+      "log": "mutants\\M25.log"
+    }
+  ],
+  "source": [
+    {
+      "name": "rounding",
+      "killed": true,
+      "log": "source_mutants\\rounding.log"
+    },
+    {
+      "name": "stop_clip",
+      "killed": true,
+      "log": "source_mutants\\stop_clip.log"
+    },
+    {
+      "name": "stationary",
+      "killed": true,
+      "log": "source_mutants\\stationary.log"
+    },
+    {
+      "name": "jerk_integral",
+      "killed": true,
+      "log": "source_mutants\\jerk_integral.log"
+    },
+    {
+      "name": "numeric_sentinel",
+      "killed": true,
+      "log": "source_mutants\\numeric_sentinel.log"
+    },
+    {
+      "name": "stall",
+      "killed": true,
+      "log": "source_mutants\\stall.log"
+    }
+  ],
+  "elapsed_seconds": 70.28027479999582
+}

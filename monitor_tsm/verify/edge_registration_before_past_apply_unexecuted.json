@@ -1,0 +1,130 @@
+{
+  "cases": {
+    "interior_gaps": [
+      498000,
+      499000,
+      500000,
+      500001,
+      501000,
+      502000,
+      502500,
+      502501,
+      503000,
+      510000
+    ],
+    "lane_offsets": [
+      -800001,
+      -800000,
+      -799999,
+      0,
+      799999,
+      800000,
+      800001
+    ],
+    "rear": [
+      [
+        20,
+        0,
+        true
+      ],
+      [
+        20,
+        1,
+        true
+      ],
+      [
+        20,
+        10,
+        false
+      ],
+      [
+        6,
+        0,
+        true
+      ],
+      [
+        5,
+        0,
+        false
+      ],
+      [
+        5,
+        1,
+        false
+      ],
+      [
+        10,
+        2,
+        true
+      ],
+      [
+        10,
+        3,
+        false
+      ],
+      [
+        25,
+        10,
+        false
+      ],
+      [
+        40,
+        10,
+        true
+      ]
+    ],
+    "selector_masks": [
+      0,
+      65535,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768,
+      24,
+      20,
+      6,
+      4608
+    ],
+    "system_modes": [
+      "RECOVERY",
+      "RECOVERY",
+      "L0",
+      "L1",
+      "L1",
+      "L1",
+      "L2",
+      "L3",
+      "HOLD",
+      "L3"
+    ],
+    "wrap_offsets": [
+      0,
+      1,
+      19999,
+      20000,
+      39999,
+      40000,
+      99999,
+      100000,
+      499999,
+      500000,
+      500001
+    ]
+  },
+  "execution": "after single rollout worker exits; supplemental to frozen V1/V2/V3, not a new statistical test",
+  "reason": "Static coverage review: rear, interior minimum, multi-candidate rank and serial expiry. No model/policy changes.",
+  "source_sha256": "5dbdaf4441ef961a8fdcedda3e7f25100ceb3adae0c06cd18750deca9884a4a9",
+  "utc": "2026-10-29T09:21:57Z"
+}

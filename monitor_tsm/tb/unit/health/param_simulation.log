@@ -1,0 +1,100 @@
+COMMAND ['vvp', 'C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\unit\\health\\param.vvp', '+START=324', '+END=384']
+JOB x cycles=20 II=0
+JOB x cycles=10 II=24
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=18 II=14
+JOB x cycles=20 II=22
+JOB 324 cycles=2 II=27
+JOB 325 cycles=2 II=3
+JOB 326 cycles=3 II=4
+JOB 327 cycles=2 II=6
+JOB 328 cycles=2 II=6
+JOB 329 cycles=2 II=3
+JOB 330 cycles=2 II=4
+JOB 331 cycles=2 II=5
+JOB 332 cycles=2 II=6
+JOB 333 cycles=2 II=3
+JOB 334 cycles=2 II=4
+JOB 335 cycles=2 II=5
+JOB 336 cycles=2 II=6
+JOB 337 cycles=2 II=3
+JOB 338 cycles=2 II=4
+JOB 339 cycles=2 II=5
+JOB 340 cycles=2 II=6
+JOB 341 cycles=2 II=3
+JOB 342 cycles=2 II=4
+JOB 343 cycles=2 II=5
+JOB 344 cycles=2 II=6
+JOB 345 cycles=2 II=3
+JOB 346 cycles=2 II=4
+JOB 347 cycles=2 II=5
+JOB 348 cycles=2 II=6
+JOB 349 cycles=2 II=3
+JOB 350 cycles=2 II=4
+JOB 351 cycles=2 II=5
+JOB 352 cycles=3 II=6
+JOB 353 cycles=3 II=4
+JOB 354 cycles=2 II=5
+JOB 355 cycles=2 II=5
+JOB 356 cycles=3 II=6
+JOB 357 cycles=3 II=4
+JOB 358 cycles=2 II=5
+JOB 359 cycles=2 II=5
+JOB 360 cycles=3 II=6
+JOB 361 cycles=3 II=4
+JOB 362 cycles=2 II=5
+JOB 363 cycles=2 II=5
+JOB 364 cycles=3 II=6
+JOB 365 cycles=3 II=4
+JOB 366 cycles=2 II=5
+JOB 367 cycles=2 II=5
+JOB 368 cycles=3 II=6
+JOB 369 cycles=3 II=4
+JOB 370 cycles=2 II=5
+JOB 371 cycles=2 II=5
+JOB 372 cycles=2 II=6
+JOB 373 cycles=2 II=3
+JOB 374 cycles=2 II=4
+JOB 375 cycles=2 II=5
+JOB 376 cycles=2 II=6
+JOB 377 cycles=2 II=3
+JOB 378 cycles=2 II=4
+JOB 379 cycles=2 II=5
+JOB 380 cycles=2 II=6
+JOB 381 cycles=2 II=3
+JOB 382 cycles=2 II=4
+JOB 383 cycles=2 II=5
+JOB 384 cycles=2064 II=39
+MEASURE latency=2..2064 II=3..39
+ASSERT 0 reset_ready spec5.3/5.5.11 hits=6
+ASSERT 1 reset_valid spec5.3/5.5.11 hits=6
+ASSERT 2 reset_health spec5.3/5.5.11 hits=6
+ASSERT 3 reset_b4_valid spec5.3/5.5.11 hits=6
+ASSERT 4 reset_b3_valid spec5.3/5.5.11 hits=6
+ASSERT 5 invalid_health_zero spec5.3/5.5.11 hits=2342
+ASSERT 6 single_context spec5.3/5.5.11 hits=183
+ASSERT 7 health_bit_exact spec5.3/5.5.11 hits=183
+ASSERT 8 no_orphan_response spec5.3/5.5.11 hits=183
+ASSERT 9 hold_valid spec5.3/5.5.11 hits=114
+ASSERT 10 hold_health spec5.3/5.5.11 hits=114
+ASSERT 11 consume_clears spec5.3/5.5.11 hits=69
+ASSERT 12 consume_ready spec5.3/5.5.11 hits=69
+ASSERT 13 accept_busy spec5.3/5.5.11 hits=70
+ASSERT 14 b4_exact_request spec5.3/5.5.11 hits=58
+ASSERT 15 bist_enabled spec5.3/5.5.11 hits=58
+ASSERT 16 b4_stall_valid spec5.3/5.5.11 hits=48
+ASSERT 17 b4_stall_payload spec5.3/5.5.11 hits=48
+ASSERT 18 b3_exact_lane spec5.3/5.5.11 hits=25
+ASSERT 19 b3_actor_count spec5.3/5.5.11 hits=25
+ASSERT 20 b3_exact_trajectory spec5.3/5.5.11 hits=25
+ASSERT 21 b3_stall_valid spec5.3/5.5.11 hits=18
+ASSERT 22 b3_stall_payload spec5.3/5.5.11 hits=18
+ASSERT 23 b4_invalid_zero spec5.3/5.5.11 hits=2467
+ASSERT 24 b3_invalid_zero spec5.3/5.5.11 hits=2500
+ASSERT 25 response_accounting spec5.3/5.5.11 hits=2342
+assertion failures: 0, assertions never exercised: 0
+PASS health: golden=60/60 assertions=26
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\health\tb_m_tsmx_health.sv:301: $finish called at 27841000 (1ps)

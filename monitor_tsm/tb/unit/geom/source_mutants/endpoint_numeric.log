@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\source_mutants\endpoint_numeric.vvp +START=361 +LIMIT=1
+JOB 361 cycles=34 rows=2 objects=1
+ASSERT_FAIL 15 REQ007_atomic_result job=361 cycle=37 got=10000000000deed550001 expected=0ffffffffffffffff0400
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:256: R-025 assertion failed
+       Time: 365000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

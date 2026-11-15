@@ -1,0 +1,6 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\source_mutants\invalid_event_appended.vvp
+ASSERT_FAIL 29 B10_prewrite_snapshot cycle=10471 actual=00000008 expected=00000008
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:441: R-025 assertion failed
+       Time: 115305000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

@@ -1,0 +1,1 @@
+localparam N=5736, GOLDEN=128, EDGES=18, HEX=128;

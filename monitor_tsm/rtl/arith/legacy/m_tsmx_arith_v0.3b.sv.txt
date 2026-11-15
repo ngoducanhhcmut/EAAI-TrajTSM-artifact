@@ -1,0 +1,975 @@
+/*
+ * Project      : TSM-X
+ * Author       : TSMX project (user)
+ * AI Flow      : VLSIT RTL Generator AI Automation Flow
+ * AI Flow Page : https://github.com/nguyenquanicd/VLSIT_RTL_Generator_AI_Model
+ * Date         : 2026-10-30
+ * Version      : 0.3
+ * Description  : Shared checked integer and rational motion primitive controller.
+ *                v0.2 area rework: one 160x32 multiplier (five cycles per 160-bit
+ *                product modulo 2^160) and one radix-4 iterative divider replace
+ *                the combinational ramp/displacement cones and six pipelined
+ *                dividers of v0.1. Expressions run as micro-programs that keep
+ *                every v0.1 truncation point (88/96/112/128 bit); responses are
+ *                bit-identical to v0.1, only latency changes.
+ *                v0.3: temporaries live in a distributed RAM (one write, seven
+ *                asynchronous reads; every micro-program writes a temporary before
+ *                reading it within one operation, so the reset value is never read);
+ *                parallel temporary writes run as single-write micro-ops (MOV
+ *                prologues, split DSEL/NEGIF/EAB). Responses unchanged.
+ * Assumptions  : Wrapper synchronizes reset release. See R2_DECISIONS.md.
+ * Deviations   : HIE-02: functional leaf; the system top is structural.
+ *                PAR-03: literal SI coefficients follow golden exactly.
+ *                v0.1 reference copy: legacy/m_tsmx_arith_comb_v0.1.sv.txt.
+ */
+`timescale 1ns/1ps
+`default_nettype none
+module m_tsmx_arith (
+  input wire i_clk_core,
+  input wire i_rst_n_core,
+  input wire i_req_valid,
+  input wire [1927:0] i_req_data,
+  input wire i_rsp_ready,
+  output logic o_req_ready,
+  output logic o_rsp_valid,
+  output logic [640:0] o_rsp_data
+);
+  // Operation-level states; each multi-cycle state has a launch and a wait phase.
+  typedef enum logic [4:0] {
+    ENUM_ST_BOOT=5'd0, ENUM_ST_IDLE=5'd1, ENUM_ST_SETUP=5'd2, ENUM_ST_RESP=5'd3,
+    ENUM_ST_C_DIV=5'd4, ENUM_ST_D_PROG=5'd5, ENUM_ST_D_DIV=5'd6,
+    ENUM_ST_A_PROG=5'd7, ENUM_ST_A_DIV0=5'd8, ENUM_ST_A_DIV1=5'd9,
+    ENUM_ST_R_FULL=5'd10, ENUM_ST_R_ROOT=5'd11, ENUM_ST_R_DIV0=5'd12, ENUM_ST_R_DIV1=5'd13,
+    ENUM_ST_W_PT=5'd14, ENUM_ST_W_D0=5'd15, ENUM_ST_W_V0=5'd16, ENUM_ST_W_D1=5'd17,
+    ENUM_ST_W_V1=5'd18, ENUM_ST_W_NEXT=5'd19
+  } ctrl_state_type_def;
+  // Micro-program identifiers.
+  localparam logic [2:0] LPARA_P_RAMP=3'd0, LPARA_P_DISP=3'd1, LPARA_P_DINT=3'd2,
+    LPARA_P_PT23=3'd3, LPARA_P_PTX=3'd4, LPARA_P_NONE=3'd5;
+  // MOV prologues that load temporaries from request slots, one write per micro-op.
+  localparam logic [3:0] LPARA_L_NONE=4'd0, LPARA_L_OP2=4'd1, LPARA_L_OP3=4'd2,
+    LPARA_L_OP6=4'd3, LPARA_L_OP7=4'd4, LPARA_L_PT0=4'd5, LPARA_L_PT1=4'd6,
+    LPARA_L_PT2=4'd7, LPARA_L_PT3=4'd8, LPARA_L_WD0=4'd9, LPARA_L_WD1=4'd10;
+  // Micro-operation kinds.
+  localparam logic [4:0] LPARA_K_END=5'd0, LPARA_K_MUL=5'd1, LPARA_K_ADD=5'd2,
+    LPARA_K_SUB=5'd3, LPARA_K_ABS=5'd4, LPARA_K_MOV=5'd5, LPARA_K_TRZ=5'd6,
+    LPARA_K_TRS=5'd7, LPARA_K_RD=5'd8, LPARA_K_RN=5'd9, LPARA_K_ENDVN=5'd10,
+    LPARA_K_DSEL=5'd11, LPARA_K_NEGIF=5'd12, LPARA_K_EAB=5'd13, LPARA_K_V23=5'd14,
+    LPARA_K_VX=5'd15;
+  // Source index space: 0..39 temporaries, 40..51 request slots, 52..59 constants.
+  localparam logic [5:0] LPARA_Q0=6'd40, LPARA_C0=6'd52, LPARA_C1=6'd53, LPARA_C1E6=6'd54,
+    LPARA_C2E6=6'd55, LPARA_C3E6=6'd56, LPARA_C2E12=6'd57, LPARA_C6E12=6'd58,
+    LPARA_C6E18=6'd59;
+  localparam int LPARA_TMP=40;
+
+  ctrl_state_type_def reg_fsm_ctrl_current_state, w_fsm_ctrl_nxt_state;
+  logic [7:0] reg_op, w_op_nxt;
+  logic [159:0] reg_q [0:11];
+  logic [159:0] w_q_nxt [0:11];
+  (* ram_style = "distributed" *) logic [159:0] reg_t [0:63];
+  logic [159:0] reg_mopa;
+  logic [31:0] reg_chunk;
+  logic w_twe;
+  logic [5:0] w_twa;
+  logic [159:0] w_twd;
+  logic [5:0] w_ra [0:6];
+  logic [159:0] w_rd [0:6];
+  logic [3:0] reg_lid, w_lid_nxt;
+  logic [2:0] reg_lpc, w_lpc_nxt;
+  logic [22:0] w_lnext;
+  logic [640:0] reg_resp, w_resp_nxt;
+  logic [31:0] reg_lo, reg_hi, w_lo_nxt, w_hi_nxt, w_mid;
+  logic reg_stop, w_stop_nxt;
+  logic reg_sub, w_sub_nxt;
+  logic [159:0] reg_min, w_min_nxt;
+  logic [159:0] reg_quot0, w_quot0_nxt;
+  logic reg_f0, w_f0_nxt;
+  logic [2:0] reg_pidx, w_pidx_nxt;
+  logic reg_pvalid, w_pvalid_nxt;
+  logic w_guard, w_unused;
+  // Micro-sequencer.
+  logic reg_run, w_run_nxt;
+  logic [2:0] reg_prog, w_prog_nxt;
+  logic [5:0] reg_pc, w_pc_nxt;
+  logic reg_vnonly, w_vnonly_nxt;
+  logic [2:0] reg_mcnt, w_mcnt_nxt;
+  logic [159:0] reg_macc, w_macc_nxt;
+  // Timing pipeline (v0.2b): operand fetch register and registered partial product.
+  logic reg_phase, w_phase_nxt;
+  logic [159:0] reg_opa, reg_opb, w_opa_nxt, w_opb_nxt;
+  logic [159:0] reg_pp, w_pp_nxt;
+  logic [22:0] w_uop;
+  logic [4:0] w_kind;
+  logic [5:0] w_ud, w_ua, w_ub;
+  logic [159:0] w_sa, w_sb, w_pp, w_mres;
+  logic [31:0] w_chunk;
+  logic w_aa, w_ab;
+  // Iterative divider (two restoring steps per cycle).
+  logic w_dstart, w_dup_in;
+  logic [159:0] w_dnum_in, w_dden_in;
+  logic [1:0] w_dw_in;
+  logic reg_dbusy, reg_ddone, reg_dneg, reg_dup, reg_dfault0;
+  logic [1:0] reg_dw;
+  logic [7:0] reg_dcnt;
+  logic [159:0] reg_dnum, reg_dden, reg_dquot, reg_dres;
+  logic [160:0] reg_drem;
+  logic reg_dres_fault;
+  logic [159:0] w_dmag_in, w_dnum_m, w_dden_m;
+  logic [159:0] w_dn1, w_dq1, w_dn2, w_dq2, w_dmagq, w_dval;
+  logic [160:0] w_dr1, w_dr2;
+  logic w_dadj;
+  // Result helpers.
+  logic [159:0] w_pose, w_vel, w_candidate;
+
+  // Explicit two's-complement helpers; no signed language types or casts.
+  function automatic logic f_lt(input logic [159:0] w_a, w_b);
+    f_lt = (w_a[159] != w_b[159]) ? w_a[159] : (w_a < w_b);
+  endfunction
+  function automatic logic f_lt64(input logic [63:0] w_a, w_b);
+    f_lt64 = (w_a[63] != w_b[63]) ? w_a[63] : (w_a < w_b);
+  endfunction
+  function automatic logic [159:0] f_abs(input logic [159:0] w_a);
+    f_abs = w_a[159] ? 160'(~w_a + 1'b1) : w_a;
+  endfunction
+  function automatic logic [159:0] f_neg(input logic [159:0] w_a);
+    f_neg = 160'(~w_a + 1'b1);
+  endfunction
+  function automatic logic f_fit(input logic [159:0] w_a, input logic [31:0] w_bits);
+    logic [159:0] w_limit;
+    begin
+      w_limit = 160'd1 << (w_bits-1'b1);
+      f_fit = (w_bits >= 32'd1) && (w_bits <= 32'd160) && (f_abs(w_a) < w_limit);
+    end
+  endfunction
+  function automatic logic f_range(input logic [159:0] w_a, w_lo, w_hi);
+    f_range = !f_lt(w_a,w_lo) && !f_lt(w_hi,w_a);
+  endfunction
+  // Library ordering is b2,b4,b6,b8, each with j2,j4,j8,instant. v0.2b: evaluated at
+  // s64 (guard: |t|<2^31, initial in [-8e6,0], so every intermediate is below 2^37)
+  // and sign-extended; equal to the v0.1 s160 evaluation, with a short carry chain.
+  function automatic logic [159:0] f_profile(input logic [159:0] w_id,w_t,w_initial);
+    logic [63:0] w_b,w_change,w_result,w_init,w_lo;
+    logic w_inst;
+    begin
+      case (w_id[3:2])
+        2'd0: w_b=64'd2000000;
+        2'd1: w_b=64'd4000000;
+        2'd2: w_b=64'd6000000;
+        default: w_b=64'd8000000;
+      endcase
+      w_inst=(w_id[1:0]==2'd3);
+      case (w_id[1:0])
+        2'd0: w_change={31'd0,w_t[31:0],1'b0};
+        2'd1: w_change={30'd0,w_t[31:0],2'b0};
+        2'd2: w_change={29'd0,w_t[31:0],3'b0};
+        default: w_change='0;
+      endcase
+      if (w_t[159]) w_change='0;
+      w_init=w_initial[63:0];
+      w_result=64'(w_init+w_change);
+      w_lo=64'(w_init-w_change);
+      if (f_lt64(64'(~w_b+1'b1),w_result)) w_result=64'(~w_b+1'b1);
+      if (f_lt64(w_result,w_lo)) w_result=w_lo;
+      if (f_lt64(64'd0,w_result)) w_result='0;
+      if (w_inst) w_result=64'(~w_b+1'b1);
+      f_profile={{96{w_result[63]}},w_result};
+    end
+  endfunction
+  // Divider width class: 0=96, 1=128, 2=160 bits.
+  function automatic logic [159:0] f_mask(input logic [1:0] w_w);
+    case (w_w)
+      2'd0: f_mask = {64'd0,{96{1'b1}}};
+      2'd1: f_mask = {32'd0,{128{1'b1}}};
+      default: f_mask = {160{1'b1}};
+    endcase
+  endfunction
+  function automatic logic [159:0] f_sext(input logic [159:0] w_a, input logic [1:0] w_w);
+    case (w_w)
+      2'd0: f_sext = {{64{w_a[95]}},w_a[95:0]};
+      2'd1: f_sext = {{32{w_a[127]}},w_a[127:0]};
+      default: f_sext = w_a;
+    endcase
+  endfunction
+  function automatic logic f_msb(input logic [159:0] w_a, input logic [1:0] w_w);
+    case (w_w)
+      2'd0: f_msb = w_a[95];
+      2'd1: f_msb = w_a[127];
+      default: f_msb = w_a[159];
+    endcase
+  endfunction
+  // Truncation codes of micro-op TRZ/TRS: 0=88, 1=96, 2=112, 3=128 bits.
+  function automatic logic [159:0] f_trz(input logic [159:0] w_a, input logic [1:0] w_c);
+    case (w_c)
+      2'd0: f_trz = {72'd0,w_a[87:0]};
+      2'd1: f_trz = {64'd0,w_a[95:0]};
+      2'd2: f_trz = {48'd0,w_a[111:0]};
+      default: f_trz = {32'd0,w_a[127:0]};
+    endcase
+  endfunction
+  function automatic logic [159:0] f_trs(input logic [159:0] w_a, input logic [1:0] w_c);
+    case (w_c)
+      2'd0: f_trs = {{72{w_a[87]}},w_a[87:0]};
+      2'd1: f_trs = {{64{w_a[95]}},w_a[95:0]};
+      2'd2: f_trs = {{48{w_a[111]}},w_a[111:0]};
+      default: f_trs = {{32{w_a[127]}},w_a[127:0]};
+    endcase
+  endfunction
+  // Micro-op word: kind5, d6, a6, b6 (b also carries a truncation width code).
+  function automatic logic [22:0] f_u(input logic [4:0] w_k, input logic [5:0] w_d,w_a,w_b);
+    f_u = {w_k,w_d,w_a,w_b};
+  endfunction
+  // Micro-programs. Temporary register map:
+  //  ramp : T0 v,T1 a,T2 j,T3 target,T4 h,T5 d,T6 hd,T7 t,T8 n,T9 dd,T10 vd,T11 vn,
+  //         T12 a*h,T13/T14/T17/T19 scratch,T15 xd,T16 xn,T18 tail
+  //  disp : T20 v,T21 a,T22 n|h,T23 d -> T24 num,T25 den; T26..T30 scratch
+  //  vel  : T31 velocity numerator, T32 scratch
+  //  swept: T22 n,T23 d, T33..T39 scratch
+  function automatic logic [22:0] f_uprog(input logic [2:0] w_p, input logic [5:0] w_pc);
+    logic [22:0] w_r;
+    begin
+      w_r = f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+      case (w_p)
+        LPARA_P_RAMP: case (w_pc)
+          6'd0:  w_r=f_u(LPARA_K_RD,6'd5,6'd2,6'd0);
+          6'd1:  w_r=f_u(LPARA_K_MUL,6'd6,6'd4,6'd5);
+          6'd2:  w_r=f_u(LPARA_K_SUB,6'd7,6'd3,6'd1);
+          6'd3:  w_r=f_u(LPARA_K_ABS,6'd7,6'd7,6'd0);
+          6'd4:  w_r=f_u(LPARA_K_MUL,6'd7,6'd7,LPARA_C1E6);
+          6'd5:  w_r=f_u(LPARA_K_RN,6'd8,6'd0,6'd0);
+          6'd6:  w_r=f_u(LPARA_K_MUL,6'd9,6'd5,6'd5);
+          6'd7:  w_r=f_u(LPARA_K_MUL,6'd10,6'd9,LPARA_C2E12);
+          6'd8:  w_r=f_u(LPARA_K_TRZ,6'd10,6'd10,6'd0);
+          6'd9:  w_r=f_u(LPARA_K_MUL,6'd11,6'd0,6'd10);
+          6'd10: w_r=f_u(LPARA_K_MUL,6'd12,6'd1,6'd4);
+          6'd11: w_r=f_u(LPARA_K_MUL,6'd13,6'd12,6'd9);
+          6'd12: w_r=f_u(LPARA_K_MUL,6'd13,6'd13,LPARA_C2E6);
+          6'd13: w_r=f_u(LPARA_K_ADD,6'd11,6'd11,6'd13);
+          6'd14: w_r=f_u(LPARA_K_MUL,6'd13,6'd8,6'd6);
+          6'd15: w_r=f_u(LPARA_K_ADD,6'd13,6'd13,6'd13);
+          6'd16: w_r=f_u(LPARA_K_MUL,6'd14,6'd8,6'd8);
+          6'd17: w_r=f_u(LPARA_K_SUB,6'd13,6'd13,6'd14);
+          6'd18: w_r=f_u(LPARA_K_MUL,6'd13,6'd2,6'd13);
+          6'd19: w_r=f_u(LPARA_K_ADD,6'd11,6'd11,6'd13);
+          6'd20: w_r=f_u(LPARA_K_TRS,6'd11,6'd11,6'd2);
+          6'd21: w_r=f_u(LPARA_K_ENDVN,6'd0,6'd0,6'd0);
+          6'd22: w_r=f_u(LPARA_K_MUL,6'd14,6'd9,6'd5);
+          6'd23: w_r=f_u(LPARA_K_MUL,6'd15,6'd14,LPARA_C6E18);
+          6'd24: w_r=f_u(LPARA_K_MUL,6'd16,6'd0,6'd4);
+          6'd25: w_r=f_u(LPARA_K_MUL,6'd16,6'd16,6'd14);
+          6'd26: w_r=f_u(LPARA_K_MUL,6'd16,6'd16,LPARA_C6E12);
+          6'd27: w_r=f_u(LPARA_K_MUL,6'd17,6'd12,6'd4);
+          6'd28: w_r=f_u(LPARA_K_MUL,6'd17,6'd17,6'd14);
+          6'd29: w_r=f_u(LPARA_K_MUL,6'd17,6'd17,LPARA_C3E6);
+          6'd30: w_r=f_u(LPARA_K_ADD,6'd16,6'd16,6'd17);
+          6'd31: w_r=f_u(LPARA_K_MUL,6'd17,6'd6,6'd6);
+          6'd32: w_r=f_u(LPARA_K_MUL,6'd17,6'd17,6'd6);
+          6'd33: w_r=f_u(LPARA_K_SUB,6'd18,6'd6,6'd8);
+          6'd34: w_r=f_u(LPARA_K_MUL,6'd19,6'd18,6'd18);
+          6'd35: w_r=f_u(LPARA_K_MUL,6'd19,6'd19,6'd18);
+          6'd36: w_r=f_u(LPARA_K_SUB,6'd17,6'd17,6'd19);
+          6'd37: w_r=f_u(LPARA_K_MUL,6'd17,6'd2,6'd17);
+          6'd38: w_r=f_u(LPARA_K_ADD,6'd16,6'd16,6'd17);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_P_DISP: case (w_pc)
+          6'd0:  w_r=f_u(LPARA_K_ABS,6'd26,6'd21,6'd0);
+          6'd1:  w_r=f_u(LPARA_K_TRZ,6'd26,6'd26,6'd3);
+          6'd2:  w_r=f_u(LPARA_K_MUL,6'd24,6'd20,6'd22);
+          6'd3:  w_r=f_u(LPARA_K_ADD,6'd24,6'd24,6'd24);
+          6'd4:  w_r=f_u(LPARA_K_MUL,6'd24,6'd24,LPARA_C1E6);
+          6'd5:  w_r=f_u(LPARA_K_MUL,6'd24,6'd24,6'd23);
+          6'd6:  w_r=f_u(LPARA_K_MUL,6'd27,6'd21,6'd22);
+          6'd7:  w_r=f_u(LPARA_K_MUL,6'd27,6'd27,6'd22);
+          6'd8:  w_r=f_u(LPARA_K_ADD,6'd24,6'd24,6'd27);
+          6'd9:  w_r=f_u(LPARA_K_TRZ,6'd24,6'd24,6'd3);
+          6'd10: w_r=f_u(LPARA_K_MUL,6'd25,6'd23,6'd23);
+          6'd11: w_r=f_u(LPARA_K_MUL,6'd25,6'd25,LPARA_C2E12);
+          6'd12: w_r=f_u(LPARA_K_TRZ,6'd25,6'd25,6'd3);
+          6'd13: w_r=f_u(LPARA_K_MUL,6'd27,6'd22,6'd26);
+          6'd14: w_r=f_u(LPARA_K_TRZ,6'd27,6'd27,6'd3);
+          6'd15: w_r=f_u(LPARA_K_MUL,6'd28,6'd20,LPARA_C1E6);
+          6'd16: w_r=f_u(LPARA_K_MUL,6'd28,6'd28,6'd23);
+          6'd17: w_r=f_u(LPARA_K_TRZ,6'd28,6'd28,6'd3);
+          6'd18: w_r=f_u(LPARA_K_MUL,6'd29,6'd20,6'd20);
+          6'd19: w_r=f_u(LPARA_K_TRZ,6'd29,6'd29,6'd3);
+          6'd20: w_r=f_u(LPARA_K_ADD,6'd30,6'd26,6'd26);
+          6'd21: w_r=f_u(LPARA_K_TRZ,6'd30,6'd30,6'd3);
+          6'd22: w_r=f_u(LPARA_K_DSEL,6'd24,6'd0,6'd0);
+          6'd23: w_r=f_u(LPARA_K_DSEL,6'd25,6'd0,6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_P_DINT: case (w_pc)
+          6'd0:  w_r=f_u(LPARA_K_ABS,6'd26,6'd21,6'd0);
+          6'd1:  w_r=f_u(LPARA_K_TRZ,6'd26,6'd26,6'd1);
+          6'd2:  w_r=f_u(LPARA_K_MUL,6'd24,6'd20,LPARA_C2E6);
+          6'd3:  w_r=f_u(LPARA_K_MUL,6'd24,6'd24,6'd22);
+          6'd4:  w_r=f_u(LPARA_K_MUL,6'd27,6'd21,6'd22);
+          6'd5:  w_r=f_u(LPARA_K_MUL,6'd27,6'd27,6'd22);
+          6'd6:  w_r=f_u(LPARA_K_ADD,6'd24,6'd24,6'd27);
+          6'd7:  w_r=f_u(LPARA_K_TRZ,6'd24,6'd24,6'd1);
+          6'd8:  w_r=f_u(LPARA_K_MOV,6'd25,LPARA_C2E12,6'd0);
+          6'd9:  w_r=f_u(LPARA_K_MUL,6'd27,6'd22,6'd26);
+          6'd10: w_r=f_u(LPARA_K_TRZ,6'd27,6'd27,6'd1);
+          6'd11: w_r=f_u(LPARA_K_MUL,6'd28,6'd20,LPARA_C1E6);
+          6'd12: w_r=f_u(LPARA_K_TRZ,6'd28,6'd28,6'd1);
+          6'd13: w_r=f_u(LPARA_K_MUL,6'd29,6'd20,6'd20);
+          6'd14: w_r=f_u(LPARA_K_TRZ,6'd29,6'd29,6'd1);
+          6'd15: w_r=f_u(LPARA_K_ADD,6'd30,6'd26,6'd26);
+          6'd16: w_r=f_u(LPARA_K_TRZ,6'd30,6'd30,6'd1);
+          6'd17: w_r=f_u(LPARA_K_DSEL,6'd24,6'd0,6'd0);
+          6'd18: w_r=f_u(LPARA_K_DSEL,6'd25,6'd0,6'd0);
+          // Velocity numerator q1*1e6+q2*q3 (s160) for op 3.
+          6'd19: w_r=f_u(LPARA_K_MUL,6'd31,6'(LPARA_Q0+6'd1),LPARA_C1E6);
+          6'd20: w_r=f_u(LPARA_K_MUL,6'd32,6'(LPARA_Q0+6'd2),6'(LPARA_Q0+6'd3));
+          6'd21: w_r=f_u(LPARA_K_ADD,6'd31,6'd31,6'd32);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        // Swept points 2/3 (T33 v, T34 a loaded by the controller).
+        LPARA_P_PT23: case (w_pc)
+          6'd0:  w_r=f_u(LPARA_K_MUL,6'd22,6'd33,LPARA_C1E6);
+          6'd1:  w_r=f_u(LPARA_K_ABS,6'd23,6'd34,6'd0);
+          6'd2:  w_r=f_u(LPARA_K_MUL,6'd35,6'(LPARA_Q0+6'd5),6'd23);
+          6'd3:  w_r=f_u(LPARA_K_V23,6'd0,6'd0,6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        // Swept points 4..6: relative-acceleration roots.
+        LPARA_P_PTX: case (w_pc)
+          6'd0:  w_r=f_u(LPARA_K_EAB,6'd34,6'd0,6'd0);
+          6'd1:  w_r=f_u(LPARA_K_EAB,6'd35,6'd0,6'd0);
+          6'd2:  w_r=f_u(LPARA_K_EAB,6'd36,6'd0,6'd0);
+          6'd3:  w_r=f_u(LPARA_K_EAB,6'd37,6'd0,6'd0);
+          6'd4:  w_r=f_u(LPARA_K_SUB,6'd23,6'd34,6'd35);
+          6'd5:  w_r=f_u(LPARA_K_SUB,6'd22,6'd37,6'd36);
+          6'd6:  w_r=f_u(LPARA_K_MUL,6'd22,6'd22,LPARA_C1E6);
+          6'd7:  w_r=f_u(LPARA_K_NEGIF,6'd22,6'd0,6'd0);
+          6'd8:  w_r=f_u(LPARA_K_NEGIF,6'd23,6'd0,6'd0);
+          6'd9:  w_r=f_u(LPARA_K_MUL,6'd38,6'(LPARA_Q0+6'd1),LPARA_C1E6);
+          6'd10: w_r=f_u(LPARA_K_MUL,6'd38,6'd38,6'd23);
+          6'd11: w_r=f_u(LPARA_K_ABS,6'd39,6'(LPARA_Q0+6'd2),6'd0);
+          6'd12: w_r=f_u(LPARA_K_MUL,6'd39,6'd22,6'd39);
+          6'd13: w_r=f_u(LPARA_K_MUL,6'd36,6'(LPARA_Q0+6'd3),LPARA_C1E6);
+          6'd14: w_r=f_u(LPARA_K_MUL,6'd36,6'd36,6'd23);
+          6'd15: w_r=f_u(LPARA_K_ABS,6'd37,6'(LPARA_Q0+6'd4),6'd0);
+          6'd16: w_r=f_u(LPARA_K_MUL,6'd37,6'd22,6'd37);
+          6'd17: w_r=f_u(LPARA_K_MUL,6'd35,6'(LPARA_Q0+6'd5),6'd23);
+          6'd18: w_r=f_u(LPARA_K_VX,6'd0,6'd0,6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+      endcase
+      f_uprog = w_r;
+    end
+  endfunction
+  // Prologue entry w_i of load list w_l; END terminates the list.
+  function automatic logic [22:0] f_ulod(input logic [3:0] w_l, input logic [2:0] w_i);
+    logic [22:0] w_r;
+    begin
+      w_r = f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+      case (w_l)
+        LPARA_L_OP2: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd20,6'(LPARA_Q0+6'd0),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd21,6'(LPARA_Q0+6'd1),6'd0);
+          3'd2: w_r=f_u(LPARA_K_MOV,6'd22,6'(LPARA_Q0+6'd2),6'd0);
+          3'd3: w_r=f_u(LPARA_K_MOV,6'd23,6'(LPARA_Q0+6'd3),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_OP3: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd20,6'(LPARA_Q0+6'd1),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd21,6'(LPARA_Q0+6'd2),6'd0);
+          3'd2: w_r=f_u(LPARA_K_MOV,6'd22,6'(LPARA_Q0+6'd3),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_OP6: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd0,6'(LPARA_Q0+6'd0),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd1,6'(LPARA_Q0+6'd1),6'd0);
+          3'd2: w_r=f_u(LPARA_K_MOV,6'd2,6'(LPARA_Q0+6'd2),6'd0);
+          3'd3: w_r=f_u(LPARA_K_MOV,6'd3,6'(LPARA_Q0+6'd3),6'd0);
+          3'd4: w_r=f_u(LPARA_K_MOV,6'd4,6'(LPARA_Q0+6'd4),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_OP7: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd0,6'(LPARA_Q0+6'd1),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd1,6'(LPARA_Q0+6'd2),6'd0);
+          3'd2: w_r=f_u(LPARA_K_MOV,6'd2,6'(LPARA_Q0+6'd3),6'd0);
+          3'd3: w_r=f_u(LPARA_K_MOV,6'd3,6'(LPARA_Q0+6'd4),6'd0);
+          3'd4: w_r=f_u(LPARA_K_MOV,6'd4,6'(LPARA_Q0+6'd5),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_PT0: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd22,LPARA_C0,6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd23,LPARA_C1,6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_PT1: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd22,6'(LPARA_Q0+6'd5),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd23,LPARA_C1,6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_PT2: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd33,6'(LPARA_Q0+6'd1),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd34,6'(LPARA_Q0+6'd2),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_PT3: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd33,6'(LPARA_Q0+6'd3),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd34,6'(LPARA_Q0+6'd4),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_WD0: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd20,6'(LPARA_Q0+6'd1),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd21,6'(LPARA_Q0+6'd2),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        LPARA_L_WD1: case (w_i)
+          3'd0: w_r=f_u(LPARA_K_MOV,6'd20,6'(LPARA_Q0+6'd3),6'd0);
+          3'd1: w_r=f_u(LPARA_K_MOV,6'd21,6'(LPARA_Q0+6'd4),6'd0);
+          default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+        endcase
+        default: w_r=f_u(LPARA_K_END,6'd0,6'd0,6'd0);
+      endcase
+      f_ulod = w_r;
+    end
+  endfunction
+
+  // p_com_main: guard, micro-sequencer, divider issue and operation controller.
+  // Micro-op decode: a pending MOV prologue runs before the selected program.
+  assign w_uop = (reg_lid!=LPARA_L_NONE) ? f_ulod(reg_lid,reg_lpc) : f_uprog(reg_prog,reg_pc);
+  assign w_kind = w_uop[22:18];
+  assign w_ud = w_uop[17:12];
+  assign w_ua = w_uop[11:6];
+  assign w_ub = w_uop[5:0];
+  assign w_lnext = f_ulod(reg_lid,3'(reg_lpc+1'b1));
+
+  // Temporary RAM read addresses: operand fetch, micro-op execute, or controller.
+  always_comb begin : p_com_rf
+    for (int idx=0; idx<7; idx++) w_ra[idx]=6'd0;
+    if (reg_run && !reg_phase) begin
+      w_ra[0]=w_ua; w_ra[1]=w_ub;
+    end else if (reg_run) begin
+      case (w_kind)
+        LPARA_K_RD: w_ra[0]=6'd2;
+        LPARA_K_RN: begin w_ra[0]=6'd2; w_ra[1]=6'd6; w_ra[2]=6'd7; end
+        LPARA_K_DSEL: begin
+          w_ra[0]=6'd21; w_ra[1]=6'd27; w_ra[2]=6'd28; w_ra[3]=(w_ud==6'd24) ? 6'd29 : 6'd30;
+        end
+        LPARA_K_NEGIF: begin w_ra[0]=6'd23; w_ra[1]=6'd22; end
+        LPARA_K_V23: begin w_ra[0]=6'd34; w_ra[1]=6'd22; w_ra[2]=6'd35; end
+        LPARA_K_VX: begin
+          w_ra[0]=6'd38; w_ra[1]=6'd39; w_ra[2]=6'd36; w_ra[3]=6'd37;
+          w_ra[4]=6'd23; w_ra[5]=6'd22; w_ra[6]=6'd35;
+        end
+        default: w_ra[0]=6'd0;
+      endcase
+    end else begin
+      w_ra[0]=(reg_fsm_ctrl_current_state==ENUM_ST_A_DIV0) ? 6'd31
+        : (reg_fsm_ctrl_current_state==ENUM_ST_R_FULL) ? 6'd16 : 6'd24;
+      w_ra[1]=(reg_fsm_ctrl_current_state==ENUM_ST_R_FULL) ? 6'd15 : 6'd25;
+      w_ra[2]=6'd11; w_ra[3]=6'd10; w_ra[4]=6'd4;
+    end
+    for (int idx=0; idx<7; idx++) w_rd[idx]=reg_t[w_ra[idx]];
+  end
+
+  always_comb begin : p_com_main
+    // Guard: identical to v0.1.
+    w_guard=1'b0;
+    w_unused=1'b0;
+    for (int idx=0; idx<12; idx++) begin
+      case (reg_op)
+        8'd0,8'd1,8'd8: if (idx>=2 && reg_q[idx]!='0) w_unused=1'b1;
+        8'd2,8'd3: if (idx>=5 && reg_q[idx]!='0) w_unused=1'b1;
+        8'd4: if (idx>=6 && reg_q[idx]!='0) w_unused=1'b1;
+        8'd5: if (idx>=3 && reg_q[idx]!='0) w_unused=1'b1;
+        8'd6: if (idx>=5 && reg_q[idx]!='0) w_unused=1'b1;
+        8'd7: if (idx>=7 && reg_q[idx]!='0) w_unused=1'b1;
+        default: w_unused=1'b1;
+      endcase
+    end
+    case (reg_op)
+      8'd0: w_guard=(reg_q[1]>=160'd1 && reg_q[1]<=160'd160)
+        && f_fit(reg_q[0],32'(reg_q[1]));
+      8'd1: w_guard=f_fit(reg_q[0],32'd160) && !reg_q[1][159] && reg_q[1]!='0;
+      8'd2: w_guard=f_range(reg_q[0],160'd0,160'd20000000)
+        && f_range(reg_q[1],160'(-160'd8000000),160'd2000000)
+        && reg_q[2]<160'd70368744177664 && reg_q[3]>0 && reg_q[3]<160'd16777216
+        && reg_q[4]<=160'd1;
+      8'd3: w_guard=f_fit(reg_q[0],32'd64)
+        && f_range(reg_q[1],160'd0,160'd20000000)
+        && f_range(reg_q[2],160'(-160'd8000000),160'd2000000)
+        && reg_q[3]<=160'd12800000 && reg_q[4]<=160'd1;
+      8'd4: w_guard=f_fit(reg_q[0],32'd64)
+        && f_range(reg_q[1],160'd0,160'd20000000)
+        && f_range(reg_q[2],160'(-160'd8000000),160'd2000000)
+        && f_range(reg_q[3],160'd0,160'd20000000)
+        && f_range(reg_q[4],160'(-160'd8000000),160'd2000000)
+        && reg_q[5]<=160'd12800000;
+      8'd5: w_guard=reg_q[0]<160'd16 && f_fit(reg_q[1],32'd32)
+        && f_range(reg_q[2],160'(-160'd8000000),160'd0);
+      8'd6: w_guard=f_range(reg_q[0],160'd0,160'd20000000)
+        && f_range(reg_q[1],160'(-160'd8000000),160'd2000000)
+        && f_range(reg_q[2],160'(-160'd8000000),160'd8000000)
+        && f_range(reg_q[3],160'(-160'd8000000),160'd2000000)
+        && reg_q[4]<=160'd100000;
+      8'd7: w_guard=f_fit(reg_q[0],32'd64)
+        && f_range(reg_q[1],160'd0,160'd20000000)
+        && f_range(reg_q[2],160'(-160'd8000000),160'd2000000)
+        && f_range(reg_q[3],160'(-160'd8000000),160'd8000000)
+        && f_range(reg_q[4],160'(-160'd8000000),160'd2000000)
+        && reg_q[5]<=160'd12800000 && reg_q[6]<=160'd1;
+      8'd8: w_guard=reg_q[0]<=160'd4294967295 && reg_q[1]<=160'd4294967295;
+      default: w_guard=1'b0;
+    endcase
+    if (w_unused) w_guard=1'b0;
+
+    // Operand fetch: temporaries come from RAM ports 0/1 (addressed by p_com_rf).
+    w_sa = '0; w_sb = '0;
+    if (w_ua < 6'(LPARA_TMP)) w_sa = w_rd[0];
+    else if (w_ua < 6'd52) w_sa = reg_q[4'(w_ua-6'd40)];
+    else begin
+      case (w_ua)
+        LPARA_C1:    w_sa = 160'd1;
+        LPARA_C1E6:  w_sa = 160'd1000000;
+        LPARA_C2E6:  w_sa = 160'd2000000;
+        LPARA_C3E6:  w_sa = 160'd3000000;
+        LPARA_C2E12: w_sa = 160'd2000000000000;
+        LPARA_C6E12: w_sa = 160'd6000000000000;
+        LPARA_C6E18: w_sa = 160'd6000000000000000000;
+        default:     w_sa = 160'd0;
+      endcase
+    end
+    if (w_ub < 6'(LPARA_TMP)) w_sb = w_rd[1];
+    else if (w_ub < 6'd52) w_sb = reg_q[4'(w_ub-6'd40)];
+    else begin
+      case (w_ub)
+        LPARA_C1:    w_sb = 160'd1;
+        LPARA_C1E6:  w_sb = 160'd1000000;
+        LPARA_C2E6:  w_sb = 160'd2000000;
+        LPARA_C3E6:  w_sb = 160'd3000000;
+        LPARA_C2E12: w_sb = 160'd2000000000000;
+        LPARA_C6E12: w_sb = 160'd6000000000000;
+        LPARA_C6E18: w_sb = 160'd6000000000000000000;
+        default:     w_sb = 160'd0;
+      endcase
+    end
+    // Shared multiplier on registered operands: cycle k (0..4) forms A x chunk k into
+    // reg_pp; cycle k+1 accumulates it at offset 32k modulo 2^160.
+    // v0.3: reg_mopa/reg_chunk hold the operand copy and the chunk for reg_mcnt.
+    case (reg_mcnt)
+      3'd0: w_chunk = reg_opb[63:32];
+      3'd1: w_chunk = reg_opb[95:64];
+      default: w_chunk = reg_opb[127:96];
+    endcase
+    if (reg_mcnt==3'd3) w_chunk = reg_opb[159:128];
+    w_pp = 160'(reg_mopa * {128'd0,reg_chunk});
+    case (reg_mcnt)
+      3'd1: w_mres = reg_pp;
+      3'd2: w_mres = 160'(reg_macc + {reg_pp[127:0],32'd0});
+      3'd3: w_mres = 160'(reg_macc + {reg_pp[95:0],64'd0});
+      3'd4: w_mres = 160'(reg_macc + {reg_pp[63:0],96'd0});
+      default: w_mres = 160'(reg_macc + {reg_pp[31:0],128'd0});
+    endcase
+
+    // Defaults.
+    w_fsm_ctrl_nxt_state=reg_fsm_ctrl_current_state;
+    w_op_nxt=reg_op; w_resp_nxt=reg_resp;
+    w_lo_nxt=reg_lo; w_hi_nxt=reg_hi; w_stop_nxt=reg_stop; w_sub_nxt=reg_sub;
+    w_min_nxt=reg_min; w_quot0_nxt=reg_quot0; w_f0_nxt=reg_f0;
+    w_pidx_nxt=reg_pidx; w_pvalid_nxt=reg_pvalid;
+    w_run_nxt=reg_run; w_prog_nxt=reg_prog; w_pc_nxt=reg_pc; w_vnonly_nxt=reg_vnonly;
+    w_mcnt_nxt=reg_mcnt; w_macc_nxt=reg_macc;
+    w_phase_nxt=reg_phase; w_opa_nxt=reg_opa; w_opb_nxt=reg_opb; w_pp_nxt=reg_pp;
+    for (int idx=0; idx<12; idx++) w_q_nxt[idx]=reg_q[idx];
+    w_twe=1'b0; w_twa='0; w_twd='0; w_lid_nxt=reg_lid; w_lpc_nxt=reg_lpc;
+    w_dstart=1'b0; w_dnum_in='0; w_dden_in=160'd1; w_dup_in=1'b0; w_dw_in=2'd2;
+    w_aa=1'b0; w_ab=1'b0;
+    w_mid=32'(({1'b0,reg_lo}+{1'b0,reg_hi})>>1'b1);
+
+    // Micro-sequencer: phase 0 fetches operands; phase 1 executes (MUL: six cycles).
+    if (reg_run && !reg_phase) begin
+      w_opa_nxt=w_sa; w_opb_nxt=w_sb; w_phase_nxt=1'b1; w_mcnt_nxt=3'd0;
+    end else if (reg_run) begin
+      w_pc_nxt=6'(reg_pc+1'b1); w_phase_nxt=1'b0;
+      case (w_kind)
+        LPARA_K_END: begin w_run_nxt=1'b0; w_pc_nxt=reg_pc; end
+        LPARA_K_MUL: begin
+          if (reg_mcnt<=3'd4) w_pp_nxt=w_pp;
+          if (reg_mcnt!=3'd0) w_macc_nxt=w_mres;
+          if (reg_mcnt==3'd5) begin
+            w_twe=1'b1; w_twa=w_ud; w_twd=w_mres; w_mcnt_nxt=3'd0;
+          end else begin
+            w_mcnt_nxt=3'(reg_mcnt+1'b1); w_pc_nxt=reg_pc; w_phase_nxt=1'b1;
+          end
+        end
+        LPARA_K_ADD: begin w_twe=1'b1; w_twa=w_ud; w_twd=160'(reg_opa+reg_opb); end
+        LPARA_K_SUB: begin w_twe=1'b1; w_twa=w_ud; w_twd=160'(reg_opa-reg_opb); end
+        LPARA_K_ABS: begin w_twe=1'b1; w_twa=w_ud; w_twd=f_abs(reg_opa); end
+        LPARA_K_MOV: begin w_twe=1'b1; w_twa=w_ud; w_twd=reg_opa; end
+        LPARA_K_TRZ: begin w_twe=1'b1; w_twa=w_ud; w_twd=f_trz(reg_opa,w_ub[1:0]); end
+        LPARA_K_TRS: begin w_twe=1'b1; w_twa=w_ud; w_twd=f_trs(reg_opa,w_ub[1:0]); end
+        // d=|j|, or 1 when j is zero.
+        LPARA_K_RD: begin
+          w_twe=1'b1; w_twa=6'd5; w_twd=(w_rd[0]=='0) ? 160'd1 : f_abs(w_rd[0]);
+        end
+        // n=min(h*d, |target-a|*1e6), or 0 for instant profiles.
+        LPARA_K_RN: begin
+          w_twe=1'b1; w_twa=6'd8; w_twd=(w_rd[1]>w_rd[2]) ? w_rd[2] : w_rd[1];
+          if (w_rd[0]=='0) w_twd='0;
+        end
+        LPARA_K_ENDVN: if (reg_vnonly) begin w_run_nxt=1'b0; w_pc_nxt=reg_pc; end
+        // Stop clip of the displacement quadratic.
+        // DSEL d (24 or 25): T24/T25 take T29/T30 under the clip test.
+        LPARA_K_DSEL: if (w_rd[0][159] && (w_rd[1]>=w_rd[2])) begin
+          w_twe=1'b1; w_twa=w_ud; w_twd=w_rd[3];
+        end
+        // NEGIF d (22 then 23): both conditioned on the sign of T23.
+        LPARA_K_NEGIF: if (w_rd[0][159]) begin
+          w_twe=1'b1; w_twa=w_ud; w_twd=f_neg((w_ud==6'd23) ? w_rd[0] : w_rd[1]);
+        end
+        // EAB d (34..37): request slots with the phase-5/6 suppressions.
+        LPARA_K_EAB: begin
+          w_twe=1'b1; w_twa=w_ud;
+          case (w_ud)
+            6'd34: w_twd=(reg_pidx==3'd6) ? 160'd0 : reg_q[2];
+            6'd35: w_twd=(reg_pidx==3'd5) ? 160'd0 : reg_q[4];
+            6'd36: w_twd=(reg_pidx==3'd6 && reg_q[2][159]) ? 160'd0 : reg_q[1];
+            default: w_twd=(reg_pidx==3'd5 && reg_q[4][159]) ? 160'd0 : reg_q[3];
+          endcase
+        end
+        LPARA_K_V23: w_pvalid_nxt=w_rd[0][159] && (w_rd[1]!='0) && (w_rd[1]<w_rd[2]);
+        LPARA_K_VX: begin
+          w_aa=!(reg_q[2][159] && (w_rd[0]<=w_rd[1]));
+          w_ab=!(reg_q[4][159] && (w_rd[2]<=w_rd[3]));
+          w_pvalid_nxt=(w_rd[4]!='0) && !w_rd[5][159] && (w_rd[5]!='0)
+            && (w_rd[5]<w_rd[6])
+            && ((reg_pidx==3'd6) ? !w_aa : w_aa)
+            && ((reg_pidx==3'd5) ? !w_ab : w_ab);
+        end
+        default: begin w_run_nxt=1'b0; w_pc_nxt=reg_pc; end
+      endcase
+      // Prologue MOVs hold the program counter; the list clears itself at END.
+      if (reg_lid!=LPARA_L_NONE) begin
+        w_pc_nxt=reg_pc; w_lpc_nxt=3'(reg_lpc+1'b1);
+        if (w_lnext[22:18]==LPARA_K_END) begin w_lid_nxt=LPARA_L_NONE; w_lpc_nxt='0; end
+      end
+    end
+
+    // Result helpers (shared by advance and continuous advance).
+    w_pose=160'(reg_q[0]+reg_quot0);
+    w_vel=reg_dres;
+    if (w_vel[159]) w_vel='0;
+    if (reg_op==8'd7 && reg_stop) begin
+      w_vel='0;
+      if (reg_q[6][0]) w_pose=160'(w_pose+reg_dres);
+    end
+    w_candidate=160'(reg_q[0]+reg_quot0-reg_dres);
+
+    // Operation controller.
+    case (reg_fsm_ctrl_current_state)
+      ENUM_ST_BOOT: w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      ENUM_ST_IDLE: if (i_req_valid) begin
+        w_op_nxt=i_req_data[1927:1920];
+        for (int idx=0; idx<12; idx++) w_q_nxt[idx]=i_req_data[1919-idx*160 -:160];
+        w_resp_nxt='0; w_lo_nxt='0; w_stop_nxt=1'b0; w_sub_nxt=1'b0;
+        w_pidx_nxt='0; w_pvalid_nxt=1'b0; w_f0_nxt=1'b0; w_quot0_nxt='0;
+        w_fsm_ctrl_nxt_state=ENUM_ST_SETUP;
+      end
+      ENUM_ST_SETUP: begin
+        w_min_nxt=reg_q[0]; w_sub_nxt=1'b0;
+        if (!w_guard) begin
+          w_resp_nxt={1'b1,640'd0}; w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+        end else begin
+          case (reg_op)
+            8'd0: begin w_resp_nxt={1'b0,reg_q[0],480'd0}; w_fsm_ctrl_nxt_state=ENUM_ST_RESP; end
+            8'd1: begin
+              w_dstart=1'b1; w_dnum_in=reg_q[0]; w_dden_in=reg_q[1]; w_dup_in=1'b1; w_dw_in=2'd2;
+              w_fsm_ctrl_nxt_state=ENUM_ST_C_DIV;
+            end
+            8'd2: begin
+              w_lid_nxt=LPARA_L_OP2; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_DISP; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_fsm_ctrl_nxt_state=ENUM_ST_D_PROG;
+            end
+            8'd3: begin
+              w_lid_nxt=LPARA_L_OP3; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_DINT; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_fsm_ctrl_nxt_state=ENUM_ST_A_PROG;
+            end
+            8'd4: w_fsm_ctrl_nxt_state=ENUM_ST_W_PT;
+            8'd5: begin
+              w_resp_nxt={1'b0,f_profile(reg_q[0],reg_q[1],reg_q[2]),480'd0};
+              w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+            end
+            8'd6: begin
+              w_lid_nxt=LPARA_L_OP6; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_RAMP; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_vnonly_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_R_FULL;
+            end
+            8'd7: begin
+              w_lid_nxt=LPARA_L_OP7; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_RAMP; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_vnonly_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_R_FULL;
+            end
+            8'd8: begin
+              w_resp_nxt={1'b0,128'd0,32'(reg_q[0]-reg_q[1]),480'd0};
+              w_resp_nxt[639:512]={128{w_resp_nxt[511]}};
+              w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+            end
+            default: begin w_resp_nxt={1'b1,640'd0}; w_fsm_ctrl_nxt_state=ENUM_ST_RESP; end
+          endcase
+        end
+      end
+      // op 1: checked ceiling division.
+      ENUM_ST_C_DIV: if (reg_ddone) begin
+        w_resp_nxt={1'b0,reg_dres,480'd0};
+        if (reg_dres_fault) w_resp_nxt={1'b1,640'd0};
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      // op 2: rational displacement, s128 quotient.
+      ENUM_ST_D_PROG: if (!reg_run) begin
+        w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=w_rd[1]; w_dup_in=reg_q[4][0];
+        w_dw_in=2'd1; w_fsm_ctrl_nxt_state=ENUM_ST_D_DIV;
+      end
+      ENUM_ST_D_DIV: if (reg_ddone) begin
+        w_resp_nxt={1'b0,reg_dres,480'd0};
+        if (reg_dres_fault || !f_fit(reg_dres,32'd64)) w_resp_nxt={1'b1,640'd0};
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      // op 3: integer-time advance, s96 quotients.
+      ENUM_ST_A_PROG: if (!reg_run) begin
+        w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=w_rd[1]; w_dup_in=reg_q[4][0];
+        w_dw_in=2'd0; w_fsm_ctrl_nxt_state=ENUM_ST_A_DIV0;
+      end
+      ENUM_ST_A_DIV0: if (reg_ddone) begin
+        w_quot0_nxt=reg_dres; w_f0_nxt=reg_dres_fault;
+        w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=160'd1000000; w_dup_in=reg_q[4][0];
+        w_dw_in=2'd0; w_fsm_ctrl_nxt_state=ENUM_ST_A_DIV1;
+      end
+      ENUM_ST_A_DIV1: if (reg_ddone) begin
+        w_resp_nxt={1'b0,w_pose,w_vel,320'd0};
+        if (reg_f0 || reg_dres_fault || !f_fit(w_pose,32'd64) || !f_fit(w_vel,32'd32))
+          w_resp_nxt={1'b1,640'd0};
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      // ops 6/7: capped ramp at h, then (op 7) stop search and quotients.
+      ENUM_ST_R_FULL: if (!reg_run) begin
+        if (reg_op==8'd6) begin
+          w_resp_nxt={1'b0,w_rd[0],w_rd[1],w_rd[2],w_rd[3]};
+          w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+        end else if (!reg_stop && w_rd[2][159]) begin
+          w_stop_nxt=1'b1; w_lo_nxt='0; w_hi_nxt=32'(reg_q[5]); w_sub_nxt=1'b0;
+          w_fsm_ctrl_nxt_state=ENUM_ST_R_ROOT;
+        end else begin
+          w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=w_rd[1]; w_dup_in=reg_q[6][0];
+          w_dw_in=2'd2; w_fsm_ctrl_nxt_state=ENUM_ST_R_DIV0;
+        end
+      end
+      ENUM_ST_R_ROOT: begin
+        if (!reg_sub) begin
+          w_twe=1'b1; w_twa=6'd4; w_twd={128'd0,(reg_hi-reg_lo<=32'd1) ? reg_lo : w_mid};
+          w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_RAMP; w_pc_nxt='0; w_mcnt_nxt='0;
+          if (reg_hi-reg_lo<=32'd1) begin
+            w_vnonly_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_R_FULL;
+          end else begin
+            w_vnonly_nxt=1'b1; w_sub_nxt=1'b1;
+          end
+        end else if (!reg_run) begin
+          if (w_rd[2][159]) w_hi_nxt=w_rd[4][31:0];
+          else w_lo_nxt=w_rd[4][31:0];
+          w_sub_nxt=1'b0;
+        end
+      end
+      ENUM_ST_R_DIV0: if (reg_ddone) begin
+        w_quot0_nxt=reg_dres; w_f0_nxt=reg_dres_fault; w_dstart=1'b1; w_dw_in=2'd2;
+        if (reg_stop) begin
+          w_dnum_in=reg_q[1]; w_dden_in=160'd1000000; w_dup_in=1'b1;
+        end else begin
+          w_dnum_in=w_rd[2]; w_dden_in=w_rd[3]; w_dup_in=reg_q[6][0];
+        end
+        w_fsm_ctrl_nxt_state=ENUM_ST_R_DIV1;
+      end
+      ENUM_ST_R_DIV1: if (reg_ddone) begin
+        w_resp_nxt={1'b0,w_pose,w_vel,320'd0};
+        if (reg_f0 || reg_dres_fault || !f_fit(w_pose,32'd64) || !f_fit(w_vel,32'd32))
+          w_resp_nxt={1'b1,640'd0};
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      // op 4: seven candidate stop phases, minimum swept gap.
+      ENUM_ST_W_PT: begin
+        if (!reg_sub) begin
+          case (reg_pidx)
+            // Phases 0/1: prologue-only load, then W_D0 through the valid test.
+            3'd0, 3'd1: begin
+              w_lid_nxt=(reg_pidx==3'd0) ? LPARA_L_PT0 : LPARA_L_PT1; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_NONE; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_pvalid_nxt=1'b1; w_sub_nxt=1'b1;
+            end
+            3'd2: begin
+              w_lid_nxt=LPARA_L_PT2; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_PT23; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_sub_nxt=1'b1;
+            end
+            3'd3: begin
+              w_lid_nxt=LPARA_L_PT3; w_lpc_nxt='0;
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_PT23; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_sub_nxt=1'b1;
+            end
+            default: begin
+              w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_PTX; w_pc_nxt='0; w_mcnt_nxt='0;
+              w_sub_nxt=1'b1;
+            end
+          endcase
+        end else if (!reg_run) begin
+          w_sub_nxt=1'b0;
+          w_fsm_ctrl_nxt_state=reg_pvalid ? ENUM_ST_W_D0 : ENUM_ST_W_NEXT;
+        end
+      end
+      ENUM_ST_W_D0: begin
+        if (!reg_sub) begin
+          w_lid_nxt=LPARA_L_WD0; w_lpc_nxt='0;
+          w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_DISP; w_pc_nxt='0; w_mcnt_nxt='0;
+          w_sub_nxt=1'b1;
+        end else if (!reg_run) begin
+          w_sub_nxt=1'b0;
+          w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=w_rd[1]; w_dup_in=1'b0;
+          w_dw_in=2'd1; w_fsm_ctrl_nxt_state=ENUM_ST_W_V0;
+        end
+      end
+      ENUM_ST_W_V0: if (reg_ddone) begin
+        w_quot0_nxt=reg_dres;
+        if (reg_dres_fault) w_resp_nxt[640]=1'b1;
+        w_fsm_ctrl_nxt_state=ENUM_ST_W_D1;
+      end
+      ENUM_ST_W_D1: begin
+        if (!reg_sub) begin
+          w_lid_nxt=LPARA_L_WD1; w_lpc_nxt='0;
+          w_run_nxt=1'b1; w_phase_nxt=1'b0; w_prog_nxt=LPARA_P_DISP; w_pc_nxt='0; w_mcnt_nxt='0;
+          w_sub_nxt=1'b1;
+        end else if (!reg_run) begin
+          w_sub_nxt=1'b0;
+          w_dstart=1'b1; w_dnum_in=w_rd[0]; w_dden_in=w_rd[1]; w_dup_in=1'b1;
+          w_dw_in=2'd1; w_fsm_ctrl_nxt_state=ENUM_ST_W_V1;
+        end
+      end
+      ENUM_ST_W_V1: if (reg_ddone) begin
+        if (f_lt(w_candidate,reg_min)) w_min_nxt=w_candidate;
+        if (reg_dres_fault || !f_fit(w_candidate,32'd64)) w_resp_nxt[640]=1'b1;
+        w_fsm_ctrl_nxt_state=ENUM_ST_W_NEXT;
+      end
+      ENUM_ST_W_NEXT: begin
+        if (reg_pidx==3'd6) begin
+          w_resp_nxt={1'b1,640'd0};
+          if (!reg_resp[640]) w_resp_nxt={1'b0,reg_min,480'd0};
+          w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+        end else begin
+          w_pidx_nxt=3'(reg_pidx+1'b1); w_pvalid_nxt=1'b0;
+          w_fsm_ctrl_nxt_state=ENUM_ST_W_PT;
+        end
+      end
+      ENUM_ST_RESP: if (i_rsp_ready) begin
+        w_resp_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      end
+      default: begin w_resp_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_BOOT; end
+    endcase
+
+    // State-only public outputs; response payload is canonical zero while invalid.
+    o_req_ready = (reg_fsm_ctrl_current_state==ENUM_ST_IDLE) && i_rst_n_core;
+    o_rsp_valid = (reg_fsm_ctrl_current_state==ENUM_ST_RESP) && i_rst_n_core;
+    o_rsp_data = o_rsp_valid ? reg_resp : 641'd0;
+  end
+
+  // p_com_div: start-time operand conditioning and two restoring steps per cycle.
+  always_comb begin : p_com_div
+    w_dnum_m = w_dnum_in & f_mask(w_dw_in);
+    w_dden_m = w_dden_in & f_mask(w_dw_in);
+    w_dmag_in = f_msb(w_dnum_m,w_dw_in) ? (f_neg(w_dnum_m) & f_mask(w_dw_in)) : w_dnum_m;
+    case (w_dw_in)
+      2'd0: w_dmag_in = {w_dmag_in[95:0],64'd0};
+      2'd1: w_dmag_in = {w_dmag_in[127:0],32'd0};
+      default: w_dmag_in = w_dmag_in;
+    endcase
+    w_dr1 = {reg_drem[159:0],reg_dnum[159]};
+    w_dn1 = {reg_dnum[158:0],1'b0};
+    w_dq1 = {reg_dquot[158:0],1'b0};
+    if (w_dr1 >= {1'b0,reg_dden}) begin
+      w_dr1 = 161'(w_dr1-{1'b0,reg_dden}); w_dq1[0]=1'b1;
+    end
+    w_dr2 = {w_dr1[159:0],w_dn1[159]};
+    w_dn2 = {w_dn1[158:0],1'b0};
+    w_dq2 = {w_dq1[158:0],1'b0};
+    if (w_dr2 >= {1'b0,reg_dden}) begin
+      w_dr2 = 161'(w_dr2-{1'b0,reg_dden}); w_dq2[0]=1'b1;
+    end
+    // Floor moves negative inexact results away from zero; ceil moves positive ones.
+    w_dadj = (reg_drem != '0) && (reg_dneg != reg_dup);
+    w_dmagq = 160'(reg_dquot + {159'd0,w_dadj}) & f_mask(reg_dw);
+    w_dval = reg_dneg ? (f_neg(w_dmagq) & f_mask(reg_dw)) : w_dmagq;
+  end
+
+  // Asynchronous assertion clears all context; wrapper releases reset synchronously.
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_ctrl
+    if (!i_rst_n_core) begin
+      reg_fsm_ctrl_current_state<=ENUM_ST_BOOT; reg_op<='0; reg_resp<='0;
+      reg_lo<='0; reg_hi<='0; reg_stop<=1'b0; reg_sub<=1'b0; reg_min<='0;
+      reg_quot0<='0; reg_f0<=1'b0; reg_pidx<='0; reg_pvalid<=1'b0;
+      reg_run<=1'b0; reg_prog<='0; reg_pc<='0; reg_vnonly<=1'b0; reg_mcnt<='0; reg_macc<='0;
+      reg_phase<=1'b0; reg_opa<='0; reg_opb<='0; reg_pp<='0;
+      for (int idx=0; idx<12; idx++) reg_q[idx]<='0;
+      reg_lid<=LPARA_L_NONE; reg_lpc<='0;
+    end else begin
+      reg_fsm_ctrl_current_state<=w_fsm_ctrl_nxt_state; reg_op<=w_op_nxt;
+      reg_resp<=w_resp_nxt; reg_lo<=w_lo_nxt; reg_hi<=w_hi_nxt; reg_stop<=w_stop_nxt;
+      reg_sub<=w_sub_nxt; reg_min<=w_min_nxt; reg_quot0<=w_quot0_nxt; reg_f0<=w_f0_nxt;
+      reg_pidx<=w_pidx_nxt; reg_pvalid<=w_pvalid_nxt;
+      reg_run<=w_run_nxt; reg_prog<=w_prog_nxt; reg_pc<=w_pc_nxt; reg_vnonly<=w_vnonly_nxt;
+      reg_mcnt<=w_mcnt_nxt; reg_macc<=w_macc_nxt;
+      reg_phase<=w_phase_nxt; reg_opa<=w_opa_nxt; reg_opb<=w_opb_nxt; reg_pp<=w_pp_nxt;
+      for (int idx=0; idx<12; idx++) reg_q[idx]<=w_q_nxt[idx];
+      reg_lid<=w_lid_nxt; reg_lpc<=w_lpc_nxt;
+    end
+  end
+
+  // Temporary RAM: single write port; unwritten slots read as their reset value.
+  always_ff @(posedge i_clk_core) begin : p_ff_rf
+    if (w_twe) reg_t[w_twa]<=w_twd;
+  end
+
+  // Resetless multiplier operands (DSP input registers): loaded at operand fetch,
+  // then chunk k+1 of reg_opb while chunk k is multiplied.
+  always_ff @(posedge i_clk_core) begin : p_ff_mul
+    if (reg_run && !reg_phase) begin
+      reg_mopa<=w_sa; reg_chunk<=w_sb[31:0];
+    end else if (reg_run && w_kind==LPARA_K_MUL && reg_mcnt<=3'd3) begin
+      reg_chunk<=w_chunk;
+    end
+  end
+
+  // Divider registers: W/2 iteration cycles, then one finalize cycle.
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_div
+    if (!i_rst_n_core) begin
+      reg_dbusy<=1'b0; reg_ddone<=1'b0; reg_dneg<=1'b0; reg_dup<=1'b0; reg_dfault0<=1'b0;
+      reg_dw<='0; reg_dcnt<='0; reg_dnum<='0; reg_dden<='0; reg_dquot<='0; reg_drem<='0;
+      reg_dres<='0; reg_dres_fault<=1'b0;
+    end else if (w_dstart) begin
+      reg_dbusy<=1'b1; reg_ddone<=1'b0; reg_dw<=w_dw_in; reg_dup<=w_dup_in;
+      reg_dneg<=f_msb(w_dnum_m,w_dw_in);
+      reg_dfault0<=(w_dden_m=='0) || f_msb(w_dden_m,w_dw_in)
+        || (w_dnum_m == (160'd1 << (w_dw_in==2'd0 ? 95 : (w_dw_in==2'd1 ? 127 : 159))));
+      reg_dnum<=w_dmag_in; reg_dden<=w_dden_m; reg_dquot<='0; reg_drem<='0;
+      case (w_dw_in)
+        2'd0: reg_dcnt<=8'd48;
+        2'd1: reg_dcnt<=8'd64;
+        default: reg_dcnt<=8'd80;
+      endcase
+    end else if (reg_dbusy) begin
+      if (reg_dcnt!=8'd0) begin
+        reg_drem<=w_dr2; reg_dnum<=w_dn2; reg_dquot<=w_dq2; reg_dcnt<=8'(reg_dcnt-1'b1);
+      end else begin
+        reg_dbusy<=1'b0; reg_ddone<=1'b1;
+        reg_dres_fault<=reg_dfault0 || f_msb(w_dmagq,reg_dw);
+        reg_dres<=(reg_dfault0 || f_msb(w_dmagq,reg_dw)) ? 160'd0 : f_sext(w_dval,reg_dw);
+      end
+    end else if (reg_ddone && reg_fsm_ctrl_current_state==ENUM_ST_IDLE) begin
+      reg_ddone<=1'b0;
+    end
+  end
+endmodule
+`default_nettype wire

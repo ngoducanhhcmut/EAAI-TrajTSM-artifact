@@ -1,0 +1,26 @@
+         2335484 function calls (2304559 primitive calls) in 10.194 seconds
+
+   Ordered by: cumulative time
+   List reduced from 5740 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002   10.191   10.191 C:\Users\TransformerDA\Downloads\vla_new_arch\eval\data\nuscenes_loader.py:145(build_tokens_for_sample)
+        1    0.001    0.001   10.168   10.168 C:\Users\TransformerDA\Downloads\vla_new_arch\eval\data\nuscenes_loader.py:55(_build_lane_tokens)
+        1    0.000    0.000    9.323    9.323 C:\Users\TransformerDA\Downloads\vla_new_arch\eval\data\nuscenes_loader.py:49(_load_map_api)
+   1311/1    0.021    0.000    8.828    8.828 <frozen importlib._bootstrap>:1002(_find_and_load)
+   1281/1    0.012    0.000    8.828    8.828 <frozen importlib._bootstrap>:967(_find_and_load_unlocked)
+   1775/2    0.003    0.000    8.825    4.413 <frozen importlib._bootstrap>:220(_call_with_frames_removed)
+   1251/3    0.013    0.000    8.823    2.941 <frozen importlib._bootstrap>:659(_load_unlocked)
+   1058/3    0.021    0.000    8.822    2.941 <frozen importlib._bootstrap_external>:784(exec_module)
+   1380/3    0.108    0.000    8.819    2.940 {built-in method builtins.exec}
+    353/7    0.003    0.000    8.702    1.243 {built-in method builtins.__import__}
+        1    0.000    0.000    8.614    8.614 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\nuscenes\__init__.py:1(<module>)
+        1    0.000    0.000    8.611    8.611 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\nuscenes\nuscenes.py:4(<module>)
+ 1451/688    0.005    0.000    5.391    0.008 <frozen importlib._bootstrap>:1033(_handle_fromlist)
+        1    0.000    0.000    5.242    5.242 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\__init__.py:1(<module>)
+        1    0.000    0.000    5.218    5.218 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\base.py:1(<module>)
+        1    0.000    0.000    5.209    5.209 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\utils\__init__.py:1(<module>)
+        1    0.000    0.000    4.468    4.468 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\utils\_chunking.py:4(<module>)
+        1    0.000    0.000    4.466    4.466 C:\Users\TransformerDA\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\utils\_param_validation.py:4(<module>)
+
+

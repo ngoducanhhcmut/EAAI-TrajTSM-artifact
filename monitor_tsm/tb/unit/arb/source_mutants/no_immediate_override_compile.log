@@ -1,0 +1,15 @@
+COMMAND C:\iverilog\bin\iverilog.EXE -g2012 -s tb_m_tsmx_arb -I C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\tb_m_tsmx_arb.sv
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:93: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\source_mutants\no_immediate_override.sv:169: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+
+EXIT 0

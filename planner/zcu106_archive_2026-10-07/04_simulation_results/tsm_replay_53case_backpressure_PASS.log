@@ -1,0 +1,86 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 09:16:40 2026
+# Process ID: 30028
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_replay/prj/tsm_replay.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log replay_bp3.log -mode tcl -source {xsim.dir/tb_tsm_replay_behav/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_replay/prj/tsm_replay.sim/sim_1/behav/xsim/replay_bp3.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_replay/prj/tsm_replay.sim/sim_1/behav/xsim\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tsm_replay_behav/xsim_script.tcl
+# xsim {tb_tsm_replay_behav} -autoloadwcfg -tclbatch {tb_tsm_replay.tcl}
+Time resolution is 1 ps
+source tb_tsm_replay.tcl
+## run all
+XilinxAXIVIP: Found at Path: tb_tsm_replay.u_bd.tsm_ifc_i.axi_vip_cpu.inst
+XilinxAXIVIP: Found at Path: tb_tsm_replay.u_bd.tsm_ifc_i.axi_vip_mem.inst
+  [init] VIP da chay, bp=1
+  [init] da dat chinh sach khe ngau nhien
+  [init] da cai backpressure: khe 0..12 chu ky giua cac beat R
+  [init] nha reset t=195 ns
+=== TSM REPLAY 53 ca (thu tu firmware), backpressure=1, nghi 200 us
+[ 0]         A00 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @33308 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 1]         A01 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @33659 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 2]         A02 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34187 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 3]         A03 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34514 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 4]         A04 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34549 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 5]         A05 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35231 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 6]         A06 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35227 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 7]         A07 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35638 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 8]         A08 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35917 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[ 9]         A09 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35902 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[10]         A10 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35768 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[11]         A11 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35269 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[12]         A12 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35267 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[13]         A13 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35609 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[14]         A14 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35657 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[15]         A15 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35610 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[16]         A16 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35598 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[17]         A17 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35773 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[18]         A18 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35891 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[19]         A19 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35900 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[20]         A20 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35998 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[21]         A21 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36203 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[22]         A22 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36492 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[23]         A23 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36410 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[24]         A24 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36843 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[25]         A25 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36613 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[26]         A26 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36626 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[27]         A27 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36701 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[28]         A28 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36995 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[29]         A29 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36983 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[30]         A30 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36438 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[31]         A31 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36639 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[32]         A32 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36153 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[33]         A33 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36024 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[34]         A34 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @36096 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[35]     B_H0261 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=12 obs=1 | quyet dinh @92869 chu ky (co tang 2) | AR hep=8 rong=102 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[36]     B_H0714 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=4 obs=0 | quyet dinh @86545 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[37]     B_H0717 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | quyet dinh @86695 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[38]     B_H0720 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | quyet dinh @86584 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[39]     B_H0723 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | quyet dinh @86663 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[40]     B_H0726 pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=4 obs=0 | quyet dinh @86830 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[41]     B_H0102 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @32479 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[42]     B_H0199 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @33635 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[43]     B_H0296 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @32182 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[44]     B_H0393 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @31313 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[45]     B_H0490 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34305 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[46]     B_H0587 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34443 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[47]     B_G0007 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @35386 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[48]     B_G0218 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @34735 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[49]     B_G0429 pre=0x00000000 GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | quyet dinh @32612 chu ky             | AR hep=8 rong=100 chong=0 saidc=0 rerr=0 proto=0 | mong doi GRANT  PASS
+[50]      C1_CRC pre=0x00000000 GPIO1=0x01018802 -> VETO  fault=0x08 step=4 obs=0 | quyet dinh @1060 chu ky             | AR hep=8 rong=0 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[51]      C2_NaN pre=0x00000000 GPIO1=0x01018202 -> VETO  fault=0x02 step=4 obs=0 | quyet dinh @1125 chu ky             | AR hep=8 rong=0 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+[52]  C3_xe_chan pre=0x00000000 GPIO1=0x01010002 -> VETO  fault=0x00 step=0 obs=0 | quyet dinh @82294 chu ky (co tang 2) | AR hep=8 rong=101 chong=0 saidc=0 rerr=0 proto=0 | mong doi VETO   PASS
+=== KET QUA REPLAY: PASS 53 / FAIL 0 / 53 ca
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+$finish called at time : 22221235 ns : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/system/tb_tsm_replay.sv" Line 230
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:38:25 . Memory (MB): peak = 204.797 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 1038340 KB (Peak: 1038340 KB), Simulation CPU Usage: 2231140 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 09:55:07 2026...

@@ -1,0 +1,7 @@
+COMMAND: vvp simulation.vvp +MUTANT=26
+INJECT 26 response_has_job: DUT output valid stuck-X
+ASSERT_FAIL 26 response_has_job spec5.3/5.5.2/7/10.3 job=-1 cycle=2 actual=0000000000000000000000000000000000000000000000000000000000000000000000000 expected=0000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: tb_m_tsmx_codec.sv:376: R-025 assertion failed
+       Time: 14000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

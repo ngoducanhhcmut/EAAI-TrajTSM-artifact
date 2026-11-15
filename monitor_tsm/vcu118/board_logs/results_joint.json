@@ -1,0 +1,117 @@
+{
+ "ddr_crc_ok": true,
+ "pass1": {
+  "frames": 35,
+  "wp_exact": 35,
+  "packets": 35,
+  "responses": 207,
+  "commands": 207,
+  "jobs": 207
+ },
+ "pass1_timing": {
+  "planner_ms": {
+   "n": 35,
+   "min": 40.492580000000004,
+   "mean": 40.526372571428574,
+   "max": 40.53848,
+   "unit": "ms"
+  },
+  "packet_us": {
+   "n": 35,
+   "min": 534.04,
+   "mean": 550.0342857142857,
+   "max": 606.0,
+   "unit": "us"
+  },
+  "fifo_us": {
+   "n": 207,
+   "min": 1300.1200000000001,
+   "mean": 1300.1200000000001,
+   "max": 1300.1200000000001,
+   "unit": "us"
+  },
+  "decide_ms": {
+   "n": 207,
+   "min": 0.00012000000000000002,
+   "mean": 2.656950821256039,
+   "max": 7.5932900000000005,
+   "unit": "ms"
+  },
+  "rsp_to_cmd_us": {
+   "n": 207,
+   "min": 54.980000000000004,
+   "mean": 54.980000000000004,
+   "max": 54.980000000000004,
+   "unit": "us"
+  }
+ },
+ "pass2_timing": {
+  "planner_ms": {
+   "n": 35,
+   "min": 40.492470000000004,
+   "mean": 40.749606285714286,
+   "max": 44.573460000000004,
+   "unit": "ms"
+  },
+  "packet_us": {
+   "n": 35,
+   "min": 534.07,
+   "mean": 550.0642857142857,
+   "max": 606.03,
+   "unit": "us"
+  },
+  "fifo_us": {
+   "n": 207,
+   "min": 1300.1200000000001,
+   "mean": 1300.1200000000001,
+   "max": 1300.1200000000001,
+   "unit": "us"
+  },
+  "decide_ms": {
+   "n": 207,
+   "min": 0.00012000000000000002,
+   "mean": 2.656950821256039,
+   "max": 7.5932900000000005,
+   "unit": "ms"
+  },
+  "rsp_to_cmd_us": {
+   "n": 207,
+   "min": 54.980000000000004,
+   "mean": 54.980000000000004,
+   "max": 54.980000000000004,
+   "unit": "us"
+  },
+  "e2e_frame_ms": {
+   "n": 35,
+   "min": 42.617630000000005,
+   "mean": 46.784399142857154,
+   "max": 53.65258000000001,
+   "unit": "ms"
+  }
+ },
+ "pass2_vs_pass1": {
+  "jobs": 207,
+  "rsp_equal": 207,
+  "cmd_type_equal": 207,
+  "wp_exact": 35
+ },
+ "pass2": {
+  "jobs": 207,
+  "late_jobs": 2,
+  "nominal_cmds": 15
+ },
+ "pass3": {
+  "j": 42,
+  "cmd_time_us": 3590326,
+  "brake_time_us": 3621343,
+  "job_time_us": 3581343,
+  "age_at_brake_us": 40000,
+  "brake_after_cmd_us": 31017,
+  "brake_after_cmd_cyc": 3101613,
+  "pending": 0,
+  "captured": 1
+ },
+ "joint_done": true,
+ "errors": [],
+ "verdict": "PASS"
+}

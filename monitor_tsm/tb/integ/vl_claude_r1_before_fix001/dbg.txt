@@ -1,0 +1,57 @@
+ steps=23 pose=0000000001f835f600158dfdffed7527
+DBG_SWEEP t=6546565000 kind=0 cid=9 acc=1 margin=42506754 reason=0 steps=23 pose=0000000001f835f600158dfdffed7527
+DBG_MRM cid=10 term=201003567e018
+DBG_MRM cid=11 term=201003567e018
+DBG_SWEEP t=6555305000 kind=0 cid=10 acc=1 margin=42506754 reason=0 steps=23 pose=0000000001f835f600158dfdffed7527
+DBG_SWEEP t=6555305000 kind=0 cid=11 acc=1 margin=42506754 reason=0 steps=23 pose=0000000001f835f600158dfdffed7527
+DBG_MRM cid=12 term=2010033e14017
+DBG_MRM cid=13 term=2010033e14017
+DBG_SWEEP t=6563645000 kind=0 cid=12 acc=1 margin=42514547 reason=0 steps=22 pose=0000000001f835f600158dfdffed7527
+DBG_SWEEP t=6563645000 kind=0 cid=13 acc=1 margin=42516727 reason=0 steps=22 pose=0000000001f835f600158dfdffed7527
+DBG_MRM cid=14 term=2010033e14017
+DBG_MRM cid=15 term=2010033e14017
+DBG_SWEEP t=6571985000 kind=0 cid=14 acc=1 margin=42516727 reason=0 steps=22 pose=0000000001f835f600158dfdffed7527
+DBG_SWEEP t=6571985000 kind=0 cid=15 acc=1 margin=42516727 reason=0 steps=22 pose=0000000001f835f600158dfdffed7527
+JOB 32 PASS cycles=19999
+TIMING job=32 fallback=ffff tail=ffff max_rows=29 stream_hits=832 objects=0
+DBG_MRM cid=0 term=201006ddd003c
+DBG_MRM cid=0 term=201006ddd003c
+DBG_MRM cid=1 term=201006ddd003c
+DBG_SWEEP t=6620525000 kind=3 cid=0 acc=0 margin=-322316 reason=24 steps=8 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6620525000 kind=0 cid=0 acc=0 margin=-322316 reason=24 steps=8 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6620525000 kind=0 cid=1 acc=0 margin=-322316 reason=24 steps=8 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=2 term=201006ddd003c
+DBG_MRM cid=3 term=201006ddd003c
+DBG_SWEEP t=6643365000 kind=0 cid=2 acc=0 margin=-322316 reason=24 steps=8 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6643365000 kind=0 cid=3 acc=0 margin=-322316 reason=24 steps=8 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=4 term=2010050df2029
+DBG_MRM cid=5 term=2010050df2029
+DBG_SWEEP t=6658605000 kind=0 cid=4 acc=0 margin=-10050 reason=24 steps=10 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6658605000 kind=0 cid=5 acc=0 margin=-10050 reason=24 steps=10 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=6 term=2010050df2029
+DBG_MRM cid=7 term=2010050df2029
+DBG_SWEEP t=6673845000 kind=0 cid=6 acc=0 margin=-10050 reason=24 steps=10 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6673845000 kind=0 cid=7 acc=0 margin=-10050 reason=24 steps=10 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=8 term=201004630c022
+DBG_MRM cid=9 term=201004630c022
+DBG_SWEEP t=6686585000 kind=0 cid=8 acc=1 margin=941648 reason=0 steps=33 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6686585000 kind=0 cid=9 acc=1 margin=941648 reason=0 steps=33 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=10 term=201004630c022
+DBG_MRM cid=11 term=201004630c022
+DBG_SWEEP t=6699325000 kind=0 cid=10 acc=1 margin=941648 reason=0 steps=33 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6699325000 kind=0 cid=11 acc=1 margin=941648 reason=0 steps=33 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=12 term=20100419ce01f
+DBG_MRM cid=13 term=20100419ce01f
+DBG_SWEEP t=6710845000 kind=0 cid=12 acc=1 margin=1513391 reason=0 steps=30 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6710845000 kind=0 cid=13 acc=1 margin=1513391 reason=0 steps=30 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_MRM cid=14 term=20100419ce01f
+DBG_MRM cid=15 term=20100419ce01f
+DBG_SWEEP t=6722365000 kind=0 cid=14 acc=1 margin=1513391 reason=0 steps=30 pose=fffffffffd8c791e00761e92ffe0be87
+DBG_SWEEP t=6722365000 kind=0 cid=15 acc=1 margin=1513391 reason=0 steps=30 pose=fffffffffd8c791e00761e92ffe0be87
+RSP job=33 actual=006820063d expected=006c3c0a3d reason=3
+ASSERT_FAIL 3 TOP_MODE:spec5.3/6.1/10.1/15 job=33 cycle=672252
+[6722520000] %Fatal: tb_m_tsmx_top.sv:168: Assertion failed in tb_m_tsmx_top.ck: assertion failure
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:168: Verilog $stop
+Aborting...
+
+rc=1

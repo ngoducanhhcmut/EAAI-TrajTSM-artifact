@@ -1,0 +1,23 @@
+{
+  "golden_jobs_regenerated": 207,
+  "firmware_packets": 35,
+  "crc_checks": 35,
+  "waypoint_source": "recorded_final_35",
+  "recorded_word_checks": 280,
+  "max_reference_waypoint_delta_m": 2.09808349609375e-05,
+  "timestamps_match_w9b": true,
+  "mutant_golden_witness": {
+    "frame": 7,
+    "job": 42,
+    "word": 0,
+    "value": 1166016512,
+    "expected_accept": true,
+    "mutated_accept": false,
+    "expected_reason": "ok",
+    "mutated_reason": "binding",
+    "packet_changed": true,
+    "golden_output_changed": true
+  },
+  "saved_rtl_packet_mismatches": [],
+  "rtl_simulated_jobs": 0
+}

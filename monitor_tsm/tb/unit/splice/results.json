@@ -1,0 +1,524 @@
+{
+  "shards": [
+    {
+      "start": 0,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1735642,
+        "4": 2470,
+        "5": 2470,
+        "6": 2470,
+        "7": 1864,
+        "8": 1864,
+        "9": 1864,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1734120,
+        "15": 618,
+        "16": 1551,
+        "17": 919,
+        "18": 13,
+        "19": 664,
+        "20": 11338,
+        "21": 1734120,
+        "22": 2470,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 600,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1906090,
+        "4": 2417,
+        "5": 2417,
+        "6": 2417,
+        "7": 1811,
+        "8": 1811,
+        "9": 1811,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1904568,
+        "15": 618,
+        "16": 1747,
+        "17": 670,
+        "18": 13,
+        "19": 611,
+        "20": 11444,
+        "21": 1904568,
+        "22": 2417,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 1200,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1912522,
+        "4": 2415,
+        "5": 2415,
+        "6": 2415,
+        "7": 1809,
+        "8": 1809,
+        "9": 1809,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1911000,
+        "15": 618,
+        "16": 1579,
+        "17": 836,
+        "18": 13,
+        "19": 609,
+        "20": 11448,
+        "21": 1911000,
+        "22": 2415,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 1800,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1931818,
+        "4": 2409,
+        "5": 2409,
+        "6": 2409,
+        "7": 1803,
+        "8": 1803,
+        "9": 1803,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1930296,
+        "15": 618,
+        "16": 1595,
+        "17": 814,
+        "18": 13,
+        "19": 603,
+        "20": 11460,
+        "21": 1930296,
+        "22": 2409,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 2400,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1703482,
+        "4": 2480,
+        "5": 2480,
+        "6": 2480,
+        "7": 1874,
+        "8": 1874,
+        "9": 1874,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1701960,
+        "15": 618,
+        "16": 863,
+        "17": 1617,
+        "18": 13,
+        "19": 674,
+        "20": 11318,
+        "21": 1701960,
+        "22": 2480,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 3000,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1623082,
+        "4": 2505,
+        "5": 2505,
+        "6": 2505,
+        "7": 1899,
+        "8": 1899,
+        "9": 1899,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1621560,
+        "15": 618,
+        "16": 619,
+        "17": 1886,
+        "18": 13,
+        "19": 699,
+        "20": 11268,
+        "21": 1621560,
+        "22": 2505,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 3600,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1648810,
+        "4": 2497,
+        "5": 2497,
+        "6": 2497,
+        "7": 1891,
+        "8": 1891,
+        "9": 1891,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1647288,
+        "15": 618,
+        "16": 611,
+        "17": 1886,
+        "18": 13,
+        "19": 691,
+        "20": 11284,
+        "21": 1647288,
+        "22": 2497,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 4200,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1632730,
+        "4": 2502,
+        "5": 2502,
+        "6": 2502,
+        "7": 1896,
+        "8": 1896,
+        "9": 1896,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1631208,
+        "15": 618,
+        "16": 635,
+        "17": 1867,
+        "18": 13,
+        "19": 696,
+        "20": 11274,
+        "21": 1631208,
+        "22": 2502,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 4800,
+      "count": 600,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1848202,
+        "4": 2435,
+        "5": 2435,
+        "6": 2435,
+        "7": 1829,
+        "8": 1829,
+        "9": 1829,
+        "10": 606,
+        "11": 606,
+        "12": 903,
+        "13": 916,
+        "14": 1846680,
+        "15": 618,
+        "16": 731,
+        "17": 1704,
+        "18": 13,
+        "19": 629,
+        "20": 11408,
+        "21": 1846680,
+        "22": 2435,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    },
+    {
+      "start": 5400,
+      "count": 336,
+      "hits": {
+        "0": 26,
+        "1": 26,
+        "2": 26,
+        "3": 1072354,
+        "4": 1356,
+        "5": 1356,
+        "6": 1356,
+        "7": 1014,
+        "8": 1014,
+        "9": 1014,
+        "10": 342,
+        "11": 342,
+        "12": 639,
+        "13": 652,
+        "14": 1071360,
+        "15": 354,
+        "16": 379,
+        "17": 977,
+        "18": 13,
+        "19": 342,
+        "20": 10662,
+        "21": 1071360,
+        "22": 1356,
+        "23": 13
+      },
+      "min": 3,
+      "max": 3218,
+      "unstalled": [
+        "UNSTALLED kind=0 latency=3218 II=0",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=0 latency=3218 II=3219",
+        "UNSTALLED kind=1 latency=2 II=0",
+        "UNSTALLED kind=1 latency=2 II=3",
+        "UNSTALLED kind=1 latency=2 II=3"
+      ]
+    }
+  ],
+  "assertion_mutants": [
+    {
+      "id": 0,
+      "killed": true
+    },
+    {
+      "id": 1,
+      "killed": true
+    },
+    {
+      "id": 2,
+      "killed": true
+    },
+    {
+      "id": 3,
+      "killed": true
+    },
+    {
+      "id": 4,
+      "killed": true
+    },
+    {
+      "id": 5,
+      "killed": true
+    },
+    {
+      "id": 6,
+      "killed": true
+    },
+    {
+      "id": 7,
+      "killed": true
+    },
+    {
+      "id": 8,
+      "killed": true
+    },
+    {
+      "id": 9,
+      "killed": true
+    },
+    {
+      "id": 10,
+      "killed": true
+    },
+    {
+      "id": 11,
+      "killed": true
+    },
+    {
+      "id": 12,
+      "killed": true
+    },
+    {
+      "id": 13,
+      "killed": true
+    },
+    {
+      "id": 14,
+      "killed": true
+    },
+    {
+      "id": 15,
+      "killed": true
+    },
+    {
+      "id": 16,
+      "killed": true
+    },
+    {
+      "id": 17,
+      "killed": true
+    },
+    {
+      "id": 18,
+      "killed": true
+    },
+    {
+      "id": 19,
+      "killed": true
+    },
+    {
+      "id": 20,
+      "killed": true
+    },
+    {
+      "id": 21,
+      "killed": true
+    },
+    {
+      "id": 22,
+      "killed": true
+    },
+    {
+      "id": 23,
+      "killed": true
+    }
+  ],
+  "source_mutants": [
+    {
+      "name": "dx_zero",
+      "killed": true
+    },
+    {
+      "name": "tube_widen",
+      "killed": true
+    },
+    {
+      "name": "delay_boundary",
+      "killed": true
+    },
+    {
+      "name": "corner_omit",
+      "killed": true
+    },
+    {
+      "name": "stall_drop",
+      "killed": true
+    }
+  ]
+}

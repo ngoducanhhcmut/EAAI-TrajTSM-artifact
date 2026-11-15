@@ -1,0 +1,66 @@
+COMMAND ['vvp', 'C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\unit\\health\\sim.vvp', '+START=2560', '+END=2586']
+JOB x cycles=20
+JOB x cycles=10
+JOB x cycles=10
+JOB x cycles=10
+JOB x cycles=10
+JOB x cycles=10
+JOB x cycles=18
+JOB x cycles=20
+JOB 2560 cycles=2
+JOB 2561 cycles=1025
+JOB 2562 cycles=33
+JOB 2563 cycles=2
+JOB 2564 cycles=2
+JOB 2565 cycles=2
+JOB 2566 cycles=2
+JOB 2567 cycles=4
+JOB 2568 cycles=1026
+JOB 2569 cycles=129
+JOB 2570 cycles=2
+JOB 2571 cycles=2
+JOB 2572 cycles=2
+JOB 2573 cycles=2
+JOB 2574 cycles=3
+JOB 2575 cycles=33
+JOB 2576 cycles=129
+JOB 2577 cycles=2
+JOB 2578 cycles=33
+JOB 2579 cycles=2
+JOB 2580 cycles=2
+JOB 2581 cycles=34
+JOB 2582 cycles=1025
+JOB 2583 cycles=129
+JOB 2584 cycles=2064
+JOB 2585 cycles=3088
+JOB 2586 cycles=2064
+MEASURE latency=2..3088 II=3..3090
+ASSERT 0 reset_ready spec5.3/5.5.11 hits=6
+ASSERT 1 reset_valid spec5.3/5.5.11 hits=6
+ASSERT 2 reset_health spec5.3/5.5.11 hits=6
+ASSERT 3 reset_b4_valid spec5.3/5.5.11 hits=6
+ASSERT 4 reset_b3_valid spec5.3/5.5.11 hits=6
+ASSERT 5 invalid_health_zero spec5.3/5.5.11 hits=10990
+ASSERT 6 single_context spec5.3/5.5.11 hits=96
+ASSERT 7 health_bit_exact spec5.3/5.5.11 hits=96
+ASSERT 8 no_orphan_response spec5.3/5.5.11 hits=96
+ASSERT 9 hold_valid spec5.3/5.5.11 hits=61
+ASSERT 10 hold_health spec5.3/5.5.11 hits=61
+ASSERT 11 consume_clears spec5.3/5.5.11 hits=35
+ASSERT 12 consume_ready spec5.3/5.5.11 hits=35
+ASSERT 13 accept_busy spec5.3/5.5.11 hits=36
+ASSERT 14 b4_exact_request spec5.3/5.5.11 hits=60
+ASSERT 15 bist_enabled spec5.3/5.5.11 hits=60
+ASSERT 16 b4_stall_valid spec5.3/5.5.11 hits=48
+ASSERT 17 b4_stall_payload spec5.3/5.5.11 hits=48
+ASSERT 18 b3_exact_lane spec5.3/5.5.11 hits=29
+ASSERT 19 b3_actor_count spec5.3/5.5.11 hits=29
+ASSERT 20 b3_exact_trajectory spec5.3/5.5.11 hits=29
+ASSERT 21 b3_stall_valid spec5.3/5.5.11 hits=18
+ASSERT 22 b3_stall_payload spec5.3/5.5.11 hits=18
+ASSERT 23 b4_invalid_zero spec5.3/5.5.11 hits=11026
+ASSERT 24 b3_invalid_zero spec5.3/5.5.11 hits=11057
+ASSERT 25 response_accounting spec5.3/5.5.11 hits=10990
+assertion failures: 0, assertions never exercised: 0
+PASS health: golden=26/26 assertions=26
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\health\tb_m_tsmx_health.sv:216: $finish called at 122012000 (1ps)

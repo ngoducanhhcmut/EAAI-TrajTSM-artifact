@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T11:51:42Z",
+  "old_sha256": "d286b4cb4b064e642b7bcbd7f1f88acefbc79fd82da92e550173e3d23c538810",
+  "new_sha256": "544fdb843f0de110064c5f4a3ac9647e4d79a3a194f4bdc08465b2cda8186a95",
+  "only_changed_function": "b3_geom",
+  "basis": "Static max-overflow/type coverage review; explicit reject before arithmetic for malformed row/config/object words. No scores consulted.",
+  "domain_proof": "All B4 outputs have 7 integer row fields, relative phase<=25.6s, |x|<=10031m<10070m, v<=10m/s, a in[-8,0], jerk<=8. Bridge rows are within initial10000m+1m. V2 B3/B7 cell x in[-9990,9990] plus<=1m, endpoints integer. Every registered old branch remains unchanged. Added guards cannot create an ACCEPT.",
+  "geometry_cache_proof": "g.nominal_geom builds rows only through B4 and integer lead Motion; the new checks are tautologies on all valid inputs to this adapter cache. Pure-cache replay remains bit-identical.",
+  "threshold_fit": false
+}

@@ -1,0 +1,1175 @@
+{
+  "complete": false,
+  "processed_frames": 808,
+  "total_eligible": 29049,
+  "total_keyframes": 34149,
+  "scenes_total": 850,
+  "scenes_processed": 24,
+  "odd_frames": 474,
+  "odd_coverage": {
+    "n": 474,
+    "denominator": 808,
+    "rate": 0.5866336633663366,
+    "ci95": [
+      0.4905375803950712,
+      0.6820215643692613
+    ],
+    "valid_bootstrap_draws": 2000
+  },
+  "odd_coverage_all_keyframes": 0.01388034788720021,
+  "object_overflow_frames": 0,
+  "adapter_error_frames": 148,
+  "exclusions": {
+    "central_difference_unavailable": 24,
+    "odd_filter": 310,
+    "none": 474
+  },
+  "metrics": {
+    "H": {
+      "acceptance": {
+        "n": 244,
+        "denominator": 474,
+        "rate": 0.5147679324894515,
+        "ci95": [
+          0.3756475997881458,
+          0.6561539150589525
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 194,
+        "denominator": 437,
+        "rate": 0.4439359267734554,
+        "ci95": [
+          0.3015128214629808,
+          0.5967629694929741
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 0,
+        "denominator": 31,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 1996
+      },
+      "false_accept_per_accept": {
+        "n": 0,
+        "denominator": 244,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 6
+    },
+    "T": {
+      "acceptance": {
+        "n": 250,
+        "denominator": 474,
+        "rate": 0.5274261603375527,
+        "ci95": [
+          0.39185605731276846,
+          0.6635023584905658
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 188,
+        "denominator": 438,
+        "rate": 0.4292237442922374,
+        "ci95": [
+          0.2893463876080863,
+          0.5761008410028562
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 0,
+        "denominator": 30,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 1983
+      },
+      "false_accept_per_accept": {
+        "n": 0,
+        "denominator": 250,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 6
+    },
+    "U": {
+      "acceptance": {
+        "n": 130,
+        "denominator": 253,
+        "rate": 0.5138339920948617,
+        "ci95": [
+          0.279261583011583,
+          0.7139515053597989
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 90,
+        "denominator": 220,
+        "rate": 0.4090909090909091,
+        "ci95": [
+          0.2227947808940446,
+          0.6482166337935565
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 0,
+        "denominator": 33,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 1996
+      },
+      "false_accept_per_accept": {
+        "n": 0,
+        "denominator": 130,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 0,
+      "recall": {
+        "n": 33,
+        "denominator": 33,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "valid_bootstrap_draws": 1996
+      }
+    }
+  },
+  "by_speed": {
+    "0-2": {
+      "H": {
+        "acceptance": {
+          "n": 24,
+          "denominator": 75,
+          "rate": 0.32,
+          "ci95": [
+            0.07277874564459931,
+            0.5951562499999994
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_reject": {
+          "n": 39,
+          "denominator": 62,
+          "rate": 0.6290322580645161,
+          "ci95": [
+            0.2857142857142857,
+            0.8936884236453199
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 7,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1746
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 24,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1956
+        },
+        "oracle_unknown": 6
+      },
+      "T": {
+        "acceptance": {
+          "n": 28,
+          "denominator": 75,
+          "rate": 0.37333333333333335,
+          "ci95": [
+            0.18997198879551822,
+            0.6111111111111112
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_reject": {
+          "n": 34,
+          "denominator": 62,
+          "rate": 0.5483870967741935,
+          "ci95": [
+            0.25,
+            0.7165024630541863
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 7,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1746
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1956
+        },
+        "oracle_unknown": 6
+      },
+      "U": {
+        "acceptance": {
+          "n": 27,
+          "denominator": 43,
+          "rate": 0.627906976744186,
+          "ci95": [
+            0.11617647058823533,
+            0.8214285714285714
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_reject": {
+          "n": 10,
+          "denominator": 37,
+          "rate": 0.2702702702702703,
+          "ci95": [
+            0.11764705882352941,
+            0.7827777777777758
+          ],
+          "valid_bootstrap_draws": 1992
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 6,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1746
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 27,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1956
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 6,
+          "denominator": 6,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1746
+        }
+      }
+    },
+    "2-5": {
+      "H": {
+        "acceptance": {
+          "n": 52,
+          "denominator": 94,
+          "rate": 0.5531914893617021,
+          "ci95": [
+            0.279388495904691,
+            0.7681159420289855
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 35,
+          "denominator": 87,
+          "rate": 0.40229885057471265,
+          "ci95": [
+            0.18965063520871142,
+            0.6865904850746267
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 7,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1970
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 52,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 52,
+          "denominator": 94,
+          "rate": 0.5531914893617021,
+          "ci95": [
+            0.279388495904691,
+            0.7681159420289855
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 36,
+          "denominator": 88,
+          "rate": 0.4090909090909091,
+          "ci95": [
+            0.19508261211644376,
+            0.6912047511312216
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 6,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1920
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 52,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 23,
+          "denominator": 53,
+          "rate": 0.4339622641509434,
+          "ci95": [
+            0.10336206896551725,
+            0.7191791510611731
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 21,
+          "denominator": 44,
+          "rate": 0.4772727272727273,
+          "ci95": [
+            0.19349691146190803,
+            0.8518518518518519
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 9,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1970
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 23,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1995
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 9,
+          "denominator": 9,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1970
+        }
+      }
+    },
+    "5-10": {
+      "H": {
+        "acceptance": {
+          "n": 168,
+          "denominator": 305,
+          "rate": 0.5508196721311476,
+          "ci95": [
+            0.38151625369402137,
+            0.7155753241718003
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 120,
+          "denominator": 288,
+          "rate": 0.4166666666666667,
+          "ci95": [
+            0.24631298216007716,
+            0.5980779874545359
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 17,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1908
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 168,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 170,
+          "denominator": 305,
+          "rate": 0.5573770491803278,
+          "ci95": [
+            0.3882470778924299,
+            0.7234675472333736
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 118,
+          "denominator": 288,
+          "rate": 0.4097222222222222,
+          "ci95": [
+            0.23728185812931576,
+            0.594577752740714
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 17,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1908
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 170,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 80,
+          "denominator": 157,
+          "rate": 0.5095541401273885,
+          "ci95": [
+            0.22605493764745535,
+            0.7572490460538742
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 59,
+          "denominator": 139,
+          "rate": 0.4244604316546763,
+          "ci95": [
+            0.1935110019226661,
+            0.7213342440801456
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 18,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1908
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 80,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1999
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 18,
+          "denominator": 18,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1908
+        }
+      }
+    }
+  },
+  "by_object_count": {
+    "0": {
+      "H": {
+        "acceptance": {
+          "n": 117,
+          "denominator": 120,
+          "rate": 0.975,
+          "ci95": [
+            0.9479714864981451,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 2,
+          "denominator": 118,
+          "rate": 0.01694915254237288,
+          "ci95": [
+            0.0,
+            0.0379746835443038
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 117,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 2
+      },
+      "T": {
+        "acceptance": {
+          "n": 116,
+          "denominator": 120,
+          "rate": 0.9666666666666667,
+          "ci95": [
+            0.8988654318820225,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1,
+          "denominator": 117,
+          "rate": 0.008547008547008548,
+          "ci95": [
+            0.0,
+            0.02830188679245283
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 116,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 3
+      },
+      "U": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        }
+      }
+    },
+    "1-4": {
+      "H": {
+        "acceptance": {
+          "n": 127,
+          "denominator": 330,
+          "rate": 0.38484848484848483,
+          "ci95": [
+            0.20185938382269902,
+            0.5778415046693348
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 171,
+          "denominator": 298,
+          "rate": 0.5738255033557047,
+          "ci95": [
+            0.3780255270773047,
+            0.7701896275486688
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1996
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 127,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 4
+      },
+      "T": {
+        "acceptance": {
+          "n": 134,
+          "denominator": 330,
+          "rate": 0.40606060606060607,
+          "ci95": [
+            0.22468319578430826,
+            0.5953497509474137
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 166,
+          "denominator": 300,
+          "rate": 0.5533333333333333,
+          "ci95": [
+            0.36448163846715076,
+            0.7465289668949772
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 27,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1983
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 134,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 3
+      },
+      "U": {
+        "acceptance": {
+          "n": 130,
+          "denominator": 232,
+          "rate": 0.5603448275862069,
+          "ci95": [
+            0.31544268885564697,
+            0.7640495112816297
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 73,
+          "denominator": 203,
+          "rate": 0.35960591133004927,
+          "ci95": [
+            0.1746031746031746,
+            0.6013525326025325
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 29,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1996
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 130,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 29,
+          "denominator": 29,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1996
+        }
+      }
+    },
+    "5-16": {
+      "H": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 24,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1959
+        },
+        "false_reject": {
+          "n": 21,
+          "denominator": 21,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1959
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1739
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 24,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1959
+        },
+        "false_reject": {
+          "n": 21,
+          "denominator": 21,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1959
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1739
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 21,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1959
+        },
+        "false_reject": {
+          "n": 17,
+          "denominator": 17,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1890
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 4,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1739
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 4,
+          "denominator": 4,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1739
+        }
+      }
+    },
+    "17+": {
+      "H": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        }
+      }
+    }
+  },
+  "false_accept_cases": [],
+  "bootstrap": {
+    "unit": "scene",
+    "replicates": 2000,
+    "seed": 20261104
+  },
+  "provenance": {
+    "code_sha256": "94fbdc8fdfe70df04a3146a9fd9c958719d8cd33fa2bf9682ec47b26f78916ed",
+    "protocol_sha256": "6ff1c14093f04a471c2480de9a205edbbc1acf442d0652c72af85c0f5026b17b",
+    "checkpoint_sha256": "a154d9978c5f75538a53e108ecaf5863e9cb35bc2d7263e1ea8a491243e29e14",
+    "limit": 0,
+    "dataset": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\eval\\data\\nuscenes"
+  },
+  "rtl_frame_count": 300,
+  "utc": "2026-11-04T23:51:05.221536+00:00",
+  "runtime_seconds": 36232.42200000002
+}

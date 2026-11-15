@@ -1,0 +1,22 @@
+[
+  [
+    "lost_wraps",
+    "reg_lost != LPARA_LOST_MAX",
+    "1'b1"
+  ],
+  [
+    "invalid_event_appended",
+    "if (w_event_ok) begin",
+    "if (1'b1) begin"
+  ],
+  [
+    "head_never_advances",
+    "w_head_nxt = $bits(w_head_nxt)'(reg_head + 10'd1);",
+    "w_head_nxt = 10'd0;"
+  ],
+  [
+    "collision_returns_new",
+    "w_log_data_nxt = reg_events[w_rd_addr];",
+    "w_log_data_nxt = (w_wr_en && w_wr_addr == w_rd_addr) ? i_req_data : reg_events[w_rd_addr];"
+  ]
+]

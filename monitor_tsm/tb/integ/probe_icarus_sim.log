@@ -1,0 +1,12 @@
+COMMAND: vvp -i C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\probe_csr.vvp
+probe time=5000 rst=0 reg=0 nxt=0 ar=0 data=00000000
+probe time=15000 rst=0 reg=0 nxt=0 ar=0 data=00000000
+probe time=25000 rst=0 reg=0 nxt=0 ar=0 data=00000000
+probe time=35000 rst=0 reg=0 nxt=0 ar=0 data=00000000
+probe time=45000 rst=1 reg=0 nxt=0 ar=1 data=00000000
+probe time=55000 rst=1 reg=0 nxt=0 ar=1 data=00000000
+probe time=65000 rst=1 reg=0 nxt=1 ar=1 data=00000000
+probe time=75000 rst=1 reg=1 nxt=1 ar=0 data=00000010
+probe time=85000 rst=1 reg=1 nxt=1 ar=0 data=00000010
+PASS CSR probe
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_probe_csr.sv:50: $finish called at 90000 (1ps)

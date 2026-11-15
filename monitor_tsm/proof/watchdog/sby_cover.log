@@ -1,0 +1,49 @@
+SBY 14:37:51 [wd_cover] Removing directory '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd_cover'.
+SBY 14:37:51 [wd_cover] Copy '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/stubs.sv' to '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd_cover/src/stubs.sv'.
+SBY 14:37:51 [wd_cover] Copy '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/engine_cov.sv' to '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd_cover/src/engine_cov.sv'.
+SBY 14:37:52 [wd_cover] engine_0: smtbmc yices
+SBY 14:37:52 [wd_cover] base: starting process "cd wd_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 14:53:32 [wd_cover] base: finished (returncode=0)
+SBY 14:53:32 [wd_cover] prep: starting process "cd wd_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 15:03:05 [wd_cover] prep: finished (returncode=0)
+SBY 15:03:05 [wd_cover] smt2: starting process "cd wd_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:03:08 [wd_cover] smt2: finished (returncode=0)
+SBY 15:03:08 [wd_cover] engine_0: starting process "cd wd_cover; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 40  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 15:03:08 [wd_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 15:03:14 [wd_cover] engine_0: ##   0:00:05  Checking cover reachability in step 0..
+SBY 15:03:17 [wd_cover] engine_0: ##   0:00:08  Checking cover reachability in step 1..
+SBY 15:03:21 [wd_cover] engine_0: ##   0:00:13  Checking cover reachability in step 2..
+SBY 15:03:25 [wd_cover] engine_0: ##   0:00:16  Checking cover reachability in step 3..
+SBY 15:03:29 [wd_cover] engine_0: ##   0:00:21  Checking cover reachability in step 4..
+SBY 15:03:30 [wd_cover] engine_0: ##   0:00:21  Reached cover statement in step 4 at m_tsmx_engine: C1
+SBY 15:03:30 [wd_cover] engine_0: ##   0:00:21  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:03:33 [wd_cover] engine_0: ##   0:00:24  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:03:33 [wd_cover] engine_0: ##   0:00:24  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:03:34 [wd_cover] engine_0: ##   0:00:25  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:03:35 [wd_cover] engine_0: ##   0:00:26  Checking cover reachability in step 4..
+SBY 15:03:41 [wd_cover] engine_0: ##   0:00:32  Checking cover reachability in step 5..
+SBY 15:03:46 [wd_cover] engine_0: ##   0:00:37  Checking cover reachability in step 6..
+SBY 15:03:53 [wd_cover] engine_0: ##   0:00:44  Checking cover reachability in step 7..
+SBY 15:04:01 [wd_cover] engine_0: ##   0:00:52  Checking cover reachability in step 8..
+SBY 15:04:08 [wd_cover] engine_0: ##   0:00:59  Checking cover reachability in step 9..
+SBY 15:04:16 [wd_cover] engine_0: ##   0:01:07  Checking cover reachability in step 10..
+SBY 15:04:24 [wd_cover] engine_0: ##   0:01:16  Checking cover reachability in step 11..
+SBY 15:04:33 [wd_cover] engine_0: ##   0:01:24  Checking cover reachability in step 12..
+SBY 15:04:45 [wd_cover] engine_0: ##   0:01:36  Checking cover reachability in step 13..
+SBY 15:05:00 [wd_cover] engine_0: ##   0:01:51  Checking cover reachability in step 14..
+SBY 15:05:09 [wd_cover] engine_0: ##   0:02:00  Reached cover statement in step 14 at m_tsmx_engine: C2
+SBY 15:05:10 [wd_cover] engine_0: ##   0:02:01  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:05:21 [wd_cover] engine_0: ##   0:02:12  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:05:23 [wd_cover] engine_0: ##   0:02:14  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:05:24 [wd_cover] engine_0: ##   0:02:15  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:05:31 [wd_cover] engine_0: ##   0:02:22  Status: passed
+SBY 15:05:32 [wd_cover] engine_0: finished (returncode=0)
+SBY 15:05:32 [wd_cover] engine_0: Status returned by engine: pass
+SBY 15:05:32 [wd_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:27:40 (1660)
+SBY 15:05:32 [wd_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:27:20 (1640)
+SBY 15:05:32 [wd_cover] summary: engine_0 (smtbmc yices) returned pass
+SBY 15:05:32 [wd_cover] summary: cover trace: wd_cover/engine_0/trace0.vcd
+SBY 15:05:32 [wd_cover] summary:   reached cover statement m_tsmx_engine.C1 at engine_cov.sv:1568.5-1568.26 step 4
+SBY 15:05:32 [wd_cover] summary: cover trace: wd_cover/engine_0/trace1.vcd
+SBY 15:05:32 [wd_cover] summary:   reached cover statement m_tsmx_engine.C2 at engine_cov.sv:1569.5-1569.62 step 14
+SBY 15:05:32 [wd_cover] DONE (PASS, rc=0)

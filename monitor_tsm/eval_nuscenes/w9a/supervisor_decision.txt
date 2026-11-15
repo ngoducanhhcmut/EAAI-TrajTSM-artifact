@@ -1,0 +1,4 @@
+The gate mismatch (1 of 1,584 predictions, 5.96e-8 m, index 554; unmodified `hw_new` reproduces it) is FP32 rounding in the
+GRU decoder path, below the 21 ?m decoder RTL tolerance stated in the paper. Gate criterion is now: all 5,419 validation
+predictions within 1e-6 m of `pred_hw_new.npy` AND every mismatch listed with its index and size. Encoder bit-exactness is not
+affected. Record this decision verbatim in the report.

@@ -1,0 +1,4 @@
+PASS top CSR/AXI smoke
+ASSERT_FAIL 11 CMD_OVERRIDE:spec5.3/6.1/10.1/15 job=0 cycle=198
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_m_tsmx_top.sv:168: assertion failure
+       Time: 1975000  Scope: tb_m_tsmx_top.ck

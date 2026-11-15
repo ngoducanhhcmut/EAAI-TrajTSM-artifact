@@ -1,0 +1,48 @@
+{
+  "head": {
+    "text": "Executor issue held stable; ACK ID mismatch ignored, then timeout override"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "cmd_valid",
+      "wave": "011110000000"
+    },
+    {
+      "name": "cmd_ready",
+      "wave": "000010000000"
+    },
+    {
+      "name": "seq",
+      "wave": "=...........",
+      "data": [
+        "7"
+      ]
+    },
+    {
+      "name": "ack_valid",
+      "wave": "000000100000"
+    },
+    {
+      "name": "ack_seq",
+      "wave": "=...........",
+      "data": [
+        "6"
+      ]
+    },
+    {
+      "name": "override",
+      "wave": "000000000011"
+    },
+    {
+      "name": "heartbeat",
+      "wave": "111111111111"
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

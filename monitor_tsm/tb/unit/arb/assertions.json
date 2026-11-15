@@ -1,0 +1,326 @@
+[
+  {
+    "id": 0,
+    "name": "reset_ready",
+    "ante": "!rst",
+    "condition": "ready === 1'b0",
+    "net": "ready",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 1,
+    "name": "reset_valid",
+    "ante": "!rst",
+    "condition": "valid === 1'b0",
+    "net": "valid",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 2,
+    "name": "reset_payload",
+    "ante": "!rst",
+    "condition": "data === 1997'd0",
+    "net": "data",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 3,
+    "name": "reset_brake",
+    "ante": "!rst",
+    "condition": "brake === 1'b1",
+    "net": "brake",
+    "bit": 0,
+    "clause": "5.5.13"
+  },
+  {
+    "id": 4,
+    "name": "invalid_zero",
+    "ante": "rst && !raw_valid",
+    "condition": "data === 1997'd0",
+    "net": "data",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 5,
+    "name": "no_overlap",
+    "ante": "rst && raw_valid",
+    "condition": "ready === 1'b0",
+    "net": "ready",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 6,
+    "name": "latency_one",
+    "ante": "take",
+    "condition": "valid === 1'b1",
+    "net": "valid",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 7,
+    "name": "whole_command",
+    "ante": "take",
+    "condition": "data === pending_exp",
+    "net": "data",
+    "bit": 0,
+    "clause": "5.5.13/9.2"
+  },
+  {
+    "id": 8,
+    "name": "hold_valid",
+    "ante": "rst && pv && !pc",
+    "condition": "valid === 1'b1",
+    "net": "valid",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 9,
+    "name": "hold_payload",
+    "ante": "rst && pv && !pc",
+    "condition": "data === pd",
+    "net": "data",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 10,
+    "name": "consume_valid",
+    "ante": "rst && pv && pc",
+    "condition": "valid === 1'b0",
+    "net": "valid",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 11,
+    "name": "consume_zero",
+    "ante": "rst && pv && pc",
+    "condition": "data === 1997'd0",
+    "net": "data",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 12,
+    "name": "idle_ready",
+    "ante": "rst && !raw_valid",
+    "condition": "ready === 1'b1",
+    "net": "ready",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 13,
+    "name": "idle_no_spurious_response",
+    "ante": "rst && !pv && !take",
+    "condition": "valid === 1'b0",
+    "net": "valid",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 14,
+    "name": "accepted_busy",
+    "ante": "take",
+    "condition": "ready === 1'b0",
+    "net": "ready",
+    "bit": 0,
+    "clause": "5.3"
+  },
+  {
+    "id": 15,
+    "name": "brake_model",
+    "ante": "1",
+    "condition": "brake === (!rst || ov || model_brake)",
+    "net": "brake",
+    "bit": 0,
+    "clause": "5.5.13/6.2"
+  },
+  {
+    "id": 16,
+    "name": "override_immediate",
+    "ante": "ov",
+    "condition": "brake === 1'b1",
+    "net": "brake",
+    "bit": 0,
+    "clause": "6.2"
+  },
+  {
+    "id": 17,
+    "name": "sticky_revocation",
+    "ante": "rst && revoked && !ov",
+    "condition": "brake === 1'b1",
+    "net": "brake",
+    "bit": 0,
+    "clause": "6.2"
+  },
+  {
+    "id": 18,
+    "name": "override_frame_stable",
+    "ante": "rst && pv && !pc && ov",
+    "condition": "data === pd",
+    "net": "data",
+    "bit": 0,
+    "clause": "6.2"
+  },
+  {
+    "id": 19,
+    "name": "reserved_zero",
+    "ante": "take",
+    "condition": "data[1996:1897] === 100'd0",
+    "net": "data",
+    "bit": 1996,
+    "clause": "9.2"
+  },
+  {
+    "id": 20,
+    "name": "field_source",
+    "ante": "take",
+    "condition": "data[1896:1894] === pending_exp[1896:1894]",
+    "net": "data",
+    "bit": 1894,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 21,
+    "name": "field_mode",
+    "ante": "take",
+    "condition": "data[1893:1891] === pending_exp[1893:1891]",
+    "net": "data",
+    "bit": 1891,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 22,
+    "name": "field_label",
+    "ante": "take",
+    "condition": "data[1890:1883] === pending_exp[1890:1883]",
+    "net": "data",
+    "bit": 1883,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 23,
+    "name": "field_candidate",
+    "ante": "take",
+    "condition": "data[1882:1875] === pending_exp[1882:1875]",
+    "net": "data",
+    "bit": 1875,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 24,
+    "name": "field_seq",
+    "ante": "take",
+    "condition": "data[1874:1843] === pending_exp[1874:1843]",
+    "net": "data",
+    "bit": 1843,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 25,
+    "name": "field_apply",
+    "ante": "take",
+    "condition": "data[1842:1811] === pending_exp[1842:1811]",
+    "net": "data",
+    "bit": 1811,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 26,
+    "name": "field_expiry",
+    "ante": "take",
+    "condition": "data[1810:1779] === pending_exp[1810:1779]",
+    "net": "data",
+    "bit": 1779,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 27,
+    "name": "field_plan",
+    "ante": "take",
+    "condition": "data[1778:1219] === pending_exp[1778:1219]",
+    "net": "data",
+    "bit": 1219,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 28,
+    "name": "field_certificate",
+    "ante": "take",
+    "condition": "data[1218:2] === pending_exp[1218:2]",
+    "net": "data",
+    "bit": 2,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 29,
+    "name": "field_parking",
+    "ante": "take",
+    "condition": "data[1:1] === pending_exp[1:1]",
+    "net": "data",
+    "bit": 1,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 30,
+    "name": "field_override",
+    "ante": "take",
+    "condition": "data[0:0] === pending_exp[0:0]",
+    "net": "data",
+    "bit": 0,
+    "clause": "9.2/5.5.13"
+  },
+  {
+    "id": 31,
+    "name": "L3_fixed15",
+    "ante": "take && pending_exp[1896:1894]==3",
+    "condition": "data[1882:1875] === 8'd15",
+    "net": "data",
+    "bit": 1875,
+    "clause": "REQ-TSMX-024"
+  },
+  {
+    "id": 32,
+    "name": "nominal_record",
+    "ante": "take && pending_exp[1896:1894]==0",
+    "condition": "data[1778:1219] === pending_exp[1778:1219]",
+    "net": "data",
+    "bit": 1219,
+    "clause": "5.5.13"
+  },
+  {
+    "id": 33,
+    "name": "backup_epoch",
+    "ante": "take && pending_exp[1896:1894]==1",
+    "condition": "data[1842:1811] === pending_exp[1842:1811]",
+    "net": "data",
+    "bit": 1811,
+    "clause": "5.5.13"
+  },
+  {
+    "id": 34,
+    "name": "fallback_candidate",
+    "ante": "take && pending_exp[1896:1894]==2",
+    "condition": "data[1882:1875] === pending_exp[1882:1875]",
+    "net": "data",
+    "bit": 1875,
+    "clause": "5.5.13"
+  },
+  {
+    "id": 35,
+    "name": "parking_hold",
+    "ante": "take && pending_exp[1896:1894]==4",
+    "condition": "data[1:1] === pending_exp[1:1]",
+    "net": "data",
+    "bit": 1,
+    "clause": "5.5.13"
+  }
+]

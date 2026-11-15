@@ -1,0 +1,2 @@
+check rc=0
+control8 rc=0

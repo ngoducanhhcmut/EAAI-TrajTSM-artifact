@@ -1,0 +1,74 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_8/Vtb_m_tsmx_top +LIMIT=128 +FILE=vectors.mem +ALLOW_INACTIVE
+PASS top CSR/AXI smoke
+JOB 0 PASS cycles=13291
+TIMING job=0 fallback=ffff tail=ffff max_rows=61 stream_hits=1446 objects=0
+JOB 1 PASS cycles=5936
+TIMING job=1 fallback=ffff tail=0000 max_rows=64 stream_hits=660 objects=0
+JOB 2 PASS cycles=9959
+TIMING job=2 fallback=ffff tail=ffff max_rows=38 stream_hits=922 objects=0
+JOB 3 PASS cycles=5498
+TIMING job=3 fallback=ffff tail=0000 max_rows=56 stream_hits=579 objects=0
+JOB 4 PASS cycles=10200
+TIMING job=4 fallback=ffff tail=ffff max_rows=38 stream_hits=993 objects=0
+JOB 5 PASS cycles=6096
+TIMING job=5 fallback=ffff tail=0000 max_rows=62 stream_hits=711 objects=0
+JOB 6 PASS cycles=13280
+TIMING job=6 fallback=ffff tail=ffff max_rows=65 stream_hits=1438 objects=0
+JOB 7 PASS cycles=4818
+TIMING job=7 fallback=ffff tail=0000 max_rows=42 stream_hits=522 objects=0
+JOB 8 PASS cycles=12321
+TIMING job=8 fallback=ffff tail=ffff max_rows=56 stream_hits=1299 objects=0
+JOB 9 PASS cycles=4178
+TIMING job=9 fallback=ffff tail=0000 max_rows=29 stream_hits=416 objects=0
+JOB 10 PASS cycles=11721
+TIMING job=10 fallback=ffff tail=ffff max_rows=53 stream_hits=1207 objects=0
+JOB 11 PASS cycles=6230
+TIMING job=11 fallback=ffff tail=0000 max_rows=70 stream_hits=735 objects=0
+JOB 12 PASS cycles=8601
+TIMING job=12 fallback=ffff tail=ffff max_rows=25 stream_hits=762 objects=0
+JOB 13 PASS cycles=5858
+TIMING job=13 fallback=ffff tail=0000 max_rows=63 stream_hits=690 objects=0
+JOB 14 PASS cycles=12921
+TIMING job=14 fallback=ffff tail=ffff max_rows=64 stream_hits=1389 objects=0
+JOB 15 PASS cycles=4418
+TIMING job=15 fallback=ffff tail=0000 max_rows=36 stream_hits=460 objects=0
+JOB 16 PASS cycles=10399
+TIMING job=16 fallback=ffff tail=ffff max_rows=42 stream_hits=1028 objects=0
+JOB 17 PASS cycles=4137
+TIMING job=17 fallback=ffff tail=0000 max_rows=30 stream_hits=418 objects=0
+JOB 18 PASS cycles=13963
+TIMING job=18 fallback=ffff tail=ffff max_rows=71 stream_hits=1546 objects=0
+JOB 19 PASS cycles=4174
+TIMING job=19 fallback=ffff tail=0000 max_rows=31 stream_hits=424 objects=0
+JOB 20 PASS cycles=9997
+TIMING job=20 fallback=ffff tail=ffff max_rows=39 stream_hits=965 objects=0
+JOB 21 PASS cycles=5018
+TIMING job=21 fallback=ffff tail=0000 max_rows=47 stream_hits=556 objects=0
+JOB 22 PASS cycles=9837
+TIMING job=22 fallback=ffff tail=ffff max_rows=36 stream_hits=945 objects=0
+JOB 23 PASS cycles=6218
+TIMING job=23 fallback=ffff tail=0000 max_rows=69 stream_hits=741 objects=0
+JOB 24 PASS cycles=11763
+TIMING job=24 fallback=ffff tail=ffff max_rows=53 stream_hits=1221 objects=0
+JOB 25 PASS cycles=4658
+TIMING job=25 fallback=ffff tail=0000 max_rows=40 stream_hits=500 objects=0
+JOB 26 PASS cycles=13003
+TIMING job=26 fallback=ffff tail=ffff max_rows=64 stream_hits=1403 objects=0
+JOB 27 PASS cycles=4962
+TIMING job=27 fallback=ffff tail=0000 max_rows=47 stream_hits=557 objects=0
+JOB 28 PASS cycles=10203
+TIMING job=28 fallback=ffff tail=ffff max_rows=39 stream_hits=998 objects=0
+JOB 29 PASS cycles=5217
+TIMING job=29 fallback=ffff tail=0000 max_rows=51 stream_hits=588 objects=0
+JOB 30 PASS cycles=11003
+TIMING job=30 fallback=ffff tail=ffff max_rows=46 stream_hits=1116 objects=0
+JOB 31 PASS cycles=4258
+TIMING job=31 fallback=ffff tail=0000 max_rows=33 stream_hits=436 objects=0
+JOB 32 PASS cycles=9081
+TIMING job=32 fallback=ffff tail=ffff max_rows=29 stream_hits=832 objects=0
+RSP job=33 actual=006820063d expected=006c3c0a3d reason=3
+ASSERT_FAIL 3 TOP_MODE:spec5.3/6.1/10.1/15 job=33 cycle=282074
+[2820740000] %Fatal: tb_m_tsmx_top.sv:168: Assertion failed in tb_m_tsmx_top.ck: assertion failure
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:168: Verilog $stop
+Aborting...
+

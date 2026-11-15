@@ -1,0 +1,18 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\source_mutants\range.vvp +START=336 +LIMIT=45
+JOB 336 cycles=2 rows=0
+JOB 337 cycles=2 rows=0
+JOB 338 cycles=2 rows=0
+JOB 339 cycles=1314 rows=36
+JOB 340 cycles=1314 rows=36
+JOB 341 cycles=2 rows=0
+JOB 342 cycles=2 rows=0
+JOB 343 cycles=2 rows=0
+JOB 344 cycles=2 rows=0
+JOB 345 cycles=718 rows=22
+JOB 346 cycles=752 rows=22
+JOB 347 cycles=1314 rows=36
+ASSERT_FAIL 20 S5_3_B4_row_vlo job=348 cycle=6003 actual=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000989681 expected=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\tb_m_tsmx_mrmgen.sv:42: R-025 assertion failure
+       Time: 66039000  Scope: tb_m_tsmx_mrmgen.check
+
+EXIT 1

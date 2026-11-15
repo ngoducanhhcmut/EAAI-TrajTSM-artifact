@@ -1,0 +1,5 @@
+COMMAND: vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\sim.vvp +MUTANT=48
+INJECT 48 exact_rdata
+ASSERT_FAIL 48 exact_rdata cycle=1
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\tb_m_tsmx_csr.sv:835: R-025 assertion failed
+       Time: 6000  Scope: tb_m_tsmx_csr.tick

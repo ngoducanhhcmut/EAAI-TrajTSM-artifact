@@ -1,0 +1,648 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_1/Vtb_m_tsmx_top +LIMIT=300 +FILE=vectors.mem
+PASS top CSR/AXI smoke
+JOB 0 PASS cycles=1239488 xerr_checks=0
+TIMING job=0 fallback=ffff tail=ffff max_rows=61 stream_hits=1446 objects=0
+JOB 1 PASS cycles=573013 xerr_checks=0
+TIMING job=1 fallback=ffff tail=0000 max_rows=62 stream_hits=653 objects=0
+JOB 2 PASS cycles=820805 xerr_checks=0
+TIMING job=2 fallback=ffff tail=ffff max_rows=36 stream_hits=901 objects=0
+JOB 3 PASS cycles=493871 xerr_checks=0
+TIMING job=3 fallback=ffff tail=0000 max_rows=53 stream_hits=551 objects=0
+JOB 4 PASS cycles=895149 xerr_checks=0
+TIMING job=4 fallback=ffff tail=ffff max_rows=38 stream_hits=997 objects=0
+JOB 5 PASS cycles=645943 xerr_checks=0
+TIMING job=5 fallback=ffff tail=0000 max_rows=64 stream_hits=749 objects=0
+JOB 6 PASS cycles=1253023 xerr_checks=0
+TIMING job=6 fallback=ffff tail=ffff max_rows=64 stream_hits=1464 objects=0
+JOB 7 PASS cycles=479359 xerr_checks=0
+TIMING job=7 fallback=ffff tail=0000 max_rows=41 stream_hits=531 objects=0
+JOB 8 PASS cycles=1159680 xerr_checks=0
+TIMING job=8 fallback=ffff tail=ffff max_rows=56 stream_hits=1343 objects=0
+JOB 9 PASS cycles=432936 xerr_checks=0
+TIMING job=9 fallback=ffff tail=0000 max_rows=33 stream_hits=470 objects=0
+JOB 10 PASS cycles=1002448 xerr_checks=0
+TIMING job=10 fallback=ffff tail=ffff max_rows=51 stream_hits=1138 objects=0
+JOB 11 PASS cycles=579764 xerr_checks=0
+TIMING job=11 fallback=ffff tail=0000 max_rows=67 stream_hits=663 objects=0
+JOB 12 PASS cycles=742976 xerr_checks=0
+TIMING job=12 fallback=ffff tail=ffff max_rows=25 stream_hits=799 objects=0
+JOB 13 PASS cycles=617702 xerr_checks=0
+TIMING job=13 fallback=ffff tail=0000 max_rows=62 stream_hits=712 objects=0
+JOB 14 PASS cycles=1120303 xerr_checks=0
+TIMING job=14 fallback=ffff tail=ffff max_rows=61 stream_hits=1291 objects=0
+JOB 15 PASS cycles=398727 xerr_checks=0
+TIMING job=15 fallback=ffff tail=0000 max_rows=34 stream_hits=426 objects=0
+JOB 16 PASS cycles=864148 xerr_checks=0
+TIMING job=16 fallback=ffff tail=ffff max_rows=40 stream_hits=956 objects=0
+JOB 17 PASS cycles=408584 xerr_checks=0
+TIMING job=17 fallback=ffff tail=0000 max_rows=30 stream_hits=439 objects=0
+JOB 18 PASS cycles=1375844 xerr_checks=0
+TIMING job=18 fallback=ffff tail=ffff max_rows=71 stream_hits=1625 objects=0
+JOB 19 PASS cycles=394030 xerr_checks=0
+TIMING job=19 fallback=ffff tail=0000 max_rows=30 stream_hits=420 objects=0
+JOB 20 PASS cycles=810889 xerr_checks=0
+TIMING job=20 fallback=ffff tail=ffff max_rows=36 stream_hits=887 objects=0
+JOB 21 PASS cycles=485950 xerr_checks=0
+TIMING job=21 fallback=ffff tail=0000 max_rows=45 stream_hits=540 objects=0
+JOB 22 PASS cycles=887750 xerr_checks=0
+TIMING job=22 fallback=ffff tail=ffff max_rows=36 stream_hits=988 objects=0
+JOB 23 PASS cycles=712425 xerr_checks=0
+TIMING job=23 fallback=ffff tail=0000 max_rows=74 stream_hits=835 objects=0
+JOB 24 PASS cycles=1027002 xerr_checks=0
+TIMING job=24 fallback=ffff tail=ffff max_rows=52 stream_hits=1169 objects=0
+JOB 25 PASS cycles=462869 xerr_checks=0
+TIMING job=25 fallback=ffff tail=0000 max_rows=39 stream_hits=510 objects=0
+JOB 26 PASS cycles=1158451 xerr_checks=0
+TIMING job=26 fallback=ffff tail=ffff max_rows=62 stream_hits=1341 objects=0
+JOB 27 PASS cycles=540217 xerr_checks=0
+TIMING job=27 fallback=ffff tail=0000 max_rows=48 stream_hits=612 objects=0
+JOB 28 PASS cycles=946732 xerr_checks=0
+TIMING job=28 fallback=ffff tail=ffff max_rows=39 stream_hits=1065 objects=0
+JOB 29 PASS cycles=468071 xerr_checks=0
+TIMING job=29 fallback=ffff tail=0000 max_rows=48 stream_hits=516 objects=0
+JOB 30 PASS cycles=1089756 xerr_checks=0
+TIMING job=30 fallback=ffff tail=ffff max_rows=48 stream_hits=1250 objects=0
+JOB 31 PASS cycles=390099 xerr_checks=0
+TIMING job=31 fallback=ffff tail=0000 max_rows=31 stream_hits=415 objects=0
+JOB 32 PASS cycles=835241 xerr_checks=0
+TIMING job=32 fallback=ffff tail=ffff max_rows=30 stream_hits=918 objects=0
+JOB 33 PASS cycles=614255 xerr_checks=0
+TIMING job=33 fallback=ffff tail=0000 max_rows=60 stream_hits=708 objects=0
+JOB 34 PASS cycles=1310877 xerr_checks=0
+TIMING job=34 fallback=ffff tail=ffff max_rows=70 stream_hits=1539 objects=0
+JOB 35 PASS cycles=529612 xerr_checks=0
+TIMING job=35 fallback=ffff tail=0000 max_rows=49 stream_hits=597 objects=0
+JOB 36 PASS cycles=612650 xerr_checks=0
+TIMING job=36 fallback=ffff tail=0000 max_rows=62 stream_hits=696 objects=0
+JOB 37 PASS cycles=424670 xerr_checks=0
+TIMING job=37 fallback=ffff tail=0000 max_rows=34 stream_hits=460 objects=0
+JOB 38 PASS cycles=913087 xerr_checks=0
+TIMING job=38 fallback=ffff tail=ffff max_rows=44 stream_hits=1022 objects=0
+JOB 39 PASS cycles=476960 xerr_checks=0
+TIMING job=39 fallback=ffff tail=0000 max_rows=43 stream_hits=528 objects=0
+JOB 40 PASS cycles=976808 xerr_checks=0
+TIMING job=40 fallback=ffff tail=ffff max_rows=52 stream_hits=1104 objects=0
+JOB 41 PASS cycles=420175 xerr_checks=0
+TIMING job=41 fallback=ffff tail=0000 max_rows=36 stream_hits=454 objects=0
+JOB 42 PASS cycles=1321365 xerr_checks=0
+TIMING job=42 fallback=ffff tail=ffff max_rows=69 stream_hits=1555 objects=0
+JOB 43 PASS cycles=632921 xerr_checks=0
+TIMING job=43 fallback=ffff tail=0000 max_rows=66 stream_hits=732 objects=0
+JOB 44 PASS cycles=915932 xerr_checks=0
+TIMING job=44 fallback=ffff tail=ffff max_rows=48 stream_hits=1024 objects=0
+JOB 45 PASS cycles=379072 xerr_checks=0
+TIMING job=45 fallback=ffff tail=0000 max_rows=28 stream_hits=401 objects=0
+JOB 46 PASS cycles=656986 xerr_checks=0
+TIMING job=46 fallback=ffff tail=0000 max_rows=64 stream_hits=754 objects=0
+JOB 47 PASS cycles=626692 xerr_checks=0
+TIMING job=47 fallback=ffff tail=0000 max_rows=63 stream_hits=724 objects=0
+JOB 48 PASS cycles=1079915 xerr_checks=0
+TIMING job=48 fallback=ffff tail=ffff max_rows=63 stream_hits=1239 objects=0
+JOB 49 PASS cycles=510563 xerr_checks=0
+TIMING job=49 fallback=ffff tail=0000 max_rows=50 stream_hits=572 objects=0
+JOB 50 PASS cycles=1300683 xerr_checks=0
+TIMING job=50 fallback=ffff tail=ffff max_rows=66 stream_hits=1528 objects=0
+JOB 51 PASS cycles=562348 xerr_checks=0
+TIMING job=51 fallback=ffff tail=0000 max_rows=51 stream_hits=640 objects=0
+JOB 52 PASS cycles=992793 xerr_checks=0
+TIMING job=52 fallback=ffff tail=ffff max_rows=43 stream_hits=1125 objects=0
+JOB 53 PASS cycles=467263 xerr_checks=0
+TIMING job=53 fallback=ffff tail=0000 max_rows=43 stream_hits=516 objects=0
+JOB 54 PASS cycles=1084654 xerr_checks=0
+TIMING job=54 fallback=ffff tail=ffff max_rows=54 stream_hits=1244 objects=0
+JOB 55 PASS cycles=469864 xerr_checks=0
+TIMING job=55 fallback=ffff tail=0000 max_rows=38 stream_hits=519 objects=0
+JOB 56 PASS cycles=784989 xerr_checks=0
+TIMING job=56 fallback=ffff tail=ffff max_rows=32 stream_hits=852 objects=0
+JOB 57 PASS cycles=597323 xerr_checks=0
+TIMING job=57 fallback=ffff tail=0000 max_rows=60 stream_hits=685 objects=0
+JOB 58 PASS cycles=1033088 xerr_checks=0
+TIMING job=58 fallback=ffff tail=ffff max_rows=46 stream_hits=1178 objects=0
+JOB 59 PASS cycles=372683 xerr_checks=0
+TIMING job=59 fallback=ffff tail=0000 max_rows=25 stream_hits=392 objects=0
+JOB 60 PASS cycles=891261 xerr_checks=0
+TIMING job=60 fallback=ffff tail=ffff max_rows=44 stream_hits=991 objects=0
+JOB 61 PASS cycles=647374 xerr_checks=0
+TIMING job=61 fallback=ffff tail=0000 max_rows=69 stream_hits=751 objects=0
+JOB 62 PASS cycles=1125353 xerr_checks=0
+TIMING job=62 fallback=ffff tail=ffff max_rows=51 stream_hits=1297 objects=0
+JOB 63 PASS cycles=669630 xerr_checks=0
+TIMING job=63 fallback=ffff tail=0000 max_rows=69 stream_hits=779 objects=0
+JOB 64 PASS cycles=1100017 xerr_checks=0
+TIMING job=64 fallback=ffff tail=ffff max_rows=53 stream_hits=1263 objects=0
+JOB 65 PASS cycles=429830 xerr_checks=0
+TIMING job=65 fallback=ffff tail=0000 max_rows=40 stream_hits=467 objects=0
+JOB 66 PASS cycles=1124705 xerr_checks=0
+TIMING job=66 fallback=ffff tail=ffff max_rows=50 stream_hits=1298 objects=0
+JOB 67 PASS cycles=633847 xerr_checks=0
+TIMING job=67 fallback=ffff tail=0000 max_rows=66 stream_hits=734 objects=0
+JOB 68 PASS cycles=748785 xerr_checks=0
+TIMING job=68 fallback=ffff tail=ffff max_rows=27 stream_hits=805 objects=0
+JOB 69 PASS cycles=517920 xerr_checks=0
+TIMING job=69 fallback=ffff tail=0000 max_rows=47 stream_hits=582 objects=0
+JOB 70 PASS cycles=727715 xerr_checks=0
+TIMING job=70 fallback=ffff tail=ffff max_rows=25 stream_hits=780 objects=0
+JOB 71 PASS cycles=462204 xerr_checks=0
+TIMING job=71 fallback=ffff tail=0000 max_rows=43 stream_hits=509 objects=0
+JOB 72 PASS cycles=1073829 xerr_checks=0
+TIMING job=72 fallback=ffff tail=ffff max_rows=51 stream_hits=1230 objects=0
+JOB 73 PASS cycles=355890 xerr_checks=0
+TIMING job=73 fallback=ffff tail=0000 max_rows=25 stream_hits=371 objects=0
+JOB 74 PASS cycles=1064074 xerr_checks=0
+TIMING job=74 fallback=ffff tail=ffff max_rows=56 stream_hits=1217 objects=0
+JOB 75 PASS cycles=367018 xerr_checks=0
+TIMING job=75 fallback=ffff tail=0000 max_rows=26 stream_hits=385 objects=0
+JOB 76 PASS cycles=770493 xerr_checks=0
+TIMING job=76 fallback=ffff tail=ffff max_rows=32 stream_hits=834 objects=0
+JOB 77 PASS cycles=383146 xerr_checks=0
+TIMING job=77 fallback=ffff tail=0000 max_rows=30 stream_hits=405 objects=0
+JOB 78 PASS cycles=776722 xerr_checks=0
+TIMING job=78 fallback=ffff tail=ffff max_rows=30 stream_hits=842 objects=0
+JOB 79 PASS cycles=570471 xerr_checks=0
+TIMING job=79 fallback=ffff tail=0000 max_rows=52 stream_hits=651 objects=0
+JOB 80 PASS cycles=821571 xerr_checks=0
+TIMING job=80 fallback=ffff tail=ffff max_rows=38 stream_hits=902 objects=0
+JOB 81 PASS cycles=451783 xerr_checks=0
+TIMING job=81 fallback=ffff tail=0000 max_rows=45 stream_hits=495 objects=0
+JOB 82 PASS cycles=1020571 xerr_checks=0
+TIMING job=82 fallback=ffff tail=ffff max_rows=43 stream_hits=1161 objects=0
+JOB 83 PASS cycles=662593 xerr_checks=0
+TIMING job=83 fallback=ffff tail=0000 max_rows=70 stream_hits=771 objects=0
+JOB 84 PASS cycles=814012 xerr_checks=0
+TIMING job=84 fallback=ffff tail=ffff max_rows=38 stream_hits=892 objects=0
+JOB 85 PASS cycles=354198 xerr_checks=0
+TIMING job=85 fallback=ffff tail=0000 max_rows=23 stream_hits=368 objects=0
+JOB 86 PASS cycles=698001 xerr_checks=0
+TIMING job=86 fallback=ffff tail=ffff max_rows=23 stream_hits=742 objects=0
+JOB 87 PASS cycles=494940 xerr_checks=0
+TIMING job=87 fallback=ffff tail=0000 max_rows=45 stream_hits=552 objects=0
+JOB 88 PASS cycles=1090378 xerr_checks=0
+TIMING job=88 fallback=ffff tail=ffff max_rows=64 stream_hits=1252 objects=0
+JOB 89 PASS cycles=587003 xerr_checks=0
+TIMING job=89 fallback=ffff tail=0000 max_rows=55 stream_hits=671 objects=0
+JOB 90 PASS cycles=835502 xerr_checks=0
+TIMING job=90 fallback=ffff tail=ffff max_rows=31 stream_hits=919 objects=0
+JOB 91 PASS cycles=616532 xerr_checks=0
+TIMING job=91 fallback=ffff tail=0000 max_rows=60 stream_hits=711 objects=0
+JOB 92 PASS cycles=624135 xerr_checks=0
+TIMING job=92 fallback=ffff tail=ffff max_rows=22 stream_hits=726 objects=0
+JOB 93 PASS cycles=622500 xerr_checks=0
+TIMING job=93 fallback=ffff tail=0000 max_rows=60 stream_hits=718 objects=0
+JOB 94 PASS cycles=1381517 xerr_checks=0
+TIMING job=94 fallback=ffff tail=ffff max_rows=70 stream_hits=1633 objects=0
+JOB 95 PASS cycles=646810 xerr_checks=0
+TIMING job=95 fallback=ffff tail=0000 max_rows=67 stream_hits=750 objects=0
+JOB 96 PASS cycles=1232290 xerr_checks=0
+TIMING job=96 fallback=ffff tail=ffff max_rows=63 stream_hits=1437 objects=0
+JOB 97 PASS cycles=505100 xerr_checks=0
+TIMING job=97 fallback=ffff tail=0000 max_rows=47 stream_hits=565 objects=0
+JOB 98 PASS cycles=1040487 xerr_checks=0
+TIMING job=98 fallback=ffff tail=ffff max_rows=45 stream_hits=1187 objects=0
+JOB 99 PASS cycles=667492 xerr_checks=0
+TIMING job=99 fallback=ffff tail=0000 max_rows=67 stream_hits=777 objects=0
+JOB 100 PASS cycles=886824 xerr_checks=0
+TIMING job=100 fallback=ffff tail=ffff max_rows=34 stream_hits=986 objects=0
+JOB 101 PASS cycles=487684 xerr_checks=0
+TIMING job=101 fallback=ffff tail=0000 max_rows=45 stream_hits=542 objects=0
+JOB 102 PASS cycles=1099410 xerr_checks=0
+TIMING job=102 fallback=ffff tail=ffff max_rows=58 stream_hits=1263 objects=0
+JOB 103 PASS cycles=552996 xerr_checks=0
+TIMING job=103 fallback=ffff tail=0000 max_rows=56 stream_hits=627 objects=0
+JOB 104 PASS cycles=975478 xerr_checks=0
+TIMING job=104 fallback=ffff tail=ffff max_rows=42 stream_hits=1102 objects=0
+JOB 105 PASS cycles=411143 xerr_checks=0
+TIMING job=105 fallback=ffff tail=0000 max_rows=37 stream_hits=443 objects=0
+JOB 106 PASS cycles=980479 xerr_checks=0
+TIMING job=106 fallback=ffff tail=ffff max_rows=46 stream_hits=1108 objects=0
+JOB 107 PASS cycles=586860 xerr_checks=0
+TIMING job=107 fallback=ffff tail=0000 max_rows=67 stream_hits=672 objects=0
+JOB 108 PASS cycles=878819 xerr_checks=0
+TIMING job=108 fallback=ffff tail=ffff max_rows=34 stream_hits=977 objects=0
+JOB 109 PASS cycles=483349 xerr_checks=0
+TIMING job=109 fallback=ffff tail=0000 max_rows=40 stream_hits=537 objects=0
+JOB 110 PASS cycles=1061329 xerr_checks=0
+TIMING job=110 fallback=ffff tail=ffff max_rows=47 stream_hits=1215 objects=0
+JOB 111 PASS cycles=402254 xerr_checks=0
+TIMING job=111 fallback=ffff tail=0000 max_rows=35 stream_hits=431 objects=0
+JOB 112 PASS cycles=699188 xerr_checks=0
+TIMING job=112 fallback=ffff tail=ffff max_rows=25 stream_hits=745 objects=0
+JOB 113 PASS cycles=606877 xerr_checks=0
+TIMING job=113 fallback=ffff tail=0000 max_rows=63 stream_hits=698 objects=0
+JOB 114 PASS cycles=1290557 xerr_checks=0
+TIMING job=114 fallback=ffff tail=ffff max_rows=66 stream_hits=1513 objects=0
+JOB 115 PASS cycles=662498 xerr_checks=0
+TIMING job=115 fallback=ffff tail=0000 max_rows=67 stream_hits=771 objects=0
+JOB 116 PASS cycles=1286937 xerr_checks=0
+TIMING job=116 fallback=ffff tail=ffff max_rows=63 stream_hits=1509 objects=0
+JOB 117 PASS cycles=342952 xerr_checks=0
+TIMING job=117 fallback=ffff tail=0000 max_rows=22 stream_hits=352 objects=0
+JOB 118 PASS cycles=898432 xerr_checks=0
+TIMING job=118 fallback=ffff tail=ffff max_rows=44 stream_hits=1003 objects=0
+JOB 119 PASS cycles=353188 xerr_checks=0
+TIMING job=119 fallback=ffff tail=0000 max_rows=23 stream_hits=368 objects=0
+JOB 120 PASS cycles=966640 xerr_checks=0
+TIMING job=120 fallback=ffff tail=ffff max_rows=53 stream_hits=1090 objects=0
+JOB 121 PASS cycles=385503 xerr_checks=0
+TIMING job=121 fallback=ffff tail=0000 max_rows=30 stream_hits=409 objects=0
+JOB 122 PASS cycles=862515 xerr_checks=0
+TIMING job=122 fallback=ffff tail=ffff max_rows=42 stream_hits=954 objects=0
+JOB 123 PASS cycles=529149 xerr_checks=0
+TIMING job=123 fallback=ffff tail=0000 max_rows=53 stream_hits=596 objects=0
+JOB 124 PASS cycles=981665 xerr_checks=0
+TIMING job=124 fallback=ffff tail=ffff max_rows=41 stream_hits=1111 objects=0
+JOB 125 PASS cycles=354358 xerr_checks=0
+TIMING job=125 fallback=ffff tail=0000 max_rows=24 stream_hits=369 objects=0
+JOB 126 PASS cycles=1018880 xerr_checks=0
+TIMING job=126 fallback=ffff tail=ffff max_rows=43 stream_hits=1158 objects=0
+JOB 127 PASS cycles=456278 xerr_checks=0
+TIMING job=127 fallback=ffff tail=0000 max_rows=36 stream_hits=501 objects=0
+JOB 128 PASS cycles=11 xerr_checks=0
+TIMING job=128 fallback=0000 tail=0000 max_rows=0 stream_hits=0 objects=0
+JOB 129 PASS cycles=11 xerr_checks=0
+TIMING job=129 fallback=0000 tail=0000 max_rows=0 stream_hits=0 objects=0
+JOB 130 PASS cycles=11 xerr_checks=0
+TIMING job=130 fallback=0000 tail=0000 max_rows=0 stream_hits=0 objects=0
+JOB 131 PASS cycles=11 xerr_checks=0
+TIMING job=131 fallback=0000 tail=0000 max_rows=0 stream_hits=0 objects=0
+JOB 132 PASS cycles=11 xerr_checks=0
+TIMING job=132 fallback=0000 tail=0000 max_rows=0 stream_hits=0 objects=0
+JOB 133 PASS cycles=1164444 xerr_checks=0
+TIMING job=133 fallback=ffff tail=ffff max_rows=57 stream_hits=1412 objects=0
+JOB 134 PASS cycles=1164452 xerr_checks=1
+TIMING job=134 fallback=ffff tail=ffff max_rows=57 stream_hits=1412 objects=0
+JOB 135 PASS cycles=1164452 xerr_checks=2
+TIMING job=135 fallback=ffff tail=ffff max_rows=57 stream_hits=1412 objects=0
+JOB 136 PASS cycles=577708 xerr_checks=3
+TIMING job=136 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 137 PASS cycles=579604 xerr_checks=4
+TIMING job=137 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 138 PASS cycles=581514 xerr_checks=5
+TIMING job=138 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 139 PASS cycles=577705 xerr_checks=5
+TIMING job=139 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 140 PASS cycles=577705 xerr_checks=5
+TIMING job=140 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 141 PASS cycles=281464 xerr_checks=5
+TIMING job=141 fallback=ffff tail=0000 max_rows=22 stream_hits=352 objects=0
+JOB 142 PASS cycles=552556 xerr_checks=5
+TIMING job=142 fallback=ffff tail=0000 max_rows=57 stream_hits=691 objects=0
+JOB 143 PASS cycles=788348 xerr_checks=5
+TIMING job=143 fallback=ffff tail=ffff max_rows=32 stream_hits=940 objects=0
+JOB 144 PASS cycles=788356 xerr_checks=6
+TIMING job=144 fallback=ffff tail=ffff max_rows=32 stream_hits=940 objects=0
+JOB 145 PASS cycles=788356 xerr_checks=7
+TIMING job=145 fallback=ffff tail=ffff max_rows=32 stream_hits=940 objects=0
+JOB 146 PASS cycles=391958 xerr_checks=8
+TIMING job=146 fallback=ffff tail=0000 max_rows=32 stream_hits=458 objects=0
+JOB 147 PASS cycles=392338 xerr_checks=9
+TIMING job=147 fallback=ffff tail=0000 max_rows=32 stream_hits=458 objects=0
+JOB 148 PASS cycles=391950 xerr_checks=9
+TIMING job=148 fallback=ffff tail=0000 max_rows=32 stream_hits=458 objects=0
+JOB 149 PASS cycles=282610 xerr_checks=10
+TIMING job=149 fallback=ffff tail=0000 max_rows=22 stream_hits=352 objects=0
+JOB 150 PASS cycles=789873 xerr_checks=11
+TIMING job=150 fallback=ffff tail=ffff max_rows=32 stream_hits=940 objects=0
+JOB 151 PASS cycles=809852 xerr_checks=11
+TIMING job=151 fallback=ffff tail=ffff max_rows=30 stream_hits=887 objects=1
+JOB 152 PASS cycles=809506 xerr_checks=12
+TIMING job=152 fallback=ffff tail=ffff max_rows=30 stream_hits=887 objects=1
+JOB 153 PASS cycles=402186 xerr_checks=13
+TIMING job=153 fallback=ffff tail=0000 max_rows=30 stream_hits=431 objects=1
+JOB 154 PASS cycles=402566 xerr_checks=14
+TIMING job=154 fallback=ffff tail=0000 max_rows=30 stream_hits=431 objects=1
+JOB 155 PASS cycles=407760 xerr_checks=15
+TIMING job=155 fallback=ffff tail=0000 max_rows=30 stream_hits=431 objects=1
+JOB 156 PASS cycles=810644 xerr_checks=16
+TIMING job=156 fallback=ffff tail=ffff max_rows=30 stream_hits=887 objects=1
+JOB 157 PASS cycles=847234 xerr_checks=16
+TIMING job=157 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 158 PASS cycles=847242 xerr_checks=17
+TIMING job=158 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 159 PASS cycles=420772 xerr_checks=18
+TIMING job=159 fallback=ffff tail=0000 max_rows=32 stream_hits=455 objects=1
+JOB 160 PASS cycles=425967 xerr_checks=19
+TIMING job=160 fallback=ffff tail=0000 max_rows=32 stream_hits=455 objects=1
+JOB 161 PASS cycles=421527 xerr_checks=20
+TIMING job=161 fallback=ffff tail=0000 max_rows=32 stream_hits=455 objects=1
+JOB 162 PASS cycles=848380 xerr_checks=21
+TIMING job=162 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 163 PASS cycles=846308 xerr_checks=21
+TIMING job=163 fallback=ffff tail=ffff max_rows=32 stream_hits=934 objects=1
+JOB 164 PASS cycles=846316 xerr_checks=22
+TIMING job=164 fallback=ffff tail=ffff max_rows=32 stream_hits=934 objects=1
+JOB 165 PASS cycles=425023 xerr_checks=23
+TIMING job=165 fallback=ffff tail=0000 max_rows=32 stream_hits=454 objects=1
+JOB 166 PASS cycles=420584 xerr_checks=24
+TIMING job=166 fallback=ffff tail=0000 max_rows=32 stream_hits=454 objects=1
+JOB 167 PASS cycles=422562 xerr_checks=25
+TIMING job=167 fallback=ffff tail=0000 max_rows=32 stream_hits=454 objects=1
+JOB 168 PASS cycles=847454 xerr_checks=26
+TIMING job=168 fallback=ffff tail=ffff max_rows=32 stream_hits=934 objects=1
+JOB 169 PASS cycles=811586 xerr_checks=26
+TIMING job=169 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 170 PASS cycles=811240 xerr_checks=27
+TIMING job=170 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 171 PASS cycles=403534 xerr_checks=28
+TIMING job=171 fallback=ffff tail=0000 max_rows=30 stream_hits=432 objects=1
+JOB 172 PASS cycles=405508 xerr_checks=29
+TIMING job=172 fallback=ffff tail=0000 max_rows=30 stream_hits=432 objects=1
+JOB 173 PASS cycles=812365 xerr_checks=30
+TIMING job=173 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 174 PASS cycles=813111 xerr_checks=31
+TIMING job=174 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 175 PASS cycles=797192 xerr_checks=31
+TIMING job=175 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 176 PASS cycles=797200 xerr_checks=32
+TIMING job=176 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 177 PASS cycles=397451 xerr_checks=33
+TIMING job=177 fallback=ffff tail=0000 max_rows=29 stream_hits=423 objects=1
+JOB 178 PASS cycles=797213 xerr_checks=34
+TIMING job=178 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 179 PASS cycles=400119 xerr_checks=34
+TIMING job=179 fallback=ffff tail=0000 max_rows=29 stream_hits=446 objects=1
+JOB 180 PASS cycles=796838 xerr_checks=34
+TIMING job=180 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 181 PASS cycles=774532 xerr_checks=34
+TIMING job=181 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 182 PASS cycles=774540 xerr_checks=35
+TIMING job=182 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 183 PASS cycles=773819 xerr_checks=36
+TIMING job=183 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 184 PASS cycles=388789 xerr_checks=36
+TIMING job=184 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 185 PASS cycles=388785 xerr_checks=36
+TIMING job=185 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 186 PASS cycles=774178 xerr_checks=36
+TIMING job=186 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 187 PASS cycles=825626 xerr_checks=36
+TIMING job=187 fallback=ffff tail=ffff max_rows=31 stream_hits=907 objects=1
+JOB 188 PASS cycles=825634 xerr_checks=37
+TIMING job=188 fallback=ffff tail=ffff max_rows=31 stream_hits=907 objects=1
+JOB 189 PASS cycles=414513 xerr_checks=37
+TIMING job=189 fallback=ffff tail=0000 max_rows=31 stream_hits=464 objects=1
+JOB 190 PASS cycles=414155 xerr_checks=37
+TIMING job=190 fallback=ffff tail=0000 max_rows=31 stream_hits=464 objects=1
+JOB 191 PASS cycles=439656 xerr_checks=37
+TIMING job=191 fallback=ffff tail=0000 max_rows=31 stream_hits=464 objects=1
+JOB 192 PASS cycles=825626 xerr_checks=37
+TIMING job=192 fallback=ffff tail=ffff max_rows=31 stream_hits=907 objects=1
+JOB 193 PASS cycles=830542 xerr_checks=37
+TIMING job=193 fallback=ffff tail=ffff max_rows=31 stream_hits=915 objects=1
+JOB 194 PASS cycles=830550 xerr_checks=38
+TIMING job=194 fallback=ffff tail=ffff max_rows=31 stream_hits=915 objects=1
+JOB 195 PASS cycles=416613 xerr_checks=38
+TIMING job=195 fallback=ffff tail=0000 max_rows=31 stream_hits=468 objects=1
+JOB 196 PASS cycles=441760 xerr_checks=38
+TIMING job=196 fallback=ffff tail=0000 max_rows=31 stream_hits=468 objects=1
+JOB 197 PASS cycles=441760 xerr_checks=38
+TIMING job=197 fallback=ffff tail=0000 max_rows=31 stream_hits=468 objects=1
+JOB 198 PASS cycles=830542 xerr_checks=38
+TIMING job=198 fallback=ffff tail=ffff max_rows=31 stream_hits=915 objects=1
+JOB 199 PASS cycles=776350 xerr_checks=38
+TIMING job=199 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 200 PASS cycles=776358 xerr_checks=39
+TIMING job=200 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 201 PASS cycles=414740 xerr_checks=39
+TIMING job=201 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 202 PASS cycles=415128 xerr_checks=40
+TIMING job=202 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 203 PASS cycles=390347 xerr_checks=40
+TIMING job=203 fallback=ffff tail=0000 max_rows=28 stream_hits=409 objects=1
+JOB 204 PASS cycles=776350 xerr_checks=40
+TIMING job=204 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 205 PASS cycles=843160 xerr_checks=40
+TIMING job=205 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 206 PASS cycles=843168 xerr_checks=41
+TIMING job=206 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 207 PASS cycles=448460 xerr_checks=42
+TIMING job=207 fallback=ffff tail=0000 max_rows=32 stream_hits=477 objects=1
+JOB 208 PASS cycles=423445 xerr_checks=42
+TIMING job=208 fallback=ffff tail=0000 max_rows=32 stream_hits=453 objects=1
+JOB 209 PASS cycles=843160 xerr_checks=42
+TIMING job=209 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 210 PASS cycles=843522 xerr_checks=43
+TIMING job=210 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 211 PASS cycles=739464 xerr_checks=43
+TIMING job=211 fallback=ffff tail=ffff max_rows=25 stream_hits=793 objects=1
+JOB 212 PASS cycles=739118 xerr_checks=44
+TIMING job=212 fallback=ffff tail=ffff max_rows=25 stream_hits=793 objects=1
+JOB 213 PASS cycles=371811 xerr_checks=45
+TIMING job=213 fallback=ffff tail=0000 max_rows=25 stream_hits=384 objects=1
+JOB 214 PASS cycles=739852 xerr_checks=46
+TIMING job=214 fallback=ffff tail=ffff max_rows=25 stream_hits=793 objects=1
+JOB 215 PASS cycles=366992 xerr_checks=47
+TIMING job=215 fallback=ffff tail=0000 max_rows=25 stream_hits=384 objects=1
+JOB 216 PASS cycles=739852 xerr_checks=48
+TIMING job=216 fallback=ffff tail=ffff max_rows=25 stream_hits=793 objects=1
+JOB 217 PASS cycles=813050 xerr_checks=48
+TIMING job=217 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 218 PASS cycles=813412 xerr_checks=49
+TIMING job=218 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 219 PASS cycles=813058 xerr_checks=50
+TIMING job=219 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 220 PASS cycles=403962 xerr_checks=51
+TIMING job=220 fallback=ffff tail=0000 max_rows=30 stream_hits=432 objects=1
+JOB 221 PASS cycles=404342 xerr_checks=52
+TIMING job=221 fallback=ffff tail=0000 max_rows=30 stream_hits=432 objects=1
+JOB 222 PASS cycles=814171 xerr_checks=53
+TIMING job=222 fallback=ffff tail=ffff max_rows=30 stream_hits=889 objects=1
+JOB 223 PASS cycles=777612 xerr_checks=53
+TIMING job=223 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 224 PASS cycles=777620 xerr_checks=54
+TIMING job=224 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 225 PASS cycles=386344 xerr_checks=55
+TIMING job=225 fallback=ffff tail=0000 max_rows=28 stream_hits=409 objects=1
+JOB 226 PASS cycles=386724 xerr_checks=56
+TIMING job=226 fallback=ffff tail=0000 max_rows=28 stream_hits=409 objects=1
+JOB 227 PASS cycles=387103 xerr_checks=57
+TIMING job=227 fallback=ffff tail=0000 max_rows=28 stream_hits=409 objects=1
+JOB 228 PASS cycles=778758 xerr_checks=58
+TIMING job=228 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 229 PASS cycles=833690 xerr_checks=58
+TIMING job=229 fallback=ffff tail=ffff max_rows=31 stream_hits=917 objects=1
+JOB 230 PASS cycles=833698 xerr_checks=59
+TIMING job=230 fallback=ffff tail=ffff max_rows=31 stream_hits=917 objects=1
+JOB 231 PASS cycles=414282 xerr_checks=60
+TIMING job=231 fallback=ffff tail=0000 max_rows=31 stream_hits=446 objects=1
+JOB 232 PASS cycles=414662 xerr_checks=61
+TIMING job=232 fallback=ffff tail=0000 max_rows=31 stream_hits=446 objects=1
+JOB 233 PASS cycles=419856 xerr_checks=62
+TIMING job=233 fallback=ffff tail=0000 max_rows=31 stream_hits=446 objects=1
+JOB 234 PASS cycles=834836 xerr_checks=63
+TIMING job=234 fallback=ffff tail=ffff max_rows=31 stream_hits=917 objects=1
+JOB 235 PASS cycles=724380 xerr_checks=63
+TIMING job=235 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 236 PASS cycles=724388 xerr_checks=64
+TIMING job=236 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 237 PASS cycles=359450 xerr_checks=65
+TIMING job=237 fallback=ffff tail=0000 max_rows=24 stream_hits=376 objects=1
+JOB 238 PASS cycles=364645 xerr_checks=66
+TIMING job=238 fallback=ffff tail=0000 max_rows=24 stream_hits=376 objects=1
+JOB 239 PASS cycles=360205 xerr_checks=67
+TIMING job=239 fallback=ffff tail=0000 max_rows=24 stream_hits=376 objects=1
+JOB 240 PASS cycles=725526 xerr_checks=68
+TIMING job=240 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 241 PASS cycles=802310 xerr_checks=68
+TIMING job=241 fallback=ffff tail=ffff max_rows=30 stream_hits=879 objects=1
+JOB 242 PASS cycles=801964 xerr_checks=69
+TIMING job=242 fallback=ffff tail=ffff max_rows=30 stream_hits=879 objects=1
+JOB 243 PASS cycles=403331 xerr_checks=70
+TIMING job=243 fallback=ffff tail=0000 max_rows=30 stream_hits=427 objects=1
+JOB 244 PASS cycles=398892 xerr_checks=71
+TIMING job=244 fallback=ffff tail=0000 max_rows=30 stream_hits=427 objects=1
+JOB 245 PASS cycles=400870 xerr_checks=72
+TIMING job=245 fallback=ffff tail=0000 max_rows=30 stream_hits=427 objects=1
+JOB 246 PASS cycles=803456 xerr_checks=73
+TIMING job=246 fallback=ffff tail=ffff max_rows=30 stream_hits=879 objects=1
+JOB 247 PASS cycles=847840 xerr_checks=73
+TIMING job=247 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 248 PASS cycles=847848 xerr_checks=74
+TIMING job=248 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 249 PASS cycles=421354 xerr_checks=75
+TIMING job=249 fallback=ffff tail=0000 max_rows=32 stream_hits=455 objects=1
+JOB 250 PASS cycles=423328 xerr_checks=76
+TIMING job=250 fallback=ffff tail=0000 max_rows=32 stream_hits=455 objects=1
+JOB 251 PASS cycles=848619 xerr_checks=77
+TIMING job=251 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 252 PASS cycles=849365 xerr_checks=78
+TIMING job=252 fallback=ffff tail=ffff max_rows=32 stream_hits=936 objects=1
+JOB 253 PASS cycles=767192 xerr_checks=78
+TIMING job=253 fallback=ffff tail=ffff max_rows=27 stream_hits=835 objects=1
+JOB 254 PASS cycles=767200 xerr_checks=79
+TIMING job=254 fallback=ffff tail=ffff max_rows=27 stream_hits=835 objects=1
+JOB 255 PASS cycles=382451 xerr_checks=80
+TIMING job=255 fallback=ffff tail=0000 max_rows=27 stream_hits=405 objects=1
+JOB 256 PASS cycles=766859 xerr_checks=81
+TIMING job=256 fallback=ffff tail=ffff max_rows=27 stream_hits=835 objects=1
+JOB 257 PASS cycles=384765 xerr_checks=81
+TIMING job=257 fallback=ffff tail=0000 max_rows=27 stream_hits=428 objects=1
+JOB 258 PASS cycles=766838 xerr_checks=81
+TIMING job=258 fallback=ffff tail=ffff max_rows=27 stream_hits=835 objects=1
+JOB 259 PASS cycles=776804 xerr_checks=81
+TIMING job=259 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 260 PASS cycles=777166 xerr_checks=82
+TIMING job=260 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 261 PASS cycles=776799 xerr_checks=83
+TIMING job=261 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 262 PASS cycles=390001 xerr_checks=83
+TIMING job=262 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 263 PASS cycles=389643 xerr_checks=83
+TIMING job=263 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 264 PASS cycles=776804 xerr_checks=83
+TIMING job=264 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 265 PASS cycles=774986 xerr_checks=83
+TIMING job=265 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 266 PASS cycles=775348 xerr_checks=84
+TIMING job=266 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 267 PASS cycles=388839 xerr_checks=84
+TIMING job=267 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 268 PASS cycles=389189 xerr_checks=84
+TIMING job=268 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 269 PASS cycles=414336 xerr_checks=84
+TIMING job=269 fallback=ffff tail=0000 max_rows=28 stream_hits=432 objects=1
+JOB 270 PASS cycles=775340 xerr_checks=84
+TIMING job=270 fallback=ffff tail=ffff max_rows=28 stream_hits=843 objects=1
+JOB 271 PASS cycles=726400 xerr_checks=84
+TIMING job=271 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 272 PASS cycles=726408 xerr_checks=85
+TIMING job=272 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 273 PASS cycles=364365 xerr_checks=85
+TIMING job=273 fallback=ffff tail=0000 max_rows=24 stream_hits=399 objects=1
+JOB 274 PASS cycles=389866 xerr_checks=85
+TIMING job=274 fallback=ffff tail=0000 max_rows=24 stream_hits=399 objects=1
+JOB 275 PASS cycles=389866 xerr_checks=85
+TIMING job=275 fallback=ffff tail=0000 max_rows=24 stream_hits=399 objects=1
+JOB 276 PASS cycles=726400 xerr_checks=85
+TIMING job=276 fallback=ffff tail=ffff max_rows=24 stream_hits=777 objects=1
+JOB 277 PASS cycles=721888 xerr_checks=85
+TIMING job=277 fallback=ffff tail=ffff max_rows=24 stream_hits=769 objects=1
+JOB 278 PASS cycles=721896 xerr_checks=86
+TIMING job=278 fallback=ffff tail=ffff max_rows=24 stream_hits=769 objects=1
+JOB 279 PASS cycles=387610 xerr_checks=86
+TIMING job=279 fallback=ffff tail=0000 max_rows=24 stream_hits=395 objects=1
+JOB 280 PASS cycles=387998 xerr_checks=87
+TIMING job=280 fallback=ffff tail=0000 max_rows=24 stream_hits=395 objects=1
+JOB 281 PASS cycles=363015 xerr_checks=87
+TIMING job=281 fallback=ffff tail=0000 max_rows=24 stream_hits=372 objects=1
+JOB 282 PASS cycles=721888 xerr_checks=87
+TIMING job=282 fallback=ffff tail=ffff max_rows=24 stream_hits=769 objects=1
+JOB 283 PASS cycles=846392 xerr_checks=87
+TIMING job=283 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 284 PASS cycles=846754 xerr_checks=88
+TIMING job=284 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 285 PASS cycles=450076 xerr_checks=89
+TIMING job=285 fallback=ffff tail=0000 max_rows=32 stream_hits=477 objects=1
+JOB 286 PASS cycles=425061 xerr_checks=89
+TIMING job=286 fallback=ffff tail=0000 max_rows=32 stream_hits=453 objects=1
+JOB 287 PASS cycles=846746 xerr_checks=89
+TIMING job=287 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 288 PASS cycles=846754 xerr_checks=90
+TIMING job=288 fallback=ffff tail=ffff max_rows=32 stream_hits=932 objects=1
+JOB 289 PASS cycles=795626 xerr_checks=90
+TIMING job=289 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 290 PASS cycles=795988 xerr_checks=91
+TIMING job=290 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 291 PASS cycles=400069 xerr_checks=92
+TIMING job=291 fallback=ffff tail=0000 max_rows=29 stream_hits=423 objects=1
+JOB 292 PASS cycles=796368 xerr_checks=93
+TIMING job=292 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 293 PASS cycles=395250 xerr_checks=94
+TIMING job=293 fallback=ffff tail=0000 max_rows=29 stream_hits=423 objects=1
+JOB 294 PASS cycles=796014 xerr_checks=95
+TIMING job=294 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 295 PASS cycles=796838 xerr_checks=95
+TIMING job=295 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 296 PASS cycles=796846 xerr_checks=96
+TIMING job=296 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 297 PASS cycles=797200 xerr_checks=97
+TIMING job=297 fallback=ffff tail=ffff max_rows=29 stream_hits=871 objects=1
+JOB 298 PASS cycles=395856 xerr_checks=98
+TIMING job=298 fallback=ffff tail=0000 max_rows=29 stream_hits=423 objects=1
+JOB 299 PASS cycles=396236 xerr_checks=99
+TIMING job=299 fallback=ffff tail=0000 max_rows=29 stream_hits=423 objects=1
+ASSERT 0 TOP_FULL:spec5.3/6.1/10.1/15 hits=300
+ASSERT 1 TOP_ACCEPT:spec5.3/6.1/10.1/15 hits=300
+ASSERT 2 TOP_REASON:spec5.3/6.1/10.1/15 hits=300
+ASSERT 3 TOP_MODE:spec5.3/6.1/10.1/15 hits=300
+ASSERT 4 TOP_CANDIDATE:spec5.3/6.1/10.1/15 hits=300
+ASSERT 5 TOP_LABEL:spec5.3/6.1/10.1/15 hits=300
+ASSERT 6 TOP_BRAKE_FLAG:spec5.3/6.1/10.1/15 hits=300
+ASSERT 7 TOP_COMMIT_HB:spec5.3/6.1/10.1/15 hits=300
+ASSERT 8 CMD_FULL:spec5.3/6.1/10.1/15 hits=300
+ASSERT 9 CMD_RECORDS:spec5.3/6.1/10.1/15 hits=300
+ASSERT 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 hits=300
+ASSERT 11 CMD_OVERRIDE:spec5.3/6.1/10.1/15 hits=300
+ASSERT 12 TX_STABLE:spec5.3/6.1/10.1/15 hits=3080
+ASSERT 13 RSP_STABLE:spec5.3/6.1/10.1/15 hits=900
+ASSERT 14 NO_STALE_RSP:spec5.3/6.1/10.1/15 hits=201269256
+ASSERT 15 NO_STALE_TX:spec5.3/6.1/10.1/15 hits=201248776
+ASSERT 16 HB_FAULT_LOW:spec5.3/6.1/10.1/15 hits=72
+ASSERT 17 FAULT_BRAKE:spec5.3/6.1/10.1/15 hits=604
+ASSERT 18 ONEHOT_FSM_MODE:spec5.3/6.1/10.1/15 hits=201270456
+ASSERT 19 DEADLINE_BOUND:spec5.3/6.1/10.1/15 hits=1200
+ASSERT 20 AXI_B_HOLD:spec5.3/6.1/10.1/15 hits=10
+ASSERT 21 AXI_R_HOLD:spec5.3/6.1/10.1/15 hits=2420
+ASSERT 22 AXI_B_CODE:spec5.3/6.1/10.1/15 hits=15
+ASSERT 23 AXI_R_CODE:spec5.3/6.1/10.1/15 hits=3630
+ASSERT 24 AXI_AW_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 25 AXI_W_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 26 AXI_AR_KNOWN:spec5.3/6.1/10.1/15 hits=1210
+ASSERT 27 AXI_B_KNOWN:spec5.3/6.1/10.1/15 hits=15
+ASSERT 28 AXI_R_KNOWN:spec5.3/6.1/10.1/15 hits=3630
+ASSERT 29 AXI_AWREADY_KNOWN:spec5.3/6.1/10.1/15 hits=201270355
+ASSERT 30 AXI_WREADY_KNOWN:spec5.3/6.1/10.1/15 hits=201270370
+ASSERT 31 AXI_ARREADY_KNOWN:spec5.3/6.1/10.1/15 hits=201266760
+ASSERT 32 AXI_B_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=10
+ASSERT 33 AXI_R_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=2420
+ASSERT 34 AXI_REASON_RESERVED:spec5.3/6.1/10.1/15 hits=900
+ASSERT 35 AXI_ERROR_ZERO:spec5.3/6.1/10.1/15 hits=6
+ASSERT 36 AXI_STATUS_RESERVED:spec5.3/6.1/10.1/15 hits=900
+ASSERT 37 AXI_AWPROT:spec5.3/6.1/10.1/15 hits=5
+ASSERT 38 AXI_ARPROT:spec5.3/6.1/10.1/15 hits=1210
+ASSERT 39 AXI_PROFILE_COUNT:spec5.3/6.1/10.1/15 hits=3
+assertion failures: 0, assertions never exercised: 0
+PASS top jobs=300 max_cycles=1381517
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:470: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 2s; walltime 6996.825 s; speed 287.660 us/s
+- Verilator: cpu 6444.501 s on 1 threads; allocated 23 MB

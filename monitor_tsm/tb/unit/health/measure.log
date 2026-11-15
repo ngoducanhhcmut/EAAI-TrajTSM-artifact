@@ -1,0 +1,42 @@
+COMMAND ['vvp', 'C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\unit\\health\\measure.vvp', '+START=2584', '+END=2586', '+NO_STALL=1']
+JOB x cycles=20 II=0
+JOB x cycles=10 II=24
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=10 II=14
+JOB x cycles=18 II=14
+JOB x cycles=20 II=22
+JOB 2584 cycles=2064 II=27
+JOB 2585 cycles=3088 II=2065
+JOB 2586 cycles=2064 II=39
+MEASURE latency=10..3088 II=14..3089
+ASSERT 0 reset_ready spec5.3/5.5.11 hits=6
+ASSERT 1 reset_valid spec5.3/5.5.11 hits=6
+ASSERT 2 reset_health spec5.3/5.5.11 hits=6
+ASSERT 3 reset_b4_valid spec5.3/5.5.11 hits=6
+ASSERT 4 reset_b3_valid spec5.3/5.5.11 hits=6
+ASSERT 5 invalid_health_zero spec5.3/5.5.11 hits=7363
+ASSERT 6 single_context spec5.3/5.5.11 hits=35
+ASSERT 7 health_bit_exact spec5.3/5.5.11 hits=35
+ASSERT 8 no_orphan_response spec5.3/5.5.11 hits=35
+ASSERT 9 hold_valid spec5.3/5.5.11 hits=24
+ASSERT 10 hold_health spec5.3/5.5.11 hits=24
+ASSERT 11 consume_clears spec5.3/5.5.11 hits=11
+ASSERT 12 consume_ready spec5.3/5.5.11 hits=11
+ASSERT 13 accept_busy spec5.3/5.5.11 hits=12
+ASSERT 14 b4_exact_request spec5.3/5.5.11 hits=60
+ASSERT 15 bist_enabled spec5.3/5.5.11 hits=60
+ASSERT 16 b4_stall_valid spec5.3/5.5.11 hits=48
+ASSERT 17 b4_stall_payload spec5.3/5.5.11 hits=48
+ASSERT 18 b3_exact_lane spec5.3/5.5.11 hits=29
+ASSERT 19 b3_actor_count spec5.3/5.5.11 hits=29
+ASSERT 20 b3_exact_trajectory spec5.3/5.5.11 hits=29
+ASSERT 21 b3_stall_valid spec5.3/5.5.11 hits=18
+ASSERT 22 b3_stall_payload spec5.3/5.5.11 hits=18
+ASSERT 23 b4_invalid_zero spec5.3/5.5.11 hits=7338
+ASSERT 24 b3_invalid_zero spec5.3/5.5.11 hits=7369
+ASSERT 25 response_accounting spec5.3/5.5.11 hits=7363
+assertion failures: 0, assertions never exercised: 0
+PASS health: golden=2/2 assertions=26
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\health\tb_m_tsmx_health.sv:301: $finish called at 81444000 (1ps)

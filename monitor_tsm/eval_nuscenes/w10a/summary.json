@@ -1,0 +1,2568 @@
+{
+  "status": "golden complete; RTL pending supervisor",
+  "chosen": "E2",
+  "selection": {
+    "chosen": "E2",
+    "feasible": [
+      "E0",
+      "E1",
+      "E2"
+    ],
+    "constraint_checks": {
+      "E0": {
+        "H": true,
+        "T": true
+      },
+      "E1": {
+        "H": true,
+        "T": true
+      },
+      "E2": {
+        "H": true,
+        "T": true
+      }
+    },
+    "training": {
+      "E0": {
+        "H": {
+          "metrics": {
+            "acceptance": {
+              "n": 96,
+              "denominator": 235,
+              "rate_pct": 40.851063829787236,
+              "ci95_pct": [
+                34.835207987289664,
+                47.534180368709514
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 12,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 118,
+              "denominator": 214,
+              "rate_pct": 55.14018691588785,
+              "ci95_pct": [
+                48.34083539309281,
+                61.5032502708559
+              ]
+            },
+            "oracle_unknown": 9
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.007987957981622103,
+              "p95": 0.02085924676226866,
+              "max": 0.06316888533490328
+            },
+            "velocity_error_mps": {
+              "mean": 0.06786880404407596,
+              "p95": 0.2083776974803728,
+              "max": 0.44967390197925905
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.7143861870824026,
+              "p95": 4.987525533986399,
+              "max": 9.740229900595624
+            },
+            "n": 235,
+            "position_over_16cm": 0,
+            "velocity_over_20cmps": 14,
+            "either_over_tolerance": 14,
+            "b2_reject": 50
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "ok": 96,
+            "range_schema": 49,
+            "ego_live": 31,
+            "splice": 12,
+            "no_backup": 42,
+            "ftti_budget": 3,
+            "timeout": 2
+          },
+          "all_job_reasons": {
+            "ok": 96,
+            "timeout": 5219,
+            "freeze_no_sample": 6019,
+            "range_schema": 49,
+            "ego_live": 2116,
+            "splice": 12,
+            "no_backup": 42,
+            "ftti_budget": 3
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 278,
+            "L2": 4263,
+            "L3": 2694,
+            "HOLD": 6225,
+            "RECOVERY": 96
+          },
+          "commits": {
+            "no_pending": 11344,
+            "committed": 96,
+            "ego_live": 2116
+          },
+          "outcomes": {
+            "accepted": 96,
+            "fallback": 40,
+            "mitigation": 98,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 155
+          },
+          "b1_reasons": {
+            "ok": 155,
+            "range_schema": 80
+          },
+          "scenes_with_admissions": 126
+        },
+        "T": {
+          "metrics": {
+            "acceptance": {
+              "n": 41,
+              "denominator": 235,
+              "rate_pct": 17.4468085106383,
+              "ci95_pct": [
+                12.54934210526316,
+                22.822465915826907
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 12,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 174,
+              "denominator": 215,
+              "rate_pct": 80.93023255813954,
+              "ci95_pct": [
+                75.23343436894838,
+                86.12475721256337
+              ]
+            },
+            "oracle_unknown": 8
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.029623964227799067,
+              "p95": 0.08078403682115932,
+              "max": 0.16639590585248243
+            },
+            "velocity_error_mps": {
+              "mean": 0.27549777259587294,
+              "p95": 0.7235110941275857,
+              "max": 1.4538000086947536
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.8250021536027656,
+              "p95": 5.072241369497075,
+              "max": 10.284006952630522
+            },
+            "n": 235,
+            "position_over_16cm": 1,
+            "velocity_over_20cmps": 125,
+            "either_over_tolerance": 125,
+            "b2_reject": 160
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "splice": 94,
+            "ok": 41,
+            "range_schema": 52,
+            "ego_live": 31,
+            "no_backup": 14,
+            "ftti_budget": 1,
+            "timeout": 2
+          },
+          "all_job_reasons": {
+            "splice": 94,
+            "timeout": 7845,
+            "ok": 41,
+            "freeze_no_sample": 3148,
+            "range_schema": 52,
+            "ego_live": 2361,
+            "no_backup": 14,
+            "ftti_budget": 1
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 120,
+            "L2": 4176,
+            "L3": 2936,
+            "HOLD": 6283,
+            "RECOVERY": 41
+          },
+          "commits": {
+            "no_pending": 11154,
+            "committed": 41,
+            "ego_live": 2361
+          },
+          "outcomes": {
+            "fallback": 95,
+            "accepted": 41,
+            "mitigation": 98,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 152
+          },
+          "b1_reasons": {
+            "ok": 152,
+            "range_schema": 83
+          },
+          "scenes_with_admissions": 126
+        }
+      },
+      "E1": {
+        "H": {
+          "metrics": {
+            "acceptance": {
+              "n": 69,
+              "denominator": 235,
+              "rate_pct": 29.361702127659573,
+              "ci95_pct": [
+                23.70632940108893,
+                35.58577645442052
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 10,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 142,
+              "denominator": 211,
+              "rate_pct": 67.29857819905213,
+              "ci95_pct": [
+                60.54047994182523,
+                73.52941176470588
+              ]
+            },
+            "oracle_unknown": 14
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.01287409802895218,
+              "p95": 0.03328625411860884,
+              "max": 0.06188912965226123
+            },
+            "velocity_error_mps": {
+              "mean": 0.1189938994690186,
+              "p95": 0.34839750340688896,
+              "max": 0.5712143344817231
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.7139805310015928,
+              "p95": 4.969812829079153,
+              "max": 10.249272420884633
+            },
+            "n": 235,
+            "position_over_16cm": 0,
+            "velocity_over_20cmps": 46,
+            "either_over_tolerance": 46,
+            "b2_reject": 96
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "ok": 69,
+            "splice": 49,
+            "range_schema": 50,
+            "ego_live": 31,
+            "no_backup": 31,
+            "ftti_budget": 2,
+            "timeout": 3
+          },
+          "all_job_reasons": {
+            "ok": 69,
+            "timeout": 6533,
+            "freeze_no_sample": 4660,
+            "splice": 49,
+            "range_schema": 50,
+            "ego_live": 2162,
+            "no_backup": 31,
+            "ftti_budget": 2
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 194,
+            "L2": 4278,
+            "L3": 2741,
+            "HOLD": 6274,
+            "RECOVERY": 69
+          },
+          "commits": {
+            "no_pending": 11325,
+            "committed": 69,
+            "ego_live": 2162
+          },
+          "outcomes": {
+            "accepted": 69,
+            "fallback": 67,
+            "mitigation": 98,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 154
+          },
+          "b1_reasons": {
+            "ok": 154,
+            "range_schema": 81
+          },
+          "scenes_with_admissions": 126
+        },
+        "T": {
+          "metrics": {
+            "acceptance": {
+              "n": 41,
+              "denominator": 235,
+              "rate_pct": 17.4468085106383,
+              "ci95_pct": [
+                12.60480146256976,
+                22.52507031918795
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 12,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 171,
+              "denominator": 212,
+              "rate_pct": 80.66037735849056,
+              "ci95_pct": [
+                74.99724669603525,
+                85.95783190526619
+              ]
+            },
+            "oracle_unknown": 11
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.021673157449837874,
+              "p95": 0.061191588723809365,
+              "max": 0.09332552033762909
+            },
+            "velocity_error_mps": {
+              "mean": 0.21484360965609492,
+              "p95": 0.5649446523317418,
+              "max": 0.9151988543821941
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.7267694572002257,
+              "p95": 4.9174535570661435,
+              "max": 9.964522484281192
+            },
+            "n": 235,
+            "position_over_16cm": 0,
+            "velocity_over_20cmps": 102,
+            "either_over_tolerance": 102,
+            "b2_reject": 148
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "ok": 41,
+            "splice": 83,
+            "range_schema": 53,
+            "ego_live": 31,
+            "no_backup": 24,
+            "timeout": 3
+          },
+          "all_job_reasons": {
+            "ok": 41,
+            "timeout": 8105,
+            "freeze_no_sample": 2931,
+            "splice": 83,
+            "range_schema": 53,
+            "ego_live": 2319,
+            "no_backup": 24
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 122,
+            "L2": 4163,
+            "L3": 2893,
+            "HOLD": 6337,
+            "RECOVERY": 41
+          },
+          "commits": {
+            "no_pending": 11196,
+            "committed": 41,
+            "ego_live": 2319
+          },
+          "outcomes": {
+            "accepted": 41,
+            "fallback": 96,
+            "mitigation": 97,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 151
+          },
+          "b1_reasons": {
+            "ok": 151,
+            "range_schema": 84
+          },
+          "scenes_with_admissions": 126
+        }
+      },
+      "E2": {
+        "H": {
+          "metrics": {
+            "acceptance": {
+              "n": 75,
+              "denominator": 235,
+              "rate_pct": 31.914893617021278,
+              "ci95_pct": [
+                25.990264653462017,
+                38.46153846153846
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 12,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 140,
+              "denominator": 215,
+              "rate_pct": 65.11627906976744,
+              "ci95_pct": [
+                58.064516129032256,
+                71.42857142857143
+              ]
+            },
+            "oracle_unknown": 8
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.00724948018055332,
+              "p95": 0.022880133074019763,
+              "max": 0.04510609043735769
+            },
+            "velocity_error_mps": {
+              "mean": 0.1910679524882654,
+              "p95": 0.6117709044958406,
+              "max": 1.052006171723173
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.7139805310015928,
+              "p95": 4.969812829079153,
+              "max": 10.249272420884633
+            },
+            "n": 235,
+            "position_over_16cm": 0,
+            "velocity_over_20cmps": 84,
+            "either_over_tolerance": 84,
+            "b2_reject": 122
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "splice": 47,
+            "range_schema": 44,
+            "ego_live": 31,
+            "ok": 75,
+            "no_backup": 33,
+            "ftti_budget": 2,
+            "timeout": 3
+          },
+          "all_job_reasons": {
+            "splice": 47,
+            "timeout": 6424,
+            "range_schema": 44,
+            "ego_live": 2333,
+            "ok": 75,
+            "freeze_no_sample": 4598,
+            "no_backup": 33,
+            "ftti_budget": 2
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 205,
+            "L2": 4164,
+            "L3": 2911,
+            "HOLD": 6201,
+            "RECOVERY": 75
+          },
+          "commits": {
+            "no_pending": 11148,
+            "ego_live": 2333,
+            "committed": 75
+          },
+          "outcomes": {
+            "fallback": 61,
+            "mitigation": 98,
+            "accepted": 75,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 160
+          },
+          "b1_reasons": {
+            "ok": 160,
+            "range_schema": 75
+          },
+          "scenes_with_admissions": 126
+        },
+        "T": {
+          "metrics": {
+            "acceptance": {
+              "n": 75,
+              "denominator": 235,
+              "rate_pct": 31.914893617021278,
+              "ci95_pct": [
+                25.990264653462017,
+                38.46153846153846
+              ]
+            },
+            "false_accept": {
+              "n": 0,
+              "denominator": 12,
+              "rate_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ]
+            },
+            "false_reject": {
+              "n": 140,
+              "denominator": 215,
+              "rate_pct": 65.11627906976744,
+              "ci95_pct": [
+                58.064516129032256,
+                71.42857142857143
+              ]
+            },
+            "oracle_unknown": 8
+          },
+          "derivative_errors": {
+            "position_error_m": {
+              "mean": 0.00724948018055332,
+              "p95": 0.022880133074019763,
+              "max": 0.04510609043735769
+            },
+            "velocity_error_mps": {
+              "mean": 0.1910679524882654,
+              "p95": 0.6117709044958406,
+              "max": 1.052006171723173
+            },
+            "acceleration_error_mps2": {
+              "mean": 1.7267694572002257,
+              "p95": 4.9174535570661435,
+              "max": 9.964522484281192
+            },
+            "n": 235,
+            "position_over_16cm": 0,
+            "velocity_over_20cmps": 84,
+            "either_over_tolerance": 84,
+            "b2_reject": 122
+          },
+          "jobs": 13556,
+          "admission_reasons": {
+            "splice": 47,
+            "range_schema": 44,
+            "ego_live": 31,
+            "ok": 75,
+            "no_backup": 33,
+            "ftti_budget": 2,
+            "timeout": 3
+          },
+          "all_job_reasons": {
+            "splice": 47,
+            "timeout": 6424,
+            "range_schema": 44,
+            "ego_live": 2277,
+            "ok": 75,
+            "freeze_no_sample": 4654,
+            "no_backup": 33,
+            "ftti_budget": 2
+          },
+          "occupancy": {
+            "L0": 0,
+            "L1": 204,
+            "L2": 4135,
+            "L3": 2854,
+            "HOLD": 6288,
+            "RECOVERY": 75
+          },
+          "commits": {
+            "no_pending": 11204,
+            "ego_live": 2277,
+            "committed": 75
+          },
+          "outcomes": {
+            "fallback": 61,
+            "mitigation": 98,
+            "accepted": 75,
+            "hold": 1,
+            "attempts": 235,
+            "admitted": 160
+          },
+          "b1_reasons": {
+            "ok": 160,
+            "range_schema": 75
+          },
+          "scenes_with_admissions": 126
+        }
+      }
+    },
+    "rule": "maximize T ACCEPT subject to FA(T), FA(H) <= E0 by exact fractions; E0/E1/E2 tie order; E0 fallback",
+    "sealed_before_validation": true,
+    "utc": "2026-11-06T15:43:49.452554"
+  },
+  "validation": {
+    "E0": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 1252,
+            "denominator": 3040,
+            "rate_pct": 41.18421052631579,
+            "ci95_pct": [
+              36.5681241510151,
+              45.52744704139126
+            ]
+          },
+          "false_accept": {
+            "n": 3,
+            "denominator": 247,
+            "rate_pct": 1.214574898785425,
+            "ci95_pct": [
+              0.0,
+              3.054022313564295
+            ]
+          },
+          "false_reject": {
+            "n": 1427,
+            "denominator": 2673,
+            "rate_pct": 53.3857089412645,
+            "ci95_pct": [
+              48.82257183515646,
+              58.26880866763181
+            ]
+          },
+          "oracle_unknown": 120
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.007644900771425155,
+            "p95": 0.02078943751752637,
+            "max": 0.07054629837348614
+          },
+          "velocity_error_mps": {
+            "mean": 0.06314442983872873,
+            "p95": 0.1820780831881328,
+            "max": 0.4445700294723576
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.6415718010385973,
+            "p95": 5.316922507560476,
+            "max": 21.31436361283188
+          },
+          "n": 3040,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 102,
+          "either_over_tolerance": 102,
+          "b2_reject": 687
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "range_schema": 474,
+          "ego_live": 540,
+          "no_backup": 524,
+          "ok": 1252,
+          "timeout": 57,
+          "splice": 155,
+          "ftti_budget": 38
+        },
+        "all_job_reasons": {
+          "range_schema": 474,
+          "timeout": 5849,
+          "ego_live": 5408,
+          "no_backup": 524,
+          "ok": 1252,
+          "freeze_no_sample": 10695,
+          "splice": 155,
+          "ftti_budget": 38
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 3489,
+          "L2": 6913,
+          "L3": 9435,
+          "HOLD": 3306,
+          "RECOVERY": 1252
+        },
+        "commits": {
+          "no_pending": 17735,
+          "ego_live": 5408,
+          "committed": 1252
+        },
+        "outcomes": {
+          "mitigation": 1320,
+          "fallback": 441,
+          "accepted": 1252,
+          "hold": 27,
+          "attempts": 3040,
+          "admitted": 2026
+        },
+        "b1_reasons": {
+          "range_schema": 1014,
+          "ok": 2026
+        },
+        "scenes_with_admissions": 143
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 427,
+            "denominator": 3040,
+            "rate_pct": 14.046052631578947,
+            "ci95_pct": [
+              12.014234666979087,
+              16.107943964243972
+            ]
+          },
+          "false_accept": {
+            "n": 1,
+            "denominator": 236,
+            "rate_pct": 0.423728813559322,
+            "ci95_pct": [
+              0.0,
+              1.3423571192102806
+            ]
+          },
+          "false_reject": {
+            "n": 2208,
+            "denominator": 2634,
+            "rate_pct": 83.82687927107061,
+            "ci95_pct": [
+              81.60625318924001,
+              86.13112218784019
+            ]
+          },
+          "oracle_unknown": 170
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.037671141298335986,
+            "p95": 0.08775068461016425,
+            "max": 1.000875764203208
+          },
+          "velocity_error_mps": {
+            "mean": 0.3781390556355474,
+            "p95": 0.8888801814596937,
+            "max": 9.968953875504257
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.8396499687004708,
+            "p95": 5.5316504797786,
+            "max": 20.641520454513728
+          },
+          "n": 3040,
+          "position_over_16cm": 61,
+          "velocity_over_20cmps": 1721,
+          "either_over_tolerance": 1721,
+          "b2_reject": 2209
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "no_backup": 202,
+          "ego_live": 540,
+          "splice": 1232,
+          "range_schema": 567,
+          "ok": 427,
+          "timeout": 61,
+          "ftti_budget": 11
+        },
+        "all_job_reasons": {
+          "no_backup": 202,
+          "timeout": 7927,
+          "ego_live": 5368,
+          "splice": 1232,
+          "range_schema": 567,
+          "ok": 427,
+          "freeze_no_sample": 8661,
+          "ftti_budget": 11
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 1252,
+          "L2": 10249,
+          "L3": 9405,
+          "HOLD": 3062,
+          "RECOVERY": 427
+        },
+        "commits": {
+          "no_pending": 18600,
+          "ego_live": 5368,
+          "committed": 427
+        },
+        "outcomes": {
+          "mitigation": 1325,
+          "fallback": 1251,
+          "accepted": 427,
+          "hold": 37,
+          "attempts": 3040,
+          "admitted": 1933
+        },
+        "b1_reasons": {
+          "ok": 1933,
+          "range_schema": 1107
+        },
+        "scenes_with_admissions": 143
+      }
+    },
+    "E1": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 990,
+            "denominator": 3040,
+            "rate_pct": 32.56578947368421,
+            "ci95_pct": [
+              28.664444262652705,
+              36.36378692523112
+            ]
+          },
+          "false_accept": {
+            "n": 3,
+            "denominator": 230,
+            "rate_pct": 1.3043478260869565,
+            "ci95_pct": [
+              0.0,
+              3.3816425120772946
+            ]
+          },
+          "false_reject": {
+            "n": 1642,
+            "denominator": 2616,
+            "rate_pct": 62.76758409785933,
+            "ci95_pct": [
+              58.7474289311127,
+              67.0528905462314
+            ]
+          },
+          "oracle_unknown": 194
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.01193769330446838,
+            "p95": 0.03407481725534729,
+            "max": 0.10061142576124382
+          },
+          "velocity_error_mps": {
+            "mean": 0.10407203566583516,
+            "p95": 0.302675602939983,
+            "max": 0.8765594381731954
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.6602759670245968,
+            "p95": 5.278621700527252,
+            "max": 21.3989538411533
+          },
+          "n": 3040,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 441,
+          "either_over_tolerance": 441,
+          "b2_reject": 1171
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "range_schema": 521,
+          "ego_live": 540,
+          "no_backup": 395,
+          "splice": 511,
+          "timeout": 57,
+          "ok": 990,
+          "ftti_budget": 26
+        },
+        "all_job_reasons": {
+          "range_schema": 521,
+          "timeout": 6136,
+          "ego_live": 5516,
+          "no_backup": 395,
+          "splice": 511,
+          "ok": 990,
+          "freeze_no_sample": 10300,
+          "ftti_budget": 26
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 2743,
+          "L2": 7925,
+          "L3": 9545,
+          "HOLD": 3192,
+          "RECOVERY": 990
+        },
+        "commits": {
+          "no_pending": 17889,
+          "ego_live": 5516,
+          "committed": 990
+        },
+        "outcomes": {
+          "mitigation": 1321,
+          "fallback": 700,
+          "accepted": 990,
+          "hold": 29,
+          "attempts": 3040,
+          "admitted": 1979
+        },
+        "b1_reasons": {
+          "range_schema": 1061,
+          "ok": 1979
+        },
+        "scenes_with_admissions": 143
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 474,
+            "denominator": 3040,
+            "rate_pct": 15.592105263157896,
+            "ci95_pct": [
+              13.322471532021428,
+              17.826662836716455
+            ]
+          },
+          "false_accept": {
+            "n": 3,
+            "denominator": 247,
+            "rate_pct": 1.214574898785425,
+            "ci95_pct": [
+              0.0,
+              2.5536999374217744
+            ]
+          },
+          "false_reject": {
+            "n": 2155,
+            "denominator": 2626,
+            "rate_pct": 82.06397562833206,
+            "ci95_pct": [
+              79.65297871256394,
+              84.5938124872263
+            ]
+          },
+          "oracle_unknown": 167
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.03340445165473607,
+            "p95": 0.07209522470870026,
+            "max": 0.9976511901449214
+          },
+          "velocity_error_mps": {
+            "mean": 0.34589224423902765,
+            "p95": 0.7808264622786316,
+            "max": 9.930680301044314
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7695275302839935,
+            "p95": 5.394410737040243,
+            "max": 21.126991810813344
+          },
+          "n": 3040,
+          "position_over_16cm": 64,
+          "velocity_over_20cmps": 1583,
+          "either_over_tolerance": 1583,
+          "b2_reject": 2150
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "range_schema": 541,
+          "ego_live": 540,
+          "splice": 1235,
+          "ok": 474,
+          "no_backup": 173,
+          "timeout": 61,
+          "ftti_budget": 16
+        },
+        "all_job_reasons": {
+          "range_schema": 541,
+          "timeout": 7437,
+          "ego_live": 5247,
+          "splice": 1235,
+          "ok": 474,
+          "freeze_no_sample": 9272,
+          "no_backup": 173,
+          "ftti_budget": 16
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 1383,
+          "L2": 10205,
+          "L3": 9293,
+          "HOLD": 3040,
+          "RECOVERY": 474
+        },
+        "commits": {
+          "no_pending": 18674,
+          "ego_live": 5247,
+          "committed": 474
+        },
+        "outcomes": {
+          "mitigation": 1325,
+          "fallback": 1208,
+          "accepted": 474,
+          "hold": 33,
+          "attempts": 3040,
+          "admitted": 1959
+        },
+        "b1_reasons": {
+          "range_schema": 1081,
+          "ok": 1959
+        },
+        "scenes_with_admissions": 143
+      }
+    },
+    "E2": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 999,
+            "denominator": 3040,
+            "rate_pct": 32.86184210526316,
+            "ci95_pct": [
+              29.004129579864625,
+              36.59986892504136
+            ]
+          },
+          "false_accept": {
+            "n": 4,
+            "denominator": 271,
+            "rate_pct": 1.4760147601476015,
+            "ci95_pct": [
+              0.0,
+              3.187250996015936
+            ]
+          },
+          "false_reject": {
+            "n": 1691,
+            "denominator": 2686,
+            "rate_pct": 62.95606850335071,
+            "ci95_pct": [
+              58.983199848987404,
+              67.15079759043338
+            ]
+          },
+          "oracle_unknown": 83
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.006057192068695718,
+            "p95": 0.019433138971089635,
+            "max": 0.08979104474179778
+          },
+          "velocity_error_mps": {
+            "mean": 0.15810159142519734,
+            "p95": 0.4945162579593521,
+            "max": 2.4136866693872845
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.6598996911963377,
+            "p95": 5.278621700527252,
+            "max": 21.3989538411533
+          },
+          "n": 3040,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 897,
+          "either_over_tolerance": 897,
+          "b2_reject": 1424
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "no_backup": 392,
+          "ego_live": 540,
+          "range_schema": 432,
+          "splice": 578,
+          "timeout": 59,
+          "ok": 999,
+          "ftti_budget": 40
+        },
+        "all_job_reasons": {
+          "no_backup": 392,
+          "timeout": 5774,
+          "ego_live": 5352,
+          "range_schema": 432,
+          "splice": 578,
+          "ok": 999,
+          "freeze_no_sample": 10828,
+          "ftti_budget": 40
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 2714,
+          "L2": 8083,
+          "L3": 9381,
+          "HOLD": 3218,
+          "RECOVERY": 999
+        },
+        "commits": {
+          "no_pending": 18044,
+          "ego_live": 5352,
+          "committed": 999
+        },
+        "outcomes": {
+          "mitigation": 1323,
+          "fallback": 694,
+          "accepted": 999,
+          "hold": 24,
+          "attempts": 3040,
+          "admitted": 2068
+        },
+        "b1_reasons": {
+          "ok": 2068,
+          "range_schema": 972
+        },
+        "scenes_with_admissions": 143
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 994,
+            "denominator": 3040,
+            "rate_pct": 32.69736842105263,
+            "ci95_pct": [
+              28.866453384187523,
+              36.439380608588394
+            ]
+          },
+          "false_accept": {
+            "n": 3,
+            "denominator": 282,
+            "rate_pct": 1.0638297872340425,
+            "ci95_pct": [
+              0.0,
+              2.713442222423309
+            ]
+          },
+          "false_reject": {
+            "n": 1684,
+            "denominator": 2675,
+            "rate_pct": 62.953271028037385,
+            "ci95_pct": [
+              59.02949926277536,
+              67.12802659116724
+            ]
+          },
+          "oracle_unknown": 83
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.006057192068695718,
+            "p95": 0.019433138971089635,
+            "max": 0.08979104474179778
+          },
+          "velocity_error_mps": {
+            "mean": 0.15810159142519734,
+            "p95": 0.4945162579593521,
+            "max": 2.4136866693872845
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7689980353806223,
+            "p95": 5.394410737040243,
+            "max": 21.126991810813344
+          },
+          "n": 3040,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 897,
+          "either_over_tolerance": 897,
+          "b2_reject": 1424
+        },
+        "jobs": 24395,
+        "admission_reasons": {
+          "no_backup": 398,
+          "ego_live": 540,
+          "range_schema": 432,
+          "splice": 578,
+          "timeout": 61,
+          "ok": 994,
+          "ftti_budget": 37
+        },
+        "all_job_reasons": {
+          "no_backup": 398,
+          "timeout": 5741,
+          "ego_live": 5197,
+          "range_schema": 432,
+          "splice": 578,
+          "ok": 994,
+          "freeze_no_sample": 11018,
+          "ftti_budget": 37
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 2769,
+          "L2": 8397,
+          "L3": 9245,
+          "HOLD": 2990,
+          "RECOVERY": 994
+        },
+        "commits": {
+          "no_pending": 18204,
+          "ego_live": 5197,
+          "committed": 994
+        },
+        "outcomes": {
+          "mitigation": 1325,
+          "fallback": 697,
+          "accepted": 994,
+          "hold": 24,
+          "attempts": 3040,
+          "admitted": 2068
+        },
+        "b1_reasons": {
+          "ok": 2068,
+          "range_schema": 972
+        },
+        "scenes_with_admissions": 143
+      }
+    }
+  },
+  "shard_job_counts": [
+    6130,
+    6128,
+    5978,
+    6148,
+    6148,
+    5978,
+    6128,
+    6152
+  ],
+  "total_jobs": 48790,
+  "runtime_seconds": 1141.8603525161743,
+  "free_bytes_start": 14229225472,
+  "free_bytes_end": 12858224640,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261104,
+    "unit": "all 150 scenes including empty scenes",
+    "interval": "percentile 95%"
+  },
+  "E0_matches_W9b_counts_and_derivatives": {
+    "H": {
+      "false_accept": true,
+      "false_reject": true,
+      "acceptance": true,
+      "derivative_errors": true
+    },
+    "T": {
+      "false_accept": true,
+      "false_reject": true,
+      "acceptance": true,
+      "derivative_errors": true
+    }
+  },
+  "training_extraction": {
+    "scenes": [
+      "scene-0001",
+      "scene-0002",
+      "scene-0004",
+      "scene-0005",
+      "scene-0006",
+      "scene-0007",
+      "scene-0008",
+      "scene-0009",
+      "scene-0010",
+      "scene-0011",
+      "scene-0019",
+      "scene-0020",
+      "scene-0021",
+      "scene-0022",
+      "scene-0023",
+      "scene-0024",
+      "scene-0025",
+      "scene-0026",
+      "scene-0027",
+      "scene-0028",
+      "scene-0029",
+      "scene-0030",
+      "scene-0031",
+      "scene-0032",
+      "scene-0033",
+      "scene-0034",
+      "scene-0041",
+      "scene-0042",
+      "scene-0043",
+      "scene-0044",
+      "scene-0045",
+      "scene-0046",
+      "scene-0047",
+      "scene-0048",
+      "scene-0049",
+      "scene-0050",
+      "scene-0051",
+      "scene-0052",
+      "scene-0053",
+      "scene-0054",
+      "scene-0055",
+      "scene-0056",
+      "scene-0057",
+      "scene-0058",
+      "scene-0059",
+      "scene-0060",
+      "scene-0061",
+      "scene-0062",
+      "scene-0063",
+      "scene-0064",
+      "scene-0065",
+      "scene-0066",
+      "scene-0067",
+      "scene-0068",
+      "scene-0069",
+      "scene-0070",
+      "scene-0071",
+      "scene-0072",
+      "scene-0073",
+      "scene-0074",
+      "scene-0075",
+      "scene-0076",
+      "scene-0120",
+      "scene-0121",
+      "scene-0122",
+      "scene-0123",
+      "scene-0124",
+      "scene-0125",
+      "scene-0126",
+      "scene-0127",
+      "scene-0128",
+      "scene-0129",
+      "scene-0130",
+      "scene-0131",
+      "scene-0132",
+      "scene-0133",
+      "scene-0134",
+      "scene-0135",
+      "scene-0138",
+      "scene-0139",
+      "scene-0149",
+      "scene-0150",
+      "scene-0151",
+      "scene-0152",
+      "scene-0154",
+      "scene-0155",
+      "scene-0157",
+      "scene-0158",
+      "scene-0159",
+      "scene-0160",
+      "scene-0161",
+      "scene-0162",
+      "scene-0163",
+      "scene-0164",
+      "scene-0165",
+      "scene-0166",
+      "scene-0167",
+      "scene-0168",
+      "scene-0170",
+      "scene-0171",
+      "scene-0172",
+      "scene-0173",
+      "scene-0174",
+      "scene-0175",
+      "scene-0176",
+      "scene-0177",
+      "scene-0178",
+      "scene-0179",
+      "scene-0180",
+      "scene-0181",
+      "scene-0182",
+      "scene-0183",
+      "scene-0184",
+      "scene-0185",
+      "scene-0187",
+      "scene-0188",
+      "scene-0190",
+      "scene-0191",
+      "scene-0192",
+      "scene-0193",
+      "scene-0194",
+      "scene-0195",
+      "scene-0196",
+      "scene-0199",
+      "scene-0200",
+      "scene-0202",
+      "scene-0203",
+      "scene-0204",
+      "scene-0206",
+      "scene-0207",
+      "scene-0208",
+      "scene-0209",
+      "scene-0210",
+      "scene-0211",
+      "scene-0212",
+      "scene-0213",
+      "scene-0214",
+      "scene-0218",
+      "scene-0219",
+      "scene-0220",
+      "scene-0222",
+      "scene-0224",
+      "scene-0225",
+      "scene-0226",
+      "scene-0227",
+      "scene-0228",
+      "scene-0229",
+      "scene-0230",
+      "scene-0231",
+      "scene-0232"
+    ],
+    "eligible_frames": 5050,
+    "available_prediction_tokens": 444,
+    "odd_prediction_tokens": 235,
+    "seconds": 125.33154106140137,
+    "free_bytes_start": 14296821760
+  },
+  "witnesses": {
+    "encodings": {
+      "E0": {
+        "fresh": {
+          "expected": "ok",
+          "actual": "ok",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "stale_150001us": {
+          "expected": "freshness",
+          "actual": "freshness",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 849999,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 1778952423,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "motion_freeze": {
+          "expected": "freeze",
+          "actual": "freeze",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [
+              600000,
+              6000000,
+              0,
+              15
+            ],
+            "freeze_since": 0,
+            "freeze_x": -1000000
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "no_sample_freeze": {
+          "expected": "freeze_no_sample",
+          "actual": "freeze_no_sample",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": 0,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 400000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": null
+        },
+        "retry_same_transaction": {
+          "expected": "sequence",
+          "actual": "sequence",
+          "pass_": true,
+          "state": {
+            "seq": 1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        }
+      },
+      "E1": {
+        "fresh": {
+          "expected": "ok",
+          "actual": "ok",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "stale_150001us": {
+          "expected": "freshness",
+          "actual": "freshness",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 849999,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 1778952423,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "motion_freeze": {
+          "expected": "freeze",
+          "actual": "freeze",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [
+              600000,
+              6000000,
+              0,
+              15
+            ],
+            "freeze_since": 0,
+            "freeze_x": -1000000
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "no_sample_freeze": {
+          "expected": "freeze_no_sample",
+          "actual": "freeze_no_sample",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": 0,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 400000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": null
+        },
+        "retry_same_transaction": {
+          "expected": "sequence",
+          "actual": "sequence",
+          "pass_": true,
+          "state": {
+            "seq": 1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        }
+      },
+      "E2": {
+        "fresh": {
+          "expected": "ok",
+          "actual": "ok",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "stale_150001us": {
+          "expected": "freshness",
+          "actual": "freshness",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 849999,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 1778952423,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "motion_freeze": {
+          "expected": "freeze",
+          "actual": "freeze",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [
+              600000,
+              6000000,
+              0,
+              15
+            ],
+            "freeze_since": 0,
+            "freeze_x": -1000000
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        },
+        "no_sample_freeze": {
+          "expected": "freeze_no_sample",
+          "actual": "freeze_no_sample",
+          "pass_": true,
+          "state": {
+            "seq": -1,
+            "last_time": -1,
+            "last_sample": 0,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 400000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": null
+        },
+        "retry_same_transaction": {
+          "expected": "sequence",
+          "actual": "sequence",
+          "pass_": true,
+          "state": {
+            "seq": 1,
+            "last_time": -1,
+            "last_sample": -1,
+            "signature": [],
+            "freeze_since": 0,
+            "freeze_x": 0
+          },
+          "now": 1000000,
+          "ego": {
+            "t": 1000000,
+            "x": 0,
+            "v": 6000000,
+            "a": 0,
+            "lx": 40000000,
+            "lv": 0
+          },
+          "packet": {
+            "plan": {
+              "seq": 1,
+              "snapshot": {
+                "t": 1000000,
+                "x": 0,
+                "v": 6000000,
+                "a": 0,
+                "lx": 40000000,
+                "lv": 0
+              },
+              "generated": 1000000,
+              "apply": 1100000,
+              "x": 600000,
+              "v": 6000000,
+              "a": 0,
+              "tail": 15,
+              "compute": 5000,
+              "count": 2,
+              "schema": 1
+            },
+            "crc": 4238565110,
+            "snapshot_ids": [
+              0,
+              0,
+              0
+            ],
+            "schema": 1
+          }
+        }
+      }
+    },
+    "exact_LS_quadratic": true,
+    "E2_stop_clipped": true,
+    "transaction_retry_packet_unchanged": true,
+    "limitation": "Freshly reanchoring frozen waypoints changes the signature; firmware must preserve planner transaction ownership. These witnesses do not prove semantic planner liveness."
+  },
+  "checker_selftests": {
+    "passed": true,
+    "scope": "synthetic parser tests; not RTL measurements",
+    "tests": {
+      "synthetic_complete": true,
+      "missing_log": true,
+      "missing_marker": true,
+      "failed_exit_marker": true,
+      "duplicate_job": true,
+      "missing_job": true,
+      "failure_diagnostic": true,
+      "missing_completion": true,
+      "wrong_batch": true,
+      "deadline_violation": true,
+      "input_hash_mismatch": true
+    }
+  },
+  "runtime_scope": "resumed replay and canonical export; finishing checks and earlier extraction/training attempts excluded",
+  "definitions": {
+    "admitted": "passes B1 ingress",
+    "accepted": "full system accept",
+    "fallback": "rejected admission issuing L2",
+    "mitigation": "rejected admission in L3",
+    "occupancy": "all transactions including service/ACK, not time",
+    "registered_oracle": "unchanged W7 oracle: +0.5 s object offset applied to encoded +0.1 s state; epoch mismatch retained"
+  },
+  "limitations": [
+    "Pose-derived offline ego is not causal CAN/IMU; measured reanchors and ideal command tracking between keyframes do not establish closed-loop tracking.",
+    "Training predictions are stride-12 tokens; validation is full W9b 150-scene continuous replay. Selection is conditional on this sparse training sample.",
+    "Scalar corridor and rotating local axes, no lateral dynamics; original object-track hold assumptions retained.",
+    "Planner/firmware/transport/apply/ACK schedule and executor tracking are assumptions, not measured hardware latency bounds; compute=5000 retains unresolved golden work units.",
+    "TSM certifies bridge/encoded-state stopping tail, not the original four-waypoint path. E2 transmits acceleration intent only.",
+    "Invalid measured snapshot remains unmodified and fails closed; E2 uses unclipped diagnostic constant-acceleration propagation outside golden advance domain.",
+    "Fresh waypoint re-encoding with new measured anchors can conceal planner freeze. Firmware must retain original transaction metadata and encoded packet on retries.",
+    "Existing obj_2 binary has 3151-vector capacity. Eight canonical shards run in parallel via complete-scene batches within each shard; no retained sequence is split.",
+    "RTL logs pending supervisor; JOB PASS verifies bit decisions and TB CSR cycles == observed latency. Golden has no absolute cycle prediction."
+  ],
+  "provenance_sha256": {
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w10a\\PREREGISTRATION.md": "b513662bfcf26e31ef4d652b63b055ceb510caed3fb53fd92a1bf007e87d48b6",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w10a\\packetizer_v2.py": "43b61483647f2a6ac283359033def16ca2fc2a8a6022bd8464638e5e8505b8ec",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w10a\\replay_core.py": "4687b3ce889a6673d690f4e06c4fc3c984853e2b2e4565ab6bf47856d49bd2d5",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w10a\\run_eval.py": "f704ad1320b6f9abc9edfc8cc5557a7c5fd8d39c65c58479df9afea5ef32543f",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\golden\\tsmx_golden\\model.py": "346a6468026d92b1279456c18711927672831321de07ed42ebf76d7f21028286",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\integ\\gen_sequences.py": "4199da9ab69f9d01b99690699785ce2b29d27e69292935eade9957b30101a4b6",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\run_w7.py": "08a052240d97a47ab493275cc6f62001d6f1e9fa6869a9d20c0dcd72bdb60216",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w10a\\train_inputs.pkl": "ea8b1f11cf8f82af0ea2699188b94c1158341991f9ed4ee8bef0f117f2cfbe1c",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w9b\\inputs.pkl": "f4e7c2266be5f1cb54c50a8068ac6e21c75c556d08a60ee9ecc76e1797d4cecc",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w9b\\packetizer.py": "39a79072cb11fe20dac909b6a528f5690080c8218600a992d87adee50f8d8808",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\eval_nuscenes\\w9b\\summary.json": "aae6082104841b519343ff26d2ed3145af50b91f5ee059485ef63adc1ebc7a7f",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\integ\\obj_2\\Vtb_m_tsmx_top": "c54e199495513eb4ff63186cfbb06a43299f02316c28685ac9f27a58a7ff36e9",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\dataset.npz": "a45273383cf210cb488748751769dd40e0d6332de61adf204ca48c9d863223c2",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\pred_hw_new.npy": "f333ca2af4eb0d9dc924c9927695dab116063a7694332fd9471e71eded3a6d16",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\train_dataset.npz": "5ac26c6a35b6c323335a94129b6086f923ceb6692d7f121f55b8a11724a7dbb4",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\train_pred_hw_new.npy": "28fdcc530f557508e503ccfb122d77b6bf045eb612e1fb743b87a63cfacc3ae7"
+  },
+  "artifact_checks": {
+    "passed": true,
+    "jobs": 48790,
+    "nonempty_scene_source_sequences": 286,
+    "all_request_bits_and_responses_match_audit": true,
+    "resets_only_at_scene_source_start": true,
+    "continuous_monotonic_times": true,
+    "scope": "artifact integrity; no independent golden or RTL execution",
+    "counts": {
+      "H/admission/range_schema": 432,
+      "H/service/timeout": 5715,
+      "H/admission/ego_live": 540,
+      "H/service/ego_live": 4812,
+      "H/admission/ok": 999,
+      "H/service/freeze_no_sample": 10828,
+      "H/admission/splice": 578,
+      "T/admission/range_schema": 432,
+      "T/service/timeout": 5680,
+      "T/admission/ego_live": 540,
+      "T/service/ego_live": 4657,
+      "T/admission/ok": 994,
+      "T/service/freeze_no_sample": 11018,
+      "T/admission/splice": 578,
+      "H/admission/no_backup": 392,
+      "T/admission/no_backup": 398,
+      "H/admission/ftti_budget": 40,
+      "T/admission/ftti_budget": 37,
+      "H/admission/timeout": 59,
+      "T/admission/timeout": 61
+    }
+  },
+  "rtl_batches": {
+    "binary_capacity": 3151,
+    "batches": [
+      {
+        "shard": 0,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3130,
+        "file": "rtl_batches/shard_0_batch_0.mem",
+        "scenes": [
+          "scene-0015",
+          "scene-0099",
+          "scene-0104",
+          "scene-0108",
+          "scene-0278",
+          "scene-0329",
+          "scene-0346",
+          "scene-0523",
+          "scene-0564"
+        ],
+        "sha256": "0207bac2bb56fe342a6ae2fcbc0d48ba1e81759a4c1d05a0d3e40369953ee765"
+      },
+      {
+        "shard": 0,
+        "batch": 1,
+        "start_job": 3130,
+        "job_count": 3000,
+        "file": "rtl_batches/shard_0_batch_1.mem",
+        "scenes": [
+          "scene-0777",
+          "scene-0778",
+          "scene-0783",
+          "scene-0784",
+          "scene-0904",
+          "scene-0916",
+          "scene-1061",
+          "scene-1068",
+          "scene-1069"
+        ],
+        "sha256": "0c0c43003d85d38a12ce71fcdb38a54535a1765d5947802ce14266f8c393ab5f"
+      },
+      {
+        "shard": 1,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3036,
+        "file": "rtl_batches/shard_1_batch_0.mem",
+        "scenes": [
+          "scene-0018",
+          "scene-0039",
+          "scene-0097",
+          "scene-0271",
+          "scene-0272",
+          "scene-0277",
+          "scene-0519",
+          "scene-0521",
+          "scene-0565"
+        ],
+        "sha256": "21518c3ee15638cc0b8104691428fa49817176ff8c04cd631440e442a7b75996"
+      },
+      {
+        "shard": 1,
+        "batch": 1,
+        "start_job": 3036,
+        "job_count": 3092,
+        "file": "rtl_batches/shard_1_batch_1.mem",
+        "scenes": [
+          "scene-0625",
+          "scene-0911",
+          "scene-0925",
+          "scene-0928",
+          "scene-0930",
+          "scene-0966",
+          "scene-0968",
+          "scene-1059",
+          "scene-1060"
+        ],
+        "sha256": "712aaa6a1275580d6fb32d92cd9f539aad59912ed3a2fbf679a7a354edf1353a"
+      },
+      {
+        "shard": 2,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3106,
+        "file": "rtl_batches/shard_2_batch_0.mem",
+        "scenes": [
+          "scene-0014",
+          "scene-0035",
+          "scene-0098",
+          "scene-0100",
+          "scene-0105",
+          "scene-0110",
+          "scene-0221",
+          "scene-0269",
+          "scene-0275",
+          "scene-0559",
+          "scene-0633",
+          "scene-0795",
+          "scene-0796",
+          "scene-0800",
+          "scene-0802"
+        ],
+        "sha256": "3fde6e556cfbbae26a9a6a68853f4ea03dbe4e3cb5bde68d55302d39764ec765"
+      },
+      {
+        "shard": 2,
+        "batch": 1,
+        "start_job": 3106,
+        "job_count": 2872,
+        "file": "rtl_batches/shard_2_batch_1.mem",
+        "scenes": [
+          "scene-0908",
+          "scene-0913",
+          "scene-0915",
+          "scene-0920",
+          "scene-0929",
+          "scene-0969",
+          "scene-1063",
+          "scene-1067",
+          "scene-1070",
+          "scene-1071"
+        ],
+        "sha256": "56c27c98ee23b0aaab53cbad22066fec293c484c5b433e5ff842416045e5b3d0"
+      },
+      {
+        "shard": 3,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3084,
+        "file": "rtl_batches/shard_3_batch_0.mem",
+        "scenes": [
+          "scene-0094",
+          "scene-0270",
+          "scene-0273",
+          "scene-0344",
+          "scene-0520",
+          "scene-0522",
+          "scene-0553",
+          "scene-0554",
+          "scene-0556"
+        ],
+        "sha256": "1b1f67d61b3d408d3215f3e2b466e3fd85a830099c157baaf0780b6aeba3e475"
+      },
+      {
+        "shard": 3,
+        "batch": 1,
+        "start_job": 3084,
+        "job_count": 3064,
+        "file": "rtl_batches/shard_3_batch_1.mem",
+        "scenes": [
+          "scene-0560",
+          "scene-0562",
+          "scene-0563",
+          "scene-0627",
+          "scene-0630",
+          "scene-0797",
+          "scene-0912",
+          "scene-0919",
+          "scene-0926"
+        ],
+        "sha256": "80191e49f3e421b8e5e10b6930cd6f29b2ed24d4ac15b41aa4784f8e039e10a3"
+      },
+      {
+        "shard": 4,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 2882,
+        "file": "rtl_batches/shard_4_batch_0.mem",
+        "scenes": [
+          "scene-0093",
+          "scene-0101",
+          "scene-0109",
+          "scene-0268",
+          "scene-0274",
+          "scene-0330",
+          "scene-0331",
+          "scene-0558",
+          "scene-0626"
+        ],
+        "sha256": "adb66b78bba5d1353c85148236b43d022285d0ad856e9139bd8b8cf4e37928d4"
+      },
+      {
+        "shard": 4,
+        "batch": 1,
+        "start_job": 2882,
+        "job_count": 2918,
+        "file": "rtl_batches/shard_4_batch_1.mem",
+        "scenes": [
+          "scene-0634",
+          "scene-0636",
+          "scene-0770",
+          "scene-0780",
+          "scene-0798",
+          "scene-0905",
+          "scene-0909",
+          "scene-0921"
+        ],
+        "sha256": "00d193d05a26ea1173c5025772eb1668f2e77de74dfa04f1fff50073efa30d15"
+      },
+      {
+        "shard": 4,
+        "batch": 2,
+        "start_job": 5800,
+        "job_count": 348,
+        "file": "rtl_batches/shard_4_batch_2.mem",
+        "scenes": [
+          "scene-1065"
+        ],
+        "sha256": "4482d176cd38549032add10a2b19515708b7fceab78380ca25e51ce3f9cf7627"
+      },
+      {
+        "shard": 5,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3052,
+        "file": "rtl_batches/shard_5_batch_0.mem",
+        "scenes": [
+          "scene-0003",
+          "scene-0012",
+          "scene-0013",
+          "scene-0016",
+          "scene-0036",
+          "scene-0038",
+          "scene-0345",
+          "scene-0552",
+          "scene-0555"
+        ],
+        "sha256": "193f7b26bc010f6fd0c97d80caf33f24770f36e5f5f8ccbe0c9525e6291da4f3"
+      },
+      {
+        "shard": 5,
+        "batch": 1,
+        "start_job": 3052,
+        "job_count": 2926,
+        "file": "rtl_batches/shard_5_batch_1.mem",
+        "scenes": [
+          "scene-0637",
+          "scene-0781",
+          "scene-0782",
+          "scene-0924",
+          "scene-0967",
+          "scene-0972",
+          "scene-1062",
+          "scene-1064"
+        ],
+        "sha256": "c8039a62075ebfd238121a2295c0ec89a2c537fcbd69bd48d5b914114e47466a"
+      },
+      {
+        "shard": 6,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 2860,
+        "file": "rtl_batches/shard_6_batch_0.mem",
+        "scenes": [
+          "scene-0092",
+          "scene-0095",
+          "scene-0102",
+          "scene-0107",
+          "scene-0524",
+          "scene-0557",
+          "scene-0561",
+          "scene-0629",
+          "scene-0638"
+        ],
+        "sha256": "607d8edefcf85f74e8f0410fa87cb145a70f8734e3cc10cd39387a8e92b91be3"
+      },
+      {
+        "shard": 6,
+        "batch": 1,
+        "start_job": 2860,
+        "job_count": 2922,
+        "file": "rtl_batches/shard_6_batch_1.mem",
+        "scenes": [
+          "scene-0771",
+          "scene-0906",
+          "scene-0910",
+          "scene-0914",
+          "scene-0917",
+          "scene-0922",
+          "scene-0923",
+          "scene-0931"
+        ],
+        "sha256": "7391722480be48e6c9f770be260761f1e97e0238dae871a1a3a99426c14ef8fe"
+      },
+      {
+        "shard": 6,
+        "batch": 2,
+        "start_job": 5782,
+        "job_count": 346,
+        "file": "rtl_batches/shard_6_batch_2.mem",
+        "scenes": [
+          "scene-1073"
+        ],
+        "sha256": "3388940787c8673553f9ab2cd3f1159f937e0353ff1161fbf998781d540441d3"
+      },
+      {
+        "shard": 7,
+        "batch": 0,
+        "start_job": 0,
+        "job_count": 3036,
+        "file": "rtl_batches/shard_7_batch_0.mem",
+        "scenes": [
+          "scene-0017",
+          "scene-0096",
+          "scene-0103",
+          "scene-0106",
+          "scene-0276",
+          "scene-0332",
+          "scene-0632",
+          "scene-0635",
+          "scene-0775"
+        ],
+        "sha256": "aee52c507e3201c8cf2a6559fac3021ba47a1cb64f04ed43338ca3e0735af236"
+      },
+      {
+        "shard": 7,
+        "batch": 1,
+        "start_job": 3036,
+        "job_count": 3116,
+        "file": "rtl_batches/shard_7_batch_1.mem",
+        "scenes": [
+          "scene-0794",
+          "scene-0799",
+          "scene-0907",
+          "scene-0927",
+          "scene-0962",
+          "scene-0963",
+          "scene-0971",
+          "scene-1066",
+          "scene-1072"
+        ],
+        "sha256": "e8f7cba318feff7579c21f3f0a1e5384ec0efbcd6f8ecfeb9f1cc18e5bff34df"
+      }
+    ]
+  },
+  "validation_tradeoff": "Validation tradeoff: H ACCEPT 1252 -> 999, FA 1.215% -> 1.476%; T ACCEPT 427 -> 994, FA 0.424% -> 1.064%. Training feasibility does not establish validation FA non-increase."
+}

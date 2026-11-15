@@ -1,0 +1,2 @@
+COMMAND: vvp -i C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\top_2.vvp +LIMIT=5 +FILE=live_edges.mem
+PASS top CSR/AXI smoke

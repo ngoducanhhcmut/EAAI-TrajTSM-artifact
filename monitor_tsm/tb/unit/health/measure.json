@@ -1,0 +1,40 @@
+{
+  "capacity1": {
+    "returncode": 0,
+    "seconds": 11.736,
+    "log": "param_simulation.log"
+  },
+  "illegal": [
+    {
+      "returncode": 1,
+      "seconds": 0.09,
+      "log": "invalid_0.log"
+    },
+    {
+      "returncode": 1,
+      "seconds": 0.081,
+      "log": "invalid_1025.log"
+    }
+  ],
+  "budget": {
+    "returncode": 0,
+    "seconds": 31.736,
+    "log": "measure.log"
+  },
+  "measure": [
+    "MEASURE latency=10..3088 II=14..3089"
+  ],
+  "jobs": [
+    "JOB x cycles=20 II=0",
+    "JOB x cycles=10 II=24",
+    "JOB x cycles=10 II=14",
+    "JOB x cycles=10 II=14",
+    "JOB x cycles=10 II=14",
+    "JOB x cycles=10 II=14",
+    "JOB x cycles=18 II=14",
+    "JOB x cycles=20 II=22",
+    "JOB 2584 cycles=2064 II=27",
+    "JOB 2585 cycles=3088 II=2065",
+    "JOB 2586 cycles=2064 II=39"
+  ]
+}

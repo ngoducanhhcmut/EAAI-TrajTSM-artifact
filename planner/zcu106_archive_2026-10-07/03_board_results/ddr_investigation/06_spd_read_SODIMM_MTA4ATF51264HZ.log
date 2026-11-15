@@ -1,0 +1,20 @@
+# 07/10/2026 — board_read_spd.tcl: doc EEPROM SPD cua thanh RAM qua I2C1 (mux TCA9548 0x75 kenh 3, dia chi 0x51).
+# Ket luan: SO-DIMM Micron MTA4ATF51264HZ-2G6E1 (4 GB, 1 rank, chip x16 8Gb, 16 bit hang, 10 bit cot, DDR4-2666)
+# -> khac preset ZCU106 (x8 4Gb) => nguyen nhan loi DDR. 0x54 o mux 0x74 la EEPROM khac (khong phai SPD).
+# ----- NGUYEN VAN (khong chinh sua) -----
+RST_LPD_IOU2=0x000100B8 (psu_init da nha reset I2C)
+=== Quet I2C1: bo chon kenh 0x74/0x75, kenh 0..7, SPD 0x50..0x57 ===
+bo chon kenh 0x74: OK
+  THAY thiet bi 0x54 o mux 0x74 kenh 0, byte 0..14: 57 50 49 55 54 49 49 48 50 49 52 52 45 54 50
+  THAY thiet bi 0x55 o mux 0x74 kenh 0, byte 0..14: 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+  THAY thiet bi 0x56 o mux 0x74 kenh 0, byte 0..14: 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+  THAY thiet bi 0x57 o mux 0x74 kenh 0, byte 0..14: 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+bo chon kenh 0x75: OK
+  THAY thiet bi 0x51 o mux 0x75 kenh 3, byte 0..14: 35 17 12 3 69 33 0 8 0 96 0 3 2 3 0
+0x54 (mux 0x74 kenh 0): byte2=0x31 — khong phai SPD DDR4
+0x55 (mux 0x74 kenh 0): byte2=0xFF — khong phai SPD DDR4
+0x56 (mux 0x74 kenh 0): byte2=0xFF — khong phai SPD DDR4
+0x57 (mux 0x74 kenh 0): byte2=0xFF — khong phai SPD DDR4
+SPD DDR4 o 0x51 (mux 0x75 kenh 3): module SO-DIMM | chip x16, 8Gb, 2 bank group | 1 rank | bus 64 bit | hang 16 bit, cot 10 bit
+  ma san pham module: '4ATF51264HZ-2G6E1   '
+SPD_XONG

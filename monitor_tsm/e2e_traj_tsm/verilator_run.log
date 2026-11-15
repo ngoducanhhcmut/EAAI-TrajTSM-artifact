@@ -1,0 +1,11 @@
+Verilator 5.053 devel rev v5.052-586-g1838b6ed0 (mod)
+%Warning: sigmoid_lut_init.hex:0: $readmem file not found
+%Warning: sigmoid_lut_init.hex:0: $readmem file not found
+%Warning: tanh_lut_init.hex:0: $readmem file not found
+[AG] assertion BAT: uram_arbiter.sv tb_e2e_traj_tsm.planner.dut.u_uram_arb
+[AG] assertion BAT: bert_weight_loader.sv tb_e2e_traj_tsm.planner.dut.bert_wl_inst
+[AG] assertion BAT: weight_loader.sv tb_e2e_traj_tsm.planner.dut.wl_inst
+[TSC] t=42256577000  PASS  traj_valid=1
+[42256677000] %Fatal: e2e_planner_driver.sv:163: Assertion failed in tb_e2e_traj_tsm.planner.run_frame.unnamedblk4: waypoint frame=0 word=0 delta=-4.162021
+%Error: e2e_planner_driver.sv:163: Verilog $stop
+Aborting...

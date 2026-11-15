@@ -1,0 +1,57 @@
+START arith N=69404
+LOADED arith
+PROGRESS 0/69404
+PROGRESS 5000/69404
+PROGRESS 10000/69404
+PROGRESS 15000/69404
+PROGRESS 20000/69404
+PROGRESS 25000/69404
+PROGRESS 30000/69404
+PROGRESS 35000/69404
+PROGRESS 40000/69404
+PROGRESS 45000/69404
+PROGRESS 50000/69404
+PROGRESS 55000/69404
+PROGRESS 60000/69404
+PROGRESS 65000/69404
+ASSERT 0 S5.3 reset_ready hits=7
+ASSERT 1 S5.3 reset_valid hits=7
+ASSERT 2 S5.3 reset_payload hits=7
+ASSERT 3 S5.3 invalid_zero hits=11137630
+ASSERT 4 S5.3 busy_ready hits=11068138
+ASSERT 5 S5.3 response_owned hits=208212
+ASSERT 6 S5.3 stall_valid hits=138808
+ASSERT 7 S5.3 stall_q0 hits=138808
+ASSERT 8 S5.3 stall_q1 hits=138808
+ASSERT 9 S5.3 stall_q2 hits=138808
+ASSERT 10 S5.3 stall_q3 hits=138808
+ASSERT 11 S5.5.1 fault_exact hits=208212
+ASSERT 12 S9.2 q0_exact hits=208212
+ASSERT 13 S9.2 q1_exact hits=208212
+ASSERT 14 S9.2 q2_exact hits=208212
+ASSERT 15 S9.2 q3_exact hits=208212
+ASSERT 16 S9.2 scalar_padding hits=146826
+ASSERT 17 S9.2 pose_padding hits=32736
+ASSERT 18 S5.5.1 fault_no_pose hits=1848
+ASSERT 19 S10.3 bounded_completion hits=208212
+ASSERT 20 S5.3 consume_ready hits=69404
+ASSERT 21 S5.3 consume_valid_clear hits=69404
+ASSERT 22 S5.3 stall_fault hits=138808
+ASSERT 23 S5.3 idle_payload hits=88
+ASSERT 24 S7 reset_abort hits=7
+ASSERT 25 S5.3 one_outstanding hits=208212
+LATENCY op=0 min=2 max=2
+LATENCY op=1 min=2 max=85
+LATENCY op=2 min=2 max=182
+LATENCY op=3 min=2 max=200
+LATENCY op=4 min=2 max=2093
+LATENCY op=5 min=2 max=2
+LATENCY op=6 min=2 max=213
+LATENCY op=7 min=2 max=2296
+LATENCY op=8 min=2 max=2
+assertion failures: 0, assertions never exercised: 0
+PASS arith: golden=69404/69404 assertions=26 mutants=external requests=69409 responses=69404
+- tb_m_tsmx_arith.sv:171: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 113ms; walltime 223.394 s; speed 507.886 us/s
+- Verilator: cpu 132.609 s on 1 threads; allocated 27 MB

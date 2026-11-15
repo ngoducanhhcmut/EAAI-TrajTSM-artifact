@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T12:35:58Z",
+  "old_verifier_sha256": "09c9f1dfa23715bcaef20d4e0ca98a239b8130697cd629bb7721cd9f07f411ba",
+  "new_verifier_sha256": "ffa2d78483df4814646affee38d6b791b05a65ce1a0b7bd2b23e135d3a0c93b6",
+  "simulation_functions_ast_identical": true,
+  "reason": "External PLAN coordination appendix changed byte hash after all simulations. Reconstructed full original PLAN prefix exactly matches immutable registration SHA; only approved S1/R appendix accepted. All numeric reference sources remain byte-exact. No PLAN edits by G1.",
+  "proof_file": "plan_append_validation.json"
+}

@@ -1,0 +1,58 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Oct  7 04:44:00 2026
+| Host         : LAPTOP-D1JJHVR7 running 64-bit major release  (build 9200)
+| Command      : report_utilization -file C:/Users/TransformerDA/Downloads/vla_new_arch/reports/impl_v2d/utilization.rpt -hierarchical -hierarchical_depth 3
+| Design       : system_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+|          Instance          |                               Module                              | Total LUTs | Logic LUTs | LUTRAMs | SRLs |   FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++----------------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+| system_wrapper             |                                                             (top) |     110572 |      98685 |    9292 | 2595 | 103248 |    214 |     12 |   72 |        866 |
+|   system_i                 |                                                            system |     110572 |      98685 |    9292 | 2595 | 103248 |    214 |     12 |   72 |        866 |
+|     (system_i)             |                                                            system |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|     axi_gpio_0             |                                               system_axi_gpio_0_0 |         33 |         33 |       0 |    0 |     38 |      0 |      0 |    0 |          0 |
+|       U0                   |                                      system_axi_gpio_0_0_axi_gpio |         33 |         33 |       0 |    0 |     38 |      0 |      0 |    0 |          0 |
+|     axi_gpio_1             |                                               system_axi_gpio_1_0 |        126 |        126 |       0 |    0 |    542 |      0 |      0 |    0 |          0 |
+|       U0                   |                                      system_axi_gpio_1_0_axi_gpio |        126 |        126 |       0 |    0 |    542 |      0 |      0 |    0 |          0 |
+|     hmao_engine_0          |                                            system_hmao_engine_0_2 |      27340 |      27340 |       0 |    0 |  31036 |      0 |      0 |    0 |        220 |
+|       (hmao_engine_0)      |                                            system_hmao_engine_0_2 |          1 |          1 |       0 |    0 |     25 |      0 |      0 |    0 |          0 |
+|       inst                 |                     system_hmao_engine_0_2_hmao_engine_top_bd_ref |      27340 |      27340 |       0 |    0 |  31011 |      0 |      0 |    0 |        220 |
+|     hmao_gpio_cdc_bridge_0 |                                   system_hmao_gpio_cdc_bridge_0_0 |          4 |          4 |       0 |    0 |     12 |      0 |      0 |    0 |          0 |
+|       inst                 |       system_hmao_gpio_cdc_bridge_0_0_hmao_gpio_cdc_bridge_bd_ref |          4 |          4 |       0 |    0 |     12 |      0 |      0 |    0 |          0 |
+|     planning_top_0         |                                           system_planning_top_0_0 |      80363 |      69263 |    8956 | 2144 |  68097 |    214 |     12 |   72 |        646 |
+|       (planning_top_0)     |                                           system_planning_top_0_0 |         30 |         30 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|       inst                 |                       system_planning_top_0_0_planning_top_bd_ref |      80349 |      69249 |    8956 | 2144 |  68097 |    214 |     12 |   72 |        646 |
+|     rst_pl_185m            |                                              system_rst_pl_185m_0 |         18 |         17 |       0 |    1 |    114 |      0 |      0 |    0 |          0 |
+|       U0                   |                               system_rst_pl_185m_0_proc_sys_reset |         18 |         17 |       0 |    1 |    114 |      0 |      0 |    0 |          0 |
+|     rst_pl_300m            |                                              system_rst_pl_300m_0 |         17 |         16 |       0 |    1 |    122 |      0 |      0 |    0 |          0 |
+|       U0                   |                               system_rst_pl_300m_0_proc_sys_reset |         17 |         16 |       0 |    1 |    122 |      0 |      0 |    0 |          0 |
+|     smartconnect_axil      |                                        system_smartconnect_axil_0 |        590 |        589 |       0 |    1 |    763 |      0 |      0 |    0 |          0 |
+|       inst                 |                                system_smartconnect_axil_0_bd_5c9f |        590 |        589 |       0 |    1 |    763 |      0 |      0 |    0 |          0 |
+|     smartconnect_dma       |                                         system_smartconnect_dma_0 |        860 |        571 |     128 |  161 |    967 |      0 |      0 |    0 |          0 |
+|       (smartconnect_dma)   |                                         system_smartconnect_dma_0 |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|       inst                 |                                 system_smartconnect_dma_0_bd_4dfc |        860 |        571 |     128 |  161 |    967 |      0 |      0 |    0 |          0 |
+|     smartconnect_hmao      |                                        system_smartconnect_hmao_0 |       1225 |        730 |     208 |  287 |   1557 |      0 |      0 |    0 |          0 |
+|       (smartconnect_hmao)  |                                        system_smartconnect_hmao_0 |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|       inst                 |                                system_smartconnect_hmao_0_bd_6660 |       1225 |        730 |     208 |  287 |   1557 |      0 |      0 |    0 |          0 |
+|     tsm_status_pack_0      |                                        system_tsm_status_pack_0_0 |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|     zynq_ultra_ps_e_0      |                                        system_zynq_ultra_ps_e_0_0 |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|       inst                 | system_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
++----------------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

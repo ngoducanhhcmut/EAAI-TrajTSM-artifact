@@ -1,0 +1,8 @@
+COMMAND: vvp simulation.vvp +MUTANT=14
+PROGRESS codec 0/5648 cycles=129
+INJECT 14 crc_exact: DUT output data stuck-X
+ASSERT_FAIL 14 crc_exact spec5.3/5.5.2/7/10.3 job=3 cycle=411 actual=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx expected=029e8cfcc0000000000000000000000000000000000000000000000000000000000000000
+FATAL: tb_m_tsmx_codec.sv:220: R-025 assertion failed
+       Time: 2468000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

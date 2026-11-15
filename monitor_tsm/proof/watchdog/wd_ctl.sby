@@ -1,0 +1,17 @@
+[options]
+mode prove
+depth 6
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal -sv stubs.sv
+read -formal -sv engine_ctl.sv
+chparam -set PARA_G 2 -set PARA_P 2 -set PARA_DIRECT 0 m_tsmx_engine
+prep -top m_tsmx_engine
+async2sync
+
+[files]
+stubs.sv
+engine_ctl.sv

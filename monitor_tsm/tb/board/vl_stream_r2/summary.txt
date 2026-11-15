@@ -1,0 +1,6 @@
+compile rc=0 s=2
+worst2 rc=0
+worst_apos rc=0
+reg300 rc=1
+apos rc=0
+DONE

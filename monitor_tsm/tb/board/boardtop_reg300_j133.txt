@@ -1,0 +1,35 @@
+BOARDSIM job=0 rsp=2014000447 cycles=650031 csr_cycles=650030 frames=1
+ERR job=1 rsp 201400043d exp 201400043f
+ERR job=1 csr reason=00000000 status=0001016a/000101ea lost=00000000
+ERR job=1 csr_cycles 650030 sim 650038
+BOARDSIM job=1 rsp=201400043d cycles=650031 csr_cycles=650030 frames=1
+ERR job=2 rsp 200000043d exp 200000043f
+ERR job=2 csr reason=00000000 status=00010142/000101c2 lost=00000000
+ERR job=2 csr_cycles 650030 sim 650038
+BOARDSIM job=2 rsp=200000043d cycles=650031 csr_cycles=650030 frames=1
+ERR job=3 rsp 006800063d exp 006400063f
+ERR job=3 event
+ERR job=3 cmd
+ERR job=3 csr reason=00000003 status=00010116/0001018e lost=00000000
+ERR job=3 csr_cycles 320496 sim 320504
+BOARDSIM job=3 rsp=006800063d cycles=320497 csr_cycles=320496 frames=1
+ERR job=4 rsp 0068000647 exp 0064000647
+ERR job=4 event
+ERR job=4 cmd
+ERR job=4 csr reason=00000003 status=00010116/0001018e lost=00000000
+ERR job=4 csr_cycles 320496 sim 322400
+BOARDSIM job=4 rsp=0068000647 cycles=320497 csr_cycles=320496 frames=1
+ERR job=5 rsp 0048000647 exp 0044000647
+ERR job=5 event
+ERR job=5 cmd
+ERR job=5 csr reason=00000002 status=00010116/0001018e lost=00000000
+ERR job=5 csr_cycles 320496 sim 324310
+BOARDSIM job=5 rsp=0048000647 cycles=320497 csr_cycles=320496 frames=1
+ERR job=6 csr reason=00000002 status=00010116/00010196 lost=00000000
+ERR job=6 csr_cycles 320496 sim 320501
+BOARDSIM job=6 rsp=0048000647 cycles=320497 csr_cycles=320496 frames=1
+ERR job=7 csr_cycles 320496 sim 440162
+BOARDSIM job=7 rsp=052c000647 cycles=320497 csr_cycles=320496 frames=1
+[35913390000] %Fatal: tb_board_top.sv:139: Assertion failed in tb_board_top: FAIL errors=24
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/board/tb_board_top.sv:139: Verilog $stop
+Aborting...

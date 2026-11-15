@@ -1,0 +1,875 @@
+{
+  "module": "m_tsmx_csr",
+  "async": 0,
+  "protocol": "AXI4-Lite",
+  "data_width": 32,
+  "address_width": 16,
+  "write_strobe_width": 4,
+  "assumptions": [
+    "ASSUMPTION-006",
+    "ASSUMPTION-011"
+  ],
+  "registers": [
+    {
+      "name": "ctrl",
+      "offset": "0x0",
+      "description": "ASSUMPTION-006: run only after BIST passes; disable forces independent brake. Configuration writes require disabled and idle.",
+      "fields": [
+        {
+          "name": "en",
+          "bits": "[0]",
+          "type": "rw",
+          "reset": "0x0",
+          "description": "Enable decision admission."
+        },
+        {
+          "name": "soft_rst",
+          "bits": "[1]",
+          "type": "rwi",
+          "reset": "0x0",
+          "description": "Write one requests a one-cycle supervisor reset; reads zero."
+        },
+        {
+          "name": "bist_start",
+          "bits": "[2]",
+          "type": "rwi",
+          "reset": "0x0",
+          "description": "Write one requests BIST while disabled; reads zero."
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:3]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "offset": "0x4",
+      "description": "Atomic last completed decision status; reset mode L3. No live partial decision exposed.",
+      "fields": [
+        {
+          "name": "busy",
+          "bits": "[0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "healthy",
+          "bits": "[1]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "fault",
+          "bits": "[2]",
+          "type": "ro",
+          "reset": "0x1",
+          "description": ""
+        },
+        {
+          "name": "mode",
+          "bits": "[5:3]",
+          "type": "ro",
+          "reset": "0x3",
+          "description": ""
+        },
+        {
+          "name": "pending",
+          "bits": "[6]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "backup",
+          "bits": "[7]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "bist_done",
+          "bits": "[8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "bits": "[17:16]",
+          "type": "ro",
+          "reset": "0x2",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:18]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        },
+        {
+          "name": "reserved",
+          "bits": "[15:9]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "irq_enable",
+      "offset": "0x8",
+      "description": "Level interrupt mask.",
+      "fields": [
+        {
+          "name": "mask",
+          "bits": "[7:0]",
+          "type": "rw",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "irq_status",
+      "offset": "0xc",
+      "description": "Sticky; hardware set wins simultaneous software clear.",
+      "fields": [
+        {
+          "name": "events",
+          "bits": "[7:0]",
+          "type": "w1c",
+          "reset": "0x0",
+          "description": "Bits: reject, commit fault, health fault, log overwrite, decision deadline, configuration error, BIST done, decision done."
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "fault_count",
+      "offset": "0x10",
+      "description": "Saturating count of rejected decisions, once per completed transaction.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "crc_count",
+      "offset": "0x14",
+      "description": "Saturating B1 crc rejects.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "fresh_count",
+      "offset": "0x18",
+      "description": "Saturating freshness, freeze and clock faults.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "cert_count",
+      "offset": "0x1c",
+      "description": "Saturating B9 rejects excluding pending/no_pending.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "health_count",
+      "offset": "0x20",
+      "description": "Saturating unhealthy transitions.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "log_lost",
+      "offset": "0x24",
+      "description": "Golden B10 lost count; saturating; reset clears.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "last_reason",
+      "offset": "0x28",
+      "description": "Last decision reason; enumeration in spec ABI.",
+      "fields": [
+        {
+          "name": "reason",
+          "bits": "[7:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "decision_cycles",
+      "offset": "0x2c",
+      "description": "Elapsed clocks of last completed decision.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_count",
+      "offset": "0x30",
+      "description": "Config1 locks full 16-profile table; any other value fails configuration.",
+      "fields": [
+        {
+          "name": "count",
+          "bits": "[7:0]",
+          "type": "rw",
+          "reset": "0x10",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "profile_limit",
+      "offset": "0x34",
+      "description": "Config1 locks maximum 128 integration cells; 129 endpoints permitted.",
+      "fields": [
+        {
+          "name": "limit",
+          "bits": "[7:0]",
+          "type": "rw",
+          "reset": "0x80",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:8]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "profile_mask",
+      "offset": "0x38",
+      "description": "All 16 diagnostic profiles enabled. B7 still excludes instant profiles. Config1 locks 0xffff.",
+      "fields": [
+        {
+          "name": "mask",
+          "bits": "[15:0]",
+          "type": "rw",
+          "reset": "0xffff",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:16]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "fresh_timeout_us",
+      "offset": "0x3c",
+      "description": "Config1 locks 150000 us; extension requires golden revalidation.",
+      "fields": [
+        {
+          "name": "timeout",
+          "bits": "[31:0]",
+          "type": "rw",
+          "reset": "0x249f0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "odd_v_max",
+      "offset": "0x40",
+      "description": "SI times 1000000. Config1 locks 10000000. Hardware field admits up to 20000000 only in a future validated configuration.",
+      "fields": [
+        {
+          "name": "v_max",
+          "bits": "[31:0]",
+          "type": "rw",
+          "reset": "0x989680",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ack_timeout_us",
+      "offset": "0x44",
+      "description": "Config1 locks 40000 us.",
+      "fields": [
+        {
+          "name": "timeout",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x9c40",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "lease_max_us",
+      "offset": "0x48",
+      "description": "Config1 locks 500000 us from generated.",
+      "fields": [
+        {
+          "name": "lease",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a120",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "config_valid",
+      "offset": "0x4c",
+      "description": "Zero after reset until defaults checked and BIST complete. Bad write invalidates configuration until defaults restored and BIST rerun.",
+      "fields": [
+        {
+          "name": "valid",
+          "bits": "[0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        },
+        {
+          "name": "reserved",
+          "bits": "[31:1]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": "Read zero; writes ignored."
+        }
+      ]
+    },
+    {
+      "name": "profile_0_decel",
+      "offset": "0x50",
+      "description": "Fixed Config1 profile 0; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_0_jerk",
+      "offset": "0x54",
+      "description": "Fixed profile 0; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_1_decel",
+      "offset": "0x58",
+      "description": "Fixed Config1 profile 1; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_1_jerk",
+      "offset": "0x5c",
+      "description": "Fixed profile 1; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_2_decel",
+      "offset": "0x60",
+      "description": "Fixed Config1 profile 2; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_2_jerk",
+      "offset": "0x64",
+      "description": "Fixed profile 2; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_3_decel",
+      "offset": "0x68",
+      "description": "Fixed Config1 profile 3; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_3_jerk",
+      "offset": "0x6c",
+      "description": "Fixed profile 3; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_4_decel",
+      "offset": "0x70",
+      "description": "Fixed Config1 profile 4; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_4_jerk",
+      "offset": "0x74",
+      "description": "Fixed profile 4; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_5_decel",
+      "offset": "0x78",
+      "description": "Fixed Config1 profile 5; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_5_jerk",
+      "offset": "0x7c",
+      "description": "Fixed profile 5; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_6_decel",
+      "offset": "0x80",
+      "description": "Fixed Config1 profile 6; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_6_jerk",
+      "offset": "0x84",
+      "description": "Fixed profile 6; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_7_decel",
+      "offset": "0x88",
+      "description": "Fixed Config1 profile 7; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_7_jerk",
+      "offset": "0x8c",
+      "description": "Fixed profile 7; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_8_decel",
+      "offset": "0x90",
+      "description": "Fixed Config1 profile 8; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x5b8d80",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_8_jerk",
+      "offset": "0x94",
+      "description": "Fixed profile 8; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_9_decel",
+      "offset": "0x98",
+      "description": "Fixed Config1 profile 9; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x5b8d80",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_9_jerk",
+      "offset": "0x9c",
+      "description": "Fixed profile 9; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_10_decel",
+      "offset": "0xa0",
+      "description": "Fixed Config1 profile 10; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x5b8d80",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_10_jerk",
+      "offset": "0xa4",
+      "description": "Fixed profile 10; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_11_decel",
+      "offset": "0xa8",
+      "description": "Fixed Config1 profile 11; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x5b8d80",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_11_jerk",
+      "offset": "0xac",
+      "description": "Fixed profile 11; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_12_decel",
+      "offset": "0xb0",
+      "description": "Fixed Config1 profile 12; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_12_jerk",
+      "offset": "0xb4",
+      "description": "Fixed profile 12; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x1e8480",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_13_decel",
+      "offset": "0xb8",
+      "description": "Fixed Config1 profile 13; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_13_jerk",
+      "offset": "0xbc",
+      "description": "Fixed profile 13; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x3d0900",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_14_decel",
+      "offset": "0xc0",
+      "description": "Fixed Config1 profile 14; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_14_jerk",
+      "offset": "0xc4",
+      "description": "Fixed profile 14; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_15_decel",
+      "offset": "0xc8",
+      "description": "Fixed Config1 profile 15; deceleration magnitude in SI times S.",
+      "fields": [
+        {
+          "name": "decel",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x7a1200",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "profile_15_jerk",
+      "offset": "0xcc",
+      "description": "Fixed profile 15; zero denotes instant, excluded by B7.",
+      "fields": [
+        {
+          "name": "jerk",
+          "bits": "[31:0]",
+          "type": "ro",
+          "reset": "0x0",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

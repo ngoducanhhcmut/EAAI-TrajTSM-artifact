@@ -1,0 +1,474 @@
+[
+  {
+    "name": "reset_awready",
+    "ante": "!rst",
+    "cons": "awready === 1'b0",
+    "target": "awready",
+    "kind": "binary",
+    "clause": "S5.5.12/S7 reset"
+  },
+  {
+    "name": "reset_wready",
+    "ante": "!rst",
+    "cons": "wready === 1'b0",
+    "target": "wready",
+    "kind": "binary",
+    "clause": "S5.5.12/S7 reset"
+  },
+  {
+    "name": "reset_arready",
+    "ante": "!rst",
+    "cons": "arready === 1'b0",
+    "target": "arready",
+    "kind": "binary",
+    "clause": "S5.5.12/S7 reset"
+  },
+  {
+    "name": "reset_bvalid",
+    "ante": "!rst",
+    "cons": "bvalid === 1'b0",
+    "target": "bvalid",
+    "kind": "binary",
+    "clause": "S5.5.12/S7 reset"
+  },
+  {
+    "name": "reset_rvalid",
+    "ante": "!rst",
+    "cons": "rvalid === 1'b0",
+    "target": "rvalid",
+    "kind": "binary",
+    "clause": "S5.5.12/S7 reset"
+  },
+  {
+    "name": "reset_config",
+    "ante": "!rst",
+    "cons": "config_data === 4'b0",
+    "target": "config_data",
+    "kind": "binary",
+    "clause": "JSON reset"
+  },
+  {
+    "name": "known_awready",
+    "ante": "rst",
+    "cons": "!$isunknown(awready)",
+    "target": "awready",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_wready",
+    "ante": "rst",
+    "cons": "!$isunknown(wready)",
+    "target": "wready",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_arready",
+    "ante": "rst",
+    "cons": "!$isunknown(arready)",
+    "target": "arready",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_bvalid",
+    "ante": "rst",
+    "cons": "!$isunknown(bvalid)",
+    "target": "bvalid",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_rvalid",
+    "ante": "rst",
+    "cons": "!$isunknown(rvalid)",
+    "target": "rvalid",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_bresp",
+    "ante": "rst && bvalid",
+    "cons": "!$isunknown(bresp)",
+    "target": "bresp",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_rresp",
+    "ante": "rst && rvalid",
+    "cons": "!$isunknown(rresp)",
+    "target": "rresp",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_rdata",
+    "ante": "rst && rvalid",
+    "cons": "!$isunknown(rdata)",
+    "target": "rdata",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_awaddr",
+    "ante": "rst && awvalid",
+    "cons": "!$isunknown(awaddr)",
+    "target": "awaddr",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_awprot",
+    "ante": "rst && awvalid",
+    "cons": "!$isunknown(awprot)",
+    "target": "awprot",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_wdata",
+    "ante": "rst && wvalid",
+    "cons": "!$isunknown(wdata)",
+    "target": "wdata",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_wstrb",
+    "ante": "rst && wvalid",
+    "cons": "!$isunknown(wstrb)",
+    "target": "wstrb",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_araddr",
+    "ante": "rst && arvalid",
+    "cons": "!$isunknown(araddr)",
+    "target": "araddr",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "known_arprot",
+    "ante": "rst && arvalid",
+    "cons": "!$isunknown(arprot)",
+    "target": "arprot",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "b_encoding",
+    "ante": "rst && bvalid",
+    "cons": "(bresp === 2'b00) || (bresp === 2'b10)",
+    "target": "bresp",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "r_encoding",
+    "ante": "rst && rvalid",
+    "cons": "(rresp === 2'b00) || (rresp === 2'b10)",
+    "target": "rresp",
+    "kind": "x",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "b_order",
+    "ante": "rst && bvalid",
+    "cons": "(bvalid === 1'b1) && (aw_count > b_count) && (w_count > b_count)",
+    "target": "bvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "r_order",
+    "ante": "rst && rvalid",
+    "cons": "(rvalid === 1'b1) && (ar_count > r_count)",
+    "target": "rvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "aw_slot",
+    "ante": "rst && bvalid",
+    "cons": "awready === 1'b0",
+    "target": "awready",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "w_slot",
+    "ante": "rst && bvalid",
+    "cons": "wready === 1'b0",
+    "target": "wready",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "ar_slot",
+    "ante": "rst && rvalid",
+    "cons": "arready === 1'b0",
+    "target": "arready",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "hold_bvalid",
+    "ante": "rst && pbvalid && !pbready",
+    "cons": "bvalid === pbvalid",
+    "target": "bvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "hold_bresp",
+    "ante": "rst && pbvalid && !pbready",
+    "cons": "bresp === pbresp",
+    "target": "bresp",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "hold_rvalid",
+    "ante": "rst && prvalid && !prready",
+    "cons": "rvalid === prvalid",
+    "target": "rvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "hold_rresp",
+    "ante": "rst && prvalid && !prready",
+    "cons": "rresp === prresp",
+    "target": "rresp",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "hold_rdata",
+    "ante": "rst && prvalid && !prready",
+    "cons": "rdata === prdata",
+    "target": "rdata",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_awvalid",
+    "ante": "rst && prev_rst && pawvalid && !pawready",
+    "cons": "awvalid === pawvalid",
+    "target": "awvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_awaddr",
+    "ante": "rst && prev_rst && pawvalid && !pawready",
+    "cons": "awaddr === pawaddr",
+    "target": "awaddr",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_awprot",
+    "ante": "rst && prev_rst && pawvalid && !pawready",
+    "cons": "awprot === pawprot",
+    "target": "awprot",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_wvalid",
+    "ante": "rst && prev_rst && pwvalid && !pwready",
+    "cons": "wvalid === pwvalid",
+    "target": "wvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_wdata",
+    "ante": "rst && prev_rst && pwvalid && !pwready",
+    "cons": "wdata === pwdata",
+    "target": "wdata",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_wstrb",
+    "ante": "rst && prev_rst && pwvalid && !pwready",
+    "cons": "wstrb === pwstrb",
+    "target": "wstrb",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_arvalid",
+    "ante": "rst && prev_rst && parvalid && !parready",
+    "cons": "arvalid === parvalid",
+    "target": "arvalid",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_araddr",
+    "ante": "rst && prev_rst && parvalid && !parready",
+    "cons": "araddr === paraddr",
+    "target": "araddr",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "master_hold_arprot",
+    "ante": "rst && prev_rst && parvalid && !parready",
+    "cons": "arprot === parprot",
+    "target": "arprot",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "exact_awready",
+    "ante": "1",
+    "cons": "awready === exp_awready",
+    "target": "awready",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_wready",
+    "ante": "1",
+    "cons": "wready === exp_wready",
+    "target": "wready",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_bvalid",
+    "ante": "1",
+    "cons": "bvalid === exp_bvalid",
+    "target": "bvalid",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_bresp",
+    "ante": "1",
+    "cons": "bresp === exp_bresp",
+    "target": "bresp",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_arready",
+    "ante": "1",
+    "cons": "arready === exp_arready",
+    "target": "arready",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_rvalid",
+    "ante": "1",
+    "cons": "rvalid === exp_rvalid",
+    "target": "rvalid",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_rresp",
+    "ante": "1",
+    "cons": "rresp === exp_rresp",
+    "target": "rresp",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_rdata",
+    "ante": "1",
+    "cons": "rdata === exp_rdata",
+    "target": "rdata",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_config_data",
+    "ante": "1",
+    "cons": "config_data === exp_config_data",
+    "target": "config_data",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "exact_irq",
+    "ante": "1",
+    "cons": "irq === exp_irq",
+    "target": "irq",
+    "kind": "binary",
+    "clause": "S6.1/S11 JSON bit-exact cycle reference"
+  },
+  {
+    "name": "invalid_rdata",
+    "ante": "rst && !rvalid",
+    "cons": "rdata === 32'b0",
+    "target": "rdata",
+    "kind": "binary",
+    "clause": "S5.3 invalid payload"
+  },
+  {
+    "name": "invalid_rresp",
+    "ante": "rst && !rvalid",
+    "cons": "rresp === 2'b0",
+    "target": "rresp",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "invalid_bresp",
+    "ante": "rst && !bvalid",
+    "cons": "bresp === 2'b0",
+    "target": "bresp",
+    "kind": "binary",
+    "clause": "S6.1 AXI4-Lite"
+  },
+  {
+    "name": "config_known",
+    "ante": "rst",
+    "cons": "!$isunknown(config_data)",
+    "target": "config_data",
+    "kind": "x",
+    "clause": "S5.4 configuration"
+  },
+  {
+    "name": "irq_known",
+    "ante": "rst",
+    "cons": "!$isunknown(irq)",
+    "target": "irq",
+    "kind": "x",
+    "clause": "S11 IRQ"
+  },
+  {
+    "name": "w1c_readback",
+    "ante": "rst && rvalid && last_rd_addr==16'h000c",
+    "cons": "rdata === exp_rdata",
+    "target": "rdata",
+    "kind": "binary",
+    "clause": "S6.1/JSON hardware-set wins W1C"
+  },
+  {
+    "name": "ro_write_ignored",
+    "ante": "rst && rvalid && (last_rd_addr==16'h0004 || last_rd_addr==16'h0010 || last_rd_addr==16'h0014 || last_rd_addr==16'h0018 || last_rd_addr==16'h001c || last_rd_addr==16'h0020 || last_rd_addr==16'h0024 || last_rd_addr==16'h0028 || last_rd_addr==16'h002c || last_rd_addr==16'h0044 || last_rd_addr==16'h0048 || last_rd_addr==16'h004c || last_rd_addr==16'h0050 || last_rd_addr==16'h0054 || last_rd_addr==16'h0058 || last_rd_addr==16'h005c || last_rd_addr==16'h0060 || last_rd_addr==16'h0064 || last_rd_addr==16'h0068 || last_rd_addr==16'h006c || last_rd_addr==16'h0070 || last_rd_addr==16'h0074 || last_rd_addr==16'h0078 || last_rd_addr==16'h007c || last_rd_addr==16'h0080 || last_rd_addr==16'h0084 || last_rd_addr==16'h0088 || last_rd_addr==16'h008c || last_rd_addr==16'h0090 || last_rd_addr==16'h0094 || last_rd_addr==16'h0098 || last_rd_addr==16'h009c || last_rd_addr==16'h00a0 || last_rd_addr==16'h00a4 || last_rd_addr==16'h00a8 || last_rd_addr==16'h00ac || last_rd_addr==16'h00b0 || last_rd_addr==16'h00b4 || last_rd_addr==16'h00b8 || last_rd_addr==16'h00bc || last_rd_addr==16'h00c0 || last_rd_addr==16'h00c4 || last_rd_addr==16'h00c8 || last_rd_addr==16'h00cc)",
+    "cons": "rdata === exp_rdata",
+    "target": "rdata",
+    "kind": "binary",
+    "clause": "S6.1/JSON RO write error preserves data"
+  },
+  {
+    "name": "reserved_read_zero",
+    "ante": "rst && rvalid && (reserved_mask(last_rd_addr)!=32'b0)",
+    "cons": "(rdata & reserved_mask(last_rd_addr)) === 32'b0",
+    "target": "rdata",
+    "kind": "ones",
+    "clause": "S6.1/JSON reserved bits read zero"
+  }
+]

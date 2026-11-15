@@ -1,0 +1,2135 @@
+start Fri Nov  6 13:22:29 +07 2026
+compile rc=0 Fri Nov  6 13:24:03 +07 2026
+probe rc=0 PROBE id=0 cycle=1 before=0 after=1 ok=1
+BASELINE 0 cycles 661169 seconds 58.54
+BASELINE 1 cycles 10 seconds 0.234
+BASELINE 2 cycles 634154 seconds 53.423
+BASELINE 3 cycles 407486 seconds 34.084
+0 arith bit=82 cycle=3 MASKED 0.238s
+1 cert bit=2474 cycle=367404 MASKED 56.433s
+2 codec bit=329 cycle=60980 MASKED 33.630s
+3 engine bit=38851 cycle=2 MASKED 0.176s
+4 geom bit=162 cycle=173219 MASKED 52.908s
+5 geom_su bit=16 cycle=111203 MASKED 54.544s
+6 health bit=17578 cycle=262988 MASKED 53.027s
+7 ingress bit=95 cycle=277480 MASKED 33.959s
+8 mrmgen bit=28 cycle=394903 MASKED 33.103s
+9 selection bit=3 cycle=140247 MASKED 32.871s
+10 supervisor bit=6 cycle=354814 MASKED 39.323s
+11 sweep bit=6641 cycle=450134 MASKED 57.170s
+12 arith bit=345 cycle=290631 MASKED 58.024s
+13 cert bit=2875 cycle=364559 MASKED 32.247s
+14 codec bit=144 cycle=22009 MASKED 34.106s
+15 engine bit=8157 cycle=321561 MASKED 50.554s
+16 geom bit=37 cycle=4 MASKED 0.227s
+17 geom_su bit=15 cycle=77522 MASKED 55.057s
+18 health bit=15997 cycle=433697 MASKED 52.439s
+19 ingress bit=1248 cycle=199662 MASKED 52.588s
+20 mrmgen bit=24 cycle=247861 MASKED 53.821s
+21 selection bit=10 cycle=605795 MASKED 50.577s
+22 supervisor bit=4 cycle=551202 MASKED 53.383s
+23 sweep bit=4927 cycle=103953 MASKED 49.733s
+24 arith bit=573 cycle=527928 MASKED 48.746s
+25 cert bit=2792 cycle=130768 MASKED 49.329s
+26 codec bit=733 cycle=283728 MASKED 52.798s
+27 engine bit=26319 cycle=567168 MASKED 52.678s
+28 geom bit=8107 cycle=475333 MASKED 51.628s
+29 geom_su bit=38 cycle=8 MASKED 0.236s
+30 health bit=16739 cycle=195003 MASKED 32.497s
+31 ingress bit=256 cycle=111992 MASKED 33.054s
+32 mrmgen bit=42 cycle=130856 MASKED 52.335s
+33 selection bit=0 cycle=2 MASKED 0.235s
+34 supervisor bit=3 cycle=22004 MASKED 51.625s
+35 sweep bit=3132 cycle=331589 MASKED 54.270s
+36 arith bit=5 cycle=190727 MASKED 33.620s
+37 cert bit=2445 cycle=508482 MASKED 54.554s
+38 codec bit=105 cycle=3 MASKED 0.230s
+39 engine bit=7756 cycle=266754 MASKED 33.603s
+40 geom bit=4814 cycle=198608 MASKED 57.166s
+41 geom_su bit=0 cycle=606386 MASKED 52.178s
+42 health bit=10243 cycle=340434 MASKED 32.802s
+43 ingress bit=282 cycle=304296 MASKED 53.269s
+44 mrmgen bit=110 cycle=321505 MASKED 37.526s
+45 selection bit=9 cycle=200301 MASKED 37.711s
+46 supervisor bit=4 cycle=1 MASKED 0.236s
+47 sweep bit=2595 cycle=252541 MASKED 59.478s
+48 arith bit=39 cycle=1 MASKED 0.279s
+49 cert bit=2118 cycle=303440 MASKED 56.992s
+50 codec bit=173 cycle=11785 MASKED 36.455s
+51 engine bit=43541 cycle=202483 MASKED 54.368s
+52 geom bit=4814 cycle=252464 MASKED 49.353s
+53 geom_su bit=53 cycle=439753 MASKED 48.705s
+54 health bit=19772 cycle=3 MASKED 0.244s
+55 ingress bit=542 cycle=4 MASKED 0.234s
+56 mrmgen bit=1 cycle=3 MASKED 0.241s
+57 selection bit=0 cycle=644398 MASKED 55.707s
+58 supervisor bit=4 cycle=3 MASKED 0.241s
+59 sweep bit=1233 cycle=607589 MASKED 57.683s
+60 arith bit=46 cycle=34188 MASKED 35.086s
+61 cert bit=741 cycle=486335 MASKED 52.232s
+62 codec bit=81 cycle=351600 SDC-UNSAFE 53.910s
+63 engine bit=6919 cycle=465291 MASKED 51.549s
+64 geom bit=117 cycle=303165 MASKED 33.525s
+65 geom_su bit=3 cycle=465307 MASKED 54.673s
+66 health bit=16611 cycle=2 MASKED 0.297s
+67 ingress bit=1193 cycle=212819 MASKED 55.749s
+68 mrmgen bit=13 cycle=4 MASKED 0.287s
+69 selection bit=0 cycle=129027 MASKED 34.972s
+70 supervisor bit=6 cycle=8 MASKED 0.284s
+71 sweep bit=4819 cycle=56577 MASKED 53.103s
+72 arith bit=4 cycle=216533 MASKED 34.679s
+73 cert bit=1900 cycle=474806 MASKED 54.291s
+74 codec bit=222 cycle=5 MASKED 0.295s
+75 engine bit=34513 cycle=150187 MASKED 56.027s
+76 geom bit=20 cycle=6 MASKED 0.242s
+77 geom_su bit=20 cycle=5 MASKED 0.240s
+78 health bit=13592 cycle=9 MASKED 0.298s
+79 ingress bit=1193 cycle=7 MASKED 0.239s
+80 mrmgen bit=320 cycle=214859 MASKED 35.937s
+81 selection bit=1 cycle=7 MASKED 0.281s
+82 supervisor bit=2 cycle=426379 MASKED 60.600s
+83 sweep bit=987 cycle=9 MASKED 0.232s
+84 arith bit=356 cycle=594359 MASKED 55.246s
+85 cert bit=2090 cycle=372989 MASKED 57.080s
+86 codec bit=341 cycle=248569 MASKED 52.279s
+87 engine bit=4976 cycle=128926 MASKED 52.073s
+88 geom bit=150 cycle=500476 MASKED 52.092s
+89 geom_su bit=31 cycle=364894 MASKED 51.782s
+90 health bit=2569 cycle=299747 MASKED 33.723s
+91 ingress bit=1214 cycle=9 MASKED 0.234s
+92 mrmgen bit=17 cycle=3 MASKED 0.235s
+93 selection bit=11 cycle=20527 MASKED 53.615s
+94 supervisor bit=3 cycle=397479 MASKED 33.828s
+95 sweep bit=6407 cycle=272495 MASKED 33.069s
+96 arith bit=9 cycle=35027 MASKED 53.254s
+97 cert bit=629 cycle=431691 MASKED 52.649s
+98 codec bit=166 cycle=43338 MASKED 37.751s
+99 engine bit=23768 cycle=9 MASKED 0.229s
+100 geom bit=3986 cycle=294157 MASKED 37.477s
+101 geom_su bit=16 cycle=412592 MASKED 54.460s
+102 health bit=23661 cycle=267513 MASKED 54.389s
+103 ingress bit=1082 cycle=597537 MASKED 54.601s
+104 mrmgen bit=15 cycle=2 MASKED 0.235s
+105 selection bit=14 cycle=428120 MASKED 56.250s
+106 supervisor bit=0 cycle=514098 MASKED 53.571s
+107 sweep bit=6503 cycle=8 MASKED 0.227s
+108 arith bit=609 cycle=2 MASKED 0.229s
+109 cert bit=2244 cycle=366354 MASKED 34.579s
+110 codec bit=936 cycle=8 MASKED 0.233s
+111 engine bit=25361 cycle=259111 MASKED 33.825s
+112 geom bit=2778 cycle=339782 MASKED 55.340s
+113 geom_su bit=25 cycle=187594 MASKED 56.307s
+114 health bit=26067 cycle=1 MASKED 0.230s
+115 ingress bit=31 cycle=396593 MASKED 54.348s
+116 mrmgen bit=94 cycle=3 MASKED 0.239s
+117 selection bit=13 cycle=304710 MASKED 50.675s
+118 supervisor bit=6 cycle=3 MASKED 0.227s
+119 sweep bit=5286 cycle=3 MASKED 0.226s
+120 arith bit=81 cycle=6 MASKED 0.237s
+121 cert bit=2509 cycle=389310 MASKED 59.524s
+122 codec bit=127 cycle=522252 SDC-UNSAFE 56.483s
+123 engine bit=17735 cycle=130723 MASKED 53.693s
+124 geom bit=594 cycle=5 MASKED 0.286s
+125 geom_su bit=6 cycle=9 MASKED 0.244s
+126 health bit=2567 cycle=287188 MASKED 34.939s
+127 ingress bit=900 cycle=6 MASKED 0.176s
+128 mrmgen bit=3 cycle=9 MASKED 0.179s
+129 selection bit=7 cycle=7 MASKED 0.179s
+130 supervisor bit=0 cycle=59348 MASKED 33.392s
+131 sweep bit=3732 cycle=1 MASKED 0.241s
+132 arith bit=29 cycle=8 MASKED 0.232s
+133 cert bit=1981 cycle=3 MASKED 0.227s
+134 codec bit=251 cycle=23117 MASKED 55.401s
+135 engine bit=3242 cycle=347989 MASKED 52.178s
+136 geom bit=6016 cycle=369985 MASKED 32.189s
+137 geom_su bit=5 cycle=7 MASKED 0.177s
+138 health bit=5773 cycle=9 MASKED 0.174s
+139 ingress bit=266 cycle=364725 MASKED 49.414s
+140 mrmgen bit=332 cycle=281348 MASKED 31.646s
+141 selection bit=10 cycle=364171 MASKED 30.971s
+142 supervisor bit=4 cycle=4 MASKED 0.229s
+143 sweep bit=712 cycle=97118 MASKED 51.477s
+144 arith bit=29 cycle=183088 MASKED 32.241s
+145 cert bit=835 cycle=4376 MASKED 31.010s
+146 codec bit=58 cycle=294797 MASKED 49.423s
+147 engine bit=927 cycle=231480 MASKED 31.396s
+148 geom bit=2611 cycle=2033 MASKED 31.561s
+149 geom_su bit=56 cycle=7 MASKED 0.183s
+150 health bit=16295 cycle=529988 MASKED 53.112s
+151 ingress bit=900 cycle=50767 MASKED 31.636s
+152 mrmgen bit=13 cycle=7 MASKED 0.240s
+153 selection bit=6 cycle=364103 MASKED 32.112s
+154 supervisor bit=1 cycle=144356 MASKED 31.485s
+155 sweep bit=5568 cycle=474527 MASKED 49.888s
+156 arith bit=71 cycle=298942 MASKED 51.970s
+157 cert bit=81 cycle=369820 MASKED 49.956s
+158 codec bit=168 cycle=152729 MASKED 49.776s
+159 engine bit=32295 cycle=4 MASKED 0.229s
+160 geom bit=1571 cycle=8 MASKED 0.225s
+161 geom_su bit=10 cycle=9 MASKED 0.176s
+162 health bit=28661 cycle=3 MASKED 0.229s
+163 ingress bit=850 cycle=149087 MASKED 31.448s
+164 mrmgen bit=63 cycle=340531 MASKED 49.135s
+165 selection bit=9 cycle=8 MASKED 0.180s
+166 supervisor bit=0 cycle=6 MASKED 0.239s
+167 sweep bit=2385 cycle=576476 MASKED 53.100s
+168 arith bit=139 cycle=266909 MASKED 51.510s
+169 cert bit=1385 cycle=226355 MASKED 31.498s
+170 codec bit=511 cycle=343528 MASKED 48.565s
+171 engine bit=1784 cycle=204032 MASKED 48.830s
+172 geom bit=3661 cycle=331372 MASKED 48.342s
+173 geom_su bit=77 cycle=98167 MASKED 49.305s
+174 health bit=148 cycle=497455 MASKED 51.459s
+175 ingress bit=1009 cycle=326217 MASKED 53.708s
+176 mrmgen bit=36 cycle=354243 MASKED 50.202s
+177 selection bit=15 cycle=334090 MASKED 51.786s
+178 supervisor bit=5 cycle=6 MASKED 0.239s
+179 sweep bit=5606 cycle=151836 MASKED 35.204s
+180 arith bit=89 cycle=324161 MASKED 34.500s
+181 cert bit=2869 cycle=234282 MASKED 33.633s
+182 codec bit=567 cycle=1 MASKED 0.292s
+183 engine bit=8176 cycle=1 MASKED 0.231s
+184 geom bit=705 cycle=7 MASKED 0.236s
+185 geom_su bit=46 cycle=8 MASKED 0.238s
+186 health bit=1897 cycle=192285 MASKED 50.122s
+187 ingress bit=1162 cycle=274703 MASKED 53.804s
+188 mrmgen bit=11 cycle=8 MASKED 0.240s
+189 selection bit=14 cycle=7 MASKED 0.240s
+190 supervisor bit=6 cycle=589733 MASKED 50.703s
+191 sweep bit=3457 cycle=382026 MASKED 32.897s
+192 arith bit=625 cycle=127359 MASKED 50.265s
+193 cert bit=144 cycle=5 MASKED 0.230s
+194 codec bit=187 cycle=487698 MASKED 52.734s
+195 engine bit=33997 cycle=381489 MASKED 49.938s
+196 geom bit=2646 cycle=4 MASKED 0.240s
+197 geom_su bit=9 cycle=3 MASKED 0.238s
+198 health bit=32445 cycle=53976 MASKED 31.873s
+199 ingress bit=334 cycle=1 MASKED 0.241s
+200 mrmgen bit=7 cycle=276837 MASKED 32.025s
+201 selection bit=5 cycle=359529 MASKED 52.253s
+202 supervisor bit=6 cycle=242830 MASKED 49.945s
+203 sweep bit=782 cycle=137298 MASKED 32.384s
+204 arith bit=85 cycle=258817 MASKED 31.931s
+205 cert bit=613 cycle=7 MASKED 0.237s
+206 codec bit=403 cycle=5 MASKED 0.230s
+207 engine bit=26852 cycle=261350 MASKED 55.199s
+208 geom bit=6450 cycle=406370 MASKED 51.113s
+209 geom_su bit=23 cycle=248711 MASKED 50.476s
+210 health bit=27701 cycle=3 MASKED 0.288s
+211 ingress bit=336 cycle=361294 MASKED 33.897s
+212 mrmgen bit=345 cycle=54516 MASKED 49.326s
+213 selection bit=4 cycle=305971 MASKED 52.253s
+214 supervisor bit=0 cycle=53403 MASKED 55.691s
+215 sweep bit=6031 cycle=4 MASKED 0.342s
+216 arith bit=27 cycle=229792 MASKED 32.411s
+217 cert bit=2372 cycle=292109 MASKED 32.437s
+218 codec bit=429 cycle=621650 MASKED 51.711s
+219 engine bit=51 cycle=44361 MASKED 33.060s
+220 geom bit=3585 cycle=3 MASKED 0.241s
+221 geom_su bit=33 cycle=564802 MASKED 51.020s
+222 health bit=8206 cycle=187940 MASKED 51.831s
+223 ingress bit=736 cycle=25551 MASKED 32.782s
+224 mrmgen bit=77 cycle=362874 MASKED 32.783s
+225 selection bit=13 cycle=113607 MASKED 32.684s
+226 supervisor bit=2 cycle=6 MASKED 0.243s
+227 sweep bit=3286 cycle=644268 MASKED 58.573s
+228 arith bit=62 cycle=169070 MASKED 53.542s
+229 cert bit=212 cycle=375617 MASKED 35.271s
+230 codec bit=681 cycle=3 MASKED 0.283s
+231 engine bit=1932 cycle=615366 MASKED 54.663s
+232 geom bit=204 cycle=40860 MASKED 53.232s
+233 geom_su bit=16 cycle=416575 MASKED 56.150s
+234 health bit=31929 cycle=1 MASKED 0.389s
+235 ingress bit=1192 cycle=3 MASKED 0.228s
+236 mrmgen bit=331 cycle=144534 MASKED 36.485s
+237 selection bit=9 cycle=212181 MASKED 53.446s
+238 supervisor bit=1 cycle=615682 MASKED 56.063s
+239 sweep bit=290 cycle=142948 MASKED 51.968s
+240 arith bit=620 cycle=432300 MASKED 50.140s
+241 cert bit=1816 cycle=355406 MASKED 32.018s
+242 codec bit=170 cycle=379989 MASKED 34.928s
+243 engine bit=80 cycle=100059 MASKED 51.639s
+244 geom bit=1887 cycle=6 MASKED 0.233s
+245 geom_su bit=7 cycle=113673 MASKED 34.612s
+246 health bit=22843 cycle=4 MASKED 0.227s
+247 ingress bit=215 cycle=9 MASKED 0.279s
+248 mrmgen bit=20 cycle=164665 MASKED 41.762s
+249 selection bit=1 cycle=83690 MASKED 43.874s
+250 supervisor bit=0 cycle=425410 MASKED 67.985s
+251 sweep bit=1778 cycle=299422 MASKED 42.180s
+252 arith bit=452 cycle=184420 MASKED 60.555s
+253 cert bit=2730 cycle=309470 MASKED 58.332s
+254 codec bit=8 cycle=159127 MASKED 51.762s
+255 engine bit=35688 cycle=409120 MASKED 52.551s
+256 geom bit=7050 cycle=7 MASKED 0.239s
+257 geom_su bit=2 cycle=226679 MASKED 32.496s
+258 health bit=13862 cycle=13924 MASKED 53.263s
+259 ingress bit=334 cycle=4 MASKED 0.230s
+260 mrmgen bit=187 cycle=623014 MASKED 50.164s
+261 selection bit=8 cycle=4 MASKED 0.232s
+262 supervisor bit=3 cycle=287378 MASKED 35.072s
+263 sweep bit=7235 cycle=408356 MASKED 54.804s
+264 arith bit=149 cycle=8 MASKED 0.236s
+265 cert bit=1483 cycle=75934 MASKED 54.556s
+266 codec bit=438 cycle=436830 MASKED 53.713s
+267 engine bit=18475 cycle=348082 MASKED 58.857s
+268 geom bit=226 cycle=151488 MASKED 33.239s
+269 geom_su bit=9 cycle=607473 MASKED 52.259s
+270 health bit=26295 cycle=583363 MASKED 49.333s
+271 ingress bit=984 cycle=39833 MASKED 60.954s
+272 mrmgen bit=173 cycle=267492 MASKED 39.989s
+273 selection bit=15 cycle=1 MASKED 0.350s
+274 supervisor bit=3 cycle=5 MASKED 0.297s
+275 sweep bit=2485 cycle=187620 MASKED 32.325s
+276 arith bit=154 cycle=4 MASKED 0.236s
+277 cert bit=752 cycle=618495 MASKED 54.099s
+278 codec bit=295 cycle=122103 MASKED 51.593s
+279 engine bit=15379 cycle=179316 MASKED 50.064s
+280 geom bit=4856 cycle=3 MASKED 0.346s
+281 geom_su bit=2 cycle=175550 DETECTED 165.043s
+282 health bit=14943 cycle=123564 MASKED 66.329s
+283 ingress bit=903 cycle=475695 MASKED 63.739s
+284 mrmgen bit=7 cycle=507485 MASKED 66.663s
+285 selection bit=6 cycle=506473 MASKED 62.928s
+286 supervisor bit=2 cycle=3 MASKED 0.229s
+287 sweep bit=1075 cycle=8 MASKED 0.229s
+288 arith bit=19 cycle=417159 MASKED 52.070s
+289 cert bit=115 cycle=96128 MASKED 32.368s
+290 codec bit=817 cycle=396197 MASKED 50.015s
+291 engine bit=24974 cycle=245980 MASKED 32.380s
+292 geom bit=2157 cycle=72719 MASKED 31.994s
+293 geom_su bit=4 cycle=9 MASKED 0.238s
+294 health bit=29581 cycle=3 MASKED 0.236s
+295 ingress bit=156 cycle=329740 MASKED 63.865s
+296 mrmgen bit=387 cycle=6 MASKED 0.400s
+297 selection bit=1 cycle=335559 MASKED 40.619s
+298 supervisor bit=0 cycle=3 MASKED 0.281s
+299 sweep bit=518 cycle=141242 MASKED 34.483s
+300 arith bit=143 cycle=218181 MASKED 53.780s
+301 cert bit=1549 cycle=410740 MASKED 52.848s
+302 codec bit=246 cycle=183909 MASKED 55.133s
+303 engine bit=3890 cycle=1 MASKED 0.183s
+304 geom bit=7363 cycle=37216 MASKED 51.927s
+305 geom_su bit=8 cycle=7 MASKED 0.237s
+306 health bit=13368 cycle=244314 MASKED 32.518s
+307 ingress bit=395 cycle=208457 MASKED 51.934s
+308 mrmgen bit=49 cycle=4 MASKED 0.181s
+309 selection bit=12 cycle=395724 MASKED 50.384s
+310 supervisor bit=5 cycle=391163 MASKED 32.830s
+311 sweep bit=6997 cycle=6 MASKED 0.182s
+312 arith bit=39 cycle=519416 MASKED 53.420s
+313 cert bit=941 cycle=79982 MASKED 54.018s
+314 codec bit=98 cycle=265936 MASKED 50.246s
+315 engine bit=417 cycle=5 MASKED 0.241s
+316 geom bit=327 cycle=38887 MASKED 50.638s
+317 geom_su bit=30 cycle=611972 MASKED 53.227s
+318 health bit=25617 cycle=3 MASKED 0.232s
+319 ingress bit=1291 cycle=6 MASKED 0.237s
+320 mrmgen bit=6 cycle=4 MASKED 0.237s
+321 selection bit=5 cycle=165878 MASKED 33.270s
+322 supervisor bit=4 cycle=146629 MASKED 57.248s
+323 sweep bit=7697 cycle=571554 MASKED 51.773s
+324 arith bit=112 cycle=375912 MASKED 31.713s
+325 cert bit=2511 cycle=5849 MASKED 33.262s
+326 codec bit=199 cycle=499850 SDC-UNSAFE 53.989s
+327 engine bit=21047 cycle=3 MASKED 0.235s
+328 geom bit=5347 cycle=173749 MASKED 33.100s
+329 geom_su bit=24 cycle=3 MASKED 0.241s
+330 health bit=30337 cycle=192470 MASKED 51.153s
+331 ingress bit=827 cycle=541808 MASKED 52.180s
+332 mrmgen bit=14 cycle=280446 MASKED 31.504s
+333 selection bit=5 cycle=591807 MASKED 49.051s
+334 supervisor bit=3 cycle=290393 MASKED 49.484s
+335 sweep bit=4914 cycle=595458 MASKED 52.877s
+336 arith bit=82 cycle=76284 MASKED 48.687s
+337 cert bit=1845 cycle=8 MASKED 0.228s
+338 codec bit=196 cycle=383449 MASKED 53.456s
+339 engine bit=19611 cycle=9 MASKED 0.230s
+340 geom bit=40 cycle=8 MASKED 0.226s
+341 geom_su bit=6 cycle=412568 MASKED 51.066s
+342 health bit=10133 cycle=160408 MASKED 51.828s
+343 ingress bit=837 cycle=172681 MASKED 51.988s
+344 mrmgen bit=182 cycle=6 MASKED 0.290s
+345 selection bit=0 cycle=26809 MASKED 33.842s
+346 supervisor bit=6 cycle=3 MASKED 0.291s
+347 sweep bit=6636 cycle=190485 MASKED 54.292s
+348 arith bit=162 cycle=398173 MASKED 53.555s
+349 cert bit=1984 cycle=115800 MASKED 50.457s
+350 codec bit=9 cycle=65704 MASKED 53.146s
+351 engine bit=13 cycle=502090 MASKED 51.209s
+352 geom bit=4485 cycle=1 MASKED 0.181s
+353 geom_su bit=0 cycle=46806 MASKED 29.268s
+354 health bit=20164 cycle=590825 MASKED 44.329s
+355 ingress bit=625 cycle=194297 MASKED 31.555s
+356 mrmgen bit=163 cycle=187941 MASKED 52.089s
+357 selection bit=9 cycle=329632 MASKED 32.143s
+358 supervisor bit=5 cycle=208502 MASKED 53.055s
+359 sweep bit=7810 cycle=265246 MASKED 50.638s
+360 arith bit=76 cycle=4 MASKED 0.236s
+361 cert bit=550 cycle=139148 MASKED 49.601s
+362 codec bit=552 cycle=1 MASKED 0.177s
+363 engine bit=19480 cycle=444075 MASKED 49.851s
+364 geom bit=42 cycle=225180 MASKED 50.835s
+365 geom_su bit=11 cycle=7 MASKED 0.232s
+366 health bit=18825 cycle=234664 MASKED 49.348s
+367 ingress bit=156 cycle=549126 MASKED 53.965s
+368 mrmgen bit=138 cycle=125117 MASKED 31.490s
+369 selection bit=1 cycle=545017 MASKED 51.058s
+370 supervisor bit=0 cycle=324680 MASKED 36.073s
+371 sweep bit=570 cycle=266168 MASKED 55.146s
+372 arith bit=129 cycle=76196 MASKED 52.274s
+373 cert bit=569 cycle=6 MASKED 0.229s
+374 codec bit=561 cycle=271459 MASKED 31.884s
+375 engine bit=30113 cycle=399859 MASKED 55.860s
+376 geom bit=5770 cycle=293740 MASKED 34.052s
+377 geom_su bit=23 cycle=643316 MASKED 51.829s
+378 health bit=27032 cycle=242792 MASKED 57.793s
+379 ingress bit=1286 cycle=511482 MASKED 58.675s
+380 mrmgen bit=296 cycle=455138 MASKED 53.261s
+381 selection bit=14 cycle=3 MASKED 0.278s
+382 supervisor bit=5 cycle=28985 MASKED 53.307s
+383 sweep bit=292 cycle=403458 MASKED 49.264s
+384 arith bit=17 cycle=108444 MASKED 50.866s
+385 cert bit=1596 cycle=191341 MASKED 53.569s
+386 codec bit=37 cycle=78878 MASKED 57.831s
+387 engine bit=1677 cycle=188707 MASKED 55.261s
+388 geom bit=10 cycle=12153 MASKED 56.549s
+389 geom_su bit=33 cycle=489142 MASKED 53.353s
+390 health bit=19025 cycle=290894 MASKED 50.531s
+391 ingress bit=809 cycle=4 MASKED 0.180s
+392 mrmgen bit=33 cycle=483517 MASKED 53.318s
+393 selection bit=7 cycle=91602 MASKED 53.814s
+394 supervisor bit=2 cycle=185000 MASKED 53.581s
+395 sweep bit=7463 cycle=184881 MASKED 32.413s
+396 arith bit=347 cycle=50270 MASKED 32.603s
+397 cert bit=394 cycle=396977 MASKED 49.994s
+398 codec bit=893 cycle=395181 MASKED 53.679s
+399 engine bit=30563 cycle=185477 MASKED 33.924s
+400 geom bit=95 cycle=110609 MASKED 51.417s
+401 geom_su bit=27 cycle=4 MASKED 0.233s
+402 health bit=23148 cycle=6 MASKED 0.240s
+403 ingress bit=618 cycle=288272 MASKED 50.970s
+404 mrmgen bit=62 cycle=204273 MASKED 32.504s
+405 selection bit=6 cycle=385435 MASKED 56.482s
+406 supervisor bit=2 cycle=519510 MASKED 53.688s
+407 sweep bit=7455 cycle=473112 MASKED 55.286s
+408 arith bit=104 cycle=403333 MASKED 32.928s
+409 cert bit=2311 cycle=303883 MASKED 53.480s
+410 codec bit=279 cycle=151986 MASKED 53.115s
+411 engine bit=4323 cycle=532177 MASKED 50.381s
+412 geom bit=3 cycle=4 MASKED 0.236s
+413 geom_su bit=13 cycle=8 MASKED 0.178s
+414 health bit=29737 cycle=481723 MASKED 52.127s
+415 ingress bit=216 cycle=6 MASKED 0.236s
+416 mrmgen bit=249 cycle=5 MASKED 0.227s
+417 selection bit=5 cycle=114760 MASKED 52.094s
+418 supervisor bit=5 cycle=373793 MASKED 50.196s
+419 sweep bit=613 cycle=313669 MASKED 51.206s
+420 arith bit=60 cycle=59947 MASKED 52.713s
+421 cert bit=723 cycle=483267 MASKED 54.871s
+422 codec bit=210 cycle=4 MASKED 0.233s
+423 engine bit=7720 cycle=9 MASKED 0.179s
+424 geom bit=88 cycle=132217 MASKED 35.463s
+425 geom_su bit=7 cycle=8 MASKED 0.226s
+426 health bit=13491 cycle=238005 MASKED 35.505s
+427 ingress bit=182 cycle=286965 MASKED 52.554s
+428 mrmgen bit=29 cycle=476281 MASKED 54.638s
+429 selection bit=5 cycle=301031 MASKED 34.415s
+430 supervisor bit=1 cycle=317063 MASKED 30.832s
+431 sweep bit=1623 cycle=182040 MASKED 33.647s
+432 arith bit=4 cycle=496905 MASKED 52.385s
+433 cert bit=2563 cycle=150587 MASKED 54.832s
+434 codec bit=1019 cycle=8 MASKED 0.344s
+435 engine bit=33363 cycle=53088 MASKED 52.161s
+436 geom bit=1982 cycle=617737 MASKED 52.442s
+437 geom_su bit=1 cycle=1 MASKED 0.229s
+438 health bit=679 cycle=632887 MASKED 51.592s
+439 ingress bit=1290 cycle=9 MASKED 0.177s
+440 mrmgen bit=42 cycle=660118 MASKED 55.116s
+441 selection bit=6 cycle=56784 MASKED 56.105s
+442 supervisor bit=1 cycle=43520 MASKED 49.270s
+443 sweep bit=4215 cycle=254722 MASKED 31.469s
+444 arith bit=137 cycle=308496 MASKED 32.263s
+445 cert bit=1449 cycle=87504 MASKED 31.477s
+446 codec bit=248 cycle=7 MASKED 0.179s
+447 engine bit=3008 cycle=49152 MASKED 46.269s
+448 geom bit=96 cycle=9679 MASKED 37.662s
+449 geom_su bit=53 cycle=247654 MASKED 23.985s
+450 health bit=15099 cycle=40926 MASKED 24.091s
+451 ingress bit=304 cycle=8 MASKED 0.181s
+452 mrmgen bit=21 cycle=280558 MASKED 23.134s
+453 selection bit=11 cycle=269738 MASKED 37.738s
+454 supervisor bit=3 cycle=7 MASKED 0.183s
+455 sweep bit=4190 cycle=35916 MASKED 24.173s
+456 arith bit=69 cycle=92508 MASKED 23.257s
+457 cert bit=1652 cycle=593531 MASKED 38.561s
+458 codec bit=126 cycle=44371 MASKED 23.767s
+459 engine bit=354 cycle=381518 MASKED 39.767s
+460 geom bit=7228 cycle=78847 MASKED 40.404s
+461 geom_su bit=29 cycle=502744 MASKED 39.642s
+462 health bit=32937 cycle=301839 MASKED 38.124s
+463 ingress bit=261 cycle=224030 MASKED 37.339s
+464 mrmgen bit=27 cycle=237054 MASKED 23.526s
+465 selection bit=9 cycle=449348 MASKED 38.511s
+466 supervisor bit=0 cycle=305822 MASKED 38.867s
+467 sweep bit=340 cycle=566776 MASKED 35.581s
+468 arith bit=67 cycle=392021 MASKED 22.888s
+469 cert bit=372 cycle=29748 MASKED 37.924s
+470 codec bit=47 cycle=6 MASKED 0.234s
+471 engine bit=14454 cycle=82858 MASKED 23.039s
+472 geom bit=3383 cycle=5 MASKED 0.227s
+473 geom_su bit=28 cycle=15940 MASKED 47.984s
+474 health bit=33192 cycle=107329 MASKED 39.779s
+475 ingress bit=134 cycle=105678 MASKED 24.473s
+476 mrmgen bit=62 cycle=1 MASKED 0.184s
+477 selection bit=8 cycle=118994 MASKED 28.361s
+478 supervisor bit=4 cycle=6 MASKED 0.237s
+479 sweep bit=10 cycle=364621 MASKED 46.131s
+480 arith bit=84 cycle=589582 MASKED 46.158s
+481 cert bit=1198 cycle=404170 MASKED 44.856s
+482 codec bit=474 cycle=539417 MASKED 43.462s
+483 engine bit=30038 cycle=296993 MASKED 39.991s
+484 geom bit=1871 cycle=305286 MASKED 38.351s
+485 geom_su bit=44 cycle=464221 MASKED 37.624s
+486 health bit=20465 cycle=2 MASKED 0.238s
+487 ingress bit=598 cycle=451804 MASKED 38.526s
+488 mrmgen bit=357 cycle=549866 MASKED 39.342s
+489 selection bit=2 cycle=179395 MASKED 39.154s
+490 supervisor bit=7 cycle=87231 MASKED 24.336s
+491 sweep bit=7036 cycle=185638 MASKED 39.822s
+492 arith bit=0 cycle=6 MASKED 0.183s
+493 cert bit=2585 cycle=394521 MASKED 23.838s
+494 codec bit=495 cycle=5 MASKED 0.176s
+495 engine bit=707 cycle=3 MASKED 0.237s
+496 geom bit=181 cycle=445228 MASKED 36.903s
+497 geom_su bit=56 cycle=377032 MASKED 39.964s
+498 health bit=20383 cycle=394409 MASKED 25.349s
+499 ingress bit=779 cycle=605259 MASKED 39.927s
+500 mrmgen bit=127 cycle=2 MASKED 0.177s
+501 selection bit=3 cycle=4 MASKED 0.229s
+502 supervisor bit=5 cycle=83399 MASKED 23.464s
+503 sweep bit=36 cycle=193586 MASKED 39.690s
+504 arith bit=134 cycle=3 MASKED 0.175s
+505 cert bit=2643 cycle=75783 MASKED 23.766s
+506 codec bit=522 cycle=623798 MASKED 38.875s
+507 engine bit=5159 cycle=3 MASKED 0.259s
+508 geom bit=7350 cycle=361119 MASKED 23.976s
+509 geom_su bit=24 cycle=220167 MASKED 23.509s
+510 health bit=264 cycle=321719 MASKED 37.833s
+511 ingress bit=63 cycle=191401 MASKED 38.782s
+512 mrmgen bit=5 cycle=302569 MASKED 25.175s
+513 selection bit=0 cycle=50554 MASKED 40.436s
+514 supervisor bit=1 cycle=159889 MASKED 24.719s
+515 sweep bit=7125 cycle=3 MASKED 0.183s
+516 arith bit=563 cycle=27323 MASKED 25.463s
+517 cert bit=818 cycle=405246 MASKED 41.655s
+518 codec bit=459 cycle=300927 MASKED 39.703s
+519 engine bit=30 cycle=7 MASKED 0.237s
+520 geom bit=5674 cycle=45449 MASKED 42.836s
+521 geom_su bit=18 cycle=304977 MASKED 25.939s
+522 health bit=10480 cycle=271030 MASKED 39.390s
+523 ingress bit=1210 cycle=49988 MASKED 24.242s
+524 mrmgen bit=104 cycle=105053 MASKED 24.460s
+525 selection bit=3 cycle=4 MASKED 0.235s
+526 supervisor bit=0 cycle=300557 MASKED 39.545s
+527 sweep bit=7378 cycle=1 MASKED 0.180s
+528 arith bit=77 cycle=121124 MASKED 36.902s
+529 cert bit=1717 cycle=564051 MASKED 38.731s
+530 codec bit=92 cycle=145395 MASKED 23.910s
+531 engine bit=44306 cycle=4 MASKED 0.239s
+532 geom bit=6358 cycle=521806 MASKED 35.694s
+533 geom_su bit=57 cycle=466217 MASKED 37.309s
+534 health bit=32405 cycle=307029 MASKED 23.028s
+535 ingress bit=100 cycle=627339 MASKED 40.326s
+536 mrmgen bit=129 cycle=389911 MASKED 24.307s
+537 selection bit=2 cycle=30027 MASKED 36.554s
+538 supervisor bit=0 cycle=1 MASKED 0.181s
+539 sweep bit=6881 cycle=380548 MASKED 39.068s
+540 arith bit=80 cycle=582589 MASKED 38.496s
+541 cert bit=700 cycle=40454 MASKED 38.082s
+542 codec bit=191 cycle=6 MASKED 0.227s
+543 engine bit=21038 cycle=8 MASKED 0.237s
+544 geom bit=224 cycle=553119 MASKED 37.790s
+545 geom_su bit=16 cycle=352351 MASKED 24.399s
+546 health bit=22732 cycle=1 MASKED 0.191s
+547 ingress bit=357 cycle=504536 MASKED 37.417s
+548 mrmgen bit=12 cycle=78505 MASKED 40.861s
+549 selection bit=0 cycle=142264 MASKED 39.492s
+550 supervisor bit=1 cycle=147481 MASKED 39.780s
+551 sweep bit=744 cycle=5 MASKED 0.237s
+552 arith bit=69 cycle=144049 MASKED 26.027s
+553 cert bit=1346 cycle=4 MASKED 0.229s
+554 codec bit=626 cycle=160480 MASKED 38.905s
+555 engine bit=6005 cycle=403915 MASKED 39.557s
+556 geom bit=2507 cycle=3 MASKED 0.240s
+557 geom_su bit=6 cycle=27031 MASKED 30.652s
+558 health bit=31478 cycle=1 MASKED 0.237s
+559 ingress bit=1109 cycle=4 MASKED 0.234s
+560 mrmgen bit=10 cycle=5 MASKED 0.181s
+561 selection bit=14 cycle=93661 MASKED 27.710s
+562 supervisor bit=0 cycle=6 MASKED 0.239s
+563 sweep bit=203 cycle=151707 MASKED 42.970s
+564 arith bit=372 cycle=49601 MASKED 27.866s
+565 cert bit=1356 cycle=6 MASKED 0.400s
+566 codec bit=1002 cycle=261759 MASKED 32.918s
+567 engine bit=859 cycle=608340 MASKED 42.792s
+568 geom bit=7371 cycle=458163 MASKED 44.165s
+569 geom_su bit=37 cycle=6 MASKED 0.235s
+570 health bit=1445 cycle=238632 MASKED 43.036s
+571 ingress bit=275 cycle=135579 MASKED 44.362s
+572 mrmgen bit=24 cycle=4 MASKED 0.183s
+573 selection bit=9 cycle=393071 MASKED 42.804s
+574 supervisor bit=6 cycle=49744 MASKED 26.184s
+575 sweep bit=7395 cycle=279709 MASKED 51.212s
+576 arith bit=106 cycle=263810 MASKED 51.187s
+577 cert bit=861 cycle=292299 MASKED 45.915s
+578 codec bit=249 cycle=619773 SDC-UNSAFE 44.445s
+579 engine bit=22 cycle=184762 MASKED 47.931s
+580 geom bit=1907 cycle=631666 MASKED 47.402s
+581 geom_su bit=20 cycle=550559 MASKED 48.782s
+582 health bit=22650 cycle=230966 MASKED 30.173s
+583 ingress bit=504 cycle=120635 MASKED 29.638s
+584 mrmgen bit=12 cycle=169940 MASKED 46.700s
+585 selection bit=0 cycle=126262 MASKED 32.591s
+586 supervisor bit=5 cycle=129771 MASKED 49.345s
+587 sweep bit=5771 cycle=111861 MASKED 31.514s
+588 arith bit=112 cycle=216532 MASKED 48.488s
+589 cert bit=2216 cycle=284035 MASKED 29.747s
+590 codec bit=37 cycle=78439 MASKED 29.860s
+591 engine bit=27095 cycle=153822 MASKED 49.806s
+592 geom bit=4694 cycle=257537 MASKED 52.154s
+593 geom_su bit=44 cycle=124948 MASKED 49.710s
+594 health bit=22578 cycle=152231 MASKED 31.088s
+595 ingress bit=983 cycle=8 MASKED 0.230s
+596 mrmgen bit=347 cycle=408707 MASKED 51.669s
+597 selection bit=7 cycle=4 MASKED 0.228s
+598 supervisor bit=0 cycle=6 MASKED 0.230s
+599 sweep bit=8028 cycle=194285 MASKED 50.528s
+600 arith bit=53 cycle=88382 MASKED 47.931s
+601 cert bit=2879 cycle=175858 MASKED 48.190s
+602 codec bit=322 cycle=312739 MASKED 30.004s
+603 engine bit=521 cycle=6 MASKED 0.239s
+604 geom bit=7278 cycle=363957 MASKED 51.430s
+605 geom_su bit=8 cycle=555672 MASKED 52.378s
+606 health bit=19061 cycle=7 MASKED 0.229s
+607 ingress bit=277 cycle=7 MASKED 0.226s
+608 mrmgen bit=31 cycle=1 MASKED 0.224s
+609 selection bit=4 cycle=95707 MASKED 48.961s
+610 supervisor bit=0 cycle=189658 MASKED 30.137s
+611 sweep bit=2786 cycle=275476 MASKED 47.043s
+612 arith bit=88 cycle=142177 MASKED 61.227s
+613 cert bit=1930 cycle=225583 MASKED 51.518s
+614 codec bit=109 cycle=7 MASKED 0.237s
+615 engine bit=1138 cycle=330350 MASKED 51.204s
+616 geom bit=2689 cycle=345780 MASKED 49.386s
+617 geom_su bit=5 cycle=653204 MASKED 54.963s
+618 health bit=33759 cycle=475586 MASKED 51.551s
+619 ingress bit=530 cycle=6 MASKED 0.234s
+620 mrmgen bit=77 cycle=333039 MASKED 48.774s
+621 selection bit=2 cycle=6 MASKED 0.281s
+622 supervisor bit=5 cycle=305704 MASKED 57.272s
+623 sweep bit=2278 cycle=40629 MASKED 54.342s
+624 arith bit=72 cycle=380884 MASKED 52.958s
+625 cert bit=2743 cycle=392259 MASKED 54.306s
+626 codec bit=262 cycle=542662 MASKED 54.101s
+627 engine bit=41814 cycle=239505 MASKED 56.631s
+628 geom bit=6275 cycle=55329 MASKED 61.691s
+629 geom_su bit=10 cycle=602831 MASKED 48.967s
+630 health bit=32888 cycle=341022 MASKED 31.679s
+631 ingress bit=648 cycle=589274 MASKED 56.771s
+632 mrmgen bit=139 cycle=282185 MASKED 51.935s
+633 selection bit=15 cycle=250728 MASKED 52.312s
+634 supervisor bit=0 cycle=83316 MASKED 34.174s
+635 sweep bit=6089 cycle=71611 MASKED 61.570s
+636 arith bit=118 cycle=24138 MASKED 56.265s
+637 cert bit=644 cycle=185052 MASKED 51.500s
+638 codec bit=616 cycle=445515 MASKED 54.792s
+639 engine bit=4098 cycle=2 MASKED 0.226s
+640 geom bit=5947 cycle=358217 MASKED 54.456s
+641 geom_su bit=11 cycle=2 MASKED 0.286s
+642 health bit=27474 cycle=5 MASKED 0.236s
+643 ingress bit=672 cycle=6 MASKED 0.234s
+644 mrmgen bit=3 cycle=244929 MASKED 35.316s
+645 selection bit=1 cycle=4 MASKED 0.230s
+646 supervisor bit=1 cycle=265672 MASKED 61.528s
+647 sweep bit=1294 cycle=41024 MASKED 35.456s
+648 arith bit=477 cycle=536882 MASKED 56.214s
+649 cert bit=139 cycle=52829 MASKED 53.398s
+650 codec bit=53 cycle=45992 MASKED 56.533s
+651 engine bit=3754 cycle=578841 MASKED 59.961s
+652 geom bit=380 cycle=6 MASKED 0.284s
+653 geom_su bit=21 cycle=229516 MASKED 36.855s
+654 health bit=404 cycle=263245 MASKED 55.766s
+655 ingress bit=926 cycle=504151 MASKED 61.485s
+656 mrmgen bit=21 cycle=127460 MASKED 53.635s
+657 selection bit=14 cycle=43416 MASKED 34.120s
+658 supervisor bit=5 cycle=631248 MASKED 46.084s
+659 sweep bit=988 cycle=106015 MASKED 50.102s
+660 arith bit=52 cycle=572121 MASKED 48.024s
+661 cert bit=780 cycle=59225 MASKED 53.768s
+662 codec bit=221 cycle=128694 MASKED 46.384s
+663 engine bit=321 cycle=37819 MASKED 47.616s
+664 geom bit=7371 cycle=58369 MASKED 48.628s
+665 geom_su bit=20 cycle=136168 MASKED 27.452s
+666 health bit=24548 cycle=103401 MASKED 47.139s
+667 ingress bit=1266 cycle=380318 MASKED 29.530s
+668 mrmgen bit=22 cycle=158458 MASKED 31.608s
+669 selection bit=14 cycle=387547 MASKED 28.542s
+670 supervisor bit=0 cycle=401150 MASKED 44.842s
+671 sweep bit=3011 cycle=277238 MASKED 47.156s
+672 arith bit=50 cycle=570330 MASKED 44.939s
+673 cert bit=892 cycle=2 MASKED 0.233s
+674 codec bit=112 cycle=75886 MASKED 46.449s
+675 engine bit=44286 cycle=574142 SDC-UNSAFE 46.812s
+676 geom bit=6263 cycle=243001 MASKED 28.086s
+677 geom_su bit=3 cycle=352330 MASKED 42.078s
+678 health bit=27125 cycle=30616 MASKED 46.309s
+679 ingress bit=215 cycle=8 MASKED 0.182s
+680 mrmgen bit=28 cycle=8 MASKED 0.183s
+681 selection bit=11 cycle=254828 MASKED 27.115s
+682 supervisor bit=2 cycle=3 MASKED 0.239s
+683 sweep bit=5856 cycle=4 MASKED 0.227s
+684 arith bit=483 cycle=7 MASKED 0.225s
+685 cert bit=594 cycle=98163 MASKED 28.620s
+686 codec bit=961 cycle=9 MASKED 0.179s
+687 engine bit=30340 cycle=517362 MASKED 47.387s
+688 geom bit=42 cycle=547853 MASKED 41.561s
+689 geom_su bit=3 cycle=2 MASKED 0.236s
+690 health bit=22763 cycle=99227 MASKED 45.171s
+691 ingress bit=1 cycle=229971 MASKED 44.553s
+692 mrmgen bit=384 cycle=175963 MASKED 43.627s
+693 selection bit=15 cycle=568569 MASKED 45.467s
+694 supervisor bit=6 cycle=6 MASKED 0.232s
+695 sweep bit=7146 cycle=234076 MASKED 42.928s
+696 arith bit=55 cycle=276468 MASKED 28.796s
+697 cert bit=588 cycle=240952 MASKED 28.520s
+698 codec bit=246 cycle=301351 MASKED 45.568s
+699 engine bit=491 cycle=249650 MASKED 28.969s
+700 geom bit=5397 cycle=113535 MASKED 44.596s
+701 geom_su bit=86 cycle=227728 MASKED 28.684s
+702 health bit=5872 cycle=300335 MASKED 25.987s
+703 ingress bit=1187 cycle=2 MASKED 0.240s
+704 mrmgen bit=77 cycle=8 MASKED 0.183s
+705 selection bit=2 cycle=4 MASKED 0.239s
+706 supervisor bit=1 cycle=39352 MASKED 28.784s
+707 sweep bit=6728 cycle=301441 MASKED 43.244s
+708 arith bit=336 cycle=51936 MASKED 45.600s
+709 cert bit=171 cycle=440260 MASKED 45.369s
+710 codec bit=422 cycle=465187 MASKED 46.235s
+711 engine bit=2145 cycle=195989 MASKED 27.488s
+712 geom bit=161 cycle=278446 MASKED 44.612s
+713 geom_su bit=10 cycle=6 MASKED 0.234s
+714 health bit=22145 cycle=4 MASKED 0.228s
+715 ingress bit=308 cycle=4 MASKED 0.175s
+716 mrmgen bit=387 cycle=2 MASKED 0.286s
+717 selection bit=1 cycle=337278 MASKED 45.838s
+718 supervisor bit=2 cycle=338510 MASKED 45.493s
+719 sweep bit=5460 cycle=631259 MASKED 47.639s
+720 arith bit=68 cycle=111441 MASKED 51.306s
+721 cert bit=482 cycle=415206 MASKED 42.372s
+722 codec bit=141 cycle=156480 MASKED 27.682s
+723 engine bit=3739 cycle=274209 MASKED 42.065s
+724 geom bit=7007 cycle=116901 MASKED 27.605s
+725 geom_su bit=9 cycle=26233 MASKED 42.124s
+726 health bit=4057 cycle=8 MASKED 0.176s
+727 ingress bit=274 cycle=2 MASKED 0.230s
+728 mrmgen bit=7 cycle=453148 MASKED 40.588s
+729 selection bit=14 cycle=426426 MASKED 41.224s
+730 supervisor bit=0 cycle=8 MASKED 0.183s
+731 sweep bit=4724 cycle=204013 MASKED 40.344s
+732 arith bit=112 cycle=8 MASKED 0.232s
+733 cert bit=873 cycle=477109 MASKED 43.151s
+734 codec bit=42 cycle=5 MASKED 0.293s
+735 engine bit=42074 cycle=369786 MASKED 26.580s
+736 geom bit=1024 cycle=3 MASKED 0.179s
+737 geom_su bit=19 cycle=2207 MASKED 44.444s
+738 health bit=13901 cycle=294106 MASKED 27.602s
+739 ingress bit=840 cycle=6 MASKED 0.236s
+740 mrmgen bit=10 cycle=9 MASKED 0.224s
+741 selection bit=5 cycle=651692 MASKED 43.566s
+742 supervisor bit=3 cycle=401242 MASKED 44.248s
+743 sweep bit=3386 cycle=7 MASKED 0.236s
+744 arith bit=80 cycle=399475 MASKED 44.998s
+745 cert bit=741 cycle=9 MASKED 0.229s
+746 codec bit=920 cycle=247335 MASKED 32.696s
+747 engine bit=4454 cycle=4 MASKED 0.231s
+748 geom bit=442 cycle=232891 MASKED 53.233s
+749 geom_su bit=3 cycle=5 MASKED 0.239s
+750 health bit=27036 cycle=7 MASKED 0.236s
+751 ingress bit=479 cycle=590671 MASKED 56.048s
+752 mrmgen bit=23 cycle=471992 MASKED 48.639s
+753 selection bit=6 cycle=380981 MASKED 32.549s
+754 supervisor bit=6 cycle=234513 MASKED 31.741s
+755 sweep bit=2101 cycle=611525 MASKED 52.606s
+756 arith bit=557 cycle=224100 MASKED 35.449s
+757 cert bit=890 cycle=1 MASKED 0.234s
+758 codec bit=158 cycle=8 MASKED 0.233s
+759 engine bit=40737 cycle=321018 MASKED 36.270s
+760 geom bit=1978 cycle=855 MASKED 36.351s
+761 geom_su bit=23 cycle=5 MASKED 0.240s
+762 health bit=13267 cycle=148231 MASKED 56.854s
+763 ingress bit=920 cycle=325215 MASKED 32.184s
+764 mrmgen bit=205 cycle=40291 MASKED 33.242s
+765 selection bit=8 cycle=281090 MASKED 57.185s
+766 supervisor bit=1 cycle=2053 MASKED 62.892s
+767 sweep bit=2118 cycle=38528 MASKED 63.954s
+768 arith bit=3 cycle=454668 MASKED 54.571s
+769 cert bit=1885 cycle=310958 MASKED 55.211s
+770 codec bit=241 cycle=8 MASKED 0.292s
+771 engine bit=5790 cycle=15888 MASKED 32.920s
+772 geom bit=3323 cycle=348982 MASKED 53.915s
+773 geom_su bit=2 cycle=608773 MASKED 51.886s
+774 health bit=31912 cycle=281008 MASKED 33.826s
+775 ingress bit=1100 cycle=118755 MASKED 51.534s
+776 mrmgen bit=97 cycle=2 MASKED 0.288s
+777 selection bit=8 cycle=30654 MASKED 33.524s
+778 supervisor bit=0 cycle=392929 MASKED 57.830s
+779 sweep bit=572 cycle=127176 MASKED 36.372s
+780 arith bit=575 cycle=234651 MASKED 37.387s
+781 cert bit=1218 cycle=407259 MASKED 34.740s
+782 codec bit=485 cycle=652170 MASKED 70.646s
+783 engine bit=7471 cycle=81133 MASKED 60.682s
+784 geom bit=10 cycle=1 MASKED 0.239s
+785 geom_su bit=29 cycle=431756 MASKED 57.739s
+786 health bit=29786 cycle=393746 MASKED 40.145s
+787 ingress bit=925 cycle=85248 MASKED 77.233s
+788 mrmgen bit=92 cycle=7 MASKED 0.403s
+789 selection bit=6 cycle=405109 MASKED 57.428s
+790 supervisor bit=1 cycle=337834 MASKED 64.526s
+791 sweep bit=1235 cycle=2 MASKED 0.289s
+792 arith bit=27 cycle=248297 MASKED 38.142s
+793 cert bit=589 cycle=468339 MASKED 71.601s
+794 codec bit=81 cycle=503835 MASKED 62.110s
+795 engine bit=406 cycle=79510 MASKED 69.988s
+796 geom bit=3386 cycle=306712 MASKED 64.639s
+797 geom_su bit=18 cycle=530625 MASKED 61.221s
+798 health bit=29311 cycle=151198 MASKED 72.410s
+799 ingress bit=90 cycle=26559 MASKED 78.648s
+800 mrmgen bit=318 cycle=287408 MASKED 79.230s
+801 selection bit=4 cycle=22353 MASKED 55.338s
+802 supervisor bit=2 cycle=4 MASKED 0.848s
+803 sweep bit=3062 cycle=271645 MASKED 51.172s
+804 arith bit=36 cycle=230749 MASKED 77.623s
+805 cert bit=121 cycle=406851 MASKED 48.350s
+806 codec bit=181 cycle=6 MASKED 0.296s
+807 engine bit=42929 cycle=135537 MASKED 45.840s
+808 geom bit=1879 cycle=2 MASKED 0.408s
+809 geom_su bit=1 cycle=7 MASKED 0.409s
+810 health bit=21790 cycle=179711 MASKED 68.076s
+811 ingress bit=1202 cycle=506748 MASKED 62.643s
+812 mrmgen bit=330 cycle=541739 MASKED 74.114s
+813 selection bit=1 cycle=51625 MASKED 43.528s
+814 supervisor bit=6 cycle=26091 MASKED 62.613s
+815 sweep bit=3670 cycle=500020 MASKED 63.100s
+816 arith bit=103 cycle=8 MASKED 0.232s
+817 cert bit=746 cycle=364253 MASKED 59.317s
+818 codec bit=783 cycle=550598 MASKED 58.983s
+819 engine bit=7901 cycle=160134 MASKED 34.970s
+820 geom bit=815 cycle=9 MASKED 0.305s
+821 geom_su bit=16 cycle=120161 MASKED 34.749s
+822 health bit=25488 cycle=193873 MASKED 34.114s
+823 ingress bit=285 cycle=266108 MASKED 34.947s
+824 mrmgen bit=26 cycle=446643 MASKED 65.233s
+825 selection bit=1 cycle=3 MASKED 0.433s
+826 supervisor bit=4 cycle=13231 MASKED 82.576s
+827 sweep bit=2572 cycle=188641 MASKED 45.826s
+828 arith bit=96 cycle=10976 MASKED 38.869s
+829 cert bit=2786 cycle=49286 MASKED 53.003s
+830 codec bit=631 cycle=531542 MASKED 64.629s
+831 engine bit=24938 cycle=3 MASKED 0.334s
+832 geom bit=5451 cycle=149742 MASKED 77.675s
+833 geom_su bit=8 cycle=80510 MASKED 88.497s
+834 health bit=3904 cycle=4 MASKED 0.990s
+835 ingress bit=296 cycle=166969 MASKED 105.511s
+836 mrmgen bit=44 cycle=2 MASKED 0.752s
+837 selection bit=0 cycle=48839 MASKED 68.740s
+838 supervisor bit=3 cycle=373592 MASKED 58.673s
+839 sweep bit=2071 cycle=204382 MASKED 73.944s
+840 arith bit=117 cycle=267603 MASKED 72.890s
+841 cert bit=1627 cycle=2 MASKED 0.291s
+842 codec bit=199 cycle=369307 MASKED 43.344s
+843 engine bit=16714 cycle=3 MASKED 0.237s
+844 geom bit=6302 cycle=452820 MASKED 65.915s
+845 geom_su bit=31 cycle=450916 MASKED 64.751s
+846 health bit=1391 cycle=102143 MASKED 68.021s
+847 ingress bit=882 cycle=441743 MASKED 65.880s
+848 mrmgen bit=58 cycle=507772 MASKED 66.011s
+849 selection bit=4 cycle=368482 MASKED 41.146s
+850 supervisor bit=0 cycle=3 MASKED 0.342s
+851 sweep bit=546 cycle=45651 MASKED 45.107s
+852 arith bit=79 cycle=115796 MASKED 76.951s
+853 cert bit=2889 cycle=478599 MASKED 77.135s
+854 codec bit=424 cycle=6 MASKED 0.287s
+855 engine bit=35980 cycle=109537 MASKED 68.369s
+856 geom bit=862 cycle=398344 MASKED 68.091s
+857 geom_su bit=39 cycle=82441 MASKED 39.342s
+858 health bit=15769 cycle=9280 MASKED 61.641s
+859 ingress bit=1173 cycle=3 MASKED 0.290s
+860 mrmgen bit=200 cycle=6 MASKED 0.291s
+861 selection bit=5 cycle=193339 MASKED 37.328s
+862 supervisor bit=6 cycle=8 MASKED 0.291s
+863 sweep bit=4012 cycle=506617 MASKED 60.765s
+864 arith bit=67 cycle=4 MASKED 0.290s
+865 cert bit=2432 cycle=227187 MASKED 46.168s
+866 codec bit=249 cycle=572215 MASKED 70.357s
+867 engine bit=20723 cycle=367609 MASKED 65.017s
+868 geom bit=6269 cycle=642225 MASKED 71.933s
+869 geom_su bit=30 cycle=277343 MASKED 83.586s
+870 health bit=8674 cycle=5 MASKED 0.408s
+871 ingress bit=214 cycle=63580 MASKED 50.831s
+872 mrmgen bit=2 cycle=325668 MASKED 62.824s
+873 selection bit=2 cycle=252834 MASKED 54.423s
+874 supervisor bit=2 cycle=436783 MASKED 74.016s
+875 sweep bit=7782 cycle=266664 MASKED 53.572s
+876 arith bit=15 cycle=9 MASKED 0.402s
+877 cert bit=2425 cycle=334695 MASKED 86.280s
+878 codec bit=662 cycle=45184 MASKED 123.617s
+879 engine bit=40455 cycle=182519 MASKED 108.069s
+880 geom bit=4878 cycle=8 MASKED 5.795s
+881 geom_su bit=8 cycle=4 MASKED 3.641s
+882 health bit=8579 cycle=229348 MASKED 115.517s
+883 ingress bit=432 cycle=9937 MASKED 97.827s
+884 mrmgen bit=13 cycle=45601 MASKED 121.602s
+885 selection bit=6 cycle=3 MASKED 2.696s
+886 supervisor bit=3 cycle=8 MASKED 0.972s
+887 sweep bit=6189 cycle=594472 MASKED 125.029s
+888 arith bit=156 cycle=188873 MASKED 72.468s
+889 cert bit=701 cycle=584006 MASKED 104.086s
+890 codec bit=774 cycle=269186 MASKED 66.855s
+891 engine bit=6763 cycle=4 MASKED 0.488s
+892 geom bit=8023 cycle=423738 MASKED 111.013s
+893 geom_su bit=0 cycle=633758 MASKED 121.877s
+894 health bit=4315 cycle=310672 MASKED 68.698s
+895 ingress bit=1238 cycle=9 MASKED 0.287s
+896 mrmgen bit=28 cycle=90854 MASKED 37.637s
+897 selection bit=6 cycle=529329 MASKED 60.798s
+898 supervisor bit=4 cycle=660161 MASKED 62.594s
+899 sweep bit=3571 cycle=7 MASKED 0.282s
+900 arith bit=78 cycle=91526 MASKED 38.582s
+901 cert bit=2819 cycle=402934 MASKED 70.433s
+902 codec bit=179 cycle=197906 SDC-UNSAFE 63.822s
+903 engine bit=25389 cycle=4 MASKED 0.231s
+904 geom bit=4977 cycle=459596 MASKED 58.219s
+905 geom_su bit=16 cycle=16315 MASKED 37.442s
+906 health bit=20948 cycle=2 MASKED 0.226s
+907 ingress bit=361 cycle=193511 MASKED 63.297s
+908 mrmgen bit=113 cycle=7 MASKED 0.289s
+909 selection bit=10 cycle=32778 MASKED 39.278s
+910 supervisor bit=7 cycle=505213 MASKED 66.007s
+911 sweep bit=3712 cycle=410157 MASKED 64.953s
+912 arith bit=141 cycle=323182 MASKED 41.444s
+913 cert bit=2283 cycle=280793 MASKED 38.766s
+914 codec bit=621 cycle=175274 MASKED 61.337s
+915 engine bit=14925 cycle=139474 MASKED 37.089s
+916 geom bit=3949 cycle=143508 MASKED 39.708s
+917 geom_su bit=10 cycle=659912 MASKED 63.384s
+918 health bit=4735 cycle=324533 MASKED 37.405s
+919 ingress bit=1124 cycle=9 MASKED 0.233s
+920 mrmgen bit=228 cycle=337548 MASKED 36.143s
+921 selection bit=1 cycle=1 MASKED 0.387s
+922 supervisor bit=2 cycle=2 SDC-SAFE 0.235s
+923 sweep bit=6570 cycle=421636 MASKED 56.748s
+924 arith bit=430 cycle=171640 MASKED 40.324s
+925 cert bit=188 cycle=50985 MASKED 67.168s
+926 codec bit=620 cycle=372757 MASKED 52.471s
+927 engine bit=6880 cycle=98040 MASKED 62.894s
+928 geom bit=231 cycle=102749 MASKED 126.128s
+929 geom_su bit=1 cycle=156870 MASKED 114.616s
+930 health bit=25674 cycle=3 MASKED 0.618s
+931 ingress bit=252 cycle=7 MASKED 0.338s
+932 mrmgen bit=41 cycle=8 MASKED 0.534s
+933 selection bit=0 cycle=528826 MASKED 108.734s
+934 supervisor bit=3 cycle=154556 MASKED 67.716s
+935 sweep bit=6647 cycle=263627 MASKED 92.993s
+936 arith bit=24 cycle=344572 MASKED 65.168s
+937 cert bit=1985 cycle=99939 MASKED 84.839s
+938 codec bit=873 cycle=287031 MASKED 79.091s
+939 engine bit=10848 cycle=77110 MASKED 45.938s
+940 geom bit=27 cycle=380692 MASKED 47.218s
+941 geom_su bit=4 cycle=370190 MASKED 83.029s
+942 health bit=31966 cycle=2 MASKED 0.333s
+943 ingress bit=621 cycle=85705 MASKED 81.109s
+944 mrmgen bit=97 cycle=2 MASKED 0.335s
+945 selection bit=4 cycle=333956 MASKED 116.364s
+946 supervisor bit=3 cycle=538139 MASKED 142.000s
+947 sweep bit=6 cycle=6 MASKED 1.002s
+948 arith bit=11 cycle=349723 MASKED 126.311s
+949 cert bit=191 cycle=456397 MASKED 132.440s
+950 codec bit=625 cycle=159852 MASKED 78.570s
+951 engine bit=500 cycle=54024 MASKED 63.728s
+952 geom bit=4598 cycle=488602 MASKED 126.847s
+953 geom_su bit=0 cycle=73282 MASKED 106.287s
+954 health bit=11780 cycle=116909 MASKED 107.461s
+955 ingress bit=1031 cycle=123112 MASKED 119.930s
+956 mrmgen bit=20 cycle=506729 MASKED 131.273s
+957 selection bit=7 cycle=55286 MASKED 113.499s
+958 supervisor bit=0 cycle=1 MASKED 0.497s
+959 sweep bit=572 cycle=416158 MASKED 115.654s
+960 arith bit=105 cycle=2 MASKED 0.662s
+961 cert bit=580 cycle=2 MASKED 0.450s
+962 codec bit=820 cycle=3 MASKED 0.462s
+963 engine bit=213 cycle=9 MASKED 0.781s
+964 geom bit=4354 cycle=413056 MASKED 104.905s
+965 geom_su bit=21 cycle=394906 MASKED 73.272s
+966 health bit=16983 cycle=162435 MASKED 86.383s
+967 ingress bit=410 cycle=4 MASKED 2.214s
+968 mrmgen bit=26 cycle=273989 MASKED 116.161s
+969 selection bit=10 cycle=8 MASKED 0.648s
+970 supervisor bit=3 cycle=102277 MASKED 108.322s
+971 sweep bit=5332 cycle=43954 MASKED 101.380s
+972 arith bit=25 cycle=3 MASKED 0.396s
+973 cert bit=1597 cycle=410628 MASKED 103.624s
+974 codec bit=292 cycle=346564 MASKED 65.997s
+975 engine bit=28995 cycle=355984 MASKED 151.477s
+976 geom bit=14 cycle=191353 MASKED 115.833s
+977 geom_su bit=12 cycle=320682 MASKED 71.575s
+978 health bit=4529 cycle=13613 MASKED 117.558s
+979 ingress bit=104 cycle=366152 MASKED 92.638s
+980 mrmgen bit=51 cycle=376455 MASKED 95.371s
+981 selection bit=14 cycle=643093 MASKED 111.046s
+982 supervisor bit=5 cycle=24487 MASKED 111.955s
+983 sweep bit=7708 cycle=366979 MASKED 63.911s
+984 arith bit=4 cycle=19149 MASKED 136.657s
+985 cert bit=2006 cycle=176345 MASKED 167.835s
+986 codec bit=59 cycle=602581 SDC-UNSAFE 119.780s
+987 engine bit=1996 cycle=36056 MASKED 67.381s
+988 geom bit=4470 cycle=412852 MASKED 111.562s
+989 geom_su bit=5 cycle=584512 MASKED 133.320s
+990 health bit=28281 cycle=219999 MASKED 109.047s
+991 ingress bit=24 cycle=283880 MASKED 65.619s
+992 mrmgen bit=136 cycle=274967 MASKED 105.401s
+993 selection bit=3 cycle=4 MASKED 0.435s
+994 supervisor bit=4 cycle=364735 MASKED 103.773s
+995 sweep bit=327 cycle=332303 MASKED 95.477s
+996 arith bit=29 cycle=80895 MASKED 96.668s
+997 cert bit=2258 cycle=340273 MASKED 105.150s
+998 codec bit=840 cycle=578399 MASKED 114.908s
+999 engine bit=17559 cycle=7 MASKED 0.428s
+1000 geom bit=3595 cycle=1 MASKED 0.275s
+1001 geom_su bit=15 cycle=360614 MASKED 69.290s
+1002 health bit=25968 cycle=332603 MASKED 120.145s
+1003 ingress bit=914 cycle=7 MASKED 0.376s
+1004 mrmgen bit=45 cycle=199968 MASKED 72.514s
+1005 selection bit=0 cycle=5 MASKED 0.325s
+1006 supervisor bit=0 cycle=479781 MASKED 111.674s
+1007 sweep bit=6496 cycle=462533 MASKED 101.476s
+1008 arith bit=98 cycle=5 MASKED 0.765s
+1009 cert bit=1827 cycle=478541 MASKED 101.701s
+1010 codec bit=45 cycle=1 MASKED 0.276s
+1011 engine bit=7081 cycle=4 MASKED 0.274s
+1012 geom bit=7518 cycle=495749 MASKED 104.454s
+1013 geom_su bit=11 cycle=174533 MASKED 101.488s
+1014 health bit=2475 cycle=296600 MASKED 87.630s
+1015 ingress bit=1248 cycle=90329 MASKED 84.890s
+1016 mrmgen bit=34 cycle=89758 MASKED 54.767s
+1017 selection bit=4 cycle=419627 MASKED 82.691s
+1018 supervisor bit=2 cycle=379895 MASKED 52.562s
+1019 sweep bit=2511 cycle=8 MASKED 0.326s
+1020 arith bit=147 cycle=252583 MASKED 53.016s
+1021 cert bit=680 cycle=6 MASKED 0.380s
+1022 codec bit=178 cycle=424255 MASKED 83.763s
+1023 engine bit=23794 cycle=250953 MASKED 83.005s
+1024 geom bit=3017 cycle=125315 MASKED 48.809s
+1025 geom_su bit=0 cycle=401167 MASKED 81.046s
+1026 health bit=9695 cycle=3 MASKED 0.377s
+1027 ingress bit=340 cycle=92084 MASKED 51.837s
+1028 mrmgen bit=67 cycle=92730 MASKED 79.577s
+1029 selection bit=0 cycle=367562 MASKED 55.547s
+1030 supervisor bit=6 cycle=175042 MASKED 54.190s
+1031 sweep bit=5370 cycle=591930 MASKED 83.101s
+1032 arith bit=565 cycle=322266 MASKED 47.705s
+1033 cert bit=408 cycle=100577 MASKED 45.738s
+1034 codec bit=155 cycle=108838 MASKED 75.072s
+1035 engine bit=7228 cycle=123887 MASKED 87.342s
+1036 geom bit=142 cycle=622934 MASKED 68.498s
+1037 geom_su bit=30 cycle=4 MASKED 0.273s
+1038 health bit=8318 cycle=2 MASKED 0.273s
+1039 ingress bit=615 cycle=87031 MASKED 69.329s
+1040 mrmgen bit=105 cycle=385266 MASKED 63.360s
+1041 selection bit=0 cycle=88434 MASKED 76.431s
+1042 supervisor bit=0 cycle=5 MASKED 0.274s
+1043 sweep bit=5888 cycle=610747 MASKED 64.598s
+1044 arith bit=100 cycle=611902 MASKED 64.698s
+1045 cert bit=2856 cycle=497932 MASKED 67.384s
+1046 codec bit=214 cycle=169734 MASKED 37.406s
+1047 engine bit=7345 cycle=8 MASKED 0.273s
+1048 geom bit=8141 cycle=269558 MASKED 42.884s
+1049 geom_su bit=27 cycle=596201 MASKED 54.586s
+1050 health bit=1145 cycle=503943 MASKED 75.362s
+1051 ingress bit=488 cycle=6 MASKED 0.275s
+1052 mrmgen bit=41 cycle=289714 MASKED 48.124s
+1053 selection bit=0 cycle=326815 MASKED 48.326s
+1054 supervisor bit=2 cycle=427163 MASKED 75.727s
+1055 sweep bit=7146 cycle=3 MASKED 0.224s
+1056 arith bit=24 cycle=227513 MASKED 67.315s
+1057 cert bit=28 cycle=557730 MASKED 66.843s
+1058 codec bit=476 cycle=2 MASKED 0.329s
+1059 engine bit=18828 cycle=605324 MASKED 73.165s
+1060 geom bit=4589 cycle=8 MASKED 0.451s
+1061 geom_su bit=0 cycle=93500 MASKED 66.097s
+1062 health bit=9419 cycle=217189 MASKED 64.573s
+1063 ingress bit=819 cycle=79195 MASKED 49.382s
+1064 mrmgen bit=154 cycle=204699 MASKED 77.849s
+1065 selection bit=4 cycle=658101 MASKED 66.635s
+1066 supervisor bit=1 cycle=76836 MASKED 54.110s
+1067 sweep bit=6026 cycle=274308 MASKED 51.152s
+1068 arith bit=75 cycle=175888 MASKED 52.003s
+1069 cert bit=391 cycle=9 MASKED 0.223s
+1070 codec bit=898 cycle=6 MASKED 0.222s
+1071 engine bit=27507 cycle=360599 MASKED 49.266s
+1072 geom bit=7180 cycle=472231 MASKED 50.702s
+1073 geom_su bit=30 cycle=225997 MASKED 31.744s
+1074 health bit=9638 cycle=2 MASKED 0.223s
+1075 ingress bit=1210 cycle=474736 MASKED 48.694s
+1076 mrmgen bit=43 cycle=5 MASKED 0.223s
+1077 selection bit=7 cycle=4 MASKED 0.273s
+1078 supervisor bit=1 cycle=206802 MASKED 48.251s
+1079 sweep bit=7904 cycle=8 MASKED 0.222s
+1080 arith bit=147 cycle=375777 MASKED 30.025s
+1081 cert bit=2180 cycle=316764 MASKED 30.062s
+1082 codec bit=236 cycle=6 MASKED 0.223s
+1083 engine bit=194 cycle=298600 MASKED 49.899s
+1084 geom bit=0 cycle=142832 MASKED 47.636s
+1085 geom_su bit=5 cycle=91634 MASKED 48.400s
+1086 health bit=5951 cycle=9 MASKED 0.221s
+1087 ingress bit=201 cycle=51575 MASKED 30.722s
+1088 mrmgen bit=0 cycle=45821 MASKED 30.308s
+1089 selection bit=5 cycle=563900 MASKED 45.670s
+1090 supervisor bit=6 cycle=508139 MASKED 47.985s
+1091 sweep bit=1008 cycle=583987 MASKED 49.232s
+1092 arith bit=6 cycle=314830 MASKED 46.148s
+1093 cert bit=2622 cycle=311333 MASKED 45.359s
+1094 codec bit=958 cycle=45471 MASKED 44.008s
+1095 engine bit=37721 cycle=221868 MASKED 32.167s
+1096 geom bit=2181 cycle=7 MASKED 0.326s
+1097 geom_su bit=18 cycle=366282 MASKED 48.742s
+1098 health bit=14090 cycle=312280 MASKED 31.235s
+1099 ingress bit=1057 cycle=545860 MASKED 53.426s
+1100 mrmgen bit=110 cycle=328456 MASKED 53.636s
+1101 selection bit=7 cycle=3 MASKED 0.325s
+1102 supervisor bit=6 cycle=431186 MASKED 50.883s
+1103 sweep bit=3945 cycle=243192 MASKED 31.573s
+1104 arith bit=396 cycle=5 MASKED 0.224s
+1105 cert bit=2121 cycle=481473 MASKED 52.086s
+1106 codec bit=66 cycle=98187 MASKED 49.722s
+1107 engine bit=261 cycle=273885 MASKED 48.910s
+1108 geom bit=15 cycle=7 MASKED 0.324s
+1109 geom_su bit=3 cycle=4 MASKED 0.224s
+1110 health bit=16392 cycle=509033 MASKED 49.377s
+1111 ingress bit=849 cycle=632622 MASKED 51.226s
+1112 mrmgen bit=71 cycle=1356 MASKED 52.039s
+1113 selection bit=8 cycle=97567 MASKED 29.684s
+1114 supervisor bit=6 cycle=79494 MASKED 30.458s
+1115 sweep bit=2270 cycle=9 MASKED 0.224s
+1116 arith bit=6 cycle=499198 MASKED 46.629s
+1117 cert bit=2847 cycle=422518 MASKED 46.011s
+1118 codec bit=201 cycle=43983 MASKED 49.581s
+1119 engine bit=14408 cycle=523014 MASKED 52.711s
+1120 geom bit=5444 cycle=278950 MASKED 53.671s
+1121 geom_su bit=4 cycle=6 MASKED 0.223s
+1122 health bit=28052 cycle=272447 MASKED 49.480s
+1123 ingress bit=108 cycle=121914 MASKED 48.195s
+1124 mrmgen bit=29 cycle=590596 MASKED 49.820s
+1125 selection bit=11 cycle=242351 MASKED 30.549s
+1126 supervisor bit=3 cycle=240918 MASKED 32.884s
+1127 sweep bit=2560 cycle=31323 MASKED 32.602s
+1128 arith bit=144 cycle=173987 MASKED 29.158s
+1129 cert bit=2727 cycle=2672 MASKED 46.798s
+1130 codec bit=710 cycle=628856 MASKED 48.176s
+1131 engine bit=25843 cycle=301039 MASKED 28.582s
+1132 geom bit=21 cycle=304138 MASKED 29.096s
+1133 geom_su bit=6 cycle=507784 MASKED 44.384s
+1134 health bit=18647 cycle=8 MASKED 0.223s
+1135 ingress bit=497 cycle=281737 MASKED 29.099s
+1136 mrmgen bit=69 cycle=1 MASKED 0.274s
+1137 selection bit=9 cycle=1 MASKED 0.223s
+1138 supervisor bit=7 cycle=304820 MASKED 30.806s
+1139 sweep bit=2730 cycle=559375 MASKED 49.077s
+1140 arith bit=52 cycle=367565 MASKED 48.863s
+1141 cert bit=814 cycle=204852 MASKED 45.631s
+1142 codec bit=286 cycle=385207 MASKED 48.229s
+1143 engine bit=261 cycle=603782 MASKED 48.120s
+1144 geom bit=435 cycle=127802 MASKED 28.698s
+1145 geom_su bit=0 cycle=397603 MASKED 33.506s
+1146 health bit=9297 cycle=250347 MASKED 39.311s
+1147 ingress bit=435 cycle=1 MASKED 0.174s
+1148 mrmgen bit=5 cycle=5 MASKED 0.171s
+1149 selection bit=14 cycle=447781 MASKED 49.388s
+1150 supervisor bit=0 cycle=166906 MASKED 38.452s
+1151 sweep bit=911 cycle=489055 MASKED 68.394s
+1152 arith bit=10 cycle=4 MASKED 0.445s
+1153 cert bit=405 cycle=8 MASKED 0.277s
+1154 codec bit=57 cycle=1835 MASKED 60.517s
+1155 engine bit=4683 cycle=233459 MASKED 54.591s
+1156 geom bit=1296 cycle=616581 MASKED 45.798s
+1157 geom_su bit=20 cycle=9 MASKED 0.224s
+1158 health bit=13693 cycle=16671 MASKED 31.698s
+1159 ingress bit=1149 cycle=627828 MASKED 53.240s
+1160 mrmgen bit=39 cycle=348651 MASKED 70.533s
+1161 selection bit=15 cycle=317713 MASKED 78.907s
+1162 supervisor bit=2 cycle=77193 MASKED 49.871s
+1163 sweep bit=2415 cycle=8 MASKED 0.328s
+1164 arith bit=31 cycle=376926 MASKED 76.461s
+1165 cert bit=457 cycle=281770 MASKED 62.450s
+1166 codec bit=618 cycle=9 MASKED 0.283s
+1167 engine bit=18696 cycle=529927 MASKED 58.151s
+1168 geom bit=3094 cycle=367562 MASKED 48.601s
+1169 geom_su bit=60 cycle=9 MASKED 0.225s
+1170 health bit=30502 cycle=553541 MASKED 49.361s
+1171 ingress bit=612 cycle=59544 MASKED 31.982s
+1172 mrmgen bit=7 cycle=2 MASKED 0.277s
+1173 selection bit=0 cycle=93034 MASKED 33.474s
+1174 supervisor bit=6 cycle=129503 MASKED 31.594s
+1175 sweep bit=702 cycle=404515 MASKED 50.448s
+1176 arith bit=62 cycle=166772 MASKED 49.834s
+1177 cert bit=790 cycle=215082 MASKED 31.780s
+1178 codec bit=340 cycle=296862 MASKED 32.695s
+1179 engine bit=6818 cycle=328117 MASKED 51.331s
+1180 geom bit=2031 cycle=107118 MASKED 50.812s
+1181 geom_su bit=3 cycle=243997 MASKED 49.040s
+1182 health bit=19409 cycle=3 MASKED 0.223s
+1183 ingress bit=97 cycle=3 MASKED 0.222s
+1184 mrmgen bit=142 cycle=77329 MASKED 49.992s
+1185 selection bit=15 cycle=5 MASKED 0.222s
+1186 supervisor bit=1 cycle=601461 MASKED 51.915s
+1187 sweep bit=4529 cycle=36653 MASKED 51.078s
+1188 arith bit=59 cycle=201232 MASKED 32.007s
+1189 cert bit=833 cycle=155949 MASKED 51.346s
+1190 codec bit=112 cycle=2 MASKED 0.222s
+1191 engine bit=1972 cycle=229759 MASKED 31.601s
+1192 geom bit=8071 cycle=86766 MASKED 31.501s
+1193 geom_su bit=22 cycle=120154 MASKED 52.955s
+1194 health bit=24887 cycle=263724 MASKED 51.924s
+1195 ingress bit=193 cycle=173998 MASKED 30.813s
+1196 mrmgen bit=84 cycle=310732 MASKED 30.412s
+1197 selection bit=1 cycle=454505 MASKED 48.669s
+1198 supervisor bit=1 cycle=301452 MASKED 47.828s
+1199 sweep bit=4519 cycle=366810 MASKED 30.960s
+1200 arith bit=96 cycle=9 MASKED 0.223s
+1201 cert bit=1888 cycle=460049 MASKED 47.540s
+1202 codec bit=75 cycle=218754 SDC-UNSAFE 47.724s
+1203 engine bit=8254 cycle=201458 MASKED 32.049s
+1204 geom bit=515 cycle=8 MASKED 0.223s
+1205 geom_su bit=8 cycle=308647 MASKED 31.187s
+1206 health bit=6506 cycle=336265 MASKED 31.216s
+1207 ingress bit=325 cycle=652463 MASKED 51.499s
+1208 mrmgen bit=139 cycle=316558 MASKED 52.691s
+1209 selection bit=9 cycle=588 MASKED 49.438s
+1210 supervisor bit=0 cycle=139927 MASKED 50.170s
+1211 sweep bit=3728 cycle=11999 MASKED 47.986s
+1212 arith bit=125 cycle=9 MASKED 0.171s
+1213 cert bit=1132 cycle=196902 MASKED 48.366s
+1214 codec bit=82 cycle=8 MASKED 0.173s
+1215 engine bit=27168 cycle=113332 MASKED 30.095s
+1216 geom bit=6452 cycle=182190 MASKED 49.683s
+1217 geom_su bit=61 cycle=9 MASKED 0.223s
+1218 health bit=22601 cycle=342842 MASKED 31.171s
+1219 ingress bit=797 cycle=4 MASKED 0.224s
+1220 mrmgen bit=14 cycle=343432 MASKED 51.128s
+1221 selection bit=11 cycle=104158 MASKED 32.754s
+1222 supervisor bit=0 cycle=459922 MASKED 50.312s
+1223 sweep bit=2940 cycle=394840 MASKED 51.380s
+1224 arith bit=133 cycle=7 MASKED 0.223s
+1225 cert bit=2797 cycle=501092 MASKED 51.116s
+1226 codec bit=972 cycle=471273 MASKED 49.664s
+1227 engine bit=41857 cycle=353295 MASKED 50.655s
+1228 geom bit=6059 cycle=1 MASKED 0.223s
+1229 geom_su bit=6 cycle=334077 MASKED 50.745s
+1230 health bit=8818 cycle=331504 MASKED 32.347s
+1231 ingress bit=260 cycle=259807 MASKED 51.019s
+1232 mrmgen bit=3 cycle=71096 MASKED 51.481s
+1233 selection bit=1 cycle=6 MASKED 0.223s
+1234 supervisor bit=6 cycle=6 MASKED 0.223s
+1235 sweep bit=8199 cycle=355565 MASKED 30.788s
+1236 arith bit=555 cycle=292480 MASKED 31.032s
+1237 cert bit=1612 cycle=17584 MASKED 51.617s
+1238 codec bit=658 cycle=358876 MASKED 48.480s
+1239 engine bit=42590 cycle=380278 MASKED 31.356s
+1240 geom bit=7451 cycle=488975 MASKED 48.834s
+1241 geom_su bit=1 cycle=67442 MASKED 49.635s
+1242 health bit=3162 cycle=130789 MASKED 51.701s
+1243 ingress bit=374 cycle=567785 MASKED 48.963s
+1244 mrmgen bit=218 cycle=106739 MASKED 53.025s
+1245 selection bit=2 cycle=3 MASKED 0.225s
+1246 supervisor bit=4 cycle=529759 MASKED 50.795s
+1247 sweep bit=36 cycle=242997 MASKED 31.756s
+1248 arith bit=56 cycle=92741 MASKED 36.156s
+1249 cert bit=327 cycle=318560 MASKED 51.643s
+1250 codec bit=101 cycle=63987 MASKED 34.560s
+1251 engine bit=32348 cycle=5700 MASKED 53.880s
+1252 geom bit=4963 cycle=4 MASKED 0.223s
+1253 geom_su bit=34 cycle=313049 MASKED 53.389s
+1254 health bit=26440 cycle=9 MASKED 0.223s
+1255 ingress bit=456 cycle=282935 MASKED 50.074s
+1256 mrmgen bit=354 cycle=265902 MASKED 50.355s
+1257 selection bit=0 cycle=353251 MASKED 31.732s
+1258 supervisor bit=0 cycle=9779 MASKED 32.124s
+1259 sweep bit=1954 cycle=24461 MASKED 52.337s
+1260 arith bit=107 cycle=66744 MASKED 32.145s
+1261 cert bit=704 cycle=10916 MASKED 57.087s
+1262 codec bit=468 cycle=191789 MASKED 54.304s
+1263 engine bit=627 cycle=42211 MASKED 56.334s
+1264 geom bit=4218 cycle=214042 MASKED 52.543s
+1265 geom_su bit=40 cycle=3 MASKED 0.223s
+1266 health bit=22958 cycle=7 MASKED 0.224s
+1267 ingress bit=996 cycle=290560 MASKED 33.011s
+1268 mrmgen bit=19 cycle=3 MASKED 0.224s
+1269 selection bit=11 cycle=56812 MASKED 33.345s
+1270 supervisor bit=0 cycle=127863 MASKED 33.289s
+1271 sweep bit=2717 cycle=5 MASKED 0.225s
+1272 arith bit=52 cycle=230175 MASKED 33.623s
+1273 cert bit=1545 cycle=5 MASKED 0.226s
+1274 codec bit=350 cycle=39469 MASKED 51.445s
+1275 engine bit=18138 cycle=5 MASKED 0.276s
+1276 geom bit=1282 cycle=307486 MASKED 50.671s
+1277 geom_su bit=46 cycle=353460 MASKED 52.132s
+1278 health bit=33103 cycle=264632 MASKED 51.556s
+1279 ingress bit=965 cycle=341933 MASKED 49.650s
+1280 mrmgen bit=300 cycle=196532 MASKED 32.129s
+1281 selection bit=8 cycle=45656 MASKED 31.632s
+1282 supervisor bit=1 cycle=453485 MASKED 53.303s
+1283 sweep bit=5739 cycle=41369 MASKED 49.761s
+1284 arith bit=101 cycle=9 MASKED 0.224s
+1285 cert bit=90 cycle=287992 MASKED 52.453s
+1286 codec bit=116 cycle=140885 MASKED 49.462s
+1287 engine bit=5125 cycle=157980 MASKED 50.523s
+1288 geom bit=747 cycle=1 MASKED 0.334s
+1289 geom_su bit=4 cycle=7634 MASKED 32.910s
+1290 health bit=20933 cycle=290594 MASKED 50.811s
+1291 ingress bit=365 cycle=3 MASKED 0.172s
+1292 mrmgen bit=25 cycle=338612 MASKED 54.101s
+1293 selection bit=0 cycle=277871 MASKED 53.226s
+1294 supervisor bit=5 cycle=9 MASKED 0.224s
+1295 sweep bit=7245 cycle=142050 MASKED 51.159s
+1296 arith bit=147 cycle=511647 MASKED 51.036s
+1297 cert bit=878 cycle=381209 MASKED 53.366s
+1298 codec bit=368 cycle=4 MASKED 0.174s
+1299 engine bit=42701 cycle=385099 MASKED 51.817s
+1300 geom bit=2028 cycle=160907 MASKED 49.636s
+1301 geom_su bit=20 cycle=276766 MASKED 50.985s
+1302 health bit=28176 cycle=4 MASKED 0.226s
+1303 ingress bit=119 cycle=110111 MASKED 35.931s
+1304 mrmgen bit=88 cycle=182164 MASKED 52.966s
+1305 selection bit=0 cycle=9 MASKED 0.281s
+1306 supervisor bit=0 cycle=90031 MASKED 53.920s
+1307 sweep bit=644 cycle=298795 MASKED 32.526s
+1308 arith bit=50 cycle=389249 MASKED 54.394s
+1309 cert bit=1821 cycle=26259 MASKED 52.432s
+1310 codec bit=1 cycle=334704 MASKED 33.722s
+1311 engine bit=20397 cycle=602524 MASKED 53.616s
+1312 geom bit=2592 cycle=440905 MASKED 52.457s
+1313 geom_su bit=0 cycle=1 MASKED 0.226s
+1314 health bit=32627 cycle=471566 MASKED 53.625s
+1315 ingress bit=280 cycle=77396 MASKED 31.884s
+1316 mrmgen bit=81 cycle=3 MASKED 0.227s
+1317 selection bit=8 cycle=1 MASKED 0.226s
+1318 supervisor bit=0 cycle=233133 MASKED 51.469s
+1319 sweep bit=589 cycle=157072 MASKED 52.870s
+1320 arith bit=15 cycle=573354 MASKED 49.517s
+1321 cert bit=1139 cycle=9 MASKED 0.224s
+1322 codec bit=894 cycle=324179 MASKED 32.200s
+1323 engine bit=43164 cycle=6 MASKED 0.227s
+1324 geom bit=8 cycle=464631 MASKED 51.480s
+1325 geom_su bit=6 cycle=166561 MASKED 31.736s
+1326 health bit=24020 cycle=237272 MASKED 31.950s
+1327 ingress bit=411 cycle=52932 MASKED 32.258s
+1328 mrmgen bit=78 cycle=5238 MASKED 33.837s
+1329 selection bit=15 cycle=2 MASKED 0.223s
+1330 supervisor bit=7 cycle=332972 MASKED 52.779s
+1331 sweep bit=576 cycle=312918 MASKED 32.039s
+1332 arith bit=322 cycle=260220 MASKED 53.877s
+1333 cert bit=1040 cycle=128893 MASKED 31.550s
+1334 codec bit=134 cycle=122640 MASKED 31.241s
+1335 engine bit=5593 cycle=277888 MASKED 34.531s
+1336 geom bit=30 cycle=2 MASKED 0.277s
+1337 geom_su bit=43 cycle=145221 MASKED 51.035s
+1338 health bit=24040 cycle=6 MASKED 0.226s
+1339 ingress bit=209 cycle=160188 MASKED 53.751s
+1340 mrmgen bit=140 cycle=6 MASKED 0.225s
+1341 selection bit=7 cycle=9 MASKED 0.224s
+1342 supervisor bit=4 cycle=269757 MASKED 33.930s
+1343 sweep bit=15 cycle=61240 MASKED 33.579s
+1344 arith bit=0 cycle=605826 MASKED 53.318s
+1345 cert bit=2617 cycle=8 MASKED 0.277s
+1346 codec bit=343 cycle=5 MASKED 0.224s
+1347 engine bit=661 cycle=577627 MASKED 50.345s
+1348 geom bit=2822 cycle=244659 MASKED 32.783s
+1349 geom_su bit=41 cycle=6 MASKED 0.227s
+1350 health bit=25053 cycle=24314 MASKED 51.935s
+1351 ingress bit=37 cycle=75650 MASKED 32.278s
+1352 mrmgen bit=27 cycle=90496 MASKED 31.837s
+1353 selection bit=1 cycle=220039 MASKED 31.781s
+1354 supervisor bit=0 cycle=2 DETECTED 169.929s
+1355 sweep bit=2128 cycle=523809 MASKED 54.913s
+1356 arith bit=76 cycle=37600 MASKED 32.960s
+1357 cert bit=929 cycle=306856 MASKED 33.983s
+1358 codec bit=102 cycle=403463 MASKED 54.457s
+1359 engine bit=3952 cycle=4 MASKED 0.228s
+1360 geom bit=651 cycle=649884 MASKED 54.679s
+1361 geom_su bit=31 cycle=90998 MASKED 32.759s
+1362 health bit=10419 cycle=104535 MASKED 52.248s
+1363 ingress bit=750 cycle=414066 MASKED 52.856s
+1364 mrmgen bit=337 cycle=109171 MASKED 32.647s
+1365 selection bit=13 cycle=308419 MASKED 54.000s
+1366 supervisor bit=5 cycle=488341 MASKED 52.452s
+1367 sweep bit=512 cycle=478990 MASKED 50.751s
+1368 arith bit=44 cycle=618605 MASKED 50.582s
+1369 cert bit=81 cycle=290490 MASKED 50.970s
+1370 codec bit=265 cycle=298202 MASKED 53.572s
+1371 engine bit=33701 cycle=317469 MASKED 48.632s
+1372 geom bit=19 cycle=3 MASKED 0.227s
+1373 geom_su bit=28 cycle=51733 MASKED 33.994s
+1374 health bit=18126 cycle=16908 MASKED 33.746s
+1375 ingress bit=218 cycle=5 MASKED 0.227s
+1376 mrmgen bit=116 cycle=485384 MASKED 50.129s
+1377 selection bit=9 cycle=8 MASKED 0.228s
+1378 supervisor bit=7 cycle=24854 MASKED 33.821s
+1379 sweep bit=2327 cycle=535511 MASKED 53.391s
+1380 arith bit=7 cycle=325102 MASKED 53.985s
+1381 cert bit=2132 cycle=332433 MASKED 32.021s
+1382 codec bit=67 cycle=311845 MASKED 33.761s
+1383 engine bit=16795 cycle=19254 MASKED 52.533s
+1384 geom bit=13 cycle=319467 MASKED 32.652s
+1385 geom_su bit=31 cycle=211143 MASKED 32.625s
+1386 health bit=31218 cycle=513813 MASKED 53.797s
+1387 ingress bit=1340 cycle=490641 MASKED 53.538s
+1388 mrmgen bit=152 cycle=1 MASKED 0.224s
+1389 selection bit=14 cycle=586125 MASKED 53.236s
+1390 supervisor bit=1 cycle=9 MASKED 0.226s
+1391 sweep bit=1997 cycle=5 MASKED 0.226s
+1392 arith bit=348 cycle=422933 MASKED 57.423s
+1393 cert bit=2732 cycle=7 MASKED 0.226s
+1394 codec bit=10 cycle=424361 MASKED 50.844s
+1395 engine bit=8136 cycle=1 MASKED 0.226s
+1396 geom bit=8151 cycle=267478 MASKED 33.560s
+1397 geom_su bit=58 cycle=199462 MASKED 32.943s
+1398 health bit=32 cycle=61991 MASKED 33.856s
+1399 ingress bit=1025 cycle=381354 MASKED 53.069s
+1400 mrmgen bit=52 cycle=9 MASKED 0.228s
+1401 selection bit=11 cycle=530141 MASKED 54.914s
+1402 supervisor bit=6 cycle=40196 MASKED 51.183s
+1403 sweep bit=884 cycle=50756 MASKED 32.380s
+1404 arith bit=265 cycle=532012 MASKED 53.107s
+1405 cert bit=2661 cycle=112436 MASKED 53.751s
+1406 codec bit=947 cycle=1 MASKED 0.277s
+1407 engine bit=21223 cycle=411903 MASKED 50.822s
+1408 geom bit=4617 cycle=402333 MASKED 32.688s
+1409 geom_su bit=27 cycle=247056 MASKED 53.083s
+1410 health bit=21725 cycle=115595 MASKED 53.730s
+1411 ingress bit=332 cycle=23474 MASKED 33.726s
+1412 mrmgen bit=18 cycle=591370 MASKED 54.271s
+1413 selection bit=11 cycle=174776 MASKED 52.619s
+1414 supervisor bit=2 cycle=394765 MASKED 33.095s
+1415 sweep bit=1425 cycle=456738 MASKED 54.033s
+1416 arith bit=160 cycle=145609 MASKED 55.085s
+1417 cert bit=1249 cycle=1 MASKED 0.224s
+1418 codec bit=140 cycle=223709 MASKED 52.740s
+1419 engine bit=3297 cycle=8 MASKED 0.224s
+1420 geom bit=6123 cycle=625597 MASKED 52.142s
+1421 geom_su bit=11 cycle=460498 MASKED 55.050s
+1422 health bit=26940 cycle=292091 MASKED 32.940s
+1423 ingress bit=579 cycle=99558 MASKED 53.800s
+1424 mrmgen bit=105 cycle=319224 MASKED 50.355s
+1425 selection bit=3 cycle=94901 MASKED 53.483s
+1426 supervisor bit=1 cycle=255930 MASKED 34.452s
+1427 sweep bit=2248 cycle=176534 MASKED 51.553s
+1428 arith bit=31 cycle=114148 MASKED 33.851s
+1429 cert bit=2213 cycle=130531 MASKED 52.285s
+1430 codec bit=460 cycle=230141 MASKED 33.493s
+1431 engine bit=12849 cycle=24943 MASKED 31.711s
+1432 geom bit=78 cycle=339303 MASKED 49.973s
+1433 geom_su bit=13 cycle=293066 MASKED 51.327s
+1434 health bit=4483 cycle=254149 MASKED 33.305s
+1435 ingress bit=1356 cycle=260711 MASKED 52.206s
+1436 mrmgen bit=146 cycle=4 MASKED 0.172s
+1437 selection bit=3 cycle=122772 MASKED 53.512s
+1438 supervisor bit=1 cycle=179446 MASKED 58.544s
+1439 sweep bit=7 cycle=440940 MASKED 57.511s
+campaign rc=0 Sat Nov  7 03:53:20 +07 2026
+{
+  "overall": {
+    "attempts": 1440,
+    "counts": {
+      "MASKED": 1429,
+      "SDC-UNSAFE": 8,
+      "DETECTED": 2,
+      "SDC-SAFE": 1
+    },
+    "n": 1440,
+    "unsafe_rate": 0.005555555555555556,
+    "cp95": [
+      0.0024014545609635776,
+      0.010917167409031415
+    ],
+    "dc": 0.18181818181818182
+  },
+  "units": {
+    "arith": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "cert": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "codec": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 113,
+        "SDC-UNSAFE": 7
+      },
+      "n": 120,
+      "unsafe_rate": 0.058333333333333334,
+      "cp95": [
+        0.023772023790506372,
+        0.11649837964561313
+      ],
+      "dc": 0.0
+    },
+    "engine": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 119,
+        "SDC-UNSAFE": 1
+      },
+      "n": 120,
+      "unsafe_rate": 0.008333333333333333,
+      "cp95": [
+        0.00021095947812170882,
+        0.045555513233592
+      ],
+      "dc": 0.0
+    },
+    "geom": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "geom_su": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 119,
+        "DETECTED": 1
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": 1.0
+    },
+    "health": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "ingress": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "mrmgen": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "selection": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    },
+    "supervisor": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 118,
+        "SDC-SAFE": 1,
+        "DETECTED": 1
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": 0.5
+    },
+    "sweep": {
+      "attempts": 120,
+      "counts": {
+        "MASKED": 120
+      },
+      "n": 120,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.030272972577420072
+      ],
+      "dc": null
+    }
+  },
+  "unsafe": [
+    {
+      "id": 62,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 81,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 2,
+      "cycle_seed": 1415655532,
+      "cycle": 351600,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 53.909748504986055,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 634154,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319767667534551915666132114019058912004673284598702889481361707845246431790091812486520135618447670717349104588562934455329559075727352490731560457666573408205194550139610758680162942880049196263005167260665086725942777640077158654551626819805906375289653963618592843245271422078583145208514688,
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319780943249390936399135180153849531090410441562843017065966224052772847255197316085814724566652453575538661655153057800228058456925195496885490047399833791486070424079081441245666844519684390001669944677875116361097923799066379674364448968807543623944329821627513238671704193777140051224055192
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019,
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 122,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 127,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 0,
+      "cycle_seed": 1953378393,
+      "cycle": 522252,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 56.48337210400496,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 661169,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771633897081575460870697434939508382270050906426107674350692262957519683925798399321679312129866612766354023241846193407546977157509482050351344231112523739953216220457661525992825452488263541497614830319342949269012439857818734538357263926357044834404848625954585868968299164172390743024023140,
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771641287840927963075415158512142091259147443793343515500383712036606326656487858248885536954684231115765919177016530361883361484180458676201957997733875160408808776124459416128715529334718587932185327511424680198890749550403042874782780000488198498592481413726986401988375957715429056855728900
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652,
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 326,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 199,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 0,
+      "cycle_seed": 163973785,
+      "cycle": 499850,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 53.98913320398424,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 661169,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771649548433302881633375772502492812449617878451716957430980478201363546833785377301310821675182460135821411606196944644483844919005855053045864150089770473101730512242786773774484452973858865475586928229928900168538174270662250533009477014332131781145987155216509538743377848892716381609731804,
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771641287840927963075415158512142091259147443793343515500383712036606326656487858248885536954684231115765919177016530361883361484180458676201957997733875160408808776124459416128715529334718587932185327511424680198890749550403042874782780000488198498592481413726986401988375957715429056855728900
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652,
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 578,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 249,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 0,
+      "cycle_seed": 1806728803,
+      "cycle": 619773,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 44.44474728699424,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 661169,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771623857646051421618610044458073686450422168010916243184867281479446421165346928918658365001248462710431525707774130876453203909955542669120965610159992946599590448960838587655359352516614666999514810475995470069360760755548563346714368675557685193220874879177953156168194277564559522344964256,
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771641287840927963075415158512142091259147443793343515500383712036606326656487858248885536954684231115765919177016530361883361484180458676201957997733875160408808776124459416128715529334718587932185327511424680198890749550403042874782780000488198498592481413726986401988375957715429056855728900
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652,
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 675,
+      "unit": "engine",
+      "path": "dut.u_tsmx_engine.reg_req",
+      "bit": 44286,
+      "scalar": false,
+      "source": "rtl/top/m_tsmx_engine.sv",
+      "line": 155,
+      "job": 2,
+      "cycle_seed": 1790869880,
+      "cycle": 574142,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 46.81185989399091,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 634154,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178721071732543209184751377510493920579806727965899295403801947001652939306740437408713096646141118384843882853591379150836932733779319206206415818161882608618674026723553445399298235061139030635517079087866260052309953194150037859125068125727048745683452002480029543170337664627624207842960470680499028026651783474523713815999001756513059892468257306692264069631249330218286086744169282338361090308082959348598997709911088882179505792596545195368583405567718762097533160508300621226264846788569047792814810345230762142511369200398725198557262045644244259737475271496,
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319780943249390936399135180153849531090410441562843017065966224052772847255197316085814724566652453575538661655153057800228058456925195496885490047399833791486070424079081441245666844519684390001669944677875116361097923799066379674364448968807543623944329821627513238671704193777140051224055192
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019,
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 902,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 179,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 2,
+      "cycle_seed": 843719065,
+      "cycle": 197906,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 63.82205731602153,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 634154,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319789623496883632687840537065305159905244981391129442342387334395052339466728312160322818745120405409652005947105317877388797271570549023653152652961856677605282275036735321528031238691302285226152772241571047217520714011680156781291635176849795337422502130577648075127844717098665614109246340,
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319780943249390936399135180153849531090410441562843017065966224052772847255197316085814724566652453575538661655153057800228058456925195496885490047399833791486070424079081441245666844519684390001669944677875116361097923799066379674364448968807543623944329821627513238671704193777140051224055192
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019,
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 986,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 59,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 2,
+      "cycle_seed": 2323813988,
+      "cycle": 602581,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 119.77994584600674,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 634154,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319791679815268913380995984323893414423787559406568516659725008664972485728798793924107505797895607577474196107845237556396180631930427278766342929609450035078389765355717811621801751667856872984267710039418270940771902742448646394138833371427750838884886228582073111668678180649271715232496696,
+            885178721071732543209184751377510493920579806727965899295403801839498126376070918483338783654296657792367532002535302689723607206687618260649925600748239260122990215234971542596881823380312600155336941401273671705341566045794794850234952104207181567517585392227451215549021807319780943249390936399135180153849531090410441562843017065966224052772847255197316085814724566652453575538661655153057800228058456925195496885490047399833791486070424079081441245666844519684390001669944677875116361097923799066379674364448968807543623944329821627513238671704193777140051224055192
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019,
+            4375482419379298312349017562083592030225225488694214114444681792921577078274241713223910607875683019
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    },
+    {
+      "id": 1202,
+      "unit": "codec",
+      "path": "dut.u_tsmx_engine.u_tsmx_hash.u_codec.u_codec_core.reg_hash",
+      "bit": 75,
+      "scalar": false,
+      "source": "rtl/codec/m_tsmx_codec_core.sv",
+      "line": 124,
+      "job": 0,
+      "cycle_seed": 2783345826,
+      "cycle": 218754,
+      "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+      "tool": "verilator",
+      "returncode": 0,
+      "wall_seconds": 47.723641240008874,
+      "wall_timeout": false,
+      "observation": {
+        "hang": 0,
+        "injected": 1,
+        "probe": 1,
+        "cycles": 661169,
+        "deadline": 0,
+        "frames": 1,
+        "event": 1,
+        "framing": 0,
+        "fallback": 65535,
+        "pairs": {
+          "RSP": [
+            137774498887,
+            137774498887
+          ],
+          "CMD": [
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771628865781207137179598564388325308690655344734010808705894625233226814777870460545745823913834948342638067697027785549293891066005114599812385853828742818566421321911531160471183989799362362205911274646262757455654517624459542514016255665671536333302534838800694144073420722219365898742086580,
+            885178720466435262223370865263385805596231955072201673094336791207734146750290365719272768651513990939727142623658207893405515698631141887517654427887841600234894821314395144983547826934358517443762742719907918946907069851858015517181986079394554343532350204518072821141752782771641287840927963075415158512142091259147443793343515500383712036606326656487858248885536954684231115765919177016530361883361484180458676201957997733875160408808776124459416128715529334718587932185327511424680198890749550403042874782780000488198498592481413726986401988375957715429056855728900
+          ],
+          "EVENT": [
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768,
+            579077491685802321488843956143142624996824216167856555052475046236315745071397821853490205888764594405041302260732833575422293147590054700621050608781931510696595961477055807048931341056434278890523812631458143156526429436376556101406907024243456131925405351038684379206202085994860226769343636561299544275133050912768
+          ],
+          "ING": [
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652,
+            4374501450075282842887911525498761791212357681913445788315048152603868678097706954338560704816535652
+          ],
+          "SUP": [
+            170,
+            170
+          ],
+          "LOST": [
+            0,
+            0
+          ],
+          "REASON": [
+            0,
+            0
+          ],
+          "STATUS": [
+            65898,
+            65898
+          ]
+        }
+      },
+      "class": "SDC-UNSAFE"
+    }
+  ]
+}

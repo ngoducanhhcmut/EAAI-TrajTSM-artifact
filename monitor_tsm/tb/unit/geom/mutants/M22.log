@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\sim.vvp +MUTANT=22 +START=0 +LIMIT=40
+INJECT 22 S5_5_6_no_early_commit DUT output bit flip
+ASSERT_FAIL 22 S5_5_6_no_early_commit job=0 cycle=4 got=000000000000000000000 expected=10000000002ed41d20019
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:340: R-025 assertion failed
+       Time: 36000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

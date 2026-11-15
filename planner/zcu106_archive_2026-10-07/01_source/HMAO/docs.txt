@@ -1,0 +1,357 @@
+HMAO_Engine_Full_Spec.pdf
+
+<table> Phiên bản v12.0 - Bản đặc tả tổng hợp đầy đủ (Tích hợp Gap Analysis) Mức An Toàn ASIL-D (ISO 26262) Platform Xilinx Versal HX FPGA - SLR1 (ASIL-D Domain) Loại Thiết Kế Custom RTL (Verilog/VHDL) - KHÔNG dùng HLS Xung Nhịp 400 MHz (hmao_clk, LOCKED) Độ Trễ Tối Đa ≤ 10 ms (Bounded, Deterministic) False Negatives 0% - Bắt buộc tuyệt đối (ZERO FALSE NEGATIVES) Công cụ Verify Cadence JasperGold FPV + Synopsys VC Formal </table>
+===== Page 2 =====
+
+1. ĐỊNH NGHĨA & MỤC TIÊU THIẾT KẾ
+
+1.1 Tên & Nhiệm Vụ
+Tên đầy đủ: HMAO Engine = Hardware-Managed Assurance Offload Safety Verification Engine
+Với mỗi quỹ đạo (trajectory) đề xuất từ Planning Accelerator, HMAO Engine thực hiện hai bước:
+
+• Tính toán tập hợp trạng thái xe có thể đạt được trong 5 giây tới (Reachable Set) sử dụng lý thuyết Zonotope Reachability Analysis.
+• Kiểm tra xem tập hợp đó có giao nhau với bất kỳ chướng ngại vật nào trong World Model không.
+• Nếu có giao nhau → OUTPUT VETO (từ chối quỹ đạo, kích hoạt MRM).
+• Nếu không giao nhau → OUTPUT GRANT (chấp thuận thực thi quỹ đạo).
+
+1.2 Phân Loại Thiết Kế
+<table> Tiêu Chí Giá Trị Loại thiết kế Hardware Accelerator (Custom RTL) Phương pháp triển khai RTL (Verilog/VHDL) - KHÔNG dùng HLS Lý do không dùng HLS Fixed pipeline depth, exact cycle-level optimization, latency determinism Mức an toàn ASIL-D (ISO 26262) Xác minh hình thức Cadence JasperGold FPV + Synopsys VC Formal Platform target Xilinx Versal HX (FPGA) Thời gian phát triển ước tính 2 tháng (song song với Trajectory Transformer) </table>
+1.3 Nguyên Tắc Thiết Kế (Design Philosophy – ASIL-D RTL)
+<table> Nguyên Tắc Mô Tả Chi Tiết DETERMINISM TUYỆT ĐỐI Cùng input → cùng output → cùng latency (bit-exact). Không có nhánh có độ trễ khác nhau trên critical path. Tất cả paths phải fully pipelined. ZERO FALSE NEGATIVES Reachable set phải LUÔN over-approximate. Không bao giờ cho phép quỹ đạo có va chạm thực. Hardware assertion tại mọi điểm quyết định. BOUNDED LATENCY ≤ 10 ms Stage 1: exactly 4.0 ms (1,600,000 cycles @400MHz). Stage 2: exactly 3.0 ms thêm. Pre-processing: exactly 0.5 ms. SAFE DEFAULT = VETO Khi có bất kỳ lỗi nào → output VETO. Watchdog timeout → VETO. ECC error trong computation → VETO. </table>
+===== Page 3 =====
+
+2. VỊ TRÍ TRONG PIPELINE & SoC ARCHITECTURE
+
+2.1 Pipeline End-to-End (Timing Budget)
+<table> Giai Đoạn / Thành Phần Thành Phần Cụ Thể Latency 1. Sensor Capture MIPI-CSI Interface 3.0 ms 2. Sensor Fusion ISP + IPM Pipeline (RTL) 10.0 ms 3. Perception EfficientViT x3 (ASIC) 19.4 ms 4. Planning Spatial Transformer Accelerator 67.0 ms ★ 5. HMAO ★ HMAO Safety Verification Engine avg 4.3ms / max 7.0ms 6. Control Exec. VexRiscv DCLS < 1 ms TOTAL E2E — 70–100 ms (target < 100ms) </table>
+2.2 Bố Trí SoC – Phân Vùng SLR
+<table> SLR Domain Nội Dung SLR3 Application CPU BOOM Cluster (4 x OOO cores) – Linux, ROS2, AUTOSAR CP, sensor quality estimation SLR2 AI Acceleration Fabric EfficientViT x3 (Perception) + Planning Accelerator (Spatial Transformer) SLR1 SAFETY DOMAIN (ASIL-D) ★ HMAO Engine + VexRiscv DCLS + SMPU + Trajectory Buffer (64KB) + World Model URAM (8MB) SLR0 Memory Subsystem HBM2 Controllers + PCIe + ETH </table>
+Network-on-Chip: 6x6 2D Mesh, 400 MHz, VC0=ASIL-D. HMAO Engine Node = R35. Path HMAO→Trajectory: R35→R34→R33→R32→R31→R21→R22 (6 hops).
+
+2.3 NoC Timing – Độ Trễ Per-Hop
+<table> Component Best Typical Worst (w/ QoS VC0) Router Pipeline 3 cycles 3 cycles 3 cycles Link Traversal 1 cycle 1 cycle 1 cycle VC Arbitration 0 cycles 2 cycles 5 cycles Switch Arbitration 0 cycles 1 cycle 3 cycles Queueing Delay 0 cycles 10 cycles 25 cycles (w/ QoS) Total per hop 10 ns 42.5 ns 375 ns (6-hop total) </table>
+Worst-case WITHOUT QoS = 930 ns (không chấp nhận được). Bắt buộc phải dùng VC0 (ASIL-D, 50% BW reserved).
+
+===== Page 4 =====
+
+3. ĐẶC TẢ INPUT – CHI TIẾT CẤP BIT
+
+3.1 Primary Input: Trajectory Buffer
+<table> Thuộc Tính Giá Trị Base Address 0x8030_0000 Size 64 KB (allocated), 1,400 bytes used Format 50 waypoints x 7 fields x 4 bytes (float32) = 1,400 bytes Access READ-ONLY (SMPU enforced, master_id = HMAO = 0x1A) ASIL Level ASIL-D (Shared region) Cache Policy UNCACHED (consistency required) CRC32 Offset 0x0568 (4 bytes sau waypoint cuối – viết bởi VexRiscv trước HMAO_START) </table>
+3.1.1 Memory Layout – Trajectory Buffer
+<table> Offset Field Type Mô Tả 0x0000 Waypoint[0].x float32 Tọa độ X (meters, world frame) 0x0004 Waypoint[0].y float32 Tọa độ Y (meters, world frame) 0x0008 Waypoint[0].z float32 Tọa độ Z (meters, world frame) 0x000C Waypoint[0].vx float32 Vận tốc trục X (m/s) 0x0010 Waypoint[0].vy float32 Vận tốc trục Y (m/s) 0x0014 Waypoint[0].heading float32 Góc Yaw (radians, [-π, π]) 0x0018 Waypoint[0].timestamp float32 Thời điểm (seconds từ T0) 0x001C Waypoint[1].x float32 Bắt đầu waypoint tiếp theo ... ... ... 50 waypoints, cách nhau 100ms đều 0x0564 Waypoint[49].timestamp float32 Waypoint cuối – T = 4,900ms 0x0568 CRC32_CHECKSUM uint32 CRC32 của 1,400 bytes trajectory data – viết bởi VexRiscv </table>
+3.2 Secondary Input: World Model Buffer
+<table> Thuộc Tính Giá Trị L2 Base Address 0x8040_0000 (8 MB, accessible qua NoC) URAM Replica Local SLR1 URAM (8 MB replicated, faster access) Access READ-ONLY ASIL Level QM (content từ EfficientViT) Update Rate 30 FPS (DMA background update, ~33ms) </table>
+3.2.1 Cấu Trúc World Model – Đặc Tả Chi Tiết Cấp Byte (Giải pháp Gap #5)
+===== Page 5 =====
+
+Mỗi đối tượng (obstacle) được lưu trong khối dữ liệu đúng 64 bytes, khớp hoàn hảo với hai lần chuyển tải (beat) của giao thức AXI4 256-bit:
+
+<table> Byte Range Kích Thước Field Mô Tả 0 - 11 12 bytes position[3] Float32[3]: tọa độ X, Y, Z trong world frame 12 - 23 12 bytes velocity[3] Float32[3]: vận tốc Vx, Vy, Vz - dùng để dự phóng vị trí tương lai 24 - 35 12 bytes dimensions[3] Float32[3]: Chiều dài, Rộng, Cao - nền tảng thiết lập Polytope của vật cản 36 - 39 4 bytes heading Float32: góc Yaw - xoay Polytope khớp hệ tọa độ toàn cục 40 - 41 2 bytes track_id Uint16: ID theo dõi đối tượng (map vào HMAO_VIOLATION_FLAGS[47:32]) 42 1 byte class Uint8 Enum: 0=Xe hơi, 1=Xe tải, 2=Xe máy, 3=Người đi bộ 43 1 byte confidence Uint8: Mức tin cậy từ AI nhận thức (0-100) 44 - 63 20 bytes predicted_trajectory 5 waypoint (x,y) × Int16 offset (cm) so với vị trí hiện tại </table>
+✓ Cấu trúc tính 64 bytes/object cho phép phần cứng thiết lập Auto-increment Address Generators để prefetch hàng loạt vật cản song song, che khuất hoàn toàn độ trễ đọc bộ nhớ L2.
+
+3.3 Control Input: Uncertainty Vector Registers (HMAO_MARGIN_CTRL)
+Địa chỉ cơ sở: 0xA410_0020 (Giải pháp Gap #1, #13)
+
+<table> Offset Tên Width Access Mô Tả +0x00 GPS_QUALITY[7:0] W (QM) 0=HDOP>10 (tệ) / 255=HDOP<2 (tốt) +0x04 CAMERA_QUALITY[7:0] W (QM) 0=mù / 255=rõ ràng (từ ISP) +0x08 ROAD_FRICTION[7:0] W (QM) 0=băng (μ=0.1) / 255=nhựa khô (μ=0.9) +0x0C ACTUATOR_HEALTH[7:0] W (QM) 0=suy giảm / 255=bình thường +0x10 WEATHER_SEVERITY[7:0] W (QM) 0=rõ / 255=mưa lớn (reserved) </table>
+Write Domain: QM (BOOM software) writes mỗi 100ms (10 Hz). Read Domain: ASIL-D (HMAO hardware) reads per verification cycle. Clock Domain Crossing: Sử dụng Asynchronous Handshake with Parity Protocol (xem Section 14).
+
+3.4 Control Input: HMAO_START Signal
+<table> Thuộc Tính Giá Trị Địa chỉ 0xA410_0004 (Giải pháp Gap #2) Nguồn VexRiscv (sau khi verify DMA signature & CRC trajectory) Loại Pulse (1 cycle) - Single-pulse trigger Access Write-Only (ASIL-D) </table>
+===== Page 6 =====
+
+(Trang trống)
+
+===== Page 7 =====
+
+4. ĐẶC TẢ OUTPUT – CHI TIẾT CẤP BIT
+
+4.1 Primary Output: HMAO_DECISION
+<table> Thuộc Tính Giá Trị Địa chỉ 0xA410_0008 Width 1 bit Values 1 = GRANT (quỹ đạo an toàn, cho phép thực thi) | 0 = VETO (phát hiện va chạm) Default (reset) 0 (VETO – safe default) Default (timeout/error) 0 (VETO – fail-safe) Timing Valid sau khi HMAO_COMPLETE interrupt asserted Readable by VexRiscv DCLS (ASIL-D domain) </table>
+4.2 Secondary Output: HMAO_VIOLATION_FLAGS [63:0] (Giải pháp Gap #3)
+Thanh ghi 64-bit lưu bằng chứng chi tiết lý do HMAO từ chối quỹ đạo, có thể truy xuất trong một hoặc hai chu kỳ bus:
+
+<table> Bit Range Trường Encoding Ví Dụ Mô Tả [63:56] Stage & State 0x01=Stage1, 0x02=Stage2, 0xFF=Lỗi hệ thống Giai đoạn phát hiện vi phạm – giúp đánh giá bộ lọc thô [55:48] Violation Type 0x01=Lateral, 0x02=Longitudinal, 0x04=Kinematic, 0x08=Time Margin Bản chất vật lý của vi phạm [47:32] Obstacle ID track_id của đối tượng trong World Model Ánh xạ trực tiếp field track_id – biết chính xác vật cản nào cản trở [31:16] Time Step Index 0x0014 = step 20 = 1.0 giây (20x50ms) Chỉ số bước thời gian t (0-99) nơi va chạm đầu tiên xảy ra [15:0] Penetration Depth Q8.8 Fixed-Point: 0x0180 = 1.5m (384/256) Độ sâu xâm nhập vào vùng an toàn tính bằng mét </table>
+Register map: HMAO_VIOLATION_LO [31:0] tại 0xA410_0010 | HMAO_VIOLATION_HI [63:32] tại 0xA410_0014
+
+4.3 Interrupt Output: HMAO_COMPLETE
+<table> Thuộc Tính Giá Trị Loại Edge-triggered interrupt Target VexRiscv DCLS interrupt controller </table>
+===== Page 8 =====
+
+4.4 Fault Output: fault if (SFI Interface)
+Đi đến FMU Leaf (VERIFICATION_FAILURE category) → kích hoạt MRM.
+
+<table> Bit Tên Fault Điều Kiện Kích Hoạt [0] HMAO_HANG Watchdog timeout (engine hung) [1] ZONOTOPE_ERROR Zonotope computation numerical error [2] ADMM_DIVERGENCE ADMM solver diverged [3] TRAJECTORY_CRC_FAIL CRC32 mismatch trên trajectory input [4] SMPU_VIOLATION Memory access violation [5] NUMERICAL_OVERFLOW Arithmetic overflow trong computation [6] KINEMATIC_INVALID Pre-processing kinematic check failed </table>
+===== Page 9 =====
+
+5. REGISTER MAP (MEMORY-MAPPED) - ĐẦY ĐỦ
+
+5.1 Tổng Quan Memory Map
+<table> Vùng Nhớ Địa Chỉ / Kích Thước HMAO Register Base (Giải pháp Gap #13) 0xA410_0000 (64KB) Trajectory Buffer 0x8030_0000 (64KB, READ-ONLY) World Model Buffer 0x8040_0000 (8MB, READ-ONLY) Safety Data Region 0x8020_0000 (1MB, READ-ONLY) </table>
+5.2 Register Map Chi Tiết
+<table> Offset Địa Chỉ Tuyệt Đối Tên Thanh Ghi Width R/W Mô Tả +0x000 0xA410_0000 HMAO_STATUS[31:0] R [2:0] FSM state | [3] CRC err | [4] WDT | [5] Numerical err | [6] Busy +0x004 0xA410_0004 HMAO_START[0] W Write 1 = kích hoạt xác minh (single-pulse) +0x008 0xA410_0008 HMAO_DECISION[0] R 0=VETO / 1=GRANT +0x00C 0xA410_000C HMAO_IRQ_CLEAR[0] W Write 1 = clear HMAO_COMPLETE interrupt +0x010 0xA410_0010 HMAO_VIOLATION_LO[31:0] R Violation flags bits [31:0] +0x014 0xA410_0014 HMAO_VIOLATION_HI[31:0] R Violation flags bits [63:32] +0x018 0xA410_0018 HMAO_LATENCY_CYCLES[31:0] R Số cycles của lần xác minh gần nhất +0x020 0xA410_0020 GPS_QUALITY[7:0] W(QM) Chất lượng GPS (0=tệ / 255=tốt) +0x024 0xA410_0024 CAMERA_QUALITY[7:0] W(QM) Chất lượng Camera (0=mù / 255=rõ) +0x028 0xA410_0028 ROAD_FRICTION[7:0] W(QM) Hệ số ma sát đường (0=băng / 255=nhựa khô) +0x02C 0xA410_002C ACTUATOR_HEALTH[7:0] W(QM) Sức khỏe cơ cấu chấp hành (0=suy giảm / 255=bình thường) +0x030 0xA410_0030 WEATHER_SEVERITY[7:0] W(QM) Mức độ thời tiết xấu (reserved) +0x034 0xA410_0034 LATERAL_MARGIN[15:0] R Biên ngang hiện tại (Q8.8 format, meters) +0x036 0xA410_0036 LONGITUDINAL_MARGIN[15:0] R Biên dọc hiện tại (Q8.8 format, meters) +0x038 0xA410_0038 TIME_MARGIN[15:0] R Biên thời gian hiện tại (Q8.8 format, seconds) </table>
+===== Page 10 =====
+
+<table> Offset Địa Chỉ Tuyệt Đối Tên Thanh Ghi Width R/W Mô Tả +0x040 0xA410_0040 HMAO_STAGE1_CONFIG[31:0] R 0x10320A: 16 gen, 10ms timestep, 50 steps (hardcoded) +0x044 0xA410_0044 HMAO_STAGE2_CONFIG[31:0] R 0x205064: 32 gen, 5ms timestep, 100 steps (hardcoded) </table>
+===== Page 11 =====
+
+6. KIẾN TRÚC NỘI BỘ: MULTI-STAGE PIPELINE
+
+6.1 Luồng Xử Lý Tổng Thể
+HMAO Engine sử dụng kiến trúc Multi-Stage Pipeline với hai nhánh: Fast Path (4.0ms, Stage 1 GRANT ~90% cases) và Full Path (7.0ms, Stage 1+2 POTENTIAL_COLLIDE ~10% cases).
+
+<table> Sub-Module Latency Input Output PRE-PROCESSING UNIT 0.5 ms / 200K cycles Raw trajectory SRAM Validated trajectory + bounding box | VETO ngay nếu lỗi ADAPTIVE MARGIN CTRL Combinational (always on) Uncertainty Vector Regs lateral / longitudinal / time margins (Q8.8) STAGE 1: ZONOTOPE GEN 1.5ms / 600K cycles Trajectory + margins 50 x zonotope_set[127:0] (16 generators) STAGE 1: COLLISION CHK 2.0ms / 800K cycles Zonotopes + World Model GRANT | POTENTIAL_COLLIDE + suspicious list ADMM SOLVER (parallel) Chạy song song Stage 1+2 Trajectory + World Model collision_possible flag (confirm/refine) STAGE 2: ZONOTOPE GEN+ 2.0ms / 800K cycles Trajectory + margins 100 x zonotope_set[127:0] (32 generators) STAGE 2: COLLISION CHK+ 1.0ms / 400K cycles 32g Zonotopes + suspicious GRANT | VETO (final) OUTPUT REGISTER STAGE 0.2ms / 80K cycles Decision bits HMAO_DECISION + HMAO_VIOLATION_FLAGS + IRQ </table>
+6.2 HMAO trong MRM (Minimum Risk Maneuver)
+Khi VexRiscv quyết định MRM sau VETO: HMAO là một trong 3 components còn active trong safe state (cùng VexRiscv DCLS và CAN-FD interface).
+
+• Disable BOOM cluster
+• Disable AI Accelerators
+• HMAO VẪN RUNNING (cho post-mortem analysis)
+• CAN-FD interface VẪN RUNNING
+
+===== Page 12 =====
+
+7. ĐẶC TẢ CHI TIẾT CÁC SUB-MODULE
+
+7.1 Sub-Module 1: Pre-Processing Unit
+<table> Thuộc Tính Giá Trị Latency 0.5 ms = 200,000 cycles @ 400 MHz Input Raw trajectory từ SRAM (50 waypoints x 7 fields) Output Validated trajectory + bounding box → pipe vào Stage 1 | error flag → VETO ngay </table>
+7.1.1 Các Bước Kiểm Tra
+<table> Bước Kiểm Tra Chi Tiết Bước 1 CRC32 Verification Đọc CRC32 từ offset 0x0568, tính CRC32 của 1,400 bytes, so sánh. Mismatch → VETO + fault. Latency: ~100,000 cycles (0.25ms) pipeline CRC. Bước 2 Kinematic Feasibility Check (Gap #16) Kiểm tra mỗi cặp waypoint: |Δx,Δy| ≤ vmax×Δt+ε, velocity ≤ 35 m/s, heading change ≤ 0.8 rad/s × Δt, acceleration ≤ ±8.0 m/s². FAIL → VETO ngay. Bước 3 Format Validation Kiểm tra timestamp tăng dần đều (Δt=0.1s ± ε). Kiểm tra không có NaN/Inf. Kiểm tra num_waypoints = 50. Bước 4 Bounding Box Computation Tính min/max(x,y) của 50 waypoints → bbox[xmin, xmax, ymin, ymax]. Dùng cho Stage 1 pre-filter obstacles. </table>
+7.2 Sub-Module 2: Zonotope Reachability Unit
+7.2.1 Lý Thuyết Zonotope
+Zonotope: Z = { c + Σi αi×gi | αi ∈ [-1, 1], i = 1..n }
+
+Trong đó: c = center vector (tâm), gi = generator vectors, αi = hệ số scaling.
+
+<table> Tính Chất Ý Nghĩa Thiết Kế Zonotope là convex set → Collision check hiệu quả bằng SAT Luôn over-approximate reachable set → Đảm bảo ZERO FALSE NEGATIVES (ASIL-D) Minkowski sum của 2 zonotope = zonotope → Đóng dưới phép tổng Minkowski (giữ nguyên cấu trúc) Linear transformation của zonotope = zonotope → Dễ dàng áp dụng ma trận động học A, B </table>
+7.2.2 Vehicle Dynamics Model – Ma Trận A và B (Giải pháp Gap #16, #17)
+State vector: x = [px, py, v, θ]^T. Control input: u = [a, δ]^T (gia tốc và góc lái). Phương trình: x(t+1) = A×x(t) + B×u(t) + w(t)
+
+Ma trận chuyển trạng thái A ∈ R^(4×4) – tuyến tính hóa qua Jacobian tại điểm vận hành k:
+
+<table> 1 0 Δt·cos(θ_k) -v_k·Δt·sin(θ_k) 0 1 Δt·sin(θ_k) v_k·Δt·cos(θ_k) 0 0 1 0 0 0 Δt·tan(δ_k)/L 1 </table>
+===== Page 13 =====
+
+Ma trận điều khiển B ∈ R^(4x2):
+
+<table> 0 0 0 0 Δt 0 0 v_k·Δt / (L·cos²(δ_k)) </table>
+L = chiều dài cơ sở xe (nạp qua thanh ghi cấu hình tĩnh). Hàm lượng giác được thực thi bằng CORDIC hoặc LUT-based Interpolation để đảm bảo tính tất định trên FPGA.
+
+7.2.3 Giới Hạn Động Học Hardcoded (Giải pháp Gap #16)
+<table> Tham Số Giá Trị Ý Nghĩa v_max (vận tốc giới hạn trên) 35 m/s (~126 km/h) Vượt ngưỡng → báo lỗi KINEMATIC_INVALID ngay max_yaw_rate (đổi hướng tối đa) 0.8 rad/s Ngăn góc đánh lái gấp gây lật xe Longitudinal acceleration ±8.0 m/s² Giới hạn gia tốc/phanh tối đa an toàn Δt Stage 1 / Stage 2 10ms / 5ms Khoảng thời gian mẫu của mỗi bước thời gian </table>
+7.2.4 Cấu Hình Zonotope Generator
+<table> Tham Số Stage 1 (Coarse) Stage 2 (Fine) Số generators (n) 16 32 Time step (Δt) 10 ms 5 ms Time horizon 5 giây (50 steps) 5 giây (100 steps) Output per step 1 zonotope = center(2xF32) + 16 gen(2xF32 each) 1 zonotope = center + 32 generators Total storage 6,800 bytes ≈ 7KB 26,400 bytes ≈ 26KB Precision float32 (IEEE 754) float32 (IEEE 754) </table>
+7.2.5 Mã Hóa Zonotope 128-bit (Giải pháp Gap #4) – Sau Order Reduction
+Thuật toán Giảm bậc Zonotope bảo toàn tâm và 2 vector sinh chính yếu, gom phần còn lại thành Remainder Generator. Encoding dùng Half-Precision Float16:
+
+<table> Bit Range Field Mô Tả [15:0] & [31:16] cx, cy Tọa độ tâm Zonotope trong không gian 2D (Float16) [47:32] & [63:48] g1x, g1y Generator sơ cấp – độ bất định dọc theo hướng di chuyển chính (Float16) </table>
+===== Page 14 =====
+
+7.3 Sub-Module 3: ADMM Solver
+7.3.1 Vai Trò & Cách Hoạt Động
+ADMM Solver chạy SONG SONG với Zonotope Unit (tiết kiệm 2-3ms so với tuần tự). Kết quả ADMM dùng để confirm/refine collision check từ kết quả hình học Zonotope.
+
+7.3.2 Thiết Lập Bài Toán ADMM (Giải pháp Gap #19)
+Bài toán tránh va chạm được chuyển hóa thành Convex Programming: min f(x) + g(z) s.t. Ax + Bz = c
+
+<table> Thành Phần Định Nghĩa Biến x Quỹ đạo động học của xe tự hành Biến z (slack) Khoảng cách tối thiểu từ điểm kiểm tra của xe đến bề mặt vật cản Hàm f(x) f(x) = 0 (HMAO chỉ kiểm chứng, không tạo quỹ đạo mới) Hàm g(z) - barrier g(z) = +∞ nếu z < d_safe (vi phạm) | g(z) = 0 nếu z ≥ d_safe (an toàn) Ma trận ràng buộc A = I, B = -I, c = 0 → z phải phản ánh chính xác vị trí x chiếu trên không gian an toàn </table>
+7.3.3 Gỡ Cuộn Vòng Lặp (Giải pháp Gap #6, #9)
+Để đảm bảo ASIL-D (latency tĩnh), ADMM được unroll thành static pipeline chính xác 15 tầng. KHÔNG có feedback loop - dữ liệu chỉ chảy một chiều qua 15 stages.
+
+Các nghiên cứu tối ưu hoá quỹ đạo thời gian thực xác nhận: ADMM cho bài toán Feasibility Checking thường hội tụ tối ưu sau 10-15 vòng lặp. Chọn 15 iterations để đảm bảo margin.
+
+7.3.4 Tài Nguyên Phần Cứng ADMM (Giải pháp Gap #9)
+<table> Resource Giá Trị Ước Tính LUTs (15-stage unrolled) ~18,500 LUTs Flip-Flops ~12,000 FFs DSP48E2 blocks 60 bộ DSP48E2 Numerical precision Fixed-Point 16-bit Numerical tolerance vs MATLAB < 0.1% </table>
+7.4 Sub-Module 4: Collision Intersection Checker (Giải pháp Gap #18)
+===== Page 15 =====
+
+7.4.1 Thuật Toán SAT – Separating Axis Theorem
+HMAO ứng dụng phần cứng hóa Định lý Trục Tách Rời (SAT) thay vì GJK (vòng lặp không xác định). SAT: Hai vật thể lồi không giao nhau nếu tồn tại ít nhất một trục mà hình chiếu của chúng không trùng lặp.
+
+7.4.2 Pipeline SAT Phần Cứng
+<table> Bước Pipeline Đơn Vị Phần Cứng Chi Tiết 1. Axis Extraction Logic trích xuất Trích xuất pháp tuyến từ Polytope vật cản và generators từ Zonotope. ~6-8 trục kiểm tra cho 2D. 2. Center Projection DSP48E2 dot-product Dv = |(c - o_center) · v| — khoảng cách hình chiếu giữa tâm Zonotope và tâm vật cản lên trục v 3. Sum of Radii DSP48E2 accumulate Rz = Σ|gi · v| (Zonotope radius) + Ro (Polytope radius) 4. Separation Check + Early Exit Comparator + Early-Exit Nếu Dv > Rz + Ro → GRANT tức thì (mạch Early-Exit), hủy tính toán trục còn lại, tiết kiệm dynamic power </table>
+Tài nguyên Collision Checker SAT:
+
+<table> Resource Giá Trị LUTs ~5,400 LUTs DSP48E2 32 bộ DSP48 Số luồng DSP song song 8 luồng DSP đồng thời Latency xác minh 1 giao cắt 3-4 clock cycles </table>
+===== Page 16 =====
+
+8. SUB-MODULE 5: ADAPTIVE MARGIN CONTROLLER
+
+8.1 Kiến Trúc
+Mục đích: Điều chỉnh biên an toàn dựa trên sensor quality.
+Phương pháp: Hardware LUT (256-entry, 8-bit wide = 256 bytes LUTRAM) – không dùng floating point.
+
+8.2 Tính Trọng Số Chất Lượng
+weighted_score[15:0] = (gpsx77) + (camx77) + (fricx51) + (actx51)
+
+combined_quality[7:0] = weighted_score[15:8] // Trọng số: GPS 30%, Camera 30%, Friction 20%, Actuator 20%
+
+8.3 LUT Scale Factor Mapping
+<table> Quality Range Scale Factor Công Thức 200 – 255 (Cao) 0.6x – 1.0x (giảm biên) scale_lut[i] = 154 + (i-200)x2 100 – 199 (Trung bình) 1.0x – 1.4x (biên cơ sở) scale_lut[i] = 256 + (i-100)x1 0 – 99 (Thấp) 1.3x – 2.0x (tăng biên) scale_lut[i] = 332 + (ix2) </table>
+8.4 Tính Toán Output Margin
+<table> Margin Base Value (Q8.8) Giải Thích BASE_LATERAL 0x0180 = 1.5m 384/256 = 1.5m BASE_LONGITUDINAL 0x0200 = 2.0m 512/256 = 2.0m BASE_TIME 0x0080 = 0.5s 128/256 = 0.5s </table>
+Adaptive computation: lateral_margin = (BASE_LATERAL × scale_lut[quality]) >> 8
+
+8.5 Hardware Clamps (Giải pháp Gap #7)
+<table> Tham Số Giá Trị Lý Do MIN_LATERAL_MARGIN 0.5m (0x0080) Sai số định vị GPS lý tưởng + dao động thân vỏ MAX_LATERAL_MARGIN 3.0m (0x0300) Kích thước 1 làn đường tiêu chuẩn – chống Freeze Robot Problem MIN_LONGITUDINAL_MARGIN 2.0m Không gian hãm phanh tối thiểu (bumper-to-bumper) MAX_LONGITUDINAL_MARGIN 8.0m d = v²/(2μg) khi μ suy giảm xuống 0.2 </table>
+Hardware clamps được cứng hóa – không thể bypass bằng software. Ngay cả khi camera_quality=0 và friction=0, MAX_LATERAL không vượt quá 3.0m.
+
+===== Page 17 =====
+
+9. CONTROL FSM - ĐẶC TẢ ĐẦY ĐỦ
+
+9.1 State Encoding
+<table> State Encoding [2:0] Mô Tả IDLE 3'b000 Chờ HMAO_START từ VexRiscv STAGE1_COMPUTE 3'b001 Zonotope 16g + ADMM đang chạy song song STAGE1_CHECK 3'b010 Collision check Stage 1 đang thực hiện STAGE2_COMPUTE 3'b011 Zonotope 32g đang chạy (conditional, only if POTENTIAL_COLLIDE) STAGE2_CHECK 3'b100 Collision check Stage 2 đang thực hiện OUTPUT_GRANT 3'b101 Assert GRANT, kích hoạt interrupt OUTPUT_VETO 3'b110 Assert VETO, kích hoạt interrupt ERROR 3'b111 Stuck state - yêu cầu system reset. VETO always asserted. </table>
+9.2 Transition Table
+<table> Current State Điều Kiện Next State IDLE hmao_start & preproc_valid STAGE1_COMPUTE IDLE hmao_start & !preproc_valid OUTPUT_VETO STAGE1_COMPUTE stage1_done & !crc_error STAGE1_CHECK STAGE1_COMPUTE numerical_error | crc_error ERROR STAGE1_COMPUTE watchdog_timeout ERROR STAGE1_CHECK no_collision_stage1 OUTPUT_GRANT (4ms path) STAGE1_CHECK potential_collision STAGE2_COMPUTE STAGE2_COMPUTE stage2_done STAGE2_CHECK STAGE2_COMPUTE numerical_error | watchdog_timeout ERROR STAGE2_CHECK no_collision_stage2 OUTPUT_GRANT (7ms path) STAGE2_CHECK collision_confirmed OUTPUT_VETO ERROR (stuck - system reset required) ERROR (VETO always) </table>
+9.3 Watchdog Timer
+<table> Tham Số Giá Trị Stage 1 timeout 4.5 ms = 1,800,000 cycles (10% margin over 4ms) Stage 2 timeout 3.5 ms = 1,400,000 cycles (17% margin over 3ms) Total hard deadline 10 ms (absolute) Nguồn clock Independent ring oscillator (không dùng system clock) Hành động khi timeout → STATE_ERROR → VETO asserted → FMU fault_watchdog </table>
+===== Page 18 =====
+
+9.4 FSM State Encoding Safety
+Bản thân FSM được mã hóa trạng thái với khoảng cách Hamming = 3. Lật 1 hoặc 2 bit bất kỳ trong thanh ghi trạng thái → chỉ tạo ra mã rác (Undefined state) → khối giám sát phát hiện và reset an toàn.
+
+===== Page 19 =====
+
+10. MEMORY ARCHITECTURE & LOCAL SRAM
+
+10.1 Bộ Nhớ Cục Bộ HMAO
+<table> Vùng Nhớ Kích Thước Loại & Ghi Chú Trajectory Input Buffer 64KB (1,400 used) Read-only SRAM, latency ~1 cycle (local) World Model Buffer (URAM) 8MB Read-only, latency ~1-2 cycles, replica trong SLR1 Zonotope Working Storage 3KB total BRAM: 1KB Stage1 (16 genx64B) + 2KB Stage2 (32 genx64B) Suspicious Obstacles Buffer (Gap #8) 1,024 Bytes (1KB) 16 phần tử x 64 bytes/obstacle = 1 BRAM tile duy nhất Adaptive Margin LUT 256 bytes LUTRAM: 256 entries x 8-bit ADMM Working Registers ~Flip-Flops 15-stage unrolled pipeline registers </table>
+Suspicious Obstacles Buffer (16 phần tử): Dựa trên nghiên cứu mật độ phương tiện tại ngã tư đô thị – xe tự hành khó tương tác đồng thời >16 vật thể đe dọa trong bán kính 50m.
+
+10.2 Quản Lý Vật Cản Đáng Ngờ & Priority Sorting (Giải pháp Gap #20)
+Khi Stage 1 phát hiện >16 vật cản đáng ngờ, Hardware Sorting Network tự động kích hoạt, ưu tiên theo chỉ số TTC (Time-To-Collision):
+
+TTC = Δx / v_rel (xấp xỉ bằng phép dịch bit trên phần cứng)
+
+• Vật cản có TTC nhỏ nhất (nguy cơ sớm nhất) → đẩy lên đỉnh hàng đợi
+• Vật cản có TTC lớn (xa, nguy cơ thấp) → loại bỏ khỏi danh sách kiểm tra
+• Đảm bảo HMAO không bỏ sót rủi ro chí mạng ngay cả khi bị quá tải bộ nhớ
+
+10.3 Memory Bandwidth Allocation
+<table> Domain HBM2 BW (256GB/s total) Chế Độ Safety Critical Override ASIL-D (HMAO + VexRiscv) 30% = 77 GB/s, latency ≤ 200ns 70% = 179 GB/s (BOOSTED, QM preempted) ASIL-B/C (Planning, Perception) 40% = 102 GB/s Bị preempt khi collision imminent QM (BOOM + DMA) 25% = 64 GB/s Bị preempt </table>
+===== Page 20 =====
+
+11. TÀI NGUYÊN PHẦN CỨNG & TIMING CONSTRAINTS
+
+11.1 Timing Constraints (Giải pháp Gap #10)
+<table> Tham Số Giá Trị / Ràng Buộc Clock hmao_clk 400 MHz (chu kỳ 2.500 ns) - LOCKED, BACKBONE routing Clock uncertainty 0.050 ns (bù đắp skew + jitter qua SLR-crossing registers) Setup Margin (WNS) > +0.150 ns (dương - bắt buộc) Hold Margin > +0.050 ns (để phòng fast-path errors) Logic Levels per FF pair Tối đa 12 tầng LUT (ngăn critical path tại phép nhân ma trận Zonotope) </table>
+11.2 Cycle Budget – Giải Phẫu Stage 1 = 4.0ms (Giải pháp Gap #11)
+Tại 400 MHz, ngân sách 4.0ms = chính xác 1,600,000 cycles:
+
+<table> Giai Đoạn Cycles Thời Gian Công Việc Chính Pre-processing 120,000 0.3 ms CRC32 1,400 bytes + CORDIC lượng giác + Kinematic bounds Zonotope Generation 600,000 1.5 ms 50 mốc thời gian x 12,000 cycles/mốc. MAC pipeline nhân ma trận A, B với 16 generators. Coarse Collision SAT 800,000 2.0 ms Quét 100 vật cản, chiếu SAT tốc độ cao, lập danh sách 16 đối tượng tình nghi Sync & FSM Write-back 80,000 0.2 ms Ghi kết quả vào SRAM cục bộ, chuẩn bị chuyển FSM TỔNG 1,600,000 4.0 ms ✓ Deterministic - không xê dịch </table>
+Nếu bất kỳ thao tác nào hoàn tất sớm hơn, bộ điều khiển FSM dùng Delay Pipelines và NOPs để nới rộng thời gian chờ, giữ tổng LUÔN là 1,600,000 cycles.
+
+11.3 Tổng Hợp Tài Nguyên Phần Cứng
+<table> Sub-Module Tài Nguyên Chi Tiết ADMM Solver (15-stage unrolled) 18,500 LUTs + 12,000 FFs + 60 DSP48E2 Fixed-Point 16-bit Collision Checker (SAT) 5,400 LUTs + 32 DSP48E2 8 luồng DSP song song Zonotope Control Logic 700 LUTs (Stage1 500 + Stage2 200) Shared 8 MACs Adaptive Margin LUT 256 bytes LUTRAM 256-entry x 8-bit </table>
+===== Page 21 =====
+
+<table> Sub-Module Tài Nguyên Chi Tiết FSM + Watchdog ~240 LUTs Hamming-3 state encoding Zonotope Storage 3 KB BRAM Stage1: 1KB, Stage2: 2KB TỔNG ƯỚC TÍNH < 25,000 LUTs + ~25K FFs + 92 DSP48E2 < 15% SLR1 total logic resources </table>
+===== Page 22 =====
+
+12. CLOCK DOMAIN & POWER DOMAIN
+
+12.1 Clock Domains
+<table> CDC Source Domain Dest Domain Phương Pháp Giải Quyết QM → ASIL-D: Uncertainty Vector (Gap #15) BOOM @ ~400 MHz QM HMAO @ 400 MHz ASIL-D Asynchronous Handshake + Parity Protocol (xem chi tiết Sec. 14) VexRiscv → HMAO_START VexRiscv @ 250 MHz HMAO @ 400 MHz Pulse synchronizer (single-cycle pulse, 2-FF chain) HMAO_COMPLETE → VexRiscv HMAO @ 400 MHz VexRiscv IRQ @ 250 MHz Edge detector + 2-FF synchronizer </table>
+12.2 Power Domain HMAO
+<table> Thuộc Tính Giá Trị Domain ASIL-D Fixed Operating Point Voltage 1.0V (LOCKED - không thay đổi) Frequency 400 MHz (LOCKED - không DVFS) Power typical / max 3W / 5W Status ALWAYS ON (ngay cả khi AI accelerators bị power-gated) Thermal constraint Không bị throttle. Nếu nhiệt > 95°C: Planning simplify, HMAO vẫn chạy full 400MHz. </table>
+===== Page 23 =====
+
+13. SAFETY MECHANISMS (ASIL-D)
+
+13.1 Tổng Quan Cơ Chế An Toàn ISO 26262
+<table> ID Cơ Chế Mô Tả & Hành Động D1 Watchdog Timer (Hardware) Independent ring oscillator. Timeout 4.5ms/3.5ms. Action: Force VETO + FMU fault. D2 CRC32 Trajectory Input Viết bởi VexRiscv trước HMAO_START. Xác minh bởi Pre-processor. Error → VETO ngay. D3 Formal Property Verification 12 properties: JasperGold + VC Formal. 8 fully proven, 3 bounded (k=100), 1 in progress. D4 Hardware Bounds on Margins MIN/MAX clamps hardwired. Hardware clamp logic (formally proven). Cannot bypass. D5 ECC/Parity Internal Paths (Gap #14) ECC SECDED trên SRAM/URAM. Byte-level Parity trên internal buses. Hamming-3 FSM encoding. D6 Zonotope Over-Approximation Mathematical guarantee: true_reachable_set ≤ zonotope_set. Offline proof + runtime assertion. D7 SMPU Memory Isolation Master ID 0x1A. READ-ONLY. AWVALID → DECERR + IRQ + MRM. </table>
+13.2 ECC/Parity Coverage (Giải pháp Gap #14)
+<table> Vùng Cơ Chế Hành Động Khi Lỗi SRAM + URAM (Trajectory + Zonotope WS) SECDED ECC Single-bit: tự sửa. Double-bit: kích hoạt fault_computation → VETO + OUTPUT_VETO. Internal Combinational Buses Byte-level Parity (9-bit/18-bit/36-bit) Parity mismatch tại receiver → đường tín hiệu khẩn cấp tới FSM ngay lập tức FSM State Register Hamming Distance = 3 1 hoặc 2 bit flip → Undefined state → giám sát phát hiện → safe reset </table>
+✓ Hardware Fault Metric (HFM) = SPFM + LFM > 99% (ASIL-D yêu cầu)
+
+13.3 SMPU Configuration (Giải pháp Gap #12)
+HMAO Master ID = 0x1A (decimal 26) – hardcoded trong RTL của giao diện AXI Read, không trùng với VexRiscv (0), BOOM (1), DMA (2).
+
+<table> Rule Vùng Địa Chỉ Permission Hành Động Vi Phạm Rule 3A 0x8030_0000 - 0x8030_FFFF (Trajectory Buffer) READ-ONLY cho 0x1A AWVALID → DECERR + IRQ + MRM Rule 3B 0x8040_0000 - 0x80BF_FFFF (World Model) READ-ONLY cho 0x1A AWVALID → DECERR + IRQ + MRM Rule 3C 0x8020_0000 - 0x802F_FFFF (Safety Data) READ-ONLY cho 0x1A AWVALID → DECERR + IRQ + MRM </table>
+===== Page 24 =====
+
+14. CDC MECHANISM – ASYNCHRONOUS HANDSHAKE WITH PARITY (Giải pháp Gap #15)
+
+14.1 Vấn Đề CDC
+BOOM CPU (QM) đẩy Uncertainty Vector 32-bit vào HMAO_MARGIN_CTRL. Nếu dùng 2-FF synchronizer đơn cho multi-bit bus → Metastability → HMAO đọc sai chất lượng cảm biến → biên an toàn sai.
+
+14.2 Giải Pháp: Asynchronous Handshake + Parity + Watchdog
+<table> Bước Hành Động Chi Tiết 1 Đóng gói dữ liệu (QM) BOOM ghi giá trị 32-bit (GPS_Q, CAM_Q, FRICTION, ACTUATOR) + 1 bit Parity vào Holding Register tại biên clock domain. 2 Kích hoạt REQ QM bật cờ tín hiệu REQ (1-bit → an toàn đi qua 2-FF synchronizer của ASIL-D). 3 Lấy mẫu & Đối chiếu (ASIL-D) Khi ASIL-D nhận REQ ổn định, đọc khóa chốt 33-bit, kiểm tra Parity. Nếu hợp lệ → ghi đè vào HMAO_MARGIN_CTRL. 4 Xác nhận ACK ASIL-D gửi ngược cờ ACK (qua 2-FF) về QM. QM hạ REQ → kết thúc chu kỳ. 5 Watchdog dự phòng Nếu không có REQ-ACK mới trong 200ms (BOOM bị Kernel Panic) → Watchdog override toàn bộ Uncertainty Vector về Worst-Case (GPS=0, CAM=0) → Margin mở rộng MAX → Emergency braking. </table>
+===== Page 25 =====
+
+15. FORMAL VERIFICATION PROPERTIES (FPV)
+
+15.1 Tool Setup
+<table> Thuộc Tính Giá Trị Tools Cadence JasperGold FPV + Synopsys VC Formal Effort 6 engineer-months Timeline Months 9-12 of development Status hiện tại 8 proven, 3 bounded (k=100), 1 in progress </table>
+15.2 Property Classes
+<table> ID Property Mô Tả Hình Thức P1.1 Zero False Negatives ∀ T, ∀ O: intersects(reachable_set(T), O) → HMAO_decision = VETO (sau ≤ MAX_CYCLES) P1.2 Safe Acceptance ∀ T: (∀ O: ¬intersects(...)) → HMAO_decision = GRANT P1.3 Zonotope Over-Approx. ∀ s, ∀ t: true_reachable_set(s,t) ≤ zonotope_set(s,t) (Proof offline + ABV) P2.1 Bounded Latency ≤ 10ms hmao_start |=> #[1:4_000_000] hmao_complete (MAX_CYCLES @ 400MHz) P2.2 Determinism (same_trajectory_input) |=> (same_latency_as_previous) P3.1 Margin Bounds (lateral_margin_m > MIN_LATERAL) && (lateral_margin_m <= MAX_LATERAL) – always P3.2 Margin Monotonicity (combined_quality_decreases) |=> (safety_margin_increases_or_equal) P3.3 Zero FN Adaptive (true_collision_scenario) |=> #[1:MAX_CYCLES] (hmao_decision == VETO) P4.1 Read-Only Memory (hmao_mem_request) |=> !(hmao_mem_write_en) – absolute always P4.2 QM Isolation (qm_traffic_heavy) |=> (hmao_latency_unchanged) </table>
+===== Page 26 =====
+
+16. TESTBENCH & VERIFICATION PLAN
+
+16.1 Unit Test Coverage Requirements
+<table> Module Tests Coverage Target Key Metric Zonotope Generator 500 directed + 10K random 100% code, 98% toggle, 95% FSM — ADMM Solver 1,000 cases (varied constraints) 100% code < 0.1% error vs MATLAB Reachability Engine 2,000 scenarios (straight/curve/emergency) 100% code FNR = 0%, FPR < 5% Adaptive Margin Ctrl 100 quality combinations All LUT entries hit Bounds always respected Full HMAO Pipeline 10,000 end-to-end scenarios Against offline checker Zero false negatives </table>
+16.2 HIL Testing - Benchmark PERF HMAO VERIFICATION
+<table> Thuộc Tính Giá Trị Input Trajectory (50 waypoints) + World Model ~100 obstacles + 20 lanes Số lượng test trajectories 100 trajectories per benchmark run Expected latency 4.96 ± 0.5 ms (per-verification) Expected GRANT rate ~70-90% trajectories Expected VETO rate ~10-30% trajectories Pass criteria – Latency < 10 ms absolute (0 violations) Pass criteria – Correctness 100% match vs offline checker Pass criteria – FNR 0.00% (mandatory, zero exceptions) Pass criteria – FPR < 6% (post multi-stage optimization target) </table>
+===== Page 27 =====
+
+17. RTL CODING RULES (ASIL-D COMPLIANCE)
+
+17.1 Determinism Rules
+• REQUIRED: Blocking assignments trong combinational logic
+• REQUIRED: Non-blocking assignments trong sequential logic
+• REQUIRED: Tất cả signals phải có giá trị default (không uninitialized)
+• REQUIRED: Tất cả case statements phải có default branch
+• ILLEGAL: Gated clocks (clock gating bị cấm trong ASIL-D)
+• ILLEGAL: Combinational feedback loops
+• PROHIBITED: Latches (phải là FF-based)
+
+17.2 Latency Predictability Rules
+• REQUIRED: Tất cả paths fully pipelined – không có variable-depth loops
+• REQUIRED: Không có conditional logic trên critical timing path
+• REQUIRED: Registered outputs tại mỗi pipeline stage
+• REQUIRED: Document latency/cycle count cho mỗi block (comment trong RTL)
+• REQUIRED: Fixed pipeline depth – ADMM MUST be unrolled (15 stages)
+
+17.3 Resource Bounds & Error Detection
+• REQUIRED: Không có unbounded counters (max width phải defined)
+• REQUIRED: Tất cả arrays fixed-size tại elaboration
+• REQUIRED: Bounded FIFO depths (power-of-2)
+• REQUIRED: Parity bits trên critical data buses
+• REQUIRED: CRC trên transmitted/received packets
+• REQUIRED: Watchdog timers trên tất cả state machines
+• REQUIRED: Duplicate comparison logic cho critical outputs
+• REQUIRED: Formal assertions tại key decision points
+• REQUIRED: Traceability to requirements (RTL2Req)
+
+17.4 Vivado Constraints
+set_property DONT_TOUCH true [get_cells hmao_engine_inst]
+
+add_cells_to_ptblock [get_cells hmao_engine_inst] ptblock_safety_cluster
+
+Co-located với VexRiscv DCLS trong SLR1
+===== Page 28 =====
+
+18. DỮ LIỆU HIỆU SUẤT TỔNG HỢP
+
+18.1 False Positive Rate Evolution
+<table> Phase Tối Ưu Overall FPR Cách Tiếp Cận Baseline (single-stage, fixed margin) 10.6% 16 generators, fixed margin After Multi-stage 5.8% 16+32 generators, fixed margin After Adaptive Margin 2.3% 16+32 generators, adaptive margin Production Target < 2% — </table>
+18.2 FPR theo Kịch Bản (Adaptive Margin Final)
+<table> Kịch Bản FPR Cũ FPR Mới Cải Thiện Highway (dry, clear) 6.2% 1.8% -71% Urban (dry, daytime) 7.3% 2.5% -66% Intersection (clear) 7.3% 2.8% -62% Rain conditions 8.5% 6.2% -27% Night + fog 9.1% 7.8% -14% WEIGHTED AVERAGE 5.8% 2.3% -60% </table>
+✓ False Negative Rate: 0.00% trong TẤT CẢ điều kiện – Bất Khả Vi Phạm (ASIL-D Mandatory).
+
+18.3 E2E Latency theo Thermal Mode
+<table> Stage Normal (< 85°C) Warning (85-95°C) Critical (>95°C) Sensor Capture 3.0 ms 3.0 ms 3.0 ms Perception 19.4 ms 24 ms (throttled) 19.4 ms Planning 67.0 ms 82 ms (throttled) 40-50 ms (simplified) ★ HMAO ★ avg 4.3ms / max 7.0ms avg 4.3ms / max 7.0ms avg 3.4ms / max 7.0ms TOTAL (worst) 97 ms ✓ 115 ms X → Mode 93 ms ✓ </table>
+HMAO latency KHÔNG THAY ĐỔI theo thermal mode. HMAO luôn @ 400MHz, 1.0V, trong mọi điều kiện – đây là bảo chứng vàng cho ASIL-D.
+
+===== Page 29 =====
+
+19. INTERFACE VỚI HỆ THỐNG
+
+19.1 Interface với Planning Accelerator (Qua DMA)
+KHÔNG có direct interface. Planning không được direct-write vào trajectory buffer.
+
+<table> Bước Mô Tả 1 Planning Accelerator hoàn thành → DMA descriptor tạo bởi BOOM 2 VexRiscv ký DMA descriptor (HMAC-SHA256) 3 IOMMU xác thực signature 4 DMA copy trajectory vào 0x8030_0000 (64KB buffer) 5 VexRiscv viết CRC32 vào trailer (0x0568) 6 VexRiscv pulse HMAO_START tại 0xA410_0004 </table>
+19.2 VexRiscv WCET sau HMAO COMPLETE
+<table> # Thao Tác Cycles @250MHz Latency 1 Read HMAO status register 10 cycles 40 ns 2 Validate status CRC 25 cycles 100 ns 3 Read trajectory buffer (64KB) 80 cycles 320 ns 4 Verify buffer integrity (SMPU) 15 cycles 60 ns 5 Validate trajectory format 100 cycles 400 ns 6 Read HMAO decision result 20 cycles 80 ns 7 Cross-check with safety policy 50 cycles 200 ns 8 Make final GRANT/VETO decision 30 cycles 120 ns 9 Write to CAN controller 40 cycles 160 ns 10 Log to safety log 35 cycles 140 ns TOTAL WCET — 405 cycles 1.62 µs </table>

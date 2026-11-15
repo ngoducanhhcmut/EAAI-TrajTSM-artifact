@@ -1,0 +1,10 @@
+# 07/10/2026 — chay lap 3 lan o 214,3 MHz (div 7): ca 3 lan DAT.
+# ----- NGUYEN VAN (khong chinh sua) -----
+=== TONG KET QUET PL0 ===
+ 214.3 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 28.13 ms | TSM 8.00 .. 8.00 ms
+ 214.3 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 28.13 ms | TSM 8.00 .. 8.00 ms
+ 214.3 MHz: DAT | WP ('35/35', '21') | TSM[A] 35/35 | [B] 15/15 | [C] 3/3 | Traj 28.13 ms | TSM 8.00 .. 8.00 ms
+tra PL0 ve 100 MHz ...
+  xsdb: PL0_REF_CTRL = 0x01010F00 -> PL0 = 100.0 MHz
+  xsdb: Traj STATUS = 0x00000500
+  xsdb: R5_RUNNING

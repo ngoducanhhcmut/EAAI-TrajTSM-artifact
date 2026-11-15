@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "scope": "synthetic parser tests; not RTL measurements",
+  "tests": {
+    "synthetic_complete": true,
+    "missing_log": true,
+    "missing_marker": true,
+    "failed_exit_marker": true,
+    "duplicate_job": true,
+    "missing_job": true,
+    "failure_diagnostic": true,
+    "missing_completion": true,
+    "wrong_batch": true,
+    "deadline_violation": true,
+    "input_hash_mismatch": true
+  }
+}

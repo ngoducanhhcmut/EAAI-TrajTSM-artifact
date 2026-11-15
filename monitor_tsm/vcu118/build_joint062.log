@@ -1,0 +1,345 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Nov 12 10:21:29 2026
+# Process ID: 21392
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118
+# Command line: vivado.exe -mode batch -notrace -nojournal -log build_joint062.log -source build_vcu118_joint.tcl
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/build_joint062.log
+# Journal file: 
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source build_vcu118_joint.tcl -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062'
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 483.305 ; gain = 180.188
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+Wrote  : <C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\vcu118\prj_joint_062\vcu118_joint.srcs\sources_1\bd\system\system.bd> 
+INFO: [Device 21-403] Loading part xcvu9p-flga2104-2L-e
+create_bd_cell: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2129.379 ; gain = 15.344
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/Reg'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/IO'
+create_bd_cell: Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2198.984 ; gain = 1683.168
+INFO: [BoardInterface 100-3] current_bd_design system
+INFO: [BoardInterface 100-12] set_property CONFIG.C0_DDR4_BOARD_INTERFACE ddr4_sdram_c1_062 [get_bd_cells -quiet /ddr4_0]
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/Reg'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/IO'
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddr4_rtl:1.0 ddr4_sdram_c1_062
+INFO: [BoardInterface 100-109] connect_bd_intf_net /ddr4_sdram_c1_062 /ddr4_0/C0_DDR4
+apply_board_connection: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2200.824 ; gain = 1.840
+::xilinx::board::get_board_used_interfaces: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2255.547 ; gain = 54.723
+INFO: [board_rule 100-100] set_property CONFIG.C0_CLOCK_BOARD_INTERFACE default_250mhz_clk1 [get_bd_cells /ddr4_0]
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/Reg'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/IO'
+INFO: [BoardRule 102-8] create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 default_250mhz_clk1
+INFO: [BoardRule 102-4] set_property CONFIG.FREQ_HZ 100000000 /default_250mhz_clk1
+INFO: [BoardRule 102-9] connect_bd_intf_net /default_250mhz_clk1 /ddr4_0/C0_SYS_CLK
+INFO: [BoardRule 102-16] set_property CONFIG.FREQ_HZ 250000000 /default_250mhz_clk1
+apply_bd_automation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2306.539 ; gain = 105.715
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /ddr4_0]
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_ilmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /second_dlmb_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/Reg'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /iomodule_0/SLMB/IO'
+INFO: [BoardRule 102-10] create_bd_port -dir I reset -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_HIGH /reset
+INFO: [BoardRule 102-15] connect_bd_net /reset /ddr4_0/sys_rst
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_HIGH /reset
+apply_bd_automation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2306.539 ; gain = 0.000
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces /microblaze_0'
+INFO: [BoardInterface 100-3] current_bd_design system
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /uart_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.UARTLITE_BOARD_INTERFACE rs232_uart [get_bd_cells -quiet /uart_0]
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 rs232_uart
+INFO: [BoardInterface 100-109] connect_bd_intf_net /rs232_uart /uart_0/UART
+INFO: [BoardInterface 100-3] current_bd_design system
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /iic_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.IIC_BOARD_INTERFACE iic_main [get_bd_cells -quiet /iic_0]
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 iic_main
+INFO: [BoardInterface 100-109] connect_bd_intf_net /iic_main /iic_0/IIC
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_tx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis_rx' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_csr' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi_shim' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis_tx'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'hmao_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'hmao_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'hmao_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'hmao_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIL' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIL' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXI' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXI' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'done_irq' of definition 'xilinx.com:signal:interrupt:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'done_irq' of definition 'xilinx.com:signal:interrupt:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIL'.
+INFO: [IP_Flow 19-4728] Bus Interface 'hmao_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'hmao_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'hmao_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIL': Added interface parameter 'PROTOCOL' with value 'AXI4LITE'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIL': Added interface parameter 'ADDR_WIDTH' with value '12'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIL': Added interface parameter 'DATA_WIDTH' with value '32'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIL': Added interface parameter 'READ_WRITE_MODE' with value 'READ_WRITE'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'PROTOCOL' with value 'AXI4'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'ADDR_WIDTH' with value '32'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'DATA_WIDTH' with value '128'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'MAX_BURST_LENGTH' with value '256'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'NUM_READ_OUTSTANDING' with value '4'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'NUM_WRITE_OUTSTANDING' with value '1'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'SUPPORTS_NARROW_BURST' with value '0'.
+INFO: [IP_Flow 19-4728] Bus Interface 'M_AXI': Added interface parameter 'READ_WRITE_MODE' with value 'READ_ONLY'.
+INFO: [IP_Flow 19-4728] Bus Interface 'done_irq': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'done_irq': Added interface parameter 'PortWidth' with value '1'.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'hmao_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'hmao_clk' has no FREQ_HZ parameter.
+Slave segment '/gpio_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x4000_0000 [ 64K ]>.
+Slave segment '/uart_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x4060_0000 [ 64K ]>.
+Slave segment '/iic_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x4080_0000 [ 64K ]>.
+Slave segment '/timer_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x41C0_0000 [ 64K ]>.
+Slave segment '/plan_0/S_AXIL/reg0' is being assigned into address space '/microblaze_0/Data' at <0x44A0_0000 [ 4K ]>.
+Slave segment '/tsmx_0/s_axi_shim/reg0' is being assigned into address space '/microblaze_0/Data' at <0x44A1_0000 [ 4K ]>.
+Slave segment '/tsmx_0/s_axi_csr/reg0' is being assigned into address space '/microblaze_0/Data' at <0x44A2_0000 [ 64K ]>.
+Slave segment '/axis_fifo/S_AXI/Mem0' is being assigned into address space '/microblaze_0/Data' at <0x44A3_0000 [ 64K ]>.
+Slave segment '/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK' is being assigned into address space '/microblaze_0/Data' at <0x8000_0000 [ 2G ]>.
+Slave segment '/gpio_0/S_AXI/Reg' is being assigned into address space '/mdm_1/Data' at <0x4000_0000 [ 64K ]>.
+Slave segment '/uart_0/S_AXI/Reg' is being assigned into address space '/mdm_1/Data' at <0x4060_0000 [ 64K ]>.
+Slave segment '/iic_0/S_AXI/Reg' is being assigned into address space '/mdm_1/Data' at <0x4080_0000 [ 64K ]>.
+Slave segment '/timer_0/S_AXI/Reg' is being assigned into address space '/mdm_1/Data' at <0x41C0_0000 [ 64K ]>.
+Slave segment '/plan_0/S_AXIL/reg0' is being assigned into address space '/mdm_1/Data' at <0x44A0_0000 [ 4K ]>.
+Slave segment '/tsmx_0/s_axi_shim/reg0' is being assigned into address space '/mdm_1/Data' at <0x44A1_0000 [ 4K ]>.
+Slave segment '/tsmx_0/s_axi_csr/reg0' is being assigned into address space '/mdm_1/Data' at <0x44A2_0000 [ 64K ]>.
+Slave segment '/axis_fifo/S_AXI/Mem0' is being assigned into address space '/mdm_1/Data' at <0x44A3_0000 [ 64K ]>.
+Slave segment '/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK' is being assigned into address space '/mdm_1/Data' at <0x8000_0000 [ 2G ]>.
+Slave segment '/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK' is being assigned into address space '/plan_0/M_AXI' at <0x0000_0000 [ 2G ]>.
+###ADDR Mem0  0x00001000
+###ADDR C0_DDR4_ADDRESS_BLOCK  0x80000000
+###ADDR Reg  0x00001000
+###ADDR Reg  0x00001000
+###ADDR SEG_gpio_0_Reg 0x40000000 0x00010000
+###ADDR SEG_uart_0_Reg 0x40600000 0x00010000
+###ADDR SEG_iic_0_Reg 0x40800000 0x00010000
+###ADDR SEG_timer_0_Reg 0x41C00000 0x00010000
+###ADDR SEG_plan_0_reg0 0x44A00000 0x00001000
+###ADDR SEG_tsmx_0_reg0 0x44A10000 0x00001000
+###ADDR SEG_tsmx_0_reg0_1 0x44A20000 0x00010000
+###ADDR SEG_axis_fifo_Mem0 0x44A30000 0x00010000
+###ADDR SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK 0x80000000 0x80000000
+###ADDR SEG_dlmb_bram_if_cntlr_Mem 0x00000000 0x00020000
+###ADDR SEG_gpio_0_Reg 0x40000000 0x00010000
+###ADDR SEG_uart_0_Reg 0x40600000 0x00010000
+###ADDR SEG_iic_0_Reg 0x40800000 0x00010000
+###ADDR SEG_timer_0_Reg 0x41C00000 0x00010000
+###ADDR SEG_plan_0_reg0 0x44A00000 0x00001000
+###ADDR SEG_tsmx_0_reg0 0x44A10000 0x00001000
+###ADDR SEG_tsmx_0_reg0_1 0x44A20000 0x00010000
+###ADDR SEG_axis_fifo_Mem0 0x44A30000 0x00010000
+###ADDR SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK 0x80000000 0x80000000
+###ADDR SEG_ilmb_bram_if_cntlr_Mem 0x00000000 0x00020000
+###ADDR Mem  0x00002000
+###ADDR Mem  0x00002000
+###ADDR SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK 0x00000000 0x80000000
+###ADDR reg0  0x00001000
+###ADDR Reg  0x00000200
+###ADDR reg0  0x00010000
+###ADDR reg0  0x00001000
+###ADDR Reg  0x00001000
+###FREQ clk_out1=100000000
+###FREQ clk_out2=150000000
+###FREQ clk_out3=300000000
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/mdm_1/Data' to master interface '/mdm_1/LMB_0'. Please either complete or remove this path to resolve.
+CRITICAL WARNING: [BD 41-1354] Master segment '/plan_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK' at address <0x0000_0000 [ 2G ]> overlaps with master segment '/microblaze_0/Data/SEG_dlmb_bram_if_cntlr_Mem' at address <0x0000_0000 [ 128K ]> in the same network.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /rst_100'
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 2G ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_ddr/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4080_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 4K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 4K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A2_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A3_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/sc_mb/S00_AXI' to master interface '/sc_mb/M08_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 2G ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_ddr/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4080_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 4K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 4K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A2_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A3_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/sc_mb/S01_AXI' to master interface '/sc_mb/M08_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_sc_mb_0: SmartConnect system_sc_mb_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2443.633 ; gain = 61.734
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2468.496 ; gain = 24.863
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 2G ]> from slave interface '/sc_ddr/S00_AXI' to master interface '/sc_ddr/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 2G ]> from slave interface '/sc_ddr/S01_AXI' to master interface '/sc_ddr/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_sc_ddr_0: SmartConnect system_sc_ddr_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2498.789 ; gain = 19.328
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+validate_bd_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2529.625 ; gain = 187.953
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Wrote  : <C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\vcu118\prj_joint_062\vcu118_joint.srcs\sources_1\bd\system\system.bd> 
+save_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2529.625 ; gain = 0.000
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/sc_ddr/S01_AXI_arlock'(1) to pin: '/plan_0/m_axi_arlock'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/sc_ddr/S01_AXI_arlock'(1) to pin: '/plan_0/m_axi_arlock'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2543.613 ; gain = 0.000
+###BD_OK
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/sc_ddr/S01_AXI_arlock'(1) to pin: '/plan_0/m_axi_arlock'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/sc_ddr/S01_AXI_arlock'(1) to pin: '/plan_0/m_axi_arlock'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/hdl/system_wrapper.v
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Exporting to file c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/hw_handoff/system_ddr4_0_0_microblaze_mcs.hwh
+Generated Hardware Definition File c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/synth/system_ddr4_0_0_microblaze_mcs.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr4_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_100 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_150 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_300 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ddr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr_rst_n .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_uart_0_0/system_uart_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block iic_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_timer_0_0/system_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block tsmx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block plan_0 .
+Exporting to file c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_sc_mb_0/bd_0/hw_handoff/system_sc_mb_0.hwh
+Generated Hardware Definition File c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_sc_mb_0/bd_0/synth/system_sc_mb_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sc_mb .
+Exporting to file c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_sc_ddr_0/bd_0/hw_handoff/system_sc_ddr_0.hwh
+Generated Hardware Definition File c:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/ip/system_sc_ddr_0/bd_0/synth/system_sc_ddr_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sc_ddr .
+Exporting to file C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Hardware Definition File C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.gen/sources_1/bd/system/synth/system.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_axis_fifo_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_clk_wiz_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_ddr4_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_ddr_rst_n_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_dlmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_gpio_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_iic_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_ilmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_lmb_bram_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_mdm_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_microblaze_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_plan_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_rst_100_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_rst_150_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_rst_300_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_rst_ddr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_sc_ddr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_sc_mb_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_timer_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_tsmx_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP system_uart_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_axis_fifo_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_clk_wiz_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_timer_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_tsmx_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_uart_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_sc_mb_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_ddr4_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_ddr_rst_n_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_dlmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_gpio_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_iic_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_ilmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_lmb_bram_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_mdm_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_microblaze_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_plan_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_rst_100_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_rst_150_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_rst_300_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_rst_ddr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_sc_ddr_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Nov 12 10:25:38 2026] Launched system_sc_ddr_0_synth_1, system_ddr4_0_0_synth_1, system_clk_wiz_0_0_synth_1, system_rst_150_0_synth_1, system_rst_100_0_synth_1, system_rst_300_0_synth_1, system_rst_ddr_0_synth_1, system_uart_0_0_synth_1, system_timer_0_0_synth_1, system_axis_fifo_0_synth_1, system_tsmx_0_0_synth_1, system_plan_0_0_synth_1, system_sc_mb_0_synth_1, system_mdm_1_0_synth_1, system_microblaze_0_0_synth_1, system_gpio_0_0_synth_1, system_iic_0_0_synth_1, system_dlmb_v10_0_synth_1, system_dlmb_bram_if_cntlr_0_synth_1, system_lmb_bram_0_synth_1, system_ilmb_v10_0_synth_1, system_ddr_rst_n_0_synth_1, system_ilmb_bram_if_cntlr_0_synth_1...
+Run output will be captured here:
+system_sc_ddr_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_sc_ddr_0_synth_1/runme.log
+system_ddr4_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_ddr4_0_0_synth_1/runme.log
+system_clk_wiz_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_clk_wiz_0_0_synth_1/runme.log
+system_rst_150_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_rst_150_0_synth_1/runme.log
+system_rst_100_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_rst_100_0_synth_1/runme.log
+system_rst_300_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_rst_300_0_synth_1/runme.log
+system_rst_ddr_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_rst_ddr_0_synth_1/runme.log
+system_uart_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_uart_0_0_synth_1/runme.log
+system_timer_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_timer_0_0_synth_1/runme.log
+system_axis_fifo_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_axis_fifo_0_synth_1/runme.log
+system_tsmx_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_tsmx_0_0_synth_1/runme.log
+system_plan_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_plan_0_0_synth_1/runme.log
+system_sc_mb_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_sc_mb_0_synth_1/runme.log
+system_mdm_1_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_mdm_1_0_synth_1/runme.log
+system_microblaze_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_microblaze_0_0_synth_1/runme.log
+system_gpio_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_gpio_0_0_synth_1/runme.log
+system_iic_0_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_iic_0_0_synth_1/runme.log
+system_dlmb_v10_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_dlmb_v10_0_synth_1/runme.log
+system_dlmb_bram_if_cntlr_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_dlmb_bram_if_cntlr_0_synth_1/runme.log
+system_lmb_bram_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_lmb_bram_0_synth_1/runme.log
+system_ilmb_v10_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_ilmb_v10_0_synth_1/runme.log
+system_ddr_rst_n_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_ddr_rst_n_0_synth_1/runme.log
+system_ilmb_bram_if_cntlr_0_synth_1: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/system_ilmb_bram_if_cntlr_0_synth_1/runme.log
+[Thu Nov 12 10:25:38 2026] Launched synth_1...
+Run output will be captured here: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/vcu118/prj_joint_062/vcu118_joint.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2666.891 ; gain = 123.277
+[Thu Nov 12 10:25:38 2026] Waiting for synth_1 to finish...

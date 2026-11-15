@@ -1,0 +1,4 @@
+COMMAND: vvp -i C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\mutants\fsm_twohot\mutant.vvp +FILE=smoke.mem +LIMIT=2
+ASSERT_FAIL 18 ONEHOT_FSM_MODE:spec5.3/6.1/10.1/15 job=0 cycle=8
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_m_tsmx_top.sv:168: assertion failure
+       Time: 75000  Scope: tb_m_tsmx_top.ck

@@ -1,0 +1,46 @@
+SBY 13:03:03 [wd] Removing directory '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd'.
+SBY 13:03:03 [wd] Copy '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/stubs.sv' to '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd/src/stubs.sv'.
+SBY 13:03:03 [wd] Copy '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/engine_fv.sv' to '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/proof/watchdog/wd/src/engine_fv.sv'.
+SBY 13:03:03 [wd] engine_0: smtbmc yices
+SBY 13:03:04 [wd] base: starting process "cd wd/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:25:50 [wd] base: finished (returncode=0)
+SBY 13:25:51 [wd] prep: starting process "cd wd/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:37:09 [wd] prep: finished (returncode=0)
+SBY 13:37:09 [wd] smt2: starting process "cd wd/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:37:14 [wd] smt2: finished (returncode=0)
+SBY 13:37:14 [wd] engine_0.basecase: starting process "cd wd; yosys-smtbmc -s yices --presat --unroll --noprogress -t 4  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:37:14 [wd] engine_0.induction: starting process "cd wd; yosys-smtbmc -s yices --presat --unroll -i --noprogress -t 4  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 13:37:14 [wd] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 13:37:14 [wd] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 13:37:21 [wd] engine_0.induction: ##   0:00:06  Trying induction in step 4..
+SBY 13:37:21 [wd] engine_0.basecase: ##   0:00:06  Checking assumptions in step 0..
+SBY 13:37:21 [wd] engine_0.basecase: ##   0:00:06  Checking assertions in step 0..
+SBY 13:37:25 [wd] engine_0.induction: ##   0:00:10  Trying induction in step 3..
+SBY 13:37:26 [wd] engine_0.basecase: ##   0:00:11  Checking assumptions in step 1..
+SBY 13:37:26 [wd] engine_0.basecase: ##   0:00:11  Checking assertions in step 1..
+SBY 13:37:30 [wd] engine_0.basecase: ##   0:00:15  Checking assumptions in step 2..
+SBY 13:37:30 [wd] engine_0.basecase: ##   0:00:15  Checking assertions in step 2..
+SBY 13:37:30 [wd] engine_0.induction: ##   0:00:15  Trying induction in step 2..
+SBY 13:37:33 [wd] engine_0.basecase: ##   0:00:19  Checking assumptions in step 3..
+SBY 13:37:34 [wd] engine_0.basecase: ##   0:00:19  Checking assertions in step 3..
+SBY 13:37:34 [wd] engine_0.basecase: ##   0:00:19  Status: passed
+SBY 13:37:34 [wd] engine_0.basecase: finished (returncode=0)
+SBY 13:37:34 [wd] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 13:37:35 [wd] engine_0.induction: ##   0:00:20  Trying induction in step 1..
+SBY 13:37:40 [wd] engine_0.induction: ##   0:00:25  Trying induction in step 0..
+SBY 13:37:43 [wd] engine_0.induction: ##   0:00:28  Temporal induction failed!
+SBY 13:37:43 [wd] engine_0.induction: ##   0:00:28  Assert failed in m_tsmx_engine: W2
+SBY 13:37:43 [wd] engine_0.induction: ##   0:00:28  Writing trace to VCD file: engine_0/trace_induct.vcd
+SBY 13:37:46 [wd] engine_0.induction: ##   0:00:31  Writing trace to Verilog testbench: engine_0/trace_induct_tb.v
+SBY 13:37:46 [wd] engine_0.induction: ##   0:00:32  Writing trace to constraints file: engine_0/trace_induct.smtc
+SBY 13:37:46 [wd] engine_0.induction: ##   0:00:32  Writing trace to Yosys witness file: engine_0/trace_induct.yw
+SBY 13:37:49 [wd] engine_0.induction: ##   0:00:34  Status: failed
+SBY 13:37:49 [wd] engine_0.induction: finished (returncode=1)
+SBY 13:37:49 [wd] engine_0.induction: Status returned by engine for induction: FAIL
+SBY 13:37:49 [wd] summary: Elapsed clock time [H:MM:SS (secs)]: 0:34:15 (2055)
+SBY 13:37:49 [wd] summary: Elapsed process time [H:MM:SS (secs)]: 0:34:50 (2090)
+SBY 13:37:49 [wd] summary: engine_0 (smtbmc yices) returned pass for basecase
+SBY 13:37:49 [wd] summary: engine_0 (smtbmc yices) returned FAIL for induction
+SBY 13:37:49 [wd] summary: counterexample trace [induction]: wd/engine_0/trace_induct.vcd
+SBY 13:37:49 [wd] summary:   failed assertion m_tsmx_engine.W2 at engine_fv.sv:1570.5-1571.79
+SBY 13:37:49 [wd] DONE (UNKNOWN, rc=4)

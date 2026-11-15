@@ -1,0 +1,10 @@
+{
+  "returncode": null,
+  "wall_seconds": 1800.0393859000178,
+  "wall_timeout": true,
+  "identity": "5d7843662b19af25d025fc8cb9e0c11ac45ab193a47e55b582f647fcae342ca8",
+  "observation": {
+    "error": "missing/duplicate RESULT"
+  },
+  "class": "UNRESOLVED"
+}

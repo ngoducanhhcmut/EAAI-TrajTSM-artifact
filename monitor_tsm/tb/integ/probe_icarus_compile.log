@@ -1,0 +1,17 @@
+COMMAND: iverilog -g2012 -s tb_probe_csr -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\probe_csr.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_probe_csr.sv
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv:320: sorry: constant selects in always_* processes are not currently supported (all bits will be included).

@@ -1,0 +1,105 @@
+{
+  "status": "FAIL: normal-completion WCET unresolved; reviewed envelope exceeds target",
+  "K_max": 93,
+  "P": 2,
+  "G": 2,
+  "M": 32,
+  "candidates": 16,
+  "normal_completion_bound": null,
+  "reviewed_units_envelope": 8701321,
+  "reviewed_terms": {
+    "fallback_and_tail": 3632388,
+    "late_hash_retry": 1816194,
+    "duplicate_lanes": 454052,
+    "nominal": 82876,
+    "bridge_geom": 3244,
+    "math": 2709149,
+    "ingress": 6,
+    "cert": 20,
+    "splice": 3234,
+    "sel": 6,
+    "engine_glue": 152
+  },
+  "response_bound": 1875000,
+  "response_ms_100MHz": 18.75,
+  "response_ms_187_5MHz": 10.0,
+  "arith": {
+    "0": 4,
+    "1": 87,
+    "2": 184,
+    "3": 202,
+    "4": 2803,
+    "5": 4,
+    "6": 215,
+    "7": 379,
+    "8": 4
+  },
+  "programs": {
+    "RAMP": {
+      "entries": 39,
+      "mul": 24,
+      "cycles": 200
+    },
+    "VN": {
+      "entries": 22,
+      "mul": 11,
+      "cycles": 99
+    },
+    "DISP": {
+      "entries": 24,
+      "mul": 11,
+      "cycles": 105
+    },
+    "DINT": {
+      "entries": 22,
+      "mul": 9,
+      "cycles": 91
+    },
+    "PT23": {
+      "entries": 4,
+      "mul": 2,
+      "cycles": 20
+    },
+    "PTX": {
+      "entries": 19,
+      "mul": 8,
+      "cycles": 80
+    }
+  },
+  "su": 46,
+  "inflation": 27,
+  "health_leaf_conditional": 125070,
+  "coverage": {
+    "reg300": 12,
+    "apos": 0,
+    "worst2": 1,
+    "worst_apos": 1
+  },
+  "jobs_checked": 14,
+  "min_slack": 927744,
+  "max_slack": 1658868,
+  "supplied_worst_ratio": 0.5052069333333333,
+  "observed_worst": 947256,
+  "unresolved": [
+    "codec per-beat readiness and final-response latency",
+    "health_lane composition and auxiliary checks",
+    "supervisor, recorder, arbiter ready/response latency",
+    "i_cmd_ready and response consumption backpressure"
+  ],
+  "interpretation": "response checks validate watchdog bound only; no completion proof",
+  "golden_grid": {
+    "evaluations": 3696,
+    "v_step": 1000000,
+    "a_step": 500000,
+    "max_rows": 93,
+    "witnesses": [
+      {
+        "v": 10000000,
+        "a": 2000000,
+        "cid": 0,
+        "stop": 7200000
+      }
+    ],
+    "purpose": "finite-grid cross-check; analytical proof is in WCET.md"
+  }
+}

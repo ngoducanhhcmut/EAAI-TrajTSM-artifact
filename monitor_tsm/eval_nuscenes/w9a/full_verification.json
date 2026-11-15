@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "plans": 29049,
+  "replay_records": 44607,
+  "gate_predictions_reused": 5119,
+  "report_lines": 70,
+  "accounting_checked": true,
+  "unchanged_H_U_counts_match_W7B": true,
+  "unchanged_gate_provenance": [
+    "sw\\eval_trainval\\out\\pred_hw_new.npy",
+    "sw\\eval_trainval\\run_models.py",
+    "sw\\hwspec\\hwspec_exact.py",
+    "sw\\_verify_all_samples_spec.py",
+    "sw\\hwspec\\_cache_params.pkl",
+    "sw\\eval_trainval\\build_dataset.py",
+    "sw\\eval_trainval\\out\\dataset.npz",
+    "sw\\hwspec\\common.py",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\run_w7.py",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\PROTOCOL.md",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\AMENDMENT_A7.md",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\results\\frames.jsonl",
+    "sw\\payloads\\trained\\gru_bias.bin",
+    "sw\\payloads\\trained\\gru_scale_zp.bin",
+    "sw\\payloads\\trained\\gru_weights.bin",
+    "sw\\payloads\\trained\\gru_wout_staging.bin",
+    "sw\\payloads\\trained\\gru_wp_proj.bin"
+  ],
+  "encoded_input_check": {
+    "accepted_records": 40077,
+    "sampled_discrepancies": 0,
+    "minimum_margin_m": 0.0008045000000000968
+  },
+  "runtime_seconds": 18.609000000054948
+}

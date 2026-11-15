@@ -1,0 +1,4 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_2/Vtb_m_tsmx_top +FILE=apos.mem +ALLOW_INACTIVE
+[0] %Fatal: tb_m_tsmx_top.sv:367: Assertion failed in tb_m_tsmx_top.unnamedblk3: vector parse row 360
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:367: Verilog $stop
+Aborting...

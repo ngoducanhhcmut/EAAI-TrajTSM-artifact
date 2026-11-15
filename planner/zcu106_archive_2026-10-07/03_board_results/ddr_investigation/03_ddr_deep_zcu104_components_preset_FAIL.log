@@ -1,0 +1,13 @@
+# 07/10/2026 — board_test_ddr_deep.tcl, preset ZCU104 Components: sai du lieu + treo AXI-AP.
+# ----- NGUYEN VAN (khong chinh sua) -----
+psu_init dung: C:/Users/TransformerDA/Downloads/vla_new_arch/deliverables/v2d/psu_init_v2d_components.tcl
+DDRC STAT=0x00000001 (che do 1)  PHY PGSR0=0x80004FFF  loi training: khong
+=== TRUNG LAP DIA CHI ===
+CO TRUNG LAP/SAI:
+  0x00000080 doc 0xEFEFEFEF (mong 0xA1000405)
+=== DU LIEU (256 word / vung) ===
+DOC khoi 0x00100000 TREO: Memory read error at 0x100000. AP transaction timeout
+Tong: 0/0 word sai
+Loi theo lan byte (trong word 32 bit) [0..3]: 0 0 0 0
+Loi theo bit [0..31]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+==== DDR: CO LOI ====

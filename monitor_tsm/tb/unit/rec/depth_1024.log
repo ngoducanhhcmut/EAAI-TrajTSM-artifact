@@ -1,0 +1,42 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\depth_1024.vvp
+ASSERT_HITS 0 S5_3_reset_ready spec 5.3 hits=4
+ASSERT_HITS 1 S5_3_reset_valid spec 5.3 hits=4
+ASSERT_HITS 2 S5_3_reset_data spec 5.3 hits=4
+ASSERT_HITS 3 S5_3_invalid_zero spec 5.3 hits=8203
+ASSERT_HITS 4 S5_3_ready_known spec 5.3 hits=12320
+ASSERT_HITS 5 S5_3_valid_known spec 5.3 hits=12320
+ASSERT_HITS 6 S5_3_valid_data_known spec 5.3 hits=4117
+ASSERT_HITS 7 S5_3_single_outstanding spec 5.3 hits=4117
+ASSERT_HITS 8 S5_3_accept_completes_1cy spec 5.3 hits=1030
+ASSERT_HITS 9 S5_3_atomic_response spec 5.3 hits=1030
+ASSERT_HITS 10 S5_3_stall_valid spec 5.3 hits=3087
+ASSERT_HITS 11 S5_3_stall_payload spec 5.3 hits=3087
+ASSERT_HITS 12 S5_3_stall_blocks_req spec 5.3 hits=3087
+ASSERT_HITS 13 S5_3_consume_valid spec 5.3 hits=1029
+ASSERT_HITS 14 S5_3_consume_payload spec 5.3 hits=1029
+ASSERT_HITS 15 S5_3_no_unsolicited spec 5.3 hits=7174
+ASSERT_HITS 16 S5_3_idle_ready spec 5.3 hits=7172
+ASSERT_HITS 17 S5_3_release_ready spec 5.3 hits=2
+ASSERT_HITS 18 B10_lost_exact spec 5.5.10/9.2 hits=4117
+ASSERT_HITS 19 B10_saturation spec 5.5.10/9.2 hits=0
+ASSERT_HITS 20 B10_reset_log_ready spec 5.5.10/9.2 hits=4
+ASSERT_HITS 21 B10_reset_log_valid spec 5.5.10/9.2 hits=4
+ASSERT_HITS 22 B10_reset_log_data spec 5.5.10/9.2 hits=4
+ASSERT_HITS 23 B10_log_invalid_zero spec 5.5.10/9.2 hits=8224
+ASSERT_HITS 24 B10_log_ready_known spec 5.5.10/9.2 hits=12320
+ASSERT_HITS 25 B10_log_valid_known spec 5.5.10/9.2 hits=12320
+ASSERT_HITS 26 B10_log_data_known spec 5.5.10/9.2 hits=4096
+ASSERT_HITS 27 B10_log_single spec 5.5.10/9.2 hits=4096
+ASSERT_HITS 28 B10_read_completes_1cy spec 5.5.10/9.2 hits=1024
+ASSERT_HITS 29 B10_prewrite_snapshot spec 5.5.10/9.2 hits=1024
+ASSERT_HITS 30 B10_log_stall_valid spec 5.5.10/9.2 hits=3072
+ASSERT_HITS 31 B10_log_stall_data spec 5.5.10/9.2 hits=3072
+ASSERT_HITS 32 B10_log_consumed_valid spec 5.5.10/9.2 hits=1024
+ASSERT_HITS 33 B10_log_consumed_data spec 5.5.10/9.2 hits=1024
+ASSERT_HITS 34 B10_write_while_log_stall spec 5.5.10/9.2 hits=0
+ASSERT_HITS 35 B10_invalid_index spec 5.5.10/9.2 hits=0
+PASS rec supplementary depth=1024: 1027 boundary writes, 1024 indexed reads
+Supplementary assertion activity is a subset; full activity checked at depth=4.
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:667: $finish called at 135566000 (1ps)
+
+EXIT 0

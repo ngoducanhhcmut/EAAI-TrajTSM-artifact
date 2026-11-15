@@ -1,0 +1,20 @@
+{
+  "inputs": 200000,
+  "counts": {
+    "b2": 50000,
+    "b3": 50000,
+    "b4": 50000,
+    "b7": 50000
+  },
+  "accepted": {
+    "b7": 36201,
+    "b3": 42563,
+    "b4": 49804,
+    "b2": 21886
+  },
+  "counterexamples": 0,
+  "examples": [],
+  "min_separation_residual": "1/1000000",
+  "seconds": 244.49242570000933,
+  "gate": "INCONCLUSIVE"
+}

@@ -1,0 +1,143 @@
+{
+  "seed": "0x54345352",
+  "cycles": 53603,
+  "random_operations": 2400,
+  "system_golden": 128,
+  "registers": 52,
+  "tags": {
+    "reset": 56,
+    "release": 28,
+    "reset_registers": 572,
+    "access_registers": 3744,
+    "access_readback": 3432,
+    "restore_registers": 624,
+    "master_stalls": 22,
+    "address_errors": 96,
+    "bus": 83,
+    "enable_without_bist": 12,
+    "bist_start": 12,
+    "bist_wait": 11,
+    "enable_valid": 12,
+    "active_config": 60,
+    "busy_disable": 12,
+    "busy_bist": 12,
+    "soft_reset": 12,
+    "conflicting_commands": 12,
+    "irq_mask": 12,
+    "w1c_zero_strobe": 12,
+    "w1c_set_wins": 12,
+    "w1c_readback": 11,
+    "w1c_clear": 12,
+    "field_boundaries": 3168,
+    "saturation_setup": 1,
+    "saturation_readback": 55,
+    "system_golden": 256,
+    "system_readback": 12672,
+    "random": 28000,
+    "reset_abort": 8,
+    "final_reset_map": 572
+  },
+  "fields": [
+    [
+      "rst",
+      1
+    ],
+    [
+      "awaddr",
+      16
+    ],
+    [
+      "awprot",
+      3
+    ],
+    [
+      "awvalid",
+      1
+    ],
+    [
+      "wdata",
+      32
+    ],
+    [
+      "wstrb",
+      4
+    ],
+    [
+      "wvalid",
+      1
+    ],
+    [
+      "bready",
+      1
+    ],
+    [
+      "araddr",
+      16
+    ],
+    [
+      "arprot",
+      3
+    ],
+    [
+      "arvalid",
+      1
+    ],
+    [
+      "rready",
+      1
+    ],
+    [
+      "sts_valid",
+      1
+    ],
+    [
+      "sts_data",
+      115
+    ],
+    [
+      "deposit",
+      1
+    ],
+    [
+      "awready",
+      1
+    ],
+    [
+      "wready",
+      1
+    ],
+    [
+      "bvalid",
+      1
+    ],
+    [
+      "bresp",
+      2
+    ],
+    [
+      "arready",
+      1
+    ],
+    [
+      "rvalid",
+      1
+    ],
+    [
+      "rresp",
+      2
+    ],
+    [
+      "rdata",
+      32
+    ],
+    [
+      "config_data",
+      4
+    ],
+    [
+      "irq",
+      1
+    ]
+  ],
+  "fixture_sha256": "961a172ba3788da8eb23baa8849194a79078a1f349634a75352a2ab9f7cb9c28"
+}

@@ -1,0 +1,11 @@
+# tep	dia_chi_DDR	byte  (wm_scene_*.bin nap rieng vao WM_A 0x00640000 / WM_B 0x00E40000)
+bert_weights.bin	0x00000000	6291456
+pos_emb.bin	0x00600000	131072
+param_a.bin	0x01900000	65536
+param_b.bin	0x01910000	131072
+param_c.bin	0x01930000	32768
+gru_bias.bin	0x017D2000	8192
+gru_weights.bin	0x017D4000	786432
+gru_wout_staging.bin	0x01894000	8192
+gru_scale_zp.bin	0x018A0000	6144
+gru_wp_proj.bin	0x018A8000	6144

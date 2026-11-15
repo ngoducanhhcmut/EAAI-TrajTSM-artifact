@@ -1,0 +1,4 @@
+localparam real FIT_A0=-0.45161290322580672;
+localparam real FIT_A1=-0.51612903225806406;
+localparam real FIT_A2=-0.19354838709677388;
+localparam real FIT_A3=0.51612903225806417;

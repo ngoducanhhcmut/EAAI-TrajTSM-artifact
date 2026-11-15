@@ -1,0 +1,534 @@
+{
+  "assertions": [
+    {
+      "id": 0,
+      "name": "reset_awready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awready"
+    },
+    {
+      "id": 1,
+      "name": "reset_wready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wready"
+    },
+    {
+      "id": 2,
+      "name": "reset_arready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "arready"
+    },
+    {
+      "id": 3,
+      "name": "reset_bvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bvalid"
+    },
+    {
+      "id": 4,
+      "name": "reset_rvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rvalid"
+    },
+    {
+      "id": 5,
+      "name": "reset_config",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "config_data"
+    },
+    {
+      "id": 6,
+      "name": "known_awready",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "awready"
+    },
+    {
+      "id": 7,
+      "name": "known_wready",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "wready"
+    },
+    {
+      "id": 8,
+      "name": "known_arready",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "arready"
+    },
+    {
+      "id": 9,
+      "name": "known_bvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "bvalid"
+    },
+    {
+      "id": 10,
+      "name": "known_rvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "rvalid"
+    },
+    {
+      "id": 11,
+      "name": "known_bresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "bresp"
+    },
+    {
+      "id": 12,
+      "name": "known_rresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "rresp"
+    },
+    {
+      "id": 13,
+      "name": "known_rdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "rdata"
+    },
+    {
+      "id": 14,
+      "name": "known_awaddr",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "awaddr"
+    },
+    {
+      "id": 15,
+      "name": "known_awprot",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "awprot"
+    },
+    {
+      "id": 16,
+      "name": "known_wdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "wdata"
+    },
+    {
+      "id": 17,
+      "name": "known_wstrb",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "wstrb"
+    },
+    {
+      "id": 18,
+      "name": "known_araddr",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "araddr"
+    },
+    {
+      "id": 19,
+      "name": "known_arprot",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "arprot"
+    },
+    {
+      "id": 20,
+      "name": "b_encoding",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "bresp"
+    },
+    {
+      "id": 21,
+      "name": "r_encoding",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "rresp"
+    },
+    {
+      "id": 22,
+      "name": "b_order",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bvalid"
+    },
+    {
+      "id": 23,
+      "name": "r_order",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rvalid"
+    },
+    {
+      "id": 24,
+      "name": "aw_slot",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awready"
+    },
+    {
+      "id": 25,
+      "name": "w_slot",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wready"
+    },
+    {
+      "id": 26,
+      "name": "ar_slot",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "arready"
+    },
+    {
+      "id": 27,
+      "name": "hold_bvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bvalid"
+    },
+    {
+      "id": 28,
+      "name": "hold_bresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bresp"
+    },
+    {
+      "id": 29,
+      "name": "hold_rvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rvalid"
+    },
+    {
+      "id": 30,
+      "name": "hold_rresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rresp"
+    },
+    {
+      "id": 31,
+      "name": "hold_rdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rdata"
+    },
+    {
+      "id": 32,
+      "name": "master_hold_awvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awvalid"
+    },
+    {
+      "id": 33,
+      "name": "master_hold_awaddr",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awaddr"
+    },
+    {
+      "id": 34,
+      "name": "master_hold_awprot",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awprot"
+    },
+    {
+      "id": 35,
+      "name": "master_hold_wvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wvalid"
+    },
+    {
+      "id": 36,
+      "name": "master_hold_wdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wdata"
+    },
+    {
+      "id": 37,
+      "name": "master_hold_wstrb",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wstrb"
+    },
+    {
+      "id": 38,
+      "name": "master_hold_arvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "arvalid"
+    },
+    {
+      "id": 39,
+      "name": "master_hold_araddr",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "araddr"
+    },
+    {
+      "id": 40,
+      "name": "master_hold_arprot",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "arprot"
+    },
+    {
+      "id": 41,
+      "name": "exact_awready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "awready"
+    },
+    {
+      "id": 42,
+      "name": "exact_wready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "wready"
+    },
+    {
+      "id": 43,
+      "name": "exact_bvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bvalid"
+    },
+    {
+      "id": 44,
+      "name": "exact_bresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bresp"
+    },
+    {
+      "id": 45,
+      "name": "exact_arready",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "arready"
+    },
+    {
+      "id": 46,
+      "name": "exact_rvalid",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rvalid"
+    },
+    {
+      "id": 47,
+      "name": "exact_rresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rresp"
+    },
+    {
+      "id": 48,
+      "name": "exact_rdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rdata"
+    },
+    {
+      "id": 49,
+      "name": "exact_config_data",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "config_data"
+    },
+    {
+      "id": 50,
+      "name": "exact_irq",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "irq"
+    },
+    {
+      "id": 51,
+      "name": "invalid_rdata",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rdata"
+    },
+    {
+      "id": 52,
+      "name": "invalid_rresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rresp"
+    },
+    {
+      "id": 53,
+      "name": "invalid_bresp",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "bresp"
+    },
+    {
+      "id": 54,
+      "name": "config_known",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "config_data"
+    },
+    {
+      "id": 55,
+      "name": "irq_known",
+      "killed": true,
+      "exit": 1,
+      "kind": "x",
+      "target": "irq"
+    },
+    {
+      "id": 56,
+      "name": "w1c_readback",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rdata"
+    },
+    {
+      "id": 57,
+      "name": "ro_write_ignored",
+      "killed": true,
+      "exit": 1,
+      "kind": "binary",
+      "target": "rdata"
+    },
+    {
+      "id": 58,
+      "name": "reserved_read_zero",
+      "killed": true,
+      "exit": 1,
+      "kind": "ones",
+      "target": "rdata"
+    }
+  ],
+  "source": [
+    {
+      "name": "w1c_set_loses",
+      "old": "w_irq_sts_nxt = w_irq_sts_nxt | w_irq_set |",
+      "new": "w_irq_sts_nxt = w_irq_sts_nxt | 8'h00 |",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "ignore_byte_strobes",
+      "old": "{LPARA_BYTE_W{reg_wstrb[idx]}}",
+      "new": "{LPARA_BYTE_W{1'b1}}",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "aw_requires_w",
+      "old": "i_rst_n_core && !reg_aw_full && !reg_bvalid;",
+      "new": "i_rst_n_core && !reg_aw_full && !reg_bvalid && i_axi_wvalid;",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "ro_write_okay",
+      "old": "default: w_bad = 1'b1;",
+      "new": "default: w_bad = 1'b0;",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "enable_without_bist",
+      "old": "(w_active || !reg_config_valid)",
+      "new": "(w_active)",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "fault_counter_rollover",
+      "old": "!i_sts_data[114] && (reg_fault_cnt != 32'hffffffff)",
+      "new": "!i_sts_data[114]",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "status_not_atomic",
+      "old": "w_sts_nxt[7] = i_sts_data[74];",
+      "new": "w_sts_nxt[7] = i_sts_data[75];",
+      "killed": true,
+      "exit": 1
+    },
+    {
+      "name": "reserved_read_leak",
+      "old": "{31'b0,reg_en}",
+      "new": "{31'h7fffffff,reg_en}",
+      "killed": true,
+      "exit": 1
+    }
+  ]
+}

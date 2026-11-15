@@ -1,0 +1,20 @@
+{
+  "sel": {
+    "assertions": 26,
+    "mutants_killed": 26,
+    "mutants_total": 26,
+    "source_mutants_killed": 4
+  },
+  "supervisor": {
+    "assertions": 30,
+    "mutants_killed": 30,
+    "mutants_total": 30,
+    "source_mutants_killed": 4
+  },
+  "rec": {
+    "assertions": 36,
+    "mutants_killed": 36,
+    "mutants_total": 36,
+    "source_mutants_killed": 4
+  }
+}

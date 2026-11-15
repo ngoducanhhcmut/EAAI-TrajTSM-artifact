@@ -1,0 +1,10 @@
+{
+  "analytic_stop": true,
+  "empty_scene": true,
+  "scene_truncation": true,
+  "negative_speed": true,
+  "hold_collision": true,
+  "corridor_crossing": true,
+  "lost_track_truncation": true,
+  "fixed_relevance_hold_counterfactual": true
+}

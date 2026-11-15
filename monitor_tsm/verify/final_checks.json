@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "final_v2_resource_replay": true,
+    "implementation_lock": true,
+    "integer_only": true,
+    "numerical_reference_sources_unchanged": true,
+    "plan_scope_unchanged": true,
+    "pure_cache_bit_identity": true,
+    "registered_scenarios_unchanged": true,
+    "scenario_disjoint": true,
+    "supplemental_edges": true,
+    "system_modes": true,
+    "unit": true,
+    "vectors_b1": true,
+    "vectors_b10": true,
+    "vectors_b13": true,
+    "vectors_b2": true,
+    "vectors_b3": true,
+    "vectors_b4": true,
+    "vectors_b7": true,
+    "vectors_b8": true,
+    "vectors_b9": true,
+    "vectors_system": true
+  },
+  "passed": true,
+  "system_modes": [
+    "HOLD",
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "RECOVERY"
+  ],
+  "unit_coverage": {
+    "b1": 17,
+    "b10": 12,
+    "b13": 14,
+    "b2": 12,
+    "b3": 15,
+    "b4": 14,
+    "b7": 12,
+    "b8": 15,
+    "b9": 18,
+    "system": 19
+  }
+}

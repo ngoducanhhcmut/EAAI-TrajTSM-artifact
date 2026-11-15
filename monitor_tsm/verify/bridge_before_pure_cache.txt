@@ -1,0 +1,146 @@
+"""Float simulator boundary only; no float in golden decision path."""
+import math
+from dataclasses import replace
+from collections import Counter
+from tsm2.p5 import p5bd_v2 as ref
+from tsm2.p5 import executor_ref_v2 as ev2
+from tsmx_golden import model as g
+
+ORIGINAL_EXEC=ref.Executor
+ORIGINAL_GEOM=ref.geometry
+ORIGINAL_CHOOSE=ref.choose
+ORIGINAL_TAIL=ref.select_tail
+ORIGINAL_SEAL=ref.seal_tail
+LEAD='stationary'
+COUNTS=Counter()
+EXAMPLES=[]
+
+def q(x):
+    return round(x*g.S) if math.isfinite(x) else g.NAN
+
+def ego_int(e):return g.Ego(*(q(v) for v in vars(e).values()))
+
+def plan_int(p):
+    return g.Plan(p.seq,ego_int(p.snapshot),q(p.generated),q(p.apply),q(p.x),q(p.v),q(p.a),
+                  next(i for i,c in enumerate(ref.LIBRARY) if c['id']==p.tail),q(p.compute),p.count,
+                  1 if p.schema=='SI_lane_rear_axle_v1' else 0)
+
+def cert_int(p,c):
+    if c is None or p is None:return None
+    try:
+        pristine=ev2.certify(p,c.t_e)
+        gc=g.certify(plan_int(p),q(c.t_e))
+        return gc if c==pristine else replace(gc,seal='bad')
+    except (ValueError,OverflowError):return None
+
+def tail(ego,prefix_a,lead,phase=0):
+    cid,_=g.select(replace(ego_int(ego),a=q(prefix_a)),lead,q(phase))
+    return ref.LIBRARY[cid]
+
+def seal(p,ego,lead):
+    return replace(p,tail=tail(ego,p.a,lead,max(0,ego.t-p.apply))['id'])
+
+def geometry(p,lead):
+    try:return g.nominal_geom(plan_int(p),lead) if p else False
+    except (ValueError,IndexError):return False
+
+def choose(ego,rear,lead,policy,model,onset,last_a):
+    cid,label=g.select(ego_int(ego),lead)
+    return ref.LIBRARY[cid], 'mitigation_no_certificate' if cid==15 else 'front_admissible'
+
+class GoldenExecutor:
+    MODES=ORIGINAL_EXEC.MODES
+    AGE=.15
+    def __init__(self,monitor=True,hard=False):
+        self.state=g.Supervisor();self.backup=None;self.pending=None;self.context=None
+    @property
+    def mode(self):return self.state.mode
+    @mode.setter
+    def mode(self,v):self.state=replace(self.state,mode=v)
+    def reset(self):self.__init__()
+    def reusable(self,now,ego):
+        return g.reusable(self.state,q(now),ego_int(ego))
+    def check(self,now,ego,p,c,geometry=True,capability=True,rear_ftti=math.inf):
+        if not capability:return 'capability'
+        if p is None or c is None:return 'timeout'
+        try:
+            ep=ego_int(ego);pp=plan_int(p);cc=cert_int(p,c)
+            _,why=g.b1_ingress(self.state.ingress,q(now),ep,g.packet(pp))
+            if why!='ok':return why
+            why=g.b9_cert(pp,cc,q(now))
+            if why!='ok':return why
+            if not g.b2_splice(ep,pp):return 'splice'
+            if not g.reaction_safe(ep,q(rear_ftti) if math.isfinite(rear_ftti) else 1<<30):return 'ftti_budget'
+            if not geometry or not g.nominal_geom(pp,LEAD):return 'geometry'
+            if g.plan_tail(pp,LEAD)[0]==15:return 'no_backup'
+            return 'ok'
+        except (ValueError,OverflowError,IndexError):return 'numeric'
+    def decide(self,now,ego,p,c,geometry=True,capability=True,fallback_admissible=True,rear_ftti=math.inf):
+        why=self.check(now,ego,p,c,geometry,capability,rear_ftti)
+        ok=why=='ok';ep=ego_int(ego)
+        self.state=g.b8_fsm(self.state,ok,ep.v,self.reusable(now,ego),fallback_admissible,capability)
+        if ok:
+            pp=plan_int(p);cc=cert_int(p,c)
+            ing,_=g.b1_ingress(self.state.ingress,q(now),ep,g.packet(pp))
+            self.state=replace(self.state,ingress=ing,pending=(q(now),pp,cc))
+            self.pending=(now,c,p)
+        else:
+            self.pending=None
+            self.state=replace(self.state,ingress=replace(self.state.ingress,last_time=q(now)))
+        return ev2.Decision(ok,why,self.mode,not ok)
+    def commit(self,now,acknowledged):
+        if self.pending is None:return False,'no_pending'
+        issued,c,p=self.pending
+        why=g.b9_cert(plan_int(p),cert_int(p,c),q(now),True,q(issued),acknowledged,p.seq)
+        if why=='committed':
+            ego,lead=self.context
+            pp=seal(p,ego,lead);cc=ev2.certify(pp,c.t_e)
+            self.backup=(pp,cc) if pp.tail!=ref.LIBRARY[15]['id'] else None
+            back=(plan_int(pp),cert_int(pp,cc)) if self.backup else ()
+            self.state=replace(self.state,backup=back,pending=(),mode=self.mode if back else 'L3')
+            self.pending=None
+            return True,why
+        if why in ('ack_timeout','expiry_at_executor','binding'):
+            self.pending=None;self.state=replace(self.state,pending=(),mode='L2')
+        return False,why
+
+class ShadowExecutor(ORIGINAL_EXEC):
+    def __init__(self,*a,**kw):
+        super().__init__(*a,**kw);self.shadow=GoldenExecutor()
+    def decide(self,now,ego,p,c,geometry=True,capability=True,fallback_admissible=True,rear_ftti=math.inf):
+        d=super().decide(now,ego,p,c,geometry,capability,fallback_admissible,rear_ftti)
+        # Golden recomputes B3; never intersect it with reference's accept bit.
+        sd=self.shadow.decide(now,ego,p,c,True,capability,fallback_admissible,rear_ftti)
+        # Compare candidate on every identical physical ego, not aggregate outcomes.
+        fc=ORIGINAL_CHOOSE(ego,(0,0,0),LEAD,'executor',None,None,ego.a)[0]['id']
+        gc=choose(ego,(0,0,0),LEAD,'executor',None,None,ego.a)[0]['id']
+        different=(d.accept!=sd.accept or d.mode!=sd.mode or fc!=gc)
+        COUNTS['cycles']+=1;COUNTS['different']+=different
+        COUNTS['accept_difference']+=d.accept!=sd.accept
+        COUNTS['mode_difference']+=d.mode!=sd.mode
+        COUNTS['candidate_difference']+=fc!=gc
+        COUNTS['unsafe_accept']+=sd.accept and not d.accept
+        if different:
+            key=f'{d.reason}/{sd.reason}|{d.mode}/{sd.mode}|{fc}/{gc}'
+            COUNTS[key]+=1
+            if len(EXAMPLES)<100:EXAMPLES.append(dict(t=now,ego=vars(ego),ref=vars(d),golden=vars(sd),candidate=[fc,gc]))
+        return d
+    def commit(self,now,acknowledged):
+        self.shadow.context=self.context
+        self.shadow.commit(now,acknowledged)
+        return super().commit(now,acknowledged)
+
+def install(kind):
+    ref.Executor=ShadowExecutor if kind=='shadow' else GoldenExecutor if kind=='golden' else ORIGINAL_EXEC
+    ref.geometry=geometry if kind=='golden' else ORIGINAL_GEOM
+    ref.choose=choose if kind=='golden' else ORIGINAL_CHOOSE
+    ref.select_tail=tail if kind=='golden' else ORIGINAL_TAIL
+    ref.seal_tail=seal if kind=='golden' else ORIGINAL_SEAL
+    # Executor_v2 commits have a module-local seal function too.
+    ev2.seal_tail=seal if kind=='golden' else ORIGINAL_SEAL
+
+# The unchanged harness calls these attributes when it finishes an IC. These
+# wrappers have no local caches; clear the corresponding reference caches.
+# This adds API compatibility only, without changing any decision function.
+geometry.cache_clear=ORIGINAL_GEOM.cache_clear
+tail.cache_clear=ORIGINAL_TAIL.cache_clear

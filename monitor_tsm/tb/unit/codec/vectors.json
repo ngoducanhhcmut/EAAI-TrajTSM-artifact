@@ -1,0 +1,21 @@
+{
+  "jobs": 5648,
+  "beats": 523493,
+  "counts": {
+    "fault": 32,
+    "fixture": 2276,
+    "random_record": 1000,
+    "field_boundary": 181,
+    "random_bytes": 2148,
+    "kat": 10,
+    "leading_zero": 1
+  },
+  "fixture_rows": {
+    "b1": 128,
+    "b9": 128,
+    "system": 128,
+    "edges": 117
+  },
+  "seed": 21043,
+  "max_bytes": 32768
+}

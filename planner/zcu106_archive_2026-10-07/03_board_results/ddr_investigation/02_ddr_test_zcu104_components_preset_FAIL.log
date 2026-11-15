@@ -1,0 +1,15 @@
+# 07/10/2026 — board_test_ddr.tcl voi psu_init cua XSA (ZCU104, Components x16 4Gb): training OK nhung du lieu sai.
+# ----- NGUYEN VAN (khong chinh sua) -----
+psu_init dung: C:/Users/TransformerDA/Downloads/vla_new_arch/deliverables/v2d/psu_init_v2d_components.tcl
+psu_init: chay xong (khong bao loi)
+=== BUOC 1: thanh ghi trang thai DDR (DDRC 0xFD07_xxxx, DDR PHY 0xFD08_xxxx) ===
+DDRC STAT   (0xFD070004) = 0x00000001 -> che do hoat dong = 1 (Binh thuong (Normal))
+PHY  PGSR0  (0xFD080030) = 0x80004FFF
+  buoc training da xong : IDONE PLDONE DCDONE ZCDONE DIDONE WLDONE QSGDONE WLADONE RDDONE WDDONE REDONE WEDONE VDONE
+  co LOI training       : (khong co)
+=> KET LUAN BUOC 1: bo dieu khien bao DDR san sang, training khong bao loi.
+=== BUOC 2: ghi roi doc lai DDR (dung ngay khi doc bi treo) ===
+  0x0010000C: ghi 0x5A300001, doc lai 0xD54D0940  SAI
+  0x4000000C: ghi 0x5A300400, doc lai 0x04460988  SAI
+Ket qua: dung 14 word, sai 2 word
+=> KET LUAN BUOC 2: DDR KHONG doc/ghi dung. (Nho tat/bat lai nguon board.)

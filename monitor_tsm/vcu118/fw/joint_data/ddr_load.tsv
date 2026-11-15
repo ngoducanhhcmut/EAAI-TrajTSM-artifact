@@ -1,0 +1,15 @@
+# file	phys_addr	bytes   (MicroBlaze/xsdb address = 0x80000000 + phys_addr)
+planner_bert_weights.bin	0x00000000	6291456
+planner_pos_emb.bin	0x00600000	131072
+planner_gru_bias.bin	0x017D2000	8192
+planner_gru_weights.bin	0x017D4000	786432
+planner_gru_wout_staging.bin	0x01894000	8192
+planner_gru_scale_zp.bin	0x018A0000	6144
+planner_gru_wp_proj.bin	0x018A8000	6144
+planner_param_a.bin	0x01900000	65536
+planner_param_b.bin	0x01910000	131072
+planner_param_c.bin	0x01930000	32768
+wm_bank.bin	0x10000000	573440
+tsm_req.bin	0x11000000	1159200
+tsm_meta.bin	0x11200000	6624
+wp_golden.bin	0x11210000	1120

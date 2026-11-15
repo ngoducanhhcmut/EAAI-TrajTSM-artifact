@@ -1,0 +1,7 @@
+COMMAND: vvp simulation.vvp +MUTANT=9
+INJECT 9 stall_payload: DUT output data stuck-X
+ASSERT_FAIL 9 stall_payload spec5.3/5.5.2/7/10.3 job=0 cycle=37 actual=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx expected=1000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: tb_m_tsmx_codec.sv:155: R-025 assertion failed
+       Time: 224000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

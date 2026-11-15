@@ -1,0 +1,77 @@
+CHAIN_CFG tick=0 exec_ack=0 ackdly_us=1000 txstall_cyc=0 contend=3 soft=1
+BRAKE_RISE job=0 cyc=0 time_us=0 cyc_after_40ms_cross=-1
+PASS top CSR/AXI smoke
+BOARDUP polls=5032 cyc=25287
+BOARDUP polls=5032 cyc=50479
+BOARDVEC job=0 reset=1 time=00000000 ack=1 seq=00000000
+CONTEND frame=1 accepted_last_cyc=53279 send_cycles=1399 engine_busy=1
+CONTEND frame=2 accepted_last_cyc=54678 send_cycles=1399 engine_busy=1
+CHAIN_TX job=0 delivered_cyc=701982 rsp_to_delivered=72 time_us=0 pending=1
+BOARDCMD job=0 frames=1
+SOFT_MISMATCH CSR status job=%0d actual=%h expected=%h job=0
+BOARDCYC job=0 csr_cycles=650030 tb_latency=650031
+JOB 0 PASS cycles=650031 xerr_checks=0
+CHAIN job=0 rx_xfer=1399 decide=650031 host_to_rsp=651429 rsp_to_tx_first=0 rsp_to_tx_delivered=72 rsp=2014000447 exp_mode=5 exp_reason=0 softfail=1
+CONTEND frame=3 accepted_last_cyc=703314 send_cycles=648636 engine_busy=1
+CONTEND_RSP n=1 cyc=1022418 rsp=0148000641 rx_ready=0
+BRAKE_RISE job=0 cyc=1022418 time_us=0 cyc_after_40ms_cross=-1
+CHAIN_TX job=0 delivered_cyc=1022489 rsp_to_delivered=71 time_us=0 pending=0
+SOFT_MISMATCH 9 CMD_RECORDS:spec5.3/6.1/10.1/15 job=0
+SOFT_MISMATCH 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 job=0
+SOFT_MISMATCH 8 CMD_FULL:spec5.3/6.1/10.1/15 job=0
+BOARDCMD job=0 frames=2
+CONTEND_RSP n=2 cyc=1342919 rsp=0148000647 rx_ready=1
+CHAIN_TX job=0 delivered_cyc=1342990 rsp_to_delivered=71 time_us=0 pending=0
+SOFT_MISMATCH 9 CMD_RECORDS:spec5.3/6.1/10.1/15 job=0
+SOFT_MISMATCH 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 job=0
+SOFT_MISMATCH 8 CMD_FULL:spec5.3/6.1/10.1/15 job=0
+BOARDCMD job=0 frames=3
+CONTEND_RSP n=3 cyc=1663420 rsp=0148000647 rx_ready=1
+CONTEND_DONE extra_rsp=3 of 3 softfail=7
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/board/tb_tsmx_chain.sv:594: Verilog $finish
+ASSERT 0 TOP_FULL:spec5.3/6.1/10.1/15 hits=1
+ASSERT 1 TOP_ACCEPT:spec5.3/6.1/10.1/15 hits=1
+ASSERT 2 TOP_REASON:spec5.3/6.1/10.1/15 hits=1
+ASSERT 3 TOP_MODE:spec5.3/6.1/10.1/15 hits=1
+ASSERT 4 TOP_CANDIDATE:spec5.3/6.1/10.1/15 hits=1
+ASSERT 5 TOP_LABEL:spec5.3/6.1/10.1/15 hits=1
+ASSERT 6 TOP_BRAKE_FLAG:spec5.3/6.1/10.1/15 hits=1
+ASSERT 7 TOP_COMMIT_HB:spec5.3/6.1/10.1/15 hits=1
+ASSERT 8 CMD_FULL:spec5.3/6.1/10.1/15 hits=3
+ASSERT 9 CMD_RECORDS:spec5.3/6.1/10.1/15 hits=3
+ASSERT 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 hits=3
+ASSERT 11 CMD_OVERRIDE:spec5.3/6.1/10.1/15 hits=3
+ASSERT 12 TX_STABLE:spec5.3/6.1/10.1/15 hits=31
+ASSERT 13 RSP_STABLE:spec5.3/6.1/10.1/15 hits=3
+ASSERT 14 NO_STALE_RSP:spec5.3/6.1/10.1/15 hits=1663407
+ASSERT 15 NO_STALE_TX:spec5.3/6.1/10.1/15 hits=1663196
+ASSERT 16 HB_FAULT_LOW:spec5.3/6.1/10.1/15 hits=0
+ASSERT 17 FAULT_BRAKE:spec5.3/6.1/10.1/15 hits=2
+ASSERT 18 ONEHOT_FSM_MODE:spec5.3/6.1/10.1/15 hits=1663413
+ASSERT 19 DEADLINE_BOUND:spec5.3/6.1/10.1/15 hits=6
+ASSERT 20 AXI_B_HOLD:spec5.3/6.1/10.1/15 hits=18
+ASSERT 21 AXI_R_HOLD:spec5.3/6.1/10.1/15 hits=20160
+ASSERT 22 AXI_B_CODE:spec5.3/6.1/10.1/15 hits=27
+ASSERT 23 AXI_R_CODE:spec5.3/6.1/10.1/15 hits=30240
+ASSERT 24 AXI_AW_KNOWN:spec5.3/6.1/10.1/15 hits=9
+ASSERT 25 AXI_W_KNOWN:spec5.3/6.1/10.1/15 hits=9
+ASSERT 26 AXI_AR_KNOWN:spec5.3/6.1/10.1/15 hits=10080
+ASSERT 27 AXI_B_KNOWN:spec5.3/6.1/10.1/15 hits=27
+ASSERT 28 AXI_R_KNOWN:spec5.3/6.1/10.1/15 hits=30240
+ASSERT 29 AXI_AWREADY_KNOWN:spec5.3/6.1/10.1/15 hits=1663346
+ASSERT 30 AXI_WREADY_KNOWN:spec5.3/6.1/10.1/15 hits=1663373
+ASSERT 31 AXI_ARREADY_KNOWN:spec5.3/6.1/10.1/15 hits=1633169
+ASSERT 32 AXI_B_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=18
+ASSERT 33 AXI_R_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=20160
+ASSERT 34 AXI_REASON_RESERVED:spec5.3/6.1/10.1/15 hits=3
+ASSERT 35 AXI_ERROR_ZERO:spec5.3/6.1/10.1/15 hits=6
+ASSERT 36 AXI_STATUS_RESERVED:spec5.3/6.1/10.1/15 hits=3
+ASSERT 37 AXI_AWPROT:spec5.3/6.1/10.1/15 hits=9
+ASSERT 38 AXI_ARPROT:spec5.3/6.1/10.1/15 hits=10080
+ASSERT 39 AXI_PROFILE_COUNT:spec5.3/6.1/10.1/15 hits=3
+assertion failures: 0, assertions never exercised: 1
+PASS top jobs=1 max_cycles=650031 softfail=7
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/board/tb_tsmx_chain.sv:612: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 17ms; walltime 230.242 s; speed 72.247 us/s
+- Verilator: cpu 221.270 s on 1 threads; allocated 24 MB

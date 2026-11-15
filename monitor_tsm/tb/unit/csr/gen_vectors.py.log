@@ -1,0 +1,2 @@
+COMMAND: C:\Users\TransformerDA\AppData\Local\Programs\Python\Python313\python.exe -B C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\gen_vectors.py
+{"seed": "0x54345352", "cycles": 53603, "random_operations": 2400, "system_golden": 128, "registers": 52, "fixture_sha256": "961a172ba3788da8eb23baa8849194a79078a1f349634a75352a2ab9f7cb9c28"}

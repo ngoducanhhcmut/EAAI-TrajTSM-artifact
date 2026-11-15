@@ -1,0 +1,40 @@
+{
+  "head": {
+    "text": "Recorder: write never waits for host; full ring overwrites oldest"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "event_valid",
+      "wave": "011111000000"
+    },
+    {
+      "name": "event_ready",
+      "wave": "111111111111"
+    },
+    {
+      "name": "drain_ready",
+      "wave": "000000000000"
+    },
+    {
+      "name": "full",
+      "wave": "000011111111"
+    },
+    {
+      "name": "lost",
+      "wave": "=...===.....",
+      "data": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

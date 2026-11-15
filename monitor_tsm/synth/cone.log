@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Oct 30 14:35:06 2026
+# Process ID: 24280
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth
+# Command line: vivado.exe -mode batch -notrace -nojournal -log cone.log -source cone.tcl
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/cone.log
+# Journal file: 
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source cone.tcl -notrace
+Command: open_checkpoint m_tsmx_engine_bb/post_synth.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 309.066 ; gain = 8.832
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2068.297 ; gain = 2.129
+INFO: [Netlist 29-17] Analyzing 394 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'm_tsmx_engine' is not ideal for floorplanning, since the cellview 'm_tsmx_engine' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2416.988 ; gain = 99.762
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  general.maxThreads
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.212 . Memory (MB): peak = 3258.547 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 11 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2023.2 (64-bit) build 4029153
+open_checkpoint: Time (s): cpu = 00:02:03 ; elapsed = 00:02:16 . Memory (MB): peak = 3258.547 ; gain = 2963.793
+CONE u_tsmx_hash/i_data[5000] luts=20 start=78
+   reg_fsm_ctrl_current_state_reg[34]
+   reg_fsm_ctrl_current_state_reg[33]
+   reg_fsm_ctrl_current_state_reg[36]
+   reg_fsm_ctrl_current_state_reg[35]
+   reg_fsm_ctrl_current_state_reg[39]
+   reg_fsm_ctrl_current_state_reg[40]
+   reg_fsm_ctrl_current_state_reg[37]
+   reg_fsm_ctrl_current_state_reg[38]
+   reg_fsm_ctrl_current_state_reg[46]
+   reg_fsm_ctrl_current_state_reg[45]
+   reg_fsm_ctrl_current_state_reg[48]
+   reg_fsm_ctrl_current_state_reg[47]
+CONE u_tsmx_hash/i_data[100] luts=20 start=77
+   reg_fsm_ctrl_current_state_reg[34]
+   reg_fsm_ctrl_current_state_reg[33]
+   reg_fsm_ctrl_current_state_reg[36]
+   reg_fsm_ctrl_current_state_reg[35]
+   reg_fsm_ctrl_current_state_reg[39]
+   reg_fsm_ctrl_current_state_reg[40]
+   reg_fsm_ctrl_current_state_reg[37]
+   reg_fsm_ctrl_current_state_reg[38]
+   reg_fsm_ctrl_current_state_reg[46]
+   reg_fsm_ctrl_current_state_reg[45]
+   reg_fsm_ctrl_current_state_reg[48]
+   reg_fsm_ctrl_current_state_reg[47]
+CONE u_tsmx_sweep_0/i_world[5000] luts=22 start=79
+   reg_future_reg[5000]
+   reg_fsm_ctrl_current_state_reg[36]
+   reg_nominal_lead_reg[5000]
+   reg_fsm_ctrl_current_state_reg[33]
+   reg_fsm_ctrl_current_state_reg[32]
+   reg_fsm_ctrl_current_state_reg[35]
+   reg_fsm_ctrl_current_state_reg[34]
+   reg_fsm_ctrl_current_state_reg[38]
+   reg_fsm_ctrl_current_state_reg[39]
+   reg_fsm_ctrl_current_state_reg[0]
+   reg_fsm_ctrl_current_state_reg[37]
+   reg_fsm_ctrl_current_state_reg[45]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -of [all_fanin -flat [get_pins {u_tsmx_sweep_1/i_world[5000]}]] -filter {REF_NAME =~ LUT*}'.
+CONE u_tsmx_sweep_1/i_world[5000] luts=0 start=1
+   reg_world_reg[5000]
+CONE u_tsmx_sweep_0/i_world[8195] luts=22 start=79
+   reg_future_reg[8195]
+   reg_fsm_ctrl_current_state_reg[36]
+   reg_nominal_lead_reg[8195]
+   reg_fsm_ctrl_current_state_reg[33]
+   reg_fsm_ctrl_current_state_reg[32]
+   reg_fsm_ctrl_current_state_reg[35]
+   reg_fsm_ctrl_current_state_reg[34]
+   reg_fsm_ctrl_current_state_reg[38]
+   reg_fsm_ctrl_current_state_reg[39]
+   reg_fsm_ctrl_current_state_reg[0]
+   reg_fsm_ctrl_current_state_reg[37]
+   reg_fsm_ctrl_current_state_reg[45]
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 30 14:37:28 2026...

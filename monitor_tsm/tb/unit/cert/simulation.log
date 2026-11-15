@@ -1,0 +1,49 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\sim.vvp
+EXIT 0
+BOOT complete
+PROGRESS cert job=0 cycles=68
+PROGRESS cert job=1000 cycles=5568
+PROGRESS cert job=2000 cycles=11068
+PROGRESS cert job=3000 cycles=16568
+PROGRESS cert job=4000 cycles=22068
+PROGRESS cert job=5000 cycles=27568
+PROGRESS cert job=6000 cycles=33068
+PROGRESS cert job=7000 cycles=38568
+PROGRESS cert job=8000 cycles=44068
+PROGRESS cert job=9000 cycles=49568
+PROGRESS cert job=10000 cycles=55068
+PROGRESS cert job=11000 cycles=60568
+ASSERT 0 reset_ready hits=10 failures=0
+ASSERT 1 reset_valid hits=10 failures=0
+ASSERT 2 reset_data hits=10 failures=0
+ASSERT 3 invalid_zero hits=33614 failures=0
+ASSERT 4 ready_qualified hits=28 failures=0
+ASSERT 5 response_accounted hits=27974 failures=0
+ASSERT 6 status_encoding hits=27974 failures=0
+ASSERT 7 single_outstanding hits=27974 failures=0
+ASSERT 8 bounded_completion hits=16784 failures=0
+ASSERT 9 atomic_status hits=27974 failures=0
+ASSERT 10 stall_valid hits=16784 failures=0
+ASSERT 11 stall_payload hits=16784 failures=0
+ASSERT 12 stall_blocks_request hits=16784 failures=0
+ASSERT 13 consume_valid hits=11188 failures=0
+ASSERT 14 consume_payload hits=11188 failures=0
+ASSERT 15 no_unsolicited hits=11221 failures=0
+ASSERT 16 idle_ready hits=28 failures=0
+ASSERT 17 reset_release_ready hits=5 failures=0
+ASSERT 18 ok hits=1047 failures=0
+ASSERT 19 timeout hits=514 failures=0
+ASSERT 20 binding hits=4103 failures=0
+ASSERT 21 replay hits=203 failures=0
+ASSERT 22 context hits=455 failures=0
+ASSERT 23 lease hits=6905 failures=0
+ASSERT 24 executor_expiry hits=5000 failures=0
+ASSERT 25 ack_timeout hits=655 failures=0
+ASSERT 26 committed hits=1894 failures=0
+ASSERT 27 pending hits=2906 failures=0
+ASSERT 28 late_apply hits=2662 failures=0
+ASSERT 29 expiry hits=1630 failures=0
+assertion failures: 0, assertions never exercised: 0
+cycles per job=3..3 measured II=4..7 (includes injected stalls)
+PASS cert: golden=11186/11186 assertions=30/30
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:525: $finish called at 677473000 (1ps)

@@ -1,0 +1,2035 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 04:40:44 2026
+# Process ID: 17464
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log sysbd_full_fixed.log -mode tcl -source {xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim/sysbd_full_fixed.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl
+# xsim {tb_tsm_sysbd_behav} -autoloadwcfg -tclbatch {tb_tsm_sysbd.tcl}
+Time resolution is 1 ps
+source tb_tsm_sysbd.tcl
+## run all
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_cpu.inst
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_mem.inst
+WARNING: file caselist.txt could not be opened
+=== TSM SYSBD: RTL, 16 ca
+    AR #1 t=1507 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=1822 ns sau 44 beat
+    AR #2 t=1832 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=2142 ns sau 88 beat
+    AR #3 t=2152 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=2467 ns sau 132 beat
+    AR #4 t=2478 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=2787 ns sau 176 beat
+    AR #5 t=2798 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=3112 ns sau 220 beat
+    AR #6 t=3123 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=3432 ns sau 264 beat
+    AR #7 t=3443 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=3758 ns sau 308 beat
+    AR #8 t=3768 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=4073 ns sau 351 beat
+    AR #9 t=4268723 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=4268819 ns sau 353 beat
+    AR #10 t=4269400 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=4269496 ns sau 355 beat
+    AR #11 t=4269864 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=4269960 ns sau 357 beat
+    AR #12 t=4270542 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=4270638 ns sau 359 beat
+    AR #13 t=4271139 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=4271235 ns sau 361 beat
+    AR #14 t=4271817 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=4271913 ns sau 363 beat
+    AR #15 t=4272494 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=4272590 ns sau 365 beat
+    AR #16 t=4273171 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=4273267 ns sau 367 beat
+    AR #17 t=4273849 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=4273945 ns sau 369 beat
+    AR #18 t=4274526 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=4274622 ns sau 371 beat
+    AR #19 t=4275204 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=4275300 ns sau 373 beat
+    AR #20 t=4275881 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=4275977 ns sau 375 beat
+    AR #21 t=4276559 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=4276655 ns sau 377 beat
+    AR #22 t=4277236 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=4277332 ns sau 379 beat
+    AR #23 t=4277913 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=4278009 ns sau 381 beat
+    RLAST t=4278687 ns sau 383 beat
+    RLAST t=4279364 ns sau 385 beat
+    RLAST t=4280042 ns sau 387 beat
+    RLAST t=4280719 ns sau 389 beat
+    RLAST t=4281396 ns sau 391 beat
+    RLAST t=4282074 ns sau 393 beat
+    RLAST t=4282751 ns sau 395 beat
+    RLAST t=4283429 ns sau 397 beat
+    RLAST t=4284106 ns sau 399 beat
+    RLAST t=4284784 ns sau 401 beat
+    RLAST t=4285461 ns sau 403 beat
+    RLAST t=4286138 ns sau 405 beat
+    RLAST t=4286816 ns sau 407 beat
+    RLAST t=4287493 ns sau 409 beat
+    RLAST t=4288171 ns sau 411 beat
+    RLAST t=4288848 ns sau 413 beat
+    RLAST t=4289525 ns sau 415 beat
+    RLAST t=4290203 ns sau 417 beat
+    RLAST t=4290880 ns sau 419 beat
+    RLAST t=4291558 ns sau 421 beat
+    RLAST t=4292235 ns sau 423 beat
+    RLAST t=4292913 ns sau 425 beat
+    RLAST t=4293590 ns sau 427 beat
+    RLAST t=4294267 ns sau 429 beat
+    RLAST t=4294945 ns sau 431 beat
+    RLAST t=4295622 ns sau 433 beat
+    RLAST t=4296300 ns sau 435 beat
+    RLAST t=4296977 ns sau 437 beat
+    RLAST t=4297654 ns sau 439 beat
+    RLAST t=4298332 ns sau 441 beat
+    RLAST t=4299009 ns sau 443 beat
+    RLAST t=4299687 ns sau 445 beat
+    RLAST t=4300364 ns sau 447 beat
+    RLAST t=4301042 ns sau 449 beat
+    RLAST t=4301719 ns sau 451 beat
+    RLAST t=4302396 ns sau 453 beat
+    RLAST t=4303074 ns sau 455 beat
+    RLAST t=4303751 ns sau 457 beat
+    RLAST t=4304429 ns sau 459 beat
+    RLAST t=4305106 ns sau 461 beat
+    RLAST t=4305783 ns sau 463 beat
+    RLAST t=4306461 ns sau 465 beat
+    RLAST t=4307138 ns sau 467 beat
+    RLAST t=4307816 ns sau 469 beat
+    RLAST t=4308493 ns sau 471 beat
+    RLAST t=4309171 ns sau 473 beat
+    RLAST t=4309848 ns sau 475 beat
+    RLAST t=4310525 ns sau 477 beat
+    RLAST t=4311203 ns sau 479 beat
+    RLAST t=4311880 ns sau 481 beat
+    RLAST t=4312558 ns sau 483 beat
+    RLAST t=4313235 ns sau 485 beat
+    RLAST t=4313913 ns sau 487 beat
+    RLAST t=4314590 ns sau 489 beat
+    RLAST t=4315267 ns sau 491 beat
+    RLAST t=4315945 ns sau 493 beat
+    RLAST t=4316622 ns sau 495 beat
+    RLAST t=4317300 ns sau 497 beat
+    RLAST t=4317977 ns sau 499 beat
+    RLAST t=4318654 ns sau 501 beat
+    RLAST t=4319332 ns sau 503 beat
+    RLAST t=4320009 ns sau 505 beat
+    RLAST t=4320687 ns sau 507 beat
+    RLAST t=4321364 ns sau 509 beat
+    RLAST t=4322042 ns sau 511 beat
+    RLAST t=4322719 ns sau 513 beat
+    RLAST t=4323396 ns sau 515 beat
+    RLAST t=4324074 ns sau 517 beat
+    RLAST t=4324751 ns sau 519 beat
+    RLAST t=4325429 ns sau 521 beat
+    RLAST t=4326106 ns sau 523 beat
+    RLAST t=4326783 ns sau 525 beat
+    RLAST t=4327461 ns sau 527 beat
+    RLAST t=4328138 ns sau 529 beat
+    RLAST t=4328816 ns sau 531 beat
+    RLAST t=4329493 ns sau 533 beat
+    RLAST t=4330171 ns sau 535 beat
+    RLAST t=4330848 ns sau 537 beat
+    RLAST t=4331525 ns sau 539 beat
+    RLAST t=4332203 ns sau 541 beat
+    RLAST t=4332880 ns sau 543 beat
+    RLAST t=4333558 ns sau 545 beat
+    RLAST t=4333675 ns sau 547 beat
+    RLAST t=4333792 ns sau 549 beat
+    RLAST t=4333910 ns sau 551 beat
+    RLAST t=7534454 ns sau 553 beat
+    RLAST t=7535211 ns sau 555 beat
+[ 0]       H0261 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=12 obs=1 | 8.002 ms | AR hep=8 rong=102 beat=555 rerr=0 | mong doi VETO  fault=0x00  PASS
+  ... ranh 10 ms truoc lan chay 2 (kiem tra watchdog khong dem khi ranh)
+    AR #1 t=18023973 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=18024287 ns sau 44 beat
+    AR #2 t=18024298 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=18024607 ns sau 88 beat
+    AR #3 t=18024618 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=18024933 ns sau 132 beat
+    AR #4 t=18024944 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=18025253 ns sau 176 beat
+    AR #5 t=18025264 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=18025578 ns sau 220 beat
+    AR #6 t=18025589 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=18025898 ns sau 264 beat
+    AR #7 t=18025909 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=18026224 ns sau 308 beat
+    AR #8 t=18026234 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=18026538 ns sau 351 beat
+    AR #9 t=22291189 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=22291285 ns sau 353 beat
+    AR #10 t=22291439 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=22291535 ns sau 355 beat
+    AR #11 t=22292117 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=22292213 ns sau 357 beat
+    AR #12 t=22292794 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=22292890 ns sau 359 beat
+    AR #13 t=22293472 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=22293568 ns sau 361 beat
+    AR #14 t=22294149 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=22294245 ns sau 363 beat
+    AR #15 t=22294827 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=22294923 ns sau 365 beat
+    AR #16 t=22295504 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=22295600 ns sau 367 beat
+    AR #17 t=22296181 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=22296277 ns sau 369 beat
+    AR #18 t=22296859 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=22296955 ns sau 371 beat
+    AR #19 t=22297536 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=22297632 ns sau 373 beat
+    AR #20 t=22298214 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=22298310 ns sau 375 beat
+    AR #21 t=22298891 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=22298987 ns sau 377 beat
+    AR #22 t=22299568 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=22299664 ns sau 379 beat
+    AR #23 t=22300246 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=22300342 ns sau 381 beat
+    RLAST t=22301019 ns sau 383 beat
+    RLAST t=22301697 ns sau 385 beat
+    RLAST t=22302374 ns sau 387 beat
+    RLAST t=22303052 ns sau 389 beat
+    RLAST t=22303729 ns sau 391 beat
+    RLAST t=22304406 ns sau 393 beat
+    RLAST t=22305084 ns sau 395 beat
+    RLAST t=22305761 ns sau 397 beat
+    RLAST t=22306439 ns sau 399 beat
+    RLAST t=22307116 ns sau 401 beat
+    RLAST t=22307793 ns sau 403 beat
+    RLAST t=22308471 ns sau 405 beat
+    RLAST t=22309148 ns sau 407 beat
+    RLAST t=22309826 ns sau 409 beat
+    RLAST t=22310503 ns sau 411 beat
+    RLAST t=22311181 ns sau 413 beat
+    RLAST t=22311858 ns sau 415 beat
+    RLAST t=22312535 ns sau 417 beat
+    RLAST t=22313213 ns sau 419 beat
+    RLAST t=22313890 ns sau 421 beat
+    RLAST t=22314568 ns sau 423 beat
+    RLAST t=22315245 ns sau 425 beat
+    RLAST t=22315922 ns sau 427 beat
+    RLAST t=22316600 ns sau 429 beat
+    RLAST t=22317277 ns sau 431 beat
+    RLAST t=22317955 ns sau 433 beat
+    RLAST t=22318072 ns sau 435 beat
+    RLAST t=22318189 ns sau 437 beat
+    RLAST t=22318307 ns sau 439 beat
+    RLAST t=22318424 ns sau 441 beat
+    RLAST t=22318541 ns sau 443 beat
+    RLAST t=22318659 ns sau 445 beat
+    RLAST t=22318776 ns sau 447 beat
+    RLAST t=22318894 ns sau 449 beat
+    RLAST t=22319011 ns sau 451 beat
+    RLAST t=22319128 ns sau 453 beat
+    RLAST t=22319246 ns sau 455 beat
+    RLAST t=22319363 ns sau 457 beat
+    RLAST t=22319480 ns sau 459 beat
+    RLAST t=22319598 ns sau 461 beat
+    RLAST t=22319715 ns sau 463 beat
+    RLAST t=22319832 ns sau 465 beat
+    RLAST t=22319950 ns sau 467 beat
+    RLAST t=22320067 ns sau 469 beat
+    RLAST t=22320184 ns sau 471 beat
+    RLAST t=22320302 ns sau 473 beat
+    RLAST t=22320419 ns sau 475 beat
+    RLAST t=22320536 ns sau 477 beat
+    RLAST t=22320654 ns sau 479 beat
+    RLAST t=22320771 ns sau 481 beat
+    RLAST t=22320888 ns sau 483 beat
+    RLAST t=22321006 ns sau 485 beat
+    RLAST t=22321123 ns sau 487 beat
+    RLAST t=22321240 ns sau 489 beat
+    RLAST t=22321358 ns sau 491 beat
+    RLAST t=22321475 ns sau 493 beat
+    RLAST t=22321593 ns sau 495 beat
+    RLAST t=22321710 ns sau 497 beat
+    RLAST t=22321827 ns sau 499 beat
+    RLAST t=22321945 ns sau 501 beat
+    RLAST t=22322062 ns sau 503 beat
+    RLAST t=22322179 ns sau 505 beat
+    RLAST t=22322297 ns sau 507 beat
+    RLAST t=22322414 ns sau 509 beat
+    RLAST t=22322531 ns sau 511 beat
+    RLAST t=22322649 ns sau 513 beat
+    RLAST t=22322766 ns sau 515 beat
+    RLAST t=22322883 ns sau 517 beat
+    RLAST t=22323001 ns sau 519 beat
+    RLAST t=22323118 ns sau 521 beat
+    RLAST t=22323235 ns sau 523 beat
+    RLAST t=22323353 ns sau 525 beat
+    RLAST t=22323470 ns sau 527 beat
+    RLAST t=22323587 ns sau 529 beat
+    RLAST t=22323705 ns sau 531 beat
+    RLAST t=22323822 ns sau 533 beat
+    RLAST t=22323939 ns sau 535 beat
+    RLAST t=22324057 ns sau 537 beat
+    RLAST t=22324174 ns sau 539 beat
+    RLAST t=22324292 ns sau 541 beat
+    RLAST t=22324409 ns sau 543 beat
+    RLAST t=22324526 ns sau 545 beat
+    RLAST t=22324644 ns sau 547 beat
+    RLAST t=22324761 ns sau 549 beat
+    RLAST t=22324878 ns sau 551 beat
+    RLAST t=25525422 ns sau 553 beat
+[ 1]       H0714 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=4 obs=0 | 8.002 ms | AR hep=8 rong=101 beat=553 rerr=0 | mong doi VETO  fault=0x00  PASS
+    AR #1 t=26046442 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=26046757 ns sau 44 beat
+    AR #2 t=26046767 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=26047077 ns sau 88 beat
+    AR #3 t=26047087 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=26047402 ns sau 132 beat
+    AR #4 t=26047413 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=26047722 ns sau 176 beat
+    AR #5 t=26047733 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=26048048 ns sau 220 beat
+    AR #6 t=26048058 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=26048368 ns sau 264 beat
+    AR #7 t=26048378 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=26048693 ns sau 308 beat
+    AR #8 t=26048704 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=26049008 ns sau 351 beat
+    AR #9 t=30313658 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=30313754 ns sau 353 beat
+    AR #10 t=30313882 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=30313978 ns sau 355 beat
+    AR #11 t=30314560 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=30314656 ns sau 357 beat
+    AR #12 t=30315237 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=30315333 ns sau 359 beat
+    AR #13 t=30315914 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=30316010 ns sau 361 beat
+    AR #14 t=30316592 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=30316688 ns sau 363 beat
+    AR #15 t=30317269 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=30317365 ns sau 365 beat
+    AR #16 t=30317947 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=30318043 ns sau 367 beat
+    AR #17 t=30318624 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=30318720 ns sau 369 beat
+    AR #18 t=30319301 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=30319397 ns sau 371 beat
+    AR #19 t=30319979 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=30320075 ns sau 373 beat
+    AR #20 t=30320656 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=30320752 ns sau 375 beat
+    AR #21 t=30321334 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=30321430 ns sau 377 beat
+    AR #22 t=30322011 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=30322107 ns sau 379 beat
+    AR #23 t=30322689 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=30322785 ns sau 381 beat
+    RLAST t=30323462 ns sau 383 beat
+    RLAST t=30324139 ns sau 385 beat
+    RLAST t=30324817 ns sau 387 beat
+    RLAST t=30325494 ns sau 389 beat
+    RLAST t=30326172 ns sau 391 beat
+    RLAST t=30326849 ns sau 393 beat
+    RLAST t=30327526 ns sau 395 beat
+    RLAST t=30328204 ns sau 397 beat
+    RLAST t=30328881 ns sau 399 beat
+    RLAST t=30329559 ns sau 401 beat
+    RLAST t=30330236 ns sau 403 beat
+    RLAST t=30330914 ns sau 405 beat
+    RLAST t=30331591 ns sau 407 beat
+    RLAST t=30332268 ns sau 409 beat
+    RLAST t=30332946 ns sau 411 beat
+    RLAST t=30333623 ns sau 413 beat
+    RLAST t=30334301 ns sau 415 beat
+    RLAST t=30334978 ns sau 417 beat
+    RLAST t=30335655 ns sau 419 beat
+    RLAST t=30336333 ns sau 421 beat
+    RLAST t=30337010 ns sau 423 beat
+    RLAST t=30337688 ns sau 425 beat
+    RLAST t=30338365 ns sau 427 beat
+    RLAST t=30339043 ns sau 429 beat
+    RLAST t=30339720 ns sau 431 beat
+    RLAST t=30340397 ns sau 433 beat
+    RLAST t=30341075 ns sau 435 beat
+    RLAST t=30341192 ns sau 437 beat
+    RLAST t=30341310 ns sau 439 beat
+    RLAST t=30341427 ns sau 441 beat
+    RLAST t=30341544 ns sau 443 beat
+    RLAST t=30341662 ns sau 445 beat
+    RLAST t=30341779 ns sau 447 beat
+    RLAST t=30341896 ns sau 449 beat
+    RLAST t=30342014 ns sau 451 beat
+    RLAST t=30342131 ns sau 453 beat
+    RLAST t=30342248 ns sau 455 beat
+    RLAST t=30342366 ns sau 457 beat
+    RLAST t=30342483 ns sau 459 beat
+    RLAST t=30342600 ns sau 461 beat
+    RLAST t=30342718 ns sau 463 beat
+    RLAST t=30342835 ns sau 465 beat
+    RLAST t=30342952 ns sau 467 beat
+    RLAST t=30343070 ns sau 469 beat
+    RLAST t=30343187 ns sau 471 beat
+    RLAST t=30343304 ns sau 473 beat
+    RLAST t=30343422 ns sau 475 beat
+    RLAST t=30343539 ns sau 477 beat
+    RLAST t=30343656 ns sau 479 beat
+    RLAST t=30343774 ns sau 481 beat
+    RLAST t=30343891 ns sau 483 beat
+    RLAST t=30344009 ns sau 485 beat
+    RLAST t=30344126 ns sau 487 beat
+    RLAST t=30344243 ns sau 489 beat
+    RLAST t=30344361 ns sau 491 beat
+    RLAST t=30344478 ns sau 493 beat
+    RLAST t=30344595 ns sau 495 beat
+    RLAST t=30344713 ns sau 497 beat
+    RLAST t=30344830 ns sau 499 beat
+    RLAST t=30344947 ns sau 501 beat
+    RLAST t=30345065 ns sau 503 beat
+    RLAST t=30345182 ns sau 505 beat
+    RLAST t=30345299 ns sau 507 beat
+    RLAST t=30345417 ns sau 509 beat
+    RLAST t=30345534 ns sau 511 beat
+    RLAST t=30345651 ns sau 513 beat
+    RLAST t=30345769 ns sau 515 beat
+    RLAST t=30345886 ns sau 517 beat
+    RLAST t=30346003 ns sau 519 beat
+    RLAST t=30346121 ns sau 521 beat
+    RLAST t=30346238 ns sau 523 beat
+    RLAST t=30346355 ns sau 525 beat
+    RLAST t=30346473 ns sau 527 beat
+    RLAST t=30346590 ns sau 529 beat
+    RLAST t=30346708 ns sau 531 beat
+    RLAST t=30346825 ns sau 533 beat
+    RLAST t=30346942 ns sau 535 beat
+    RLAST t=30347060 ns sau 537 beat
+    RLAST t=30347177 ns sau 539 beat
+    RLAST t=30347294 ns sau 541 beat
+    RLAST t=30347412 ns sau 543 beat
+    RLAST t=30347529 ns sau 545 beat
+    RLAST t=30347646 ns sau 547 beat
+    RLAST t=30347764 ns sau 549 beat
+    RLAST t=30347881 ns sau 551 beat
+    RLAST t=33548425 ns sau 553 beat
+[ 2]       H0717 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | 8.002 ms | AR hep=8 rong=101 beat=553 rerr=0 | mong doi VETO  fault=0x00  PASS
+    AR #1 t=34068917 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=34069231 ns sau 44 beat
+    AR #2 t=34069242 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=34069551 ns sau 88 beat
+    AR #3 t=34069562 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=34069877 ns sau 132 beat
+    AR #4 t=34069888 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=34070197 ns sau 176 beat
+    AR #5 t=34070208 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=34070522 ns sau 220 beat
+    AR #6 t=34070533 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=34070842 ns sau 264 beat
+    AR #7 t=34070853 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=34071168 ns sau 308 beat
+    AR #8 t=34071178 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=34071482 ns sau 351 beat
+    AR #9 t=38336133 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=38336229 ns sau 353 beat
+    AR #10 t=38336357 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=38336453 ns sau 355 beat
+    AR #11 t=38337034 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=38337130 ns sau 357 beat
+    AR #12 t=38337712 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=38337808 ns sau 359 beat
+    AR #13 t=38338389 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=38338485 ns sau 361 beat
+    AR #14 t=38339066 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=38339162 ns sau 363 beat
+    AR #15 t=38339744 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=38339840 ns sau 365 beat
+    AR #16 t=38340421 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=38340517 ns sau 367 beat
+    AR #17 t=38341099 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=38341195 ns sau 369 beat
+    AR #18 t=38341776 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=38341872 ns sau 371 beat
+    AR #19 t=38342454 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=38342550 ns sau 373 beat
+    AR #20 t=38343131 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=38343227 ns sau 375 beat
+    AR #21 t=38343808 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=38343904 ns sau 377 beat
+    AR #22 t=38344486 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=38344582 ns sau 379 beat
+    AR #23 t=38345163 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=38345259 ns sau 381 beat
+    RLAST t=38345937 ns sau 383 beat
+    RLAST t=38346614 ns sau 385 beat
+    RLAST t=38347291 ns sau 387 beat
+    RLAST t=38347969 ns sau 389 beat
+    RLAST t=38348646 ns sau 391 beat
+    RLAST t=38349324 ns sau 393 beat
+    RLAST t=38350001 ns sau 395 beat
+    RLAST t=38350679 ns sau 397 beat
+    RLAST t=38351356 ns sau 399 beat
+    RLAST t=38352033 ns sau 401 beat
+    RLAST t=38352711 ns sau 403 beat
+    RLAST t=38353388 ns sau 405 beat
+    RLAST t=38354066 ns sau 407 beat
+    RLAST t=38354743 ns sau 409 beat
+    RLAST t=38355420 ns sau 411 beat
+    RLAST t=38356098 ns sau 413 beat
+    RLAST t=38356775 ns sau 415 beat
+    RLAST t=38357453 ns sau 417 beat
+    RLAST t=38358130 ns sau 419 beat
+    RLAST t=38358808 ns sau 421 beat
+    RLAST t=38359485 ns sau 423 beat
+    RLAST t=38360162 ns sau 425 beat
+    RLAST t=38360840 ns sau 427 beat
+    RLAST t=38361517 ns sau 429 beat
+    RLAST t=38362195 ns sau 431 beat
+    RLAST t=38362872 ns sau 433 beat
+    RLAST t=38363550 ns sau 435 beat
+    RLAST t=38363667 ns sau 437 beat
+    RLAST t=38363784 ns sau 439 beat
+    RLAST t=38363902 ns sau 441 beat
+    RLAST t=38364019 ns sau 443 beat
+    RLAST t=38364136 ns sau 445 beat
+    RLAST t=38364254 ns sau 447 beat
+    RLAST t=38364371 ns sau 449 beat
+    RLAST t=38364488 ns sau 451 beat
+    RLAST t=38364606 ns sau 453 beat
+    RLAST t=38364723 ns sau 455 beat
+    RLAST t=38364840 ns sau 457 beat
+    RLAST t=38364958 ns sau 459 beat
+    RLAST t=38365075 ns sau 461 beat
+    RLAST t=38365192 ns sau 463 beat
+    RLAST t=38365310 ns sau 465 beat
+    RLAST t=38365427 ns sau 467 beat
+    RLAST t=38365544 ns sau 469 beat
+    RLAST t=38365662 ns sau 471 beat
+    RLAST t=38365779 ns sau 473 beat
+    RLAST t=38365896 ns sau 475 beat
+    RLAST t=38366014 ns sau 477 beat
+    RLAST t=38366131 ns sau 479 beat
+    RLAST t=38366249 ns sau 481 beat
+    RLAST t=38366366 ns sau 483 beat
+    RLAST t=38366483 ns sau 485 beat
+    RLAST t=38366601 ns sau 487 beat
+    RLAST t=38366718 ns sau 489 beat
+    RLAST t=38366835 ns sau 491 beat
+    RLAST t=38366953 ns sau 493 beat
+    RLAST t=38367070 ns sau 495 beat
+    RLAST t=38367187 ns sau 497 beat
+    RLAST t=38367305 ns sau 499 beat
+    RLAST t=38367422 ns sau 501 beat
+    RLAST t=38367539 ns sau 503 beat
+    RLAST t=38367657 ns sau 505 beat
+    RLAST t=38367774 ns sau 507 beat
+    RLAST t=38367891 ns sau 509 beat
+    RLAST t=38368009 ns sau 511 beat
+    RLAST t=38368126 ns sau 513 beat
+    RLAST t=38368243 ns sau 515 beat
+    RLAST t=38368361 ns sau 517 beat
+    RLAST t=38368478 ns sau 519 beat
+    RLAST t=38368595 ns sau 521 beat
+    RLAST t=38368713 ns sau 523 beat
+    RLAST t=38368830 ns sau 525 beat
+    RLAST t=38368948 ns sau 527 beat
+    RLAST t=38369065 ns sau 529 beat
+    RLAST t=38369182 ns sau 531 beat
+    RLAST t=38369300 ns sau 533 beat
+    RLAST t=38369417 ns sau 535 beat
+    RLAST t=38369534 ns sau 537 beat
+    RLAST t=38369652 ns sau 539 beat
+    RLAST t=38369769 ns sau 541 beat
+    RLAST t=38369886 ns sau 543 beat
+    RLAST t=38370004 ns sau 545 beat
+    RLAST t=38370121 ns sau 547 beat
+    RLAST t=38370238 ns sau 549 beat
+    RLAST t=38370356 ns sau 551 beat
+    RLAST t=41570900 ns sau 553 beat
+[ 3]       H0720 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | 8.002 ms | AR hep=8 rong=101 beat=553 rerr=0 | mong doi VETO  fault=0x00  PASS
+    AR #1 t=42091386 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=42091701 ns sau 44 beat
+    AR #2 t=42091711 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=42092021 ns sau 88 beat
+    AR #3 t=42092032 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=42092346 ns sau 132 beat
+    AR #4 t=42092357 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=42092666 ns sau 176 beat
+    AR #5 t=42092677 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=42092992 ns sau 220 beat
+    AR #6 t=42093002 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=42093312 ns sau 264 beat
+    AR #7 t=42093322 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=42093637 ns sau 308 beat
+    AR #8 t=42093648 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=42093952 ns sau 351 beat
+    AR #9 t=46358602 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=46358698 ns sau 353 beat
+    AR #10 t=46358826 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=46358922 ns sau 355 beat
+    AR #11 t=46359504 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=46359600 ns sau 357 beat
+    AR #12 t=46360181 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=46360277 ns sau 359 beat
+    AR #13 t=46360858 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=46360954 ns sau 361 beat
+    AR #14 t=46361536 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=46361632 ns sau 363 beat
+    AR #15 t=46362213 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=46362309 ns sau 365 beat
+    AR #16 t=46362891 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=46362987 ns sau 367 beat
+    AR #17 t=46363568 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=46363664 ns sau 369 beat
+    AR #18 t=46364245 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=46364341 ns sau 371 beat
+    AR #19 t=46364923 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=46365019 ns sau 373 beat
+    AR #20 t=46365600 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=46365696 ns sau 375 beat
+    AR #21 t=46366278 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=46366374 ns sau 377 beat
+    AR #22 t=46366955 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=46367051 ns sau 379 beat
+    AR #23 t=46367633 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=46367729 ns sau 381 beat
+    RLAST t=46368406 ns sau 383 beat
+    RLAST t=46369083 ns sau 385 beat
+    RLAST t=46369761 ns sau 387 beat
+    RLAST t=46370438 ns sau 389 beat
+    RLAST t=46371116 ns sau 391 beat
+    RLAST t=46371793 ns sau 393 beat
+    RLAST t=46372471 ns sau 395 beat
+    RLAST t=46373148 ns sau 397 beat
+    RLAST t=46373825 ns sau 399 beat
+    RLAST t=46374503 ns sau 401 beat
+    RLAST t=46375180 ns sau 403 beat
+    RLAST t=46375858 ns sau 405 beat
+    RLAST t=46376535 ns sau 407 beat
+    RLAST t=46377212 ns sau 409 beat
+    RLAST t=46377890 ns sau 411 beat
+    RLAST t=46378567 ns sau 413 beat
+    RLAST t=46379245 ns sau 415 beat
+    RLAST t=46379922 ns sau 417 beat
+    RLAST t=46380600 ns sau 419 beat
+    RLAST t=46381277 ns sau 421 beat
+    RLAST t=46381954 ns sau 423 beat
+    RLAST t=46382632 ns sau 425 beat
+    RLAST t=46383309 ns sau 427 beat
+    RLAST t=46383987 ns sau 429 beat
+    RLAST t=46384664 ns sau 431 beat
+    RLAST t=46385341 ns sau 433 beat
+    RLAST t=46386019 ns sau 435 beat
+    RLAST t=46386696 ns sau 437 beat
+    RLAST t=46386814 ns sau 439 beat
+    RLAST t=46386931 ns sau 441 beat
+    RLAST t=46387048 ns sau 443 beat
+    RLAST t=46387166 ns sau 445 beat
+    RLAST t=46387283 ns sau 447 beat
+    RLAST t=46387400 ns sau 449 beat
+    RLAST t=46387518 ns sau 451 beat
+    RLAST t=46387635 ns sau 453 beat
+    RLAST t=46387752 ns sau 455 beat
+    RLAST t=46387870 ns sau 457 beat
+    RLAST t=46387987 ns sau 459 beat
+    RLAST t=46388104 ns sau 461 beat
+    RLAST t=46388222 ns sau 463 beat
+    RLAST t=46388339 ns sau 465 beat
+    RLAST t=46388456 ns sau 467 beat
+    RLAST t=46388574 ns sau 469 beat
+    RLAST t=46388691 ns sau 471 beat
+    RLAST t=46388809 ns sau 473 beat
+    RLAST t=46388926 ns sau 475 beat
+    RLAST t=46389043 ns sau 477 beat
+    RLAST t=46389161 ns sau 479 beat
+    RLAST t=46389278 ns sau 481 beat
+    RLAST t=46389395 ns sau 483 beat
+    RLAST t=46389513 ns sau 485 beat
+    RLAST t=46389630 ns sau 487 beat
+    RLAST t=46389747 ns sau 489 beat
+    RLAST t=46389865 ns sau 491 beat
+    RLAST t=46389982 ns sau 493 beat
+    RLAST t=46390099 ns sau 495 beat
+    RLAST t=46390217 ns sau 497 beat
+    RLAST t=46390334 ns sau 499 beat
+    RLAST t=46390451 ns sau 501 beat
+    RLAST t=46390569 ns sau 503 beat
+    RLAST t=46390686 ns sau 505 beat
+    RLAST t=46390803 ns sau 507 beat
+    RLAST t=46390921 ns sau 509 beat
+    RLAST t=46391038 ns sau 511 beat
+    RLAST t=46391156 ns sau 513 beat
+    RLAST t=46391273 ns sau 515 beat
+    RLAST t=46391390 ns sau 517 beat
+    RLAST t=46391508 ns sau 519 beat
+    RLAST t=46391625 ns sau 521 beat
+    RLAST t=46391742 ns sau 523 beat
+    RLAST t=46391860 ns sau 525 beat
+    RLAST t=46391977 ns sau 527 beat
+    RLAST t=46392094 ns sau 529 beat
+    RLAST t=46392212 ns sau 531 beat
+    RLAST t=46392329 ns sau 533 beat
+    RLAST t=46392446 ns sau 535 beat
+    RLAST t=46392564 ns sau 537 beat
+    RLAST t=46392681 ns sau 539 beat
+    RLAST t=46392798 ns sau 541 beat
+    RLAST t=46392916 ns sau 543 beat
+    RLAST t=46393033 ns sau 545 beat
+    RLAST t=46393150 ns sau 547 beat
+    RLAST t=46393268 ns sau 549 beat
+    RLAST t=46393385 ns sau 551 beat
+    RLAST t=49593929 ns sau 553 beat
+[ 4]       H0723 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=3 obs=0 | 8.002 ms | AR hep=8 rong=101 beat=553 rerr=0 | mong doi VETO  fault=0x00  PASS
+    AR #1 t=50113855 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=50114170 ns sau 44 beat
+    AR #2 t=50114181 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=50114490 ns sau 88 beat
+    AR #3 t=50114501 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=50114816 ns sau 132 beat
+    AR #4 t=50114826 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=50115136 ns sau 176 beat
+    AR #5 t=50115146 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=50115461 ns sau 220 beat
+    AR #6 t=50115472 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=50115781 ns sau 264 beat
+    AR #7 t=50115792 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=50116106 ns sau 308 beat
+    AR #8 t=50116117 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=50116421 ns sau 351 beat
+    AR #9 t=54381071 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=54381167 ns sau 353 beat
+    AR #10 t=54381322 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=54381418 ns sau 355 beat
+    AR #11 t=54382000 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=54382096 ns sau 357 beat
+    AR #12 t=54382677 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=54382773 ns sau 359 beat
+    AR #13 t=54383354 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=54383450 ns sau 361 beat
+    AR #14 t=54384032 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=54384128 ns sau 363 beat
+    AR #15 t=54384709 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=54384805 ns sau 365 beat
+    AR #16 t=54385387 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=54385483 ns sau 367 beat
+    AR #17 t=54386064 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=54386160 ns sau 369 beat
+    AR #18 t=54386741 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=54386838 ns sau 371 beat
+    AR #19 t=54387419 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=54387515 ns sau 373 beat
+    AR #20 t=54388096 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=54388192 ns sau 375 beat
+    AR #21 t=54388774 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=54388870 ns sau 377 beat
+    AR #22 t=54389451 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=54389547 ns sau 379 beat
+    AR #23 t=54390129 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=54390225 ns sau 381 beat
+    RLAST t=54390902 ns sau 383 beat
+    RLAST t=54391579 ns sau 385 beat
+    RLAST t=54392257 ns sau 387 beat
+    RLAST t=54392934 ns sau 389 beat
+    RLAST t=54393612 ns sau 391 beat
+    RLAST t=54394289 ns sau 393 beat
+    RLAST t=54394967 ns sau 395 beat
+    RLAST t=54395644 ns sau 397 beat
+    RLAST t=54396321 ns sau 399 beat
+    RLAST t=54396999 ns sau 401 beat
+    RLAST t=54397676 ns sau 403 beat
+    RLAST t=54398354 ns sau 405 beat
+    RLAST t=54399031 ns sau 407 beat
+    RLAST t=54399708 ns sau 409 beat
+    RLAST t=54400386 ns sau 411 beat
+    RLAST t=54401063 ns sau 413 beat
+    RLAST t=54401741 ns sau 415 beat
+    RLAST t=54402418 ns sau 417 beat
+    RLAST t=54403096 ns sau 419 beat
+    RLAST t=54403773 ns sau 421 beat
+    RLAST t=54404450 ns sau 423 beat
+    RLAST t=54405128 ns sau 425 beat
+    RLAST t=54405805 ns sau 427 beat
+    RLAST t=54406483 ns sau 429 beat
+    RLAST t=54407160 ns sau 431 beat
+    RLAST t=54407837 ns sau 433 beat
+    RLAST t=54408515 ns sau 435 beat
+    RLAST t=54409192 ns sau 437 beat
+    RLAST t=54409870 ns sau 439 beat
+    RLAST t=54409987 ns sau 441 beat
+    RLAST t=54410104 ns sau 443 beat
+    RLAST t=54410222 ns sau 445 beat
+    RLAST t=54410339 ns sau 447 beat
+    RLAST t=54410456 ns sau 449 beat
+    RLAST t=54410574 ns sau 451 beat
+    RLAST t=54410691 ns sau 453 beat
+    RLAST t=54410809 ns sau 455 beat
+    RLAST t=54410926 ns sau 457 beat
+    RLAST t=54411043 ns sau 459 beat
+    RLAST t=54411161 ns sau 461 beat
+    RLAST t=54411278 ns sau 463 beat
+    RLAST t=54411395 ns sau 465 beat
+    RLAST t=54411513 ns sau 467 beat
+    RLAST t=54411630 ns sau 469 beat
+    RLAST t=54411747 ns sau 471 beat
+    RLAST t=54411865 ns sau 473 beat
+    RLAST t=54411982 ns sau 475 beat
+    RLAST t=54412099 ns sau 477 beat
+    RLAST t=54412217 ns sau 479 beat
+    RLAST t=54412334 ns sau 481 beat
+    RLAST t=54412451 ns sau 483 beat
+    RLAST t=54412569 ns sau 485 beat
+    RLAST t=54412686 ns sau 487 beat
+    RLAST t=54412803 ns sau 489 beat
+    RLAST t=54412921 ns sau 491 beat
+    RLAST t=54413038 ns sau 493 beat
+    RLAST t=54413155 ns sau 495 beat
+    RLAST t=54413273 ns sau 497 beat
+    RLAST t=54413390 ns sau 499 beat
+    RLAST t=54413508 ns sau 501 beat
+    RLAST t=54413625 ns sau 503 beat
+    RLAST t=54413742 ns sau 505 beat
+    RLAST t=54413860 ns sau 507 beat
+    RLAST t=54413977 ns sau 509 beat
+    RLAST t=54414094 ns sau 511 beat
+    RLAST t=54414212 ns sau 513 beat
+    RLAST t=54414329 ns sau 515 beat
+    RLAST t=54414446 ns sau 517 beat
+    RLAST t=54414564 ns sau 519 beat
+    RLAST t=54414681 ns sau 521 beat
+    RLAST t=54414798 ns sau 523 beat
+    RLAST t=54414916 ns sau 525 beat
+    RLAST t=54415033 ns sau 527 beat
+    RLAST t=54415150 ns sau 529 beat
+    RLAST t=54415268 ns sau 531 beat
+    RLAST t=54415385 ns sau 533 beat
+    RLAST t=54415502 ns sau 535 beat
+    RLAST t=54415620 ns sau 537 beat
+    RLAST t=54415737 ns sau 539 beat
+    RLAST t=54415854 ns sau 541 beat
+    RLAST t=54415972 ns sau 543 beat
+    RLAST t=54416089 ns sau 545 beat
+    RLAST t=54416207 ns sau 547 beat
+    RLAST t=54416324 ns sau 549 beat
+    RLAST t=54416441 ns sau 551 beat
+    RLAST t=57616985 ns sau 553 beat
+[ 5]       H0726 truoc start GPIO1=0x00000000 | GPIO1=0x01010002 -> VETO  fault=0x00 step=4 obs=0 | 8.002 ms | AR hep=8 rong=101 beat=553 rerr=0 | mong doi VETO  fault=0x00  PASS
+    AR #1 t=58136325 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=58136640 ns sau 44 beat
+    AR #2 t=58136650 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=58136960 ns sau 88 beat
+    AR #3 t=58136970 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=58137285 ns sau 132 beat
+    AR #4 t=58137296 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=58137605 ns sau 176 beat
+    AR #5 t=58137616 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=58137930 ns sau 220 beat
+    AR #6 t=58137941 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=58138250 ns sau 264 beat
+    AR #7 t=58138261 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=58138576 ns sau 308 beat
+    AR #8 t=58138586 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=58138890 ns sau 351 beat
+    AR #9 t=62403541 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=62403637 ns sau 353 beat
+    AR #10 t=62404218 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=62404314 ns sau 355 beat
+    AR #11 t=62404896 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=62404992 ns sau 357 beat
+    AR #12 t=62405573 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=62405669 ns sau 359 beat
+    AR #13 t=62406250 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=62406346 ns sau 361 beat
+    AR #14 t=62406928 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=62407024 ns sau 363 beat
+    AR #15 t=62407605 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=62407701 ns sau 365 beat
+    AR #16 t=62408283 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=62408379 ns sau 367 beat
+    AR #17 t=62408960 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=62409056 ns sau 369 beat
+    AR #18 t=62409638 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=62409734 ns sau 371 beat
+    AR #19 t=62410315 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=62410411 ns sau 373 beat
+    AR #20 t=62410992 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=62411088 ns sau 375 beat
+    AR #21 t=62411670 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=62411766 ns sau 377 beat
+    AR #22 t=62412347 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=62412443 ns sau 379 beat
+    AR #23 t=62412465 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=62412561 ns sau 381 beat
+    RLAST t=62412678 ns sau 383 beat
+    RLAST t=62412795 ns sau 385 beat
+    RLAST t=62412913 ns sau 387 beat
+    RLAST t=62413030 ns sau 389 beat
+    RLAST t=62413147 ns sau 391 beat
+    RLAST t=62413265 ns sau 393 beat
+    RLAST t=62413382 ns sau 395 beat
+    RLAST t=62413499 ns sau 397 beat
+    RLAST t=62413617 ns sau 399 beat
+    RLAST t=62413734 ns sau 401 beat
+    RLAST t=62413851 ns sau 403 beat
+    RLAST t=62413969 ns sau 405 beat
+    RLAST t=62414086 ns sau 407 beat
+    RLAST t=62414203 ns sau 409 beat
+    RLAST t=62414321 ns sau 411 beat
+    RLAST t=62414438 ns sau 413 beat
+    RLAST t=62414556 ns sau 415 beat
+    RLAST t=62414673 ns sau 417 beat
+    RLAST t=62414790 ns sau 419 beat
+    RLAST t=62414908 ns sau 421 beat
+    RLAST t=62415025 ns sau 423 beat
+    RLAST t=62415142 ns sau 425 beat
+    RLAST t=62415260 ns sau 427 beat
+    RLAST t=62415377 ns sau 429 beat
+    RLAST t=62415494 ns sau 431 beat
+    RLAST t=62415612 ns sau 433 beat
+    RLAST t=62415729 ns sau 435 beat
+    RLAST t=62415846 ns sau 437 beat
+    RLAST t=62415964 ns sau 439 beat
+    RLAST t=62416081 ns sau 441 beat
+    RLAST t=62416198 ns sau 443 beat
+    RLAST t=62416316 ns sau 445 beat
+    RLAST t=62416433 ns sau 447 beat
+    RLAST t=62416550 ns sau 449 beat
+    RLAST t=62416668 ns sau 451 beat
+    RLAST t=62416785 ns sau 453 beat
+    RLAST t=62416902 ns sau 455 beat
+    RLAST t=62417020 ns sau 457 beat
+    RLAST t=62417137 ns sau 459 beat
+    RLAST t=62417255 ns sau 461 beat
+    RLAST t=62417372 ns sau 463 beat
+    RLAST t=62417489 ns sau 465 beat
+    RLAST t=62417607 ns sau 467 beat
+    RLAST t=62417724 ns sau 469 beat
+    RLAST t=62417841 ns sau 471 beat
+    RLAST t=62417959 ns sau 473 beat
+    RLAST t=62418076 ns sau 475 beat
+    RLAST t=62418193 ns sau 477 beat
+    RLAST t=62418311 ns sau 479 beat
+    RLAST t=62418428 ns sau 481 beat
+    RLAST t=62418545 ns sau 483 beat
+    RLAST t=62418663 ns sau 485 beat
+    RLAST t=62418780 ns sau 487 beat
+    RLAST t=62418897 ns sau 489 beat
+    RLAST t=62419015 ns sau 491 beat
+    RLAST t=62419132 ns sau 493 beat
+    RLAST t=62419249 ns sau 495 beat
+    RLAST t=62419367 ns sau 497 beat
+    RLAST t=62419484 ns sau 499 beat
+    RLAST t=62419601 ns sau 501 beat
+    RLAST t=62419719 ns sau 503 beat
+    RLAST t=62419836 ns sau 505 beat
+    RLAST t=62419954 ns sau 507 beat
+    RLAST t=62420071 ns sau 509 beat
+    RLAST t=62420188 ns sau 511 beat
+    RLAST t=62420306 ns sau 513 beat
+    RLAST t=62420423 ns sau 515 beat
+    RLAST t=62420540 ns sau 517 beat
+    RLAST t=62420658 ns sau 519 beat
+    RLAST t=62420775 ns sau 521 beat
+    RLAST t=62420892 ns sau 523 beat
+    RLAST t=62421010 ns sau 525 beat
+    RLAST t=62421127 ns sau 527 beat
+    RLAST t=62421244 ns sau 529 beat
+    RLAST t=62421362 ns sau 531 beat
+    RLAST t=62421479 ns sau 533 beat
+    RLAST t=62421596 ns sau 535 beat
+    RLAST t=62421714 ns sau 537 beat
+    RLAST t=62421831 ns sau 539 beat
+    RLAST t=62421948 ns sau 541 beat
+    RLAST t=62422066 ns sau 543 beat
+    RLAST t=62422183 ns sau 545 beat
+    RLAST t=62422300 ns sau 547 beat
+    RLAST t=62422418 ns sau 549 beat
+    RLAST t=62422535 ns sau 551 beat
+[ 6]       H0102 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=66158794 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=66159109 ns sau 44 beat
+    AR #2 t=66159120 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=66159429 ns sau 88 beat
+    AR #3 t=66159440 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=66159754 ns sau 132 beat
+    AR #4 t=66159765 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=66160074 ns sau 176 beat
+    AR #5 t=66160085 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=66160400 ns sau 220 beat
+    AR #6 t=66160410 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=66160720 ns sau 264 beat
+    AR #7 t=66160730 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=66161045 ns sau 308 beat
+    AR #8 t=66161056 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=66161360 ns sau 351 beat
+    AR #9 t=70426010 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=70426106 ns sau 353 beat
+    AR #10 t=70426688 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=70426784 ns sau 355 beat
+    AR #11 t=70427365 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=70427461 ns sau 357 beat
+    AR #12 t=70428042 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=70428138 ns sau 359 beat
+    AR #13 t=70428720 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=70428816 ns sau 361 beat
+    AR #14 t=70429397 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=70429493 ns sau 363 beat
+    AR #15 t=70430075 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=70430171 ns sau 365 beat
+    AR #16 t=70430752 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=70430848 ns sau 367 beat
+    AR #17 t=70431429 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=70431526 ns sau 369 beat
+    AR #18 t=70432107 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=70432203 ns sau 371 beat
+    AR #19 t=70432784 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=70432880 ns sau 373 beat
+    AR #20 t=70433462 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=70433558 ns sau 375 beat
+    AR #21 t=70434139 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=70434235 ns sau 377 beat
+    AR #22 t=70434817 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=70434913 ns sau 379 beat
+    AR #23 t=70435494 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=70435590 ns sau 381 beat
+    RLAST t=70436267 ns sau 383 beat
+    RLAST t=70436945 ns sau 385 beat
+    RLAST t=70437622 ns sau 387 beat
+    RLAST t=70438300 ns sau 389 beat
+    RLAST t=70438977 ns sau 391 beat
+    RLAST t=70439655 ns sau 393 beat
+    RLAST t=70440332 ns sau 395 beat
+    RLAST t=70441009 ns sau 397 beat
+    RLAST t=70441687 ns sau 399 beat
+    RLAST t=70442364 ns sau 401 beat
+    RLAST t=70442482 ns sau 403 beat
+    RLAST t=70442599 ns sau 405 beat
+    RLAST t=70442716 ns sau 407 beat
+    RLAST t=70442834 ns sau 409 beat
+    RLAST t=70442951 ns sau 411 beat
+    RLAST t=70443068 ns sau 413 beat
+    RLAST t=70443186 ns sau 415 beat
+    RLAST t=70443303 ns sau 417 beat
+    RLAST t=70443420 ns sau 419 beat
+    RLAST t=70443538 ns sau 421 beat
+    RLAST t=70443655 ns sau 423 beat
+    RLAST t=70443772 ns sau 425 beat
+    RLAST t=70443890 ns sau 427 beat
+    RLAST t=70444007 ns sau 429 beat
+    RLAST t=70444124 ns sau 431 beat
+    RLAST t=70444242 ns sau 433 beat
+    RLAST t=70444359 ns sau 435 beat
+    RLAST t=70444476 ns sau 437 beat
+    RLAST t=70444594 ns sau 439 beat
+    RLAST t=70444711 ns sau 441 beat
+    RLAST t=70444829 ns sau 443 beat
+    RLAST t=70444946 ns sau 445 beat
+    RLAST t=70445063 ns sau 447 beat
+    RLAST t=70445181 ns sau 449 beat
+    RLAST t=70445298 ns sau 451 beat
+    RLAST t=70445415 ns sau 453 beat
+    RLAST t=70445533 ns sau 455 beat
+    RLAST t=70445650 ns sau 457 beat
+    RLAST t=70445767 ns sau 459 beat
+    RLAST t=70445885 ns sau 461 beat
+    RLAST t=70446002 ns sau 463 beat
+    RLAST t=70446119 ns sau 465 beat
+    RLAST t=70446237 ns sau 467 beat
+    RLAST t=70446354 ns sau 469 beat
+    RLAST t=70446471 ns sau 471 beat
+    RLAST t=70446589 ns sau 473 beat
+    RLAST t=70446706 ns sau 475 beat
+    RLAST t=70446823 ns sau 477 beat
+    RLAST t=70446941 ns sau 479 beat
+    RLAST t=70447058 ns sau 481 beat
+    RLAST t=70447175 ns sau 483 beat
+    RLAST t=70447293 ns sau 485 beat
+    RLAST t=70447410 ns sau 487 beat
+    RLAST t=70447528 ns sau 489 beat
+    RLAST t=70447645 ns sau 491 beat
+    RLAST t=70447762 ns sau 493 beat
+    RLAST t=70447880 ns sau 495 beat
+    RLAST t=70447997 ns sau 497 beat
+    RLAST t=70448114 ns sau 499 beat
+    RLAST t=70448232 ns sau 501 beat
+    RLAST t=70448349 ns sau 503 beat
+    RLAST t=70448466 ns sau 505 beat
+    RLAST t=70448584 ns sau 507 beat
+    RLAST t=70448701 ns sau 509 beat
+    RLAST t=70448818 ns sau 511 beat
+    RLAST t=70448936 ns sau 513 beat
+    RLAST t=70449053 ns sau 515 beat
+    RLAST t=70449170 ns sau 517 beat
+    RLAST t=70449288 ns sau 519 beat
+    RLAST t=70449405 ns sau 521 beat
+    RLAST t=70449522 ns sau 523 beat
+    RLAST t=70449640 ns sau 525 beat
+    RLAST t=70449757 ns sau 527 beat
+    RLAST t=70449874 ns sau 529 beat
+    RLAST t=70449992 ns sau 531 beat
+    RLAST t=70450109 ns sau 533 beat
+    RLAST t=70450227 ns sau 535 beat
+    RLAST t=70450344 ns sau 537 beat
+    RLAST t=70450461 ns sau 539 beat
+    RLAST t=70450579 ns sau 541 beat
+    RLAST t=70450696 ns sau 543 beat
+    RLAST t=70450813 ns sau 545 beat
+    RLAST t=70450931 ns sau 547 beat
+    RLAST t=70451048 ns sau 549 beat
+    RLAST t=70451165 ns sau 551 beat
+[ 7]       H0199 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=74181263 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=74181578 ns sau 44 beat
+    AR #2 t=74181589 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=74181898 ns sau 88 beat
+    AR #3 t=74181909 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=74182224 ns sau 132 beat
+    AR #4 t=74182234 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=74182544 ns sau 176 beat
+    AR #5 t=74182554 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=74182869 ns sau 220 beat
+    AR #6 t=74182880 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=74183189 ns sau 264 beat
+    AR #7 t=74183200 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=74183514 ns sau 308 beat
+    AR #8 t=74183525 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=74183829 ns sau 351 beat
+    AR #9 t=78448480 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=78448576 ns sau 353 beat
+    AR #10 t=78449157 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=78449253 ns sau 355 beat
+    AR #11 t=78449834 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=78449930 ns sau 357 beat
+    AR #12 t=78450512 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=78450608 ns sau 359 beat
+    AR #13 t=78451189 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=78451285 ns sau 361 beat
+    AR #14 t=78451867 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=78451963 ns sau 363 beat
+    AR #15 t=78452544 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=78452640 ns sau 365 beat
+    AR #16 t=78453221 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=78453317 ns sau 367 beat
+    AR #17 t=78453899 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=78453995 ns sau 369 beat
+    AR #18 t=78454576 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=78454672 ns sau 371 beat
+    AR #19 t=78455254 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=78455350 ns sau 373 beat
+    AR #20 t=78455931 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=78456027 ns sau 375 beat
+    AR #21 t=78456048 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=78456144 ns sau 377 beat
+    AR #22 t=78456166 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=78456262 ns sau 379 beat
+    AR #23 t=78456283 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=78456379 ns sau 381 beat
+    RLAST t=78456497 ns sau 383 beat
+    RLAST t=78456614 ns sau 385 beat
+    RLAST t=78456731 ns sau 387 beat
+    RLAST t=78456849 ns sau 389 beat
+    RLAST t=78456966 ns sau 391 beat
+    RLAST t=78457083 ns sau 393 beat
+    RLAST t=78457201 ns sau 395 beat
+    RLAST t=78457318 ns sau 397 beat
+    RLAST t=78457435 ns sau 399 beat
+    RLAST t=78457553 ns sau 401 beat
+    RLAST t=78457670 ns sau 403 beat
+    RLAST t=78457787 ns sau 405 beat
+    RLAST t=78457905 ns sau 407 beat
+    RLAST t=78458022 ns sau 409 beat
+    RLAST t=78458139 ns sau 411 beat
+    RLAST t=78458257 ns sau 413 beat
+    RLAST t=78458374 ns sau 415 beat
+    RLAST t=78458491 ns sau 417 beat
+    RLAST t=78458609 ns sau 419 beat
+    RLAST t=78458726 ns sau 421 beat
+    RLAST t=78458843 ns sau 423 beat
+    RLAST t=78458961 ns sau 425 beat
+    RLAST t=78459078 ns sau 427 beat
+    RLAST t=78459196 ns sau 429 beat
+    RLAST t=78459313 ns sau 431 beat
+    RLAST t=78459430 ns sau 433 beat
+    RLAST t=78459548 ns sau 435 beat
+    RLAST t=78459665 ns sau 437 beat
+    RLAST t=78459782 ns sau 439 beat
+    RLAST t=78459900 ns sau 441 beat
+    RLAST t=78460017 ns sau 443 beat
+    RLAST t=78460134 ns sau 445 beat
+    RLAST t=78460252 ns sau 447 beat
+    RLAST t=78460369 ns sau 449 beat
+    RLAST t=78460486 ns sau 451 beat
+    RLAST t=78460604 ns sau 453 beat
+    RLAST t=78460721 ns sau 455 beat
+    RLAST t=78460838 ns sau 457 beat
+    RLAST t=78460956 ns sau 459 beat
+    RLAST t=78461073 ns sau 461 beat
+    RLAST t=78461190 ns sau 463 beat
+    RLAST t=78461308 ns sau 465 beat
+    RLAST t=78461425 ns sau 467 beat
+    RLAST t=78461542 ns sau 469 beat
+    RLAST t=78461660 ns sau 471 beat
+    RLAST t=78461777 ns sau 473 beat
+    RLAST t=78461895 ns sau 475 beat
+    RLAST t=78462012 ns sau 477 beat
+    RLAST t=78462129 ns sau 479 beat
+    RLAST t=78462247 ns sau 481 beat
+    RLAST t=78462364 ns sau 483 beat
+    RLAST t=78462481 ns sau 485 beat
+    RLAST t=78462599 ns sau 487 beat
+    RLAST t=78462716 ns sau 489 beat
+    RLAST t=78462833 ns sau 491 beat
+    RLAST t=78462951 ns sau 493 beat
+    RLAST t=78463068 ns sau 495 beat
+    RLAST t=78463185 ns sau 497 beat
+    RLAST t=78463303 ns sau 499 beat
+    RLAST t=78463420 ns sau 501 beat
+    RLAST t=78463537 ns sau 503 beat
+    RLAST t=78463655 ns sau 505 beat
+    RLAST t=78463772 ns sau 507 beat
+    RLAST t=78463889 ns sau 509 beat
+    RLAST t=78464007 ns sau 511 beat
+    RLAST t=78464124 ns sau 513 beat
+    RLAST t=78464241 ns sau 515 beat
+    RLAST t=78464359 ns sau 517 beat
+    RLAST t=78464476 ns sau 519 beat
+    RLAST t=78464594 ns sau 521 beat
+    RLAST t=78464711 ns sau 523 beat
+    RLAST t=78464828 ns sau 525 beat
+    RLAST t=78464946 ns sau 527 beat
+    RLAST t=78465063 ns sau 529 beat
+    RLAST t=78465180 ns sau 531 beat
+    RLAST t=78465298 ns sau 533 beat
+    RLAST t=78465415 ns sau 535 beat
+    RLAST t=78465532 ns sau 537 beat
+    RLAST t=78465650 ns sau 539 beat
+    RLAST t=78465767 ns sau 541 beat
+    RLAST t=78465884 ns sau 543 beat
+    RLAST t=78466002 ns sau 545 beat
+    RLAST t=78466119 ns sau 547 beat
+    RLAST t=78466236 ns sau 549 beat
+    RLAST t=78466354 ns sau 551 beat
+[ 8]       H0296 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=82203733 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=82204048 ns sau 44 beat
+    AR #2 t=82204058 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=82204368 ns sau 88 beat
+    AR #3 t=82204378 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=82204693 ns sau 132 beat
+    AR #4 t=82204704 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=82205013 ns sau 176 beat
+    AR #5 t=82205024 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=82205338 ns sau 220 beat
+    AR #6 t=82205349 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=82205658 ns sau 264 beat
+    AR #7 t=82205669 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=82205984 ns sau 308 beat
+    AR #8 t=82205994 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=82206299 ns sau 351 beat
+    AR #9 t=86470949 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=86471045 ns sau 353 beat
+    AR #10 t=86471626 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=86471722 ns sau 355 beat
+    AR #11 t=86472304 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=86472400 ns sau 357 beat
+    AR #12 t=86472421 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=86472517 ns sau 359 beat
+    AR #13 t=86472538 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=86472634 ns sau 361 beat
+    AR #14 t=86472656 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=86472752 ns sau 363 beat
+    AR #15 t=86472773 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=86472869 ns sau 365 beat
+    AR #16 t=86472890 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=86472986 ns sau 367 beat
+    AR #17 t=86473008 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=86473104 ns sau 369 beat
+    AR #18 t=86473125 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=86473221 ns sau 371 beat
+    AR #19 t=86473242 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=86473338 ns sau 373 beat
+    AR #20 t=86473360 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=86473456 ns sau 375 beat
+    AR #21 t=86473477 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=86473573 ns sau 377 beat
+    AR #22 t=86473595 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=86473691 ns sau 379 beat
+    AR #23 t=86473712 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=86473808 ns sau 381 beat
+    RLAST t=86473925 ns sau 383 beat
+    RLAST t=86474043 ns sau 385 beat
+    RLAST t=86474160 ns sau 387 beat
+    RLAST t=86474277 ns sau 389 beat
+    RLAST t=86474395 ns sau 391 beat
+    RLAST t=86474512 ns sau 393 beat
+    RLAST t=86474629 ns sau 395 beat
+    RLAST t=86474747 ns sau 397 beat
+    RLAST t=86474864 ns sau 399 beat
+    RLAST t=86474981 ns sau 401 beat
+    RLAST t=86475099 ns sau 403 beat
+    RLAST t=86475216 ns sau 405 beat
+    RLAST t=86475333 ns sau 407 beat
+    RLAST t=86475451 ns sau 409 beat
+    RLAST t=86475568 ns sau 411 beat
+    RLAST t=86475685 ns sau 413 beat
+    RLAST t=86475803 ns sau 415 beat
+    RLAST t=86475920 ns sau 417 beat
+    RLAST t=86476037 ns sau 419 beat
+    RLAST t=86476155 ns sau 421 beat
+    RLAST t=86476272 ns sau 423 beat
+    RLAST t=86476390 ns sau 425 beat
+    RLAST t=86476507 ns sau 427 beat
+    RLAST t=86476624 ns sau 429 beat
+    RLAST t=86476742 ns sau 431 beat
+    RLAST t=86476859 ns sau 433 beat
+    RLAST t=86476976 ns sau 435 beat
+    RLAST t=86477094 ns sau 437 beat
+    RLAST t=86477211 ns sau 439 beat
+    RLAST t=86477328 ns sau 441 beat
+    RLAST t=86477446 ns sau 443 beat
+    RLAST t=86477563 ns sau 445 beat
+    RLAST t=86477680 ns sau 447 beat
+    RLAST t=86477798 ns sau 449 beat
+    RLAST t=86477915 ns sau 451 beat
+    RLAST t=86478032 ns sau 453 beat
+    RLAST t=86478150 ns sau 455 beat
+    RLAST t=86478267 ns sau 457 beat
+    RLAST t=86478384 ns sau 459 beat
+    RLAST t=86478502 ns sau 461 beat
+    RLAST t=86478619 ns sau 463 beat
+    RLAST t=86478736 ns sau 465 beat
+    RLAST t=86478854 ns sau 467 beat
+    RLAST t=86478971 ns sau 469 beat
+    RLAST t=86479089 ns sau 471 beat
+    RLAST t=86479206 ns sau 473 beat
+    RLAST t=86479323 ns sau 475 beat
+    RLAST t=86479441 ns sau 477 beat
+    RLAST t=86479558 ns sau 479 beat
+    RLAST t=86479675 ns sau 481 beat
+    RLAST t=86479793 ns sau 483 beat
+    RLAST t=86479910 ns sau 485 beat
+    RLAST t=86480027 ns sau 487 beat
+    RLAST t=86480145 ns sau 489 beat
+    RLAST t=86480262 ns sau 491 beat
+    RLAST t=86480379 ns sau 493 beat
+    RLAST t=86480497 ns sau 495 beat
+    RLAST t=86480614 ns sau 497 beat
+    RLAST t=86480731 ns sau 499 beat
+    RLAST t=86480849 ns sau 501 beat
+    RLAST t=86480966 ns sau 503 beat
+    RLAST t=86481083 ns sau 505 beat
+    RLAST t=86481201 ns sau 507 beat
+    RLAST t=86481318 ns sau 509 beat
+    RLAST t=86481435 ns sau 511 beat
+    RLAST t=86481553 ns sau 513 beat
+    RLAST t=86481670 ns sau 515 beat
+    RLAST t=86481788 ns sau 517 beat
+    RLAST t=86481905 ns sau 519 beat
+    RLAST t=86482022 ns sau 521 beat
+    RLAST t=86482140 ns sau 523 beat
+    RLAST t=86482257 ns sau 525 beat
+    RLAST t=86482374 ns sau 527 beat
+    RLAST t=86482492 ns sau 529 beat
+    RLAST t=86482609 ns sau 531 beat
+    RLAST t=86482726 ns sau 533 beat
+    RLAST t=86482844 ns sau 535 beat
+    RLAST t=86482961 ns sau 537 beat
+    RLAST t=86483078 ns sau 539 beat
+    RLAST t=86483196 ns sau 541 beat
+    RLAST t=86483313 ns sau 543 beat
+    RLAST t=86483430 ns sau 545 beat
+    RLAST t=86483548 ns sau 547 beat
+    RLAST t=86483665 ns sau 549 beat
+    RLAST t=86483782 ns sau 551 beat
+[ 9]       H0393 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=90226202 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=90226517 ns sau 44 beat
+    AR #2 t=90226528 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=90226837 ns sau 88 beat
+    AR #3 t=90226848 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=90227162 ns sau 132 beat
+    AR #4 t=90227173 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=90227482 ns sau 176 beat
+    AR #5 t=90227493 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=90227808 ns sau 220 beat
+    AR #6 t=90227818 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=90228128 ns sau 264 beat
+    AR #7 t=90228138 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=90228453 ns sau 308 beat
+    AR #8 t=90228464 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=90228768 ns sau 351 beat
+    AR #9 t=94493418 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=94493514 ns sau 353 beat
+    AR #10 t=94494096 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=94494192 ns sau 355 beat
+    AR #11 t=94494773 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=94494869 ns sau 357 beat
+    AR #12 t=94495450 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=94495546 ns sau 359 beat
+    AR #13 t=94496128 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=94496224 ns sau 361 beat
+    AR #14 t=94496805 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=94496901 ns sau 363 beat
+    AR #15 t=94497483 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=94497579 ns sau 365 beat
+    AR #16 t=94498160 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=94498256 ns sau 367 beat
+    AR #17 t=94498838 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=94498934 ns sau 369 beat
+    AR #18 t=94499515 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=94499611 ns sau 371 beat
+    AR #19 t=94500192 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=94500288 ns sau 373 beat
+    AR #20 t=94500870 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=94500966 ns sau 375 beat
+    AR #21 t=94501547 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=94501643 ns sau 377 beat
+    AR #22 t=94502225 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=94502321 ns sau 379 beat
+    AR #23 t=94502902 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=94502998 ns sau 381 beat
+    RLAST t=94503675 ns sau 383 beat
+    RLAST t=94504353 ns sau 385 beat
+    RLAST t=94505030 ns sau 387 beat
+    RLAST t=94505708 ns sau 389 beat
+    RLAST t=94506385 ns sau 391 beat
+    RLAST t=94507063 ns sau 393 beat
+    RLAST t=94507740 ns sau 395 beat
+    RLAST t=94508417 ns sau 397 beat
+    RLAST t=94509095 ns sau 399 beat
+    RLAST t=94509772 ns sau 401 beat
+    RLAST t=94510450 ns sau 403 beat
+    RLAST t=94511127 ns sau 405 beat
+    RLAST t=94511804 ns sau 407 beat
+    RLAST t=94512482 ns sau 409 beat
+    RLAST t=94513159 ns sau 411 beat
+    RLAST t=94513837 ns sau 413 beat
+    RLAST t=94514514 ns sau 415 beat
+    RLAST t=94514632 ns sau 417 beat
+    RLAST t=94514749 ns sau 419 beat
+    RLAST t=94514866 ns sau 421 beat
+    RLAST t=94514984 ns sau 423 beat
+    RLAST t=94515101 ns sau 425 beat
+    RLAST t=94515218 ns sau 427 beat
+    RLAST t=94515336 ns sau 429 beat
+    RLAST t=94515453 ns sau 431 beat
+    RLAST t=94515570 ns sau 433 beat
+    RLAST t=94515688 ns sau 435 beat
+    RLAST t=94515805 ns sau 437 beat
+    RLAST t=94515922 ns sau 439 beat
+    RLAST t=94516040 ns sau 441 beat
+    RLAST t=94516157 ns sau 443 beat
+    RLAST t=94516274 ns sau 445 beat
+    RLAST t=94516392 ns sau 447 beat
+    RLAST t=94516509 ns sau 449 beat
+    RLAST t=94516626 ns sau 451 beat
+    RLAST t=94516744 ns sau 453 beat
+    RLAST t=94516861 ns sau 455 beat
+    RLAST t=94516978 ns sau 457 beat
+    RLAST t=94517096 ns sau 459 beat
+    RLAST t=94517213 ns sau 461 beat
+    RLAST t=94517331 ns sau 463 beat
+    RLAST t=94517448 ns sau 465 beat
+    RLAST t=94517565 ns sau 467 beat
+    RLAST t=94517683 ns sau 469 beat
+    RLAST t=94517800 ns sau 471 beat
+    RLAST t=94517917 ns sau 473 beat
+    RLAST t=94518035 ns sau 475 beat
+    RLAST t=94518152 ns sau 477 beat
+    RLAST t=94518269 ns sau 479 beat
+    RLAST t=94518387 ns sau 481 beat
+    RLAST t=94518504 ns sau 483 beat
+    RLAST t=94518621 ns sau 485 beat
+    RLAST t=94518739 ns sau 487 beat
+    RLAST t=94518856 ns sau 489 beat
+    RLAST t=94518973 ns sau 491 beat
+    RLAST t=94519091 ns sau 493 beat
+    RLAST t=94519208 ns sau 495 beat
+    RLAST t=94519325 ns sau 497 beat
+    RLAST t=94519443 ns sau 499 beat
+    RLAST t=94519560 ns sau 501 beat
+    RLAST t=94519677 ns sau 503 beat
+    RLAST t=94519795 ns sau 505 beat
+    RLAST t=94519912 ns sau 507 beat
+    RLAST t=94520030 ns sau 509 beat
+    RLAST t=94520147 ns sau 511 beat
+    RLAST t=94520264 ns sau 513 beat
+    RLAST t=94520382 ns sau 515 beat
+    RLAST t=94520499 ns sau 517 beat
+    RLAST t=94520616 ns sau 519 beat
+    RLAST t=94520734 ns sau 521 beat
+    RLAST t=94520851 ns sau 523 beat
+    RLAST t=94520968 ns sau 525 beat
+    RLAST t=94521086 ns sau 527 beat
+    RLAST t=94521203 ns sau 529 beat
+    RLAST t=94521320 ns sau 531 beat
+    RLAST t=94521438 ns sau 533 beat
+    RLAST t=94521555 ns sau 535 beat
+    RLAST t=94521672 ns sau 537 beat
+    RLAST t=94521790 ns sau 539 beat
+    RLAST t=94521907 ns sau 541 beat
+    RLAST t=94522024 ns sau 543 beat
+    RLAST t=94522142 ns sau 545 beat
+    RLAST t=94522259 ns sau 547 beat
+    RLAST t=94522376 ns sau 549 beat
+    RLAST t=94522494 ns sau 551 beat
+[10]       H0490 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=98248677 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=98248992 ns sau 44 beat
+    AR #2 t=98249002 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=98249312 ns sau 88 beat
+    AR #3 t=98249322 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=98249637 ns sau 132 beat
+    AR #4 t=98249648 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=98249957 ns sau 176 beat
+    AR #5 t=98249968 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=98250282 ns sau 220 beat
+    AR #6 t=98250293 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=98250602 ns sau 264 beat
+    AR #7 t=98250613 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=98250928 ns sau 308 beat
+    AR #8 t=98250938 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=98251243 ns sau 351 beat
+    AR #9 t=102515893 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=102515989 ns sau 353 beat
+    AR #10 t=102516570 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=102516666 ns sau 355 beat
+    AR #11 t=102517248 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=102517344 ns sau 357 beat
+    AR #12 t=102517925 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=102518021 ns sau 359 beat
+    AR #13 t=102518603 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=102518699 ns sau 361 beat
+    AR #14 t=102519280 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=102519376 ns sau 363 beat
+    AR #15 t=102519957 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=102520053 ns sau 365 beat
+    AR #16 t=102520635 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=102520731 ns sau 367 beat
+    AR #17 t=102521312 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=102521408 ns sau 369 beat
+    AR #18 t=102521990 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=102522086 ns sau 371 beat
+    AR #19 t=102522667 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=102522763 ns sau 373 beat
+    AR #20 t=102523344 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=102523440 ns sau 375 beat
+    AR #21 t=102524022 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=102524118 ns sau 377 beat
+    AR #22 t=102524699 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=102524795 ns sau 379 beat
+    AR #23 t=102525377 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=102525473 ns sau 381 beat
+    RLAST t=102526150 ns sau 383 beat
+    RLAST t=102526828 ns sau 385 beat
+    RLAST t=102527505 ns sau 387 beat
+    RLAST t=102528182 ns sau 389 beat
+    RLAST t=102528860 ns sau 391 beat
+    RLAST t=102529537 ns sau 393 beat
+    RLAST t=102530215 ns sau 395 beat
+    RLAST t=102530892 ns sau 397 beat
+    RLAST t=102531570 ns sau 399 beat
+    RLAST t=102532247 ns sau 401 beat
+    RLAST t=102532924 ns sau 403 beat
+    RLAST t=102533602 ns sau 405 beat
+    RLAST t=102534279 ns sau 407 beat
+    RLAST t=102534957 ns sau 409 beat
+    RLAST t=102535634 ns sau 411 beat
+    RLAST t=102536311 ns sau 413 beat
+    RLAST t=102536989 ns sau 415 beat
+    RLAST t=102537666 ns sau 417 beat
+    RLAST t=102537784 ns sau 419 beat
+    RLAST t=102537901 ns sau 421 beat
+    RLAST t=102538018 ns sau 423 beat
+    RLAST t=102538136 ns sau 425 beat
+    RLAST t=102538253 ns sau 427 beat
+    RLAST t=102538370 ns sau 429 beat
+    RLAST t=102538488 ns sau 431 beat
+    RLAST t=102538605 ns sau 433 beat
+    RLAST t=102538722 ns sau 435 beat
+    RLAST t=102538840 ns sau 437 beat
+    RLAST t=102538957 ns sau 439 beat
+    RLAST t=102539074 ns sau 441 beat
+    RLAST t=102539192 ns sau 443 beat
+    RLAST t=102539309 ns sau 445 beat
+    RLAST t=102539426 ns sau 447 beat
+    RLAST t=102539544 ns sau 449 beat
+    RLAST t=102539661 ns sau 451 beat
+    RLAST t=102539779 ns sau 453 beat
+    RLAST t=102539896 ns sau 455 beat
+    RLAST t=102540013 ns sau 457 beat
+    RLAST t=102540131 ns sau 459 beat
+    RLAST t=102540248 ns sau 461 beat
+    RLAST t=102540365 ns sau 463 beat
+    RLAST t=102540483 ns sau 465 beat
+    RLAST t=102540600 ns sau 467 beat
+    RLAST t=102540717 ns sau 469 beat
+    RLAST t=102540835 ns sau 471 beat
+    RLAST t=102540952 ns sau 473 beat
+    RLAST t=102541069 ns sau 475 beat
+    RLAST t=102541187 ns sau 477 beat
+    RLAST t=102541304 ns sau 479 beat
+    RLAST t=102541421 ns sau 481 beat
+    RLAST t=102541539 ns sau 483 beat
+    RLAST t=102541656 ns sau 485 beat
+    RLAST t=102541773 ns sau 487 beat
+    RLAST t=102541891 ns sau 489 beat
+    RLAST t=102542008 ns sau 491 beat
+    RLAST t=102542125 ns sau 493 beat
+    RLAST t=102542243 ns sau 495 beat
+    RLAST t=102542360 ns sau 497 beat
+    RLAST t=102542478 ns sau 499 beat
+    RLAST t=102542595 ns sau 501 beat
+    RLAST t=102542712 ns sau 503 beat
+    RLAST t=102542830 ns sau 505 beat
+    RLAST t=102542947 ns sau 507 beat
+    RLAST t=102543064 ns sau 509 beat
+    RLAST t=102543182 ns sau 511 beat
+    RLAST t=102543299 ns sau 513 beat
+    RLAST t=102543416 ns sau 515 beat
+    RLAST t=102543534 ns sau 517 beat
+    RLAST t=102543651 ns sau 519 beat
+    RLAST t=102543768 ns sau 521 beat
+    RLAST t=102543886 ns sau 523 beat
+    RLAST t=102544003 ns sau 525 beat
+    RLAST t=102544120 ns sau 527 beat
+    RLAST t=102544238 ns sau 529 beat
+    RLAST t=102544355 ns sau 531 beat
+    RLAST t=102544472 ns sau 533 beat
+    RLAST t=102544590 ns sau 535 beat
+    RLAST t=102544707 ns sau 537 beat
+    RLAST t=102544825 ns sau 539 beat
+    RLAST t=102544942 ns sau 541 beat
+    RLAST t=102545059 ns sau 543 beat
+    RLAST t=102545177 ns sau 545 beat
+    RLAST t=102545294 ns sau 547 beat
+    RLAST t=102545411 ns sau 549 beat
+    RLAST t=102545529 ns sau 551 beat
+[11]       H0587 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=106271146 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=106271461 ns sau 44 beat
+    AR #2 t=106271472 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=106271781 ns sau 88 beat
+    AR #3 t=106271792 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=106272106 ns sau 132 beat
+    AR #4 t=106272117 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=106272426 ns sau 176 beat
+    AR #5 t=106272437 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=106272752 ns sau 220 beat
+    AR #6 t=106272762 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=106273072 ns sau 264 beat
+    AR #7 t=106273082 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=106273397 ns sau 308 beat
+    AR #8 t=106273408 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=106273712 ns sau 351 beat
+    AR #9 t=110538362 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=110538458 ns sau 353 beat
+    AR #10 t=110539040 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=110539136 ns sau 355 beat
+    AR #11 t=110539717 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=110539813 ns sau 357 beat
+    AR #12 t=110540394 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=110540491 ns sau 359 beat
+    AR #13 t=110541072 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=110541168 ns sau 361 beat
+    AR #14 t=110541749 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=110541845 ns sau 363 beat
+    AR #15 t=110542427 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=110542523 ns sau 365 beat
+    AR #16 t=110543104 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=110543200 ns sau 367 beat
+    AR #17 t=110543782 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=110543878 ns sau 369 beat
+    AR #18 t=110544459 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=110544555 ns sau 371 beat
+    AR #19 t=110545136 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=110545232 ns sau 373 beat
+    AR #20 t=110545814 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=110545910 ns sau 375 beat
+    AR #21 t=110546491 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=110546587 ns sau 377 beat
+    AR #22 t=110547169 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=110547265 ns sau 379 beat
+    AR #23 t=110547846 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=110547942 ns sau 381 beat
+    RLAST t=110548620 ns sau 383 beat
+    RLAST t=110549297 ns sau 385 beat
+    RLAST t=110549974 ns sau 387 beat
+    RLAST t=110550652 ns sau 389 beat
+    RLAST t=110551329 ns sau 391 beat
+    RLAST t=110552007 ns sau 393 beat
+    RLAST t=110552684 ns sau 395 beat
+    RLAST t=110553361 ns sau 397 beat
+    RLAST t=110554039 ns sau 399 beat
+    RLAST t=110554716 ns sau 401 beat
+    RLAST t=110555394 ns sau 403 beat
+    RLAST t=110556071 ns sau 405 beat
+    RLAST t=110556749 ns sau 407 beat
+    RLAST t=110557426 ns sau 409 beat
+    RLAST t=110558103 ns sau 411 beat
+    RLAST t=110558781 ns sau 413 beat
+    RLAST t=110559458 ns sau 415 beat
+    RLAST t=110560136 ns sau 417 beat
+    RLAST t=110560813 ns sau 419 beat
+    RLAST t=110561490 ns sau 421 beat
+    RLAST t=110562168 ns sau 423 beat
+    RLAST t=110562845 ns sau 425 beat
+    RLAST t=110563523 ns sau 427 beat
+    RLAST t=110564200 ns sau 429 beat
+    RLAST t=110564878 ns sau 431 beat
+    RLAST t=110565555 ns sau 433 beat
+    RLAST t=110566232 ns sau 435 beat
+    RLAST t=110566910 ns sau 437 beat
+    RLAST t=110567587 ns sau 439 beat
+    RLAST t=110567705 ns sau 441 beat
+    RLAST t=110567822 ns sau 443 beat
+    RLAST t=110567939 ns sau 445 beat
+    RLAST t=110568057 ns sau 447 beat
+    RLAST t=110568174 ns sau 449 beat
+    RLAST t=110568291 ns sau 451 beat
+    RLAST t=110568409 ns sau 453 beat
+    RLAST t=110568526 ns sau 455 beat
+    RLAST t=110568643 ns sau 457 beat
+    RLAST t=110568761 ns sau 459 beat
+    RLAST t=110568878 ns sau 461 beat
+    RLAST t=110568995 ns sau 463 beat
+    RLAST t=110569113 ns sau 465 beat
+    RLAST t=110569230 ns sau 467 beat
+    RLAST t=110569347 ns sau 469 beat
+    RLAST t=110569465 ns sau 471 beat
+    RLAST t=110569582 ns sau 473 beat
+    RLAST t=110569699 ns sau 475 beat
+    RLAST t=110569817 ns sau 477 beat
+    RLAST t=110569934 ns sau 479 beat
+    RLAST t=110570052 ns sau 481 beat
+    RLAST t=110570169 ns sau 483 beat
+    RLAST t=110570286 ns sau 485 beat
+    RLAST t=110570404 ns sau 487 beat
+    RLAST t=110570521 ns sau 489 beat
+    RLAST t=110570638 ns sau 491 beat
+    RLAST t=110570756 ns sau 493 beat
+    RLAST t=110570873 ns sau 495 beat
+    RLAST t=110570990 ns sau 497 beat
+    RLAST t=110571108 ns sau 499 beat
+    RLAST t=110571225 ns sau 501 beat
+    RLAST t=110571342 ns sau 503 beat
+    RLAST t=110571460 ns sau 505 beat
+    RLAST t=110571577 ns sau 507 beat
+    RLAST t=110571694 ns sau 509 beat
+    RLAST t=110571812 ns sau 511 beat
+    RLAST t=110571929 ns sau 513 beat
+    RLAST t=110572046 ns sau 515 beat
+    RLAST t=110572164 ns sau 517 beat
+    RLAST t=110572281 ns sau 519 beat
+    RLAST t=110572398 ns sau 521 beat
+    RLAST t=110572516 ns sau 523 beat
+    RLAST t=110572633 ns sau 525 beat
+    RLAST t=110572751 ns sau 527 beat
+    RLAST t=110572868 ns sau 529 beat
+    RLAST t=110572985 ns sau 531 beat
+    RLAST t=110573103 ns sau 533 beat
+    RLAST t=110573220 ns sau 535 beat
+    RLAST t=110573337 ns sau 537 beat
+    RLAST t=110573455 ns sau 539 beat
+    RLAST t=110573572 ns sau 541 beat
+    RLAST t=110573689 ns sau 543 beat
+    RLAST t=110573807 ns sau 545 beat
+    RLAST t=110573924 ns sau 547 beat
+    RLAST t=110574041 ns sau 549 beat
+    RLAST t=110574159 ns sau 551 beat
+[12]       G0007 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=114293616 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=114293930 ns sau 44 beat
+    AR #2 t=114293941 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=114294250 ns sau 88 beat
+    AR #3 t=114294261 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=114294576 ns sau 132 beat
+    AR #4 t=114294586 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=114294896 ns sau 176 beat
+    AR #5 t=114294906 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=114295221 ns sau 220 beat
+    AR #6 t=114295232 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=114295541 ns sau 264 beat
+    AR #7 t=114295552 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=114295867 ns sau 308 beat
+    AR #8 t=114295877 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=114296181 ns sau 351 beat
+    AR #9 t=118560832 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=118560928 ns sau 353 beat
+    AR #10 t=118561509 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=118561605 ns sau 355 beat
+    AR #11 t=118562186 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=118562282 ns sau 357 beat
+    AR #12 t=118562864 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=118562960 ns sau 359 beat
+    AR #13 t=118563541 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=118563637 ns sau 361 beat
+    AR #14 t=118564219 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=118564315 ns sau 363 beat
+    AR #15 t=118564896 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=118564992 ns sau 365 beat
+    AR #16 t=118565574 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=118565670 ns sau 367 beat
+    AR #17 t=118566251 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=118566347 ns sau 369 beat
+    AR #18 t=118566928 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=118567024 ns sau 371 beat
+    AR #19 t=118567606 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=118567702 ns sau 373 beat
+    AR #20 t=118568283 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=118568379 ns sau 375 beat
+    AR #21 t=118568961 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=118569057 ns sau 377 beat
+    AR #22 t=118569638 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=118569734 ns sau 379 beat
+    AR #23 t=118570315 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=118570411 ns sau 381 beat
+    RLAST t=118571089 ns sau 383 beat
+    RLAST t=118571766 ns sau 385 beat
+    RLAST t=118572444 ns sau 387 beat
+    RLAST t=118573121 ns sau 389 beat
+    RLAST t=118573799 ns sau 391 beat
+    RLAST t=118574476 ns sau 393 beat
+    RLAST t=118575153 ns sau 395 beat
+    RLAST t=118575831 ns sau 397 beat
+    RLAST t=118576508 ns sau 399 beat
+    RLAST t=118577186 ns sau 401 beat
+    RLAST t=118577863 ns sau 403 beat
+    RLAST t=118578540 ns sau 405 beat
+    RLAST t=118579218 ns sau 407 beat
+    RLAST t=118579895 ns sau 409 beat
+    RLAST t=118580573 ns sau 411 beat
+    RLAST t=118581250 ns sau 413 beat
+    RLAST t=118581928 ns sau 415 beat
+    RLAST t=118582605 ns sau 417 beat
+    RLAST t=118583282 ns sau 419 beat
+    RLAST t=118583960 ns sau 421 beat
+    RLAST t=118584637 ns sau 423 beat
+    RLAST t=118584755 ns sau 425 beat
+    RLAST t=118584872 ns sau 427 beat
+    RLAST t=118584989 ns sau 429 beat
+    RLAST t=118585107 ns sau 431 beat
+    RLAST t=118585224 ns sau 433 beat
+    RLAST t=118585341 ns sau 435 beat
+    RLAST t=118585459 ns sau 437 beat
+    RLAST t=118585576 ns sau 439 beat
+    RLAST t=118585693 ns sau 441 beat
+    RLAST t=118585811 ns sau 443 beat
+    RLAST t=118585928 ns sau 445 beat
+    RLAST t=118586045 ns sau 447 beat
+    RLAST t=118586163 ns sau 449 beat
+    RLAST t=118586280 ns sau 451 beat
+    RLAST t=118586397 ns sau 453 beat
+    RLAST t=118586515 ns sau 455 beat
+    RLAST t=118586632 ns sau 457 beat
+    RLAST t=118586749 ns sau 459 beat
+    RLAST t=118586867 ns sau 461 beat
+    RLAST t=118586984 ns sau 463 beat
+    RLAST t=118587102 ns sau 465 beat
+    RLAST t=118587219 ns sau 467 beat
+    RLAST t=118587336 ns sau 469 beat
+    RLAST t=118587454 ns sau 471 beat
+    RLAST t=118587571 ns sau 473 beat
+    RLAST t=118587688 ns sau 475 beat
+    RLAST t=118587806 ns sau 477 beat
+    RLAST t=118587923 ns sau 479 beat
+    RLAST t=118588040 ns sau 481 beat
+    RLAST t=118588158 ns sau 483 beat
+    RLAST t=118588275 ns sau 485 beat
+    RLAST t=118588392 ns sau 487 beat
+    RLAST t=118588510 ns sau 489 beat
+    RLAST t=118588627 ns sau 491 beat
+    RLAST t=118588744 ns sau 493 beat
+    RLAST t=118588862 ns sau 495 beat
+    RLAST t=118588979 ns sau 497 beat
+    RLAST t=118589096 ns sau 499 beat
+    RLAST t=118589214 ns sau 501 beat
+    RLAST t=118589331 ns sau 503 beat
+    RLAST t=118589448 ns sau 505 beat
+    RLAST t=118589566 ns sau 507 beat
+    RLAST t=118589683 ns sau 509 beat
+    RLAST t=118589801 ns sau 511 beat
+    RLAST t=118589918 ns sau 513 beat
+    RLAST t=118590035 ns sau 515 beat
+    RLAST t=118590153 ns sau 517 beat
+    RLAST t=118590270 ns sau 519 beat
+    RLAST t=118590387 ns sau 521 beat
+    RLAST t=118590505 ns sau 523 beat
+    RLAST t=118590622 ns sau 525 beat
+    RLAST t=118590739 ns sau 527 beat
+    RLAST t=118590857 ns sau 529 beat
+    RLAST t=118590974 ns sau 531 beat
+    RLAST t=118591091 ns sau 533 beat
+    RLAST t=118591209 ns sau 535 beat
+    RLAST t=118591326 ns sau 537 beat
+    RLAST t=118591443 ns sau 539 beat
+    RLAST t=118591561 ns sau 541 beat
+    RLAST t=118591678 ns sau 543 beat
+    RLAST t=118591795 ns sau 545 beat
+    RLAST t=118591913 ns sau 547 beat
+    RLAST t=118592030 ns sau 549 beat
+    RLAST t=118592147 ns sau 551 beat
+[13]       G0218 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=122316085 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=122316400 ns sau 44 beat
+    AR #2 t=122316410 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=122316720 ns sau 88 beat
+    AR #3 t=122316730 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=122317045 ns sau 132 beat
+    AR #4 t=122317056 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=122317365 ns sau 176 beat
+    AR #5 t=122317376 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=122317690 ns sau 220 beat
+    AR #6 t=122317701 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=122318011 ns sau 264 beat
+    AR #7 t=122318021 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=122318336 ns sau 308 beat
+    AR #8 t=122318347 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=122318651 ns sau 351 beat
+    AR #9 t=126583301 ns addr=0x70400000 len=1 size=5 (beat da nhan=351)
+    RLAST t=126583397 ns sau 353 beat
+    AR #10 t=126583978 ns addr=0x70400040 len=1 size=5 (beat da nhan=353)
+    RLAST t=126584074 ns sau 355 beat
+    AR #11 t=126584656 ns addr=0x70400080 len=1 size=5 (beat da nhan=355)
+    RLAST t=126584752 ns sau 357 beat
+    AR #12 t=126585333 ns addr=0x704000c0 len=1 size=5 (beat da nhan=357)
+    RLAST t=126585429 ns sau 359 beat
+    AR #13 t=126586011 ns addr=0x70400100 len=1 size=5 (beat da nhan=359)
+    RLAST t=126586107 ns sau 361 beat
+    AR #14 t=126586688 ns addr=0x70400140 len=1 size=5 (beat da nhan=361)
+    RLAST t=126586784 ns sau 363 beat
+    AR #15 t=126587365 ns addr=0x70400180 len=1 size=5 (beat da nhan=363)
+    RLAST t=126587461 ns sau 365 beat
+    AR #16 t=126588043 ns addr=0x704001c0 len=1 size=5 (beat da nhan=365)
+    RLAST t=126588139 ns sau 367 beat
+    AR #17 t=126588720 ns addr=0x70400200 len=1 size=5 (beat da nhan=367)
+    RLAST t=126588816 ns sau 369 beat
+    AR #18 t=126589398 ns addr=0x70400240 len=1 size=5 (beat da nhan=369)
+    RLAST t=126589494 ns sau 371 beat
+    AR #19 t=126590075 ns addr=0x70400280 len=1 size=5 (beat da nhan=371)
+    RLAST t=126590171 ns sau 373 beat
+    AR #20 t=126590753 ns addr=0x704002c0 len=1 size=5 (beat da nhan=373)
+    RLAST t=126590849 ns sau 375 beat
+    AR #21 t=126591430 ns addr=0x70400300 len=1 size=5 (beat da nhan=375)
+    RLAST t=126591526 ns sau 377 beat
+    AR #22 t=126592107 ns addr=0x70400340 len=1 size=5 (beat da nhan=377)
+    RLAST t=126592203 ns sau 379 beat
+    AR #23 t=126592785 ns addr=0x70400380 len=1 size=5 (beat da nhan=379)
+    RLAST t=126592881 ns sau 381 beat
+    RLAST t=126593558 ns sau 383 beat
+    RLAST t=126593676 ns sau 385 beat
+    RLAST t=126593793 ns sau 387 beat
+    RLAST t=126593910 ns sau 389 beat
+    RLAST t=126594028 ns sau 391 beat
+    RLAST t=126594145 ns sau 393 beat
+    RLAST t=126594262 ns sau 395 beat
+    RLAST t=126594380 ns sau 397 beat
+    RLAST t=126594497 ns sau 399 beat
+    RLAST t=126594614 ns sau 401 beat
+    RLAST t=126594732 ns sau 403 beat
+    RLAST t=126594849 ns sau 405 beat
+    RLAST t=126594966 ns sau 407 beat
+    RLAST t=126595084 ns sau 409 beat
+    RLAST t=126595201 ns sau 411 beat
+    RLAST t=126595318 ns sau 413 beat
+    RLAST t=126595436 ns sau 415 beat
+    RLAST t=126595553 ns sau 417 beat
+    RLAST t=126595670 ns sau 419 beat
+    RLAST t=126595788 ns sau 421 beat
+    RLAST t=126595905 ns sau 423 beat
+    RLAST t=126596023 ns sau 425 beat
+    RLAST t=126596140 ns sau 427 beat
+    RLAST t=126596257 ns sau 429 beat
+    RLAST t=126596375 ns sau 431 beat
+    RLAST t=126596492 ns sau 433 beat
+    RLAST t=126596609 ns sau 435 beat
+    RLAST t=126596727 ns sau 437 beat
+    RLAST t=126596844 ns sau 439 beat
+    RLAST t=126596961 ns sau 441 beat
+    RLAST t=126597079 ns sau 443 beat
+    RLAST t=126597196 ns sau 445 beat
+    RLAST t=126597313 ns sau 447 beat
+    RLAST t=126597431 ns sau 449 beat
+    RLAST t=126597548 ns sau 451 beat
+    RLAST t=126597665 ns sau 453 beat
+    RLAST t=126597783 ns sau 455 beat
+    RLAST t=126597900 ns sau 457 beat
+    RLAST t=126598017 ns sau 459 beat
+    RLAST t=126598135 ns sau 461 beat
+    RLAST t=126598252 ns sau 463 beat
+    RLAST t=126598369 ns sau 465 beat
+    RLAST t=126598487 ns sau 467 beat
+    RLAST t=126598604 ns sau 469 beat
+    RLAST t=126598722 ns sau 471 beat
+    RLAST t=126598839 ns sau 473 beat
+    RLAST t=126598956 ns sau 475 beat
+    RLAST t=126599074 ns sau 477 beat
+    RLAST t=126599191 ns sau 479 beat
+    RLAST t=126599308 ns sau 481 beat
+    RLAST t=126599426 ns sau 483 beat
+    RLAST t=126599543 ns sau 485 beat
+    RLAST t=126599660 ns sau 487 beat
+    RLAST t=126599778 ns sau 489 beat
+    RLAST t=126599895 ns sau 491 beat
+    RLAST t=126600012 ns sau 493 beat
+    RLAST t=126600130 ns sau 495 beat
+    RLAST t=126600247 ns sau 497 beat
+    RLAST t=126600364 ns sau 499 beat
+    RLAST t=126600482 ns sau 501 beat
+    RLAST t=126600599 ns sau 503 beat
+    RLAST t=126600716 ns sau 505 beat
+    RLAST t=126600834 ns sau 507 beat
+    RLAST t=126600951 ns sau 509 beat
+    RLAST t=126601068 ns sau 511 beat
+    RLAST t=126601186 ns sau 513 beat
+    RLAST t=126601303 ns sau 515 beat
+    RLAST t=126601421 ns sau 517 beat
+    RLAST t=126601538 ns sau 519 beat
+    RLAST t=126601655 ns sau 521 beat
+    RLAST t=126601773 ns sau 523 beat
+    RLAST t=126601890 ns sau 525 beat
+    RLAST t=126602007 ns sau 527 beat
+    RLAST t=126602125 ns sau 529 beat
+    RLAST t=126602242 ns sau 531 beat
+    RLAST t=126602359 ns sau 533 beat
+    RLAST t=126602477 ns sau 535 beat
+    RLAST t=126602594 ns sau 537 beat
+    RLAST t=126602711 ns sau 539 beat
+    RLAST t=126602829 ns sau 541 beat
+    RLAST t=126602946 ns sau 543 beat
+    RLAST t=126603063 ns sau 545 beat
+    RLAST t=126603181 ns sau 547 beat
+    RLAST t=126603298 ns sau 549 beat
+    RLAST t=126603415 ns sau 551 beat
+[14]       G0429 truoc start GPIO1=0x00000000 | GPIO1=0x00000003 -> GRANT fault=0x00 step=0 obs=0 | 8.002 ms | AR hep=8 rong=100 beat=551 rerr=0 | mong doi GRANT fault=0x00  PASS
+    AR #1 t=130338554 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=130338869 ns sau 44 beat
+    AR #2 t=130338880 ns addr=0x703000b0 len=43 size=2 (beat da nhan=44)
+    RLAST t=130339189 ns sau 88 beat
+    AR #3 t=130339200 ns addr=0x70300160 len=43 size=2 (beat da nhan=88)
+    RLAST t=130339514 ns sau 132 beat
+    AR #4 t=130339525 ns addr=0x70300210 len=43 size=2 (beat da nhan=132)
+    RLAST t=130339834 ns sau 176 beat
+    AR #5 t=130339845 ns addr=0x703002c0 len=43 size=2 (beat da nhan=176)
+    RLAST t=130340160 ns sau 220 beat
+    AR #6 t=130340170 ns addr=0x70300370 len=43 size=2 (beat da nhan=220)
+    RLAST t=130340480 ns sau 264 beat
+    AR #7 t=130340491 ns addr=0x70300420 len=43 size=2 (beat da nhan=264)
+    RLAST t=130340805 ns sau 308 beat
+    AR #8 t=130340816 ns addr=0x703004d0 len=42 size=2 (beat da nhan=308)
+    RLAST t=130341120 ns sau 351 beat
+[15]   H0261_CRC truoc start GPIO1=0x00000000 | GPIO1=0x01018802 -> VETO  fault=0x08 step=4 obs=0 | 8.002 ms | AR hep=8 rong=0 beat=351 rerr=0 | mong doi VETO  fault=0x08  PASS
+=== KET QUA: PASS 16 / FAIL 0 / 16 ca
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+$finish called at time : 138360755 ns : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/system/tb_tsm_sysbd.sv" Line 202
+run: Time (s): cpu = 00:00:03 ; elapsed = 03:34:01 . Memory (MB): peak = 203.953 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 3946848 KB (Peak: 3946848 KB), Simulation CPU Usage: 12652718 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 08:14:49 2026...

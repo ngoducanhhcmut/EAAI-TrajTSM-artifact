@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\sim.vvp +MUTANT=1
+INJECT 1 S5_3_reset_valid: DUT output valid stuck-X
+ASSERT_FAIL 1 S5_3_reset_valid cycle=1 actual=00000000 expected=00000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:77: R-025 assertion failed
+       Time: 7000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

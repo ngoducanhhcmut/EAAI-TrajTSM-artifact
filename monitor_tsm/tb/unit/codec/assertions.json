@@ -1,0 +1,212 @@
+[
+  {
+    "id": 0,
+    "name": "reset_ready",
+    "hits": 10,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 1,
+    "name": "reset_valid",
+    "hits": 10,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 2,
+    "name": "reset_data",
+    "hits": 10,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 3,
+    "name": "invalid_zero",
+    "hits": 1753195,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 4,
+    "name": "ready_known",
+    "hits": 1775963,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 5,
+    "name": "valid_known",
+    "hits": 1775963,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 6,
+    "name": "response_known",
+    "hits": 22768,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 7,
+    "name": "no_ready_response",
+    "hits": 22768,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 8,
+    "name": "stall_valid",
+    "hits": 17120,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 9,
+    "name": "stall_payload",
+    "hits": 17120,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 10,
+    "name": "crc_no_digest",
+    "hits": 7170,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 11,
+    "name": "sha_no_crc",
+    "hits": 15357,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 12,
+    "name": "fault_zero",
+    "hits": 241,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 13,
+    "name": "fault_exact",
+    "hits": 22768,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 14,
+    "name": "crc_exact",
+    "hits": 7186,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 15,
+    "name": "sha_word_0",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 16,
+    "name": "sha_word_1",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 17,
+    "name": "sha_word_2",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 18,
+    "name": "sha_word_3",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 19,
+    "name": "sha_word_4",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 20,
+    "name": "sha_word_5",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 21,
+    "name": "sha_word_6",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 22,
+    "name": "sha_word_7",
+    "hits": 15582,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 23,
+    "name": "bounded_response",
+    "hits": 12,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 24,
+    "name": "no_early_response",
+    "hits": 1195673,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 25,
+    "name": "last_blocks_input",
+    "hits": 531221,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 26,
+    "name": "response_has_job",
+    "hits": 11301,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 27,
+    "name": "whole_response",
+    "hits": 22768,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 28,
+    "name": "crc_fault_zero",
+    "hits": 241,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  },
+  {
+    "id": 29,
+    "name": "reset_inflight",
+    "hits": 8,
+    "clause": "spec5.3/5.5.2/7/10.3",
+    "mutant_killed": true
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ack_strict",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "expiry_equality",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "lease_equality",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "margin_equality",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "context_ignored",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "binding_version",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "apply_early",
+    "killed": true,
+    "exit": 1
+  },
+  {
+    "name": "lease_wrong_epoch",
+    "killed": true,
+    "exit": 1
+  }
+]

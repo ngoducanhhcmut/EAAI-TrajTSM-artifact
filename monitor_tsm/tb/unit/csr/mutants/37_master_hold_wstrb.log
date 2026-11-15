@@ -1,0 +1,5 @@
+COMMAND: vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\sim.vvp +MUTANT=37
+INJECT 37 master_hold_wstrb
+ASSERT_FAIL 37 master_hold_wstrb cycle=8380
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\tb_m_tsmx_csr.sv:242: R-025 assertion failed
+       Time: 75422000  Scope: tb_m_tsmx_csr.tick

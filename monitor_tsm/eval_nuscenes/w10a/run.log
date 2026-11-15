@@ -1,0 +1,4 @@
+SELECTED E2
+{"passed": true, "jobs": 48790, "nonempty_scene_source_sequences": 286, "all_request_bits_and_responses_match_audit": true, "resets_only_at_scene_source_start": true, "continuous_monotonic_times": true, "scope": "artifact integrity; no independent golden or RTL execution", "counts": {"H/admission/range_schema": 432, "H/service/timeout": 5715, "H/admission/ego_live": 540, "H/service/ego_live": 4812, "H/admission/ok": 999, "H/service/freeze_no_sample": 10828, "H/admission/splice": 578, "T/admission/range_schema": 432, "T/service/timeout": 5680, "T/admission/ego_live": 540, "T/service/ego_live": 4657, "T/admission/ok": 994, "T/service/freeze_no_sample": 11018, "T/admission/splice": 578, "H/admission/no_backup": 392, "T/admission/no_backup": 398, "H/admission/ftti_budget": 40, "T/admission/ftti_budget": 37, "H/admission/timeout": 59, "T/admission/timeout": 61}}
+report lines 51
+COMPLETE E2 [6130, 6128, 5978, 6148, 6148, 5978, 6128, 6152]

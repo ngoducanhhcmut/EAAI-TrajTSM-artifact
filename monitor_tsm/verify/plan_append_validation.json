@@ -1,0 +1,10 @@
+{
+  "path": "tsmx_hw/PLAN.md",
+  "registered_sha256": "1d356496e56ef92f55b6e855defb16454fa184b75d1185b9ad1c8758a3154915",
+  "current_sha256": "e3cb753826f260ae1030ffcb9c3831a2642279a464ad6c37bf3fc4786faf67b0",
+  "registered_snapshot": "tsmx_hw/verify/PLAN_at_registration.md",
+  "snapshot_sha256": "1d356496e56ef92f55b6e855defb16454fa184b75d1185b9ad1c8758a3154915",
+  "scope_A1_A7_unchanged": true,
+  "appendix": "## Tăng tốc (29/10 19:20)\n- S1 chạy song song phần đuôi G1 (S1 chỉ đọc golden/FORMATS, ghi `spec/`); nếu G1 đổi định dạng thì vá spec sau.\n- R chia theo \"wave\" trong `spec/BLOCK_ORDER.md`: các khối lá cùng wave giao cho 2–3 Codex song song (tập tệp ghi tách biệt `rtl/<blk>`, `tb/unit/<blk>`); Claude kiểm Verilator từng khối ngay khi xong.\n",
+  "proof": "Original complete PLAN bytes reconstructed as the prefix and independently match the immutable registration SHA256 exactly; only appended coordination section differs. No numeric source changed."
+}

@@ -1,0 +1,6 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\sim.vvp +MUTANT=17
+EXIT 1
+INJECT 17 reset_release_ready
+ASSERT_FAIL 17 reset_release_ready spec5.3 cycle=3 got=00 expected=00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:242: R-025 assertion failed
+       Time: 28001  Scope: tb_m_tsmx_cert.tick

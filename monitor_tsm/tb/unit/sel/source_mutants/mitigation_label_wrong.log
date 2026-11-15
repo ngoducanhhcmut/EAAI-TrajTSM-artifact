@@ -1,0 +1,6 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\source_mutants\mitigation_label_wrong.vvp
+ASSERT_FAIL 9 S5_3_atomic_response cycle=10 actual=0f01 expected=0f02
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\tb_m_tsmx_sel.sv:164: R-025 assertion failed
+       Time: 105000  Scope: tb_m_tsmx_sel.tick
+
+EXIT 1

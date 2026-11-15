@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 12:02:12 2026
+# Process ID: 25560
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch
+# Command line: xsim.exe -log C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_mini_val_73/mini_val_73.log -mode tcl -source {xsim.dir/snap_hmao_mini_val_73/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_mini_val_73/mini_val_73.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/snap_hmao_mini_val_73/xsim_script.tcl
+# xsim {snap_hmao_mini_val_73} -autoloadwcfg -tclbatch {C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_mini_val_73/run_xsim.tcl}
+Time resolution is 1 ps
+source C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_mini_val_73/run_xsim.tcl
+## run -all
+================================================================
+  HMAO RTL Full mini_val Coverage Test (73 real nuScenes samples)
+  Each sample: real W4A8 inference output -> 50wp -> HMAO RTL
+================================================================
+
+  [  1/ 73] sw/hmao_payloads/traj_mv_000.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  2/ 73] sw/hmao_payloads/traj_mv_001.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  3/ 73] sw/hmao_payloads/traj_mv_002.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  4/ 73] sw/hmao_payloads/traj_mv_003.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  5/ 73] sw/hmao_payloads/traj_mv_004.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  6/ 73] sw/hmao_payloads/traj_mv_005.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  7/ 73] sw/hmao_payloads/traj_mv_006.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  8/ 73] sw/hmao_payloads/traj_mv_007.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [  9/ 73] sw/hmao_payloads/traj_mv_008.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 10/ 73] sw/hmao_payloads/traj_mv_009.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 11/ 73] sw/hmao_payloads/traj_mv_010.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 12/ 73] sw/hmao_payloads/traj_mv_011.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 13/ 73] sw/hmao_payloads/traj_mv_012.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 14/ 73] sw/hmao_payloads/traj_mv_013.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 15/ 73] sw/hmao_payloads/traj_mv_014.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 16/ 73] sw/hmao_payloads/traj_mv_015.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 17/ 73] sw/hmao_payloads/traj_mv_016.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 18/ 73] sw/hmao_payloads/traj_mv_017.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 19/ 73] sw/hmao_payloads/traj_mv_018.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 20/ 73] sw/hmao_payloads/traj_mv_019.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 21/ 73] sw/hmao_payloads/traj_mv_020.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 22/ 73] sw/hmao_payloads/traj_mv_021.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 23/ 73] sw/hmao_payloads/traj_mv_022.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 24/ 73] sw/hmao_payloads/traj_mv_023.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 25/ 73] sw/hmao_payloads/traj_mv_024.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 26/ 73] sw/hmao_payloads/traj_mv_025.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 27/ 73] sw/hmao_payloads/traj_mv_026.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 28/ 73] sw/hmao_payloads/traj_mv_027.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 29/ 73] sw/hmao_payloads/traj_mv_028.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 30/ 73] sw/hmao_payloads/traj_mv_029.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 31/ 73] sw/hmao_payloads/traj_mv_030.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 32/ 73] sw/hmao_payloads/traj_mv_031.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 33/ 73] sw/hmao_payloads/traj_mv_032.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 34/ 73] sw/hmao_payloads/traj_mv_033.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 35/ 73] sw/hmao_payloads/traj_mv_034.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 36/ 73] sw/hmao_payloads/traj_mv_035.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 37/ 73] sw/hmao_payloads/traj_mv_036.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 38/ 73] sw/hmao_payloads/traj_mv_037.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 39/ 73] sw/hmao_payloads/traj_mv_038.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 40/ 73] sw/hmao_payloads/traj_mv_039.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 41/ 73] sw/hmao_payloads/traj_mv_040.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 42/ 73] sw/hmao_payloads/traj_mv_041.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 43/ 73] sw/hmao_payloads/traj_mv_042.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 44/ 73] sw/hmao_payloads/traj_mv_043.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 45/ 73] sw/hmao_payloads/traj_mv_044.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 46/ 73] sw/hmao_payloads/traj_mv_045.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 47/ 73] sw/hmao_payloads/traj_mv_046.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 48/ 73] sw/hmao_payloads/traj_mv_047.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 49/ 73] sw/hmao_payloads/traj_mv_048.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 50/ 73] sw/hmao_payloads/traj_mv_049.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 51/ 73] sw/hmao_payloads/traj_mv_050.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 52/ 73] sw/hmao_payloads/traj_mv_051.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 53/ 73] sw/hmao_payloads/traj_mv_052.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 54/ 73] sw/hmao_payloads/traj_mv_053.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 55/ 73] sw/hmao_payloads/traj_mv_054.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 56/ 73] sw/hmao_payloads/traj_mv_055.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 57/ 73] sw/hmao_payloads/traj_mv_056.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 58/ 73] sw/hmao_payloads/traj_mv_057.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 59/ 73] sw/hmao_payloads/traj_mv_058.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 60/ 73] sw/hmao_payloads/traj_mv_059.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 61/ 73] sw/hmao_payloads/traj_mv_060.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 62/ 73] sw/hmao_payloads/traj_mv_061.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 63/ 73] sw/hmao_payloads/traj_mv_062.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 64/ 73] sw/hmao_payloads/traj_mv_063.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 65/ 73] sw/hmao_payloads/traj_mv_064.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 66/ 73] sw/hmao_payloads/traj_mv_065.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 67/ 73] sw/hmao_payloads/traj_mv_066.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 68/ 73] sw/hmao_payloads/traj_mv_067.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 69/ 73] sw/hmao_payloads/traj_mv_068.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 70/ 73] sw/hmao_payloads/traj_mv_069.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 71/ 73] sw/hmao_payloads/traj_mv_070.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 72/ 73] sw/hmao_payloads/traj_mv_071.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+  [ 73/ 73] sw/hmao_payloads/traj_mv_072.hex Decision=GRANT Faults=0x00 Latency=2 cy  PASS
+
+================================================================
+  HMAO mini_val RTL Coverage Results
+================================================================
+  PASS: 219  FAIL: 0  TOTAL: 219
+  GRANT: 73  VETO: 0  (of 73 samples)
+  ALL PASS -- RTL decisions match golden model for all 73 mini_val samples
+================================================================
+PASS: 219  FAIL: 0
+$finish called at time : 6268873750 ps : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/integration/tb_hmao_mini_val_73.sv" Line 379
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:04:16 . Memory (MB): peak = 198.176 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 13976 KB (Peak: 13976 KB), Simulation CPU Usage: 249218 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 12:06:30 2026...

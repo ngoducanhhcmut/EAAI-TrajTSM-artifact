@@ -1,0 +1,5 @@
+COMMAND iverilog -g2012 -s tb_m_tsmx_geom -I C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\sim.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\arith\m_tsmx_arith_div.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\geom\m_tsmx_geom_adv.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\geom\m_tsmx_geom_swept.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\geom\m_tsmx_geom.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\geom\m_tsmx_geom_adv.sv: No such file or directory
+Preprocessor failed with 1 errors.
+
+EXIT 1

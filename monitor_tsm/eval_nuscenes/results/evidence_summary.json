@@ -1,0 +1,13 @@
+{
+  "source_summary_sha256": "42b0c808074d2825271028fe4946fbc6d7c10cf9aff020c694b70e6d35aaedad",
+  "analysis_code_sha256": "447fabb246dd6b34e446a4475b30d9478ccc8d40df25748528ef1496369f45b8",
+  "posthoc_explanation_only": true,
+  "clarification_A7_sha256": "7656f9add115fd9d6c7e2b88b001e7eeda1b25a9b89803da8f365e39e5707763",
+  "serial_prefix_compared_exact": 808,
+  "false_accepts": 10,
+  "reason_categories": {
+    "front_object_lags_constant_velocity_prediction": 5,
+    "rear_object_advances_beyond_constant_velocity_prediction": 4,
+    "oracle_hold_after_3s": 1
+  }
+}

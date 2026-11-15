@@ -1,0 +1,46 @@
+{
+  "head": {
+    "text": "Certificate: ACK deadline and strict expiry, times in microseconds"
+  },
+  "signal": [
+    {
+      "name": "time",
+      "wave": "=.=.=.=.=.=.",
+      "data": [
+        "0",
+        "39999",
+        "40000",
+        "100000",
+        "499999",
+        "500000"
+      ]
+    },
+    {
+      "name": "pending",
+      "wave": "1...0......."
+    },
+    {
+      "name": "ack",
+      "wave": "0..........."
+    },
+    {
+      "name": "ack_timeout",
+      "wave": "000010000000"
+    },
+    {
+      "name": "expiry",
+      "wave": "000000000011"
+    },
+    {
+      "name": "backup_valid",
+      "wave": "000000000000"
+    },
+    {
+      "name": "override",
+      "wave": "00001......."
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

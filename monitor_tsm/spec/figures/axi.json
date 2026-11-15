@@ -1,0 +1,47 @@
+{
+  "head": {
+    "text": "Project AXI4-Lite contract: write, response stall, bad address; conformance open"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "awvalid",
+      "wave": "01...01....."
+    },
+    {
+      "name": "awready",
+      "wave": "11...11....."
+    },
+    {
+      "name": "wvalid",
+      "wave": "001...01...."
+    },
+    {
+      "name": "wready",
+      "wave": "111...11...."
+    },
+    {
+      "name": "bvalid",
+      "wave": "000111001100"
+    },
+    {
+      "name": "bready",
+      "wave": "000001000100"
+    },
+    {
+      "name": "bresp",
+      "wave": "=..=....=...",
+      "data": [
+        "OKAY",
+        "OKAY",
+        "SLVERR"
+      ]
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

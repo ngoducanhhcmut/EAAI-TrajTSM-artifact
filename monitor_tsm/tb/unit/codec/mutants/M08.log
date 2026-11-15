@@ -1,0 +1,7 @@
+COMMAND: vvp simulation.vvp +MUTANT=8
+INJECT 8 stall_valid: DUT output valid stuck-X
+ASSERT_FAIL 8 stall_valid spec5.3/5.5.2/7/10.3 job=0 cycle=37 actual=1000000000000000000000000000000000000000000000000000000000000000000000000 expected=1000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: tb_m_tsmx_codec.sv:142: R-025 assertion failed
+       Time: 224000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

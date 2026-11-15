@@ -1,0 +1,19 @@
+COMMAND C:\Users\TransformerDA\AppData\Local\Programs\Python\Python313\python.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\.agents\skills\vlsit-rtl-generator\scripts\vlsit_spec_gaps.py gaps C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\R1_SPEC_EXTRACT.md
+spec: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\R1_SPEC_EXTRACT.md | sections found: 8 | gaps: 14 BLOCK, 0 INFO
+G-001 [BLOCK] sec 1.1 line - missing section: Purpose and scope
+G-002 [BLOCK] sec 2.3 line - missing section: Compliance declaration
+G-003 [BLOCK] sec 5.1 line - missing section: Block responsibilities
+G-004 [BLOCK] sec 6.1 line - missing section: Interface inventory
+G-005 [BLOCK] sec 6.2 line - missing section: Complete port list
+G-006 [BLOCK] sec 7.1 line - missing section: Clock domains
+G-007 [BLOCK] sec 7.3 line - missing section: Reset domains and sequencing
+G-008 [BLOCK] sec 8 line - missing section: Parameters and configurations
+G-009 [BLOCK] sec 9 line - missing section: Data representation and arithmetic
+G-010 [BLOCK] sec 10.1 line - missing section: Modes and state transitions
+G-011 [BLOCK] sec 10.2 line - missing section: Operations
+G-012 [BLOCK] sec 12 line - missing section: Error handling and recovery
+G-013 [BLOCK] sec 14.2 line - missing section: RTL hierarchy
+G-014 [BLOCK] sec 14.3 line - missing section: Synthesis assumptions
+RESULT: GAPS - ask the designer about every BLOCK gap before writing RTL.
+
+EXIT 2

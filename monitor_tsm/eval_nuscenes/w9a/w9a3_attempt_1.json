@@ -1,0 +1,6 @@
+{
+  "runtime_seconds": 3955.6879999999655,
+  "timing": "parent monotonic timer through orderly pool stop",
+  "reason": "NPZ preload optimization; complete prediction shards preserved",
+  "error": "RuntimeError('Worker failed; inspect shard logs')"
+}

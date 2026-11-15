@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "n": 26,
+  "checks": {
+    "ego_independent_struct": true,
+    "plan_independent_struct": true,
+    "packet_body_struct": true,
+    "packet_crc": true,
+    "IEEE_known_answer": true,
+    "snapshot_sha": true,
+    "trajectory_sha_binds_plan": true,
+    "world_zero_slots": true,
+    "world_fixed_length": true,
+    "context_struct": true,
+    "context_hash": true,
+    "seal_body_struct": true,
+    "seal_sha": true,
+    "record_721_length": true,
+    "record_721_LSB_padding": true,
+    "record_1217_length": true,
+    "record_1217_LSB_padding": true,
+    "record_332_length": true,
+    "record_332_LSB_padding": true,
+    "record_81_length": true,
+    "record_81_LSB_padding": true,
+    "record_45458_length": true,
+    "record_45458_LSB_padding": true,
+    "record_1056_length": true,
+    "record_1056_LSB_padding": true,
+    "composition_without_JSON": true
+  }
+}

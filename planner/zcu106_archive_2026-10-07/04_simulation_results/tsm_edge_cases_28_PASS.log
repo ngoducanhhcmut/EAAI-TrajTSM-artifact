@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 12:06:53 2026
+# Process ID: 16076
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch
+# Command line: xsim.exe -log C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_edge_cases/edge_cases.log -mode tcl -source {xsim.dir/snap_hmao_edge_cases/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_edge_cases/edge_cases.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/snap_hmao_edge_cases/xsim_script.tcl
+# xsim {snap_hmao_edge_cases} -autoloadwcfg -tclbatch {C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_edge_cases/run_xsim.tcl}
+Time resolution is 1 ps
+source C:/Users/TransformerDA/Downloads/vla_new_arch/reports/hmao_edge_cases/run_xsim.tcl
+## log_wave -recursive *
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## run -all
+╔══════════════════════════════════════════════════════════════╗
+║  HMAO Edge Case / Boundary Condition Test  (7 cases)        ║
+║  Verifies exact GRANT/VETO decisions and fault bits         ║
+╚══════════════════════════════════════════════════════════════╝
+
+  kinematic_invalid threshold: biased_exp > 132 = |v| >= 64 m/s
+  traj_crc_fail: stored CRC != computed CRC32 over 1400 bytes
+
+
+  ┌─ EC01: Nominal sample_00  vx=8.4m/s  biased_exp=130
+  │  CRC stored=0x6e6d4753
+  │  GRU_WP[0] x=4.1902 y=-0.1033
+  │  Decision=GRANT  Faults=0x00  Latency=1500000 cy
+  │  Expected=GRANT  ExpFaults=0x00
+  PASS | EC01_cdc_ok
+  PASS | EC01_hmao_done
+  PASS | EC01_decision
+  PASS | EC01_faults
+  └─ EC01 PASS
+
+  ┌─ EC02: Stationary  vx=vy=0  biased_exp=0
+  │  CRC stored=0x459a670f
+  │  GRU_WP[0] x=0.0000 y=0.0000
+  │  Decision=GRANT  Faults=0x00  Latency=1500000 cy
+  │  Expected=GRANT  ExpFaults=0x00
+  PASS | EC02_cdc_ok
+  PASS | EC02_hmao_done
+  PASS | EC02_decision
+  PASS | EC02_faults
+  └─ EC02 PASS
+
+  ┌─ EC03: vx=32.0m/s  biased_exp=132  AT kinematic limi������ GRANT
+  │  CRC stored=0x80cf98cb
+  │  GRU_WP[0] x=16.0000 y=0.0000
+  │  Decision=GRANT  Faults=0x00  Latency=1500000 cy
+  │  Expected=GRANT  ExpFaults=0x00
+  PASS | EC03_cdc_ok
+  PASS | EC03_hmao_done
+  PASS | EC03_decision
+  PASS | EC03_faults
+  └─ EC03 PASS
+
+  ┌─ EC04: vx=64.0m/s  biased_exp=133  OVER kinematic limit ���� VETO(kinematic_invalid)
+  │  CRC stored=0x3d6c5415
+  │  GRU_WP[0] x=32.0000 y=0.0000
+  │  Decision= VETO  Faults=0x01  Latency=1500000 cy
+  │  Expected= VETO  ExpFaults=0x01
+  PASS | EC04_cdc_ok
+  PASS | EC04_hmao_done
+  PASS | EC04_decision
+  PASS | EC04_faults
+  └─ EC04 PASS
+
+  ┌─ EC05: vx=35.0m/s  biased_exp=132  VMAX clamp boundar������ GRANT
+  │  CRC stored=0x6f6a4c8f
+  │  GRU_WP[0] x=17.5000 y=0.0000
+  │  Decision=GRANT  Faults=0x00  Latency=1500000 cy
+  │  Expected=GRANT  ExpFaults=0x00
+  PASS | EC05_cdc_ok
+  PASS | EC05_hmao_done
+  PASS | EC05_decision
+  PASS | EC05_faults
+  └─ EC05 PASS
+
+  ┌─ EC06: CRC CORRUPTED: byte[0] flipped ���� VETO(traj_crc_fail)
+  │  CRC stored=0x6e6d4753
+  │  GRU_WP[0] x=4.1902 y=-0.1033
+  │  Decision= VETO  Faults=0x08  Latency=1500000 cy
+  │  Expected= VETO  ExpFaults=0x08
+  PASS | EC06_cdc_ok
+  PASS | EC06_hmao_done
+  PASS | EC06_decision
+  PASS | EC06_faults
+  └─ EC06 PASS
+
+  ┌─ EC07: CRC = 0x00000000  wrong CRC ���� VETO(traj_crc_fail)
+  │  CRC stored=0x00000000
+  │  GRU_WP[0] x=4.1902 y=-0.1033
+  │  Decision= VETO  Faults=0x08  Latency=1500000 cy
+  │  Expected= VETO  ExpFaults=0x08
+  PASS | EC07_cdc_ok
+  PASS | EC07_hmao_done
+  PASS | EC07_decision
+  PASS | EC07_faults
+  └─ EC07 PASS
+
+╔══════════════════════════════════════════════════════════════╗
+║  HMAO Edge Case Results                                     ║
+╠══════════════════════════════════════════════════════════════╣
+║  PASS:  28  FAIL:   0  TOTAL:  28
+║  ALL PASS — kinematic + CRC boundaries verified in RTL     ║
+╚══════════════════════════════════════════════════════════════╝
+PASS: 28  FAIL: 0
+$finish called at time : 26251653750 ps : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/integration/tb_hmao_edge_cases.sv" Line 442
+run: Time (s): cpu = 00:02:00 ; elapsed = 00:19:11 . Memory (MB): peak = 207.871 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 22364 KB (Peak: 22364 KB), Simulation CPU Usage: 1111077 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 12:26:06 2026...

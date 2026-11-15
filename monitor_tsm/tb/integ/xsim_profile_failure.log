@@ -1,0 +1,20 @@
+COMMAND: C:\Vivado\Vivado\2023.2\bin\xsim.bat top_2 --runall --testplusarg LIMIT=1 --testplusarg FILE=vectors.mem --testplusarg ALLOW_INACTIVE
+ECHO is off.
+ECHO is off.
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/top_2/xsim_script.tcl
+# xsim {top_2} -testplusarg LIMIT=1 -testplusarg FILE=vectors.mem -testplusarg ALLOW_INACTIVE -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Fatal: CSR profile actual=00000000
+Time: 220 ns  Iteration: 0  Process: /tb_m_tsmx_top/Initial265_1430  Scope: tb_m_tsmx_top  File: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_xsim_2.sv Line: 347
+$finish called at time : 220 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 30 00:22:13 2026...

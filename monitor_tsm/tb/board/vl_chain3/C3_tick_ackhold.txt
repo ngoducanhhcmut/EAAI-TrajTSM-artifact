@@ -1,0 +1,15 @@
+CHAIN_CFG tick=1 exec_ack=1 ackdly_us=1000 txstall_cyc=0 contend=0 soft=1
+BRAKE_RISE job=0 cyc=0 time_us=0 cyc_after_40ms_cross=-1
+PASS top CSR/AXI smoke
+BOARDUP polls=5032 cyc=25287
+BOARDUP polls=5032 cyc=50479
+BOARDVEC job=0 reset=1 time=00000000 ack=0 seq=00000000
+CHAIN_TX job=0 delivered_cyc=701982 rsp_to_delivered=72 time_us=6515 pending=1
+BOARDCMD job=0 frames=1
+BOARDCYC job=0 csr_cycles=650030 tb_latency=650031
+JOB 0 PASS cycles=650031 xerr_checks=0
+CHAIN job=0 rx_xfer=1399 decide=650031 host_to_rsp=651429 rsp_to_tx_first=0 rsp_to_tx_delivered=72 rsp=2014000447 exp_mode=5 exp_reason=0 softfail=0
+TIMING job=0 fallback=ffff tail=ffff max_rows=57 stream_hits=1412 objects=0
+EXEC_ACK job=1 cyc=801979 time_us=7515 seq=0 hold=1
+TIMER job=1 cyc=10050479 time_us=100000 code=31 issued=0 age_us=100000 apply=100000 cyc_after_40ms_cross=6000000 cyc_after_ack=9248499 brake=0 tx_stalled=0
+BOARDVEC job=1 reset=0 time=000186a0 ack=1 seq=00000000

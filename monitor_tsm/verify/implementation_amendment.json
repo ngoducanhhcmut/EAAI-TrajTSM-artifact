@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T07:15:10Z",
+  "reason": "Static integration review: tail must be verified at apply state after transport, not current ego. Reject nominal without a finite-jerk certified tail. No held-out V1/V3 had run; numeric V2 blocks unchanged. Prior partial V2 retained, restart full V2.",
+  "threshold_changes": false,
+  "world_binding_review": {
+    "utc": "2026-10-29T07:19:40Z",
+    "reason": "Before any held-out V1/V3: system optional world/map binding, multi-object bridge and tail containment. V2 arithmetic unchanged; full V2 restarted.",
+    "threshold_changes": false
+  }
+}

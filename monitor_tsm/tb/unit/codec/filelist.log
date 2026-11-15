@@ -1,0 +1,4 @@
+COMMAND: C:\Users\TransformerDA\AppData\Local\Programs\Python\Python313\python.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\.agents\skills\vlsit-rtl-generator\scripts\vlsit_lint_rtl.py filelist C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\codec --out C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\filelist_R3.f --top m_tsmx_codec
+ERROR: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\filelist_R3.f already exists; pass --force to overwrite it
+
+EXIT: 2

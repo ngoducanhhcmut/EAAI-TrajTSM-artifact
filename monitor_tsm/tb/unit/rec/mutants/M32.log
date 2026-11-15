@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\sim.vvp +MUTANT=32
+INJECT 32 B10_log_consumed_valid: DUT output log_valid stuck-X
+ASSERT_FAIL 32 B10_log_consumed_valid cycle=11 actual=00000000 expected=00000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:480: R-025 assertion failed
+       Time: 118000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

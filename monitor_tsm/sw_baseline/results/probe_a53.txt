@@ -1,0 +1,13 @@
+RST_FPD_APU 0x0000390F -> 0x0000380E
+dow: 0 
+state: Stopped: (External Debug Request)
+pc: 0000000010004518
+
+cpsr: 200003cd
+    n (Bits [31]): 0   z (Bits [30]): 0   c (Bits [29]): 1   v (Bits [28]): 0
+   ss (Bits [21]): 0  il (Bits [20]): 0    d (Bits [9]): 1    a (Bits [8]): 1
+     i (Bits [7]): 1    f (Bits [6]): 1  m (Bits [4:0]): d
+
+    0  0x10004518 invalidateCaches_flush_way()+8: boot.S, line 499
+    1  0x10004460 InitEL3()+148: boot.S, line 286
+out: 1 120 0 0 0 4294967295 0 0 33333332 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

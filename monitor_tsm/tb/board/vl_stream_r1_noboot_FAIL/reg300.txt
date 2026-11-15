@@ -1,0 +1,5 @@
+PASS top CSR/AXI smoke
+BOARDVEC job=0 reset=1 time=00000000 ack=0 seq=00000000
+[18765250000] %Fatal: tb_tsmx_stream.sv:426: Assertion failed in tb_tsmx_stream: decision hang job=0 state=2
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/board/tb_tsmx_stream.sv:426: Verilog $stop
+Aborting...

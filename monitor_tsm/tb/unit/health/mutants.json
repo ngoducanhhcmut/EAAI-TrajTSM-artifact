@@ -1,0 +1,184 @@
+[
+  {
+    "returncode": 1,
+    "seconds": 1.597,
+    "log": "mutant_00.log",
+    "id": 0,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.65,
+    "log": "mutant_01.log",
+    "id": 1,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.643,
+    "log": "mutant_02.log",
+    "id": 2,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.639,
+    "log": "mutant_03.log",
+    "id": 3,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.667,
+    "log": "mutant_04.log",
+    "id": 4,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.708,
+    "log": "mutant_05.log",
+    "id": 5,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.683,
+    "log": "mutant_06.log",
+    "id": 6,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.684,
+    "log": "mutant_07.log",
+    "id": 7,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.687,
+    "log": "mutant_08.log",
+    "id": 8,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.66,
+    "log": "mutant_09.log",
+    "id": 9,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.704,
+    "log": "mutant_10.log",
+    "id": 10,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.654,
+    "log": "mutant_11.log",
+    "id": 11,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.663,
+    "log": "mutant_12.log",
+    "id": 12,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.587,
+    "log": "mutant_13.log",
+    "id": 13,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.574,
+    "log": "mutant_14.log",
+    "id": 14,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.592,
+    "log": "mutant_15.log",
+    "id": 15,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.594,
+    "log": "mutant_16.log",
+    "id": 16,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.578,
+    "log": "mutant_17.log",
+    "id": 17,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.658,
+    "log": "mutant_18.log",
+    "id": 18,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.631,
+    "log": "mutant_19.log",
+    "id": 19,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.589,
+    "log": "mutant_20.log",
+    "id": 20,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.691,
+    "log": "mutant_21.log",
+    "id": 21,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.648,
+    "log": "mutant_22.log",
+    "id": 22,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.666,
+    "log": "mutant_23.log",
+    "id": 23,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.736,
+    "log": "mutant_24.log",
+    "id": 24,
+    "killed": true
+  },
+  {
+    "returncode": 1,
+    "seconds": 1.875,
+    "log": "mutant_25.log",
+    "id": 25,
+    "killed": true
+  }
+]

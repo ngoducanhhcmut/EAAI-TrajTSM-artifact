@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Nov  6 15:23:24 2026
+# Process ID: 32556
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/board
+# Command line: vivado.exe -mode batch -notrace -nojournal -log log_142.857143/build.log -source build_tsmx_zcu106.tcl
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/board/log_142.857143/build.log
+# Journal file: 
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source build_tsmx_zcu106.tcl -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/board/prj_142.857143'
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 476.406 ; gain = 177.988
+couldn't read file "C:/Vivado/Vivado/2023.2/data/rsb/design_assist/block/pcie4c_uscale_plus/bd.tcl": invalid argument
+ERROR: [Ip 78-90] Error in initialization of Rule object 'xilinx.com:bd_rule:pcie4c_uscale_plus:1.0'
+Wrote  : <C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\board\prj_142.857143\tsmx_zcu106.srcs\sources_1\bd\system\system.bd> 
+create_bd_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 507.141 ; gain = 24.129
+ERROR: [Common 17-39] 'create_bd_design' failed due to earlier errors.
+
+    while executing
+"create_bd_design system"
+    (file "build_tsmx_zcu106.tcl" line 27)
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 15:23:57 2026...

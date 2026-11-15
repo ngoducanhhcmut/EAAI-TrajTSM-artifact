@@ -1,0 +1,150 @@
+{
+  "assertions": [
+    {
+      "id": 0,
+      "killed": true
+    },
+    {
+      "id": 1,
+      "killed": true
+    },
+    {
+      "id": 2,
+      "killed": true
+    },
+    {
+      "id": 3,
+      "killed": true
+    },
+    {
+      "id": 4,
+      "killed": true
+    },
+    {
+      "id": 5,
+      "killed": true
+    },
+    {
+      "id": 6,
+      "killed": true
+    },
+    {
+      "id": 7,
+      "killed": true
+    },
+    {
+      "id": 8,
+      "killed": true
+    },
+    {
+      "id": 9,
+      "killed": true
+    },
+    {
+      "id": 10,
+      "killed": true
+    },
+    {
+      "id": 11,
+      "killed": true
+    },
+    {
+      "id": 12,
+      "killed": true
+    },
+    {
+      "id": 13,
+      "killed": true
+    },
+    {
+      "id": 14,
+      "killed": true
+    },
+    {
+      "id": 15,
+      "killed": true
+    },
+    {
+      "id": 16,
+      "killed": true
+    },
+    {
+      "id": 17,
+      "killed": true
+    },
+    {
+      "id": 18,
+      "killed": true
+    },
+    {
+      "id": 19,
+      "killed": true
+    },
+    {
+      "id": 20,
+      "killed": true
+    },
+    {
+      "id": 21,
+      "killed": true
+    },
+    {
+      "id": 22,
+      "killed": true
+    },
+    {
+      "id": 23,
+      "killed": true
+    },
+    {
+      "id": 24,
+      "killed": true
+    },
+    {
+      "id": 25,
+      "killed": true
+    },
+    {
+      "id": 26,
+      "killed": true
+    },
+    {
+      "id": 27,
+      "killed": true
+    },
+    {
+      "id": 28,
+      "killed": true
+    },
+    {
+      "id": 29,
+      "killed": true
+    },
+    {
+      "id": 30,
+      "killed": true
+    },
+    {
+      "id": 31,
+      "killed": true
+    }
+  ],
+  "source": [
+    {
+      "name": "jerk_sign",
+      "killed": true
+    },
+    {
+      "name": "instant",
+      "killed": true
+    },
+    {
+      "name": "stall",
+      "killed": true
+    },
+    {
+      "name": "range",
+      "killed": true
+    }
+  ]
+}

@@ -1,0 +1,1187 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Oct 31 14:21:55 2026
+# Process ID: 27392
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth
+# Command line: vivado.exe -mode batch -notrace -nojournal -log m_tsmx_health_bist.log -source ooc_m_tsmx_health_bist.tcl
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_health_bist.log
+# Journal file: 
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source ooc_m_tsmx_health_bist.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 476.895 ; gain = 180.641
+Command: synth_design -top m_tsmx_health_bist -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Using part: xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6552
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 923.379 ; gain = 443.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_health_bist' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_bist.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_mrmgen' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/mrmgen/m_tsmx_mrmgen.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arith' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arith' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_mrmgen' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/mrmgen/m_tsmx_mrmgen.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_geom' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_geom_su' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_geom_su' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_geom' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_health_bist' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_bist.sv:19]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dr1_reg' and it is trimmed from '161' to '160' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:902]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dq1_reg' and it is trimmed from '160' to '159' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:904]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_shift_reg' and it is trimmed from '128' to '64' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:97]
+WARNING: [Synth 8-7129] Port i_row_data[0] in module m_tsmx_geom is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1111.207 ; gain = 631.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1111.207 ; gain = 631.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1111.207 ; gain = 631.344
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arith'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_op_reg' in module 'm_tsmx_mrmgen'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_health_bist'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_rsp_current_state_reg' in module 'm_tsmx_health_bist'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_op_reg' using encoding 'one-hot' in module 'm_tsmx_mrmgen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_RS_IDLE |                              001 |                               00
+            ENUM_RS_READ |                              010 |                               01
+            ENUM_RS_HOLD |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_rsp_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_health_bist'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                            00001 |                              000
+            ENUM_ST_IDLE |                            00100 |                              001
+            ENUM_ST_ROWS |                            10000 |                              010
+            ENUM_ST_TERM |                            01000 |                              011
+            ENUM_ST_WAIT |                            00010 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_health_bist'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 2069.340 ; gain = 1589.477
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input  161 Bit       Adders := 1     
+	   2 Input  160 Bit       Adders := 14    
+	   3 Input  160 Bit       Adders := 3     
+	   4 Input  160 Bit       Adders := 1     
+	   2 Input   65 Bit       Adders := 4     
+	   2 Input   64 Bit       Adders := 37    
+	   3 Input   64 Bit       Adders := 24    
+	   5 Input   64 Bit       Adders := 1     
+	   4 Input   64 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 11    
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 9     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
++---Registers : 
+	             8200 Bit    Registers := 1     
+	              641 Bit    Registers := 1     
+	              401 Bit    Registers := 1     
+	              384 Bit    Registers := 1     
+	              352 Bit    Registers := 2     
+	              256 Bit    Registers := 33    
+	              176 Bit    Registers := 1     
+	              161 Bit    Registers := 1     
+	              160 Bit    Registers := 23    
+	              129 Bit    Registers := 1     
+	              128 Bit    Registers := 61    
+	               81 Bit    Registers := 1     
+	               64 Bit    Registers := 63    
+	               50 Bit    Registers := 3     
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 40    
+	               13 Bit    Registers := 4     
+	                8 Bit    Registers := 8     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 55    
++---Multipliers : 
+	             32x160  Multipliers := 1     
+	              64x64  Multipliers := 4     
+	              20x64  Multipliers := 1     
+	              32x32  Multipliers := 1     
++---RAMs : 
+	              44K Bit	(129 X 352 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input 1928 Bit        Muxes := 3     
+	   2 Input  641 Bit        Muxes := 7     
+	  21 Input  641 Bit        Muxes := 2     
+	  10 Input  641 Bit        Muxes := 1     
+	   2 Input  402 Bit        Muxes := 1     
+	  12 Input  401 Bit        Muxes := 1     
+	   4 Input  401 Bit        Muxes := 1     
+	   2 Input  401 Bit        Muxes := 2     
+	   2 Input  352 Bit        Muxes := 2     
+	   2 Input  288 Bit        Muxes := 1     
+	  14 Input  256 Bit        Muxes := 1     
+	   2 Input  192 Bit        Muxes := 1     
+	   2 Input  161 Bit        Muxes := 2     
+	   2 Input  160 Bit        Muxes := 59    
+	  21 Input  160 Bit        Muxes := 4     
+	  16 Input  160 Bit        Muxes := 1     
+	   4 Input  160 Bit        Muxes := 1     
+	   5 Input  160 Bit        Muxes := 2     
+	   2 Input  129 Bit        Muxes := 2     
+	   4 Input  128 Bit        Muxes := 1     
+	  14 Input  128 Bit        Muxes := 1     
+	   2 Input   81 Bit        Muxes := 1     
+	  14 Input   81 Bit        Muxes := 1     
+	   3 Input   81 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 57    
+	   4 Input   64 Bit        Muxes := 5     
+	  12 Input   64 Bit        Muxes := 1     
+	  21 Input   64 Bit        Muxes := 20    
+	  14 Input   64 Bit        Muxes := 1     
+	   2 Input   63 Bit        Muxes := 9     
+	   7 Input   63 Bit        Muxes := 1     
+	   4 Input   50 Bit        Muxes := 1     
+	   2 Input   50 Bit        Muxes := 1     
+	   4 Input   42 Bit        Muxes := 4     
+	   2 Input   41 Bit        Muxes := 5     
+	   3 Input   41 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 59    
+	  21 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	  12 Input   32 Bit        Muxes := 5     
+	   3 Input   32 Bit        Muxes := 1     
+	  14 Input   32 Bit        Muxes := 3     
+	   4 Input   23 Bit        Muxes := 2     
+	   2 Input   22 Bit        Muxes := 2     
+	   4 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 16    
+	   6 Input   21 Bit        Muxes := 4     
+	   4 Input   21 Bit        Muxes := 3     
+	   3 Input   21 Bit        Muxes := 6     
+	   5 Input   21 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 2     
+	  21 Input   13 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 12    
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 3     
+	  12 Input    8 Bit        Muxes := 1     
+	  14 Input    8 Bit        Muxes := 6     
+	   3 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   4 Input    7 Bit        Muxes := 4     
+	  21 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 13    
+	   8 Input    6 Bit        Muxes := 2     
+	   7 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	  10 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 10    
+	  21 Input    5 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 2     
+	   7 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   9 Input    5 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 28    
+	  11 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	  15 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 6     
+	  21 Input    4 Bit        Muxes := 4     
+	  21 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 11    
+	   4 Input    3 Bit        Muxes := 3     
+	  10 Input    3 Bit        Muxes := 3     
+	  11 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	  21 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 8     
+	  21 Input    1 Bit        Muxes := 79    
+	   2 Input    1 Bit        Muxes := 192   
+	  10 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 10    
+	  16 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 10    
+	  11 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 14    
+	 130 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 8     
+	  14 Input    1 Bit        Muxes := 22    
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP reg_pp0, operation Mode is: A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: PCIN+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: PCIN+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: PCIN+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: PCIN+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: Generating DSP reg_pp0, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+DSP Report: operator reg_pp0 is absorbed into DSP reg_pp0.
+INFO: [Synth 8-5544] ROM "w_sa0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_sb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_sa0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_sb0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_com_main.w_b" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "w_fsm_ctrl_nxt_state8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "w_fsm_ctrl_nxt_state8" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "w_j" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[13] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[12] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[11] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[10] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[9] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[8] driven by constant 0
+WARNING: [Synth 8-3917] design m_tsmx_mrmgen__GC0 has port w_ar_data2_out[7] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[6]' (FDCE) to 'reg_req_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[7]' (FDCE) to 'reg_req_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[0]' (FDCE) to 'reg_req_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[1]' (FDCE) to 'reg_req_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[2]' (FDCE) to 'reg_req_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[3]' (FDCE) to 'reg_req_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[4]' (FDCE) to 'reg_req_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_limit_reg[5]' (FDCE) to 'reg_req_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[45]' (FDCE) to 'reg_cid_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[46]' (FDCE) to 'reg_cid_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[47]' (FDCE) to 'reg_cid_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[44]' (FDCE) to 'reg_cid_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[56]' (FDCE) to 'reg_a_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[55]' (FDCE) to 'reg_a_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[54]' (FDCE) to 'reg_a_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[53]' (FDCE) to 'reg_a_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[52]' (FDCE) to 'reg_a_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[51]' (FDCE) to 'reg_a_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[50]' (FDCE) to 'reg_a_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[49]' (FDCE) to 'reg_a_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[48]' (FDCE) to 'reg_a_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[71]' (FDCE) to 'reg_a_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[72]' (FDCE) to 'reg_a_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[73]' (FDCE) to 'reg_a_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[74]' (FDCE) to 'reg_a_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[75]' (FDCE) to 'reg_a_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[76]' (FDCE) to 'reg_a_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[77]' (FDCE) to 'reg_a_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[78]' (FDCE) to 'reg_a_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[79]' (FDCE) to 'reg_a_reg[31]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[67]' (FDCE) to 'reg_a_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[68]' (FDCE) to 'reg_a_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[69]' (FDCE) to 'reg_a_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[70]' (FDCE) to 'reg_a_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[66]' (FDCE) to 'reg_a_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[65]' (FDCE) to 'reg_a_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[61]' (FDCE) to 'reg_a_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[62]' (FDCE) to 'reg_a_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[63]' (FDCE) to 'reg_a_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[64]' (FDCE) to 'reg_a_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[60]' (FDCE) to 'reg_a_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[57]' (FDCE) to 'reg_a_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[58]' (FDCE) to 'reg_a_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[59]' (FDCE) to 'reg_a_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[39]' (FDCE) to 'reg_epoch_reg[31]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[38]' (FDCE) to 'reg_epoch_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[37]' (FDCE) to 'reg_epoch_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[36]' (FDCE) to 'reg_epoch_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[35]' (FDCE) to 'reg_epoch_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[34]' (FDCE) to 'reg_epoch_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[33]' (FDCE) to 'reg_epoch_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[32]' (FDCE) to 'reg_epoch_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[12]' (FDCE) to 'reg_epoch_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[11]' (FDCE) to 'reg_epoch_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[10]' (FDCE) to 'reg_epoch_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[9]' (FDCE) to 'reg_epoch_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[8]' (FDCE) to 'reg_epoch_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[25]' (FDCE) to 'reg_epoch_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[16]' (FDCE) to 'reg_epoch_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[15]' (FDCE) to 'reg_epoch_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[26]' (FDCE) to 'reg_epoch_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[29]' (FDCE) to 'reg_epoch_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[30]' (FDCE) to 'reg_epoch_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[14]' (FDCE) to 'reg_epoch_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[28]' (FDCE) to 'reg_epoch_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[22]' (FDCE) to 'reg_epoch_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[20]' (FDCE) to 'reg_epoch_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[18]' (FDCE) to 'reg_epoch_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[27]' (FDCE) to 'reg_epoch_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[31]' (FDCE) to 'reg_epoch_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[21]' (FDCE) to 'reg_epoch_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[17]' (FDCE) to 'reg_epoch_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[19]' (FDCE) to 'reg_epoch_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[23]' (FDCE) to 'reg_epoch_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[24]' (FDCE) to 'reg_epoch_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_req_reg[13]' (FDCE) to 'reg_epoch_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[0]' (FDCE) to 'reg_jerk_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[1]' (FDCE) to 'reg_jerk_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[2]' (FDCE) to 'reg_jerk_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[3]' (FDCE) to 'reg_jerk_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[4]' (FDCE) to 'reg_jerk_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[5]' (FDCE) to 'reg_jerk_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_jerk_reg[6] )
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[13]' (FDCE) to 'reg_jerk_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[23]' (FDCE) to 'reg_jerk_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[24]' (FDCE) to 'reg_jerk_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[25]' (FDCE) to 'reg_jerk_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_jerk_reg[26]' (FDCE) to 'reg_jerk_reg[27]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_resp_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_row_reg[352] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_row_reg[7] )
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:294]
+INFO: [Synth 8-5544] ROM "w_dd" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_q0v_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_q0l_reg[63] )
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[25]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[24]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[23]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[22]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[21]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[20]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[19]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[18]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[17]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[25]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[24]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[23]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[22]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[21]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[20]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[19]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[18]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[17]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]__2) is unused and will be removed from module m_tsmx_geom_su.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:206]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:205]
+DSP Report: Generating DSP reg_sl0, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: Generating DSP reg_sl0, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: Generating DSP reg_sl0, operation Mode is: (A:0xf4240)*B.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: Generating DSP reg_sl0, operation Mode is: (PCIN>>17)+(A:0xf4240)*B.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: operator reg_sl0 is absorbed into DSP reg_sl0.
+DSP Report: Generating DSP reg_sp0, operation Mode is: A*B.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: Generating DSP reg_sp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: Generating DSP reg_sp0, operation Mode is: A*B.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: Generating DSP reg_sp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+DSP Report: operator reg_sp0 is absorbed into DSP reg_sp0.
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[0]' (FDCE) to 'reg_cell_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[1]' (FDCE) to 'reg_cell_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[2]' (FDCE) to 'reg_cell_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[3]' (FDCE) to 'reg_cell_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[4]' (FDCE) to 'reg_cell_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[5]' (FDCE) to 'reg_cell_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[6]' (FDCE) to 'reg_cell_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_cell_reg_rep[7]' (FDCE) to 'reg_cell_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_fail_reg[6]' (FDCE) to 'reg_fail_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_fail_reg[7]' (FDCE) to 'reg_fail_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_fail_reg[5] )
+INFO: [Synth 8-3886] merging instance 'reg_fail_reg[1]' (FDCE) to 'reg_fail_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_resp_reg[13]' (FDCE) to 'reg_resp_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_resp_reg[14]' (FDCE) to 'reg_resp_reg[15]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_resp_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:12 ; elapsed = 00:04:15 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+ Sort Area is m_tsmx_geom_su reg_m20_0 : 0 0 : 3101 12442 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_0 : 0 1 : 3120 12442 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_0 : 0 2 : 3101 12442 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_0 : 0 3 : 3120 12442 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_4 : 0 0 : 3101 11782 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_4 : 0 1 : 3101 11782 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_4 : 0 2 : 2479 11782 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_4 : 0 3 : 3101 11782 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_6 : 0 0 : 3101 11141 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_6 : 0 1 : 2460 11141 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_6 : 0 2 : 2479 11141 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_6 : 0 3 : 3101 11141 : Used 4 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_0 : 0 0 : 2719 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_0 : 0 1 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_0 : 0 2 : 2730 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_0 : 0 3 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_4 : 0 0 : 2719 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_4 : 0 1 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_4 : 0 2 : 2730 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_4 : 0 3 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_5 : 0 0 : 2719 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_5 : 0 1 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_5 : 0 2 : 2730 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_5 : 0 3 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_6 : 0 0 : 2719 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_6 : 0 1 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_6 : 0 2 : 2730 10177 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_6 : 0 3 : 2364 10177 : Used 1 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_8 : 0 0 : 2460 9675 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_8 : 0 1 : 2479 9675 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_8 : 0 2 : 2460 9675 : Used 4 time 0
+ Sort Area is m_tsmx_geom_su reg_m20_8 : 0 3 : 2276 9675 : Used 4 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_7 : 0 0 : 3471 6493 : Used 1 time 0
+ Sort Area is m_tsmx_arith__GB3 reg_pp0_7 : 0 1 : 3022 6493 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sp0_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sp0_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sp0_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sp0_3 : 0 1 : 2659 5418 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sl0_6 : 0 0 : 1750 3519 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sl0_6 : 0 1 : 1769 3519 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sl0_9 : 0 0 : 1750 2888 : Used 1 time 0
+ Sort Area is m_tsmx_geom__GCB0 reg_sl0_9 : 0 1 : 1138 2888 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+------------+---------------+----------------+
+|Module Name  | RTL Object | Depth x Width | Implemented As | 
++-------------+------------+---------------+----------------+
+|m_tsmx_arith | w_r        | 64x21         | LUT            | 
++-------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------+-----------------+----------------+----------------------+-----------------+
+|Module Name        | RTL Object      | Inference      | Size (Depth x Width) | Primitives      | 
++-------------------+-----------------+----------------+----------------------+-----------------+
+|m_tsmx_health_bist | reg_t_reg       | User Attribute | 64 x 160             | RAM64M8 x 161   | 
+|m_tsmx_geom__GCB0  | reg_rows_reg    | Implied        | 256 x 352            | RAM64M8 x 306   | 
+|m_tsmx_geom__GCB0  | reg_motion_reg  | User Attribute | 32 x 192             | RAM32X1S x 192  | 
+|m_tsmx_health_bist | reg_row_mem_reg | User Attribute | 256 x 352            | RAM64M8 x 306   | 
++-------------------+-----------------+----------------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|m_tsmx_health_bist | A2*B                     | 25     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 25     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | A2*B                     | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A2*B                | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | A2*B                     | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A2*B                | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | A2*B                     | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A2*B                | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | A2*B                     | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A2*B                | 18     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17)+A2*B          | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | A*B                      | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 14     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | A*B                      | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | A*B                      | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | A*B                      | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B                 | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17)+A*B           | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17)+(A:0xf4240)*B | 21     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (A:0xf4240)*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17)+(A:0xf4240)*B | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17)+A*B           | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | A*B                      | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17)+A*B           | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:24 ; elapsed = 00:04:28 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------+-----------------+----------------+----------------------+-----------------+
+|Module Name        | RTL Object      | Inference      | Size (Depth x Width) | Primitives      | 
++-------------------+-----------------+----------------+----------------------+-----------------+
+|m_tsmx_health_bist | reg_t_reg       | User Attribute | 64 x 160             | RAM64M8 x 161   | 
+|m_tsmx_geom__GCB0  | reg_rows_reg    | Implied        | 256 x 352            | RAM64M8 x 306   | 
+|m_tsmx_geom__GCB0  | reg_motion_reg  | User Attribute | 32 x 192             | RAM32X1S x 192  | 
+|m_tsmx_health_bist | reg_row_mem_reg | User Attribute | 256 x 352            | RAM64M8 x 306   | 
++-------------------+-----------------+----------------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:456]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:456]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:456]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:456]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:287]
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5844' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:45 ; elapsed = 00:04:50 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:09 ; elapsed = 00:05:16 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:09 ; elapsed = 00:05:16 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:15 ; elapsed = 00:05:22 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:15 ; elapsed = 00:05:22 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:21 ; elapsed = 00:05:29 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:21 ; elapsed = 00:05:29 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|m_tsmx_geom__GCB0  | A*B               | 20     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17+A*B)'   | 0      | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom__GCB0  | A*B               | 20     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17+A*B)'   | 0      | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom__GCB0  | A*B               | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17+A*B)'   | 14     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom__GCB0  | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom__GCB0  | (PCIN>>17+A*B)'   | 0      | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN+A*B)'       | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_geom_su     | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN>>17+A*B      | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | PCIN+A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_geom_su     | (PCIN>>17+A*B)'   | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_health_bist | A'*B'             | 24     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17+A'*B')' | 24     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_health_bist | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN>>17+A'*B'    | 17     | 15     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A'*B'        | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17+A'*B')' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_health_bist | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN>>17+A'*B'    | 17     | 15     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A'*B'        | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17+A'*B')' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_health_bist | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN>>17+A'*B'    | 17     | 15     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A'*B'        | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17+A'*B')' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|m_tsmx_health_bist | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN>>17+A'*B'    | 17     | 15     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | PCIN+A'*B'        | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|m_tsmx_health_bist | (PCIN>>17+A'*B')' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |  1793|
+|2     |DSP48E2         |    52|
+|3     |DSP_ALU         |    38|
+|4     |DSP_A_B_DATA    |    38|
+|5     |DSP_C_DATA      |    38|
+|6     |DSP_MULTIPLIER  |    38|
+|7     |DSP_M_DATA      |    38|
+|8     |DSP_OUTPUT      |    38|
+|9     |DSP_PREADD      |    38|
+|10    |DSP_PREADD_DATA |    38|
+|11    |LUT1            |  3294|
+|12    |LUT2            |  8049|
+|13    |LUT3            |  5043|
+|14    |LUT4            |  4929|
+|15    |LUT5            |  3735|
+|16    |LUT6            | 10212|
+|17    |MUXF7           |  1095|
+|18    |RAM32X1S        |   192|
+|19    |RAM64M8         |   542|
+|20    |RAM64X1D        |     6|
+|21    |FDCE            | 13674|
+|22    |FDPE            |     5|
+|23    |FDRE            |  8192|
++------+----------------+------+
+
+Report Instance Areas: 
++------+--------------------------+---------------------------------------------------+------+
+|      |Instance                  |Module                                             |Cells |
++------+--------------------------+---------------------------------------------------+------+
+|1     |top                       |                                                   | 61117|
+|2     |  u_tsmx_geom             |m_tsmx_geom                                        | 39704|
+|3     |    reg_sl0__0            |\u_tsmx_geom/reg_sl0__0_funnel                     |     8|
+|4     |    reg_sl0__2            |\u_tsmx_geom/reg_sl0__0_funnel__1                  |     8|
+|5     |    reg_sp0__0            |\u_tsmx_geom/reg_sl0__0_funnel__2                  |     8|
+|6     |    reg_sp0__2            |\u_tsmx_geom/reg_sl0__0_funnel__3                  |     8|
+|7     |    \gen_su[0].u_geom_su  |m_tsmx_geom_su                                     |  5474|
+|8     |      reg_m20__2          |reg_m20__2_funnel__7                               |     8|
+|9     |      reg_m20__6          |reg_m20__2_funnel__4                               |     8|
+|10    |      reg_m20__10         |reg_m20__2_funnel__5                               |     8|
+|11    |      reg_m20__14         |reg_m20__2_funnel__6                               |     8|
+|12    |    \gen_su[1].u_geom_su  |m_tsmx_geom_su_0                                   |  5423|
+|13    |      reg_m20__2          |reg_m20__2_funnel__15                              |     8|
+|14    |      reg_m20__6          |reg_m20__2_funnel__14                              |     8|
+|15    |      reg_m20__10         |reg_m20__2_funnel__13                              |     8|
+|16    |      reg_m20__14         |reg_m20__2_funnel__12                              |     8|
+|17    |    \gen_su[2].u_geom_su  |m_tsmx_geom_su_1                                   |  5094|
+|18    |      reg_m20__2          |reg_m20__2_funnel__11                              |     8|
+|19    |      reg_m20__6          |reg_m20__2_funnel__10                              |     8|
+|20    |      reg_m20__10         |reg_m20__2_funnel__8                               |     8|
+|21    |      reg_m20__14         |reg_m20__2_funnel__9                               |     8|
+|22    |    \gen_su[3].u_geom_su  |m_tsmx_geom_su_2                                   |  5456|
+|23    |      reg_m20__2          |reg_m20__2_funnel                                  |     8|
+|24    |      reg_m20__6          |reg_m20__2_funnel__1                               |     8|
+|25    |      reg_m20__10         |reg_m20__2_funnel__2                               |     8|
+|26    |      reg_m20__14         |reg_m20__2_funnel__3                               |     8|
+|27    |  u_tsmx_mrmgen           |m_tsmx_mrmgen                                      | 19928|
+|28    |    u_tsmx_arith          |m_tsmx_arith                                       | 17579|
+|29    |      reg_pp0             |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__7   |     8|
+|30    |      reg_pp0__0          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__0_funnel      |     8|
+|31    |      reg_pp0__1          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__12  |     8|
+|32    |      reg_pp0__2          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__9   |     8|
+|33    |      reg_pp0__3          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__10  |     8|
+|34    |      reg_pp0__4          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__0_funnel__1   |     8|
+|35    |      reg_pp0__5          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__4   |     8|
+|36    |      reg_pp0__6          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__3   |     8|
+|37    |      reg_pp0__7          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__1   |     8|
+|38    |      reg_pp0__8          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__0_funnel__3   |     8|
+|39    |      reg_pp0__9          |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel      |     8|
+|40    |      reg_pp0__10         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__6   |     8|
+|41    |      reg_pp0__11         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__8   |     8|
+|42    |      reg_pp0__12         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__0_funnel__4   |     8|
+|43    |      reg_pp0__13         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__11  |     8|
+|44    |      reg_pp0__14         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__5   |     8|
+|45    |      reg_pp0__15         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__9_funnel__2   |     8|
+|46    |      reg_pp0__16         |\u_tsmx_mrmgen/u_tsmx_arith/reg_pp0__0_funnel__2   |     8|
++------+--------------------------+---------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:22 ; elapsed = 00:05:29 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 111 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:22 ; elapsed = 00:05:31 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+Synthesis Optimization Complete : Time (s): cpu = 00:04:22 ; elapsed = 00:05:31 . Memory (MB): peak = 2210.316 ; gain = 1730.453
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2210.316 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3718 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 4 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2310.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 830 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 90 instances
+  RAM32X1S => RAM32X1S (RAMS32): 192 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 542 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 6 instances
+
+Synth Design complete | Checksum: d7f64a7e
+INFO: [Common 17-83] Releasing license: Synthesis
+278 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:54 ; elapsed = 00:06:08 . Memory (MB): peak = 2310.805 ; gain = 1833.910
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 2409.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_health_bist/post_synth.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 2409.613 ; gain = 98.809
+create_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2419.855 ; gain = 10.242
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "i_clk_core" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:01:45 ; elapsed = 00:01:53 . Memory (MB): peak = 4111.098 ; gain = 1691.242
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 31 14:31:11 2026...

@@ -1,0 +1,119 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\sim.vvp +START=0 +LIMIT=80
+JOB 0 cycles=46612 rows=57
+JOB 1 cycles=52740 rows=65
+JOB 2 cycles=53506 rows=66
+JOB 3 cycles=49575 rows=61
+JOB 4 cycles=37319 rows=45
+JOB 5 cycles=21898 rows=25
+JOB 6 cycles=25164 rows=29
+JOB 7 cycles=23430 rows=27
+JOB 8 cycles=25829 rows=30
+JOB 9 cycles=21999 rows=25
+JOB 10 cycles=19600 rows=22
+JOB 11 cycles=21132 rows=24
+JOB 12 cycles=28127 rows=33
+JOB 13 cycles=25829 rows=30
+JOB 14 cycles=21999 rows=25
+JOB 15 cycles=28228 rows=33
+JOB 16 cycles=27462 rows=32
+JOB 17 cycles=27260 rows=32
+JOB 18 cycles=40484 rows=49
+JOB 19 cycles=40383 rows=49
+JOB 20 cycles=38750 rows=47
+JOB 21 cycles=27361 rows=32
+JOB 22 cycles=37319 rows=45
+JOB 23 cycles=31090 rows=37
+JOB 24 cycles=19802 rows=22
+JOB 25 cycles=31856 rows=38
+JOB 26 cycles=21233 rows=24
+JOB 27 cycles=32058 rows=38
+JOB 28 cycles=28893 rows=34
+JOB 29 cycles=32824 rows=39
+JOB 30 cycles=32723 rows=39
+JOB 31 cycles=28228 rows=33
+JOB 32 cycles=22765 rows=26
+JOB 33 cycles=47277 rows=58
+JOB 34 cycles=51107 rows=63
+JOB 35 cycles=50442 rows=62
+JOB 36 cycles=24398 rows=28
+JOB 37 cycles=22866 rows=26
+JOB 38 cycles=35021 rows=42
+JOB 39 cycles=28893 rows=34
+JOB 40 cycles=24398 rows=28
+JOB 41 cycles=31292 rows=37
+JOB 42 cycles=25930 rows=30
+JOB 43 cycles=26595 rows=31
+JOB 44 cycles=27361 rows=32
+JOB 45 cycles=23632 rows=27
+JOB 46 cycles=21898 rows=25
+JOB 47 cycles=21334 rows=24
+JOB 48 cycles=39718 rows=48
+JOB 49 cycles=27361 rows=32
+JOB 50 cycles=41149 rows=50
+JOB 51 cycles=22866 rows=26
+JOB 52 cycles=41915 rows=51
+JOB 53 cycles=30425 rows=36
+JOB 54 cycles=34356 rows=41
+JOB 55 cycles=28228 rows=33
+JOB 56 cycles=29760 rows=35
+JOB 57 cycles=25930 rows=30
+JOB 58 cycles=23632 rows=27
+JOB 59 cycles=23632 rows=27
+JOB 60 cycles=32824 rows=39
+JOB 61 cycles=22100 rows=25
+JOB 62 cycles=30526 rows=36
+JOB 63 cycles=26696 rows=31
+JOB 64 cycles=26696 rows=31
+JOB 65 cycles=38952 rows=47
+JOB 66 cycles=44213 rows=54
+JOB 67 cycles=28792 rows=34
+JOB 68 cycles=34356 rows=41
+JOB 69 cycles=22100 rows=25
+JOB 70 cycles=28994 rows=34
+JOB 71 cycles=33590 rows=40
+JOB 72 cycles=31856 rows=38
+JOB 73 cycles=28893 rows=34
+JOB 74 cycles=31292 rows=37
+JOB 75 cycles=23632 rows=27
+JOB 76 cycles=32622 rows=39
+JOB 77 cycles=19600 rows=22
+JOB 78 cycles=27361 rows=32
+JOB 79 cycles=22100 rows=25
+ASSERT 0 S5_3_B4_reset_ready spec5.3/5.5.5/9.2 hits=12
+ASSERT 1 S5_3_B4_reset_rsp_valid spec5.3/5.5.5/9.2 hits=12
+ASSERT 2 S5_3_B4_reset_row_valid spec5.3/5.5.5/9.2 hits=12
+ASSERT 3 S5_3_B4_reset_rsp_zero spec5.3/5.5.5/9.2 hits=12
+ASSERT 4 S5_3_B4_reset_row_zero spec5.3/5.5.5/9.2 hits=12
+ASSERT 5 S5_3_B4_invalid_rsp_zero spec5.3/5.5.5/9.2 hits=2444110
+ASSERT 6 S5_3_B4_invalid_row_zero spec5.3/5.5.5/9.2 hits=2439726
+ASSERT 7 S5_3_B4_row_blocks_req spec5.3/5.5.5/9.2 hits=4704
+ASSERT 8 S5_3_B4_rsp_blocks_req spec5.3/5.5.5/9.2 hits=320
+ASSERT 9 S5_3_B4_row_stall_valid spec5.3/5.5.5/9.2 hits=1813
+ASSERT 10 S5_3_B4_row_stall_data spec5.3/5.5.5/9.2 hits=1813
+ASSERT 11 S5_3_B4_rsp_stall_valid spec5.3/5.5.5/9.2 hits=240
+ASSERT 12 S5_3_B4_rsp_stall_data spec5.3/5.5.5/9.2 hits=240
+ASSERT 13 S5_3_B4_row_candidate spec5.3/5.5.5/9.2 hits=4704
+ASSERT 14 S5_3_B4_row_epoch spec5.3/5.5.5/9.2 hits=4704
+ASSERT 15 S5_3_B4_row_index spec5.3/5.5.5/9.2 hits=4704
+ASSERT 16 S5_3_B4_row_padding spec5.3/5.5.5/9.2 hits=4704
+ASSERT 17 S5_3_B4_row_phase spec5.3/5.5.5/9.2 hits=4704
+ASSERT 18 S5_3_B4_row_xlo spec5.3/5.5.5/9.2 hits=4704
+ASSERT 19 S5_3_B4_row_xhi spec5.3/5.5.5/9.2 hits=4704
+ASSERT 20 S5_3_B4_row_vlo spec5.3/5.5.5/9.2 hits=4704
+ASSERT 21 S5_3_B4_row_vhi spec5.3/5.5.5/9.2 hits=4704
+ASSERT 22 S5_3_B4_row_midpoint spec5.3/5.5.5/9.2 hits=4704
+ASSERT 23 S5_3_B4_row_jerk spec5.3/5.5.5/9.2 hits=4704
+ASSERT 24 S5_3_B4_row_last spec5.3/5.5.5/9.2 hits=4704
+ASSERT 25 S5_3_B4_terminal_accept spec5.3/5.5.5/9.2 hits=320
+ASSERT 26 S5_3_B4_terminal_reason spec5.3/5.5.5/9.2 hits=320
+ASSERT 27 S5_3_B4_terminal_stop_valid spec5.3/5.5.5/9.2 hits=320
+ASSERT 28 S5_3_B4_terminal_stop spec5.3/5.5.5/9.2 hits=320
+ASSERT 29 S5_3_B4_terminal_row_count spec5.3/5.5.5/9.2 hits=320
+ASSERT 30 S5_3_B4_row_exact spec5.3/5.5.5/9.2 hits=4704
+ASSERT 31 S5_3_B4_terminal_exact spec5.3/5.5.5/9.2 hits=320
+LATENCY min=19600 max=53506 II min=19617 max=53546 row_gap_max=4599 nostall=0
+assertion failures: 0, assertions never exercised: 0
+PASS mrmgen: golden=80/80 rows=2887 assertions=32 cycles=2444442
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\tb_m_tsmx_mrmgen.sv:199: $finish called at 26888868000 (1ps)
+
+EXIT 0

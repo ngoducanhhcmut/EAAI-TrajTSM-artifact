@@ -1,0 +1,5 @@
+{
+  "status": "STOPPED",
+  "error": "TypeError(\"argument should be a str object or an os.PathLike object returning str, not <class 'bytes'>\")",
+  "runtime_seconds": 18.68700000003446
+}

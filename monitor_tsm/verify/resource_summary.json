@@ -1,0 +1,9 @@
+{
+  "ended_utc": "2026-10-29T12:38:55.584762+00:00",
+  "internal_ctypes_peak_valid": false,
+  "note": "Use external Get-Process samples; internal ctypes returns zero on this host. Initial V2 is not covered by that monitor; inspect any replay resource audit separately.",
+  "observed_peak_sum_including_monitor": 251498496,
+  "samples": 549,
+  "simulation_logged_seconds": 18276.78769430002,
+  "wall_seconds_since_registration": 20463.584762
+}

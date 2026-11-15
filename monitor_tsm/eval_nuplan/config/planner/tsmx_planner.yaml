@@ -1,0 +1,19 @@
+tsmx_planner:
+  _target_: tsmx_nuplan.planner.TsmxPlanner
+  _convert_: 'all'
+  tsmx: true
+  fault: none                     # none | blind | stale
+  fault_window: [2.0, 6.0]        # fault onset ~ U[2, 6] s, seeded by scenario token
+  seed: 20261105
+  condition: ''
+  contract: false               # B1 freshness rule (ablation); conditions *_tsmxc set it true
+  monitor: tsmx                 # tsmx | rss (baseline, 13/11/2026)
+  # nominal IDM, devkit defaults (idm_planner.yaml); target speed later capped to the 10 m/s ODD
+  target_velocity: 10
+  min_gap_to_lead_agent: 1.0
+  headway_time: 1.5
+  accel_max: 1.0
+  decel_max: 3.0
+  planned_trajectory_samples: 16
+  planned_trajectory_sample_interval: 0.5
+  occupancy_map_radius: 40

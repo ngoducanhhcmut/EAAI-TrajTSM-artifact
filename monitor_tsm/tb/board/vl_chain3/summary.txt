@@ -1,0 +1,9 @@
+E_contend rc=0 s=7
+E0_nocontend rc=0 s=7
+compile3 rc=0
+E2_contend_long rc=0
+E2_nocontend_long rc=0
+D3_tick_ackhold_stall50ms rc=143 s=1267
+C3_tick_ackhold rc=143 s=1267
+B3_tick_ack_next rc=143 s=1267
+DONE

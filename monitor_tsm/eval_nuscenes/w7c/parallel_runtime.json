@@ -1,0 +1,6 @@
+{
+  "cutoff": "scene-0227",
+  "prefix_rows": 9114,
+  "prefix_elapsed_seconds": 414.9,
+  "runtime_scope": "Completed prefix elapsed from last scene log plus native parallel suffix wall time; discarded in-flight scene and restart gap excluded."
+}

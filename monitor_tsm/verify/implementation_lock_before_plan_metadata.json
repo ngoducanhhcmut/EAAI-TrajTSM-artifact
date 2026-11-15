@@ -1,0 +1,16 @@
+{
+  "amendment": "B4 implements continuous capped jerk, not d2 midpoint hold; declared before held-out. Original registration immutable.",
+  "registration_hash": "cff3c3480a22b69383c8911ec793ec2865d0883ee1d284a8d27559b874093d19",
+  "sources": {
+    "tsmx_hw\\golden\\tsmx_golden\\__init__.py": "662f77ada837329663f6395cdddcca20052530f6e611057c4af53515e772a806",
+    "tsmx_hw\\golden\\tsmx_golden\\model.py": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+    "tsmx_hw\\golden\\vectors.py": "0531eb5808b5bc63b554820395b1b852be2d96b16a3b0cd6d412bd9727d6d324",
+    "tsmx_hw\\verify\\bridge.py": "0d748b00c3c912a31ef02fef1b4fa6edf12953bd10465e55abcc812511dbf2c0",
+    "tsmx_hw\\verify\\oracle.py": "7d3029c7d2f6e47ee457920297b9837678c954fd1827233310c95619910c7687",
+    "tsmx_hw\\verify\\register.py": "93f6f141aa28c289842ddfa24a6a5ddc60d5a8ae9b4f33f4907e4ea8cb8f966a",
+    "tsmx_hw\\verify\\run.py": "09c9f1dfa23715bcaef20d4e0ca98a239b8130697cd629bb7721cd9f07f411ba",
+    "tsmx_hw\\verify\\soundness.py": "06550ff91c6d7e85c0a4b1209aba158f3dc6aa5d5e8c09c4c2f96b3fbe3630c1",
+    "tsmx_hw\\verify\\unit.py": "dc8aad4575fc98fc06602993c9ae032d25f0a663e7f525e00d0dc6622ff56140"
+  },
+  "utc": "2026-10-29T11:58:24Z"
+}

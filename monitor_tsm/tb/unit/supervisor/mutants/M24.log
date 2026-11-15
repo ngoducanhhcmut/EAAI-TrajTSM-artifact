@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\sim.vvp +MUTANT=24
+INJECT 24 B8_reject_fault: DUT output data stuck-X
+ASSERT_FAIL 24 B8_reject_fault cycle=10 actual=xx expected=46
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\tb_m_tsmx_supervisor.sv:359: R-025 assertion failed
+       Time: 106000  Scope: tb_m_tsmx_supervisor.tick
+
+EXIT 1

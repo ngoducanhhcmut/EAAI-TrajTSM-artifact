@@ -1,0 +1,75 @@
+# TSM tren FPGA, bitstream chi-TSM, bo dem OCM — 06/10/2026 (truoc khi sua duoc DDR)
+# Bitstream: 02_synthesis/tsm_only_ocm/system_wrapper_tsm_only_ocm.bit ; ELF: tsm_multicase.elf
+# 17 ca (15 ca B nuScenes + C1 CRC + C2 NaN) x 3 vong; do tre do bang IOU_SCNTRS (99 990 008 Hz)
+# ----- NGUYEN VAN (khong chinh sua) -----
+=== TSM TREN FPGA (ZCU106, bitstream chi-TSM, bo dem OCM): 17 ca x 3 vong ===
+Bo dem thoi gian: IOU_SCNTRS 99990008 Hz
+
+--- Vong 1 ---
+ #  | ca     | loai                | TSM   | mong doi | fault (mong doi) | buoc/vat can (mong doi) | do tre ms |
+ 0  | H0261  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      | 12/1 (12/1)             | 8.000    | DAT
+ 1  | H0714  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.001    | DAT
+ 2  | H0717  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.001    | DAT
+ 3  | H0720  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 4  | H0723  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 5  | H0726  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.001    | DAT
+ 6  | H0102  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 7  | H0199  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 8  | H0296  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 9  | H0393  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.001    | DAT
+10  | H0490  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+11  | H0587  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+12  | G0007  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+13  | G0218  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+14  | G0429  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+15  | C1 CRC | tiem loi: CRC sai   | VETO  | VETO     | 0x08 (0x08)      |  4/0 ( 4/0)             | 8.000    | DAT
+16  | C2 NaN | tiem loi: NaN       | VETO  | VETO     | 0x02 (0x02)      |  4/0 ( 4/0)             | 8.000    | DAT
+Vong 1: 17/17 ca dung
+
+--- Vong 2 ---
+ #  | ca     | loai                | TSM   | mong doi | fault (mong doi) | buoc/vat can (mong doi) | do tre ms |
+ 0  | H0261  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      | 12/1 (12/1)             | 8.000    | DAT
+ 1  | H0714  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.000    | DAT
+ 2  | H0717  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 3  | H0720  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 4  | H0723  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 5  | H0726  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.001    | DAT
+ 6  | H0102  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 7  | H0199  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 8  | H0296  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 9  | H0393  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+10  | H0490  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+11  | H0587  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+12  | G0007  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+13  | G0218  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+14  | G0429  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+15  | C1 CRC | tiem loi: CRC sai   | VETO  | VETO     | 0x08 (0x08)      |  4/0 ( 4/0)             | 8.001    | DAT
+16  | C2 NaN | tiem loi: NaN       | VETO  | VETO     | 0x02 (0x02)      |  4/0 ( 4/0)             | 8.000    | DAT
+Vong 2: 17/17 ca dung
+
+--- Vong 3 ---
+ #  | ca     | loai                | TSM   | mong doi | fault (mong doi) | buoc/vat can (mong doi) | do tre ms |
+ 0  | H0261  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      | 12/1 (12/1)             | 8.000    | DAT
+ 1  | H0714  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.000    | DAT
+ 2  | H0717  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 3  | H0720  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 4  | H0723  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  3/0 ( 3/0)             | 8.000    | DAT
+ 5  | H0726  | va cham that, bat   | VETO  | VETO     | 0x00 (0x00)      |  4/0 ( 4/0)             | 8.000    | DAT
+ 6  | H0102  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 7  | H0199  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 8  | H0296  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+ 9  | H0393  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+10  | H0490  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+11  | H0587  | an toan (phan cung) | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+12  | G0007  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+13  | G0218  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+14  | G0429  | nguoi lai, an toan  | GRANT | GRANT    | 0x00 (0x00)      |  0/0 ( 0/0)             | 8.000    | DAT
+15  | C1 CRC | tiem loi: CRC sai   | VETO  | VETO     | 0x08 (0x08)      |  4/0 ( 4/0)             | 8.001    | DAT
+16  | C2 NaN | tiem loi: NaN       | VETO  | VETO     | 0x02 (0x02)      |  4/0 ( 4/0)             | 8.000    | DAT
+Vong 3: 17/17 ca dung
+
+=== TONG KET ===
+Dung (quyet dinh + fault + buoc + vat can khop mo phong RTL): 51/51
+Do tre TSM, duong binh thuong (fault=0): 8.000 .. 8.001 ms (thiet ke: 1.500.000 chu ky @ 187,5 MHz = 8,000 ms)
+Do tre TSM, ca co loi                  : 8.000 .. 8.001 ms
+==== TSM TREN FPGA: DAT ====

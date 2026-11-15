@@ -1,0 +1,8 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\sim.vvp +MUTANT=9 +LIMIT=10
+JOB 0 cycles=3218 accept=1
+INJECT 9 stall_blocks_request: flipped DUT output ready
+ASSERT_FAIL 9 stall_blocks_request cycle=3223 age=3219 expected=1 actual=1
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\tb_m_tsmx_splice.sv:149: R-025 assertion failed
+       Time: 35448000  Scope: tb_m_tsmx_splice.tick
+
+EXIT 1

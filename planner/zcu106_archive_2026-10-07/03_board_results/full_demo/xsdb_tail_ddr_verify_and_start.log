@@ -1,0 +1,15 @@
+# Duoi log xsdb lan nap demo day du 07/10/2026 (DDR FULL VERIFY + Traj STATUS 0x500).
+# ----- NGUYEN VAN (khong chinh sua) -----
+DDR FULL VERIFY OK gru_weights.bin (786432 bytes)
+  [08/10] gru_wout_staging.bin -> 0x01894000 (8192 bytes)
+DDR FULL VERIFY OK gru_wout_staging.bin (8192 bytes)
+  [09/10] gru_scale_zp.bin -> 0x018A0000 (6144 bytes)
+DDR FULL VERIFY OK gru_scale_zp.bin (6144 bytes)
+  [10/10] gru_wp_proj.bin -> 0x018A8000 (6144 bytes)
+DDR FULL VERIFY OK gru_wp_proj.bin (6144 bytes)
+DDR FULL VERIFY OK demo_bank.bin (5242880 bytes)
+DDR FULL readback OK for all model payloads and demo bank.
+--- remove PS-PL isolation and release PL reset
+Traj STATUS = 0x00000500
+--- start Cortex-R5 demo; watch the UART terminal
+R5 is running. Stop with Ctrl+C in XSDB after checking UART output.

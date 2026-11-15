@@ -1,0 +1,7 @@
+COMMAND: C:\Vivado\Vivado\2023.2\bin\xvlog.bat --sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\csr\m_tsmx_csr.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_probe_csr.sv
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/csr/m_tsmx_csr.sv" into library work
+INFO: [VRFC 10-311] analyzing module m_tsmx_csr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_probe_csr.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_probe_csr

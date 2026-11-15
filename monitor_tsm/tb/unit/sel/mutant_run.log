@@ -1,0 +1,27 @@
+DUT output stuck-X fault injection; no assertion expression is altered.
+M00 S5_3_reset_ready net=ready KILLED exit_nonzero target_assertion_fired
+M01 S5_3_reset_valid net=valid KILLED exit_nonzero target_assertion_fired
+M02 S5_3_reset_data net=data KILLED exit_nonzero target_assertion_fired
+M03 S5_3_invalid_zero net=data KILLED exit_nonzero target_assertion_fired
+M04 S5_3_ready_known net=ready KILLED exit_nonzero target_assertion_fired
+M05 S5_3_valid_known net=valid KILLED exit_nonzero target_assertion_fired
+M06 S5_3_valid_data_known net=data KILLED exit_nonzero target_assertion_fired
+M07 S5_3_single_outstanding net=ready KILLED exit_nonzero target_assertion_fired
+M08 S5_3_accept_completes_1cy net=valid KILLED exit_nonzero target_assertion_fired
+M09 S5_3_atomic_response net=data KILLED exit_nonzero target_assertion_fired
+M10 S5_3_stall_valid net=valid KILLED exit_nonzero target_assertion_fired
+M11 S5_3_stall_payload net=data KILLED exit_nonzero target_assertion_fired
+M12 S5_3_stall_blocks_req net=ready KILLED exit_nonzero target_assertion_fired
+M13 S5_3_consume_valid net=valid KILLED exit_nonzero target_assertion_fired
+M14 S5_3_consume_payload net=data KILLED exit_nonzero target_assertion_fired
+M15 S5_3_no_unsolicited net=valid KILLED exit_nonzero target_assertion_fired
+M16 S5_3_idle_ready net=ready KILLED exit_nonzero target_assertion_fired
+M17 S5_3_release_ready net=ready KILLED exit_nonzero target_assertion_fired
+M18 B7_candidate_range net=data KILLED exit_nonzero target_assertion_fired
+M19 B7_finite_jerk net=data KILLED exit_nonzero target_assertion_fired
+M20 B7_label_conditional net=data KILLED exit_nonzero target_assertion_fired
+M21 B7_empty_mitigation net=data KILLED exit_nonzero target_assertion_fired
+M22 B7_selected_accepted net=data KILLED exit_nonzero target_assertion_fired
+M23 B7_library_priority net=data KILLED exit_nonzero target_assertion_fired
+M24 B7_candidate_exact net=data KILLED exit_nonzero target_assertion_fired
+M25 B7_label_exact net=data KILLED exit_nonzero target_assertion_fired

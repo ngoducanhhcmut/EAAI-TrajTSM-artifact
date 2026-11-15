@@ -1,0 +1,222 @@
+{
+ "dump_files": 256,
+ "calls": {
+  "blind_tsmx/b3": 17005,
+  "blind_tsmx/b4": 17017,
+  "none_tsmx/b3": 13737,
+  "none_tsmx/b4": 13749,
+  "stale_tsmx/b3": 12523,
+  "stale_tsmx/b4": 12535,
+  "stale_tsmxc/b3": 2570,
+  "stale_tsmxc/b4": 2582
+ },
+ "distinct_b4": 34767,
+ "distinct_b3": 35633,
+ "over32_fail_closed": 0,
+ "shards": {
+  "mrmgen/shard_0": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    135138
+   ]
+  },
+  "mrmgen/shard_1": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    143292
+   ]
+  },
+  "mrmgen/shard_2": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    144561
+   ]
+  },
+  "mrmgen/shard_3": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    144471
+   ]
+  },
+  "mrmgen/shard_4": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    146297
+   ]
+  },
+  "mrmgen/shard_5": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    164972
+   ]
+  },
+  "mrmgen/shard_6": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    182973
+   ]
+  },
+  "mrmgen/shard_7": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    206706
+   ]
+  },
+  "mrmgen/shard_8": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    232852
+   ]
+  },
+  "mrmgen/shard_9": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    248752
+   ]
+  },
+  "mrmgen/shard_10": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3439,
+   "total": [
+    6439,
+    252991
+   ]
+  },
+  "mrmgen/shard_11": {
+   "nuplan_jobs": 1767,
+   "first_nuplan_job": 3439,
+   "total": [
+    5206,
+    173042
+   ]
+  },
+  "geom/shard_0": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    108228
+   ]
+  },
+  "geom/shard_1": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    111662
+   ]
+  },
+  "geom/shard_2": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    115690
+   ]
+  },
+  "geom/shard_3": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    120461
+   ]
+  },
+  "geom/shard_4": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    120911
+   ]
+  },
+  "geom/shard_5": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    126178
+   ]
+  },
+  "geom/shard_6": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    134649
+   ]
+  },
+  "geom/shard_7": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    154234
+   ]
+  },
+  "geom/shard_8": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    170260
+   ]
+  },
+  "geom/shard_9": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    174484
+   ]
+  },
+  "geom/shard_10": {
+   "nuplan_jobs": 3000,
+   "first_nuplan_job": 3123,
+   "total": [
+    6123,
+    191086
+   ]
+  },
+  "geom/shard_11": {
+   "nuplan_jobs": 2633,
+   "first_nuplan_job": 3123,
+   "total": [
+    5756,
+    177660
+   ]
+  }
+ },
+ "distinct_b3_accept": 15286,
+ "distinct_b3_reject": 20347,
+ "b4_reasons": {
+  "ok": 34767
+ },
+ "rtl_sources_sha256": {
+  "mrmgen/m_tsmx_mrmgen.sv": "aa78feb7f4f6c044c6e8a8a9ff4c4455aecc92393a18c181f47525c4d85d1804",
+  "geom/m_tsmx_geom.sv": "5698dd539c4d817ed12e61859f6c2443672c56355aa481d2f93dd72d6883211b",
+  "geom/m_tsmx_geom_su.sv": "751b275322243bc0840c441590bde2a97c25098ee52a89b0a3f252ad00809fd7",
+  "arith/m_tsmx_arith.sv": "fd59dbe2dbba1059047de2303597f02f44a1cb1b02d4c27451cc20546162c2f8",
+  "arith/m_tsmx_arith_div.sv": "927090be6cd724585a3eae0763df698043c673a8693e0afa8769c080143111aa"
+ }
+}

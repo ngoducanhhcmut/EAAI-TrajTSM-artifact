@@ -1,0 +1,54 @@
+PASS top CSR/AXI smoke
+BOARDUP polls=5032 cyc=25287
+BOARDUP polls=5032 cyc=50479
+BOARDVEC job=0 reset=1 time=00000000 ack=1 seq=00000000
+BOARDCMD job=0 frames=1
+BOARDCYC job=0 csr_cycles=650030 tb_latency=650031
+JOB 0 PASS cycles=650031 xerr_checks=0
+TIMING job=0 fallback=ffff tail=ffff max_rows=57 stream_hits=1412 objects=0
+BOARDVEC job=1 reset=0 time=000186a0 ack=1 seq=00000000
+BOARDCMD job=1 frames=2
+BOARDCYC job=1 csr_cycles=650038 tb_latency=650039
+JOB 1 PASS cycles=650039 xerr_checks=1
+TIMING job=1 fallback=ffff tail=ffff max_rows=57 stream_hits=2824 objects=0
+BOARDVEC job=2 reset=0 time=00030d40 ack=1 seq=00000001
+BOARDCMD job=2 frames=3
+BOARDCYC job=2 csr_cycles=650038 tb_latency=650039
+JOB 2 PASS cycles=650039 xerr_checks=2
+TIMING job=2 fallback=ffff tail=ffff max_rows=57 stream_hits=4236 objects=0
+BOARDVEC job=3 reset=0 time=000493e0 ack=1 seq=00000002
+BOARDCMD job=3 frames=4
+BOARDCYC job=3 csr_cycles=320504 tb_latency=320505
+JOB 3 PASS cycles=320505 xerr_checks=3
+TIMING job=3 fallback=ffff tail=ffff max_rows=57 stream_hits=4927 objects=0
+BOARDVEC job=4 reset=0 time=00061a80 ack=1 seq=00000002
+BOARDCMD job=4 frames=5
+BOARDCYC job=4 csr_cycles=322400 tb_latency=322401
+JOB 4 PASS cycles=322401 xerr_checks=4
+TIMING job=4 fallback=ffff tail=ffff max_rows=57 stream_hits=5618 objects=0
+BOARDVEC job=5 reset=0 time=0007a120 ack=1 seq=00000002
+BOARDCMD job=5 frames=6
+BOARDCYC job=5 csr_cycles=324310 tb_latency=324311
+JOB 5 PASS cycles=324311 xerr_checks=5
+TIMING job=5 fallback=ffff tail=ffff max_rows=57 stream_hits=6309 objects=0
+BOARDVEC job=6 reset=0 time=000927c0 ack=1 seq=00000002
+BOARDCMD job=6 frames=7
+BOARDCYC job=6 csr_cycles=320501 tb_latency=320502
+JOB 6 PASS cycles=320502 xerr_checks=5
+TIMING job=6 fallback=ffff tail=ffff max_rows=57 stream_hits=7000 objects=0
+BOARDVEC job=7 reset=0 time=000aae60 ack=1 seq=00000002
+BOARDCMD job=7 frames=8
+BOARDCYC job=7 csr_cycles=320501 tb_latency=320502
+JOB 7 PASS cycles=320502 xerr_checks=5
+TIMING job=7 fallback=ffff tail=ffff max_rows=57 stream_hits=7691 objects=0
+BOARDVEC job=8 reset=0 time=000c3500 ack=1 seq=00000002
+BOARDCMD job=8 frames=9
+BOARDCYC job=8 csr_cycles=153334 tb_latency=153335
+JOB 8 PASS cycles=153335 xerr_checks=5
+TIMING job=8 fallback=ffff tail=ffff max_rows=57 stream_hits=8043 objects=0
+BOARDVEC job=9 reset=0 time=000dbba0 ack=1 seq=00000002
+RSP job=9 actual=0048000647 expected=050c000646 reason=2
+ASSERT_FAIL 2 TOP_REASON:spec5.3/6.1/10.1/15 job=9 cycle=4097474
+[40974740000] %Fatal: tb_tsmx_stream.sv:169: Assertion failed in tb_tsmx_stream.ck: assertion failure
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/board/tb_tsmx_stream.sv:169: Verilog $stop
+Aborting...

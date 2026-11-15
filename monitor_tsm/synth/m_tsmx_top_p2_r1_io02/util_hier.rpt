@@ -1,0 +1,66 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri Oct 30 10:53:30 2026
+| Host         : LAPTOP-D1JJHVR7 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_top_p2/util_hier.rpt
+| Design       : m_tsmx_top
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------+------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+|            Instance            |            Module            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |   FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++--------------------------------+------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+| m_tsmx_top                     |                        (top) |     736386 |     731622 |    4752 |   12 | 401490 |      0 |      0 |    0 |        400 |
+|   (m_tsmx_top)                 |                        (top) |          0 |          0 |       0 |    0 |     23 |      0 |      0 |    0 |          0 |
+|   u_tsmx_engine                |                m_tsmx_engine |     711690 |     706926 |    4752 |   12 | 365214 |      0 |      0 |    0 |        400 |
+|     (u_tsmx_engine)            |                m_tsmx_engine |     272731 |     272731 |       0 |    0 |  45011 |      0 |      0 |    0 |          2 |
+|     u_arb                      |                   m_tsmx_arb |       5005 |       5005 |       0 |    0 |   1819 |      0 |      0 |    0 |          0 |
+|     u_b1                       |               m_tsmx_ingress |       2788 |       2782 |       0 |    6 |   2103 |      0 |      0 |    0 |          0 |
+|       (u_b1)                   |               m_tsmx_ingress |       1494 |       1494 |       0 |    0 |   1686 |      0 |      0 |    0 |          0 |
+|       u_tsmx_arith             |              m_tsmx_arith_27 |       1294 |       1288 |       0 |    6 |    417 |      0 |      0 |    0 |          0 |
+|     u_b2                       |                m_tsmx_splice |      13859 |      13859 |       0 |    0 |   7821 |      0 |      0 |    0 |         18 |
+|       (u_b2)                   |                m_tsmx_splice |        420 |        420 |       0 |    0 |    328 |      0 |      0 |    0 |          0 |
+|       u_tsmx_arith             |              m_tsmx_arith_26 |      13439 |      13439 |       0 |    0 |   7493 |      0 |      0 |    0 |         18 |
+|     u_b7                       |                   m_tsmx_sel |         59 |         59 |       0 |    0 |      9 |      0 |      0 |    0 |          0 |
+|     u_b8                       |            m_tsmx_supervisor |         68 |         68 |       0 |    0 |     10 |      0 |      0 |    0 |          0 |
+|     u_b9                       |                  m_tsmx_cert |       6291 |       6285 |       0 |    6 |   3107 |      0 |      0 |    0 |          0 |
+|       (u_b9)                   |                  m_tsmx_cert |       4579 |       4579 |       0 |    0 |   2435 |      0 |      0 |    0 |          0 |
+|       u_arith                  |              m_tsmx_arith_25 |       1712 |       1706 |       0 |    6 |    672 |      0 |      0 |    0 |          0 |
+|     u_health                   |           m_tsmx_health_lane |     203929 |     202777 |    1152 |    0 | 160325 |      0 |      0 |    0 |         90 |
+|       u_tsmx_health            |                m_tsmx_health |      46888 |      46888 |       0 |    0 |  45477 |      0 |      0 |    0 |          0 |
+|       u_tsmx_health_bist       |           m_tsmx_health_bist |     157041 |     155889 |    1152 |    0 | 114848 |      0 |      0 |    0 |         90 |
+|     u_rec                      |                   m_tsmx_rec |        901 |        637 |     264 |    0 |    294 |      0 |      0 |    0 |          0 |
+|     u_tsmx_csr                 |                   m_tsmx_csr |       3276 |       3276 |       0 |    0 |    350 |      0 |      0 |    0 |          0 |
+|     u_tsmx_hash                |                  m_tsmx_hash |      17085 |      17085 |       0 |    0 |  10909 |      0 |      0 |    0 |          0 |
+|       (u_tsmx_hash)            |                  m_tsmx_hash |       8062 |       8062 |       0 |    0 |   8399 |      0 |      0 |    0 |          0 |
+|       u_codec                  |                 m_tsmx_codec |       9023 |       9023 |       0 |    0 |   2510 |      0 |      0 |    0 |          0 |
+|     u_tsmx_math                |                  m_tsmx_math |      43975 |      43975 |       0 |    0 |  17243 |      0 |      0 |    0 |         20 |
+|       (u_tsmx_math)            |                  m_tsmx_math |      20614 |      20614 |       0 |    0 |   9582 |      0 |      0 |    0 |          2 |
+|       u_arith                  |              m_tsmx_arith_17 |      23361 |      23361 |       0 |    0 |   7661 |      0 |      0 |    0 |         18 |
+|     u_tsmx_sweep_0             |                 m_tsmx_sweep |      97875 |      95643 |    2232 |    0 |  74697 |      0 |      0 |    0 |        180 |
+|       (u_tsmx_sweep_0)         |                 m_tsmx_sweep |        547 |        547 |       0 |    0 |   9106 |      0 |      0 |    0 |          0 |
+|       gen_geom[0].u_tsmx_geom  |                m_tsmx_geom_3 |      30130 |      29002 |    1128 |    0 |  24413 |      0 |      0 |    0 |         72 |
+|       gen_geom[1].u_tsmx_geom  |                m_tsmx_geom_4 |      30153 |      29049 |    1104 |    0 |  24408 |      0 |      0 |    0 |         72 |
+|       gen_mrm[0].u_tsmx_mrmgen |              m_tsmx_mrmgen_5 |      18541 |      18541 |       0 |    0 |   8385 |      0 |      0 |    0 |         18 |
+|       gen_mrm[1].u_tsmx_mrmgen |              m_tsmx_mrmgen_6 |      18504 |      18504 |       0 |    0 |   8385 |      0 |      0 |    0 |         18 |
+|     u_tsmx_sweep_1             | m_tsmx_sweep__parameterized0 |      43855 |      42751 |    1104 |    0 |  41516 |      0 |      0 |    0 |         90 |
+|       (u_tsmx_sweep_1)         | m_tsmx_sweep__parameterized0 |         42 |         42 |       0 |    0 |   8729 |      0 |      0 |    0 |          0 |
+|       gen_geom[0].u_tsmx_geom  |                  m_tsmx_geom |      25784 |      24680 |    1104 |    0 |  24408 |      0 |      0 |    0 |         72 |
+|       gen_mrm[0].u_tsmx_mrmgen |                m_tsmx_mrmgen |      18029 |      18029 |       0 |    0 |   8379 |      0 |      0 |    0 |         18 |
+|   u_tsmx_io                    |                    m_tsmx_io |      24682 |      24682 |       0 |    0 |  36251 |      0 |      0 |    0 |          0 |
+|   u_tsmx_rst                   |                   m_tsmx_rst |         14 |         14 |       0 |    0 |      2 |      0 |      0 |    0 |          0 |
++--------------------------------+------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+
+

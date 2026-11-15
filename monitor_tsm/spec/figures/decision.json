@@ -1,0 +1,54 @@
+{
+  "head": {
+    "text": "Decision: generate, check, select and switch; gaps are variable cycle intervals"
+  },
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..........."
+    },
+    {
+      "name": "stage",
+      "wave": "=.=.=.=.=.=.",
+      "data": [
+        "ingress",
+        "generate",
+        "check",
+        "select",
+        "issue",
+        "switch"
+      ]
+    },
+    {
+      "name": "generate",
+      "wave": "001100000000"
+    },
+    {
+      "name": "check",
+      "wave": "000011000000"
+    },
+    {
+      "name": "candidate",
+      "wave": "=.....=.....",
+      "data": [
+        "15",
+        "0"
+      ]
+    },
+    {
+      "name": "cmd_valid",
+      "wave": "000000001100"
+    },
+    {
+      "name": "cmd_ready",
+      "wave": "111111111111"
+    },
+    {
+      "name": "override",
+      "wave": "100000000000"
+    }
+  ],
+  "foot": {
+    "text": "Illustrative transaction ordering; timeout gaps are not one core clock. See normative timing tables."
+  }
+}

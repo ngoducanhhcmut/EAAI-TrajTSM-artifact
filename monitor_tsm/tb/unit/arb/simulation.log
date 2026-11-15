@@ -1,0 +1,44 @@
+COMMAND C:\iverilog\bin\vvp.EXE C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\sim.vvp
+DIRECTED B9 expiry_at_executor while command stalled: now=100000
+ASSERT 0 reset_ready spec5.3 hits=3
+ASSERT 1 reset_valid spec5.3 hits=3
+ASSERT 2 reset_payload spec5.3 hits=3
+ASSERT 3 reset_brake spec5.5.13 hits=3
+ASSERT 4 invalid_zero spec5.3 hits=4132
+ASSERT 5 no_overlap spec5.3 hits=10759
+ASSERT 6 latency_one spec5.3 hits=4130
+ASSERT 7 whole_command spec5.5.13/9.2 hits=4130
+ASSERT 8 hold_valid spec5.3 hits=6629
+ASSERT 9 hold_payload spec5.3 hits=6629
+ASSERT 10 consume_valid spec5.3 hits=4129
+ASSERT 11 consume_zero spec5.3 hits=4129
+ASSERT 12 idle_ready spec5.3 hits=4132
+ASSERT 13 idle_no_spurious_response spec5.3 hits=3
+ASSERT 14 accepted_busy spec5.3 hits=4130
+ASSERT 15 brake_model spec5.5.13/6.2 hits=14894
+ASSERT 16 override_immediate spec6.2 hits=915
+ASSERT 17 sticky_revocation spec6.2 hits=438
+ASSERT 18 override_frame_stable spec6.2 hits=529
+ASSERT 19 reserved_zero spec9.2 hits=4130
+ASSERT 20 field_source spec9.2/5.5.13 hits=4130
+ASSERT 21 field_mode spec9.2/5.5.13 hits=4130
+ASSERT 22 field_label spec9.2/5.5.13 hits=4130
+ASSERT 23 field_candidate spec9.2/5.5.13 hits=4130
+ASSERT 24 field_seq spec9.2/5.5.13 hits=4130
+ASSERT 25 field_apply spec9.2/5.5.13 hits=4130
+ASSERT 26 field_expiry spec9.2/5.5.13 hits=4130
+ASSERT 27 field_plan spec9.2/5.5.13 hits=4130
+ASSERT 28 field_certificate spec9.2/5.5.13 hits=4130
+ASSERT 29 field_parking spec9.2/5.5.13 hits=4130
+ASSERT 30 field_override spec9.2/5.5.13 hits=4130
+ASSERT 31 L3_fixed15 specREQ-TSMX-024 hits=3042
+ASSERT 32 nominal_record spec5.5.13 hits=557
+ASSERT 33 backup_epoch spec5.5.13 hits=111
+ASSERT 34 fallback_candidate spec5.5.13 hits=109
+ASSERT 35 parking_hold spec5.5.13 hits=311
+assertion failures: 0, assertions never exercised: 0
+MEASURED cycles/job=1..1 II=2..7 (includes stalls) jobs=4130 cycles=14894
+PASS arb: golden=128/128 edges=14/14 extra=3985/3985 all=4127/4127 assertions=36
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arb\tb_m_tsmx_arb.sv:495: $finish called at 149159000 (1ps)
+
+EXIT 0

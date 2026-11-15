@@ -1,0 +1,9 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\source_mutants\crc_bypass.vvp
+JOB 1 cycles=8 latency=4
+JOB 2 cycles=16 latency=4
+ASSERT_FAIL 14 reject_atomic spec5.5.3/9.2 job=2 cycle=16 actual=80000000c00061a8200030d410000000003c9bd65003e7ff3fff0cdc40f000186a00000000003c369f300 expected=0000000000000000000000000000000000000000000000000000000000000000000000000000000000009
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\tb_m_tsmx_ingress.sv:215: R-025 assertion failure
+       Time: 171000  Scope: tb_m_tsmx_ingress.tick
+
+EXIT 1
+SECONDS 0.225

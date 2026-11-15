@@ -1,0 +1,191 @@
+[
+  {
+    "id": 0,
+    "name": "reset_ready",
+    "clause": "spec5.3/7",
+    "mutant_signal": "ready",
+    "mutant_bit": 0
+  },
+  {
+    "id": 1,
+    "name": "reset_valid",
+    "clause": "spec5.3/7",
+    "mutant_signal": "valid",
+    "mutant_bit": 0
+  },
+  {
+    "id": 2,
+    "name": "reset_data",
+    "clause": "spec5.3/7",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  },
+  {
+    "id": 3,
+    "name": "invalid_zero",
+    "clause": "spec5.3/7",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  },
+  {
+    "id": 4,
+    "name": "single_outstanding",
+    "clause": "spec5.3/7",
+    "mutant_signal": "ready",
+    "mutant_bit": 0
+  },
+  {
+    "id": 5,
+    "name": "accept_blocks_req",
+    "clause": "spec5.3/7",
+    "mutant_signal": "ready",
+    "mutant_bit": 0
+  },
+  {
+    "id": 6,
+    "name": "bounded_progress",
+    "clause": "spec5.3/7",
+    "mutant_signal": "valid",
+    "mutant_bit": 0
+  },
+  {
+    "id": 7,
+    "name": "stall_valid",
+    "clause": "spec5.3/7",
+    "mutant_signal": "valid",
+    "mutant_bit": 0
+  },
+  {
+    "id": 8,
+    "name": "stall_data",
+    "clause": "spec5.3/7",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  },
+  {
+    "id": 9,
+    "name": "stall_blocks_req",
+    "clause": "spec5.3/7",
+    "mutant_signal": "ready",
+    "mutant_bit": 0
+  },
+  {
+    "id": 10,
+    "name": "consume_valid",
+    "clause": "spec5.3/7",
+    "mutant_signal": "valid",
+    "mutant_bit": 0
+  },
+  {
+    "id": 11,
+    "name": "consume_data",
+    "clause": "spec5.3/7",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  },
+  {
+    "id": 12,
+    "name": "no_unsolicited",
+    "clause": "spec5.3/7",
+    "mutant_signal": "valid",
+    "mutant_bit": 0
+  },
+  {
+    "id": 13,
+    "name": "idle_ready",
+    "clause": "spec5.3/7",
+    "mutant_signal": "ready",
+    "mutant_bit": 0
+  },
+  {
+    "id": 14,
+    "name": "reject_atomic",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 8
+  },
+  {
+    "id": 15,
+    "name": "full_response",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  },
+  {
+    "id": 16,
+    "name": "seq_valid",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 339
+  },
+  {
+    "id": 17,
+    "name": "seq",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 307
+  },
+  {
+    "id": 18,
+    "name": "time_valid",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 306
+  },
+  {
+    "id": 19,
+    "name": "last_time",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 274
+  },
+  {
+    "id": 20,
+    "name": "sample_valid",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 273
+  },
+  {
+    "id": 21,
+    "name": "last_sample",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 241
+  },
+  {
+    "id": 22,
+    "name": "sig_valid",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 240
+  },
+  {
+    "id": 23,
+    "name": "signature",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 104
+  },
+  {
+    "id": 24,
+    "name": "freeze_epoch",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 72
+  },
+  {
+    "id": 25,
+    "name": "freeze_position",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 8
+  },
+  {
+    "id": 26,
+    "name": "reason",
+    "clause": "spec5.5.3/9.2",
+    "mutant_signal": "data",
+    "mutant_bit": 0
+  }
+]

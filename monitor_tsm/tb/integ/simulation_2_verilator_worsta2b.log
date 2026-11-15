@@ -1,0 +1,50 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_2/Vtb_m_tsmx_top +LIMIT=1 +FILE=worst_apos.mem +ALLOW_INACTIVE +WORST +WORST_ROWS=93
+PASS top CSR/AXI smoke
+JOB 0 PASS cycles=947256 xerr_checks=0
+TIMING job=0 fallback=ffff tail=ffff max_rows=93 stream_hits=1944 objects=32
+ASSERT 0 TOP_FULL:spec5.3/6.1/10.1/15 hits=1
+ASSERT 1 TOP_ACCEPT:spec5.3/6.1/10.1/15 hits=1
+ASSERT 2 TOP_REASON:spec5.3/6.1/10.1/15 hits=1
+ASSERT 3 TOP_MODE:spec5.3/6.1/10.1/15 hits=1
+ASSERT 4 TOP_CANDIDATE:spec5.3/6.1/10.1/15 hits=1
+ASSERT 5 TOP_LABEL:spec5.3/6.1/10.1/15 hits=1
+ASSERT 6 TOP_BRAKE_FLAG:spec5.3/6.1/10.1/15 hits=1
+ASSERT 7 TOP_COMMIT_HB:spec5.3/6.1/10.1/15 hits=1
+ASSERT 8 CMD_FULL:spec5.3/6.1/10.1/15 hits=1
+ASSERT 9 CMD_RECORDS:spec5.3/6.1/10.1/15 hits=1
+ASSERT 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 hits=1
+ASSERT 11 CMD_OVERRIDE:spec5.3/6.1/10.1/15 hits=1
+ASSERT 12 TX_STABLE:spec5.3/6.1/10.1/15 hits=10
+ASSERT 13 RSP_STABLE:spec5.3/6.1/10.1/15 hits=3
+ASSERT 14 NO_STALE_RSP:spec5.3/6.1/10.1/15 hits=947451
+ASSERT 15 NO_STALE_TX:spec5.3/6.1/10.1/15 hits=947383
+ASSERT 16 HB_FAULT_LOW:spec5.3/6.1/10.1/15 hits=0
+ASSERT 17 FAULT_BRAKE:spec5.3/6.1/10.1/15 hits=0
+ASSERT 18 ONEHOT_FSM_MODE:spec5.3/6.1/10.1/15 hits=947455
+ASSERT 19 DEADLINE_BOUND:spec5.3/6.1/10.1/15 hits=4
+ASSERT 20 AXI_B_HOLD:spec5.3/6.1/10.1/15 hits=10
+ASSERT 21 AXI_R_HOLD:spec5.3/6.1/10.1/15 hits=28
+ASSERT 22 AXI_B_CODE:spec5.3/6.1/10.1/15 hits=15
+ASSERT 23 AXI_R_CODE:spec5.3/6.1/10.1/15 hits=42
+ASSERT 24 AXI_AW_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 25 AXI_W_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 26 AXI_AR_KNOWN:spec5.3/6.1/10.1/15 hits=14
+ASSERT 27 AXI_B_KNOWN:spec5.3/6.1/10.1/15 hits=15
+ASSERT 28 AXI_R_KNOWN:spec5.3/6.1/10.1/15 hits=42
+ASSERT 29 AXI_AWREADY_KNOWN:spec5.3/6.1/10.1/15 hits=947416
+ASSERT 30 AXI_WREADY_KNOWN:spec5.3/6.1/10.1/15 hits=947431
+ASSERT 31 AXI_ARREADY_KNOWN:spec5.3/6.1/10.1/15 hits=947409
+ASSERT 32 AXI_B_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=10
+ASSERT 33 AXI_R_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=28
+ASSERT 34 AXI_REASON_RESERVED:spec5.3/6.1/10.1/15 hits=3
+ASSERT 35 AXI_ERROR_ZERO:spec5.3/6.1/10.1/15 hits=6
+ASSERT 36 AXI_STATUS_RESERVED:spec5.3/6.1/10.1/15 hits=3
+ASSERT 37 AXI_AWPROT:spec5.3/6.1/10.1/15 hits=5
+ASSERT 38 AXI_ARPROT:spec5.3/6.1/10.1/15 hits=14
+ASSERT 39 AXI_PROFILE_COUNT:spec5.3/6.1/10.1/15 hits=3
+assertion failures: 0, assertions never exercised: 2
+PASS top jobs=1 max_cycles=947256
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:473: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 9ms; walltime 34.893 s; speed 271.532 us/s
+- Verilator: cpu 32.918 s on 1 threads; allocated 23 MB

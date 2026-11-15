@@ -1,0 +1,6 @@
+ZERO base=0x80000000 bytes=26476544 ms=84977 nonzero_probes=0
+ZERO base=0x90000000 bytes=18944000 ms=62430 nonzero_probes=0
+program lab bitstream VCU118_flash_sd_card_remote_tcp_ethernet.bit
+targets after programming:
+  1* xcvu9p
+WIPE_DONE

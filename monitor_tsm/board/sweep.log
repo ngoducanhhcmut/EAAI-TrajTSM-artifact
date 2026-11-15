@@ -1,0 +1,18 @@
+sweep start Fri Nov  6 15:23:20 SEAST 2026
+142.857143 rc=1 tries=2 Sat Nov  7 01:05:28 SEAST 2026 ###FREQ pl_clk0=142857132 
+142.857143 RESULT (Claude 07/11): route best pass WNS=-0.283 ns WHS=+0.010 (AggressiveExplore pass 1), then Vivado EXCEPTION_ACCESS_VIOLATION in route Phase 20.1.1 Leaf ClockOpt Init (same phase as 166.7 crash); peak RAM 13.5 GB. 136.363636 build STOPPED by Claude at 01:1x 07/11 to free RAM for RTL sims; rerun 136.36 then 130.43 alone later.
+136.363636 rc=1 Mon Nov  9 17:12:54 SEAST 2026 
+136.363636 rc=1 Mon Nov  9 19:26:42 SEAST 2026 
+130.434783 rc=1 Mon Nov  9 19:27:20 SEAST 2026 
+136.363636 rc=1 Mon Nov  9 23:14:58 SEAST 2026 
+130.434783 rc=1 Mon Nov  9 23:15:34 SEAST 2026 
+136.363636 rc=1 Tue, Nov 10, 2026  2:19:26 AM 
+130.434783 rc=1 Tue, Nov 10, 2026  2:19:50 AM 
+136.363636 rc=1 Tue, Nov 10, 2026  2:43:08 AM ###FREQ pl_clk0=136363632 
+130.434783 rc=1 Tue, Nov 10, 2026  2:43:33 AM 
+136.363636 rc=1 Tue, Nov 10, 2026  4:30:43 AM 
+130.434783 rc=1 Tue, Nov 10, 2026  4:31:11 AM 
+136.363636 rc=1 Tue Nov 10 04:59:10 SEAST 2026 ###FREQ pl_clk0=136363632 
+130.434783 rc=1 Tue Nov 10 04:59:43 SEAST 2026 
+130.434783 try1 rc=1 Tue Nov 10 13:32:06 SEAST 2026 ###FREQ pl_clk0=124999992 
+130.434783 RESULT (Claude 10/11): requested 130.43 but PS gave pl_clk0=124999992 (125 MHz). Route NOT legal: 3445 node overlaps, pass-1 WNS=-1.070; write_bitstream DRC RTSTAT-6. Duplicate 125 MHz build stopped by Claude 13:5x 10/11 (identical inputs). 136.36 build of 10/11 stopped in synth at user request (no 136 attempt).

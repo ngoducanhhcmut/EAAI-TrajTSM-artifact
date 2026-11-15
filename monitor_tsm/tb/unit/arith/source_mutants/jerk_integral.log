@@ -1,0 +1,10 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\source_mutants\jerk_integral.vvp +LIMIT=4000
+START arith N=85725
+LOADED arith
+PROGRESS 0/4000
+ASSERT_FAIL 12 S9.2 q0_exact cycle=4663 op=6 vector=615 age=2
+actual=2000211673e7de64ede71a1f735829e41400000000000000120e3b5b9ad8aa08cf16e98000000000000000000000008d0d0c589b4f60817fe2b8000000000000000000000001a784379d99db420000000 expected=000021175fceaf5fad39c414d5028410f400000000000000120e3b5b9ad8aa08cf16e98000000000000000000000008d0d0c589b4f60817fe2b8000000000000000000000001a784379d99db420000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\tb_m_tsmx_arith.sv:55: R-025 assertion failed
+       Time: 46625000  Scope: tb_m_tsmx_arith.check
+
+EXIT 1

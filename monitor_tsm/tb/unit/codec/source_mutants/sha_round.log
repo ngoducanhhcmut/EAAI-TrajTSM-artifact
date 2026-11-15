@@ -1,0 +1,7 @@
+COMMAND: vvp source_mutants\sha_round.vvp
+PROGRESS codec 0/5648 cycles=129
+ASSERT_FAIL 15 sha_word_0 spec5.3/5.5.2/7/10.3 job=1 cycle=212 actual=0000000000f59e26bc2f00b46f2752e90f2a77c1f7d7eca052f4889f37dd40c394a0227cc expected=000000000c182c768a0385e34e39a5bb7c61ff0394efe2fa405ee4b11aa378c00d34a2d87
+FATAL: tb_m_tsmx_codec.sv:233: R-025 assertion failed
+       Time: 1273000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

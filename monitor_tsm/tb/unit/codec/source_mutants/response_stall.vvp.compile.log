@@ -1,0 +1,16 @@
+COMMAND: iverilog -g2012 -s tb_m_tsmx_codec -o source_mutants\response_stall.vvp source_mutants\response_stall.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\codec\m_tsmx_codec.sv tb_m_tsmx_codec.sv
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:245: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:300: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:300: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:300: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:300: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:321: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:321: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+source_mutants\response_stall.sv:321: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+
+EXIT: 0

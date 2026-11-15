@@ -1,0 +1,112 @@
+cy=4
+JOB 3091 cycles=16784 latency=4
+JOB 3092 cycles=16789 latency=4
+JOB 3093 cycles=16794 latency=4
+JOB 3094 cycles=16799 latency=4
+JOB 3095 cycles=16804 latency=4
+JOB 3096 cycles=16812 latency=4
+JOB 3097 cycles=16817 latency=4
+JOB 3098 cycles=16822 latency=4
+JOB 3099 cycles=16827 latency=4
+JOB 3100 cycles=16832 latency=4
+JOB 3101 cycles=16837 latency=4
+JOB 3102 cycles=16842 latency=4
+JOB 3103 cycles=16850 latency=4
+JOB 3104 cycles=16855 latency=4
+JOB 3105 cycles=16860 latency=4
+JOB 3106 cycles=16865 latency=4
+JOB 3107 cycles=16870 latency=4
+JOB 3108 cycles=16875 latency=4
+JOB 3109 cycles=16880 latency=4
+JOB 3110 cycles=16888 latency=4
+JOB 3111 cycles=16893 latency=4
+JOB 3112 cycles=16898 latency=4
+JOB 3113 cycles=16903 latency=4
+JOB 3114 cycles=16908 latency=4
+JOB 3115 cycles=16913 latency=4
+JOB 3116 cycles=16918 latency=4
+JOB 3117 cycles=16926 latency=4
+JOB 3118 cycles=16931 latency=4
+JOB 3119 cycles=16936 latency=4
+JOB 3120 cycles=16941 latency=4
+JOB 3121 cycles=16946 latency=4
+JOB 3122 cycles=16951 latency=4
+JOB 3123 cycles=16956 latency=4
+JOB 3124 cycles=16964 latency=4
+JOB 3125 cycles=16969 latency=4
+JOB 3126 cycles=16974 latency=4
+JOB 3127 cycles=16979 latency=4
+JOB 3128 cycles=16984 latency=4
+JOB 3129 cycles=16989 latency=4
+JOB 3130 cycles=16994 latency=4
+JOB 3131 cycles=17002 latency=4
+JOB 3135 cycles=17052 latency=4
+JOB 3136 cycles=17069 latency=4
+ASSERT_HITS 0 hits=12
+ASSERT_HITS 1 hits=12
+ASSERT_HITS 2 hits=12
+ASSERT_HITS 3 hits=12593
+ASSERT_HITS 4 hits=4478
+ASSERT_HITS 5 hits=3136
+ASSERT_HITS 6 hits=3133
+ASSERT_HITS 7 hits=1345
+ASSERT_HITS 8 hits=1345
+ASSERT_HITS 9 hits=1345
+ASSERT_HITS 10 hits=3131
+ASSERT_HITS 11 hits=3131
+ASSERT_HITS 12 hits=57
+ASSERT_HITS 13 hits=51
+ASSERT_HITS 14 hits=3491
+ASSERT_HITS 15 hits=4478
+ASSERT_HITS 16 hits=987
+ASSERT_HITS 17 hits=987
+ASSERT_HITS 18 hits=987
+ASSERT_HITS 19 hits=987
+ASSERT_HITS 20 hits=987
+ASSERT_HITS 21 hits=987
+ASSERT_HITS 22 hits=987
+ASSERT_HITS 23 hits=987
+ASSERT_HITS 24 hits=987
+ASSERT_HITS 25 hits=987
+ASSERT_HITS 26 hits=4478
+MEASURE latency=4..4 cycles/job II=5..8 cycles stalls included
+assertion failures: 0, assertions never exercised: 0
+PASS ingress: golden=128/128 edges=6/6 extra=2997/2997 assertions=27 jobs=3136 completed=3131 aborted=5 cycles=17083
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\tb_m_tsmx_ingress.sv:403: $finish called at 187919000 (1ps)
+
+assertion mutant killed 0
+assertion mutant killed 1
+assertion mutant killed 2
+assertion mutant killed 3
+assertion mutant killed 4
+assertion mutant killed 5
+assertion mutant killed 6
+assertion mutant killed 7
+assertion mutant killed 8
+assertion mutant killed 9
+assertion mutant killed 10
+assertion mutant killed 11
+assertion mutant killed 12
+assertion mutant killed 13
+assertion mutant killed 14
+assertion mutant killed 15
+assertion mutant killed 16
+assertion mutant killed 17
+assertion mutant killed 18
+assertion mutant killed 19
+assertion mutant killed 20
+assertion mutant killed 21
+assertion mutant killed 22
+assertion mutant killed 23
+assertion mutant killed 24
+assertion mutant killed 25
+assertion mutant killed 26
+source mutant killed crc_bypass
+source mutant killed sequence_equal
+source mutant killed age_boundary
+source mutant killed freeze_boundary
+source mutant killed freeze_refresh
+source mutant killed last_sample
+source mutant killed stall
+source mutant killed clock_priority
+MUTANTS PASS 27 / 27 source 8 / 8

@@ -1,0 +1,2 @@
+CAL_PAIR candidates=0,1 rows_max=93 objects=32 cycles=73511
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\wcet\cal\sweep\tb_pair.sv:19: $finish called at 735165000 (1ps)

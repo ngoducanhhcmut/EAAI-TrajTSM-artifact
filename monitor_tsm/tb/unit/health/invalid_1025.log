@@ -1,0 +1,6 @@
+COMMAND ['iverilog', '-g2012', '-s', 'm_tsmx_health', '-Pm_tsmx_health.PARA_HEALTH_WORDS=1025', '-o', 'C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\unit\\health\\invalid.vvp', 'C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\rtl\\health\\m_tsmx_health.sv']
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\rtl\health\m_tsmx_health.sv:162: error: Unknown module type: m_tsmx_bad_health_para
+1 error(s) during elaboration.
+*** These modules were missing:
+        m_tsmx_bad_health_para referenced 1 times.
+***

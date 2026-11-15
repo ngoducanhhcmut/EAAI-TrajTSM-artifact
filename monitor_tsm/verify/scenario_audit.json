@@ -1,0 +1,12 @@
+{
+  "v1_n": 200,
+  "v1_unique": 200,
+  "v3_n": 100,
+  "v3_unique": 100,
+  "overlap": 0,
+  "scenario_sha256": {
+    "v1": "75c8a7cad1994b262450eca0d52338045b1a472b21bac4c7e8f2610c3d3fa606",
+    "v3": "87523cbc151114cbe444d0518a9fb805f5a123ecd67b03175cdc003b0f4f06b5"
+  },
+  "passed": true
+}

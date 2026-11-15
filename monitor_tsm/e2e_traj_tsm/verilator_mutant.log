@@ -1,0 +1,66 @@
+[AG] assertion BAT: uram_arbiter.sv tb_e2e_traj_tsm.planner.dut.u_uram_arb
+[AG] assertion BAT: bert_weight_loader.sv tb_e2e_traj_tsm.planner.dut.bert_wl_inst
+[AG] assertion BAT: weight_loader.sv tb_e2e_traj_tsm.planner.dut.wl_inst
+[TSC] t=42256577000  PASS  traj_valid=1
+PLANNER_PASS frame=0 cycles=5966347
+TSM_PASS job=0 time_us=80000 engine_cycles=350337 stream_cycles=350337
+TSM_PASS job=1 time_us=100000 engine_cycles=347871 stream_cycles=347871
+TSM_PASS job=2 time_us=200000 engine_cycles=287096 stream_cycles=287096
+TSM_PASS job=3 time_us=300000 engine_cycles=275606 stream_cycles=275606
+TSM_PASS job=4 time_us=400000 engine_cycles=264680 stream_cycles=264680
+TSM_PASS job=5 time_us=500000 engine_cycles=252424 stream_cycles=252424
+[TSC] t=99899752000  PASS  traj_valid=1
+PLANNER_PASS frame=1 cycles=5966652
+TSM_PASS job=6 time_us=580435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=7 time_us=600435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=8 time_us=700435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=9 time_us=800435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=10 time_us=900435 engine_cycles=11 stream_cycles=11
+TSM_PASS job=11 time_us=1000435 engine_cycles=11 stream_cycles=11
+[TSC] t=139765065000  PASS  traj_valid=1
+PLANNER_PASS frame=2 cycles=5966896
+TSM_PASS job=12 time_us=1080303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=13 time_us=1100303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=14 time_us=1200303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=15 time_us=1300303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=16 time_us=1400303 engine_cycles=11 stream_cycles=11
+TSM_PASS job=17 time_us=1500303 engine_cycles=11 stream_cycles=11
+[TSC] t=179632018000  FAULT flags=100000  traj_valid=0
+PLANNER_PASS frame=3 cycles=5967140
+TSM_PASS job=18 time_us=1580179 engine_cycles=365681 stream_cycles=365681
+TSM_PASS job=19 time_us=1600179 engine_cycles=364082 stream_cycles=364082
+TSM_PASS job=20 time_us=1700179 engine_cycles=283248 stream_cycles=283248
+TSM_PASS job=21 time_us=1800179 engine_cycles=271758 stream_cycles=271758
+TSM_PASS job=22 time_us=1900179 engine_cycles=259300 stream_cycles=259300
+TSM_PASS job=23 time_us=2000179 engine_cycles=248778 stream_cycles=248778
+[TSC] t=237426372000  FAULT flags=100000  traj_valid=0
+PLANNER_PASS frame=4 cycles=5967079
+TSM_PASS job=24 time_us=2080602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=25 time_us=2100602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=26 time_us=2200602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=27 time_us=2300602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=28 time_us=2400602 engine_cycles=11 stream_cycles=11
+TSM_PASS job=29 time_us=2500602 engine_cycles=11 stream_cycles=11
+[TSC] t=277295351000  PASS  traj_valid=1
+PLANNER_PASS frame=5 cycles=5967445
+TSM_PASS job=30 time_us=2581040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=31 time_us=2601040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=32 time_us=2701040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=33 time_us=2801040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=34 time_us=2901040 engine_cycles=11 stream_cycles=11
+TSM_PASS job=35 time_us=3001040 engine_cycles=11 stream_cycles=11
+[TSC] t=317164737000  PASS  traj_valid=1
+PLANNER_PASS frame=6 cycles=5967506
+TSM_PASS job=36 time_us=3081476 engine_cycles=383754 stream_cycles=383754
+TSM_PASS job=37 time_us=3101476 engine_cycles=382155 stream_cycles=382155
+TSM_PASS job=38 time_us=3201476 engine_cycles=295134 stream_cycles=295134
+TSM_PASS job=39 time_us=3301476 engine_cycles=282676 stream_cycles=282676
+TSM_PASS job=40 time_us=3401476 engine_cycles=270622 stream_cycles=270622
+TSM_PASS job=41 time_us=3501476 engine_cycles=258728 stream_cycles=258728
+[TSC] t=375766190000  PASS  traj_valid=1
+PLANNER_PASS frame=7 cycles=5967811
+MUTANT_INJECTED frame=7 word=0
+PACKET_BYTES_MISMATCH frame=7 actual=10000000800356d1f0000000001c92815008a042d000545d2000000000446a76b008b4bfb00356d1f0036f3bf0000000001d6fc0c008a8b28ff85ee000f000013880200000001a477098b00000008000000080000000800000001 expected=10000000800356d1f0000000001c92815008a042d000545d2000000000446a76b008b4bfb00356d1f0036f3bf0000000001d6fc0c008a8b28fff8b3150f000013880200000001350f740500000008000000080000000800000001
+[379364980000] %Fatal: tsm_tasks.svh:85: Assertion failed in tb_e2e_traj_tsm.tsm.run_job: TSM_RESPONSE_MISMATCH job=42 got=0328100647 expected=2014100447
+%Error: tsm_tasks.svh:85: Verilog $stop
+Aborting...

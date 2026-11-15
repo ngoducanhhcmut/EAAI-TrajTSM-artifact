@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Nov  4 05:36:02 2026
+| Host         : LAPTOP-D1JJHVR7 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 3 -file C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/board/out/utilization_hier.rpt
+| Design       : system_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+|        Instance       |                               Module                              | Total LUTs | Logic LUTs | LUTRAMs | SRLs |   FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-----------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+| system_wrapper        |                                                             (top) |     192022 |     179939 |   12081 |    2 | 178639 |      4 |      0 |    0 |        281 |
+|   system_i            |                                                            system |     192022 |     179939 |   12081 |    2 | 178639 |      4 |      0 |    0 |        281 |
+|     axis_fifo         |                                                system_axis_fifo_0 |        720 |        668 |      52 |    0 |    633 |      4 |      0 |    0 |          0 |
+|       U0              |                                  system_axis_fifo_0_axi_fifo_mm_s |        720 |        668 |      52 |    0 |    633 |      4 |      0 |    0 |          0 |
+|     rst_pl0           |                                                  system_rst_pl0_0 |         17 |         16 |       0 |    1 |     37 |      0 |      0 |    0 |          0 |
+|       U0              |                                   system_rst_pl0_0_proc_sys_reset |         17 |         16 |       0 |    1 |     37 |      0 |      0 |    0 |          0 |
+|     sc_axil           |                                                  system_sc_axil_0 |        592 |        591 |       0 |    1 |    825 |      0 |      0 |    0 |          0 |
+|       inst            |                                          system_sc_axil_0_bd_74b1 |        592 |        591 |       0 |    1 |    825 |      0 |      0 |    0 |          0 |
+|     tsmx_0            |                                                   system_tsmx_0_0 |     190697 |     178668 |   12029 |    0 | 177144 |      0 |      0 |    0 |        281 |
+|       (tsmx_0)        |                                                   system_tsmx_0_0 |          0 |          0 |       0 |    0 |     25 |      0 |      0 |    0 |          0 |
+|       inst            |                                    system_tsmx_0_0_tsmx_board_top |     190697 |     178668 |   12029 |    0 | 177119 |      0 |      0 |    0 |        281 |
+|     zynq_ultra_ps_e_0 |                                        system_zynq_ultra_ps_e_0_0 |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
+|       inst            | system_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_5_1_zynq_ultra_ps_e |          0 |          0 |       0 |    0 |      0 |      0 |      0 |    0 |          0 |
++-----------------------+-------------------------------------------------------------------+------------+------------+---------+------+--------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

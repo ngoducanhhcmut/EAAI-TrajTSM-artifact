@@ -1,0 +1,918 @@
+ECHO is off.
+ECHO is off.
+WARNING: Default location for XILINX_HLS not found: 
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source impl_m_tsmx_top_p2_100.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 477.738 ; gain = 182.078
+Command: synth_design -top m_tsmx_top -mode out_of_context -flatten_hierarchy rebuilt -generic PARA_P=2 -generic PARA_G=2 -directive AreaOptimized_high
+Starting synth_design
+Using part: xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13124
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 924.352 ; gain = 442.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_top' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_top.sv:15]
+	Parameter PARA_G bound to: 32'b00000000000000000000000000000010 
+	Parameter PARA_P bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_rst' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_rst.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_rst' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_rst.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_engine' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_engine.sv:18]
+	Parameter PARA_G bound to: 32'b00000000000000000000000000000010 
+	Parameter PARA_P bound to: 32'b00000000000000000000000000000010 
+	Parameter PARA_DIRECT bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_ingress' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/ingress/m_tsmx_ingress.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arith' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+	Parameter PARA_OPS bound to: 9'b100000000 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arith' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_ingress' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/ingress/m_tsmx_ingress.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_splice' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/splice/m_tsmx_splice.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arith__parameterized0' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+	Parameter PARA_OPS bound to: 9'b000001000 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arith__parameterized0' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_splice' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/splice/m_tsmx_splice.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_cert' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/cert/m_tsmx_cert.sv:15]
+INFO: [Synth 8-226] default block is never used [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/cert/m_tsmx_cert.sv:168]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_cert' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/cert/m_tsmx_cert.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_sel' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/sel/m_tsmx_sel.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_sel' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/sel/m_tsmx_sel.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_supervisor' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/supervisor/m_tsmx_supervisor.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_supervisor' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/supervisor/m_tsmx_supervisor.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arb' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arb/m_tsmx_arb.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arb' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arb/m_tsmx_arb.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_rec' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/rec/m_tsmx_rec.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_rec' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/rec/m_tsmx_rec.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_health_lane' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_lane.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_health' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health.sv:16]
+	Parameter PARA_HEALTH_WORDS bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_health' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_health_bist' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_bist.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_mrmgen' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/mrmgen/m_tsmx_mrmgen.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arith__parameterized1' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+	Parameter PARA_OPS bound to: 9'b010100000 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arith__parameterized1' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_mrmgen' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/mrmgen/m_tsmx_mrmgen.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_geom' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_geom_su' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_geom_su' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom_su.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_geom' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/geom/m_tsmx_geom.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_health_bist' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_bist.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_health_lane' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/health/m_tsmx_health_lane.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_hash' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_hash.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_codec' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_codec_core' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:14]
+	Parameter PARA_HASH_BYTES bound to: 32768 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:143]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_codec_core' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec_core.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_codec' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/codec/m_tsmx_codec.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_hash' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_hash.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_math' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_math.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_arith__parameterized2' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+	Parameter PARA_OPS bound to: 9'b010111000 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_arith__parameterized2' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_math' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_math.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_sweep' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_sweep.sv:15]
+	Parameter PARA_G bound to: 32'b00000000000000000000000000000010 
+	Parameter PARA_P bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_sweep' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_sweep.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_sweep__parameterized0' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_sweep.sv:15]
+	Parameter PARA_G bound to: 1 - type: integer 
+	Parameter PARA_P bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_sweep__parameterized0' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_sweep.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_csr' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/csr/m_tsmx_csr.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_csr' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/csr/m_tsmx_csr.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_engine' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_engine.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'm_tsmx_io' [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_io.sv:16]
+	Parameter PARA_DIRECT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_io' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_io.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'm_tsmx_top' (0#1) [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_top.sv:15]
+WARNING: [Synth 8-6014] Unused sequential element reg_lo_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_hi_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_stop_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_sub_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_min_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_quot0_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-6014] Unused sequential element reg_f0_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-6014] Unused sequential element reg_pidx_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-6014] Unused sequential element reg_pvalid_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-6014] Unused sequential element reg_run_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_prog_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_pc_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_vnonly_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_mcnt_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_macc_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:957]
+WARNING: [Synth 8-6014] Unused sequential element reg_phase_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:958]
+WARNING: [Synth 8-6014] Unused sequential element reg_opa_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:958]
+WARNING: [Synth 8-6014] Unused sequential element reg_opb_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:958]
+WARNING: [Synth 8-6014] Unused sequential element reg_pp_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:958]
+WARNING: [Synth 8-6014] Unused sequential element reg_lid_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:960]
+WARNING: [Synth 8-6014] Unused sequential element reg_lpc_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:960]
+WARNING: [Synth 8-6014] Unused sequential element reg_t_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element reg_mopa_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:983]
+WARNING: [Synth 8-6014] Unused sequential element reg_chunk_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:983]
+WARNING: [Synth 8-6014] Unused sequential element reg_dbusy_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:992]
+WARNING: [Synth 8-6014] Unused sequential element reg_ddone_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:992]
+WARNING: [Synth 8-6014] Unused sequential element reg_dneg_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:992]
+WARNING: [Synth 8-6014] Unused sequential element reg_dup_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:992]
+WARNING: [Synth 8-6014] Unused sequential element reg_dfault0_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:992]
+WARNING: [Synth 8-6014] Unused sequential element reg_dw_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_dcnt_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_dnum_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_dden_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_dquot_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_drem_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:993]
+WARNING: [Synth 8-6014] Unused sequential element reg_dres_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:994]
+WARNING: [Synth 8-6014] Unused sequential element reg_dres_fault_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:994]
+WARNING: [Synth 8-6014] Unused sequential element reg_lo_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_hi_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_sub_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_min_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_pvalid_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dr1_reg' and it is trimmed from '161' to '160' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:933]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dq1_reg' and it is trimmed from '160' to '159' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:935]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_rd_sum_reg' and it is trimmed from '11' to '10' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/rec/m_tsmx_rec.sv:178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_wr_sum_reg' and it is trimmed from '11' to '10' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/rec/m_tsmx_rec.sv:148]
+WARNING: [Synth 8-6014] Unused sequential element reg_min_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:955]
+WARNING: [Synth 8-6014] Unused sequential element reg_pvalid_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:956]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dr1_reg' and it is trimmed from '161' to '160' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:933]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_rd_reg[4]' and it is trimmed from '160' to '32' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:509]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dq1_reg' and it is trimmed from '160' to '159' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:935]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dr1_reg' and it is trimmed from '161' to '160' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:933]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_dq1_reg' and it is trimmed from '160' to '159' bits. [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/arith/m_tsmx_arith.sv:935]
+WARNING: [Synth 8-6014] Unused sequential element reg_lead_reg was removed.  [C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/rtl/top/m_tsmx_engine.sv:1202]
+WARNING: [Synth 8-7129] Port i_req_valid in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44672] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44671] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44670] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44669] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44668] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44667] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44666] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44665] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44664] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44663] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44662] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44661] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44660] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44659] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44658] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44657] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44656] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44655] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44654] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44653] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44652] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44651] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44650] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44649] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44648] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44647] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44646] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44645] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44644] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44643] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44642] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44641] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44640] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44639] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44638] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44637] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44636] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44635] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44634] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44633] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44632] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44631] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44630] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44629] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44628] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44627] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44626] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44625] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44624] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44623] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44622] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44621] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44620] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44619] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44618] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44617] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44616] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44615] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44614] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44613] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44612] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44611] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44610] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44609] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44608] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44607] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44606] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44605] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44604] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44603] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44602] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44601] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44600] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44599] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44598] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44597] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44596] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44595] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44594] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44593] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44592] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44591] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44590] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44589] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44588] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44587] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44586] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44585] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44584] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44583] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44582] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44581] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44580] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44579] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44578] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44577] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44576] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44575] in module m_tsmx_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_req_data[44574] in module m_tsmx_io is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 2339.422 ; gain = 1857.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:33 . Memory (MB): peak = 2339.422 ; gain = 1857.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arith'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_ingress'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arith__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_splice'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_cert'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_sel'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_supervisor'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_rec'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arith__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_op_reg' in module 'm_tsmx_mrmgen'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_health_bist'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_rsp_current_state_reg' in module 'm_tsmx_health_bist'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_hash'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_arith__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_sweep'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_sweep__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_io'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                             0001 |                            00000
+            ENUM_ST_IDLE |                             0010 |                            00001
+           ENUM_ST_SETUP |                             0100 |                            00010
+            ENUM_ST_RESP |                             1000 |                            00011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_arith'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                            00001 |                              000
+            ENUM_ST_IDLE |                            00010 |                              001
+           ENUM_ST_ISSUE |                            00100 |                              010
+            ENUM_ST_WAIT |                            01000 |                              011
+            ENUM_ST_RESP |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_ingress'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                              000 |                              000
+            ENUM_ST_IDLE |                              001 |                              001
+           ENUM_ST_GUARD |                              010 |                              010
+           ENUM_ST_ISSUE |                              011 |                              011
+            ENUM_ST_WAIT |                              100 |                              100
+            ENUM_ST_RESP |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'sequential' in module 'm_tsmx_splice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                               00 |                               00
+            ENUM_ST_IDLE |                               01 |                               01
+            ENUM_ST_WAIT |                               10 |                               10
+            ENUM_ST_RESP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'sequential' in module 'm_tsmx_cert'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                               00 |                               00
+            ENUM_ST_IDLE |                               01 |                               01
+            ENUM_ST_RESP |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'sequential' in module 'm_tsmx_sel'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                               00 |                               00
+            ENUM_ST_IDLE |                               01 |                               01
+            ENUM_ST_RESP |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'sequential' in module 'm_tsmx_supervisor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                              001 |                               00
+            ENUM_ST_IDLE |                              010 |                               01
+            ENUM_ST_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_arb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                               00 |                               00
+            ENUM_ST_IDLE |                               01 |                               01
+            ENUM_ST_RESP |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'sequential' in module 'm_tsmx_rec'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_op_reg' using encoding 'one-hot' in module 'm_tsmx_mrmgen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_RS_IDLE |                              001 |                               00
+            ENUM_RS_READ |                              010 |                               01
+            ENUM_RS_HOLD |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_rsp_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_health_bist'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            ENUM_ST_BOOT |                            00001 |                              000
+            ENUM_ST_IDLE |                            00100 |                              001
+            ENUM_ST_ROWS |                            10000 |                              010
+            ENUM_ST_TERM |                            01000 |                              011
+            ENUM_ST_WAIT |                            00010 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'reg_fsm_ctrl_current_state_reg' using encoding 'one-hot' in module 'm_tsmx_health_bist'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            ENUM_ST_BOOT |                             0001 |                             0001
+            ENUM_ST_IDLE |                             0010 |                             0010
+            ENUM_ST_SEND |                             0100 |                             0100
+            ENUM_ST_WAIT |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_hash'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            ENUM_ST_BOOT |                             0001 |                             0001
+            ENUM_ST_IDLE |                             0010 |                             0010
+             ENUM_ST_RUN |                             0100 |                             0100
+            ENUM_ST_RESP |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_sweep'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            ENUM_ST_BOOT |                             0001 |                             0001
+            ENUM_ST_IDLE |                             0010 |                             0010
+             ENUM_ST_RUN |                             0100 |                             0100
+            ENUM_ST_RESP |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_sweep__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+            ENUM_ST_BOOT |                               01 |                               01
+             ENUM_ST_RUN |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'reg_fsm_ctrl_current_state_reg' in module 'm_tsmx_io'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:50 ; elapsed = 00:04:24 . Memory (MB): peak = 3422.945 ; gain = 2941.273
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input  161 Bit       Adders := 6     
+	   2 Input  160 Bit       Adders := 72    
+	   3 Input  160 Bit       Adders := 18    
+	   4 Input  160 Bit       Adders := 1     
+	   2 Input   65 Bit       Adders := 17    
+	   3 Input   65 Bit       Adders := 1     
+	   2 Input   64 Bit       Adders := 39    
+	   3 Input   64 Bit       Adders := 22    
+	   5 Input   64 Bit       Adders := 4     
+	   4 Input   64 Bit       Adders := 4     
+	   3 Input   62 Bit       Adders := 32    
+	   2 Input   62 Bit       Adders := 16    
+	   3 Input   43 Bit       Adders := 16    
+	   2 Input   41 Bit       Adders := 16    
+	   2 Input   33 Bit       Adders := 21    
+	   3 Input   32 Bit       Adders := 75    
+	   2 Input   32 Bit       Adders := 62    
+	   4 Input   32 Bit       Adders := 1     
+	   5 Input   32 Bit       Adders := 1     
+	   2 Input   22 Bit       Adders := 64    
+	   3 Input   15 Bit       Adders := 32    
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 6     
+	   3 Input   11 Bit       Adders := 4     
+	   3 Input   10 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 5     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 36    
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 13    
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 4     
+	   4 Input    2 Bit       Adders := 1     
+	   3 Input    2 Bit       Adders := 2     
++---XORs : 
+	   3 Input     32 Bit         XORs := 5     
+	   2 Input     32 Bit         XORs := 37    
++---XORs : 
+	             1000 Bit    Wide XORs := 4     
+	              560 Bit    Wide XORs := 4     
+	              332 Bit    Wide XORs := 2     
+	              217 Bit    Wide XORs := 4     
+	               32 Bit    Wide XORs := 1     
+	                6 Bit    Wide XORs := 2     
+	                2 Bit    Wide XORs := 4     
++---Registers : 
+	            44673 Bit    Registers := 1     
+	             8200 Bit    Registers := 8     
+	             2904 Bit    Registers := 1     
+	             1997 Bit    Registers := 1     
+	             1897 Bit    Registers := 3     
+	             1374 Bit    Registers := 1     
+	             1217 Bit    Registers := 3     
+	             1056 Bit    Registers := 2     
+	             1024 Bit    Registers := 1     
+	              816 Bit    Registers := 1     
+	              704 Bit    Registers := 4     
+	              641 Bit    Registers := 8     
+	              560 Bit    Registers := 4     
+	              512 Bit    Registers := 1     
+	              401 Bit    Registers := 4     
+	              384 Bit    Registers := 7     
+	              352 Bit    Registers := 5     
+	              340 Bit    Registers := 1     
+	              332 Bit    Registers := 2     
+	              289 Bit    Registers := 1     
+	              256 Bit    Registers := 139   
+	              176 Bit    Registers := 4     
+	              161 Bit    Registers := 6     
+	              160 Bit    Registers := 157   
+	              129 Bit    Registers := 1     
+	              128 Bit    Registers := 6     
+	              115 Bit    Registers := 1     
+	               96 Bit    Registers := 240   
+	               81 Bit    Registers := 4     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 63    
+	               62 Bit    Registers := 16    
+	               50 Bit    Registers := 9     
+	               43 Bit    Registers := 16    
+	               40 Bit    Registers := 4     
+	               38 Bit    Registers := 2     
+	               34 Bit    Registers := 16    
+	               32 Bit    Registers := 4385  
+	               27 Bit    Registers := 1     
+	               22 Bit    Registers := 112   
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 33    
+	               13 Bit    Registers := 16    
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 62    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 7     
+	                5 Bit    Registers := 16    
+	                4 Bit    Registers := 66    
+	                3 Bit    Registers := 27    
+	                2 Bit    Registers := 35    
+	                1 Bit    Registers := 303   
++---Multipliers : 
+	             32x160  Multipliers := 6     
+	              34x62  Multipliers := 16    
+	              32x33  Multipliers := 2     
+	              20x64  Multipliers := 4     
+	              32x32  Multipliers := 5     
+	               7x32  Multipliers := 1     
++---RAMs : 
+	              66K Bit	(64 X 1056 bit)          RAMs := 1     
+	              44K Bit	(129 X 352 bit)          RAMs := 4     
++---Muxes : 
+	   2 Input 44673 Bit        Muxes := 2     
+	  77 Input 33824 Bit        Muxes := 1     
+	   2 Input 8584 Bit        Muxes := 1     
+	   7 Input 8584 Bit        Muxes := 1     
+	   2 Input 8200 Bit        Muxes := 6     
+	   2 Input 8193 Bit        Muxes := 1     
+	  77 Input 3863 Bit        Muxes := 1     
+	   4 Input 2904 Bit        Muxes := 1     
+	  77 Input 2904 Bit        Muxes := 1     
+	   2 Input 1997 Bit        Muxes := 1     
+	   3 Input 1997 Bit        Muxes := 2     
+	   2 Input 1928 Bit        Muxes := 13    
+	  11 Input 1928 Bit        Muxes := 1     
+	  77 Input 1897 Bit        Muxes := 1     
+	   2 Input 1897 Bit        Muxes := 8     
+	   5 Input 1374 Bit        Muxes := 1     
+	  77 Input 1374 Bit        Muxes := 1     
+	  77 Input 1217 Bit        Muxes := 4     
+	   2 Input 1217 Bit        Muxes := 7     
+	   5 Input 1217 Bit        Muxes := 1     
+	   2 Input 1056 Bit        Muxes := 4     
+	  77 Input 1056 Bit        Muxes := 1     
+	   2 Input 1024 Bit        Muxes := 2     
+	   6 Input 1024 Bit        Muxes := 1     
+	  77 Input  816 Bit        Muxes := 1     
+	   5 Input  802 Bit        Muxes := 1     
+	  28 Input  704 Bit        Muxes := 1     
+	  21 Input  641 Bit        Muxes := 7     
+	   2 Input  641 Bit        Muxes := 22    
+	  10 Input  641 Bit        Muxes := 7     
+	   4 Input  641 Bit        Muxes := 2     
+	   2 Input  560 Bit        Muxes := 9     
+	  77 Input  560 Bit        Muxes := 2     
+	   5 Input  560 Bit        Muxes := 1     
+	   6 Input  512 Bit        Muxes := 1     
+	   2 Input  512 Bit        Muxes := 2     
+	   4 Input  512 Bit        Muxes := 1     
+	   2 Input  402 Bit        Muxes := 1     
+	  12 Input  401 Bit        Muxes := 4     
+	   4 Input  401 Bit        Muxes := 4     
+	   2 Input  401 Bit        Muxes := 10    
+	   5 Input  401 Bit        Muxes := 1     
+	   2 Input  384 Bit        Muxes := 2     
+	   2 Input  352 Bit        Muxes := 4     
+	   5 Input  352 Bit        Muxes := 1     
+	   2 Input  340 Bit        Muxes := 1     
+	   3 Input  340 Bit        Muxes := 1     
+	   5 Input  340 Bit        Muxes := 1     
+	   2 Input  332 Bit        Muxes := 4     
+	  77 Input  332 Bit        Muxes := 1     
+	   2 Input  289 Bit        Muxes := 6     
+	   6 Input  289 Bit        Muxes := 1     
+	   4 Input  289 Bit        Muxes := 1     
+	   2 Input  288 Bit        Muxes := 4     
+	  14 Input  256 Bit        Muxes := 4     
+	   6 Input  256 Bit        Muxes := 2     
+	   2 Input  256 Bit        Muxes := 6     
+	   4 Input  256 Bit        Muxes := 1     
+	  28 Input  256 Bit        Muxes := 1     
+	  77 Input  256 Bit        Muxes := 2     
+	   7 Input  255 Bit        Muxes := 2     
+	   2 Input  255 Bit        Muxes := 1     
+	   2 Input  192 Bit        Muxes := 4     
+	   2 Input  176 Bit        Muxes := 3     
+	   5 Input  176 Bit        Muxes := 1     
+	   2 Input  161 Bit        Muxes := 12    
+	   2 Input  160 Bit        Muxes := 286   
+	  21 Input  160 Bit        Muxes := 23    
+	  16 Input  160 Bit        Muxes := 6     
+	   4 Input  160 Bit        Muxes := 12    
+	   5 Input  160 Bit        Muxes := 12    
+	   2 Input  129 Bit        Muxes := 2     
+	   4 Input  128 Bit        Muxes := 6     
+	  14 Input  128 Bit        Muxes := 4     
+	   2 Input  128 Bit        Muxes := 1     
+	   2 Input  115 Bit        Muxes := 6     
+	  77 Input  115 Bit        Muxes := 1     
+	   8 Input  100 Bit        Muxes := 1     
+	   5 Input  100 Bit        Muxes := 1     
+	   2 Input   96 Bit        Muxes := 1     
+	   2 Input   81 Bit        Muxes := 4     
+	  14 Input   81 Bit        Muxes := 4     
+	   3 Input   81 Bit        Muxes := 4     
+	   2 Input   76 Bit        Muxes := 68    
+	   3 Input   76 Bit        Muxes := 1     
+	   2 Input   70 Bit        Muxes := 2     
+	   2 Input   67 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 83    
+	   4 Input   64 Bit        Muxes := 5     
+	  12 Input   64 Bit        Muxes := 4     
+	  21 Input   64 Bit        Muxes := 16    
+	  14 Input   64 Bit        Muxes := 4     
+	  28 Input   64 Bit        Muxes := 1     
+	   2 Input   63 Bit        Muxes := 6     
+	   7 Input   63 Bit        Muxes := 6     
+	   2 Input   62 Bit        Muxes := 35    
+	   2 Input   56 Bit        Muxes := 2     
+	   2 Input   52 Bit        Muxes := 1     
+	   4 Input   50 Bit        Muxes := 4     
+	   2 Input   50 Bit        Muxes := 26    
+	   5 Input   50 Bit        Muxes := 1     
+	   2 Input   49 Bit        Muxes := 48    
+	   5 Input   45 Bit        Muxes := 1     
+	  77 Input   44 Bit        Muxes := 1     
+	   2 Input   43 Bit        Muxes := 16    
+	   2 Input   42 Bit        Muxes := 48    
+	   2 Input   41 Bit        Muxes := 86    
+	   3 Input   41 Bit        Muxes := 6     
+	   3 Input   39 Bit        Muxes := 1     
+	   2 Input   39 Bit        Muxes := 7     
+	   2 Input   38 Bit        Muxes := 8     
+	  77 Input   38 Bit        Muxes := 1     
+	   2 Input   34 Bit        Muxes := 48    
+	  21 Input   34 Bit        Muxes := 16    
+	   2 Input   32 Bit        Muxes := 5827  
+	   4 Input   32 Bit        Muxes := 6     
+	  21 Input   32 Bit        Muxes := 26    
+	  12 Input   32 Bit        Muxes := 20    
+	   3 Input   32 Bit        Muxes := 7     
+	  14 Input   32 Bit        Muxes := 12    
+	   6 Input   32 Bit        Muxes := 3     
+	  28 Input   32 Bit        Muxes := 3     
+	   5 Input   32 Bit        Muxes := 1     
+	  53 Input   32 Bit        Muxes := 1     
+	  77 Input   32 Bit        Muxes := 3     
+	   2 Input   27 Bit        Muxes := 3     
+	  28 Input   27 Bit        Muxes := 1     
+	   8 Input   26 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 7     
+	   2 Input   25 Bit        Muxes := 32    
+	   2 Input   24 Bit        Muxes := 1     
+	   4 Input   23 Bit        Muxes := 10    
+	   2 Input   23 Bit        Muxes := 16    
+	   2 Input   22 Bit        Muxes := 98    
+	   4 Input   22 Bit        Muxes := 22    
+	  21 Input   22 Bit        Muxes := 64    
+	   5 Input   21 Bit        Muxes := 6     
+	   4 Input   21 Bit        Muxes := 18    
+	   6 Input   21 Bit        Muxes := 24    
+	   3 Input   21 Bit        Muxes := 52    
+	   2 Input   21 Bit        Muxes := 124   
+	   2 Input   20 Bit        Muxes := 40    
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 34    
+	   2 Input   16 Bit        Muxes := 9     
+	   7 Input   16 Bit        Muxes := 1     
+	   5 Input   16 Bit        Muxes := 4     
+	   3 Input   16 Bit        Muxes := 1     
+	  77 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 6     
+	  21 Input   13 Bit        Muxes := 16    
+	   2 Input   13 Bit        Muxes := 49    
+	  13 Input   12 Bit        Muxes := 1     
+	   3 Input   12 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	  77 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 83    
+	  12 Input    8 Bit        Muxes := 4     
+	  14 Input    8 Bit        Muxes := 24    
+	   3 Input    8 Bit        Muxes := 15    
+	   5 Input    8 Bit        Muxes := 16    
+	   6 Input    8 Bit        Muxes := 2     
+	  28 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	  77 Input    8 Bit        Muxes := 5     
+	  64 Input    8 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 4     
+	  21 Input    6 Bit        Muxes := 11    
+	   2 Input    6 Bit        Muxes := 82    
+	  10 Input    6 Bit        Muxes := 6     
+	   7 Input    6 Bit        Muxes := 6     
+	  16 Input    6 Bit        Muxes := 6     
+	   8 Input    6 Bit        Muxes := 7     
+	   6 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 2     
+	  12 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	 128 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 46    
+	  21 Input    5 Bit        Muxes := 6     
+	   7 Input    5 Bit        Muxes := 6     
+	   3 Input    5 Bit        Muxes := 6     
+	   8 Input    5 Bit        Muxes := 6     
+	   9 Input    5 Bit        Muxes := 4     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 113   
+	   7 Input    4 Bit        Muxes := 8     
+	   6 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 12    
+	  11 Input    4 Bit        Muxes := 5     
+	  15 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 24    
+	  21 Input    4 Bit        Muxes := 17    
+	   5 Input    4 Bit        Muxes := 4     
+	  21 Input    3 Bit        Muxes := 21    
+	  11 Input    3 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 76    
+	  10 Input    3 Bit        Muxes := 14    
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 6     
+	   5 Input    3 Bit        Muxes := 3     
+	   4 Input    3 Bit        Muxes := 2     
+	   9 Input    3 Bit        Muxes := 3     
+	  77 Input    3 Bit        Muxes := 3     
+	  21 Input    2 Bit        Muxes := 67    
+	   2 Input    2 Bit        Muxes := 38    
+	  11 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 38    
+	   6 Input    2 Bit        Muxes := 3     
+	   5 Input    2 Bit        Muxes := 8     
+	  53 Input    2 Bit        Muxes := 1     
+	   9 Input    2 Bit        Muxes := 1     
+	  77 Input    2 Bit        Muxes := 2     
+	  21 Input    1 Bit        Muxes := 312   
+	   2 Input    1 Bit        Muxes := 1180  
+	  10 Input    1 Bit        Muxes := 56    
+	  16 Input    1 Bit        Muxes := 44    
+	  11 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 88    
+	   5 Input    1 Bit        Muxes := 39    
+	   6 Input    1 Bit        Muxes := 29    
+	   3 Input    1 Bit        Muxes := 130   
+	  12 Input    1 Bit        Muxes := 52    
+	 130 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 45    
+	  14 Input    1 Bit        Muxes := 88    
+	  28 Input    1 Bit        Muxes := 17    
+	   9 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 1     
+	  77 Input    1 Bit        Muxes := 75    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: Generating DSP reg_m20, operation Mode is: PCIN+A*B.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+DSP Report: operator reg_m20 is absorbed into DSP reg_m20.
+WARNING: [Synth 8-3917] design m_tsmx_top has port o_req_ready driven by constant 0
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[25]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[24]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[23]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[22]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[21]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[20]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[19]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[18]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[17]) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[25]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[24]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[23]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[22]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[21]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[20]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[19]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[18]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[17]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[16]__0) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[41]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[40]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[39]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[38]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[37]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[36]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[35]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[34]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[33]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[32]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[31]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[30]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[29]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[28]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[27]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[26]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[25]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[24]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[23]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[22]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[21]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[20]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[19]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[18]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[17]__1) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[47]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[46]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[45]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[44]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[43]__2) is unused and will be removed from module m_tsmx_geom_su.
+WARNING: [Synth 8-3332] Sequential element (reg_m2_reg[42]__2) is unused and will be removed from module m_tsmx_geom_su.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.

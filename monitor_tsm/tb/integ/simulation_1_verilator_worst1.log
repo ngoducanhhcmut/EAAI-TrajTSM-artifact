@@ -1,0 +1,7 @@
+COMMAND: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/obj_1/Vtb_m_tsmx_top +LIMIT=1 +FILE=worst.mem +ALLOW_INACTIVE +WORST
+PASS top CSR/AXI smoke
+JOB 0 PASS cycles=1547285 xerr_checks=0
+TIMING job=0 fallback=ffff tail=ffff max_rows=77 stream_hits=1759 objects=32
+[15474920000] %Fatal: tb_m_tsmx_top.sv:459: Assertion failed in tb_m_tsmx_top: worst-case coverage/budget
+%Error: /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:459: Verilog $stop
+Aborting...

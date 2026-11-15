@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\sim.vvp +MUTANT=18
+INJECT 18 B10_lost_exact: DUT output data stuck-X
+ASSERT_FAIL 18 B10_lost_exact cycle=13 actual=xxxxxxxx expected=00000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:298: R-025 assertion failed
+       Time: 140000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

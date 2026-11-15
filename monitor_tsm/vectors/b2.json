@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "block": "b2",
+  "n": 128,
+  "seed": 1947283106,
+  "bit_order": "MSB first, left zero pad to nibble",
+  "bits": 673,
+  "fields": [
+    {
+      "name": "x",
+      "bits": 64,
+      "signed": true,
+      "lsb": 609,
+      "direction": "input"
+    },
+    {
+      "name": "v",
+      "bits": 32,
+      "signed": false,
+      "lsb": 577,
+      "direction": "input"
+    },
+    {
+      "name": "a",
+      "bits": 32,
+      "signed": true,
+      "lsb": 545,
+      "direction": "input"
+    },
+    {
+      "name": "object_x",
+      "bits": 64,
+      "signed": true,
+      "lsb": 481,
+      "direction": "input"
+    },
+    {
+      "name": "object_v",
+      "bits": 32,
+      "signed": false,
+      "lsb": 449,
+      "direction": "input"
+    },
+    {
+      "name": "now",
+      "bits": 32,
+      "signed": false,
+      "lsb": 417,
+      "direction": "input"
+    },
+    {
+      "name": "candidate",
+      "bits": 8,
+      "signed": false,
+      "lsb": 409,
+      "direction": "input"
+    },
+    {
+      "name": "fault",
+      "bits": 8,
+      "signed": false,
+      "lsb": 401,
+      "direction": "input"
+    },
+    {
+      "name": "seq",
+      "bits": 32,
+      "signed": false,
+      "lsb": 369,
+      "direction": "input"
+    },
+    {
+      "name": "accept",
+      "bits": 1,
+      "signed": false,
+      "lsb": 368,
+      "direction": "output"
+    },
+    {
+      "name": "selected",
+      "bits": 8,
+      "signed": false,
+      "lsb": 360,
+      "direction": "output"
+    },
+    {
+      "name": "mode",
+      "bits": 8,
+      "signed": false,
+      "lsb": 352,
+      "direction": "output"
+    },
+    {
+      "name": "reason_crc32",
+      "bits": 32,
+      "signed": false,
+      "lsb": 320,
+      "direction": "output"
+    },
+    {
+      "name": "margin",
+      "bits": 64,
+      "signed": true,
+      "lsb": 256,
+      "direction": "output"
+    },
+    {
+      "name": "output_digest",
+      "bits": 256,
+      "signed": false,
+      "lsb": 0,
+      "direction": "output"
+    }
+  ],
+  "scale": 1000000,
+  "mode": {
+    "0": "L0",
+    "1": "L1",
+    "2": "L2",
+    "3": "L3",
+    "4": "HOLD",
+    "5": "RECOVERY"
+  },
+  "description": "S1b b1/b9/system use binary diagnostic hashes; other block output hashes retain trace-only legacy JSON. Fixed canonical fixture ports; evaluate() constructs full block-specific immutable I/O. output_digest is SHA256 of full output (including all B4 rows).",
+  "reason": "IEEE CRC32 of ASCII reason",
+  "fault": "b1 CRC flip; b2 x+0.2; b7 empty pool; b8 reset/failure; b9 config tamper; b13 non-onehot; system timeout",
+  "sha256": "65ce7edb9997c46417a6ab2d57400df895cd66bf046d3c245ecf1217db1fa272",
+  "semantic_ports": "b2.ports.jsonl",
+  "semantic_format": "Signed integers follow golden/FORMATS.md; hashes are 256-bit hex; row=phase(u32),xlo(s64),xhi(s64),vlo(s32),vhi(s32),a(s32),jerk(s32). Dynamic tuples carry bounded counts."
+}

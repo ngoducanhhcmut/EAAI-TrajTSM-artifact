@@ -1,0 +1,3 @@
+COMMAND: vvp -i C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\helpers.vvp
+PASS helper math jobs=400
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\integ\tb_probe_helpers.sv:22: $finish called at 190950000 (1ps)

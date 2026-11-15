@@ -1,0 +1,327 @@
+{
+  "status": "GATE_FAILED",
+  "full_run_started": false,
+  "gate": {
+    "status": "FAILED",
+    "required_frames": 5419,
+    "checked_frames": 1584,
+    "exact_frames": 1583,
+    "mismatched_frames": 1,
+    "untested_frames": 3835,
+    "max_abs_diff": 5.960464477539063e-08,
+    "required_max_abs_diff": 0.0,
+    "mismatches": [
+      {
+        "i": 554,
+        "token": "18b3ef8c389240f39196a55621eb1930",
+        "wp": [
+          [
+            0.11383304744958878,
+            0.006674774922430515
+          ],
+          [
+            0.08716531842947006,
+            0.004889019764959812
+          ],
+          [
+            0.2135542333126068,
+            -0.0007948782294988632
+          ],
+          [
+            0.4144057631492615,
+            -0.0038293171674013138
+          ]
+        ],
+        "max_abs_diff": 5.960464477539063e-08,
+        "exact": false
+      }
+    ],
+    "early_stop": true
+  },
+  "input_check": {
+    "frames": 5419,
+    "discrepancies": 0,
+    "first_indices": [],
+    "max_abs_token_diff": 0.0
+  },
+  "mismatch_verification": {
+    "i": 554,
+    "token": "18b3ef8c389240f39196a55621eb1930",
+    "reference": [
+      [
+        0.11383304744958878,
+        0.006674774922430515
+      ],
+      [
+        0.08716531842947006,
+        0.004889019764959812
+      ],
+      [
+        0.2135542929172516,
+        -0.0007948633283376694
+      ],
+      [
+        0.41440582275390625,
+        -0.00382930226624012
+      ]
+    ],
+    "unmodified": [
+      [
+        0.11383304744958878,
+        0.006674774922430515
+      ],
+      [
+        0.08716531842947006,
+        0.004889019764959812
+      ],
+      [
+        0.2135542333126068,
+        -0.0007948782294988632
+      ],
+      [
+        0.4144057631492615,
+        -0.0038293171674013138
+      ]
+    ],
+    "accelerated": [
+      [
+        0.11383304744958878,
+        0.006674774922430515
+      ],
+      [
+        0.08716531842947006,
+        0.004889019764959812
+      ],
+      [
+        0.2135542333126068,
+        -0.0007948782294988632
+      ],
+      [
+        0.4144057631492615,
+        -0.0038293171674013138
+      ]
+    ],
+    "unmodified_vs_reference_max_abs_diff": 5.960464477539063e-08,
+    "accelerated_vs_reference_max_abs_diff": 5.960464477539063e-08,
+    "unmodified_vs_accelerated_max_abs_diff": 0.0,
+    "runtime_seconds": 8.937999999965541
+  },
+  "odd_coverage": {
+    "n": 17445,
+    "denominator": 29049,
+    "rate": 0.6005370236496953,
+    "ci95": [
+      0.5836790114775455,
+      0.6189840494224573
+    ],
+    "scope": "Existing W7 frame metadata; unchanged ODD selection, not new planner evaluation"
+  },
+  "keyframes": 34149,
+  "scenes": 850,
+  "workers": 4,
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20261104,
+    "unit": "scene",
+    "sampler": "multinomial"
+  },
+  "count_flow": {
+    "H": {
+      "w7_eligible": 29049,
+      "w7_odd": 17445,
+      "w9a_generated": 0,
+      "w9a_adapter_valid": null
+    },
+    "T": {
+      "w7_eligible": 29049,
+      "w7_odd": 17445,
+      "w9a_generated": 0,
+      "w9a_adapter_valid": null
+    },
+    "U": {
+      "w7_eligible": 29049,
+      "w7_odd": 17445,
+      "w9a_generated": 0,
+      "w9a_adapter_valid": null
+    }
+  },
+  "aligned_table": {
+    "V0/H": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "V0/T": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "V0/U": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VA/H": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VA/T": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VA/U": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VB/H": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VB/T": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    },
+    "VB/U": {
+      "status": "NOT_RUN_GATE_FAILED",
+      "acceptance": null,
+      "aligned_false_reject": null,
+      "aligned_false_accept": null,
+      "selected_labels": null,
+      "selected_risk": null,
+      "intervention_precision": null,
+      "rejection_frequency": null
+    }
+  },
+  "registered_oracle": {
+    "H": {
+      "acceptance": null,
+      "false_reject": null,
+      "false_accept": null,
+      "status": "NOT_RUN_GATE_FAILED"
+    },
+    "T": {
+      "acceptance": null,
+      "false_reject": null,
+      "false_accept": null,
+      "status": "NOT_RUN_GATE_FAILED"
+    },
+    "U": {
+      "acceptance": null,
+      "false_reject": null,
+      "false_accept": null,
+      "status": "NOT_RUN_GATE_FAILED"
+    }
+  },
+  "encoded_input_check": {
+    "accepted_records": 0,
+    "sampled_discrepancies": null,
+    "minimum_margin_m": null,
+    "status": "NOT_RUN_GATE_FAILED"
+  },
+  "runtime": {
+    "gate_invocation_seconds": 1107.734999999986,
+    "failed_and_discarded_attempts_seconds": 348.03208980003444,
+    "post_stop_verification_seconds": 8.937999999965541,
+    "attempts": [
+      {
+        "status": "STOPPED",
+        "error": "TypeError(\"argument should be a str object or an os.PathLike object returning str, not <class 'bytes'>\")",
+        "runtime_seconds": 18.68700000003446
+      },
+      {
+        "status": "STOPPED_FOR_PARALLEL_INPUT_BUILD",
+        "reason": "Sequential input rebuild replaced by four resumable input builders; discarded prefix; no inference results.",
+        "runtime_seconds": 329.3450898
+      }
+    ],
+    "scope": "Wall time: detached gate invocation, failed/discarded attempts, post-stop unmodified verification, final aggregation/hashing. Concurrent setup probes not double-counted; final serialization excluded.",
+    "aggregation_hashing_seconds": 4.14000000001397,
+    "failed_initial_packaging_seconds": null
+  },
+  "provenance": {
+    "sw\\eval_trainval\\run_models.py": "53fa171f06ffda8e5bac1b96358704351b8f50e9a699f9d65aa32063451af456",
+    "sw\\eval_trainval\\build_dataset.py": "908555ce968337eb5598d2774bb34dfc9c982f276604ed39497cbc05cc3eec09",
+    "sw\\eval_trainval\\out\\dataset.npz": "a45273383cf210cb488748751769dd40e0d6332de61adf204ca48c9d863223c2",
+    "sw\\eval_trainval\\out\\pred_hw_new.npy": "f333ca2af4eb0d9dc924c9927695dab116063a7694332fd9471e71eded3a6d16",
+    "sw\\hwspec\\hwspec_exact.py": "4714e9a0b0ef9ac8561424f661cefdfa2ed5deb30bbf22d2121e9c7c39822575",
+    "sw\\hwspec\\common.py": "853e7e8140581816a6d6a54169d2e3146f679aac2c95dcd18b59ae62a2bb29c3",
+    "sw\\hwspec\\_cache_params.pkl": "85bc362285bfd96ade3e3a8ef94ddbefa5206d768e964b2fc74c09f758b12b90",
+    "sw\\_verify_all_samples_spec.py": "7f389cee21fe076677436e30f789505fb1487f2ac976f05c448db28b3984c765",
+    "eval\\archived_weights\\autoregressive_gru_200ep.pt": {
+      "available": false,
+      "sha256": null
+    },
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\run_w7.py": "08a052240d97a47ab493275cc6f62001d6f1e9fa6869a9d20c0dcd72bdb60216",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\PROTOCOL.md": "fe19e39c864bb40f3f02568e583b7a80742ff41040b3264e0cc2756f00df9acc",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\AMENDMENT_A7.md": "7656f9add115fd9d6c7e2b88b001e7eeda1b25a9b89803da8f365e39e5707763",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\results\\frames.jsonl": "a53befbee4a5ae03f2c7bb2689734c493dda5f986349ded07ecc880dab6d5cc2",
+    "sw\\payloads\\trained\\gru_bias.bin": "4f65168d92e0ec2144ed93ee6f4056618af0b27a85f5e19e305726b2ef4539a3",
+    "sw\\payloads\\trained\\gru_scale_zp.bin": "89eeb176090a1dcc350583e9682303ae6001c666fef6a4bb6ae5d2e06e40cf16",
+    "sw\\payloads\\trained\\gru_weights.bin": "f44645bea841051a76e5eee9310434d458e69e155ef4b2790de88c78f277ebe1",
+    "sw\\payloads\\trained\\gru_wout_staging.bin": "3ae6836f5db41f712b3cdfaf80e57b7a72e85bd3d52d892fdb5605dbe6c8e7d6",
+    "sw\\payloads\\trained\\gru_wp_proj.bin": "2ea5ef4023aeb17c24a64e69f76161e367ea0576f02fb0551e77e9e3f1a59b77",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\w9a\\plans_hw.py": "4ff888ef27e18a1ac954cbd450251eb42aaa2a4917a774d5200a339913197925",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\w9a\\progress.py": "0a99e7a1f91609ce860e0c08784d1d651b1793ad1ab5dce8a9d60a419d081d36",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\w9a\\replay.py": "bb201f0c0d28c2c729362050b8dec96a0f355016ed1517ff23ac0386a1a2779d",
+    "journalQ1\\tsmx_hw\\eval_nuscenes\\w9a\\stopped_report.py": "aba030a0927434e380fb7628de1c16458cd3fdb7835b74bcd24d66ff446e7532"
+  },
+  "deviations": [
+    "Stopped gate early after observing a nonzero difference; did not compute all required validation predictions or start the full study.",
+    "RQ1 builder and current W7 both enable lane tokens; all rebuilt validation inputs and masks exactly match the archived RQ1 dataset.",
+    "Encoder INT4xINT8 used protocol A2 exact float32 BLAS with bounds and per-worker kernel checks; unmodified hw_new independently reproduces the same mismatch.",
+    "Sequential input rebuild replaced by four resumable input builders; discarded-prefix wall time retained.",
+    "Initial bytes-path write guard bug stopped before inference; fixed; failed-attempt wall time retained.",
+    "Setup fixes covered Windows null device and run_models module lookup.",
+    "H and U are unchanged in prepared replay code; W7 U depends on ego speed and front-object presence, not T. No H/U results were rerun.",
+    "W7 reference ODD metadata is reported separately from unavailable W9a plan metrics.",
+    "Exact mismatch cause remains unresolved; no tolerance relaxation, reference update, weight change, or target substitution.",
+    "The checkpoint path named by common.py is absent in the current tree. Inference used its existing RQ1 parameter cache and GRU payloads; no checkpoint rebuild or substitution. Checkpoint hash unavailable; cache/payload hashes supplied.",
+    "Initial report packaging stopped on that missing checkpoint path; corrected to record unavailable provenance. Failed packaging duration is unmeasured and excluded from timed runtime."
+  ],
+  "runtime_seconds": 1468.8450898
+}

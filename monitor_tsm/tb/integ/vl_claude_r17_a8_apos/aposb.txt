@@ -1,0 +1,72 @@
+ffff max_rows=60 stream_hits=1418 objects=1
+JOB 348 PASS cycles=682716 xerr_checks=285
+TIMING job=348 fallback=ffff tail=ffff max_rows=60 stream_hits=1408 objects=1
+JOB 349 PASS cycles=682724 xerr_checks=286
+TIMING job=349 fallback=ffff tail=ffff max_rows=60 stream_hits=1408 objects=1
+JOB 350 PASS cycles=682724 xerr_checks=287
+TIMING job=350 fallback=ffff tail=ffff max_rows=60 stream_hits=1408 objects=1
+JOB 351 PASS cycles=336880 xerr_checks=288
+TIMING job=351 fallback=ffff tail=0000 max_rows=60 stream_hits=688 objects=1
+JOB 352 PASS cycles=683104 xerr_checks=289
+TIMING job=352 fallback=ffff tail=ffff max_rows=60 stream_hits=1408 objects=1
+JOB 353 PASS cycles=682724 xerr_checks=290
+TIMING job=353 fallback=ffff tail=ffff max_rows=60 stream_hits=1408 objects=1
+JOB 354 PASS cycles=615611 xerr_checks=290
+TIMING job=354 fallback=ffff tail=ffff max_rows=51 stream_hits=1254 objects=1
+JOB 355 PASS cycles=615619 xerr_checks=291
+TIMING job=355 fallback=ffff tail=ffff max_rows=51 stream_hits=1254 objects=1
+JOB 356 PASS cycles=304245 xerr_checks=292
+TIMING job=356 fallback=ffff tail=0000 max_rows=51 stream_hits=612 objects=1
+JOB 357 PASS cycles=304625 xerr_checks=293
+TIMING job=357 fallback=ffff tail=0000 max_rows=51 stream_hits=612 objects=1
+JOB 358 PASS cycles=616378 xerr_checks=294
+TIMING job=358 fallback=ffff tail=ffff max_rows=51 stream_hits=1254 objects=1
+JOB 359 PASS cycles=615619 xerr_checks=295
+TIMING job=359 fallback=ffff tail=ffff max_rows=51 stream_hits=1254 objects=1
+ASSERT 0 TOP_FULL:spec5.3/6.1/10.1/15 hits=360
+ASSERT 1 TOP_ACCEPT:spec5.3/6.1/10.1/15 hits=360
+ASSERT 2 TOP_REASON:spec5.3/6.1/10.1/15 hits=360
+ASSERT 3 TOP_MODE:spec5.3/6.1/10.1/15 hits=360
+ASSERT 4 TOP_CANDIDATE:spec5.3/6.1/10.1/15 hits=360
+ASSERT 5 TOP_LABEL:spec5.3/6.1/10.1/15 hits=360
+ASSERT 6 TOP_BRAKE_FLAG:spec5.3/6.1/10.1/15 hits=360
+ASSERT 7 TOP_COMMIT_HB:spec5.3/6.1/10.1/15 hits=360
+ASSERT 8 CMD_FULL:spec5.3/6.1/10.1/15 hits=360
+ASSERT 9 CMD_RECORDS:spec5.3/6.1/10.1/15 hits=360
+ASSERT 10 CMD_AUTHORITY:spec5.3/6.1/10.1/15 hits=360
+ASSERT 11 CMD_OVERRIDE:spec5.3/6.1/10.1/15 hits=360
+ASSERT 12 TX_STABLE:spec5.3/6.1/10.1/15 hits=3711
+ASSERT 13 RSP_STABLE:spec5.3/6.1/10.1/15 hits=1080
+ASSERT 14 NO_STALE_RSP:spec5.3/6.1/10.1/15 hits=206458921
+ASSERT 15 NO_STALE_TX:spec5.3/6.1/10.1/15 hits=206434330
+ASSERT 16 HB_FAULT_LOW:spec5.3/6.1/10.1/15 hits=0
+ASSERT 17 FAULT_BRAKE:spec5.3/6.1/10.1/15 hits=380
+ASSERT 18 ONEHOT_FSM_MODE:spec5.3/6.1/10.1/15 hits=206460361
+ASSERT 19 DEADLINE_BOUND:spec5.3/6.1/10.1/15 hits=1440
+ASSERT 20 AXI_B_HOLD:spec5.3/6.1/10.1/15 hits=10
+ASSERT 21 AXI_R_HOLD:spec5.3/6.1/10.1/15 hits=2900
+ASSERT 22 AXI_B_CODE:spec5.3/6.1/10.1/15 hits=15
+ASSERT 23 AXI_R_CODE:spec5.3/6.1/10.1/15 hits=4350
+ASSERT 24 AXI_AW_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 25 AXI_W_KNOWN:spec5.3/6.1/10.1/15 hits=5
+ASSERT 26 AXI_AR_KNOWN:spec5.3/6.1/10.1/15 hits=1450
+ASSERT 27 AXI_B_KNOWN:spec5.3/6.1/10.1/15 hits=15
+ASSERT 28 AXI_R_KNOWN:spec5.3/6.1/10.1/15 hits=4350
+ASSERT 29 AXI_AWREADY_KNOWN:spec5.3/6.1/10.1/15 hits=206460204
+ASSERT 30 AXI_WREADY_KNOWN:spec5.3/6.1/10.1/15 hits=206460219
+ASSERT 31 AXI_ARREADY_KNOWN:spec5.3/6.1/10.1/15 hits=206455889
+ASSERT 32 AXI_B_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=10
+ASSERT 33 AXI_R_BACKPRESSURE:spec5.3/6.1/10.1/15 hits=2900
+ASSERT 34 AXI_REASON_RESERVED:spec5.3/6.1/10.1/15 hits=1080
+ASSERT 35 AXI_ERROR_ZERO:spec5.3/6.1/10.1/15 hits=6
+ASSERT 36 AXI_STATUS_RESERVED:spec5.3/6.1/10.1/15 hits=1080
+ASSERT 37 AXI_AWPROT:spec5.3/6.1/10.1/15 hits=5
+ASSERT 38 AXI_ARPROT:spec5.3/6.1/10.1/15 hits=1450
+ASSERT 39 AXI_PROFILE_COUNT:spec5.3/6.1/10.1/15 hits=3
+assertion failures: 0, assertions never exercised: 1
+PASS top jobs=360 max_cycles=846540
+- /mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/tb/integ/tb_m_tsmx_top.sv:473: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 2s; walltime 7723.527 s; speed 267.314 us/s
+- Verilator: cpu 7330.776 s on 1 threads; allocated 23 MB
+

@@ -1,0 +1,285 @@
+# That bai 06/10/2026: bitstream chi-TSM dung bo dem DDR, psu_init cu (sai cau hinh RAM) -> treo sau 'World-model copy OK'.
+# Nguyen nhan da xac dinh 07/10: cau hinh DDR trong psu_init khong khop thanh SO-DIMM (xem ddr_investigation/).
+# ----- NGUYEN VAN (khong chinh sua) -----
+=== TSM ONE-CASE DEMO: nuScenes H0261 ===
+Loading one precomputed trajectory and world model...
+OCM data ready: 0x3BB4C258
+Probing TSM trajectory DDR at 0x70300000...
+TSM trajectory DDR write OK
+trajectory chunk 0 start @ 0x70300000
+trajectory 8/351 words
+trajectory 16/351 words
+trajectory 24/351 words
+trajectory 32/351 words
+trajectory 40/351 words
+trajectory 48/351 words
+trajectory 56/351 words
+trajectory 64/351 words
+trajectory chunk 1 start @ 0x70300100
+trajectory 72/351 words
+trajectory 80/351 words
+trajectory 88/351 words
+trajectory 96/351 words
+trajectory 104/351 words
+trajectory 112/351 words
+trajectory 120/351 words
+trajectory 128/351 words
+trajectory chunk 2 start @ 0x70300200
+trajectory 136/351 words
+trajectory 144/351 words
+trajectory 152/351 words
+trajectory 160/351 words
+trajectory 168/351 words
+trajectory 176/351 words
+trajectory 184/351 words
+trajectory 192/351 words
+trajectory chunk 3 start @ 0x70300300
+trajectory 200/351 words
+trajectory 208/351 words
+trajectory 216/351 words
+trajectory 224/351 words
+trajectory 232/351 words
+trajectory 240/351 words
+trajectory 248/351 words
+trajectory 256/351 words
+trajectory chunk 4 start @ 0x70300400
+trajectory 264/351 words
+trajectory 272/351 words
+trajectory 280/351 words
+trajectory 288/351 words
+trajectory 296/351 words
+trajectory 304/351 words
+trajectory 312/351 words
+trajectory 320/351 words
+trajectory chunk 5 start @ 0x70300500
+trajectory 328/351 words
+trajectory 336/351 words
+trajectory 344/351 words
+trajectory 351/351 words
+Trajectory copy OK
+world model chunk 0 start @ 0x70400000
+world model 8/1600 words
+world model 16/1600 words
+world model 24/1600 words
+world model 32/1600 words
+world model 40/1600 words
+world model 48/1600 words
+world model 56/1600 words
+world model 64/1600 words
+world model chunk 1 start @ 0x70400100
+world model 72/1600 words
+world model 80/1600 words
+world model 88/1600 words
+world model 96/1600 words
+world model 104/1600 words
+world model 112/1600 words
+world model 120/1600 words
+world model 128/1600 words
+world model chunk 2 start @ 0x70400200
+world model 136/1600 words
+world model 144/1600 words
+world model 152/1600 words
+world model 160/1600 words
+world model 168/1600 words
+world model 176/1600 words
+world model 184/1600 words
+world model 192/1600 words
+world model chunk 3 start @ 0x70400300
+world model 200/1600 words
+world model 208/1600 words
+world model 216/1600 words
+world model 224/1600 words
+world model 232/1600 words
+world model 240/1600 words
+world model 248/1600 words
+world model 256/1600 words
+world model chunk 4 start @ 0x70400400
+world model 264/1600 words
+world model 272/1600 words
+world model 280/1600 words
+world model 288/1600 words
+world model 296/1600 words
+world model 304/1600 words
+world model 312/1600 words
+world model 320/1600 words
+world model chunk 5 start @ 0x70400500
+world model 328/1600 words
+world model 336/1600 words
+world model 344/1600 words
+world model 352/1600 words
+world model 360/1600 words
+world model 368/1600 words
+world model 376/1600 words
+world model 384/1600 words
+world model chunk 6 start @ 0x70400600
+world model 392/1600 words
+world model 400/1600 words
+world model 408/1600 words
+world model 416/1600 words
+world model 424/1600 words
+world model 432/1600 words
+world model 440/1600 words
+world model 448/1600 words
+world model chunk 7 start @ 0x70400700
+world model 456/1600 words
+world model 464/1600 words
+world model 472/1600 words
+world model 480/1600 words
+world model 488/1600 words
+world model 496/1600 words
+world model 504/1600 words
+world model 512/1600 words
+world model chunk 8 start @ 0x70400800
+world model 520/1600 words
+world model 528/1600 words
+world model 536/1600 words
+world model 544/1600 words
+world model 552/1600 words
+world model 560/1600 words
+world model 568/1600 words
+world model 576/1600 words
+world model chunk 9 start @ 0x70400900
+world model 584/1600 words
+world model 592/1600 words
+world model 600/1600 words
+world model 608/1600 words
+world model 616/1600 words
+world model 624/1600 words
+world model 632/1600 words
+world model 640/1600 words
+world model chunk 10 start @ 0x70400A00
+world model 648/1600 words
+world model 656/1600 words
+world model 664/1600 words
+world model 672/1600 words
+world model 680/1600 words
+world model 688/1600 words
+world model 696/1600 words
+world model 704/1600 words
+world model chunk 11 start @ 0x70400B00
+world model 712/1600 words
+world model 720/1600 words
+world model 728/1600 words
+world model 736/1600 words
+world model 744/1600 words
+world model 752/1600 words
+world model 760/1600 words
+world model 768/1600 words
+world model chunk 12 start @ 0x70400C00
+world model 776/1600 words
+world model 784/1600 words
+world model 792/1600 words
+world model 800/1600 words
+world model 808/1600 words
+world model 816/1600 words
+world model 824/1600 words
+world model 832/1600 words
+world model chunk 13 start @ 0x70400D00
+world model 840/1600 words
+world model 848/1600 words
+world model 856/1600 words
+world model 864/1600 words
+world model 872/1600 words
+world model 880/1600 words
+world model 888/1600 words
+world model 896/1600 words
+world model chunk 14 start @ 0x70400E00
+world model 904/1600 words
+world model 912/1600 words
+world model 920/1600 words
+world model 928/1600 words
+world model 936/1600 words
+world model 944/1600 words
+world model 952/1600 words
+world model 960/1600 words
+world model chunk 15 start @ 0x70400F00
+world model 968/1600 words
+world model 976/1600 words
+world model 984/1600 words
+world model 992/1600 words
+world model 1000/1600 words
+world model 1008/1600 words
+world model 1016/1600 words
+world model 1024/1600 words
+world model chunk 16 start @ 0x70401000
+world model 1032/1600 words
+world model 1040/1600 words
+world model 1048/1600 words
+world model 1056/1600 words
+world model 1064/1600 words
+world model 1072/1600 words
+world model 1080/1600 words
+world model 1088/1600 words
+world model chunk 17 start @ 0x70401100
+world model 1096/1600 words
+world model 1104/1600 words
+world model 1112/1600 words
+world model 1120/1600 words
+world model 1128/1600 words
+world model 1136/1600 words
+world model 1144/1600 words
+world model 1152/1600 words
+world model chunk 18 start @ 0x70401200
+world model 1160/1600 words
+world model 1168/1600 words
+world model 1176/1600 words
+world model 1184/1600 words
+world model 1192/1600 words
+world model 1200/1600 words
+world model 1208/1600 words
+world model 1216/1600 words
+world model chunk 19 start @ 0x70401300
+world model 1224/1600 words
+world model 1232/1600 words
+world model 1240/1600 words
+world model 1248/1600 words
+world model 1256/1600 words
+world model 1264/1600 words
+world model 1272/1600 words
+world model 1280/1600 words
+world model chunk 20 start @ 0x70401400
+world model 1288/1600 words
+world model 1296/1600 words
+world model 1304/1600 words
+world model 1312/1600 words
+world model 1320/1600 words
+world model 1328/1600 words
+world model 1336/1600 words
+world model 1344/1600 words
+world model chunk 21 start @ 0x70401500
+world model 1352/1600 words
+world model 1360/1600 words
+world model 1368/1600 words
+world model 1376/1600 words
+world model 1384/1600 words
+world model 1392/1600 words
+world model 1400/1600 words
+world model 1408/1600 words
+world model chunk 22 start @ 0x70401600
+world model 1416/1600 words
+world model 1424/1600 words
+world model 1432/1600 words
+world model 1440/1600 words
+world model 1448/1600 words
+world model 1456/1600 words
+world model 1464/1600 words
+world model 1472/1600 words
+world model chunk 23 start @ 0x70401700
+world model 1480/1600 words
+world model 1488/1600 words
+world model 1496/1600 words
+world model 1504/1600 words
+world model 1512/1600 words
+world model 1520/1600 words
+world model 1528/1600 words
+world model 1536/1600 words
+world model chunk 24 start @ 0x70401800
+world model 1544/1600 words
+world model 1552/1600 words
+world model 1560/1600 words
+world model 1568/1600 words
+world model 1576/1600 words
+world model 1584/1600 words
+world model 1592/1600 words
+world model 1600/1600 words
+World-model copy OK

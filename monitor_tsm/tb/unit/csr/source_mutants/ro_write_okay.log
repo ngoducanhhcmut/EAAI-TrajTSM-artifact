@@ -1,0 +1,4 @@
+COMMAND: vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\source_mutants\ro_write_okay.vvp
+ASSERT_FAIL 44 exact_bresp cycle=730
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\csr\tb_m_tsmx_csr.sv:783: R-025 assertion failed
+       Time: 6566000  Scope: tb_m_tsmx_csr.tick

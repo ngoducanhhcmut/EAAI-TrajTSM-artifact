@@ -1,0 +1,8 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\sim.vvp +MUTANT=19 +LIMIT=10
+JOB 0 cycles=3218 accept=1
+INJECT 19 queued_request_cannot_replace: flipped DUT output data
+ASSERT_FAIL 19 queued_request_cannot_replace cycle=3225 age=3221 expected=1 actual=0
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\splice\tb_m_tsmx_splice.sv:259: R-025 assertion failed
+       Time: 35470000  Scope: tb_m_tsmx_splice.tick
+
+EXIT 1

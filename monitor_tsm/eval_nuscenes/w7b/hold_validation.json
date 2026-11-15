@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "entrant_cases_rechecked": 1655,
+  "labels_changed_by_fixing_relevance": 248,
+  "method": "Remove hold while keeping each candidate full-horizon O2 relevance set fixed; no-entrant cases reuse stop-only result."
+}

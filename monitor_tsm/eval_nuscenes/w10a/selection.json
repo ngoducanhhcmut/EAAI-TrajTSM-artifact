@@ -1,0 +1,631 @@
+{
+  "chosen": "E2",
+  "feasible": [
+    "E0",
+    "E1",
+    "E2"
+  ],
+  "constraint_checks": {
+    "E0": {
+      "H": true,
+      "T": true
+    },
+    "E1": {
+      "H": true,
+      "T": true
+    },
+    "E2": {
+      "H": true,
+      "T": true
+    }
+  },
+  "training": {
+    "E0": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 96,
+            "denominator": 235,
+            "rate_pct": 40.851063829787236,
+            "ci95_pct": [
+              34.835207987289664,
+              47.534180368709514
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 12,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 118,
+            "denominator": 214,
+            "rate_pct": 55.14018691588785,
+            "ci95_pct": [
+              48.34083539309281,
+              61.5032502708559
+            ]
+          },
+          "oracle_unknown": 9
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.007987957981622103,
+            "p95": 0.02085924676226866,
+            "max": 0.06316888533490328
+          },
+          "velocity_error_mps": {
+            "mean": 0.06786880404407596,
+            "p95": 0.2083776974803728,
+            "max": 0.44967390197925905
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7143861870824026,
+            "p95": 4.987525533986399,
+            "max": 9.740229900595624
+          },
+          "n": 235,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 14,
+          "either_over_tolerance": 14,
+          "b2_reject": 50
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "ok": 96,
+          "range_schema": 49,
+          "ego_live": 31,
+          "splice": 12,
+          "no_backup": 42,
+          "ftti_budget": 3,
+          "timeout": 2
+        },
+        "all_job_reasons": {
+          "ok": 96,
+          "timeout": 5219,
+          "freeze_no_sample": 6019,
+          "range_schema": 49,
+          "ego_live": 2116,
+          "splice": 12,
+          "no_backup": 42,
+          "ftti_budget": 3
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 278,
+          "L2": 4263,
+          "L3": 2694,
+          "HOLD": 6225,
+          "RECOVERY": 96
+        },
+        "commits": {
+          "no_pending": 11344,
+          "committed": 96,
+          "ego_live": 2116
+        },
+        "outcomes": {
+          "accepted": 96,
+          "fallback": 40,
+          "mitigation": 98,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 155
+        },
+        "b1_reasons": {
+          "ok": 155,
+          "range_schema": 80
+        },
+        "scenes_with_admissions": 126
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 41,
+            "denominator": 235,
+            "rate_pct": 17.4468085106383,
+            "ci95_pct": [
+              12.54934210526316,
+              22.822465915826907
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 12,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 174,
+            "denominator": 215,
+            "rate_pct": 80.93023255813954,
+            "ci95_pct": [
+              75.23343436894838,
+              86.12475721256337
+            ]
+          },
+          "oracle_unknown": 8
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.029623964227799067,
+            "p95": 0.08078403682115932,
+            "max": 0.16639590585248243
+          },
+          "velocity_error_mps": {
+            "mean": 0.27549777259587294,
+            "p95": 0.7235110941275857,
+            "max": 1.4538000086947536
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.8250021536027656,
+            "p95": 5.072241369497075,
+            "max": 10.284006952630522
+          },
+          "n": 235,
+          "position_over_16cm": 1,
+          "velocity_over_20cmps": 125,
+          "either_over_tolerance": 125,
+          "b2_reject": 160
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "splice": 94,
+          "ok": 41,
+          "range_schema": 52,
+          "ego_live": 31,
+          "no_backup": 14,
+          "ftti_budget": 1,
+          "timeout": 2
+        },
+        "all_job_reasons": {
+          "splice": 94,
+          "timeout": 7845,
+          "ok": 41,
+          "freeze_no_sample": 3148,
+          "range_schema": 52,
+          "ego_live": 2361,
+          "no_backup": 14,
+          "ftti_budget": 1
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 120,
+          "L2": 4176,
+          "L3": 2936,
+          "HOLD": 6283,
+          "RECOVERY": 41
+        },
+        "commits": {
+          "no_pending": 11154,
+          "committed": 41,
+          "ego_live": 2361
+        },
+        "outcomes": {
+          "fallback": 95,
+          "accepted": 41,
+          "mitigation": 98,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 152
+        },
+        "b1_reasons": {
+          "ok": 152,
+          "range_schema": 83
+        },
+        "scenes_with_admissions": 126
+      }
+    },
+    "E1": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 69,
+            "denominator": 235,
+            "rate_pct": 29.361702127659573,
+            "ci95_pct": [
+              23.70632940108893,
+              35.58577645442052
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 10,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 142,
+            "denominator": 211,
+            "rate_pct": 67.29857819905213,
+            "ci95_pct": [
+              60.54047994182523,
+              73.52941176470588
+            ]
+          },
+          "oracle_unknown": 14
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.01287409802895218,
+            "p95": 0.03328625411860884,
+            "max": 0.06188912965226123
+          },
+          "velocity_error_mps": {
+            "mean": 0.1189938994690186,
+            "p95": 0.34839750340688896,
+            "max": 0.5712143344817231
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7139805310015928,
+            "p95": 4.969812829079153,
+            "max": 10.249272420884633
+          },
+          "n": 235,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 46,
+          "either_over_tolerance": 46,
+          "b2_reject": 96
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "ok": 69,
+          "splice": 49,
+          "range_schema": 50,
+          "ego_live": 31,
+          "no_backup": 31,
+          "ftti_budget": 2,
+          "timeout": 3
+        },
+        "all_job_reasons": {
+          "ok": 69,
+          "timeout": 6533,
+          "freeze_no_sample": 4660,
+          "splice": 49,
+          "range_schema": 50,
+          "ego_live": 2162,
+          "no_backup": 31,
+          "ftti_budget": 2
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 194,
+          "L2": 4278,
+          "L3": 2741,
+          "HOLD": 6274,
+          "RECOVERY": 69
+        },
+        "commits": {
+          "no_pending": 11325,
+          "committed": 69,
+          "ego_live": 2162
+        },
+        "outcomes": {
+          "accepted": 69,
+          "fallback": 67,
+          "mitigation": 98,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 154
+        },
+        "b1_reasons": {
+          "ok": 154,
+          "range_schema": 81
+        },
+        "scenes_with_admissions": 126
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 41,
+            "denominator": 235,
+            "rate_pct": 17.4468085106383,
+            "ci95_pct": [
+              12.60480146256976,
+              22.52507031918795
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 12,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 171,
+            "denominator": 212,
+            "rate_pct": 80.66037735849056,
+            "ci95_pct": [
+              74.99724669603525,
+              85.95783190526619
+            ]
+          },
+          "oracle_unknown": 11
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.021673157449837874,
+            "p95": 0.061191588723809365,
+            "max": 0.09332552033762909
+          },
+          "velocity_error_mps": {
+            "mean": 0.21484360965609492,
+            "p95": 0.5649446523317418,
+            "max": 0.9151988543821941
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7267694572002257,
+            "p95": 4.9174535570661435,
+            "max": 9.964522484281192
+          },
+          "n": 235,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 102,
+          "either_over_tolerance": 102,
+          "b2_reject": 148
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "ok": 41,
+          "splice": 83,
+          "range_schema": 53,
+          "ego_live": 31,
+          "no_backup": 24,
+          "timeout": 3
+        },
+        "all_job_reasons": {
+          "ok": 41,
+          "timeout": 8105,
+          "freeze_no_sample": 2931,
+          "splice": 83,
+          "range_schema": 53,
+          "ego_live": 2319,
+          "no_backup": 24
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 122,
+          "L2": 4163,
+          "L3": 2893,
+          "HOLD": 6337,
+          "RECOVERY": 41
+        },
+        "commits": {
+          "no_pending": 11196,
+          "committed": 41,
+          "ego_live": 2319
+        },
+        "outcomes": {
+          "accepted": 41,
+          "fallback": 96,
+          "mitigation": 97,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 151
+        },
+        "b1_reasons": {
+          "ok": 151,
+          "range_schema": 84
+        },
+        "scenes_with_admissions": 126
+      }
+    },
+    "E2": {
+      "H": {
+        "metrics": {
+          "acceptance": {
+            "n": 75,
+            "denominator": 235,
+            "rate_pct": 31.914893617021278,
+            "ci95_pct": [
+              25.990264653462017,
+              38.46153846153846
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 12,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 140,
+            "denominator": 215,
+            "rate_pct": 65.11627906976744,
+            "ci95_pct": [
+              58.064516129032256,
+              71.42857142857143
+            ]
+          },
+          "oracle_unknown": 8
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.00724948018055332,
+            "p95": 0.022880133074019763,
+            "max": 0.04510609043735769
+          },
+          "velocity_error_mps": {
+            "mean": 0.1910679524882654,
+            "p95": 0.6117709044958406,
+            "max": 1.052006171723173
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7139805310015928,
+            "p95": 4.969812829079153,
+            "max": 10.249272420884633
+          },
+          "n": 235,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 84,
+          "either_over_tolerance": 84,
+          "b2_reject": 122
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "splice": 47,
+          "range_schema": 44,
+          "ego_live": 31,
+          "ok": 75,
+          "no_backup": 33,
+          "ftti_budget": 2,
+          "timeout": 3
+        },
+        "all_job_reasons": {
+          "splice": 47,
+          "timeout": 6424,
+          "range_schema": 44,
+          "ego_live": 2333,
+          "ok": 75,
+          "freeze_no_sample": 4598,
+          "no_backup": 33,
+          "ftti_budget": 2
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 205,
+          "L2": 4164,
+          "L3": 2911,
+          "HOLD": 6201,
+          "RECOVERY": 75
+        },
+        "commits": {
+          "no_pending": 11148,
+          "ego_live": 2333,
+          "committed": 75
+        },
+        "outcomes": {
+          "fallback": 61,
+          "mitigation": 98,
+          "accepted": 75,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 160
+        },
+        "b1_reasons": {
+          "ok": 160,
+          "range_schema": 75
+        },
+        "scenes_with_admissions": 126
+      },
+      "T": {
+        "metrics": {
+          "acceptance": {
+            "n": 75,
+            "denominator": 235,
+            "rate_pct": 31.914893617021278,
+            "ci95_pct": [
+              25.990264653462017,
+              38.46153846153846
+            ]
+          },
+          "false_accept": {
+            "n": 0,
+            "denominator": 12,
+            "rate_pct": 0.0,
+            "ci95_pct": [
+              0.0,
+              0.0
+            ]
+          },
+          "false_reject": {
+            "n": 140,
+            "denominator": 215,
+            "rate_pct": 65.11627906976744,
+            "ci95_pct": [
+              58.064516129032256,
+              71.42857142857143
+            ]
+          },
+          "oracle_unknown": 8
+        },
+        "derivative_errors": {
+          "position_error_m": {
+            "mean": 0.00724948018055332,
+            "p95": 0.022880133074019763,
+            "max": 0.04510609043735769
+          },
+          "velocity_error_mps": {
+            "mean": 0.1910679524882654,
+            "p95": 0.6117709044958406,
+            "max": 1.052006171723173
+          },
+          "acceleration_error_mps2": {
+            "mean": 1.7267694572002257,
+            "p95": 4.9174535570661435,
+            "max": 9.964522484281192
+          },
+          "n": 235,
+          "position_over_16cm": 0,
+          "velocity_over_20cmps": 84,
+          "either_over_tolerance": 84,
+          "b2_reject": 122
+        },
+        "jobs": 13556,
+        "admission_reasons": {
+          "splice": 47,
+          "range_schema": 44,
+          "ego_live": 31,
+          "ok": 75,
+          "no_backup": 33,
+          "ftti_budget": 2,
+          "timeout": 3
+        },
+        "all_job_reasons": {
+          "splice": 47,
+          "timeout": 6424,
+          "range_schema": 44,
+          "ego_live": 2277,
+          "ok": 75,
+          "freeze_no_sample": 4654,
+          "no_backup": 33,
+          "ftti_budget": 2
+        },
+        "occupancy": {
+          "L0": 0,
+          "L1": 204,
+          "L2": 4135,
+          "L3": 2854,
+          "HOLD": 6288,
+          "RECOVERY": 75
+        },
+        "commits": {
+          "no_pending": 11204,
+          "ego_live": 2277,
+          "committed": 75
+        },
+        "outcomes": {
+          "fallback": 61,
+          "mitigation": 98,
+          "accepted": 75,
+          "hold": 1,
+          "attempts": 235,
+          "admitted": 160
+        },
+        "b1_reasons": {
+          "ok": 160,
+          "range_schema": 75
+        },
+        "scenes_with_admissions": 126
+      }
+    }
+  },
+  "rule": "maximize T ACCEPT subject to FA(T), FA(H) <= E0 by exact fractions; E0/E1/E2 tie order; E0 fallback",
+  "sealed_before_validation": true,
+  "utc": "2026-11-06T15:43:49.452554"
+}

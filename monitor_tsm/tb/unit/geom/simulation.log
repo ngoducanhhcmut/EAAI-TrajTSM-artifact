@@ -1,0 +1,30 @@
+ASSERT 0 hits=58
+ASSERT 1 hits=58
+ASSERT 2 hits=58
+ASSERT 3 hits=58
+ASSERT 4 hits=58
+ASSERT 5 hits=483561
+ASSERT 6 hits=488762
+ASSERT 7 hits=478128
+ASSERT 8 hits=7845
+ASSERT 9 hits=5230
+ASSERT 10 hits=5230
+ASSERT 11 hits=2615
+ASSERT 12 hits=2615
+ASSERT 13 hits=2615
+ASSERT 14 hits=2615
+ASSERT 15 hits=7845
+ASSERT 16 hits=7845
+ASSERT 17 hits=7845
+ASSERT 18 hits=7845
+ASSERT 19 hits=7845
+ASSERT 20 hits=5751
+ASSERT 21 hits=2094
+ASSERT 22 hits=13249
+ASSERT 23 hits=969
+ASSERT 24 hits=7845
+ASSERT 25 hits=7845
+LATENCY min=4 max=83653
+MEASURED actor II max=38/48; row cycles max=667/1536
+assertion failures: 0, assertions never exercised: 0
+PASS geom: golden=2615/2615 assertions=26

@@ -1,0 +1,47 @@
+COMMAND: C:\Vivado\Vivado\2023.2\bin\xelab.bat --snapshot control_2 --mt 4 work.tb_tsmx_control_phy
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Vivado/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --snapshot control_2 --mt 4 work.tb_tsmx_control_phy 
+Using 4 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.m_tsmx_rst
+Compiling module work.m_tsmx_arith_div(PARA_W=32'b0110...
+Compiling module work.m_tsmx_arith_div(PARA_W=32'b0100...
+Compiling module work.m_tsmx_arith_div_default
+Compiling module work.m_tsmx_arith
+Compiling module work.m_tsmx_ingress
+Compiling module work.m_tsmx_splice
+Compiling module work.m_tsmx_cert
+Compiling module work.m_tsmx_sel
+Compiling module work.m_tsmx_supervisor
+Compiling module work.m_tsmx_arb
+Compiling module work.m_tsmx_rec
+Compiling module work.m_tsmx_health_default
+Compiling module work.m_tsmx_mrmgen
+Compiling module work.m_tsmx_geom_swept
+Compiling module work.m_tsmx_geom_adv
+Compiling module work.m_tsmx_geom
+Compiling module work.m_tsmx_health_bist
+Compiling module work.m_tsmx_health_lane
+Compiling module work.m_tsmx_codec_core
+Compiling module work.m_tsmx_codec
+Compiling module work.m_tsmx_hash
+Compiling module work.m_tsmx_math
+Compiling module work.m_tsmx_arith_2
+Compiling module work.m_tsmx_mrmgen_2
+Compiling module work.m_tsmx_sweep(PARA_G=32'b010,PARA...
+Compiling module work.m_tsmx_sweep(PARA_G=32'b01,PARA_...
+Compiling module work.m_tsmx_csr
+Compiling module work.m_tsmx_engine(PARA_G=32'b010,PAR...
+Compiling module work.m_tsmx_io(PARA_DIRECT=32'b01)
+Compiling module work.m_tsmx_top(PARA_G=32'b010,PARA_P...
+Compiling module work.tb_tsmx_control_phy
+Built simulation snapshot control_2

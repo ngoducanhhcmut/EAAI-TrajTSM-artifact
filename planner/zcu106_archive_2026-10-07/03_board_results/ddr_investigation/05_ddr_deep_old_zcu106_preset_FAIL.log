@@ -1,0 +1,16 @@
+# 07/10/2026 — board_test_ddr_deep.tcl, preset ZCU106 goc: VERR + trung lap dia chi + treo. (bit 19 = VERR)
+# ----- NGUYEN VAN (khong chinh sua) -----
+psu_init dung: C:/Users/TransformerDA/Downloads/vla_new_arch/deliverables/zcu106/psu_init_zcu106.tcl
+DDRC STAT=0x00000001 (che do 1)  PHY PGSR0=0x80084FFF  loi training: CO
+=== TRUNG LAP DIA CHI ===
+CO TRUNG LAP/SAI:
+  0x00000000 bi ghi de boi 0x00004000
+  0x00080000 doc 0x01000000 (mong 0xA1001005)
+  0x04000000 doc 0x00004000 (mong 0xA1001705)
+  0x10000000 doc 0xFFFF1905 (mong 0xA1001905)
+=== DU LIEU (256 word / vung) ===
+DOC khoi 0x00100000 TREO: Memory read error at 0x100000. AP transaction timeout
+Tong: 0/0 word sai
+Loi theo lan byte (trong word 32 bit) [0..3]: 0 0 0 0
+Loi theo bit [0..31]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+==== DDR: CO LOI ====

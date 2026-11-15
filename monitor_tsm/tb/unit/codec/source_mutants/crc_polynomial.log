@@ -1,0 +1,7 @@
+COMMAND: vvp source_mutants\crc_polynomial.vvp
+PROGRESS codec 0/5648 cycles=129
+ASSERT_FAIL 14 crc_exact spec5.3/5.5.2/7/10.3 job=3 cycle=411 actual=07ed06b8f0000000000000000000000000000000000000000000000000000000000000000 expected=029e8cfcc0000000000000000000000000000000000000000000000000000000000000000
+FATAL: tb_m_tsmx_codec.sv:220: R-025 assertion failed
+       Time: 2467000  Scope: tb_m_tsmx_codec.tick
+
+EXIT: 1

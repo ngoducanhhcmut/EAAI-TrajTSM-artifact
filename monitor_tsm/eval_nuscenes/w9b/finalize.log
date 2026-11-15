@@ -1,0 +1,19 @@
+report lines 61
+{
+  "H": {
+    "attempts": 3040,
+    "admitted": 2026,
+    "mitigation": 1320,
+    "fallback": 441,
+    "accepted": 1252,
+    "hold": 27
+  },
+  "T": {
+    "attempts": 3040,
+    "admitted": 1933,
+    "mitigation": 1325,
+    "fallback": 1251,
+    "accepted": 427,
+    "hold": 37
+  }
+}

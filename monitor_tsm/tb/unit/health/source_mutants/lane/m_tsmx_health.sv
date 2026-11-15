@@ -1,0 +1,178 @@
+/*
+ * Project      : TSM-X
+ * Author       : TSMX project (user)
+ * AI Flow      : VLSIT RTL Generator AI Automation Flow
+ * AI Flow Page : https://github.com/nguyenquanicd/VLSIT_RTL_Generator_AI_Model
+ * Date         : 2026-10-29
+ * Version      : 0.1
+ * Description  : B13 parity monitor and exact external-channel BIST sequencer.
+ * Assumptions  : Wrapper synchronizes reset release and owns DFT reset override.
+ * Deviations   : Functional leaves implement logic (HIE-02); enclosing lane is structural.
+ *                Fixed SI constants and record widths implement spec 9.2 (PAR-03).
+ */
+`timescale 1ns/1ps
+`default_nettype none
+module m_tsmx_health #(
+  // Parameter Description: Protected word capacity; fixed ABI retains 1024 slots.
+  // Parameter values: 1 through 1024; default 1024.
+  // Parameter unit: count
+  parameter logic [31:0] PARA_HEALTH_WORDS = 32'd1024,
+  localparam logic [31:0] LPARA_MAX_WORDS = 32'd1024,
+  localparam logic [31:0] LPARA_WORD_W = 32'd32,
+  localparam logic [31:0] LPARA_ROW_W = 32'd352,
+  localparam logic [31:0] LPARA_MAX_ROWS = 32'd129,
+  localparam logic [31:0] LPARA_STOP = 32'd1100000,
+  localparam logic [31:0] LPARA_PHASE = 32'd3100000
+) (
+  input wire i_clk_core,
+  input wire i_rst_n_core,
+  input wire i_req_valid,
+  input wire [33823:0] i_req_data,
+  input wire i_rsp_ready,
+  input wire i_b4_ready,
+  input wire [45457:0] i_b4_data,
+  input wire i_b4_valid,
+  input wire i_b3_ready,
+  input wire [80:0] i_b3_data,
+  input wire i_b3_valid,
+  output logic o_req_ready,
+  output logic o_rsp_valid,
+  output logic o_rsp_data,
+  output logic [175:0] o_b4_data,
+  output logic o_b4_valid,
+  output logic o_b4_ready,
+  output logic [54041:0] o_b3_data,
+  output logic o_b3_valid,
+  output logic o_b3_ready
+);
+  // BOOT suppresses readiness; BIST runs B4, clear B3, then blocked B3.
+  typedef enum logic [3:0] {
+    ENUM_ST_BOOT=4'd0, ENUM_ST_IDLE=4'd1, ENUM_ST_CHECK=4'd2,
+    ENUM_ST_GEN=4'd3, ENUM_ST_GWAIT=4'd4, ENUM_ST_CLEAR=4'd5,
+    ENUM_ST_CWAIT=4'd6, ENUM_ST_BLOCK=4'd7, ENUM_ST_BWAIT=4'd8,
+    ENUM_ST_RESP=4'd9
+  } ctrl_state_type_def;
+  ctrl_state_type_def reg_fsm_ctrl_current_state, w_fsm_ctrl_nxt_state;
+  logic [33823:0] reg_req, w_req_nxt;
+  logic [45457:0] reg_traj, w_traj_nxt;
+  logic [10:0] reg_idx, w_idx_nxt;
+  logic reg_good, w_good_nxt;
+  logic w_header, w_par, w_bist_ok;
+  logic [8199:0] w_world;
+  logic [383:0] w_lane;
+  logic [7:0] w_count;
+  logic [351:0] w_last;
+
+  // Only count-qualified words are read; unused slots are deliberately ignored.
+  always_comb begin : p_com_check
+    w_header=reg_req[33823] && reg_req[33822:33812]==reg_req[33811:33801]
+      && 32'(reg_req[33822:33812])<=PARA_HEALTH_WORDS
+      && reg_req[33822:33812]<=11'(LPARA_MAX_WORDS)
+      && 1'b1 && reg_req[6:1]!=6'd0
+      && (reg_req[6:1] & (reg_req[6:1]-6'd1))==6'd0;
+    w_par=1'b0;
+    if(reg_idx<11'(LPARA_MAX_WORDS))
+      w_par=(^reg_req[33800-LPARA_WORD_W*32'(reg_idx) -:32])==reg_req[1032-reg_idx];
+    w_count=i_b4_data[45415:45408];
+    w_last='0;
+    if(w_count>=8'd1 && w_count<=8'(LPARA_MAX_ROWS))
+      w_last=i_b4_data[45407-LPARA_ROW_W*32'(w_count-8'd1) -:352];
+    w_bist_ok=i_b4_data[45457] && i_b4_data[45448]
+      && i_b4_data[45447:45416]==LPARA_STOP
+      && w_count>=8'd1 && w_count<=8'(LPARA_MAX_ROWS)
+      && w_last=={64'd0,LPARA_PHASE,64'd766660,64'd766670,
+                  32'd0,32'd0,32'd0,32'd0};
+  end
+
+  // Aggregate BIST requests are immutable while stalled; geometry uses golden defaults.
+  always_comb begin : p_com_outputs
+    o_req_ready=1'b0; o_rsp_valid=1'b0; o_rsp_data=1'b0;
+    o_b4_data='0; o_b4_valid=1'b0; o_b4_ready=1'b0;
+    o_b3_data='0; o_b3_valid=1'b0; o_b3_ready=1'b0;
+    w_world='0; w_lane={64'hffffffffffe488c0,64'd1800000,64'd0,
+                       64'd950000,64'd50000,64'd500000};
+    w_world[8199:8192]=8'd1;
+    w_world[8191:7936]={64'd20000000,32'd0,32'd0,64'd4800000,32'd0,32'd0};
+    if(reg_fsm_ctrl_current_state==ENUM_ST_BLOCK)
+      w_world[8191:8128]=64'd4000000;
+    if(i_rst_n_core) begin
+      case(reg_fsm_ctrl_current_state)
+        ENUM_ST_IDLE: o_req_ready=1'b1;
+        ENUM_ST_GEN: begin
+          o_b4_valid=1'b1;
+          o_b4_data={64'd0,32'd1000000,32'd0,8'd0,32'd0,8'd128};
+        end
+        ENUM_ST_GWAIT: o_b4_ready=1'b1;
+        ENUM_ST_CLEAR, ENUM_ST_BLOCK: begin
+          o_b3_valid=1'b1; o_b3_data={reg_traj,w_world,w_lane};
+        end
+        ENUM_ST_CWAIT, ENUM_ST_BWAIT: o_b3_ready=1'b1;
+        ENUM_ST_RESP: begin o_rsp_valid=1'b1; o_rsp_data=reg_good; end
+        default: begin end
+      endcase
+    end
+  end
+
+  // One word per clock; failed prerequisites skip expensive BIST without changing health.
+  always_comb begin : p_com_ctrl
+    w_fsm_ctrl_nxt_state=reg_fsm_ctrl_current_state;
+    w_req_nxt=reg_req; w_traj_nxt=reg_traj; w_idx_nxt=reg_idx; w_good_nxt=reg_good;
+    case(reg_fsm_ctrl_current_state)
+      ENUM_ST_BOOT: w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      ENUM_ST_IDLE: if(i_req_valid) begin
+        w_req_nxt=i_req_data; w_idx_nxt='0; w_good_nxt=1'b1;
+        w_fsm_ctrl_nxt_state=ENUM_ST_CHECK;
+      end
+      ENUM_ST_CHECK: begin
+        casez({!w_header,reg_idx<reg_req[33822:33812]})
+          2'b1?: begin w_good_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_RESP; end
+          2'b01: begin
+            w_good_nxt=reg_good && w_par; w_idx_nxt=11'(reg_idx+11'd1);
+          end
+          default: begin
+            w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+            if(reg_good && reg_req[0]) w_fsm_ctrl_nxt_state=ENUM_ST_GEN;
+          end
+        endcase
+      end
+      ENUM_ST_GEN: if(i_b4_ready) w_fsm_ctrl_nxt_state=ENUM_ST_GWAIT;
+      ENUM_ST_GWAIT: if(i_b4_valid) begin
+        w_traj_nxt=i_b4_data; w_good_nxt=w_bist_ok;
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+        if(w_bist_ok) w_fsm_ctrl_nxt_state=ENUM_ST_CLEAR;
+      end
+      ENUM_ST_CLEAR: if(i_b3_ready) w_fsm_ctrl_nxt_state=ENUM_ST_CWAIT;
+      ENUM_ST_CWAIT: if(i_b3_valid) begin
+        w_good_nxt=i_b3_data[80]; w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+        if(i_b3_data[80]) w_fsm_ctrl_nxt_state=ENUM_ST_BLOCK;
+      end
+      ENUM_ST_BLOCK: if(i_b3_ready) w_fsm_ctrl_nxt_state=ENUM_ST_BWAIT;
+      ENUM_ST_BWAIT: if(i_b3_valid) begin
+        w_good_nxt=!i_b3_data[80]; w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      ENUM_ST_RESP: if(i_rsp_ready) begin
+        w_good_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      end
+      default: begin w_good_nxt=1'b0; w_fsm_ctrl_nxt_state=ENUM_ST_BOOT; end
+    endcase
+  end
+
+  // Invalid structural settings deliberately fail elaboration instead of aliasing capacity.
+  if(PARA_HEALTH_WORDS<32'd1 || PARA_HEALTH_WORDS>LPARA_MAX_WORDS) begin : gen_bad_para
+    m_tsmx_bad_health_para u_bad_health_para ();
+  end
+
+  // All contexts abort on reset; external subresources share this reset in the lane wrapper.
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_ctrl
+    if(!i_rst_n_core) begin
+      reg_fsm_ctrl_current_state<=ENUM_ST_BOOT;
+      reg_req<='0; reg_traj<='0; reg_idx<='0; reg_good<=1'b0;
+    end else begin
+      reg_fsm_ctrl_current_state<=w_fsm_ctrl_nxt_state;
+      reg_req<=w_req_nxt; reg_traj<=w_traj_nxt;
+      reg_idx<=w_idx_nxt; reg_good<=w_good_nxt;
+    end
+  end
+endmodule
+
+`default_nettype wire

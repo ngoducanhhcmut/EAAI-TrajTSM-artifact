@@ -1,0 +1,127 @@
+/*
+ * Project      : TSM-X
+ * Author       : TSMX project (user)
+ * AI Flow      : VLSIT RTL Generator AI Automation Flow
+ * AI Flow Page : https://github.com/nguyenquanicd/VLSIT_RTL_Generator_AI_Model
+ * Date         : 2026-10-29
+ * Version      : 0.1
+ * Description  : Four outward interval advances through two private II1 dividers.
+ * Assumptions  : Reset release is synchronized by the enclosing core wrapper.
+ *                Control and quotient state are reset together.
+ * Deviations   : HIE-02: functional leaf; the enclosing system top is structural.
+ *                PAR-03: SI coefficients and ABI bit positions follow golden exactly.
+ */
+`timescale 1ns/1ps
+`default_nettype none
+module m_tsmx_geom_adv (
+  input wire i_clk_core,
+  input wire i_rst_n_core,
+  input wire i_valid,
+  input wire i_ready,
+  input wire [255:0] i_pose,
+  input wire [127:0] i_vel,
+  input wire [31:0] i_oa,
+  input wire [31:0] i_ea,
+  input wire [31:0] i_h,
+  output logic o_ready,
+  output logic o_valid,
+  output logic o_fault,
+  output logic [255:0] o_pose,
+  output logic [127:0] o_vel
+);
+  logic [0:0] reg_busy, w_busy_nxt;
+  logic [0:0] reg_done, w_done_nxt;
+  logic [0:0] reg_fault, w_fault_nxt;
+  logic [2:0] reg_issue, w_issue_nxt;
+  logic [2:0] reg_recv, w_recv_nxt;
+  logic [255:0] reg_pose, w_pose_nxt;
+  logic [127:0] reg_vel, w_vel_nxt;
+  logic [31:0] reg_oa, w_oa_nxt;
+  logic [31:0] reg_ea, w_ea_nxt;
+  logic [31:0] reg_h, w_h_nxt;
+  logic [95:0] w_num_0,w_den_0,w_num_1,w_den_1,w_q_0,w_q_1,w_a,w_v,w_am;
+  logic [63:0] w_x;
+  logic w_en,w_up,w_valid_0,w_valid_1,w_fault_0,w_fault_1;
+
+  // Decode four ordered jobs: actor lower/upper, ego lower/upper.
+  always_comb begin : p_com_math
+    o_ready=i_rst_n_core && !reg_busy;
+    o_valid=i_rst_n_core && reg_done;
+    o_fault=reg_fault;
+    o_pose=reg_pose;
+    o_vel=reg_vel;
+    w_en=reg_busy && reg_issue<3'd4;
+    w_up=reg_issue[0];
+    w_a='0; w_v='0; w_x='0;
+    if (reg_issue<3'd4) begin
+      w_a=reg_issue<3'd2 ? {{64{reg_oa[31]}},reg_oa} : {{64{reg_ea[31]}},reg_ea};
+      w_v={64'd0,reg_vel[127-reg_issue*32 -:32]};
+    end
+    w_am=w_a[95] ? 96'(~w_a+96'd1) : w_a;
+    w_num_0=96'(96'd2000000*w_v*96'(reg_h)+w_a*96'(reg_h)*96'(reg_h));
+    w_den_0=96'd2000000000000;
+    if (w_a[95] && 96'(reg_h)*w_am>=w_v*96'd1000000) begin
+      w_num_0=96'(w_v*w_v); w_den_0=96'(96'd2*w_am);
+    end
+    w_num_1=96'(w_v*96'd1000000+w_a*96'(reg_h));
+    w_den_1=96'd1000000;
+    w_busy_nxt=reg_busy;w_done_nxt=reg_done;w_fault_nxt=reg_fault;
+    w_issue_nxt=reg_issue;w_recv_nxt=reg_recv;w_pose_nxt=reg_pose;w_vel_nxt=reg_vel;
+    w_oa_nxt=reg_oa;w_ea_nxt=reg_ea;w_h_nxt=reg_h;
+    if (i_valid && o_ready) begin
+      w_busy_nxt=1'b1;w_done_nxt=1'b0;w_fault_nxt=1'b0;
+      w_issue_nxt='0;w_recv_nxt='0;w_pose_nxt=i_pose;w_vel_nxt=i_vel;
+      w_oa_nxt=i_oa;w_ea_nxt=i_ea;w_h_nxt=i_h;
+    end
+    if (w_en) w_issue_nxt=3'(reg_issue+3'd1);
+    if (w_valid_0 && w_valid_1 && reg_recv<3'd4) begin
+      w_x=reg_pose[255-reg_recv*64 -:64];
+      w_pose_nxt[255-reg_recv*64 -:64]=64'(w_x+w_q_0[63:0]);
+      w_vel_nxt[127-reg_recv*32 -:32]=w_q_1[95] ? 32'd0 : w_q_1[31:0];
+      w_fault_nxt=reg_fault || w_fault_0 || w_fault_1;
+      w_recv_nxt=3'(reg_recv+3'd1);
+      if (reg_recv==3'd3) w_done_nxt=1'b1;
+    end
+    if (reg_done && i_ready)begin w_busy_nxt=1'b0;w_done_nxt=1'b0;end
+  end
+
+  // All wrapper state is reset, so no quotient from an abandoned job can survive reset.
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_state
+    if (!i_rst_n_core) begin
+      reg_busy<='0;
+      reg_done<='0;
+      reg_fault<='0;
+      reg_issue<='0;
+      reg_recv<='0;
+      reg_pose<='0;
+      reg_vel<='0;
+      reg_oa<='0;
+      reg_ea<='0;
+      reg_h<='0;
+    end else begin
+      reg_busy<=w_busy_nxt;
+      reg_done<=w_done_nxt;
+      reg_fault<=w_fault_nxt;
+      reg_issue<=w_issue_nxt;
+      reg_recv<=w_recv_nxt;
+      reg_pose<=w_pose_nxt;
+      reg_vel<=w_vel_nxt;
+      reg_oa<=w_oa_nxt;
+      reg_ea<=w_ea_nxt;
+      reg_h<=w_h_nxt;
+    end
+  end
+
+  // Numerator and velocity quotients share the same direction and ordered slot.
+  m_tsmx_arith_div #(.PARA_W(32'd96)) u_arith_div_0 (
+    .i_clk_core(i_clk_core),.i_rst_n_core(i_rst_n_core),.i_valid(w_en),
+    .i_num(w_num_0),.i_den(w_den_0),.i_up(w_up),
+    .o_valid(w_valid_0),.o_fault(w_fault_0),.o_data(w_q_0)
+  );
+  m_tsmx_arith_div #(.PARA_W(32'd96)) u_arith_div_1 (
+    .i_clk_core(i_clk_core),.i_rst_n_core(i_rst_n_core),.i_valid(w_en),
+    .i_num(w_num_1),.i_den(w_den_1),.i_up(w_up),
+    .o_valid(w_valid_1),.o_fault(w_fault_1),.o_data(w_q_1)
+  );
+endmodule
+`default_nettype wire

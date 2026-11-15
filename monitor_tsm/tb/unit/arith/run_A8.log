@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\run.py", line 96, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\run.py", line 84, in main
+    baseline()
+    ~~~~~~~~^^
+  File "C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\run.py", line 59, in baseline
+    compile_to(HERE/'sim.vvp')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\run.py", line 16, in compile_to
+    if r.returncode:raise RuntimeError(str(out))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\sim.vvp

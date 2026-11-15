@@ -1,0 +1,5 @@
+the three nonzero gate differences (5.96e-8, 2.38e-7, 2.98e-6 m; reproduced by unmodified hw_new; encoder bit-identical)
+are FP32 rounding of the GRU decoder path. Gate criterion: all 5,419 within 1e-5 m (10 µm, below the paper's 21 µm decoder
+RTL tolerance), every nonzero difference listed. Gate already satisfied by W9a2 data: do NOT re-run it; run the full study
+(W9a items 1–4: all 29,049 frames, T rows V0/VA/VB, registered oracle, aligned table, selected labels, count flow, encoded-input
+check), detached, resumable, ≤ 4 workers. Update W9A_REPORT.md + summary.json. Final reply ≤ 25 lines with the new T rows.

@@ -1,0 +1,19 @@
+{
+  "seed": "0x5253504c",
+  "total": 5736,
+  "counts": {
+    "golden": 128,
+    "edge": 18,
+    "hex": 128,
+    "boundary": 102,
+    "directed": 360,
+    "equality": 1800,
+    "random": 2400,
+    "random_apos": 800
+  },
+  "accept": 2570,
+  "sha256": {
+    "b2.ports.jsonl": "34cfc5df1339ea54891b3418789176e6376f06b27976b122072ee7fe90d95429",
+    "edges.ports.jsonl": "ddd288a57d8da8330990ccdcaf4579412fb3c93b0326c4f19856048eb6458ef6"
+  }
+}

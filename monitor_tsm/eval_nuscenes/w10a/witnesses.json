@@ -1,0 +1,710 @@
+{
+  "encodings": {
+    "E0": {
+      "fresh": {
+        "expected": "ok",
+        "actual": "ok",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "stale_150001us": {
+        "expected": "freshness",
+        "actual": "freshness",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 849999,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 1778952423,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "motion_freeze": {
+        "expected": "freeze",
+        "actual": "freeze",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [
+            600000,
+            6000000,
+            0,
+            15
+          ],
+          "freeze_since": 0,
+          "freeze_x": -1000000
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "no_sample_freeze": {
+        "expected": "freeze_no_sample",
+        "actual": "freeze_no_sample",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": 0,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 400000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": null
+      },
+      "retry_same_transaction": {
+        "expected": "sequence",
+        "actual": "sequence",
+        "pass_": true,
+        "state": {
+          "seq": 1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      }
+    },
+    "E1": {
+      "fresh": {
+        "expected": "ok",
+        "actual": "ok",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "stale_150001us": {
+        "expected": "freshness",
+        "actual": "freshness",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 849999,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 1778952423,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "motion_freeze": {
+        "expected": "freeze",
+        "actual": "freeze",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [
+            600000,
+            6000000,
+            0,
+            15
+          ],
+          "freeze_since": 0,
+          "freeze_x": -1000000
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "no_sample_freeze": {
+        "expected": "freeze_no_sample",
+        "actual": "freeze_no_sample",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": 0,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 400000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": null
+      },
+      "retry_same_transaction": {
+        "expected": "sequence",
+        "actual": "sequence",
+        "pass_": true,
+        "state": {
+          "seq": 1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      }
+    },
+    "E2": {
+      "fresh": {
+        "expected": "ok",
+        "actual": "ok",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "stale_150001us": {
+        "expected": "freshness",
+        "actual": "freshness",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 849999,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 1778952423,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "motion_freeze": {
+        "expected": "freeze",
+        "actual": "freeze",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [
+            600000,
+            6000000,
+            0,
+            15
+          ],
+          "freeze_since": 0,
+          "freeze_x": -1000000
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      },
+      "no_sample_freeze": {
+        "expected": "freeze_no_sample",
+        "actual": "freeze_no_sample",
+        "pass_": true,
+        "state": {
+          "seq": -1,
+          "last_time": -1,
+          "last_sample": 0,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 400000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": null
+      },
+      "retry_same_transaction": {
+        "expected": "sequence",
+        "actual": "sequence",
+        "pass_": true,
+        "state": {
+          "seq": 1,
+          "last_time": -1,
+          "last_sample": -1,
+          "signature": [],
+          "freeze_since": 0,
+          "freeze_x": 0
+        },
+        "now": 1000000,
+        "ego": {
+          "t": 1000000,
+          "x": 0,
+          "v": 6000000,
+          "a": 0,
+          "lx": 40000000,
+          "lv": 0
+        },
+        "packet": {
+          "plan": {
+            "seq": 1,
+            "snapshot": {
+              "t": 1000000,
+              "x": 0,
+              "v": 6000000,
+              "a": 0,
+              "lx": 40000000,
+              "lv": 0
+            },
+            "generated": 1000000,
+            "apply": 1100000,
+            "x": 600000,
+            "v": 6000000,
+            "a": 0,
+            "tail": 15,
+            "compute": 5000,
+            "count": 2,
+            "schema": 1
+          },
+          "crc": 4238565110,
+          "snapshot_ids": [
+            0,
+            0,
+            0
+          ],
+          "schema": 1
+        }
+      }
+    }
+  },
+  "exact_LS_quadratic": true,
+  "E2_stop_clipped": true,
+  "transaction_retry_packet_unchanged": true,
+  "limitation": "Freshly reanchoring frozen waypoints changes the signature; firmware must preserve planner transaction ownership. These witnesses do not prove semantic planner liveness."
+}

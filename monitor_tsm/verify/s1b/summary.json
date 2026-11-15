@@ -1,0 +1,94 @@
+{
+  "old_model_sha256": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+  "new_model_sha256": "a216ccae9d7b54837138c7f50a4e7bd3306ea879f8f2614dad19b147be7624dc",
+  "unit": {
+    "passed": true,
+    "n": 148
+  },
+  "codec": {
+    "passed": true,
+    "n": 26,
+    "checks": {
+      "ego_independent_struct": true,
+      "plan_independent_struct": true,
+      "packet_body_struct": true,
+      "packet_crc": true,
+      "IEEE_known_answer": true,
+      "snapshot_sha": true,
+      "trajectory_sha_binds_plan": true,
+      "world_zero_slots": true,
+      "world_fixed_length": true,
+      "context_struct": true,
+      "context_hash": true,
+      "seal_body_struct": true,
+      "seal_sha": true,
+      "record_721_length": true,
+      "record_721_LSB_padding": true,
+      "record_1217_length": true,
+      "record_1217_LSB_padding": true,
+      "record_332_length": true,
+      "record_332_LSB_padding": true,
+      "record_81_length": true,
+      "record_81_LSB_padding": true,
+      "record_45458_length": true,
+      "record_45458_LSB_padding": true,
+      "record_1056_length": true,
+      "record_1056_LSB_padding": true,
+      "composition_without_JSON": true
+    }
+  },
+  "identity": {
+    "v1": {
+      "ICs": 10,
+      "runs": 110,
+      "old_rows": 13886,
+      "new_rows": 13886,
+      "mismatches": 0,
+      "identical_percent": 100,
+      "old_rows_sha256": "d87dfd094e413c955f0e9c1d99030ceb07375b33825696759848e76eb921c728",
+      "new_rows_sha256": "d87dfd094e413c955f0e9c1d99030ceb07375b33825696759848e76eb921c728"
+    },
+    "v3": {
+      "ICs": 5,
+      "runs": 55,
+      "old_rows": 6761,
+      "new_rows": 6761,
+      "mismatches": 0,
+      "identical_percent": 100,
+      "old_rows_sha256": "5f2d5e0ce11c5fc9d43e4e45c79cef514cb9e58d3838e45272ed49043c82c968",
+      "new_rows_sha256": "5f2d5e0ce11c5fc9d43e4e45c79cef514cb9e58d3838e45272ed49043c82c968"
+    }
+  },
+  "v2": {
+    "inputs": 200000,
+    "counts": {
+      "b2": 50000,
+      "b3": 50000,
+      "b4": 50000,
+      "b7": 50000
+    },
+    "accepted": {
+      "b7": 36206,
+      "b3": 42577,
+      "b4": 49804,
+      "b2": 21886
+    },
+    "counterexamples": 0,
+    "examples": [],
+    "min_separation_residual": "1/1000000",
+    "seconds": 246.4181297000032,
+    "gate": "INCONCLUSIVE"
+  },
+  "json_users": [
+    "digest_json_legacy",
+    "canonical_json_legacy"
+  ],
+  "structure_errors": [],
+  "csr": "PASS: 0 error(s), 52 register(s)",
+  "P": 8,
+  "G": 8,
+  "worst_cycles": 1168034,
+  "worst_ms": 6.229514666666667,
+  "margin_to_8ms_cycles": 331966,
+  "margin_to_10ms_cycles": 706966
+}

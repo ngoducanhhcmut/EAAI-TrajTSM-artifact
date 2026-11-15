@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "typed_scalar_checks": 85,
+  "scene": "g1_v3_000",
+  "paired_rollouts": 110,
+  "old_row_hash": "e70c7b9d78fa584cc4568f38316e50d57cc63b7588c1ae2ffa79891ab3a21729",
+  "replay_row_hash": "e70c7b9d78fa584cc4568f38316e50d57cc63b7588c1ae2ffa79891ab3a21729",
+  "seconds": 38.831801199994516,
+  "bridge_sha256": "0d748b00c3c912a31ef02fef1b4fa6edf12953bd10465e55abcc812511dbf2c0",
+  "golden_sha256": "209d296d80dda8abfa44941271e5e3863f0aca2d7ebe49ef0c3ed6d11f9fe473",
+  "cert_cache": {
+    "hits": 91888,
+    "misses": 3140,
+    "maxsize": 8192,
+    "currsize": 3140
+  },
+  "geometry_cache": {
+    "hits": 23787,
+    "misses": 1842,
+    "maxsize": 8192,
+    "currsize": 1842
+  },
+  "note": "Extra replay proves bit-identical data; not counted as a new IC or statistical sample."
+}

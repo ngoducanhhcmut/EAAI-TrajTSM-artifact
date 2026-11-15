@@ -1,0 +1,994 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date              : Fri Oct 30 22:29:19 2026
+| Host              : LAPTOP-D1JJHVR7 running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 5 -file C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_mrmgen/timing.rpt
+| Design            : m_tsmx_mrmgen
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (180)
+6. checking no_output_delay (379)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (180)
+--------------------------------
+ There are 180 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (379)
+---------------------------------
+ There are 379 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.394        0.000                      0                17014        0.073        0.000                      0                17014        2.135        0.000                       0                  4385  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 2.667}        5.333           187.512         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                 0.394        0.000                      0                17014        0.073        0.000                      0                17014        2.135        0.000                       0                  4385  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.394ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.073ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.135ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.394ns  (required time - arrival time)
+  Source:                 u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_resp_reg[481]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.920ns  (logic 1.636ns (33.252%)  route 3.284ns (66.748%))
+  Logic Levels:           26  (CARRY8=13 LUT2=4 LUT3=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.030     0.030    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=38, unplaced)        0.218     0.325    u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.475 r  u_tsmx_arith/reg_resp[486]_i_28/O
+                         net (fo=4, unplaced)         0.198     0.673    u_tsmx_arith/reg_resp[486]_i_28_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.710 r  u_tsmx_arith/reg_resp[487]_i_29/O
+                         net (fo=1, unplaced)         0.032     0.742    u_tsmx_arith/reg_resp[487]_i_29_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.912 r  u_tsmx_arith/reg_resp_reg[487]_i_24/CO[7]
+                         net (fo=1, unplaced)         0.005     0.917    u_tsmx_arith/reg_resp_reg[487]_i_24_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.939 r  u_tsmx_arith/reg_resp_reg[495]_i_25/CO[7]
+                         net (fo=1, unplaced)         0.005     0.944    u_tsmx_arith/reg_resp_reg[495]_i_25_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.060 f  u_tsmx_arith/reg_resp_reg[503]_i_25/O[5]
+                         net (fo=6, unplaced)         0.163     1.223    u_tsmx_arith/reg_resp_reg[503]_i_25_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.322 f  u_tsmx_arith/reg_resp[542]_i_156/O
+                         net (fo=1, unplaced)         0.245     1.567    u_tsmx_arith/reg_resp[542]_i_156_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.684 f  u_tsmx_arith/reg_resp_reg[542]_i_107/CO[7]
+                         net (fo=1, unplaced)         0.005     1.689    u_tsmx_arith/reg_resp_reg[542]_i_107_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.711 f  u_tsmx_arith/reg_resp_reg[542]_i_64/CO[7]
+                         net (fo=1, unplaced)         0.005     1.716    u_tsmx_arith/reg_resp_reg[542]_i_64_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.738 f  u_tsmx_arith/reg_resp_reg[542]_i_28/CO[7]
+                         net (fo=116, unplaced)       0.204     1.942    u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.980 r  u_tsmx_arith/reg_resp[497]_i_9/O
+                         net (fo=82, unplaced)        0.267     2.247    u_tsmx_arith/reg_resp[497]_i_9_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.285 r  u_tsmx_arith/reg_resp[542]_i_145/O
+                         net (fo=1, unplaced)         0.233     2.518    u_tsmx_arith/reg_resp[542]_i_145_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.658 r  u_tsmx_arith/reg_resp_reg[542]_i_90/CO[7]
+                         net (fo=1, unplaced)         0.005     2.663    u_tsmx_arith/reg_resp_reg[542]_i_90_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.685 r  u_tsmx_arith/reg_resp_reg[542]_i_47/CO[7]
+                         net (fo=1, unplaced)         0.005     2.690    u_tsmx_arith/reg_resp_reg[542]_i_47_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.712 r  u_tsmx_arith/reg_resp_reg[542]_i_27/CO[7]
+                         net (fo=46, unplaced)        0.183     2.895    u_tsmx_arith/reg_resp_reg[542]_i_27_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.933 r  u_tsmx_arith/reg_resp[500]_i_9/O
+                         net (fo=80, unplaced)        0.266     3.199    u_tsmx_arith/reg_resp[500]_i_9_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.237 r  u_tsmx_arith/reg_resp[491]_i_7/O
+                         net (fo=3, unplaced)         0.192     3.429    u_tsmx_arith/reg_resp[491]_i_7_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.467 f  u_tsmx_arith/reg_resp[542]_i_118/O
+                         net (fo=1, unplaced)         0.117     3.584    u_tsmx_arith/reg_resp[542]_i_118_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.681 f  u_tsmx_arith/reg_resp_reg[542]_i_73/CO[7]
+                         net (fo=1, unplaced)         0.005     3.686    u_tsmx_arith/reg_resp_reg[542]_i_73_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.708 f  u_tsmx_arith/reg_resp_reg[542]_i_30/CO[7]
+                         net (fo=1, unplaced)         0.005     3.713    u_tsmx_arith/reg_resp_reg[542]_i_30_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.735 f  u_tsmx_arith/reg_resp_reg[542]_i_10/CO[7]
+                         net (fo=1, unplaced)         0.005     3.740    u_tsmx_arith/reg_resp_reg[542]_i_10_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.762 f  u_tsmx_arith/reg_resp_reg[542]_i_7/CO[7]
+                         net (fo=46, unplaced)        0.183     3.945    u_tsmx_arith/f_lt640_return0
+                         LUT5 (Prop_LUT5_I0_O)        0.038     3.983 r  u_tsmx_arith/reg_resp[500]_i_7/O
+                         net (fo=16, unplaced)        0.230     4.213    u_tsmx_arith/reg_resp[500]_i_7_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.038     4.251 r  u_tsmx_arith/reg_resp[481]_i_6/O
+                         net (fo=1, unplaced)         0.137     4.388    u_tsmx_arith/reg_resp[481]_i_6_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.100     4.488 r  u_tsmx_arith/reg_resp[481]_i_5/O
+                         net (fo=1, unplaced)         0.186     4.674    u_tsmx_arith/reg_resp[481]_i_5_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     4.712 r  u_tsmx_arith/reg_resp[481]_i_3/O
+                         net (fo=1, unplaced)         0.137     4.849    u_tsmx_arith/reg_resp[481]_i_3_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.053     4.902 r  u_tsmx_arith/reg_resp[481]_i_1/O
+                         net (fo=1, unplaced)         0.048     4.950    u_tsmx_arith/w_resp_nxt0_in[481]
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[481]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.021     5.354    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[481]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_arith/reg_resp_reg[481]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.950    
+  -------------------------------------------------------------------
+                         slack                                  0.394    
+
+Slack (MET) :             0.394ns  (required time - arrival time)
+  Source:                 u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_resp_reg[483]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.920ns  (logic 1.636ns (33.252%)  route 3.284ns (66.748%))
+  Logic Levels:           26  (CARRY8=13 LUT2=4 LUT3=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.030     0.030    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=38, unplaced)        0.218     0.325    u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.475 r  u_tsmx_arith/reg_resp[486]_i_28/O
+                         net (fo=4, unplaced)         0.198     0.673    u_tsmx_arith/reg_resp[486]_i_28_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.710 r  u_tsmx_arith/reg_resp[487]_i_29/O
+                         net (fo=1, unplaced)         0.032     0.742    u_tsmx_arith/reg_resp[487]_i_29_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.912 r  u_tsmx_arith/reg_resp_reg[487]_i_24/CO[7]
+                         net (fo=1, unplaced)         0.005     0.917    u_tsmx_arith/reg_resp_reg[487]_i_24_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.939 r  u_tsmx_arith/reg_resp_reg[495]_i_25/CO[7]
+                         net (fo=1, unplaced)         0.005     0.944    u_tsmx_arith/reg_resp_reg[495]_i_25_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.060 f  u_tsmx_arith/reg_resp_reg[503]_i_25/O[5]
+                         net (fo=6, unplaced)         0.163     1.223    u_tsmx_arith/reg_resp_reg[503]_i_25_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.322 f  u_tsmx_arith/reg_resp[542]_i_156/O
+                         net (fo=1, unplaced)         0.245     1.567    u_tsmx_arith/reg_resp[542]_i_156_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.684 f  u_tsmx_arith/reg_resp_reg[542]_i_107/CO[7]
+                         net (fo=1, unplaced)         0.005     1.689    u_tsmx_arith/reg_resp_reg[542]_i_107_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.711 f  u_tsmx_arith/reg_resp_reg[542]_i_64/CO[7]
+                         net (fo=1, unplaced)         0.005     1.716    u_tsmx_arith/reg_resp_reg[542]_i_64_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.738 f  u_tsmx_arith/reg_resp_reg[542]_i_28/CO[7]
+                         net (fo=116, unplaced)       0.204     1.942    u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.980 r  u_tsmx_arith/reg_resp[497]_i_9/O
+                         net (fo=82, unplaced)        0.267     2.247    u_tsmx_arith/reg_resp[497]_i_9_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.285 r  u_tsmx_arith/reg_resp[542]_i_145/O
+                         net (fo=1, unplaced)         0.233     2.518    u_tsmx_arith/reg_resp[542]_i_145_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.658 r  u_tsmx_arith/reg_resp_reg[542]_i_90/CO[7]
+                         net (fo=1, unplaced)         0.005     2.663    u_tsmx_arith/reg_resp_reg[542]_i_90_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.685 r  u_tsmx_arith/reg_resp_reg[542]_i_47/CO[7]
+                         net (fo=1, unplaced)         0.005     2.690    u_tsmx_arith/reg_resp_reg[542]_i_47_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.712 r  u_tsmx_arith/reg_resp_reg[542]_i_27/CO[7]
+                         net (fo=46, unplaced)        0.183     2.895    u_tsmx_arith/reg_resp_reg[542]_i_27_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.933 r  u_tsmx_arith/reg_resp[500]_i_9/O
+                         net (fo=80, unplaced)        0.266     3.199    u_tsmx_arith/reg_resp[500]_i_9_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.237 r  u_tsmx_arith/reg_resp[491]_i_7/O
+                         net (fo=3, unplaced)         0.192     3.429    u_tsmx_arith/reg_resp[491]_i_7_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.467 f  u_tsmx_arith/reg_resp[542]_i_118/O
+                         net (fo=1, unplaced)         0.117     3.584    u_tsmx_arith/reg_resp[542]_i_118_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.681 f  u_tsmx_arith/reg_resp_reg[542]_i_73/CO[7]
+                         net (fo=1, unplaced)         0.005     3.686    u_tsmx_arith/reg_resp_reg[542]_i_73_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.708 f  u_tsmx_arith/reg_resp_reg[542]_i_30/CO[7]
+                         net (fo=1, unplaced)         0.005     3.713    u_tsmx_arith/reg_resp_reg[542]_i_30_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.735 f  u_tsmx_arith/reg_resp_reg[542]_i_10/CO[7]
+                         net (fo=1, unplaced)         0.005     3.740    u_tsmx_arith/reg_resp_reg[542]_i_10_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.762 f  u_tsmx_arith/reg_resp_reg[542]_i_7/CO[7]
+                         net (fo=46, unplaced)        0.183     3.945    u_tsmx_arith/f_lt640_return0
+                         LUT5 (Prop_LUT5_I0_O)        0.038     3.983 r  u_tsmx_arith/reg_resp[500]_i_7/O
+                         net (fo=16, unplaced)        0.230     4.213    u_tsmx_arith/reg_resp[500]_i_7_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.038     4.251 r  u_tsmx_arith/reg_resp[483]_i_6/O
+                         net (fo=1, unplaced)         0.137     4.388    u_tsmx_arith/reg_resp[483]_i_6_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.100     4.488 r  u_tsmx_arith/reg_resp[483]_i_5/O
+                         net (fo=1, unplaced)         0.186     4.674    u_tsmx_arith/reg_resp[483]_i_5_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     4.712 r  u_tsmx_arith/reg_resp[483]_i_3/O
+                         net (fo=1, unplaced)         0.137     4.849    u_tsmx_arith/reg_resp[483]_i_3_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.053     4.902 r  u_tsmx_arith/reg_resp[483]_i_1/O
+                         net (fo=1, unplaced)         0.048     4.950    u_tsmx_arith/w_resp_nxt0_in[483]
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[483]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.021     5.354    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[483]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_arith/reg_resp_reg[483]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.950    
+  -------------------------------------------------------------------
+                         slack                                  0.394    
+
+Slack (MET) :             0.394ns  (required time - arrival time)
+  Source:                 u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_resp_reg[485]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.920ns  (logic 1.636ns (33.252%)  route 3.284ns (66.748%))
+  Logic Levels:           26  (CARRY8=13 LUT2=4 LUT3=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.030     0.030    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=38, unplaced)        0.218     0.325    u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.475 r  u_tsmx_arith/reg_resp[486]_i_28/O
+                         net (fo=4, unplaced)         0.198     0.673    u_tsmx_arith/reg_resp[486]_i_28_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.710 r  u_tsmx_arith/reg_resp[487]_i_29/O
+                         net (fo=1, unplaced)         0.032     0.742    u_tsmx_arith/reg_resp[487]_i_29_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.912 r  u_tsmx_arith/reg_resp_reg[487]_i_24/CO[7]
+                         net (fo=1, unplaced)         0.005     0.917    u_tsmx_arith/reg_resp_reg[487]_i_24_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.939 r  u_tsmx_arith/reg_resp_reg[495]_i_25/CO[7]
+                         net (fo=1, unplaced)         0.005     0.944    u_tsmx_arith/reg_resp_reg[495]_i_25_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.060 f  u_tsmx_arith/reg_resp_reg[503]_i_25/O[5]
+                         net (fo=6, unplaced)         0.163     1.223    u_tsmx_arith/reg_resp_reg[503]_i_25_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.322 f  u_tsmx_arith/reg_resp[542]_i_156/O
+                         net (fo=1, unplaced)         0.245     1.567    u_tsmx_arith/reg_resp[542]_i_156_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.684 f  u_tsmx_arith/reg_resp_reg[542]_i_107/CO[7]
+                         net (fo=1, unplaced)         0.005     1.689    u_tsmx_arith/reg_resp_reg[542]_i_107_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.711 f  u_tsmx_arith/reg_resp_reg[542]_i_64/CO[7]
+                         net (fo=1, unplaced)         0.005     1.716    u_tsmx_arith/reg_resp_reg[542]_i_64_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.738 f  u_tsmx_arith/reg_resp_reg[542]_i_28/CO[7]
+                         net (fo=116, unplaced)       0.204     1.942    u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.980 r  u_tsmx_arith/reg_resp[497]_i_9/O
+                         net (fo=82, unplaced)        0.267     2.247    u_tsmx_arith/reg_resp[497]_i_9_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.285 r  u_tsmx_arith/reg_resp[542]_i_145/O
+                         net (fo=1, unplaced)         0.233     2.518    u_tsmx_arith/reg_resp[542]_i_145_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.658 r  u_tsmx_arith/reg_resp_reg[542]_i_90/CO[7]
+                         net (fo=1, unplaced)         0.005     2.663    u_tsmx_arith/reg_resp_reg[542]_i_90_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.685 r  u_tsmx_arith/reg_resp_reg[542]_i_47/CO[7]
+                         net (fo=1, unplaced)         0.005     2.690    u_tsmx_arith/reg_resp_reg[542]_i_47_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.712 r  u_tsmx_arith/reg_resp_reg[542]_i_27/CO[7]
+                         net (fo=46, unplaced)        0.183     2.895    u_tsmx_arith/reg_resp_reg[542]_i_27_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.933 r  u_tsmx_arith/reg_resp[500]_i_9/O
+                         net (fo=80, unplaced)        0.266     3.199    u_tsmx_arith/reg_resp[500]_i_9_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.237 r  u_tsmx_arith/reg_resp[491]_i_7/O
+                         net (fo=3, unplaced)         0.192     3.429    u_tsmx_arith/reg_resp[491]_i_7_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.467 f  u_tsmx_arith/reg_resp[542]_i_118/O
+                         net (fo=1, unplaced)         0.117     3.584    u_tsmx_arith/reg_resp[542]_i_118_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.681 f  u_tsmx_arith/reg_resp_reg[542]_i_73/CO[7]
+                         net (fo=1, unplaced)         0.005     3.686    u_tsmx_arith/reg_resp_reg[542]_i_73_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.708 f  u_tsmx_arith/reg_resp_reg[542]_i_30/CO[7]
+                         net (fo=1, unplaced)         0.005     3.713    u_tsmx_arith/reg_resp_reg[542]_i_30_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.735 f  u_tsmx_arith/reg_resp_reg[542]_i_10/CO[7]
+                         net (fo=1, unplaced)         0.005     3.740    u_tsmx_arith/reg_resp_reg[542]_i_10_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.762 f  u_tsmx_arith/reg_resp_reg[542]_i_7/CO[7]
+                         net (fo=46, unplaced)        0.183     3.945    u_tsmx_arith/f_lt640_return0
+                         LUT5 (Prop_LUT5_I0_O)        0.038     3.983 r  u_tsmx_arith/reg_resp[500]_i_7/O
+                         net (fo=16, unplaced)        0.230     4.213    u_tsmx_arith/reg_resp[500]_i_7_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.038     4.251 r  u_tsmx_arith/reg_resp[485]_i_6/O
+                         net (fo=1, unplaced)         0.137     4.388    u_tsmx_arith/reg_resp[485]_i_6_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.100     4.488 r  u_tsmx_arith/reg_resp[485]_i_5/O
+                         net (fo=1, unplaced)         0.186     4.674    u_tsmx_arith/reg_resp[485]_i_5_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     4.712 r  u_tsmx_arith/reg_resp[485]_i_3/O
+                         net (fo=1, unplaced)         0.137     4.849    u_tsmx_arith/reg_resp[485]_i_3_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.053     4.902 r  u_tsmx_arith/reg_resp[485]_i_1/O
+                         net (fo=1, unplaced)         0.048     4.950    u_tsmx_arith/w_resp_nxt0_in[485]
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[485]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.021     5.354    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[485]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_arith/reg_resp_reg[485]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.950    
+  -------------------------------------------------------------------
+                         slack                                  0.394    
+
+Slack (MET) :             0.394ns  (required time - arrival time)
+  Source:                 u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_resp_reg[487]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.920ns  (logic 1.636ns (33.252%)  route 3.284ns (66.748%))
+  Logic Levels:           26  (CARRY8=13 LUT2=4 LUT3=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.030     0.030    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=38, unplaced)        0.218     0.325    u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.475 r  u_tsmx_arith/reg_resp[486]_i_28/O
+                         net (fo=4, unplaced)         0.198     0.673    u_tsmx_arith/reg_resp[486]_i_28_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.710 r  u_tsmx_arith/reg_resp[487]_i_29/O
+                         net (fo=1, unplaced)         0.032     0.742    u_tsmx_arith/reg_resp[487]_i_29_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.912 r  u_tsmx_arith/reg_resp_reg[487]_i_24/CO[7]
+                         net (fo=1, unplaced)         0.005     0.917    u_tsmx_arith/reg_resp_reg[487]_i_24_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.939 r  u_tsmx_arith/reg_resp_reg[495]_i_25/CO[7]
+                         net (fo=1, unplaced)         0.005     0.944    u_tsmx_arith/reg_resp_reg[495]_i_25_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.060 f  u_tsmx_arith/reg_resp_reg[503]_i_25/O[5]
+                         net (fo=6, unplaced)         0.163     1.223    u_tsmx_arith/reg_resp_reg[503]_i_25_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.322 f  u_tsmx_arith/reg_resp[542]_i_156/O
+                         net (fo=1, unplaced)         0.245     1.567    u_tsmx_arith/reg_resp[542]_i_156_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.684 f  u_tsmx_arith/reg_resp_reg[542]_i_107/CO[7]
+                         net (fo=1, unplaced)         0.005     1.689    u_tsmx_arith/reg_resp_reg[542]_i_107_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.711 f  u_tsmx_arith/reg_resp_reg[542]_i_64/CO[7]
+                         net (fo=1, unplaced)         0.005     1.716    u_tsmx_arith/reg_resp_reg[542]_i_64_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.738 f  u_tsmx_arith/reg_resp_reg[542]_i_28/CO[7]
+                         net (fo=116, unplaced)       0.204     1.942    u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.980 r  u_tsmx_arith/reg_resp[497]_i_9/O
+                         net (fo=82, unplaced)        0.267     2.247    u_tsmx_arith/reg_resp[497]_i_9_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.285 r  u_tsmx_arith/reg_resp[542]_i_145/O
+                         net (fo=1, unplaced)         0.233     2.518    u_tsmx_arith/reg_resp[542]_i_145_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.658 r  u_tsmx_arith/reg_resp_reg[542]_i_90/CO[7]
+                         net (fo=1, unplaced)         0.005     2.663    u_tsmx_arith/reg_resp_reg[542]_i_90_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.685 r  u_tsmx_arith/reg_resp_reg[542]_i_47/CO[7]
+                         net (fo=1, unplaced)         0.005     2.690    u_tsmx_arith/reg_resp_reg[542]_i_47_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.712 r  u_tsmx_arith/reg_resp_reg[542]_i_27/CO[7]
+                         net (fo=46, unplaced)        0.183     2.895    u_tsmx_arith/reg_resp_reg[542]_i_27_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.933 r  u_tsmx_arith/reg_resp[500]_i_9/O
+                         net (fo=80, unplaced)        0.266     3.199    u_tsmx_arith/reg_resp[500]_i_9_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.237 r  u_tsmx_arith/reg_resp[491]_i_7/O
+                         net (fo=3, unplaced)         0.192     3.429    u_tsmx_arith/reg_resp[491]_i_7_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.467 f  u_tsmx_arith/reg_resp[542]_i_118/O
+                         net (fo=1, unplaced)         0.117     3.584    u_tsmx_arith/reg_resp[542]_i_118_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.681 f  u_tsmx_arith/reg_resp_reg[542]_i_73/CO[7]
+                         net (fo=1, unplaced)         0.005     3.686    u_tsmx_arith/reg_resp_reg[542]_i_73_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.708 f  u_tsmx_arith/reg_resp_reg[542]_i_30/CO[7]
+                         net (fo=1, unplaced)         0.005     3.713    u_tsmx_arith/reg_resp_reg[542]_i_30_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.735 f  u_tsmx_arith/reg_resp_reg[542]_i_10/CO[7]
+                         net (fo=1, unplaced)         0.005     3.740    u_tsmx_arith/reg_resp_reg[542]_i_10_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.762 f  u_tsmx_arith/reg_resp_reg[542]_i_7/CO[7]
+                         net (fo=46, unplaced)        0.183     3.945    u_tsmx_arith/f_lt640_return0
+                         LUT5 (Prop_LUT5_I0_O)        0.038     3.983 r  u_tsmx_arith/reg_resp[500]_i_7/O
+                         net (fo=16, unplaced)        0.230     4.213    u_tsmx_arith/reg_resp[500]_i_7_n_0
+                         LUT6 (Prop_LUT6_I0_O)        0.038     4.251 r  u_tsmx_arith/reg_resp[487]_i_7/O
+                         net (fo=1, unplaced)         0.137     4.388    u_tsmx_arith/reg_resp[487]_i_7_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.100     4.488 r  u_tsmx_arith/reg_resp[487]_i_5/O
+                         net (fo=1, unplaced)         0.186     4.674    u_tsmx_arith/reg_resp[487]_i_5_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     4.712 r  u_tsmx_arith/reg_resp[487]_i_3/O
+                         net (fo=1, unplaced)         0.137     4.849    u_tsmx_arith/reg_resp[487]_i_3_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.053     4.902 r  u_tsmx_arith/reg_resp[487]_i_1/O
+                         net (fo=1, unplaced)         0.048     4.950    u_tsmx_arith/w_resp_nxt0_in[487]
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[487]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.021     5.354    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[487]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_arith/reg_resp_reg[487]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.950    
+  -------------------------------------------------------------------
+                         slack                                  0.394    
+
+Slack (MET) :             0.394ns  (required time - arrival time)
+  Source:                 u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_resp_reg[491]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.920ns  (logic 1.636ns (33.252%)  route 3.284ns (66.748%))
+  Logic Levels:           26  (CARRY8=13 LUT2=4 LUT3=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.030     0.030    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=38, unplaced)        0.218     0.325    u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.475 r  u_tsmx_arith/reg_resp[486]_i_28/O
+                         net (fo=4, unplaced)         0.198     0.673    u_tsmx_arith/reg_resp[486]_i_28_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.710 r  u_tsmx_arith/reg_resp[487]_i_29/O
+                         net (fo=1, unplaced)         0.032     0.742    u_tsmx_arith/reg_resp[487]_i_29_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.912 r  u_tsmx_arith/reg_resp_reg[487]_i_24/CO[7]
+                         net (fo=1, unplaced)         0.005     0.917    u_tsmx_arith/reg_resp_reg[487]_i_24_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.939 r  u_tsmx_arith/reg_resp_reg[495]_i_25/CO[7]
+                         net (fo=1, unplaced)         0.005     0.944    u_tsmx_arith/reg_resp_reg[495]_i_25_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.060 f  u_tsmx_arith/reg_resp_reg[503]_i_25/O[5]
+                         net (fo=6, unplaced)         0.163     1.223    u_tsmx_arith/reg_resp_reg[503]_i_25_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.322 f  u_tsmx_arith/reg_resp[542]_i_156/O
+                         net (fo=1, unplaced)         0.245     1.567    u_tsmx_arith/reg_resp[542]_i_156_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.684 f  u_tsmx_arith/reg_resp_reg[542]_i_107/CO[7]
+                         net (fo=1, unplaced)         0.005     1.689    u_tsmx_arith/reg_resp_reg[542]_i_107_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.711 f  u_tsmx_arith/reg_resp_reg[542]_i_64/CO[7]
+                         net (fo=1, unplaced)         0.005     1.716    u_tsmx_arith/reg_resp_reg[542]_i_64_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.738 f  u_tsmx_arith/reg_resp_reg[542]_i_28/CO[7]
+                         net (fo=116, unplaced)       0.204     1.942    u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.980 r  u_tsmx_arith/reg_resp[497]_i_9/O
+                         net (fo=82, unplaced)        0.267     2.247    u_tsmx_arith/reg_resp[497]_i_9_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.285 r  u_tsmx_arith/reg_resp[542]_i_145/O
+                         net (fo=1, unplaced)         0.233     2.518    u_tsmx_arith/reg_resp[542]_i_145_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.658 r  u_tsmx_arith/reg_resp_reg[542]_i_90/CO[7]
+                         net (fo=1, unplaced)         0.005     2.663    u_tsmx_arith/reg_resp_reg[542]_i_90_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.685 r  u_tsmx_arith/reg_resp_reg[542]_i_47/CO[7]
+                         net (fo=1, unplaced)         0.005     2.690    u_tsmx_arith/reg_resp_reg[542]_i_47_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.712 r  u_tsmx_arith/reg_resp_reg[542]_i_27/CO[7]
+                         net (fo=46, unplaced)        0.183     2.895    u_tsmx_arith/reg_resp_reg[542]_i_27_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.933 r  u_tsmx_arith/reg_resp[500]_i_9/O
+                         net (fo=80, unplaced)        0.266     3.199    u_tsmx_arith/reg_resp[500]_i_9_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.237 r  u_tsmx_arith/reg_resp[491]_i_7/O
+                         net (fo=3, unplaced)         0.192     3.429    u_tsmx_arith/reg_resp[491]_i_7_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.467 f  u_tsmx_arith/reg_resp[542]_i_118/O
+                         net (fo=1, unplaced)         0.117     3.584    u_tsmx_arith/reg_resp[542]_i_118_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.681 f  u_tsmx_arith/reg_resp_reg[542]_i_73/CO[7]
+                         net (fo=1, unplaced)         0.005     3.686    u_tsmx_arith/reg_resp_reg[542]_i_73_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.708 f  u_tsmx_arith/reg_resp_reg[542]_i_30/CO[7]
+                         net (fo=1, unplaced)         0.005     3.713    u_tsmx_arith/reg_resp_reg[542]_i_30_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.735 f  u_tsmx_arith/reg_resp_reg[542]_i_10/CO[7]
+                         net (fo=1, unplaced)         0.005     3.740    u_tsmx_arith/reg_resp_reg[542]_i_10_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.762 f  u_tsmx_arith/reg_resp_reg[542]_i_7/CO[7]
+                         net (fo=46, unplaced)        0.183     3.945    u_tsmx_arith/f_lt640_return0
+                         LUT5 (Prop_LUT5_I0_O)        0.038     3.983 r  u_tsmx_arith/reg_resp[500]_i_7/O
+                         net (fo=16, unplaced)        0.230     4.213    u_tsmx_arith/reg_resp[500]_i_7_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     4.251 r  u_tsmx_arith/reg_resp[491]_i_6/O
+                         net (fo=1, unplaced)         0.137     4.388    u_tsmx_arith/reg_resp[491]_i_6_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.100     4.488 r  u_tsmx_arith/reg_resp[491]_i_5/O
+                         net (fo=1, unplaced)         0.186     4.674    u_tsmx_arith/reg_resp[491]_i_5_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     4.712 r  u_tsmx_arith/reg_resp[491]_i_3/O
+                         net (fo=1, unplaced)         0.137     4.849    u_tsmx_arith/reg_resp[491]_i_3_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.053     4.902 r  u_tsmx_arith/reg_resp[491]_i_1/O
+                         net (fo=1, unplaced)         0.048     4.950    u_tsmx_arith/w_resp_nxt0_in[491]
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[491]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.021     5.354    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_resp_reg[491]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_arith/reg_resp_reg[491]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.950    
+  -------------------------------------------------------------------
+                         slack                                  0.394    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 u_tsmx_arith/reg_dquot_reg[98]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_dquot_reg[100]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.061ns (48.800%)  route 0.064ns (51.200%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.013     0.013    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[98]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_arith/reg_dquot_reg[98]/Q
+                         net (fo=2, unplaced)         0.048     0.099    u_tsmx_arith/reg_dquot[98]
+                         LUT2 (Prop_LUT2_I0_O)        0.023     0.122 r  u_tsmx_arith/reg_dquot[100]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.138    u_tsmx_arith/reg_dquot[100]_i_1_n_0
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[100]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.019     0.019    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[100]/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Hold_FDCE_C_D)         0.046     0.065    u_tsmx_arith/reg_dquot_reg[100]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.138    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 u_tsmx_arith/reg_dquot_reg[100]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_dquot_reg[102]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.061ns (48.800%)  route 0.064ns (51.200%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.013     0.013    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[100]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_arith/reg_dquot_reg[100]/Q
+                         net (fo=2, unplaced)         0.048     0.099    u_tsmx_arith/reg_dquot[100]
+                         LUT2 (Prop_LUT2_I0_O)        0.023     0.122 r  u_tsmx_arith/reg_dquot[102]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.138    u_tsmx_arith/reg_dquot[102]_i_1_n_0
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[102]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.019     0.019    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[102]/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Hold_FDCE_C_D)         0.046     0.065    u_tsmx_arith/reg_dquot_reg[102]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.138    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 u_tsmx_arith/reg_dquot_reg[102]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_dquot_reg[104]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.061ns (48.800%)  route 0.064ns (51.200%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.013     0.013    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[102]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_arith/reg_dquot_reg[102]/Q
+                         net (fo=2, unplaced)         0.048     0.099    u_tsmx_arith/reg_dquot[102]
+                         LUT2 (Prop_LUT2_I0_O)        0.023     0.122 r  u_tsmx_arith/reg_dquot[104]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.138    u_tsmx_arith/reg_dquot[104]_i_1_n_0
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[104]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.019     0.019    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[104]/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Hold_FDCE_C_D)         0.046     0.065    u_tsmx_arith/reg_dquot_reg[104]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.138    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 u_tsmx_arith/reg_dquot_reg[104]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_dquot_reg[106]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.061ns (48.800%)  route 0.064ns (51.200%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.013     0.013    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[104]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_arith/reg_dquot_reg[104]/Q
+                         net (fo=2, unplaced)         0.048     0.099    u_tsmx_arith/reg_dquot[104]
+                         LUT2 (Prop_LUT2_I0_O)        0.023     0.122 r  u_tsmx_arith/reg_dquot[106]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.138    u_tsmx_arith/reg_dquot[106]_i_1_n_0
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[106]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.019     0.019    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[106]/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Hold_FDCE_C_D)         0.046     0.065    u_tsmx_arith/reg_dquot_reg[106]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.138    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 u_tsmx_arith/reg_dquot_reg[106]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_arith/reg_dquot_reg[108]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.125ns  (logic 0.061ns (48.800%)  route 0.064ns (51.200%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.013     0.013    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[106]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_arith/reg_dquot_reg[106]/Q
+                         net (fo=2, unplaced)         0.048     0.099    u_tsmx_arith/reg_dquot[106]
+                         LUT2 (Prop_LUT2_I0_O)        0.023     0.122 r  u_tsmx_arith/reg_dquot[108]_i_1/O
+                         net (fo=1, unplaced)         0.016     0.138    u_tsmx_arith/reg_dquot[108]_i_1_n_0
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[108]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=4487, unset)         0.019     0.019    u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_arith/reg_dquot_reg[108]/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Hold_FDCE_C_D)         0.046     0.065    u_tsmx_arith/reg_dquot_reg[108]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.138    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 2.667 }
+Period(ns):         5.333
+Sources:            { i_clk_core }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     RAMD64E/CLK  n/a            1.064         5.333       4.269                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMA/CLK
+Min Period        n/a     RAMD64E/CLK  n/a            1.064         5.333       4.269                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMB/CLK
+Min Period        n/a     RAMD64E/CLK  n/a            1.064         5.333       4.269                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMC/CLK
+Min Period        n/a     RAMD64E/CLK  n/a            1.064         5.333       4.269                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMD/CLK
+Min Period        n/a     RAMD64E/CLK  n/a            1.064         5.333       4.269                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAME/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            0.532         2.666       2.134                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMA/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMA/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            0.532         2.666       2.134                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMB/CLK
+Low Pulse Width   Fast    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMB/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            0.532         2.666       2.134                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMC/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMA/CLK
+High Pulse Width  Fast    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMB/CLK
+High Pulse Width  Fast    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMB/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            0.532         2.667       2.135                u_tsmx_arith/reg_t_reg_r1_0_63_0_6/RAMC/CLK
+
+
+

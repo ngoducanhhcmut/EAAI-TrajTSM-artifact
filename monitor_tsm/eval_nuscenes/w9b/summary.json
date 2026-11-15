@@ -1,0 +1,657 @@
+{
+  "status": "golden complete; RTL agreement pending Claude",
+  "scenes": 150,
+  "split": "150 validation scenes; saved RQ1 hw_new predictions",
+  "eligible_frames": 5119,
+  "odd_frames": 3040,
+  "missing_T_tokens": [],
+  "counts": {
+    "H": {
+      "attempts": 3040,
+      "admitted": 2026,
+      "mitigation": 1320,
+      "fallback": 441,
+      "accepted": 1252,
+      "hold": 27
+    },
+    "T": {
+      "attempts": 3040,
+      "admitted": 1933,
+      "mitigation": 1325,
+      "fallback": 1251,
+      "accepted": 427,
+      "hold": 37
+    }
+  },
+  "admission_reasons": {
+    "H": {
+      "range_schema": 474,
+      "ego_live": 540,
+      "no_backup": 524,
+      "ok": 1252,
+      "timeout": 57,
+      "splice": 155,
+      "ftti_budget": 38
+    },
+    "T": {
+      "no_backup": 202,
+      "ego_live": 540,
+      "splice": 1232,
+      "range_schema": 567,
+      "ok": 427,
+      "timeout": 61,
+      "ftti_budget": 11
+    }
+  },
+  "all_job_reasons": {
+    "H": {
+      "range_schema": 474,
+      "timeout": 5849,
+      "ego_live": 5408,
+      "no_backup": 524,
+      "ok": 1252,
+      "freeze_no_sample": 10695,
+      "splice": 155,
+      "ftti_budget": 38
+    },
+    "T": {
+      "no_backup": 202,
+      "timeout": 7927,
+      "ego_live": 5368,
+      "splice": 1232,
+      "range_schema": 567,
+      "ok": 427,
+      "freeze_no_sample": 8661,
+      "ftti_budget": 11
+    }
+  },
+  "supervisor_occupancy_jobs": {
+    "H": {
+      "L0": 0,
+      "L1": 3489,
+      "L2": 6913,
+      "L3": 9435,
+      "HOLD": 3306,
+      "RECOVERY": 1252
+    },
+    "T": {
+      "L0": 0,
+      "L1": 1252,
+      "L2": 10249,
+      "L3": 9405,
+      "HOLD": 3062,
+      "RECOVERY": 427
+    }
+  },
+  "commits": {
+    "H": {
+      "no_pending": 17735,
+      "ego_live": 5408,
+      "committed": 1252
+    },
+    "T": {
+      "no_pending": 18600,
+      "ego_live": 5368,
+      "committed": 427
+    }
+  },
+  "metrics": {
+    "H": {
+      "acceptance": {
+        "n": 1252,
+        "denominator": 3040,
+        "rate_pct": 41.18421052631579,
+        "ci95_pct": [
+          36.71236965783944,
+          45.47595810877333
+        ]
+      },
+      "false_reject": {
+        "n": 1427,
+        "denominator": 2673,
+        "rate_pct": 53.3857089412645,
+        "ci95_pct": [
+          48.71146267224965,
+          57.98939286731959
+        ]
+      },
+      "false_accept": {
+        "n": 3,
+        "denominator": 247,
+        "rate_pct": 1.214574898785425,
+        "ci95_pct": [
+          0.0,
+          3.020388448240796
+        ]
+      },
+      "oracle_unknown": 120
+    },
+    "T": {
+      "acceptance": {
+        "n": 427,
+        "denominator": 3040,
+        "rate_pct": 14.046052631578947,
+        "ci95_pct": [
+          12.094993572191193,
+          16.126105557984108
+        ]
+      },
+      "false_reject": {
+        "n": 2208,
+        "denominator": 2634,
+        "rate_pct": 83.82687927107061,
+        "ci95_pct": [
+          81.56732606849157,
+          85.91346571724668
+        ]
+      },
+      "false_accept": {
+        "n": 1,
+        "denominator": 236,
+        "rate_pct": 0.423728813559322,
+        "ci95_pct": [
+          0.0,
+          1.4152620048287572
+        ]
+      },
+      "oracle_unknown": 170
+    }
+  },
+  "derivative_errors": {
+    "H": {
+      "position_error_m": {
+        "mean": 0.007644900771425155,
+        "p95": 0.02078943751752637,
+        "max": 0.07054629837348614
+      },
+      "velocity_error_mps": {
+        "mean": 0.06314442983872873,
+        "p95": 0.1820780831881328,
+        "max": 0.4445700294723576
+      },
+      "acceleration_error_mps2": {
+        "mean": 1.6415718010385973,
+        "p95": 5.316922507560476,
+        "max": 21.31436361283188
+      },
+      "n": 3040,
+      "position_over_16cm": 0,
+      "velocity_over_20cmps": 102,
+      "either_over_tolerance": 102,
+      "b2_reject": 687
+    },
+    "T": {
+      "position_error_m": {
+        "mean": 0.037671141298335986,
+        "p95": 0.08775068461016425,
+        "max": 1.000875764203208
+      },
+      "velocity_error_mps": {
+        "mean": 0.3781390556355474,
+        "p95": 0.8888801814596937,
+        "max": 9.968953875504257
+      },
+      "acceleration_error_mps2": {
+        "mean": 1.8396499687004708,
+        "p95": 5.5316504797786,
+        "max": 20.641520454513728
+      },
+      "n": 3040,
+      "position_over_16cm": 61,
+      "velocity_over_20cmps": 1721,
+      "either_over_tolerance": 1721,
+      "b2_reject": 2209
+    }
+  },
+  "cosim_jobs": 207,
+  "cosim_frames": 35,
+  "subset_jobs": 2513,
+  "subset_admission_attempts": 300,
+  "cosim_admission_reasons": {
+    "timeout": 3,
+    "ego_live": 7,
+    "splice": 14,
+    "ok": 5,
+    "range_schema": 6
+  },
+  "replay_seconds": 428.0618963241577,
+  "prepare_seconds": 93.73903393745422,
+  "free_bytes_start": 15215607808,
+  "augment_seconds": 25.40919256210327,
+  "annotation_velocity_chain_us": {
+    "min": 398234,
+    "max": 14449943,
+    "mean": 501122.19518351794
+  },
+  "timing_us": {
+    "planner": 40000,
+    "firmware": 5000,
+    "transfer": 35000,
+    "admission": 80000,
+    "delivery": 99000,
+    "apply": 100000,
+    "ack_after_issue": 20000,
+    "lease": 500000
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261104,
+    "unit": "scene",
+    "interval": "percentile 2.5/97.5"
+  },
+  "deviations": [
+    "Saved RQ1 predictions used, no W9a shards; validation only.",
+    "Open-loop measured ego reanchors each admission; ideal executor follows command only between measurements. Tracking feasibility is not established.",
+    "Persistent arc-length station offsets preserve 1-D history; local axes rotate at each reference. This ignores lateral dynamics.",
+    "Registered W7 oracle retained verbatim: objects sampled with +0.5 s offset although packet apply is +0.1 s. FA/FR compare to this registered, temporally mismatched label.",
+    "Packet object velocity uses causal previous/current annotations; unknown previous velocity fails closed. Position and latest velocity timestamp are tr, checked at tr+80 ms; older difference interval is reported separately. GT oracle tracks retain W7 extraction.",
+    "Planner/firmware/delivery/ACK latencies are assumed, not measured hardware bounds.",
+    "Every 100 ms no-packet service and explicit apply/ACK transaction calls unmodified tsmx_cycle; occupancy counts transactions, not wall time.",
+    "No absent-lead bit exists; empty front uses a stationary lead sentinel at station 9999 m.",
+    "Malformed/unknown object world: retain packet and objects, withhold certificate (timeout); otherwise golden may raise motion_range during its bridge propagation. No invalid object is removed.",
+    "Subset contains first 300 admission attempts (not 300 successful admits), plus required service history.",
+    "Planner packets are only issued for W7 ODD keyframes (~2 Hz), not fabricated at 10 Hz; no-packet service resets recovery streaks, so L0 occupancy is zero.",
+    "compute=5000 retains the golden Plan default; physical-unit mapping of this field is unresolved. Planner/firmware elapsed timing is an independent assumption.",
+    "The available 35 RTL dumps differ from the saved RQ1 hw_new predictions by up to 0.026161670684814453 m; file hashes and token mapping are retained. Revision equivalence is not established here."
+  ],
+  "cosim_0103.mem": {
+    "sha256": "09d9428480adb8b2040b1be080878297205640c40878816a213ab4adc4d2cfaf",
+    "bytes": 2486484
+  },
+  "replay_rtl_subset.mem": {
+    "sha256": "1c2a4bfed5f5ed8ca11dda2236a2568dab6682354590b8cf6c0e1ddf3b656e3f",
+    "bytes": 30186156
+  },
+  "b1_reasons": {
+    "H": {
+      "range_schema": 1014,
+      "ok": 2026
+    },
+    "T": {
+      "ok": 1933,
+      "range_schema": 1107
+    }
+  },
+  "all_transaction_outcomes": {
+    "H": {
+      "mitigation": 9435,
+      "hold": 3306,
+      "fallback": 6913,
+      "accepted": 1252,
+      "backup": 3489
+    },
+    "T": {
+      "mitigation": 9405,
+      "hold": 3062,
+      "fallback": 10249,
+      "accepted": 427,
+      "backup": 1252
+    }
+  },
+  "host_object_guard_counts": {
+    "H": 122,
+    "T": 126
+  },
+  "definitions": {
+    "admitted": "passes B1 ingress; does not imply system acceptance",
+    "accepted": "tsmx_cycle accept; B1/B2/B9/front gate and bridge/tail pass",
+    "fallback": "rejected admission with issued L2 command",
+    "mitigation": "rejected admission in L3; HOLD and backup reported separately"
+  },
+  "metrics_aligned_100ms": {
+    "H": {
+      "acceptance": {
+        "n": 1252,
+        "denominator": 3040,
+        "rate_pct": 41.18421052631579,
+        "ci95_pct": [
+          36.71236965783944,
+          45.47595810877333
+        ]
+      },
+      "false_reject": {
+        "n": 1483,
+        "denominator": 2731,
+        "rate_pct": 54.30245331380447,
+        "ci95_pct": [
+          49.58863953094103,
+          59.04169051147265
+        ]
+      },
+      "false_accept": {
+        "n": 1,
+        "denominator": 189,
+        "rate_pct": 0.5291005291005291,
+        "ci95_pct": [
+          0.0,
+          1.6951560092449909
+        ]
+      },
+      "oracle_unknown": 120
+    },
+    "T": {
+      "acceptance": {
+        "n": 427,
+        "denominator": 3040,
+        "rate_pct": 14.046052631578947,
+        "ci95_pct": [
+          12.094993572191193,
+          16.126105557984108
+        ]
+      },
+      "false_reject": {
+        "n": 2282,
+        "denominator": 2709,
+        "rate_pct": 84.23772609819122,
+        "ci95_pct": [
+          81.96611510668612,
+          86.3132050621112
+        ]
+      },
+      "false_accept": {
+        "n": 0,
+        "denominator": 161,
+        "rate_pct": 0.0,
+        "ci95_pct": [
+          0.0,
+          0.0
+        ]
+      },
+      "oracle_unknown": 170
+    }
+  },
+  "scenes_with_admissions": {
+    "H": 143,
+    "T": 143
+  },
+  "odd_packet_gap_us": {
+    "median": 499890.0,
+    "max": 14149694
+  },
+  "lidar_sweep_spacing_us": {
+    "n": 58351,
+    "median": 49788.0,
+    "p95": 50351.0,
+    "max": 149857
+  },
+  "constants": {
+    "apply_delay_s": 0.1,
+    "waypoint_times_s": [
+      0.5,
+      1.0
+    ],
+    "freshness_ms": 150,
+    "splice_position_m": 0.16,
+    "splice_velocity_mps": 0.2,
+    "ack_limit_ms": 40,
+    "service_period_us": 100000,
+    "raw_width_bits": 48037,
+    "hex_digits": 12010,
+    "absent_front_station_m": 9999,
+    "oracle_step_s": 0.001,
+    "oracle_track_limit_s": 3.0,
+    "stopping_hold_s": 2.0,
+    "tsm_response_deadline_cycles": 1874999,
+    "tsm_clock_hz": 100000000,
+    "workers": 4,
+    "free_space_requirement_gib": 10
+  },
+  "compute_field": {
+    "encoded": 5000,
+    "golden_limit": 10000,
+    "interpretation": "legacy Plan default; golden source does not specify physical units; not a measured planner duration"
+  },
+  "checks": {
+    "cosim_0103": {
+      "jobs": 207,
+      "accepted": 5,
+      "committed": 5,
+      "all_bits_regenerated_exactly": true
+    },
+    "replay_rtl_subset": {
+      "jobs": 2513,
+      "accepted": 142,
+      "committed": 142,
+      "all_bits_regenerated_exactly": true
+    },
+    "analytic_quadratic_and_b1_b2": true
+  },
+  "icarus": {
+    "compile_exit": 9,
+    "simulated_jobs": 0,
+    "status": "compile failed",
+    "error_lines": [
+      299,
+      300,
+      301
+    ]
+  },
+  "provenance": {
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\pred_hw_new.npy": "f333ca2af4eb0d9dc924c9927695dab116063a7694332fd9471e71eded3a6d16",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\eval_trainval\\out\\dataset.npz": "a45273383cf210cb488748751769dd40e0d6332de61adf204ca48c9d863223c2",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\sw\\golden_spec\\summary.csv": "7cfaf3046c1c0c4a96d050f0e30aba283bda196a695e2d120a18b3e8d5f7cf46",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\golden\\tsmx_golden\\model.py": "346a6468026d92b1279456c18711927672831321de07ed42ebf76d7f21028286",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\tb\\integ\\gen_sequences.py": "4199da9ab69f9d01b99690699785ce2b29d27e69292935eade9957b30101a4b6",
+    "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\manuscript_v5\\sections\\03_architecture.tex": "9aa88f7a7c302bb308fa689737c999a441b712eb9f8c77275da1bdb82ad12baf"
+  },
+  "cosim_sources": [
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s00.txt",
+      "sha256": "e893cb2e2c1950b9f0bd23812eed7a4923712fbfa642eda62927b72c3a1c65fe",
+      "token": "3e8750f331d7499e9b5123e9eb70f2e2",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s01.txt",
+      "sha256": "20464caf54d629ecc0a7344d2e6bf614093b9fdc5923c410697570a59fe66cd6",
+      "token": "3950bd41f74548429c0f7700ff3d8269",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s02.txt",
+      "sha256": "5991b7e737f599ed16cd0c86e0c20f059fdfff180f1a24f6d5945c9ea7dae036",
+      "token": "c5f58c19249d4137ae063b0e9ecd8b8e",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s03.txt",
+      "sha256": "488d30732b2f8bc95ebea52c95c004f1c56a8b81013eb03e275ad112d93efb93",
+      "token": "700c1a25559b4433be532de3475e58a9",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s04.txt",
+      "sha256": "edc87bc89f1f84ecc6206ffd8014602051f6d6cc3971ce5f0f5bebdc5bd5130a",
+      "token": "747aa46b9a4641fe90db05d97db2acea",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s05.txt",
+      "sha256": "6c2010b96579f9c9cc3c69c7ce11c2d2f5fd1ad666d3867291c268ff28a2c6ae",
+      "token": "f4f86af4da3b49e79497deda5c5f223a",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s06.txt",
+      "sha256": "f3d08063608943672e9f948f7b2c39bdb1ce973353980cc3e42220d05a01dcc7",
+      "token": "6832e717621341568c759151b5974512",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s07.txt",
+      "sha256": "f4d5150a1975726d371673ef52b9d40a97184bdd9b55d127f514586a82612a56",
+      "token": "c59e60042a8643e899008da2e446acca",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s08.txt",
+      "sha256": "5c2a7979ee3ccdda9967a130d531019c8fe1a915889552f2cdd6a99175601570",
+      "token": "fa65a298c01f44e7a182bbf9e5fe3697",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s09.txt",
+      "sha256": "d0a9830197fe86b5bc7ce9ebf81b1cb7fe6b9725e11027033513565f5c70ff26",
+      "token": "a98fba72bde9433fb882032d18aedb2e",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s10.txt",
+      "sha256": "745dc2f6abdd66963de6f0f9851e886ef793d7af294e2451daad6635c9c00fa9",
+      "token": "b6b0d9f2f2e14a3aaa2c8aedeb1edb69",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s11.txt",
+      "sha256": "59e5475b2800ae63dafee7fb4547a0b2d47499098f154178f7fbb12e51a3d157",
+      "token": "796b1988dd254f74bf2fb19ba9c5b8c6",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s12.txt",
+      "sha256": "0dfdc9107e851b14d4520ffa4bf1e5f9c38ddab23a5ac6e7b9f1fbf8f7465e54",
+      "token": "0d0700a2284e477db876c3ee1d864668",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s13.txt",
+      "sha256": "e5b2259d5142772c6daa6ae54804b2332cf4d3fbbeeaad291109c36cd569ed88",
+      "token": "de7593d76648450e947ba0c203dee1b0",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s14.txt",
+      "sha256": "beba1e0e606d7dac4500b1829ee076d10236e222bd77e8f4373230553f0b3683",
+      "token": "f753d3f87e5b40af87ff2cbf7c8e7082",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s15.txt",
+      "sha256": "b0e8a15a461c3410cc048686949cd44a911bf65561255e905f7f4469214ef9b9",
+      "token": "b22fa0b3c34f47b6a360b60f35d5d567",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s16.txt",
+      "sha256": "361848026ffa57fee9e925efffe33e94bba1e1019784b66a767344fe03a0eb29",
+      "token": "0a0d6b8c2e884134a3b48df43d54c36a",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s17.txt",
+      "sha256": "8326f0d2f85a1c40fde7c4d123d4256796573742ad33d11982fcf28571bba7b7",
+      "token": "8e9c2cba0ee74056aa3746e8391d54a9",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s18.txt",
+      "sha256": "0e9e2493428ca6bd5a935ebd8df4c2169256a2427c10575798f49419e5970c70",
+      "token": "fdc39b23ab4242eda6ec5e1e6574fe33",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s19.txt",
+      "sha256": "88974d3105df3e87c5ec70ec12307b38c256421373f13226180d24cebd05e5e9",
+      "token": "9ee4020153674b9e9943d395ff8cfdf3",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s20.txt",
+      "sha256": "077806346617b615ae7e2310a860d6597a0112a397d3a8bfe0352784aa995a86",
+      "token": "5b03af7a953245b5a3b23191ed4da62a",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s21.txt",
+      "sha256": "cb9f893367699193f2c629544e63a9177ede7b63f3ab1aee5fe7fe06d805c23b",
+      "token": "d0ecf474e0e64950aa265cd44b9c9d75",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s22.txt",
+      "sha256": "8aa591c9f6b8afdb022d698e5182737fa6c50a5fdb371bdcf31d45682ee5d028",
+      "token": "456ec36cb4a44ca78f36fbd90c0c34fa",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s23.txt",
+      "sha256": "e91a8fb6b8befe9fb7eab4cffde9932028fc4a787f9c2e005d8c3fa0d7fbe62b",
+      "token": "6bfd42cf0aba4f1a94ec11fa43e2dd92",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s24.txt",
+      "sha256": "9de1ba00261bc84eb974df41ab8e4fe7cd6367178700e1dfba39147bf99efde9",
+      "token": "0af0feb5b1394b928dd13d648de898f5",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s25.txt",
+      "sha256": "58878fcfcfa1e57a81dfd6904d21040ab5b1c95c084d566eb1ef186934bb5eaf",
+      "token": "61d9340c5ad8418dafe7a4af1b96e6b9",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s26.txt",
+      "sha256": "88fd42bf7e14abc2a02862b42df6c171e50a3da254053fb0ccd67afeef927699",
+      "token": "9e7683e8586542a1b6032980c45f15ce",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s27.txt",
+      "sha256": "95d42cf01ea292ef4b4806d3077317ec4817b508e26504d923dd60f88d6826c8",
+      "token": "cc57c1ea80fe46a7abddfdb15654c872",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s28.txt",
+      "sha256": "5e9ac5219ad783c7042c44f381d29da946cd235348408b52cf031f90b839b732",
+      "token": "4cf5d6c3f6ab42aab23f67b5a9782d1a",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s29.txt",
+      "sha256": "a1afe2ec6d1d3cfff219f80b6b48add7fd0330e20713813673e6e5ee1f12747a",
+      "token": "6d9984d09d52479e837da2fd09e192cc",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s30.txt",
+      "sha256": "5484dc0a8ea4a0935b313d23e708fbabc434c84a2f7b5fe56f8ecf382633f493",
+      "token": "38a28a3aaf2647f2a8c0e90e31267bf8",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s31.txt",
+      "sha256": "8ce42f6ccab8715e543938128390f50a3693e055cd5989c42479a1f30feb497a",
+      "token": "6402fd1ffaf041d0b9162bd92a7ba0a2",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s32.txt",
+      "sha256": "5e99dd70804dee6d97e43122da5f10506f688b04098e6ace2f0d2f3e5005f628",
+      "token": "ce94ef7a0522468e81c0e2b3a2f1e12d",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s33.txt",
+      "sha256": "0367df1399b77d013b0d6d7729f4144a80d3e26c03a075101e56fdd44b6a327d",
+      "token": "9fcdc52b791045e99c623c5fc643331f",
+      "rtl_status_word": "0"
+    },
+    {
+      "path": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\tb\\e2e\\results\\wp_rtl_s34.txt",
+      "sha256": "43768b3d2b8e527d84faf5e61298b23266070b25776691e087071f60f082d31a",
+      "token": "1c9a906c40f6417bbe1cea06d6e55501",
+      "rtl_status_word": "0"
+    }
+  ],
+  "cosim_rtl_vs_saved_hw_new_max_abs_m": 0.026161670684814453,
+  "cosim_token_order_consecutive": true,
+  "free_bytes_end": 14061031424,
+  "verilator_commands": [
+    "./obj_2/Vtb_m_tsmx_top +FILE=../../eval_nuscenes/w9b/cosim_0103.mem +LIMIT=207 +ALLOW_INACTIVE > ../../eval_nuscenes/w9b/verilator_cosim_0103.log 2>&1",
+    "./obj_2/Vtb_m_tsmx_top +FILE=../../eval_nuscenes/w9b/replay_rtl_subset.mem +LIMIT=2513 +ALLOW_INACTIVE > ../../eval_nuscenes/w9b/verilator_replay_rtl_subset.log 2>&1"
+  ],
+  "false_accept_audit_records": 5
+}

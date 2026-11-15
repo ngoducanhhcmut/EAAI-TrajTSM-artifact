@@ -1,0 +1,1356 @@
+{
+  "complete": true,
+  "processed_frames": 29049,
+  "total_eligible": 29049,
+  "total_keyframes": 34149,
+  "scenes_total": 850,
+  "scenes_processed": 850,
+  "odd_frames": 17445,
+  "odd_coverage": {
+    "n": 17445,
+    "denominator": 29049,
+    "rate": 0.6005370236496953,
+    "ci95": [
+      0.5836790114775455,
+      0.6189840494224573
+    ],
+    "valid_bootstrap_draws": 2000
+  },
+  "odd_coverage_all_keyframes": 0.5108495124308179,
+  "object_overflow_frames": 0,
+  "adapter_error_frames": 5922,
+  "exclusions": {
+    "central_difference_unavailable": 850,
+    "odd_filter": 10754,
+    "none": 17445
+  },
+  "metrics": {
+    "H": {
+      "acceptance": {
+        "n": 6596,
+        "denominator": 17445,
+        "rate": 0.37810260819719116,
+        "ci95": [
+          0.3528547560857381,
+          0.4043430548768907
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 8986,
+        "denominator": 15523,
+        "rate": 0.5788829478837854,
+        "ci95": [
+          0.5511103892240201,
+          0.605767794346826
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 2,
+        "denominator": 979,
+        "rate": 0.0020429009193054137,
+        "ci95": [
+          0.0,
+          0.005181481521295122
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept_per_accept": {
+        "n": 2,
+        "denominator": 6596,
+        "rate": 0.00030321406913280777,
+        "ci95": [
+          0.0,
+          0.000784076969226608
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 943
+    },
+    "T": {
+      "acceptance": {
+        "n": 6322,
+        "denominator": 17445,
+        "rate": 0.362396102034967,
+        "ci95": [
+          0.33687895307734317,
+          0.388777527158524
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 8718,
+        "denominator": 15038,
+        "rate": 0.5797313472536242,
+        "ci95": [
+          0.5514564129489098,
+          0.6076381216746762
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 2,
+        "denominator": 794,
+        "rate": 0.0025188916876574307,
+        "ci95": [
+          0.0,
+          0.006142506142506142
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept_per_accept": {
+        "n": 2,
+        "denominator": 6322,
+        "rate": 0.00031635558367605187,
+        "ci95": [
+          0.0,
+          0.0008135438805896789
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 1613
+    },
+    "U": {
+      "acceptance": {
+        "n": 2873,
+        "denominator": 9717,
+        "rate": 0.2956673870536174,
+        "ci95": [
+          0.2696831459905828,
+          0.3226750413957212
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_reject": {
+        "n": 5858,
+        "denominator": 8725,
+        "rate": 0.671404011461318,
+        "ci95": [
+          0.6421937734220472,
+          0.698722495657209
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept": {
+        "n": 6,
+        "denominator": 992,
+        "rate": 0.006048387096774193,
+        "ci95": [
+          0.0019417004887327788,
+          0.011458901406429387
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "false_accept_per_accept": {
+        "n": 6,
+        "denominator": 2873,
+        "rate": 0.002088409328228333,
+        "ci95": [
+          0.0006811699573909039,
+          0.003892630673854863
+        ],
+        "valid_bootstrap_draws": 2000
+      },
+      "oracle_unknown": 0,
+      "recall": {
+        "n": 986,
+        "denominator": 992,
+        "rate": 0.9939516129032258,
+        "ci95": [
+          0.9885410985935706,
+          0.9980582995112672
+        ],
+        "valid_bootstrap_draws": 2000
+      }
+    }
+  },
+  "by_speed": {
+    "0-2": {
+      "H": {
+        "acceptance": {
+          "n": 977,
+          "denominator": 4117,
+          "rate": 0.23730871994170513,
+          "ci95": [
+            0.20990729215060966,
+            0.2656683592275762
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1708,
+          "denominator": 2626,
+          "rate": 0.6504188880426505,
+          "ci95": [
+            0.6140551255099057,
+            0.6851137066905787
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 2,
+          "denominator": 548,
+          "rate": 0.0036496350364963502,
+          "ci95": [
+            0.0,
+            0.009464659028750828
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 2,
+          "denominator": 977,
+          "rate": 0.0020470829068577278,
+          "ci95": [
+            0.0,
+            0.0053880763400662125
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 943
+      },
+      "T": {
+        "acceptance": {
+          "n": 693,
+          "denominator": 4117,
+          "rate": 0.16832645129948992,
+          "ci95": [
+            0.1443738289733865,
+            0.1936398307136562
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1455,
+          "denominator": 2147,
+          "rate": 0.6776897997205403,
+          "ci95": [
+            0.6371230436690795,
+            0.7166517168400173
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 1,
+          "denominator": 357,
+          "rate": 0.0028011204481792717,
+          "ci95": [
+            0.0,
+            0.009203161868806037
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 1,
+          "denominator": 693,
+          "rate": 0.001443001443001443,
+          "ci95": [
+            0.0,
+            0.0048543689320388345
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 1613
+      },
+      "U": {
+        "acceptance": {
+          "n": 712,
+          "denominator": 2706,
+          "rate": 0.2631189948263119,
+          "ci95": [
+            0.2241992014511193,
+            0.30396955905270445
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1467,
+          "denominator": 2177,
+          "rate": 0.6738631143775838,
+          "ci95": [
+            0.6283031321174892,
+            0.7176948925357222
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 2,
+          "denominator": 529,
+          "rate": 0.003780718336483932,
+          "ci95": [
+            0.0,
+            0.010101435944606264
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 2,
+          "denominator": 712,
+          "rate": 0.0028089887640449437,
+          "ci95": [
+            0.0,
+            0.007657555933503171
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 527,
+          "denominator": 529,
+          "rate": 0.996219281663516,
+          "ci95": [
+            0.9898985640553938,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        }
+      }
+    },
+    "2-5": {
+      "H": {
+        "acceptance": {
+          "n": 1294,
+          "denominator": 3685,
+          "rate": 0.35115332428765267,
+          "ci95": [
+            0.31374241381946033,
+            0.389057159406518
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 2240,
+          "denominator": 3534,
+          "rate": 0.6338426711941143,
+          "ci95": [
+            0.5951765671311326,
+            0.6716873983707593
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 151,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 1294,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 1282,
+          "denominator": 3685,
+          "rate": 0.3478968792401628,
+          "ci95": [
+            0.31174834455377176,
+            0.3857152400500509
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 2251,
+          "denominator": 3533,
+          "rate": 0.6371355788281914,
+          "ci95": [
+            0.5982578797603808,
+            0.6747994738727714
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 152,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 1282,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 708,
+          "denominator": 2281,
+          "rate": 0.3103901797457256,
+          "ci95": [
+            0.27010970729210293,
+            0.35039497511799345
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1383,
+          "denominator": 2088,
+          "rate": 0.6623563218390804,
+          "ci95": [
+            0.6205499373528336,
+            0.7041393163231576
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 3,
+          "denominator": 193,
+          "rate": 0.015544041450777202,
+          "ci95": [
+            0.0,
+            0.036498575752180865
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 3,
+          "denominator": 708,
+          "rate": 0.00423728813559322,
+          "ci95": [
+            0.0,
+            0.009601046831955916
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 190,
+          "denominator": 193,
+          "rate": 0.9844559585492227,
+          "ci95": [
+            0.9635014242478191,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        }
+      }
+    },
+    "5-10": {
+      "H": {
+        "acceptance": {
+          "n": 4325,
+          "denominator": 9643,
+          "rate": 0.4485118738981645,
+          "ci95": [
+            0.41370617883710337,
+            0.48470386480592303
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 5038,
+          "denominator": 9363,
+          "rate": 0.5380754031827406,
+          "ci95": [
+            0.5022295997457479,
+            0.5729957957657292
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 280,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 4325,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 4347,
+          "denominator": 9643,
+          "rate": 0.450793321580421,
+          "ci95": [
+            0.4156922751352853,
+            0.48740180283536017
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 5012,
+          "denominator": 9358,
+          "rate": 0.5355845266082496,
+          "ci95": [
+            0.49982118724007607,
+            0.5712317068837008
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 1,
+          "denominator": 285,
+          "rate": 0.0035087719298245615,
+          "ci95": [
+            0.0,
+            0.012148227712137473
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 1,
+          "denominator": 4347,
+          "rate": 0.00023004370830457787,
+          "ci95": [
+            0.0,
+            0.0007369287310474999
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 1453,
+          "denominator": 4730,
+          "rate": 0.30718816067653276,
+          "ci95": [
+            0.26799975326722786,
+            0.34570563757892575
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 3008,
+          "denominator": 4460,
+          "rate": 0.6744394618834081,
+          "ci95": [
+            0.6340025830660536,
+            0.7157704082698542
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 1,
+          "denominator": 270,
+          "rate": 0.003703703703703704,
+          "ci95": [
+            0.0,
+            0.012660921088068933
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 1,
+          "denominator": 1453,
+          "rate": 0.0006882312456985547,
+          "ci95": [
+            0.0,
+            0.0022591640145487603
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 269,
+          "denominator": 270,
+          "rate": 0.9962962962962963,
+          "ci95": [
+            0.9873390789119311,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        }
+      }
+    }
+  },
+  "by_object_count": {
+    "0": {
+      "H": {
+        "acceptance": {
+          "n": 1990,
+          "denominator": 2039,
+          "rate": 0.9759686120647376,
+          "ci95": [
+            0.9671809930252769,
+            0.9831239279319887
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 22,
+          "denominator": 2009,
+          "rate": 0.010950721752115481,
+          "ci95": [
+            0.006454922323185796,
+            0.016224428226640615
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 1990,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 30
+      },
+      "T": {
+        "acceptance": {
+          "n": 1984,
+          "denominator": 2039,
+          "rate": 0.9730259931338892,
+          "ci95": [
+            0.9594450382889957,
+            0.9837815503903123
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 16,
+          "denominator": 2000,
+          "rate": 0.008,
+          "ci95": [
+            0.0036133694670280035,
+            0.01317187751813054
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 1984,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 39
+      },
+      "U": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        }
+      }
+    },
+    "1-4": {
+      "H": {
+        "acceptance": {
+          "n": 4463,
+          "denominator": 13657,
+          "rate": 0.3267921212564985,
+          "ci95": [
+            0.30172927785072834,
+            0.3524354753617628
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 7735,
+          "denominator": 12143,
+          "rate": 0.636992505970518,
+          "ci95": [
+            0.6097910247067402,
+            0.6648447436791122
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 2,
+          "denominator": 755,
+          "rate": 0.0026490066225165563,
+          "ci95": [
+            0.0,
+            0.0068338687914642465
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 2,
+          "denominator": 4463,
+          "rate": 0.00044812906116961686,
+          "ci95": [
+            0.0,
+            0.0011636635699498778
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 759
+      },
+      "T": {
+        "acceptance": {
+          "n": 4201,
+          "denominator": 13657,
+          "rate": 0.3076078201654829,
+          "ci95": [
+            0.28296300760420673,
+            0.333364108718324
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 7558,
+          "denominator": 11757,
+          "rate": 0.6428510674491792,
+          "ci95": [
+            0.6146899741478596,
+            0.6713277002746793
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 2,
+          "denominator": 644,
+          "rate": 0.003105590062111801,
+          "ci95": [
+            0.0,
+            0.007707352101619923
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 2,
+          "denominator": 4201,
+          "rate": 0.00047607712449416806,
+          "ci95": [
+            0.0,
+            0.001220420075680022
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 1256
+      },
+      "U": {
+        "acceptance": {
+          "n": 2681,
+          "denominator": 8104,
+          "rate": 0.33082428430404737,
+          "ci95": [
+            0.30192429254311065,
+            0.36079142812437487
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 4689,
+          "denominator": 7365,
+          "rate": 0.6366598778004073,
+          "ci95": [
+            0.605182243944351,
+            0.6670546803132882
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 5,
+          "denominator": 739,
+          "rate": 0.006765899864682003,
+          "ci95": [
+            0.0014283181357649442,
+            0.013392857142857142
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 5,
+          "denominator": 2681,
+          "rate": 0.001864975755315181,
+          "ci95": [
+            0.00037921162435696973,
+            0.003659964148657246
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 734,
+          "denominator": 739,
+          "rate": 0.993234100135318,
+          "ci95": [
+            0.9866071428571429,
+            0.9985716818642351
+          ],
+          "valid_bootstrap_draws": 2000
+        }
+      }
+    },
+    "5-16": {
+      "H": {
+        "acceptance": {
+          "n": 143,
+          "denominator": 1746,
+          "rate": 0.08190148911798396,
+          "ci95": [
+            0.05863578651479518,
+            0.1067924464755746
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1229,
+          "denominator": 1371,
+          "rate": 0.8964259664478483,
+          "ci95": [
+            0.8639733506947262,
+            0.9246646713224699
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 221,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 143,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 154
+      },
+      "T": {
+        "acceptance": {
+          "n": 137,
+          "denominator": 1746,
+          "rate": 0.07846506300114547,
+          "ci95": [
+            0.05455265100816879,
+            0.10380225184590781
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1144,
+          "denominator": 1281,
+          "rate": 0.8930523028883685,
+          "ci95": [
+            0.8594864671988823,
+            0.923797189611748
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 147,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 137,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 318
+      },
+      "U": {
+        "acceptance": {
+          "n": 192,
+          "denominator": 1610,
+          "rate": 0.11925465838509317,
+          "ci95": [
+            0.08921562353992728,
+            0.15294974008283987
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_reject": {
+          "n": 1169,
+          "denominator": 1360,
+          "rate": 0.8595588235294118,
+          "ci95": [
+            0.822121071873213,
+            0.8948405160284295
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept": {
+          "n": 1,
+          "denominator": 250,
+          "rate": 0.004,
+          "ci95": [
+            0.0,
+            0.01327581120943952
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "false_accept_per_accept": {
+          "n": 1,
+          "denominator": 192,
+          "rate": 0.005208333333333333,
+          "ci95": [
+            0.0,
+            0.01829548855304502
+          ],
+          "valid_bootstrap_draws": 2000
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 249,
+          "denominator": 250,
+          "rate": 0.996,
+          "ci95": [
+            0.9867241887905605,
+            1.0
+          ],
+          "valid_bootstrap_draws": 2000
+        }
+      }
+    },
+    "17+": {
+      "H": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "T": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0
+      },
+      "U": {
+        "acceptance": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_reject": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "false_accept": {
+          "n": 0,
+          "denominator": 3,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_draws": 1266
+        },
+        "false_accept_per_accept": {
+          "n": 0,
+          "denominator": 0,
+          "rate": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "valid_bootstrap_draws": 0
+        },
+        "oracle_unknown": 0,
+        "recall": {
+          "n": 3,
+          "denominator": 3,
+          "rate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_draws": 1266
+        }
+      }
+    }
+  },
+  "false_accept_cases": [
+    {
+      "scene": "scene-0043",
+      "token": "4b57dce76aaa48fe82ae6268a90f70a0",
+      "plan": "U",
+      "cid": 6,
+      "golden_margin": 138479,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.3947741302437926,
+        "culprit": {
+          "object": "7dd37174c33c4e3eb01cd2ae155785f5",
+          "time_from_t0_s": 2.13,
+          "gt_minus_constant_v_m": -1.3704923255365724
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0219",
+      "token": "07d09f687a7c494fa8237c511fea0fe8",
+      "plan": "U",
+      "cid": 0,
+      "golden_margin": 12078,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.02445049358152307,
+        "culprit": {
+          "object": "2e7550b974304c72a0e7b37f9587d83f",
+          "time_from_t0_s": 0.5,
+          "gt_minus_constant_v_m": 0.03652989974688836
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0520",
+      "token": "b999707d600d4b0db25404e6f41085aa",
+      "plan": "U",
+      "cid": 6,
+      "golden_margin": 1669579,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -1.1421667660852215,
+        "culprit": {
+          "object": "87038009ca9147fdbe673d4b7e3d39ad",
+          "time_from_t0_s": 2.0828812831804853,
+          "gt_minus_constant_v_m": -3.3773762611434197
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0542",
+      "token": "e0d475c67668479fa244ceaffa3d47f7",
+      "plan": "H",
+      "cid": 0,
+      "golden_margin": 29996,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.08204115622597019,
+        "culprit": {
+          "object": "87ff955e97fa4e34b373c98f7b094d4b",
+          "time_from_t0_s": 0.5,
+          "gt_minus_constant_v_m": 0.1120378835961846
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0560",
+      "token": "cb277e7166c94ffcbc2177c695a5c108",
+      "plan": "U",
+      "cid": 6,
+      "golden_margin": 1036075,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -1.364271082722393,
+        "culprit": {
+          "object": "a1fc928f53bf4172ae8fec779bcf6523",
+          "time_from_t0_s": 2.121,
+          "gt_minus_constant_v_m": -3.0241386513246695
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0560",
+      "token": "ed106be96a684bce9379a75dac61ed54",
+      "plan": "T",
+      "cid": 6,
+      "golden_margin": 61258,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.9090049717629896,
+        "culprit": {
+          "object": "4203ed2c6c004b308a6af62db19d2eb0",
+          "time_from_t0_s": 1.803,
+          "gt_minus_constant_v_m": -1.3846062648478714
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0564",
+      "token": "0e6efc712c9e47ac95d5dd133007c3c9",
+      "plan": "H",
+      "cid": 0,
+      "golden_margin": 752608,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.18588081991146144,
+        "culprit": {
+          "object": "50be5ba3484d43299a1cf45ba4dc3af6",
+          "time_from_t0_s": 1.3227862737660028,
+          "gt_minus_constant_v_m": 1.4723554121402769
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-0564",
+      "token": "0e6efc712c9e47ac95d5dd133007c3c9",
+      "plan": "T",
+      "cid": 0,
+      "golden_margin": 619856,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.315460111091058,
+        "culprit": {
+          "object": "50be5ba3484d43299a1cf45ba4dc3af6",
+          "time_from_t0_s": 1.245207437555267,
+          "gt_minus_constant_v_m": 1.3218925018833643
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-1108",
+      "token": "f966614ccaf44d99baa7f1d8f1b7d4b3",
+      "plan": "U",
+      "cid": 6,
+      "golden_margin": 13518,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.19258964993879424,
+        "culprit": {
+          "object": "9f8575884ce14b4e8d2debfc809e12f6",
+          "time_from_t0_s": 1.54249554734078,
+          "gt_minus_constant_v_m": -0.23097728654030725
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    },
+    {
+      "scene": "scene-1109",
+      "token": "629323e575754fe2815ed5926581565e",
+      "plan": "U",
+      "cid": 2,
+      "golden_margin": 197505,
+      "oracle": {
+        "label": "UNSAFE",
+        "best_margin_m": -0.7049949463590863,
+        "culprit": {
+          "object": "9c17fc146d1c410291ff706caa22cc36",
+          "time_from_t0_s": 1.918,
+          "gt_minus_constant_v_m": -1.9019330361712719
+        },
+        "reason": "No finite-jerk profile clears GT tracks; constant-v mismatch and/or footprint overlap",
+        "track_ends_early": false
+      }
+    }
+  ],
+  "bootstrap": {
+    "unit": "scene",
+    "replicates": 2000,
+    "seed": 20261104
+  },
+  "provenance": {
+    "code_sha256": "08a052240d97a47ab493275cc6f62001d6f1e9fa6869a9d20c0dcd72bdb60216",
+    "protocol_sha256": "fe19e39c864bb40f3f02568e583b7a80742ff41040b3264e0cc2756f00df9acc",
+    "checkpoint_sha256": "a154d9978c5f75538a53e108ecaf5863e9cb35bc2d7263e1ea8a491243e29e14",
+    "limit": 0,
+    "dataset": "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\eval\\data\\nuscenes"
+  },
+  "rtl_frame_count": 300,
+  "utc": "2026-11-05T01:53:47.045245+00:00",
+  "runtime_seconds": 6762.9679999999935
+}

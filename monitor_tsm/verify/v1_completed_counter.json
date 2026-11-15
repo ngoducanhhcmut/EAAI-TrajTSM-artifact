@@ -1,0 +1,14 @@
+{
+  "IC": 200,
+  "rollouts": 22000,
+  "counts": {
+    "accept_difference": 0,
+    "candidate_difference": 0,
+    "cycles": 2670097,
+    "different": 3510,
+    "freshness/freshness|L1/L2|b2_j2/b2_j2": 3510,
+    "mode_difference": 3510,
+    "unsafe_accept": 0
+  },
+  "disagreement_rate": 0.001314558984186717
+}

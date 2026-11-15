@@ -1,0 +1,44 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\sim.vvp +START=81920 +LIMIT=3805
+START arith N=85725
+LOADED arith
+PROGRESS 85000/85725
+ASSERT 0 S5.3 reset_ready hits=3
+ASSERT 1 S5.3 reset_valid hits=3
+ASSERT 2 S5.3 reset_payload hits=3
+ASSERT 3 S5.3 invalid_zero hits=25514
+ASSERT 4 S5.3 busy_ready hits=21705
+ASSERT 5 S5.3 response_owned hits=11415
+ASSERT 6 S5.3 stall_valid hits=7610
+ASSERT 7 S5.3 stall_q0 hits=7610
+ASSERT 8 S5.3 stall_q1 hits=7610
+ASSERT 9 S5.3 stall_q2 hits=7610
+ASSERT 10 S5.3 stall_q3 hits=7610
+ASSERT 11 S5.5.1 fault_exact hits=11415
+ASSERT 12 S9.2 q0_exact hits=11415
+ASSERT 13 S9.2 q1_exact hits=11415
+ASSERT 14 S9.2 q2_exact hits=11415
+ASSERT 15 S9.2 q3_exact hits=11415
+ASSERT 16 S9.2 scalar_padding hits=5226
+ASSERT 17 S9.2 pose_padding hits=2394
+ASSERT 18 S5.5.1 fault_no_pose hits=0
+ASSERT 19 S10.3 bounded_completion hits=11415
+ASSERT 20 S5.3 consume_ready hits=3805
+ASSERT 21 S5.3 consume_valid_clear hits=3805
+ASSERT 22 S5.3 stall_fault hits=7610
+ASSERT 23 S5.3 idle_payload hits=4
+ASSERT 24 S7 reset_abort hits=3
+ASSERT 25 S5.3 one_outstanding hits=11415
+LATENCY op=0 min=2 max=2
+LATENCY op=1 min=14 max=14
+LATENCY op=2 min=12 max=12
+LATENCY op=3 min=10 max=10
+LATENCY op=4 min=18 max=18
+LATENCY op=5 min=2 max=2
+LATENCY op=6 min=2 max=2
+LATENCY op=7 min=14 max=32
+LATENCY op=8 min=2 max=2
+assertion failures: 0, assertions never exercised: 0
+PASS arith: golden=3805/3805 assertions=26 mutants=external requests=3806 responses=3805
+C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\arith\tb_m_tsmx_arith.sv:161: $finish called at 369320000 (1ps)
+
+EXIT 0

@@ -1,0 +1,10 @@
+{
+  "files": {
+    "tsmx_hw/PLAN.md": "42855db20a8441f6053c4dd505a62d3eb485e0a5a2bc489174d97048f8adb2f8",
+    "tsmx_hw/golden/FORMATS.md": "2dd422745898d81e31060601fdc08cc7de2ad920ba375564e88053708ac3198e",
+    "tsmx_hw/golden/LATENCY_MODEL.md": "6150c9dc5cf748ee1cd4f295ab05e47cc8cf2cb3c5eaf4b28ada264a06da6d70",
+    "tsmx_hw/golden/README.md": "6f75eb8401b4c21946ac85b1de469ad654f3436422b3c1dbcfccd6240e630149",
+    "tsmx_hw/golden/tsmx_golden/model.py": "d8766763d3de1fafca263924e96e44ff987522aa7198acf4700a6d22fec47fbd",
+    "tsm_research/TSM_X_DESIGN_v2.md": "76ebf1722c8367f544ffc502a53d5aad4529b8ce842f3b6f703e08f85ea8e9d8"
+  }
+}

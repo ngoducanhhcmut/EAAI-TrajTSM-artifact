@@ -1,0 +1,75 @@
+{
+  "frames": 300,
+  "source_sha256": "f2ad7d872d09f811f506ac6d3c6a0338e5bb0047e99c76a5f29db70e3dac067d",
+  "corpora": {
+    "nuscenes": {
+      "jobs": 771,
+      "counts": {
+        "H": {
+          "jobs": 300,
+          "accepts": 0,
+          "rejects": 300,
+          "w7_accepts": 165,
+          "fallback_accepts": 165
+        },
+        "T": {
+          "jobs": 300,
+          "accepts": 0,
+          "rejects": 300,
+          "w7_accepts": 174,
+          "fallback_accepts": 174
+        },
+        "U": {
+          "jobs": 171,
+          "accepts": 0,
+          "rejects": 171,
+          "w7_accepts": 93,
+          "fallback_accepts": 93
+        }
+      },
+      "mismatches": 432,
+      "cid_mismatches": 0,
+      "reasons": {
+        "ftti_budget": 757,
+        "ego_live": 14
+      }
+    },
+    "nuscenes_va": {
+      "jobs": 771,
+      "counts": {
+        "H": {
+          "jobs": 300,
+          "accepts": 0,
+          "rejects": 300,
+          "w7_accepts": 165,
+          "fallback_accepts": 246
+        },
+        "T": {
+          "jobs": 300,
+          "accepts": 0,
+          "rejects": 300,
+          "w7_accepts": 174,
+          "fallback_accepts": 253
+        },
+        "U": {
+          "jobs": 171,
+          "accepts": 0,
+          "rejects": 171,
+          "w7_accepts": 93,
+          "fallback_accepts": 135
+        }
+      },
+      "mismatches": 634,
+      "cid_mismatches": 202,
+      "reasons": {
+        "ftti_budget": 757,
+        "ego_live": 14
+      }
+    }
+  },
+  "adapter_error_plans": 264,
+  "negative_speed_plans": 264,
+  "va_per_candidate_vs_cover_differences": 20,
+  "va_rear_origin_unresolved": 0,
+  "seconds": 51.04340660001617
+}

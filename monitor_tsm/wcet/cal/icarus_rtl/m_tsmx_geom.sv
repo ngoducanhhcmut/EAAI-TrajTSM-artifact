@@ -1,0 +1,511 @@
+/*
+ * Project      : TSM-X
+ * Author       : TSMX project (user)
+ * AI Flow      : VLSIT RTL Generator AI Automation Flow
+ * AI Flow Page : https://github.com/nguyenquanicd/VLSIT_RTL_Generator_AI_Model
+ * Date         : 2026-11-02
+ * Version      : 0.5
+ * Description  : Streaming B3 geometry, deferred validation and private arithmetic.
+ *                v0.2 (G1c): four division-free state units (m_tsmx_geom_su) give
+ *                advance_lb for object/ego lower/upper bounds and swept_lb inputs;
+ *                jerk inflation reuses unit 0. Replaces v0.1 swept/advance/dividers.
+ *                v0.3: actor motion lives in a distributed RAM with per-slot written
+ *                bits; unwritten slots read their load value from reg_obj.
+ *                v0.4: one reg_obj read port; preflight (OCHK/SCHK) and actor
+ *                stepping never overlap, so a registered select picks the index.
+ * Assumptions  : Reset release is synchronized by the enclosing core wrapper.
+ *                Row storage is resetless and guarded by the reset row count.
+ * Deviations   : HIE-02: functional leaf; the enclosing system top is structural.
+ *                PAR-03: SI coefficients and ABI bit positions follow golden exactly.
+ */
+`timescale 1ns/1ps
+`default_nettype none
+module m_tsmx_geom #(
+  // Parameter Description: allocated actors; ABI remains thirty-two slots.
+  // Parameter values: 1..32; default is 32.
+  // Parameter unit: count
+  parameter logic [31:0] PARA_MAX_OBJ = 32'd32,
+  // Parameter Description: allocated cells; stream count is checked against this limit.
+  // Parameter values: 1..128; default is 128.
+  // Parameter unit: count
+  parameter logic [31:0] PARA_MAX_CELLS = 32'd128
+) (
+  input wire i_clk_core,
+  input wire i_rst_n_core,
+  input wire i_req_valid,
+  input wire [8623:0] i_req_data,
+  input wire i_row_valid,
+  input wire [400:0] i_row_data,
+  input wire i_terminal_valid,
+  input wire [49:0] i_terminal_data,
+  input wire i_rsp_ready,
+  output logic o_req_ready,
+  output logic o_row_ready,
+  output logic o_terminal_ready,
+  output logic o_rsp_valid,
+  output logic [80:0] o_rsp_data
+);
+  typedef enum logic [3:0] {
+    ENUM_ST_BOOT = 4'd0,
+    ENUM_ST_IDLE = 4'd1,
+    ENUM_ST_ROW = 4'd2,
+    ENUM_ST_INFL = 4'd3,
+    ENUM_ST_IWAIT = 4'd4,
+    ENUM_ST_ACT = 4'd5,
+    ENUM_ST_ISSUE = 4'd6,
+    ENUM_ST_AWAIT = 4'd7,
+    ENUM_ST_STEP = 4'd8,
+    ENUM_ST_FIN = 4'd9,
+    ENUM_ST_RESP = 4'd10,
+    ENUM_ST_OCHK = 4'd11,
+    ENUM_ST_SCHK = 4'd12
+  } ctrl_state_type_def;
+  ctrl_state_type_def reg_fsm_ctrl_current_state, w_fsm_ctrl_nxt_state;
+  logic [39:0] reg_tag, w_tag_nxt;
+  logic [8199:0] reg_world, w_world_nxt;
+  logic [383:0] reg_lane, w_lane_nxt;
+  logic [7:0] reg_count, w_count_nxt;
+  logic [49:0] reg_term, w_term_nxt;
+  logic [0:0] reg_term_valid, w_term_valid_nxt;
+  logic [0:0] reg_bad_row, w_bad_row_nxt;
+  logic [0:0] reg_bad_tag, w_bad_tag_nxt;
+  logic [7:0] reg_cell, w_cell_nxt;
+  logic [7:0] reg_actor, w_actor_nxt;
+  logic [7:0] reg_fail, w_fail_nxt;
+  logic [7:0] reg_steps, w_steps_nxt;
+  logic [63:0] reg_margin, w_margin_nxt;
+  logic [80:0] reg_resp, w_resp_nxt;
+  logic [63:0] reg_inflate, w_inflate_nxt;
+  logic [31:0] reg_part, w_part_nxt;
+  logic [31:0] reg_remain, w_remain_nxt;
+  logic [0:0] reg_ahead, w_ahead_nxt;
+  logic [255:0] reg_pose, w_pose_nxt;
+  logic [127:0] reg_vel, w_vel_nxt;
+  logic [31:0] reg_oa, w_oa_nxt;
+  // Row store: single synchronous write port, asynchronous reads (LUTRAM).
+  logic [351:0] reg_rows [0:PARA_MAX_CELLS+1-1];
+  logic w_row_we;
+  logic [31:0] reg_t0, reg_tlast, w_t0_nxt, w_tlast_nxt;
+  // v0.2c timing: current row, cell duration and elapsed time are registered every
+  // cycle; consumers (INFL/ACT/ISSUE/AWAIT) run at least two cycles after a cell change.
+  logic [351:0] reg_rowc;
+  logic [31:0] reg_hc, reg_elc;
+  logic [255:0] reg_obj [0:PARA_MAX_OBJ-1];
+  logic [255:0] w_obj_nxt [0:PARA_MAX_OBJ-1];
+  (* ram_style = "distributed" *) logic [191:0] reg_motion [0:PARA_MAX_OBJ-1];
+  logic [PARA_MAX_OBJ-1:0] reg_mot_ok;
+  logic [191:0] w_mot;
+  localparam int LPARA_AW = $clog2(PARA_MAX_OBJ);
+  logic [LPARA_AW-1:0] w_aidx;
+  logic w_mot_ld, w_mot_we;
+  // v0.4: shared object read port (reg_osel=1 exactly in OCHK/SCHK).
+  logic reg_osel;
+  logic [LPARA_AW-1:0] w_oidx;
+  logic [255:0] w_ord;
+  logic [351:0] w_row, w_nxt;
+  logic [31:0] w_h, w_event, w_elapsed, w_accel;
+  logic [63:0] w_gap, w_piece_margin;
+  logic [255:0] w_object;
+  // State units: 0 object lower, 1 object upper, 2 ego lower, 3 ego upper.
+  logic [3:0] w_su_start, w_su_busy, w_su_done, w_su_fault, w_su_up;
+  logic w_su_mode;
+  logic [63:0] w_su_x [0:3];
+  logic [31:0] w_su_v [0:3];
+  logic [31:0] w_su_a [0:3];
+  logic [63:0] w_su_xo [0:3];
+  logic [31:0] w_su_vo [0:3];
+  logic [63:0] w_su_disp [0:3];
+  logic [63:0] w_su_lin [0:3];
+  logic [63:0] w_su_infl [0:3];
+  logic [63:0] w_la, w_ub, w_d, w_g_end;
+  // v0.2d timing: gap - reserve is registered at ISSUE; min(gR, gR+la-ub) uses sign(la-ub).
+  logic [63:0] reg_gapr, w_gapr_nxt;
+  logic w_issue, w_all, w_row_ok, w_lane_ok, w_lane_fit;
+  logic w_obj_ok, w_speed_ok;
+  logic [7:0] w_pre_reason;
+  logic [63:0] w_lo, w_hi, w_y, w_half, w_err, w_reserve;
+  logic [63:0] w_positive, w_speed_product, w_speed_limit;
+  // v0.2b: object range and speed-bound preflight run one object per cycle.
+  logic [7:0] reg_chk, w_chk_nxt;
+  logic reg_obj_ok, w_obj_ok_nxt, reg_speed_ok, w_speed_ok_nxt;
+  logic [63:0] reg_sp, reg_sl, w_sp_nxt, w_sl_nxt;
+  logic reg_spv, w_spv_nxt;
+  logic [255:0] w_chk_obj;
+  logic w_chk_range;
+
+  // Unsigned bit patterns implement explicit two's-complement comparisons.
+  function automatic logic f_lt(input logic [63:0] w_a, w_b);
+    f_lt = (w_a[63] != w_b[63]) ? w_a[63] : w_a < w_b;
+  endfunction
+  function automatic logic f_range(input logic [63:0] w_a, w_l, w_u);
+    f_range = !f_lt(w_a,w_l) && !f_lt(w_u,w_a);
+  endfunction
+  function automatic logic [159:0] f_s64(input logic [63:0] w_a);
+    f_s64 = {{96{w_a[63]}},w_a};
+  endfunction
+  function automatic logic [159:0] f_s32(input logic [31:0] w_a);
+    f_s32 = {{128{w_a[31]}},w_a};
+  endfunction
+  function automatic logic f_row(input logic [351:0] w_r);
+    f_row = w_r[351:288] == '0 && w_r[287:256] <= 32'd25600000
+      && f_range(w_r[255:192],64'(-64'd10070000000),64'd10070000000)
+      && f_range(w_r[191:128],w_r[255:192],64'd10070000000)
+      && w_r[127:96] <= w_r[95:64] && w_r[95:64] <= 32'd20000000
+      // A8 (02/11): trajectory-row acceleration in [-8,+2] m/s^2 (golden b3_geom)
+      && f_range({{32{w_r[63]}},w_r[63:32]},64'(-64'd8000000),64'd2000000)
+      && w_r[31:0] <= 32'd8000000;
+  endfunction
+
+  // Stable row reads keep operand data independent of ready/valid evaluation.
+  assign w_row = (reg_cell < PARA_MAX_CELLS
+    && {1'b0,reg_cell}+9'd1 < {1'b0,reg_count}) ? reg_rows[reg_cell] : 352'd0;
+  // The following endpoint supplies cell duration without changing the current row.
+  assign w_nxt = (reg_cell < PARA_MAX_CELLS
+    && {1'b0,reg_cell}+9'd1 < {1'b0,reg_count}) ? reg_rows[reg_cell+8'd1] : 352'd0;
+
+  // Motion slot: the stepped value once written in this job, else its load value
+  // {x,x,v,v} from the stored object (v0.2d copied all 32 slots at load).
+  assign w_mot_ld = reg_fsm_ctrl_current_state==ENUM_ST_IDLE && i_req_valid;
+  assign w_mot_we = reg_fsm_ctrl_current_state==ENUM_ST_STEP && reg_actor<8'(PARA_MAX_OBJ);
+  assign w_aidx = reg_actor[LPARA_AW-1:0];
+  assign w_oidx = reg_osel ? reg_chk[LPARA_AW-1:0] : w_aidx;
+  assign w_ord = reg_obj[w_oidx];
+  assign w_mot = (reg_actor>=8'(PARA_MAX_OBJ)) ? 192'd0 : reg_mot_ok[w_aidx] ? reg_motion[w_aidx]
+    : {w_ord[255:192],w_ord[255:192],w_ord[191:160],w_ord[191:160]};
+
+  // Decode only initialized slots; counts bound every variable array index.
+  always @* begin : p_com_decode
+    w_object = '0;
+    if (reg_actor < PARA_MAX_OBJ) w_object = w_ord;
+    w_h = 32'(w_nxt[287:256]-w_row[287:256]);
+    w_elapsed = 32'(w_row[287:256]-reg_t0);
+    w_event = 32'(w_object[63:32]-reg_elc);
+    w_accel = w_object[127:96];
+    if (reg_elc >= w_object[63:32]) w_accel = w_object[31:0];
+    {w_lo,w_hi,w_y,w_half,w_err,w_reserve} = reg_lane;
+    w_lane_ok = f_range(w_lo,64'(-64'd10000000000),64'd10000000000)
+      && f_range(w_hi,w_lo,64'd10000000000)
+      && f_range(w_y,64'(-64'd10000000000),64'd10000000000)
+      && w_half > 64'd0 && w_half <= 64'd10000000
+      && w_err <= 64'd1000000 && w_reserve <= 64'd10000000;
+    w_lane_fit = !f_lt(64'(w_y-w_half-w_err),w_lo)
+      && !f_lt(w_hi,64'(w_y+w_half+w_err));
+    // One object per cycle (reg_chk): range check in OCHK, speed bound in SCHK.
+    w_chk_obj = '0;
+    if (reg_chk < 8'(PARA_MAX_OBJ)) w_chk_obj = w_ord;
+    w_chk_range = f_range(w_chk_obj[255:192],64'(-64'd10000000000),64'd10000000000)
+      && w_chk_obj[191:160] <= 32'd20000000
+      && f_range({{32{w_chk_obj[159]}},w_chk_obj[159:128]},64'(-64'd8000000),64'd2000000)
+      && f_range({{32{w_chk_obj[31]}},w_chk_obj[31:0]},64'(-64'd8000000),64'd2000000)
+      && w_chk_obj[63:32] <= 32'd12800000
+      && w_chk_obj[127:64] > 64'd0 && w_chk_obj[127:64] <= 64'd20000000;
+    w_positive = '0;
+    if (!w_chk_obj[159]) w_positive = {32'd0,w_chk_obj[159:128]};
+    if (!w_chk_obj[31] && {32'd0,w_chk_obj[31:0]} > w_positive)
+      w_positive = {32'd0,w_chk_obj[31:0]};
+    w_speed_product = 64'(w_positive[31:0] * 32'(reg_tlast-reg_t0));
+    w_speed_limit = 64'((64'd20000000-{32'd0,w_chk_obj[191:160]})*64'd1000000);
+    w_obj_ok = reg_obj_ok;
+    w_speed_ok = reg_speed_ok;
+    w_pre_reason = 8'd0;
+    casez ({!reg_term[49] || reg_count<8'd2 || reg_term[7:0]!=reg_count || reg_bad_tag,
+      reg_bad_row,!w_lane_ok,reg_world[8199:8192]>8'(PARA_MAX_OBJ),!w_lane_fit,
+      !w_obj_ok,reg_count<8'd2 || reg_tlast<=reg_t0
+      || 32'(reg_tlast-reg_t0)>32'd12800000,
+      !w_speed_ok})
+      8'b1???????: w_pre_reason=8'd17;
+      8'b01??????: w_pre_reason=8'd4;
+      8'b001?????: w_pre_reason=8'd18;
+      8'b0001????: w_pre_reason=8'd19;
+      8'b00001???: w_pre_reason=8'd20;
+      8'b000001??: w_pre_reason=8'd21;
+      8'b0000001?: w_pre_reason=8'd16;
+      8'b00000001: w_pre_reason=8'd22;
+      default: w_pre_reason=8'd0;
+    endcase
+    w_gap = reg_ahead ? 64'(reg_pose[255:192]-reg_pose[63:0]-w_object[127:64])
+      : 64'(reg_pose[127:64]-reg_pose[191:128]-w_object[127:64]);
+    // swept_lb: front lower line (chord if a<0 else tangent), rear upper line
+    // (tangent if a<=0 else chord); minimum of the linear envelope at 0 or width.
+    if (reg_ahead) begin
+      w_la = reg_oa[31] ? w_su_disp[0] : w_su_lin[0];
+      w_ub = (reg_rowc[63] || reg_rowc[63:32]==32'd0) ? w_su_lin[3] : w_su_disp[3];
+    end else begin
+      w_la = reg_rowc[63] ? w_su_disp[2] : w_su_lin[2];
+      w_ub = (reg_oa[31] || reg_oa==32'd0) ? w_su_lin[1] : w_su_disp[1];
+    end
+    w_d = 64'(w_la-w_ub);
+    w_g_end = 64'(reg_gapr+w_d);
+    w_piece_margin = w_d[63] ? w_g_end : reg_gapr;
+    w_all = &w_su_done;
+    w_issue = reg_fsm_ctrl_current_state==ENUM_ST_ISSUE && !(|w_su_busy);
+    w_row_ok = f_row(i_row_data[352:1]);
+    // Public channel mapping.
+    o_req_ready = i_rst_n_core && reg_fsm_ctrl_current_state==ENUM_ST_IDLE;
+    o_row_ready = i_rst_n_core && reg_fsm_ctrl_current_state!=ENUM_ST_IDLE
+      && reg_fsm_ctrl_current_state!=ENUM_ST_BOOT
+      && reg_fsm_ctrl_current_state!=ENUM_ST_RESP && reg_count<8'(PARA_MAX_CELLS+1);
+    o_terminal_ready = i_rst_n_core && !reg_term_valid
+      && reg_fsm_ctrl_current_state!=ENUM_ST_IDLE
+      && reg_fsm_ctrl_current_state!=ENUM_ST_BOOT
+      && reg_fsm_ctrl_current_state!=ENUM_ST_RESP;
+    o_rsp_valid = i_rst_n_core && reg_fsm_ctrl_current_state==ENUM_ST_RESP;
+    o_rsp_data = o_rsp_valid ? reg_resp : 81'd0;
+    // Provisional next-state computation.
+    w_fsm_ctrl_nxt_state = reg_fsm_ctrl_current_state;
+    w_tag_nxt = reg_tag;
+    w_world_nxt = reg_world;
+    w_lane_nxt = reg_lane;
+    w_count_nxt = reg_count;
+    w_term_nxt = reg_term;
+    w_term_valid_nxt = reg_term_valid;
+    w_bad_row_nxt = reg_bad_row;
+    w_bad_tag_nxt = reg_bad_tag;
+    w_cell_nxt = reg_cell;
+    w_actor_nxt = reg_actor;
+    w_fail_nxt = reg_fail;
+    w_steps_nxt = reg_steps;
+    w_margin_nxt = reg_margin;
+    w_resp_nxt = reg_resp;
+    w_inflate_nxt = reg_inflate;
+    w_part_nxt = reg_part;
+    w_remain_nxt = reg_remain;
+    w_ahead_nxt = reg_ahead;
+    w_pose_nxt = reg_pose;
+    w_vel_nxt = reg_vel;
+    w_oa_nxt = reg_oa;
+    w_chk_nxt = reg_chk; w_obj_ok_nxt = reg_obj_ok; w_speed_ok_nxt = reg_speed_ok;
+    w_sp_nxt = reg_sp; w_sl_nxt = reg_sl; w_spv_nxt = 1'b0;
+    w_gapr_nxt = reg_gapr;
+    if (reg_fsm_ctrl_current_state==ENUM_ST_ISSUE) w_gapr_nxt = 64'(w_gap-w_reserve);
+    w_row_we = 1'b0; w_t0_nxt = reg_t0; w_tlast_nxt = reg_tlast;
+    w_obj_nxt[0]=reg_obj[0];
+    for (int idx=1; idx<PARA_MAX_OBJ; idx++) w_obj_nxt[idx]=reg_obj[idx];
+    if (i_row_valid && o_row_ready) begin
+      w_row_we = 1'b1;
+      w_tlast_nxt = i_row_data[288:257];
+      if (reg_count==8'd0) w_t0_nxt = i_row_data[288:257];
+      w_count_nxt = 8'(reg_count+8'd1);
+      w_bad_row_nxt = reg_bad_row || !w_row_ok;
+      w_bad_tag_nxt = reg_bad_tag || i_row_data[400:361]!=reg_tag
+        || i_row_data[360:353]!=reg_count;
+    end
+    if (i_terminal_valid && o_terminal_ready) begin
+      w_term_nxt=i_terminal_data;
+      w_term_valid_nxt=1'b1;
+    end
+    case (reg_fsm_ctrl_current_state)
+      ENUM_ST_BOOT: w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      ENUM_ST_IDLE: if (i_req_valid) begin
+        w_tag_nxt=i_req_data[8623:8584];
+        w_world_nxt=i_req_data[8583:384];
+        w_lane_nxt=i_req_data[383:0];
+        w_count_nxt='0; w_term_valid_nxt=1'b0; w_bad_row_nxt=1'b0;
+        w_bad_tag_nxt=1'b0; w_cell_nxt='0; w_actor_nxt='0; w_fail_nxt='0;
+        w_steps_nxt='0; w_margin_nxt=64'd10000000000; w_resp_nxt='0;
+        for (int idx=0; idx<PARA_MAX_OBJ; idx++) begin
+          w_obj_nxt[idx]=i_req_data[8575-idx*256 -:256];
+        end
+        w_chk_nxt='0; w_obj_ok_nxt=1'b1; w_speed_ok_nxt=1'b1;
+        w_fsm_ctrl_nxt_state=ENUM_ST_OCHK;
+      end
+      ENUM_ST_OCHK: begin
+        if (reg_chk < reg_world[8199:8192] && reg_chk < 8'(PARA_MAX_OBJ)) begin
+          if (!w_chk_range) w_obj_ok_nxt=1'b0;
+          w_chk_nxt=8'(reg_chk+8'd1);
+        end else begin
+          w_chk_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_ROW;
+        end
+      end
+      // Speed bound needs the final horizon, so it runs once all rows are in.
+      // Two-stage: register product/limit of object k, compare it in the next cycle.
+      ENUM_ST_SCHK: begin
+        if (reg_spv && reg_count > 8'd0 && reg_count <= 8'(PARA_MAX_CELLS+1)
+          && reg_sp > reg_sl) w_speed_ok_nxt=1'b0;
+        if (reg_chk < reg_world[8199:8192] && reg_chk < 8'(PARA_MAX_OBJ)) begin
+          w_sp_nxt=w_speed_product; w_sl_nxt=w_speed_limit; w_spv_nxt=1'b1;
+          w_chk_nxt=8'(reg_chk+8'd1);
+        end else if (!reg_spv) w_fsm_ctrl_nxt_state=ENUM_ST_FIN;
+      end
+      ENUM_ST_ROW: begin
+        if (reg_term_valid && reg_count==reg_term[7:0]
+          && (reg_fail!=8'd0 || reg_bad_row || w_pre_reason!=8'd0
+            || {1'b0,reg_cell}+9'd1>={1'b0,reg_count})) begin
+          w_chk_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_SCHK;
+        end
+        else if (reg_fail==8'd0 && !reg_bad_row
+          && {1'b0,reg_cell}+9'd1<{1'b0,reg_count}) begin
+          casez ({w_h==32'd0 || w_h>32'd100000,
+            reg_world[8199:8192]==8'd0 || reg_world[8199:8192]>8'(PARA_MAX_OBJ),
+            !w_obj_ok})
+            3'b1??: begin
+              w_fail_nxt=8'd23; w_steps_nxt=reg_cell;
+            end
+            3'b01?,3'b001: begin
+              w_cell_nxt=8'(reg_cell+8'd1);
+            end
+            default: w_fsm_ctrl_nxt_state=ENUM_ST_INFL;
+          endcase
+        end
+      end
+      ENUM_ST_INFL: w_fsm_ctrl_nxt_state=ENUM_ST_IWAIT;
+      ENUM_ST_IWAIT: if (w_su_done[0]) begin
+        w_inflate_nxt=w_su_infl[0];
+        w_actor_nxt='0;
+        w_fsm_ctrl_nxt_state=ENUM_ST_ACT;
+      end
+      ENUM_ST_ACT: begin
+        w_pose_nxt={w_mot[191:64],
+          64'(reg_rowc[255:192]-reg_inflate),64'(reg_rowc[191:128]+reg_inflate)};
+        w_vel_nxt={w_mot[63:0],reg_rowc[127:64]};
+        w_ahead_nxt=!f_lt(w_mot[191:128],reg_rowc[191:128]);
+        w_part_nxt=reg_hc;
+        w_remain_nxt='0;
+        if (w_event>32'd0 && w_event<reg_hc && w_object[63:32]>reg_elc) begin
+          w_part_nxt=w_event; w_remain_nxt=32'(reg_hc-w_event);
+        end
+        w_oa_nxt=w_object[159:128];
+        if (reg_elc>=w_object[63:32]) w_oa_nxt=w_object[31:0];
+        w_fsm_ctrl_nxt_state=ENUM_ST_ISSUE;
+      end
+      ENUM_ST_ISSUE: if (w_issue) w_fsm_ctrl_nxt_state=ENUM_ST_AWAIT;
+      ENUM_ST_AWAIT: if (w_all) begin
+        if (f_lt(w_piece_margin,reg_margin)) w_margin_nxt=w_piece_margin;
+        casez ({|w_su_fault,w_piece_margin[63]})
+          2'b1?: begin
+            w_fail_nxt=8'd4; w_steps_nxt=reg_cell;
+            w_fsm_ctrl_nxt_state=ENUM_ST_ROW;
+          end
+          2'b01: begin
+            w_fail_nxt=8'd24; w_margin_nxt=w_piece_margin;
+            w_steps_nxt=8'(reg_cell+8'd1); w_fsm_ctrl_nxt_state=ENUM_ST_ROW;
+          end
+          default: begin
+            for (int idx=0; idx<4; idx++) begin
+              w_pose_nxt[255-idx*64 -:64]=w_su_xo[idx];
+              w_vel_nxt[127-idx*32 -:32]=w_su_vo[idx];
+            end
+            if (w_su_vo[1]>32'd20000000) w_vel_nxt[95:64]=32'd20000000;
+            if (reg_remain!=32'd0) begin
+              w_part_nxt=reg_remain; w_remain_nxt='0; w_oa_nxt=w_object[31:0];
+              w_fsm_ctrl_nxt_state=ENUM_ST_ISSUE;
+            end else w_fsm_ctrl_nxt_state=ENUM_ST_STEP;
+          end
+        endcase
+      end
+      ENUM_ST_STEP: begin
+        if ({1'b0,reg_actor}+9'd1<{1'b0,reg_world[8199:8192]}) begin
+          w_actor_nxt=8'(reg_actor+8'd1); w_fsm_ctrl_nxt_state=ENUM_ST_ACT;
+        end else begin
+          w_cell_nxt=8'(reg_cell+8'd1); w_fsm_ctrl_nxt_state=ENUM_ST_ROW;
+        end
+      end
+      ENUM_ST_FIN: begin
+        casez ({w_pre_reason!=8'd0,reg_fail!=8'd0})
+          2'b1?: w_resp_nxt={1'b0,64'hffffffffffffffff,w_pre_reason,8'd0};
+          2'b01: w_resp_nxt={1'b0,reg_fail==8'd24 ? reg_margin : 64'hffffffffffffffff,
+            reg_fail,reg_steps};
+          default: w_resp_nxt={1'b1,reg_margin,8'd0,8'(reg_count-8'd1)};
+        endcase
+        w_fsm_ctrl_nxt_state=ENUM_ST_RESP;
+      end
+      ENUM_ST_RESP: if (i_rsp_ready) w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      default: w_fsm_ctrl_nxt_state=ENUM_ST_BOOT;
+    endcase
+  end
+
+  // State-unit operands: positions/velocities from the actor/ego bound slots.
+  always @* begin : p_com_arith
+    w_su_mode = (reg_fsm_ctrl_current_state==ENUM_ST_INFL);
+    w_su_start = '0;
+    if (reg_fsm_ctrl_current_state==ENUM_ST_INFL) w_su_start = 4'b0001;
+    if (w_issue) w_su_start = 4'b1111;
+    for (int idx=0; idx<4; idx++) begin
+      w_su_x[idx] = w_su_mode ? 64'd0 : reg_pose[255-idx*64 -:64];
+      w_su_v[idx] = w_su_mode ? 32'd0 : reg_vel[127-idx*32 -:32];
+      w_su_a[idx] = w_su_mode ? 32'd0 : ((idx<2) ? reg_oa : reg_rowc[63:32]);
+      w_su_up[idx] = (idx==1) || (idx==3);
+    end
+  end
+
+  // Control is asynchronously invalidated; payload RAM is guarded by count and job state.
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_ctrl
+    if (!i_rst_n_core) begin
+      reg_fsm_ctrl_current_state<=ENUM_ST_BOOT;
+      reg_tag<='0;
+      reg_world<='0;
+      reg_lane<='0;
+      reg_count<='0;
+      reg_term<='0;
+      reg_term_valid<='0;
+      reg_bad_row<='0;
+      reg_bad_tag<='0;
+      reg_cell<='0;
+      reg_actor<='0;
+      reg_fail<='0;
+      reg_steps<='0;
+      reg_margin<='0;
+      reg_resp<='0;
+      reg_inflate<='0;
+      reg_part<='0;
+      reg_remain<='0;
+      reg_ahead<='0;
+      reg_pose<='0;
+      reg_vel<='0;
+      reg_oa<='0;
+      reg_chk<='0; reg_obj_ok<=1'b1; reg_speed_ok<=1'b1; reg_t0<='0; reg_tlast<='0;
+      reg_rowc<='0; reg_hc<='0; reg_elc<='0; reg_sp<='0; reg_sl<='0; reg_spv<=1'b0;
+      reg_gapr<='0; reg_mot_ok<='0; reg_osel<=1'b0;
+    end else begin
+      reg_fsm_ctrl_current_state<=w_fsm_ctrl_nxt_state;
+      reg_tag<=w_tag_nxt;
+      reg_world<=w_world_nxt;
+      reg_lane<=w_lane_nxt;
+      reg_count<=w_count_nxt;
+      reg_term<=w_term_nxt;
+      reg_term_valid<=w_term_valid_nxt;
+      reg_bad_row<=w_bad_row_nxt;
+      reg_bad_tag<=w_bad_tag_nxt;
+      reg_cell<=w_cell_nxt;
+      reg_actor<=w_actor_nxt;
+      reg_fail<=w_fail_nxt;
+      reg_steps<=w_steps_nxt;
+      reg_margin<=w_margin_nxt;
+      reg_resp<=w_resp_nxt;
+      reg_inflate<=w_inflate_nxt;
+      reg_part<=w_part_nxt;
+      reg_remain<=w_remain_nxt;
+      reg_ahead<=w_ahead_nxt;
+      reg_pose<=w_pose_nxt;
+      reg_vel<=w_vel_nxt;
+      reg_oa<=w_oa_nxt;
+      reg_chk<=w_chk_nxt; reg_obj_ok<=w_obj_ok_nxt; reg_speed_ok<=w_speed_ok_nxt;
+      reg_t0<=w_t0_nxt; reg_tlast<=w_tlast_nxt;
+      reg_rowc<=w_row; reg_hc<=w_h; reg_elc<=w_elapsed;
+      reg_sp<=w_sp_nxt; reg_sl<=w_sl_nxt; reg_spv<=w_spv_nxt; reg_gapr<=w_gapr_nxt;
+      reg_osel<=w_fsm_ctrl_nxt_state==ENUM_ST_OCHK || w_fsm_ctrl_nxt_state==ENUM_ST_SCHK;
+      if (w_mot_ld) reg_mot_ok<='0;
+      else if (w_mot_we) reg_mot_ok[w_aidx]<=1'b1;
+    end
+  end
+
+  // Valid counts suppress all reads before the owning request initializes each slot.
+  always_ff @(posedge i_clk_core) begin : p_ff_payload
+    if (w_row_we && reg_count < 8'(PARA_MAX_CELLS+1)) reg_rows[reg_count]<=i_row_data[352:1];
+    for (int idx=0; idx<PARA_MAX_OBJ; idx++) reg_obj[idx]<=w_obj_nxt[idx];
+    if (w_mot_we) reg_motion[w_aidx]<={reg_pose[255:128],reg_vel[127:64]};
+  end
+
+  for (genvar gen_idx=0; gen_idx<4; gen_idx++) begin : gen_su
+    m_tsmx_geom_su u_geom_su (
+      .i_clk_core(i_clk_core), .i_rst_n_core(i_rst_n_core),
+      .i_start(w_su_start[gen_idx]), .i_mode(w_su_mode), .i_up(w_su_up[gen_idx]),
+      .i_x(w_su_x[gen_idx]), .i_v(w_su_v[gen_idx]), .i_a(w_su_a[gen_idx]),
+      .i_w(w_su_mode ? reg_hc : reg_part), .i_j(reg_rowc[31:0]),
+      .o_busy(w_su_busy[gen_idx]), .o_done(w_su_done[gen_idx]), .o_fault(w_su_fault[gen_idx]),
+      .o_x(w_su_xo[gen_idx]), .o_v(w_su_vo[gen_idx]), .o_disp(w_su_disp[gen_idx]),
+      .o_lin(w_su_lin[gen_idx]), .o_infl(w_su_infl[gen_idx])
+    );
+  end
+endmodule
+`default_nettype wire

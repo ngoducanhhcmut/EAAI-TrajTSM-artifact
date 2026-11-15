@@ -1,0 +1,271 @@
+/*
+ * Project      : TSM-X
+ * Author       : TSMX project (user)
+ * AI Flow      : VLSIT RTL Generator AI Automation Flow
+ * AI Flow Page : https://github.com/nguyenquanicd/VLSIT_RTL_Generator_AI_Model
+ * Date         : 2026-10-30
+ * Version      : 0.2
+ * Description  : B3 G1c state unit: one division-free outward envelope step
+ *                (golden disp_lb/disp_ub/advance_lb) or the per-cell jerk inflation.
+ *                One registered 64x64 multiplier; constant divisions use an
+ *                exact reciprocal estimate plus one correction (no divider).
+ * Assumptions  : Reset release is synchronized by the enclosing core wrapper.
+ *                B3 cells are at most 100000 ticks (rows reject h>DT first), so the
+ *                unit faults for w>100000; golden never reaches that branch.
+ * Deviations   : HIE-02: functional leaf; the enclosing system top is structural.
+ *                PAR-03: SI constants follow golden (T=1e6 ticks/s, 1 um, 1 um/s).
+ */
+`timescale 1ns/1ps
+`default_nettype none
+module m_tsmx_geom_su (
+  input wire i_clk_core,
+  input wire i_rst_n_core,
+  input wire i_start,
+  input wire i_mode,
+  input wire i_up,
+  input wire [63:0] i_x,
+  input wire [31:0] i_v,
+  input wire [31:0] i_a,
+  input wire [31:0] i_w,
+  input wire [31:0] i_j,
+  output logic o_busy,
+  output logic o_done,
+  output logic o_fault,
+  output logic [63:0] o_x,
+  output logic [31:0] o_v,
+  output logic [63:0] o_disp,
+  output logic [63:0] o_lin,
+  output logic [63:0] o_infl
+);
+  typedef enum logic [4:0] {
+    ENUM_ST_IDLE=5'd0, ENUM_ST_START=5'd1, ENUM_ST_P=5'd2, ENUM_ST_A1=5'd3,
+    ENUM_ST_W2=5'd4, ENUM_ST_A2=5'd5, ENUM_ST_PT=5'd6, ENUM_ST_VT=5'd7,
+    ENUM_ST_DISP=5'd8, ENUM_ST_LIN=5'd9, ENUM_ST_VEL=5'd10, ENUM_ST_I3=5'd11,
+    ENUM_ST_I4=5'd12, ENUM_ST_I5=5'd13, ENUM_ST_MWAIT=5'd14, ENUM_ST_DIV0=5'd15,
+    ENUM_ST_DIV1=5'd16, ENUM_ST_DIV2=5'd17, ENUM_ST_FIN=5'd18, ENUM_ST_LIN2=5'd19
+  } ctrl_state_type_def;
+  // Constant divisors: floor(N/D) = q0 + (N - q0*D >= D), q0 = (N*M) >> s.
+  localparam logic [1:0] LPARA_D1E6=2'd0, LPARA_D2E6=2'd1, LPARA_D2E12=2'd2, LPARA_D5P18=2'd3;
+
+  ctrl_state_type_def reg_fsm_ctrl_current_state, w_fsm_ctrl_nxt_state;
+  ctrl_state_type_def reg_ret, w_ret_nxt, reg_dret, w_dret_nxt;
+  logic reg_mode, reg_up, w_mode_nxt, w_up_nxt;
+  logic [63:0] reg_x, w_x_nxt;
+  logic [31:0] reg_v, reg_a, reg_w, reg_j, w_v_nxt, w_a_nxt, w_w_nxt, w_j_nxt;
+  logic reg_neg, w_neg_nxt, reg_stopped, w_stopped_nxt;
+  logic [63:0] reg_p, reg_a1, reg_w2, reg_a2, w_p_nxt, w_a1_nxt, w_w2_nxt, w_a2_nxt;
+  logic [63:0] reg_n, w_n_nxt;
+  logic reg_nle0, w_nle0_nxt;
+  logic [63:0] reg_disp, reg_lin, reg_infl, w_disp_nxt, w_lin_nxt, w_infl_nxt;
+  logic [63:0] reg_xo, w_xo_nxt;
+  logic [31:0] reg_vo, w_vo_nxt;
+  logic reg_fault, w_fault_nxt, reg_done, w_done_nxt;
+  // Divider subroutine.
+  logic [63:0] reg_dn, w_dn_nxt, reg_dq0, w_dq0_nxt, reg_dq, w_dq_nxt;
+  logic [1:0] reg_dsel, w_dsel_nxt;
+  // Multiplier pipeline: operands -> product -> output (three cycles).
+  logic w_mstart;
+  logic [63:0] w_ma, w_mb, reg_ma, reg_mb;
+  logic [127:0] reg_m1, reg_prod;
+  logic [2:0] reg_mvalid;
+  // Combinational helpers.
+  logic [63:0] w_am, w_dm, w_dd, w_r, w_sum, w_q0, w_vsum;
+  logic [7:0] w_ds;
+  logic [127:0] w_shift;
+  logic [64:0] w_xadd;
+
+  always_comb begin : p_com_main
+    w_am = reg_a[31] ? {32'd0,32'(~reg_a+1'b1)} : {32'd0,reg_a};
+    // Divider constants.
+    case (reg_dsel)
+      LPARA_D1E6:  begin w_dm=64'd9223372036854;        w_dd=64'd1000000;       w_ds=8'd63;  end
+      LPARA_D2E6:  begin w_dm=64'd4611686018427;        w_dd=64'd2000000;       w_ds=8'd63;  end
+      LPARA_D2E12: begin w_dm=64'd10141204801825835211; w_dd=64'd2000000000000; w_ds=8'd104; end
+      default:     begin w_dm=64'd10384593717069655;    w_dd=64'd3814697265625; w_ds=8'd95;  end
+    endcase
+    w_shift = reg_prod >> w_ds;
+    w_q0 = w_shift[63:0];
+    w_r = 64'(reg_dn - reg_prod[63:0]);
+
+    w_fsm_ctrl_nxt_state=reg_fsm_ctrl_current_state; w_ret_nxt=reg_ret; w_dret_nxt=reg_dret;
+    w_mode_nxt=reg_mode; w_up_nxt=reg_up; w_x_nxt=reg_x; w_v_nxt=reg_v; w_a_nxt=reg_a;
+    w_w_nxt=reg_w; w_j_nxt=reg_j; w_neg_nxt=reg_neg; w_stopped_nxt=reg_stopped;
+    w_p_nxt=reg_p; w_a1_nxt=reg_a1; w_w2_nxt=reg_w2; w_a2_nxt=reg_a2; w_n_nxt=reg_n;
+    w_nle0_nxt=reg_nle0; w_disp_nxt=reg_disp; w_lin_nxt=reg_lin; w_infl_nxt=reg_infl;
+    w_xo_nxt=reg_xo; w_vo_nxt=reg_vo; w_fault_nxt=reg_fault; w_done_nxt=reg_done;
+    w_dn_nxt=reg_dn; w_dq0_nxt=reg_dq0; w_dq_nxt=reg_dq; w_dsel_nxt=reg_dsel;
+    w_mstart=1'b0; w_ma='0; w_mb='0; w_sum='0; w_vsum='0; w_xadd='0;
+
+    case (reg_fsm_ctrl_current_state)
+      ENUM_ST_IDLE: if (i_start) begin
+        w_mode_nxt=i_mode; w_up_nxt=i_up; w_x_nxt=i_x; w_v_nxt=i_v; w_a_nxt=i_a;
+        w_w_nxt=i_w; w_j_nxt=i_j; w_done_nxt=1'b0; w_fault_nxt=1'b0;
+        w_disp_nxt='0; w_lin_nxt='0; w_infl_nxt='0; w_xo_nxt='0; w_vo_nxt='0;
+        w_fsm_ctrl_nxt_state=ENUM_ST_START;
+      end
+      ENUM_ST_START: begin
+        w_neg_nxt=reg_a[31];
+        // Golden advance_lb motion_range and checked(x); B3 cell bound w<=1e5.
+        if (reg_w>32'd100000 || (!reg_mode && (reg_v>32'd20000000
+          || (reg_a[31] && w_am>64'd8000000) || (!reg_a[31] && reg_a>32'd2000000)
+          || reg_x==64'h8000000000000000))) begin
+          w_fault_nxt=1'b1; w_fsm_ctrl_nxt_state=ENUM_ST_FIN;
+        end else begin
+          w_mstart=1'b1; w_ma={32'd0,reg_v}; w_mb={32'd0,reg_w};
+          w_ret_nxt=ENUM_ST_P; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+        end
+      end
+      ENUM_ST_P: begin
+        w_p_nxt=reg_prod[63:0];
+        w_mstart=1'b1; w_ma=w_am; w_mb={32'd0,reg_w};
+        w_ret_nxt=ENUM_ST_A1; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      ENUM_ST_A1: begin
+        w_a1_nxt=reg_prod[63:0];
+        w_mstart=1'b1; w_ma={32'd0,reg_w}; w_mb={32'd0,reg_w};
+        w_ret_nxt=ENUM_ST_W2; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      ENUM_ST_W2: begin
+        w_w2_nxt=reg_prod[63:0];
+        w_mstart=1'b1;
+        if (reg_mode) begin
+          w_ma=reg_prod[63:0]; w_mb={32'd0,reg_w}; w_ret_nxt=ENUM_ST_I3;
+        end else begin
+          w_ma=w_am; w_mb=reg_prod[63:0]; w_ret_nxt=ENUM_ST_A2;
+        end
+        w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      // Numerator N = 2*v*w*T + a*w^2 (|N| < 2^62 for v<=20 m/s, w<=0.1 s).
+      ENUM_ST_A2: begin
+        w_a2_nxt=reg_prod[63:0];
+        w_mstart=1'b1; w_ma=reg_p; w_mb=64'd2000000;
+        w_ret_nxt=ENUM_ST_PT; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      ENUM_ST_PT: begin
+        if (reg_neg) begin
+          w_nle0_nxt=(reg_prod[63:0] <= reg_a2);
+          w_n_nxt=64'(reg_prod[63:0]-reg_a2);
+        end else begin
+          w_nle0_nxt=(64'(reg_prod[63:0]+reg_a2)=='0);
+          w_n_nxt=64'(reg_prod[63:0]+reg_a2);
+        end
+        w_mstart=1'b1; w_ma={32'd0,reg_v}; w_mb=64'd1000000;
+        w_ret_nxt=ENUM_ST_VT; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      // Stopped within the cell: a<0 and v*T + a*w < 0.
+      ENUM_ST_VT: begin
+        w_stopped_nxt=reg_neg && (reg_prod[63:0] < reg_a1);
+        w_dret_nxt=ENUM_ST_DISP; w_fsm_ctrl_nxt_state=ENUM_ST_DIV0;
+        if (!reg_up) begin
+          // disp_lb = max(0, floor(N / 2T^2)).
+          w_dn_nxt=reg_n; w_dsel_nxt=LPARA_D2E12;
+          if (reg_nle0) begin w_disp_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_LIN; end
+        end else if (!reg_neg || !(reg_prod[63:0] < reg_a1)) begin
+          // disp_ub, not stopped: max(0, ceil(N / 2T^2)).
+          w_dn_nxt=64'(reg_n+64'd1999999999999); w_dsel_nxt=LPARA_D2E12;
+          if (reg_nle0) begin w_disp_nxt='0; w_fsm_ctrl_nxt_state=ENUM_ST_LIN; end
+        end else begin
+          // disp_ub, stopped: ceil(v*w / 2T).
+          w_dn_nxt=64'(reg_p+64'd1999999); w_dsel_nxt=LPARA_D2E6;
+        end
+      end
+      ENUM_ST_DISP: begin
+        w_disp_nxt=reg_dq; w_fsm_ctrl_nxt_state=ENUM_ST_LIN;
+      end
+      // lin = floor/ceil(v*w / T), the tangent term of swept_lb.
+      ENUM_ST_LIN: begin
+        w_dn_nxt=reg_up ? 64'(reg_p+64'd999999) : reg_p;
+        w_dsel_nxt=LPARA_D1E6; w_dret_nxt=ENUM_ST_LIN2; w_fsm_ctrl_nxt_state=ENUM_ST_DIV0;
+      end
+      // Velocity change |a|*w/T, rounded outward: ceil when (up && a>=0) || (!up && a<0).
+      ENUM_ST_LIN2: begin
+        w_lin_nxt=reg_dq;
+        w_dn_nxt=(reg_up != reg_neg) ? 64'(reg_a1+64'd999999) : reg_a1;
+        w_dsel_nxt=LPARA_D1E6; w_dret_nxt=ENUM_ST_VEL; w_fsm_ctrl_nxt_state=ENUM_ST_DIV0;
+      end
+      ENUM_ST_VEL: w_fsm_ctrl_nxt_state=ENUM_ST_FIN;
+      ENUM_ST_I3: begin
+        w_mstart=1'b1; w_ma={32'd0,reg_j}; w_mb=reg_prod[63:0];
+        w_ret_nxt=ENUM_ST_I4; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      // inflate = ceil(J*w^3 / 8T^3) + ceil(w^2 / 2T^2); 8T^3 = 2^21 * 5^18.
+      ENUM_ST_I4: begin
+        w_dn_nxt=64'(64'(reg_prod[127:21])+{63'd0,reg_prod[20:0]!='0}+64'd3814697265624);
+        w_dsel_nxt=LPARA_D5P18; w_dret_nxt=ENUM_ST_I5; w_fsm_ctrl_nxt_state=ENUM_ST_DIV0;
+      end
+      ENUM_ST_I5: begin
+        w_infl_nxt=64'(reg_dq+{63'd0,reg_w!='0}); w_fsm_ctrl_nxt_state=ENUM_ST_FIN;
+      end
+      ENUM_ST_MWAIT: if (reg_mvalid[2]) w_fsm_ctrl_nxt_state=reg_ret;
+      // Division subroutine: estimate, multiply back, one correction.
+      ENUM_ST_DIV0: begin
+        w_mstart=1'b1; w_ma=reg_dn; w_mb=w_dm;
+        w_ret_nxt=ENUM_ST_DIV1; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      ENUM_ST_DIV1: begin
+        w_dq0_nxt=w_q0;
+        w_mstart=1'b1; w_ma=w_q0; w_mb=w_dd;
+        w_ret_nxt=ENUM_ST_DIV2; w_fsm_ctrl_nxt_state=ENUM_ST_MWAIT;
+      end
+      ENUM_ST_DIV2: begin
+        w_dq_nxt=64'(reg_dq0+{63'd0,(w_r>=w_dd)});
+        w_fsm_ctrl_nxt_state=reg_dret;
+      end
+      ENUM_ST_FIN: begin
+        if (!reg_fault && !reg_mode) begin
+          // v' = max(0, v +/- q); x' = checked(x + disp).
+          if (reg_neg) begin
+            w_vsum=64'({32'd0,reg_v}-reg_dq);
+            w_vo_nxt=(reg_dq > {32'd0,reg_v}) ? 32'd0 : w_vsum[31:0];
+          end else begin
+            w_vsum=64'({32'd0,reg_v}+reg_dq);
+            w_vo_nxt=w_vsum[31:0];
+          end
+          w_xadd={reg_x[63],reg_x}+{1'b0,reg_disp};
+          w_xo_nxt=w_xadd[63:0];
+          if (w_xadd[64]!=w_xadd[63] || w_xadd[63:0]==64'h8000000000000000) w_fault_nxt=1'b1;
+          if (!reg_neg && w_vsum[63:32]!='0) w_fault_nxt=1'b1;
+        end
+        w_done_nxt=1'b1; w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+      end
+      default: w_fsm_ctrl_nxt_state=ENUM_ST_IDLE;
+    endcase
+
+    o_busy = (reg_fsm_ctrl_current_state!=ENUM_ST_IDLE);
+    o_done = reg_done && (reg_fsm_ctrl_current_state==ENUM_ST_IDLE);
+    o_fault = reg_fault;
+    o_x = reg_xo; o_v = reg_vo; o_disp = reg_disp; o_lin = reg_lin; o_infl = reg_infl;
+  end
+
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_ctrl
+    if (!i_rst_n_core) begin
+      reg_fsm_ctrl_current_state<=ENUM_ST_IDLE; reg_ret<=ENUM_ST_IDLE; reg_dret<=ENUM_ST_IDLE;
+      reg_mode<=1'b0; reg_up<=1'b0; reg_x<='0; reg_v<='0; reg_a<='0; reg_w<='0; reg_j<='0;
+      reg_neg<=1'b0; reg_stopped<=1'b0; reg_p<='0; reg_a1<='0; reg_w2<='0; reg_a2<='0;
+      reg_n<='0; reg_nle0<=1'b0; reg_disp<='0; reg_lin<='0; reg_infl<='0; reg_xo<='0;
+      reg_vo<='0; reg_fault<=1'b0; reg_done<=1'b0; reg_dn<='0; reg_dq0<='0; reg_dq<='0;
+      reg_dsel<='0;
+    end else begin
+      reg_fsm_ctrl_current_state<=w_fsm_ctrl_nxt_state; reg_ret<=w_ret_nxt; reg_dret<=w_dret_nxt;
+      reg_mode<=w_mode_nxt; reg_up<=w_up_nxt; reg_x<=w_x_nxt; reg_v<=w_v_nxt; reg_a<=w_a_nxt;
+      reg_w<=w_w_nxt; reg_j<=w_j_nxt; reg_neg<=w_neg_nxt; reg_stopped<=w_stopped_nxt;
+      reg_p<=w_p_nxt; reg_a1<=w_a1_nxt; reg_w2<=w_w2_nxt; reg_a2<=w_a2_nxt; reg_n<=w_n_nxt;
+      reg_nle0<=w_nle0_nxt; reg_disp<=w_disp_nxt; reg_lin<=w_lin_nxt; reg_infl<=w_infl_nxt;
+      reg_xo<=w_xo_nxt; reg_vo<=w_vo_nxt; reg_fault<=w_fault_nxt; reg_done<=w_done_nxt;
+      reg_dn<=w_dn_nxt; reg_dq0<=w_dq0_nxt; reg_dq<=w_dq_nxt; reg_dsel<=w_dsel_nxt;
+    end
+  end
+
+  // Registered multiplier: inputs, product and output stages (retimable into DSPs).
+  always_ff @(posedge i_clk_core or negedge i_rst_n_core) begin : p_ff_mul
+    if (!i_rst_n_core) begin
+      reg_ma<='0; reg_mb<='0; reg_m1<='0; reg_prod<='0; reg_mvalid<='0;
+    end else begin
+      if (w_mstart) begin reg_ma<=w_ma; reg_mb<=w_mb; end
+      reg_m1<=reg_ma*reg_mb;
+      reg_prod<=reg_m1;
+      reg_mvalid<={reg_mvalid[1:0],w_mstart};
+    end
+  end
+endmodule
+`default_nettype wire

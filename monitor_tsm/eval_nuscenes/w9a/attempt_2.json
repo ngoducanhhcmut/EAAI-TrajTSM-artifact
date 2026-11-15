@@ -1,0 +1,5 @@
+{
+    "status":  "STOPPED_FOR_PARALLEL_INPUT_BUILD",
+    "reason":  "Sequential input rebuild replaced by four resumable input builders; discarded prefix; no inference results.",
+    "runtime_seconds":  329.3450898
+}

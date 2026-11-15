@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\sim.vvp +MUTANT=35
+INJECT 35 B10_invalid_index: DUT output log_data stuck-X
+ASSERT_FAIL 35 B10_invalid_index cycle=10627 actual=00000000 expected=00000013
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:519: R-025 assertion failed
+       Time: 117022000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

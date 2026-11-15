@@ -1,0 +1,39 @@
+COMMAND py -3.13 -B run.py (8 independent Icarus shards, exhaustive disjoint ranges)
+ASSERT 0 hits=63
+ASSERT 1 hits=63
+ASSERT 2 hits=63
+ASSERT 3 hits=690136
+ASSERT 4 hits=604327
+ASSERT 5 hits=257175
+ASSERT 6 hits=171450
+ASSERT 7 hits=171450
+ASSERT 8 hits=171450
+ASSERT 9 hits=171450
+ASSERT 10 hits=171450
+ASSERT 11 hits=257175
+ASSERT 12 hits=257175
+ASSERT 13 hits=257175
+ASSERT 14 hits=257175
+ASSERT 15 hits=257175
+ASSERT 16 hits=176175
+ASSERT 17 hits=52350
+ASSERT 18 hits=1368
+ASSERT 19 hits=257175
+ASSERT 20 hits=85725
+ASSERT 21 hits=85725
+ASSERT 22 hits=171450
+ASSERT 23 hits=84
+ASSERT 24 hits=63
+ASSERT 25 hits=257175
+LATENCY op=0 min=2 max=2
+LATENCY op=1 min=2 max=14
+LATENCY op=2 min=2 max=12
+LATENCY op=3 min=2 max=10
+LATENCY op=4 min=2 max=18
+LATENCY op=5 min=2 max=2
+LATENCY op=6 min=2 max=2
+LATENCY op=7 min=2 max=32
+LATENCY op=8 min=2 max=2
+assertion failures: 0, assertions never exercised: 0
+PASS arith: golden=85725/85725 assertions=26 shards=21
+EXIT 0

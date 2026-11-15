@@ -1,0 +1,5 @@
+compile rc=0 s=94
+A_ref rc=1 s=431
+B_tick_ack_next rc=143 s=1716
+C_tick_exec_ack rc=143 s=1716
+D_tick_exec_stall50ms rc=143 s=1716

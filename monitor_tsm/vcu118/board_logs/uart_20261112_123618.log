@@ -1,0 +1,423 @@
+   122.450 
+   122.450 JOINT_FW v1 (Claude 10/11/2026) VCU118 Traj+TSM-X
+   122.509 SHIM_ID 75b0a1d4
+   132.092 DDRCRC tsm_req 80b244af tsm_meta 93255d47 wm_bank be194ec9 wp_golden 66f22d15 bert e55ceec8
+   133.123 PLANNER_BOOT cycles=781016
+   133.249 P1 j=0 f=1 wpx=2 pko=2 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4049258 pack=52816 fifo=124427 decide=350338 rsp2cmd=5256 wp=40866631,bdfef8d5,4104f77c,be01e630,41445c64,be55f9e6,417e949e,be5de4ae 
+   133.249 P1 j=1 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=347872 rsp2cmd=5256
+   133.258 P1 j=2 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=287097 rsp2cmd=5256
+   133.258 P1 j=3 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=275607 rsp2cmd=5256
+   133.258 P1 j=4 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=264681 rsp2cmd=5256
+   133.310 P1 j=5 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=252425 rsp2cmd=5256
+   133.372 P1 j=6 f=2 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4049958 pack=53200 fifo=124427 decide=12 rsp2cmd=5256 wp=407bba72,bdc403b2,40ffd2d5,bdec874d,413d10bd,be5ff66c,417572e8,be9cf369 
+   133.372 P1 j=7 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.372 P1 j=8 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.372 P1 j=9 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.433 P1 j=10 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.433 P1 j=11 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.494 P1 j=12 f=3 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4050667 pack=52978 fifo=124427 decide=12 rsp2cmd=5256 wp=407d17f6,bdb98186,410063b6,be3da0d2,413b6e49,beb6faca,41732e71,bef8b411 
+   133.494 P1 j=13 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.494 P1 j=14 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.494 P1 j=15 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.494 P1 j=16 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.554 P1 j=17 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.614 P1 j=18 f=4 wpx=2 pko=2 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4051017 pack=52883 fifo=124427 decide=365682 rsp2cmd=5256 wp=407c3552,be1bd680,40f80de0,be98fbd3,41361d93,bf0d1334,416a0317,bf4b8a67 
+   133.614 P1 j=19 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=364083 rsp2cmd=5256
+   133.614 P1 j=20 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=283249 rsp2cmd=5256
+   133.614 P1 j=21 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=271759 rsp2cmd=5256
+   133.674 P1 j=22 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=259301 rsp2cmd=5256
+   133.674 P1 j=23 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=248779 rsp2cmd=5256
+   133.736 P1 j=24 f=5 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4051014 pack=53009 fifo=124427 decide=12 rsp2cmd=5256 wp=40840634,bdd96fbd,41034ccd,be6fccfc,41410b35,bed4fa94,417ad10f,bf17fe15 
+   133.736 P1 j=25 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.736 P1 j=26 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.796 P1 j=27 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.796 P1 j=28 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.796 P1 j=29 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.857 P1 j=30 f=6 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4051720 pack=53001 fifo=124427 decide=12 rsp2cmd=5256 wp=4085827d,bdab7095,4107dec7,be245640,4149f186,be921d2a,41838473,beb39102 
+   133.857 P1 j=31 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.858 P1 j=32 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.917 P1 j=33 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.918 P1 j=34 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.918 P1 j=35 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   133.978 P1 j=36 f=7 wpx=2 pko=2 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4052076 pack=52798 fifo=124427 decide=383755 rsp2cmd=5256 wp=40889108,bdb43d6f,410d34b6,be4d0122,4152182a,beb25a1d,418acc82,becefd03 
+   133.978 P1 j=37 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=382156 rsp2cmd=5256
+   133.978 P1 j=38 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=295135 rsp2cmd=5256
+   134.039 P1 j=39 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=282677 rsp2cmd=5256
+   134.039 P1 j=40 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=270623 rsp2cmd=5256
+   134.039 P1 j=41 f=0 wpx=0 pko=0 rsp=006c3c0a47 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=258729 rsp2cmd=5256
+   134.099 P1 j=42 f=8 wpx=2 pko=2 rsp=2014100447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052785 pack=52839 fifo=124427 decide=740584 rsp2cmd=5256 wp=4089d94a,bda0f5a9,410eee0b,be577620,4152ae68,beb711c4,41896a06,bef9f125 
+   134.161 P1 j=43 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=369035 rsp2cmd=5256
+   134.161 P1 j=44 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=370367 rsp2cmd=5256
+   134.161 P1 j=45 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=367378 rsp2cmd=5256
+   134.161 P1 j=46 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=359175 rsp2cmd=5256
+   134.222 P1 j=47 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=357669 rsp2cmd=5256
+   134.283 P1 j=48 f=9 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052785 pack=53014 fifo=124427 decide=732842 rsp2cmd=5256 wp=4089cb1d,bcdab780,410b8bae,bdadb6e0,414e4b63,be2c4512,4185b194,be4d2936 
+   134.283 P1 j=49 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=367832 rsp2cmd=5256
+   134.283 P1 j=50 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=367127 rsp2cmd=5256
+   134.342 P1 j=51 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=363978 rsp2cmd=5256
+   134.342 P1 j=52 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=355472 rsp2cmd=5256
+   134.342 P1 j=53 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=354142 rsp2cmd=5256
+   134.403 P1 j=54 f=10 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052782 pack=52926 fifo=124427 decide=708026 rsp2cmd=5256 wp=408f4856,bce8fd12,410f180c,bda4ef21,415233a3,be033b52,4188a95e,be049452 
+   134.403 P1 j=55 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=362436 rsp2cmd=5256
+   134.463 P1 j=56 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=363566 rsp2cmd=5256
+   134.463 P1 j=57 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=361082 rsp2cmd=5256
+   134.463 P1 j=58 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=351709 rsp2cmd=5256
+   134.463 P1 j=59 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=350076 rsp2cmd=5256
+   134.587 P1 j=60 f=11 wpx=2 pko=2 rsp=0488000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4052788 pack=53021 fifo=124427 decide=340080 rsp2cmd=5256 wp=408a9d35,3c3b5d9b,410f69e6,bd8932fa,4152dd03,be0485ee,418ac40d,be0bda94 
+   134.587 P1 j=61 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=335059 rsp2cmd=5256
+   134.587 P1 j=62 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=331330 rsp2cmd=5256
+   134.587 P1 j=63 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=328367 rsp2cmd=5256
+   134.648 P1 j=64 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=326229 rsp2cmd=5256
+   134.648 P1 j=65 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=320505 rsp2cmd=5256
+   134.709 P1 j=66 f=12 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4052076 pack=59611 fifo=124427 decide=12 rsp2cmd=5256 wp=407abb6a,bd993c92,40fef99f,bda59f37,413e5462,bddb2aa5,417c4f31,be27c1e0 
+   134.709 P1 j=67 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   134.709 P1 j=68 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   134.709 P1 j=69 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   134.770 P1 j=70 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   134.770 P1 j=71 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   134.831 P1 j=72 f=13 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052076 pack=53004 fifo=124427 decide=616185 rsp2cmd=5256 wp=4051271c,bd8a2209,40d74de5,bda7e5dd,41235f19,bdc436b4,415a2dbf,be06b56c 
+   134.832 P1 j=73 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=322691 rsp2cmd=5256
+   134.832 P1 j=74 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=325858 rsp2cmd=5256
+   134.892 P1 j=75 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=322507 rsp2cmd=5256
+   134.893 P1 j=76 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=314565 rsp2cmd=5256
+   134.955 P1 j=77 f=14 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052435 pack=53005 fifo=124427 decide=560171 rsp2cmd=5256 wp=401a110c,bccfc56e,4097fce4,bd585f0a,40de2742,be053ea6,4110afd7,be6934d4 
+   134.955 P1 j=78 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=295317 rsp2cmd=5256
+   134.955 P1 j=79 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=297516 rsp2cmd=5256
+   135.015 P1 j=80 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=293761 rsp2cmd=5256
+   135.015 P1 j=81 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=283159 rsp2cmd=5256
+   135.015 P1 j=82 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=282595 rsp2cmd=5256
+   135.075 P1 j=83 f=15 wpx=2 pko=2 rsp=0488000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4052782 pack=52916 fifo=124427 decide=251277 rsp2cmd=5256 wp=3ff1fee1,bd53a33e,406eeb6c,bd807724,40ad0d7e,bd973704,40dd8d6a,bda46e0b 
+   135.075 P1 j=84 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=244362 rsp2cmd=5256
+   135.136 P1 j=85 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=241298 rsp2cmd=5256
+   135.136 P1 j=86 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=236803 rsp2cmd=5256
+   135.136 P1 j=87 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=233074 rsp2cmd=5256
+   135.136 P1 j=88 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=227510 rsp2cmd=5256
+   135.258 P1 j=89 f=16 wpx=2 pko=2 rsp=0488000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4052435 pack=52786 fifo=124427 decide=234829 rsp2cmd=5256 wp=3f93dd30,bd642956,4021820d,bdb243d0,406164d2,bdfcb27d,408f557b,bdc5dcdb 
+   135.258 P1 j=90 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=228377 rsp2cmd=5256
+   135.258 P1 j=91 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=224042 rsp2cmd=5256
+   135.258 P1 j=92 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=223680 rsp2cmd=5256
+   135.258 P1 j=93 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=217451 rsp2cmd=5256
+   135.320 P1 j=94 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=213621 rsp2cmd=5256
+   135.392 P1 j=95 f=17 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052432 pack=52731 fifo=124427 decide=520903 rsp2cmd=5256 wp=3f576a1a,3c64a5d4,3ff10bf5,3b2e3d30,403352b4,3cc7947a,407624a0,3dc9ef04 
+   135.392 P1 j=96 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=254416 rsp2cmd=5256
+   135.392 P1 j=97 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=257280 rsp2cmd=5256
+   135.392 P1 j=98 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=254594 rsp2cmd=5256
+   135.462 P1 j=99 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=247258 rsp2cmd=5256
+   135.462 P1 j=100 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=246955 rsp2cmd=5256
+   135.523 P1 j=101 f=18 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052438 pack=52799 fifo=124427 decide=511021 rsp2cmd=5256 wp=3f71aa46,bd4de174,3ffe3a9b,bd903c93,40413355,bdb8dbc0,4085c1af,bdc12efa 
+   135.523 P1 j=102 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=255895 rsp2cmd=5256
+   135.523 P1 j=103 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=257690 rsp2cmd=5256
+   135.523 P1 j=104 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=255871 rsp2cmd=5256
+   135.583 P1 j=105 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=247567 rsp2cmd=5256
+   135.584 P1 j=106 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=247365 rsp2cmd=5256
+   135.644 P1 j=107 f=19 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052435 pack=52811 fifo=124427 decide=538134 rsp2cmd=5256 wp=3f7c34fa,bd308e5e,4004fd65,bd561888,404da044,bd4607e2,408f7323,bd10e47d 
+   135.644 P1 j=108 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=259826 rsp2cmd=5256
+   135.644 P1 j=109 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=261924 rsp2cmd=5256
+   135.704 P1 j=110 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=259339 rsp2cmd=5256
+   135.704 P1 j=111 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=251498 rsp2cmd=5256
+   135.704 P1 j=112 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=251498 rsp2cmd=5256
+   135.764 P1 j=113 f=20 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4052785 pack=52628 fifo=124427 decide=541863 rsp2cmd=5256 wp=3f80e59b,bd8f625e,4018c1ea,bde0a851,40724536,be4bd7b6,40aa27c6,bed50e6c 
+   135.826 P1 j=114 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=268917 rsp2cmd=5256
+   135.826 P1 j=115 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=275510 rsp2cmd=5256
+   135.826 P1 j=116 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=272925 rsp2cmd=5256
+   135.826 P1 j=117 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=263653 rsp2cmd=5256
+   135.885 P1 j=118 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=265648 rsp2cmd=5256
+   135.945 P1 j=119 f=21 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4052782 pack=59824 fifo=124427 decide=239366 rsp2cmd=5256 wp=3f96c54b,bd402e86,402e6683,bd47dcc6,408a91ba,bda4d1b7,40c1ae91,bdd7dda3 
+   135.945 P1 j=120 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=237165 rsp2cmd=5256
+   135.945 P1 j=121 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=236239 rsp2cmd=5256
+   135.945 P1 j=122 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=233032 rsp2cmd=5256
+   136.005 P1 j=123 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=227569 rsp2cmd=5256
+   136.005 P1 j=124 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=225313 rsp2cmd=5256
+   136.005 P1 j=125 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=223680 rsp2cmd=5256
+   136.066 P1 j=126 f=22 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053132 pack=52901 fifo=124427 decide=599797 rsp2cmd=5256 wp=3fbca629,bd6bcc06,404c7b8f,bdda8139,40a0b133,be1b8862,40e4217e,be4af448 
+   136.066 P1 j=127 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=285830 rsp2cmd=5256
+   136.127 P1 j=128 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=289157 rsp2cmd=5256
+   136.127 P1 j=129 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=287439 rsp2cmd=5256
+   136.127 P1 j=130 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=279034 rsp2cmd=5256
+   136.127 P1 j=131 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=278630 rsp2cmd=5256
+   136.247 P1 j=132 f=23 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053494 pack=52794 fifo=124427 decide=615723 rsp2cmd=5256 wp=3fd208f6,bd9b3296,40646247,be16a6bc,40b6f904,be6c3546,4104cbec,beaa5841 
+   136.247 P1 j=133 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=308709 rsp2cmd=5256
+   136.247 P1 j=134 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=312036 rsp2cmd=5256
+   136.247 P1 j=135 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=310015 rsp2cmd=5256
+   136.308 P1 j=136 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=302940 rsp2cmd=5256
+   136.308 P1 j=137 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=302738 rsp2cmd=5256
+   136.369 P1 j=138 f=24 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4053491 pack=53022 fifo=124427 decide=12 rsp2cmd=5256 wp=3ffeaab1,bda2b9be,4081c8f0,be2084c0,40d04021,be912ff6,41134d3a,bef01b14 
+   136.369 P1 j=139 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.369 P1 j=140 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.369 P1 j=141 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.430 P1 j=142 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.430 P1 j=143 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.493 P1 j=144 f=25 wpx=2 pko=2 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=4053838 pack=52911 fifo=124427 decide=12 rsp2cmd=5256 wp=40064ba5,bde0a3a3,40832d68,be2a7062,40cbc4bd,be7ad6fc,410f0881,beb068a2 
+   136.493 P1 j=145 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.493 P1 j=146 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.493 P1 j=147 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.553 P1 j=148 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.553 P1 j=149 f=0 wpx=0 pko=0 rsp=056c3c0a56 rspok=1 cmdok=1 ncmd=1 ct=3 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256
+   136.614 P1 j=150 f=26 wpx=2 pko=2 rsp=0488000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4054191 pack=53084 fifo=124427 decide=301021 rsp2cmd=5256 wp=401addd2,bd79a59e,409d01b0,bddc1597,40f89c7d,be33f892,412c4540,be462124 
+   136.614 P1 j=151 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=296000 rsp2cmd=5256
+   136.614 P1 j=152 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=295638 rsp2cmd=5256
+   136.614 P1 j=153 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=292473 rsp2cmd=5256
+   136.676 P1 j=154 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=291345 rsp2cmd=5256
+   136.676 P1 j=155 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=290840 rsp2cmd=5256
+   136.737 P1 j=156 f=27 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4053850 pack=59674 fifo=124427 decide=300560 rsp2cmd=5256 wp=40219929,bd03196b,40a9dfff,bd9e0556,4104806e,bdcc4e44,413551cc,be063eba 
+   136.737 P1 j=157 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=300758 rsp2cmd=5256
+   136.797 P1 j=158 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=298662 rsp2cmd=5256
+   136.797 P1 j=159 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=298359 rsp2cmd=5256
+   136.797 P1 j=160 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=297694 rsp2cmd=5256
+   136.797 P1 j=161 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=295497 rsp2cmd=5256
+   136.859 P1 j=162 f=28 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053841 pack=52723 fifo=124427 decide=686473 rsp2cmd=5256 wp=40347ae5,bd9f9416,40bb575a,bde4f54d,41106935,be5ab406,413fab90,be87ce2a 
+   136.920 P1 j=163 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=327671 rsp2cmd=5256
+   136.920 P1 j=164 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=329365 rsp2cmd=5256
+   136.920 P1 j=165 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=328110 rsp2cmd=5256
+   136.920 P1 j=166 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=319141 rsp2cmd=5256
+   136.981 P1 j=167 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=317609 rsp2cmd=5256
+   137.041 P1 j=168 f=29 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4053838 pack=59471 fifo=124427 decide=369600 rsp2cmd=5256 wp=403758bb,bd7314bc,40b94c3c,bd9d6615,410d6143,be2becc6,413b8bbe,be468a74 
+   137.041 P1 j=169 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=369394 rsp2cmd=5256
+   137.041 P1 j=170 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=371389 rsp2cmd=5256
+   137.102 P1 j=171 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=376591 rsp2cmd=5256
+   137.102 P1 j=172 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=378687 rsp2cmd=5256
+   137.102 P1 j=173 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=379554 rsp2cmd=5256
+   137.102 P1 j=174 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=383384 rsp2cmd=5256
+   137.163 P1 j=175 f=30 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053844 pack=52784 fifo=124427 decide=696696 rsp2cmd=5256 wp=4041b176,bd1aab4f,40c51d39,bd3c2b96,4115fd42,bdd9b56b,4147461e,bdf5cf27 
+   137.224 P1 j=176 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=334632 rsp2cmd=5256
+   137.224 P1 j=177 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=336326 rsp2cmd=5256
+   137.224 P1 j=178 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=332571 rsp2cmd=5256
+   137.224 P1 j=179 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=326001 rsp2cmd=5256
+   137.285 P1 j=180 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=325235 rsp2cmd=5256
+   137.345 P1 j=181 f=31 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4053497 pack=59517 fifo=124427 decide=302783 rsp2cmd=5256 wp=40483bf8,bdadd494,40d012cc,bda7e146,411e1d81,bd5ddfc0,415419ad,bcb223a4 
+   137.345 P1 j=182 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=302316 rsp2cmd=5256
+   137.345 P1 j=183 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=297417 rsp2cmd=5256
+   137.405 P1 j=184 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=292257 rsp2cmd=5256
+   137.405 P1 j=185 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=288427 rsp2cmd=5256
+   137.405 P1 j=186 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=282400 rsp2cmd=5256
+   137.466 P1 j=187 f=32 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4053841 pack=59806 fifo=124427 decide=304450 rsp2cmd=5256 wp=4053c2eb,bd9e01d5,40dbfffa,bd48b0dc,412560cc,bd2e97c2,415e3465,bcbe9114 
+   137.466 P1 j=188 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=304749 rsp2cmd=5256
+   137.526 P1 j=189 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=300414 rsp2cmd=5256
+   137.526 P1 j=190 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=295818 rsp2cmd=5256
+   137.526 P1 j=191 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=291525 rsp2cmd=5256
+   137.526 P1 j=192 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=287392 rsp2cmd=5256
+   137.587 P1 j=193 f=33 wpx=2 pko=2 rsp=00a8000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=4053138 pack=59234 fifo=124427 decide=360738 rsp2cmd=5256 wp=405cb34f,bd5a423e,40e84a8a,bd5bd072,4130c27c,bddf48a7,416b231b,bde77377 
+   137.648 P1 j=194 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=360734 rsp2cmd=5256
+   137.648 P1 j=195 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=362165 rsp2cmd=5256
+   137.648 P1 j=196 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=363192 rsp2cmd=5256
+   137.648 P1 j=197 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=363394 rsp2cmd=5256
+   137.713 P1 j=198 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=364825 rsp2cmd=5256
+   137.775 P1 j=199 f=34 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053138 pack=52738 fifo=124427 decide=745661 rsp2cmd=5256 wp=40729854,bd9b9ce7,40ffc828,bd8acca3,413fe1e1,bdcfb2fa,417d1930,bd6dce90 
+   137.775 P1 j=200 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=359527 rsp2cmd=5256
+   137.775 P1 j=201 f=0 wpx=0 pko=0 rsp=0064000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=361322 rsp2cmd=5256
+   137.842 P1 j=202 f=0 wpx=0 pko=0 rsp=0044000647 rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=357508 rsp2cmd=5256
+   137.842 P1 j=203 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=349970 rsp2cmd=5256
+   137.842 P1 j=204 f=0 wpx=0 pko=0 rsp=0048000647 rspok=1 cmdok=1 ncmd=1 ct=2 plan=0 pack=0 fifo=124427 decide=349768 rsp2cmd=5256
+   137.902 P1 j=205 f=35 wpx=2 pko=2 rsp=2014000447 rspok=1 cmdok=1 ncmd=1 ct=0 plan=4053144 pack=52701 fifo=124427 decide=759329 rsp2cmd=5256 wp=407a4ab6,bda52960,41022686,bd636842,41440bdc,bde0d813,41827bfb,bd44cbd6 
+   137.902 P1 j=206 f=0 wpx=0 pko=0 rsp=006400063f rspok=1 cmdok=1 ncmd=1 ct=1 plan=0 pack=0 fifo=124427 decide=362396 rsp2cmd=5256
+   137.902 PASS1_SUMMARY frames=35 wp_exact=35 packets=35 responses=207 commands=207 jobs=207
+   137.964 P2 j=0 f=1 late_us=1 rsp=006c3c0a47 plan=4049258 pack=52816 fifo=124427 decide=350338 rsp2cmd=5256 e2e=5094914 pend_prev=0 ack_us=0 brake=1
+   138.024 P2 j=1 f=0 late_us=41751 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=347872 rsp2cmd=5256 e2e=574035 pend_prev=0 ack_us=0 brake=1
+   138.084 P2 j=2 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=287097 rsp2cmd=5256 e2e=513255 pend_prev=0 ack_us=0 brake=1
+   138.146 P2 j=3 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=275607 rsp2cmd=5256 e2e=501778 pend_prev=0 ack_us=0 brake=1
+   138.299 P2 j=4 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=264681 rsp2cmd=5256 e2e=490816 pend_prev=0 ack_us=0 brake=1
+   138.360 P2 j=5 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=252425 rsp2cmd=5256 e2e=478574 pend_prev=0 ack_us=0 brake=1
+   138.516 P2 j=6 f=2 late_us=0 rsp=056c3c0a56 plan=4049958 pack=53200 fifo=124427 decide=12 rsp2cmd=5256 e2e=4745670 pend_prev=0 ack_us=0 brake=1
+   138.516 P2 j=7 f=0 late_us=37909 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226165 pend_prev=0 ack_us=0 brake=1
+   138.576 P2 j=8 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226150 pend_prev=0 ack_us=0 brake=1
+   138.637 P2 j=9 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226152 pend_prev=0 ack_us=0 brake=1
+   138.798 P2 j=10 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226180 pend_prev=0 ack_us=0 brake=1
+   138.859 P2 j=11 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226154 pend_prev=0 ack_us=0 brake=1
+   139.017 P2 j=12 f=3 late_us=0 rsp=056c3c0a56 plan=4050664 pack=52978 fifo=124427 decide=12 rsp2cmd=5256 e2e=4746138 pend_prev=0 ack_us=0 brake=1
+   139.017 P2 j=13 f=0 late_us=38003 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226150 pend_prev=0 ack_us=0 brake=1
+   139.078 P2 j=14 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226172 pend_prev=0 ack_us=0 brake=1
+   139.139 P2 j=15 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226156 pend_prev=0 ack_us=0 brake=1
+   139.307 P2 j=16 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226158 pend_prev=0 ack_us=0 brake=1
+   139.369 P2 j=17 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226178 pend_prev=0 ack_us=0 brake=1
+   139.521 P2 j=18 f=4 late_us=0 rsp=006c3c0a47 plan=4051373 pack=52883 fifo=124427 decide=365682 rsp2cmd=5256 e2e=5112376 pend_prev=0 ack_us=0 brake=1
+   139.521 P2 j=19 f=0 late_us=42012 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=364083 rsp2cmd=5256 e2e=590227 pend_prev=0 ack_us=0 brake=1
+   139.582 P2 j=20 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=283249 rsp2cmd=5256 e2e=509398 pend_prev=0 ack_us=0 brake=1
+   139.642 P2 j=21 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=271759 rsp2cmd=5256 e2e=497896 pend_prev=0 ack_us=0 brake=1
+   139.795 P2 j=22 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=259301 rsp2cmd=5256 e2e=485444 pend_prev=0 ack_us=0 brake=1
+   139.856 P2 j=23 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=248779 rsp2cmd=5256 e2e=474916 pend_prev=0 ack_us=0 brake=1
+   140.018 P2 j=24 f=5 late_us=0 rsp=056c3c0a56 plan=4051023 pack=53009 fifo=124427 decide=12 rsp2cmd=5256 e2e=4746526 pend_prev=0 ack_us=0 brake=1
+   140.019 P2 j=25 f=0 late_us=38009 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226151 pend_prev=0 ack_us=0 brake=1
+   140.079 P2 j=26 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226176 pend_prev=0 ack_us=0 brake=1
+   140.141 P2 j=27 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226151 pend_prev=0 ack_us=0 brake=1
+   140.290 P2 j=28 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226179 pend_prev=0 ack_us=0 brake=1
+   140.350 P2 j=29 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226177 pend_prev=0 ack_us=0 brake=1
+   140.518 P2 j=30 f=6 late_us=0 rsp=056c3c0a56 plan=4051720 pack=53001 fifo=124427 decide=12 rsp2cmd=5256 e2e=4747209 pend_prev=0 ack_us=0 brake=1
+   140.518 P2 j=31 f=0 late_us=38017 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226150 pend_prev=0 ack_us=0 brake=1
+   140.577 P2 j=32 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226165 pend_prev=0 ack_us=0 brake=1
+   140.637 P2 j=33 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226150 pend_prev=0 ack_us=0 brake=1
+   140.793 P2 j=34 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226171 pend_prev=0 ack_us=0 brake=1
+   140.855 P2 j=35 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226151 pend_prev=0 ack_us=0 brake=1
+   141.022 P2 j=36 f=7 late_us=0 rsp=006c3c0a47 plan=4052073 pack=52798 fifo=124427 decide=383755 rsp2cmd=5256 e2e=5131092 pend_prev=0 ack_us=0 brake=1
+   141.022 P2 j=37 f=0 late_us=42200 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=382156 rsp2cmd=5256 e2e=608312 pend_prev=0 ack_us=0 brake=1
+   141.082 P2 j=38 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=295135 rsp2cmd=5256 e2e=521272 pend_prev=0 ack_us=0 brake=1
+   141.142 P2 j=39 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=282677 rsp2cmd=5256 e2e=508815 pend_prev=0 ack_us=0 brake=1
+   141.295 P2 j=40 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=270623 rsp2cmd=5256 e2e=496813 pend_prev=0 ack_us=0 brake=1
+   141.355 P2 j=41 f=0 late_us=0 rsp=006c3c0a47 plan=0 pack=0 fifo=124427 decide=258729 rsp2cmd=5256 e2e=484905 pend_prev=0 ack_us=0 brake=1
+   141.526 P2 j=42 f=8 late_us=0 rsp=2014100447 plan=4052791 pack=52839 fifo=124427 decide=740584 rsp2cmd=5256 e2e=5488736 pend_prev=0 ack_us=0 brake=1
+   141.526 P2 j=43 f=0 late_us=45777 rsp=006800063d plan=0 pack=0 fifo=124427 decide=369027 rsp2cmd=5256 e2e=595206 pend_prev=0 ack_us=0 brake=1
+   141.586 P2 j=44 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=368463 rsp2cmd=5256 e2e=594570 pend_prev=0 ack_us=0 brake=1
+   141.647 P2 j=45 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=363564 rsp2cmd=5256 e2e=589699 pend_prev=0 ack_us=0 brake=1
+   141.796 P2 j=46 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=359170 rsp2cmd=5256 e2e=585352 pend_prev=0 ack_us=0 brake=1
+   141.857 P2 j=47 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=357664 rsp2cmd=5256 e2e=583835 pend_prev=0 ack_us=0 brake=1
+   142.027 P2 j=48 f=9 late_us=0 rsp=2014000447 plan=4052788 pack=53014 fifo=124427 decide=732837 rsp2cmd=5256 e2e=5481123 pend_prev=0 ack_us=0 brake=1
+   142.027 P2 j=49 f=0 late_us=45701 rsp=006800063d plan=0 pack=0 fifo=124427 decide=367824 rsp2cmd=5256 e2e=593971 pend_prev=0 ack_us=0 brake=1
+   142.088 P2 j=50 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=365223 rsp2cmd=5256 e2e=591389 pend_prev=0 ack_us=0 brake=1
+   142.149 P2 j=51 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=360164 rsp2cmd=5256 e2e=586299 pend_prev=0 ack_us=0 brake=1
+   142.296 P2 j=52 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=355467 rsp2cmd=5256 e2e=581596 pend_prev=0 ack_us=0 brake=1
+   142.356 P2 j=53 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=354137 rsp2cmd=5256 e2e=580295 pend_prev=0 ack_us=0 brake=1
+   142.528 P2 j=54 f=10 late_us=0 rsp=2014000447 plan=4052785 pack=52926 fifo=124427 decide=708021 rsp2cmd=5256 e2e=5456214 pend_prev=0 ack_us=0 brake=1
+   142.528 P2 j=55 f=0 late_us=45533 rsp=006800063d plan=0 pack=0 fifo=124427 decide=362428 rsp2cmd=5256 e2e=588596 pend_prev=0 ack_us=0 brake=1
+   142.588 P2 j=56 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=361662 rsp2cmd=5256 e2e=587776 pend_prev=0 ack_us=0 brake=1
+   142.648 P2 j=57 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=357268 rsp2cmd=5256 e2e=583436 pend_prev=0 ack_us=0 brake=1
+   142.795 P2 j=58 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=351704 rsp2cmd=5256 e2e=577842 pend_prev=0 ack_us=0 brake=1
+   142.856 P2 j=59 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=350071 rsp2cmd=5256 e2e=576236 pend_prev=0 ack_us=0 brake=1
+   143.021 P2 j=60 f=11 late_us=0 rsp=0488000647 plan=4052788 pack=53021 fifo=124427 decide=340075 rsp2cmd=5256 e2e=5088343 pend_prev=0 ack_us=0 brake=1
+   143.021 P2 j=61 f=0 late_us=41859 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=335054 rsp2cmd=5256 e2e=561185 pend_prev=0 ack_us=0 brake=1
+   143.084 P2 j=62 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=331325 rsp2cmd=5256 e2e=557459 pend_prev=0 ack_us=0 brake=1
+   143.144 P2 j=63 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=328362 rsp2cmd=5256 e2e=554521 pend_prev=0 ack_us=0 brake=1
+   143.294 P2 j=64 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=326224 rsp2cmd=5256 e2e=552371 pend_prev=0 ack_us=0 brake=1
+   143.357 P2 j=65 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=320500 rsp2cmd=5256 e2e=546652 pend_prev=0 ack_us=0 brake=1
+   143.518 P2 j=66 f=12 late_us=0 rsp=056c3c0a56 plan=4052070 pack=59611 fifo=124427 decide=12 rsp2cmd=5256 e2e=4754211 pend_prev=0 ack_us=0 brake=1
+   143.518 P2 j=67 f=0 late_us=38167 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226167 pend_prev=0 ack_us=0 brake=1
+   143.579 P2 j=68 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226174 pend_prev=0 ack_us=0 brake=1
+   143.641 P2 j=69 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226148 pend_prev=0 ack_us=0 brake=1
+   143.791 P2 j=70 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226182 pend_prev=0 ack_us=0 brake=1
+   143.860 P2 j=71 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226156 pend_prev=0 ack_us=0 brake=1
+   144.023 P2 j=72 f=13 late_us=0 rsp=2014000447 plan=4052076 pack=53004 fifo=124427 decide=616185 rsp2cmd=5256 e2e=5363751 pend_prev=0 ack_us=0 brake=1
+   144.024 P2 j=73 f=0 late_us=44612 rsp=006800063d plan=0 pack=0 fifo=124427 decide=322683 rsp2cmd=5256 e2e=548835 pend_prev=0 ack_us=0 brake=1
+   144.087 P2 j=74 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=323954 rsp2cmd=5256 e2e=550117 pend_prev=0 ack_us=0 brake=1
+   144.149 P2 j=75 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=318693 rsp2cmd=5256 e2e=544805 pend_prev=0 ack_us=0 brake=1
+   144.295 P2 j=76 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=314560 rsp2cmd=5256 e2e=540749 pend_prev=0 ack_us=0 brake=1
+   144.422 P2 j=77 f=14 late_us=0 rsp=2014000447 plan=4052429 pack=53005 fifo=124427 decide=560166 rsp2cmd=5256 e2e=5308043 pend_prev=0 ack_us=0 brake=1
+   144.422 P2 j=78 f=0 late_us=44055 rsp=006800063d plan=0 pack=0 fifo=124427 decide=295309 rsp2cmd=5256 e2e=521490 pend_prev=0 ack_us=0 brake=1
+   144.486 P2 j=79 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=295612 rsp2cmd=5256 e2e=521747 pend_prev=0 ack_us=0 brake=1
+   144.549 P2 j=80 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=289947 rsp2cmd=5256 e2e=516102 pend_prev=0 ack_us=0 brake=1
+   144.694 P2 j=81 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=283154 rsp2cmd=5256 e2e=509306 pend_prev=0 ack_us=0 brake=1
+   144.756 P2 j=82 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=282590 rsp2cmd=5256 e2e=508706 pend_prev=0 ack_us=0 brake=1
+   144.918 P2 j=83 f=15 late_us=0 rsp=0488000647 plan=4052782 pack=52916 fifo=124427 decide=251272 rsp2cmd=5256 e2e=4999454 pend_prev=0 ack_us=0 brake=1
+   144.918 P2 j=84 f=0 late_us=40964 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=244357 rsp2cmd=5256 e2e=470495 pend_prev=0 ack_us=0 brake=1
+   144.979 P2 j=85 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=241293 rsp2cmd=5256 e2e=467424 pend_prev=0 ack_us=0 brake=1
+   145.039 P2 j=86 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=236798 rsp2cmd=5256 e2e=462935 pend_prev=0 ack_us=0 brake=1
+   145.193 P2 j=87 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=233069 rsp2cmd=5256 e2e=459216 pend_prev=0 ack_us=0 brake=1
+   145.253 P2 j=88 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=227505 rsp2cmd=5256 e2e=453621 pend_prev=0 ack_us=0 brake=1
+   145.422 P2 j=89 f=16 late_us=0 rsp=0488000647 plan=4052429 pack=52786 fifo=124427 decide=234824 rsp2cmd=5256 e2e=4982492 pend_prev=0 ack_us=0 brake=1
+   145.423 P2 j=90 f=0 late_us=40798 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=228372 rsp2cmd=5256 e2e=454509 pend_prev=0 ack_us=0 brake=1
+   145.483 P2 j=91 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=224037 rsp2cmd=5256 e2e=450141 pend_prev=0 ack_us=0 brake=1
+   145.543 P2 j=92 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=223675 rsp2cmd=5256 e2e=449825 pend_prev=0 ack_us=0 brake=1
+   145.692 P2 j=93 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=217446 rsp2cmd=5256 e2e=443543 pend_prev=0 ack_us=0 brake=1
+   145.752 P2 j=94 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=213616 rsp2cmd=5256 e2e=439734 pend_prev=0 ack_us=0 brake=1
+   145.922 P2 j=95 f=17 late_us=0 rsp=2014000447 plan=4052426 pack=52731 fifo=124427 decide=520898 rsp2cmd=5256 e2e=5268577 pend_prev=0 ack_us=0 brake=1
+   145.922 P2 j=96 f=0 late_us=43657 rsp=006800063d plan=0 pack=0 fifo=124427 decide=254408 rsp2cmd=5256 e2e=480538 pend_prev=0 ack_us=0 brake=1
+   145.984 P2 j=97 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=255376 rsp2cmd=5256 e2e=481492 pend_prev=0 ack_us=0 brake=1
+   146.045 P2 j=98 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=250780 rsp2cmd=5256 e2e=476958 pend_prev=0 ack_us=0 brake=1
+   146.194 P2 j=99 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=247253 rsp2cmd=5256 e2e=473425 pend_prev=0 ack_us=0 brake=1
+   146.255 P2 j=100 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=246950 rsp2cmd=5256 e2e=473070 pend_prev=0 ack_us=0 brake=1
+   146.315 P2 j=101 f=18 late_us=0 rsp=2014000447 plan=4052435 pack=52799 fifo=124427 decide=511016 rsp2cmd=5256 e2e=5258766 pend_prev=0 ack_us=0 brake=1
+   146.376 P2 j=102 f=0 late_us=43642 rsp=006800063d plan=0 pack=0 fifo=124427 decide=255887 rsp2cmd=5256 e2e=482045 pend_prev=0 ack_us=0 brake=1
+   146.437 P2 j=103 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=255786 rsp2cmd=5256 e2e=481908 pend_prev=0 ack_us=0 brake=1
+   146.497 P2 j=104 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=252057 rsp2cmd=5256 e2e=478166 pend_prev=0 ack_us=0 brake=1
+   146.643 P2 j=105 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=247562 rsp2cmd=5256 e2e=473660 pend_prev=0 ack_us=0 brake=1
+   146.702 P2 j=106 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=247360 rsp2cmd=5256 e2e=473464 pend_prev=0 ack_us=0 brake=1
+   146.874 P2 j=107 f=19 late_us=0 rsp=2014000447 plan=4052788 pack=52811 fifo=124427 decide=538129 rsp2cmd=5256 e2e=5286200 pend_prev=0 ack_us=0 brake=1
+   146.874 P2 j=108 f=0 late_us=43920 rsp=006800063d plan=0 pack=0 fifo=124427 decide=259818 rsp2cmd=5256 e2e=485994 pend_prev=0 ack_us=0 brake=1
+   146.935 P2 j=109 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=260020 rsp2cmd=5256 e2e=486208 pend_prev=0 ack_us=0 brake=1
+   146.996 P2 j=110 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=255525 rsp2cmd=5256 e2e=481618 pend_prev=0 ack_us=0 brake=1
+   147.142 P2 j=111 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=251493 rsp2cmd=5256 e2e=477612 pend_prev=0 ack_us=0 brake=1
+   147.204 P2 j=112 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=251493 rsp2cmd=5256 e2e=477641 pend_prev=0 ack_us=0 brake=1
+   147.375 P2 j=113 f=20 late_us=0 rsp=2014000447 plan=4052788 pack=52628 fifo=124427 decide=541858 rsp2cmd=5256 e2e=5289763 pend_prev=0 ack_us=0 brake=1
+   147.375 P2 j=114 f=0 late_us=43957 rsp=006800063d plan=0 pack=0 fifo=124427 decide=268909 rsp2cmd=5256 e2e=495037 pend_prev=0 ack_us=0 brake=1
+   147.438 P2 j=115 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=273606 rsp2cmd=5256 e2e=499719 pend_prev=0 ack_us=0 brake=1
+   147.498 P2 j=116 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=269111 rsp2cmd=5256 e2e=495218 pend_prev=0 ack_us=0 brake=1
+   147.645 P2 j=117 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=263648 rsp2cmd=5256 e2e=489804 pend_prev=0 ack_us=0 brake=1
+   147.705 P2 j=118 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=265643 rsp2cmd=5256 e2e=491773 pend_prev=0 ack_us=0 brake=1
+   147.871 P2 j=119 f=21 late_us=0 rsp=00a8000647 plan=4053138 pack=59824 fifo=124427 decide=239361 rsp2cmd=5256 e2e=4994796 pend_prev=0 ack_us=0 brake=1
+   147.872 P2 j=120 f=0 late_us=41008 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=237160 rsp2cmd=5256 e2e=463296 pend_prev=0 ack_us=0 brake=1
+   147.932 P2 j=121 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=236234 rsp2cmd=5256 e2e=462390 pend_prev=0 ack_us=0 brake=1
+   147.992 P2 j=122 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=233027 rsp2cmd=5256 e2e=459216 pend_prev=0 ack_us=0 brake=1
+   148.147 P2 j=123 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=227564 rsp2cmd=5256 e2e=453696 pend_prev=0 ack_us=0 brake=1
+   148.208 P2 j=124 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=225308 rsp2cmd=5256 e2e=451432 pend_prev=0 ack_us=0 brake=1
+   148.344 P2 j=125 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=223675 rsp2cmd=5256 e2e=449799 pend_prev=0 ack_us=0 brake=1
+   148.405 P2 j=126 f=22 late_us=0 rsp=2014000447 plan=4053135 pack=52901 fifo=124427 decide=599792 rsp2cmd=5256 e2e=5348293 pend_prev=0 ack_us=0 brake=1
+   148.405 P2 j=127 f=0 late_us=44543 rsp=006800063d plan=0 pack=0 fifo=124427 decide=285822 rsp2cmd=5256 e2e=511955 pend_prev=0 ack_us=0 brake=1
+   148.465 P2 j=128 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=287253 rsp2cmd=5256 e2e=513383 pend_prev=0 ack_us=0 brake=1
+   148.595 P2 j=129 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=283625 rsp2cmd=5256 e2e=509776 pend_prev=0 ack_us=0 brake=1
+   148.657 P2 j=130 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=279029 rsp2cmd=5256 e2e=505153 pend_prev=0 ack_us=0 brake=1
+   148.798 P2 j=131 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=278625 rsp2cmd=5256 e2e=504772 pend_prev=0 ack_us=0 brake=1
+   148.928 P2 j=132 f=23 late_us=0 rsp=2014000447 plan=4053844 pack=52794 fifo=124427 decide=615718 rsp2cmd=5256 e2e=5364804 pend_prev=0 ack_us=0 brake=1
+   148.928 P2 j=133 f=0 late_us=44706 rsp=006800063d plan=0 pack=0 fifo=124427 decide=308701 rsp2cmd=5256 e2e=534831 pend_prev=0 ack_us=0 brake=1
+   148.988 P2 j=134 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=310132 rsp2cmd=5256 e2e=536332 pend_prev=0 ack_us=0 brake=1
+   149.050 P2 j=135 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=306201 rsp2cmd=5256 e2e=532354 pend_prev=0 ack_us=0 brake=1
+   149.196 P2 j=136 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=302935 rsp2cmd=5256 e2e=529105 pend_prev=0 ack_us=0 brake=1
+   149.257 P2 j=137 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=302733 rsp2cmd=5256 e2e=528913 pend_prev=0 ack_us=0 brake=1
+   149.417 P2 j=138 f=24 late_us=0 rsp=056c3c0a56 plan=4053497 pack=53022 fifo=124427 decide=12 rsp2cmd=5256 e2e=4749002 pend_prev=0 ack_us=0 brake=1
+   149.417 P2 j=139 f=0 late_us=38201 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226154 pend_prev=0 ack_us=0 brake=1
+   149.478 P2 j=140 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226151 pend_prev=0 ack_us=0 brake=1
+   149.539 P2 j=141 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226171 pend_prev=0 ack_us=0 brake=1
+   149.690 P2 j=142 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226170 pend_prev=0 ack_us=0 brake=1
+   149.753 P2 j=143 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226152 pend_prev=0 ack_us=0 brake=1
+   149.925 P2 j=144 f=25 late_us=0 rsp=056c3c0a56 plan=4054191 pack=52911 fifo=124427 decide=12 rsp2cmd=5256 e2e=4749635 pend_prev=0 ack_us=0 brake=1
+   149.925 P2 j=145 f=0 late_us=38207 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226154 pend_prev=0 ack_us=0 brake=1
+   149.987 P2 j=146 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226171 pend_prev=0 ack_us=0 brake=1
+   150.048 P2 j=147 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226153 pend_prev=0 ack_us=0 brake=1
+   150.195 P2 j=148 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226174 pend_prev=0 ack_us=0 brake=1
+   150.255 P2 j=149 f=0 late_us=0 rsp=056c3c0a56 plan=0 pack=0 fifo=124427 decide=12 rsp2cmd=5256 e2e=226157 pend_prev=0 ack_us=0 brake=1
+   150.421 P2 j=150 f=26 late_us=0 rsp=0488000647 plan=4053841 pack=53084 fifo=124427 decide=301021 rsp2cmd=5256 e2e=5050425 pend_prev=0 ack_us=0 brake=1
+   150.422 P2 j=151 f=0 late_us=41563 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=296000 rsp2cmd=5256 e2e=522183 pend_prev=0 ack_us=0 brake=1
+   150.481 P2 j=152 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=295638 rsp2cmd=5256 e2e=521763 pend_prev=0 ack_us=0 brake=1
+   150.544 P2 j=153 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=292473 rsp2cmd=5256 e2e=518646 pend_prev=0 ack_us=0 brake=1
+   150.694 P2 j=154 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=291345 rsp2cmd=5256 e2e=517460 pend_prev=0 ack_us=0 brake=1
+   150.754 P2 j=155 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=290840 rsp2cmd=5256 e2e=517013 pend_prev=0 ack_us=0 brake=1
+   150.924 P2 j=156 f=27 late_us=0 rsp=00a8000647 plan=4053847 pack=59674 fifo=124427 decide=300560 rsp2cmd=5256 e2e=5056643 pend_prev=0 ack_us=0 brake=1
+   150.924 P2 j=157 f=0 late_us=41627 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=300758 rsp2cmd=5256 e2e=526936 pend_prev=0 ack_us=0 brake=1
+   150.985 P2 j=158 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=298662 rsp2cmd=5256 e2e=524804 pend_prev=0 ack_us=0 brake=1
+   151.045 P2 j=159 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=298359 rsp2cmd=5256 e2e=524494 pend_prev=0 ack_us=0 brake=1
+   151.195 P2 j=160 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=297694 rsp2cmd=5256 e2e=523861 pend_prev=0 ack_us=0 brake=1
+   151.256 P2 j=161 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=295497 rsp2cmd=5256 e2e=521606 pend_prev=0 ack_us=0 brake=1
+   151.424 P2 j=162 f=28 late_us=0 rsp=2014000447 plan=4053838 pack=52723 fifo=124427 decide=686473 rsp2cmd=5256 e2e=5435515 pend_prev=0 ack_us=0 brake=1
+   151.424 P2 j=163 f=0 late_us=45411 rsp=006800063d plan=0 pack=0 fifo=124427 decide=327663 rsp2cmd=5256 e2e=553784 pend_prev=0 ack_us=0 brake=1
+   151.485 P2 j=164 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=327461 rsp2cmd=5256 e2e=553594 pend_prev=0 ack_us=0 brake=1
+   151.545 P2 j=165 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=324296 rsp2cmd=5256 e2e=550440 pend_prev=0 ack_us=0 brake=1
+   151.694 P2 j=166 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=319136 rsp2cmd=5256 e2e=545285 pend_prev=0 ack_us=0 brake=1
+   151.753 P2 j=167 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=317604 rsp2cmd=5256 e2e=543738 pend_prev=0 ack_us=0 brake=1
+   151.814 P2 j=168 f=29 late_us=0 rsp=00a8000647 plan=4053850 pack=59471 fifo=124427 decide=369595 rsp2cmd=5256 e2e=5125371 pend_prev=0 ack_us=0 brake=1
+   151.876 P2 j=169 f=0 late_us=42315 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=369389 rsp2cmd=5256 e2e=595531 pend_prev=0 ack_us=0 brake=1
+   151.936 P2 j=170 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=371384 rsp2cmd=5256 e2e=597520 pend_prev=0 ack_us=0 brake=1
+   151.997 P2 j=171 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=376586 rsp2cmd=5256 e2e=602740 pend_prev=0 ack_us=0 brake=1
+   152.144 P2 j=172 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=378682 rsp2cmd=5256 e2e=604848 pend_prev=0 ack_us=0 brake=1
+   152.207 P2 j=173 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=379549 rsp2cmd=5256 e2e=605655 pend_prev=0 ack_us=0 brake=1
+   152.344 P2 j=174 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=383379 rsp2cmd=5256 e2e=609546 pend_prev=0 ack_us=0 brake=1
+   152.404 P2 j=175 f=30 late_us=0 rsp=2014000447 plan=4053844 pack=52784 fifo=124427 decide=696691 rsp2cmd=5256 e2e=5445801 pend_prev=0 ack_us=0 brake=1
+   152.404 P2 j=176 f=0 late_us=45520 rsp=006800063d plan=0 pack=0 fifo=124427 decide=334624 rsp2cmd=5256 e2e=560781 pend_prev=0 ack_us=0 brake=1
+   152.465 P2 j=177 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=334422 rsp2cmd=5256 e2e=560595 pend_prev=0 ack_us=0 brake=1
+   152.596 P2 j=178 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=328757 rsp2cmd=5256 e2e=554854 pend_prev=0 ack_us=0 brake=1
+   152.655 P2 j=179 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=325996 rsp2cmd=5256 e2e=552142 pend_prev=0 ack_us=0 brake=1
+   152.794 P2 j=180 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=325230 rsp2cmd=5256 e2e=551390 pend_prev=0 ack_us=0 brake=1
+   152.924 P2 j=181 f=31 late_us=0 rsp=00a8000647 plan=4053844 pack=59517 fifo=124427 decide=302778 rsp2cmd=5256 e2e=5058597 pend_prev=0 ack_us=0 brake=1
+   152.924 P2 j=182 f=0 late_us=41645 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=302311 rsp2cmd=5256 e2e=528488 pend_prev=0 ack_us=0 brake=1
+   152.985 P2 j=183 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=297412 rsp2cmd=5256 e2e=523516 pend_prev=0 ack_us=0 brake=1
+   153.046 P2 j=184 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=292252 rsp2cmd=5256 e2e=518417 pend_prev=0 ack_us=0 brake=1
+   153.193 P2 j=185 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=288422 rsp2cmd=5256 e2e=514542 pend_prev=0 ack_us=0 brake=1
+   153.255 P2 j=186 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=282395 rsp2cmd=5256 e2e=508588 pend_prev=0 ack_us=0 brake=1
+   153.423 P2 j=187 f=32 late_us=0 rsp=00a8000647 plan=4053841 pack=59806 fifo=124427 decide=304445 rsp2cmd=5256 e2e=5060605 pend_prev=0 ack_us=0 brake=1
+   153.423 P2 j=188 f=0 late_us=41662 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=304744 rsp2cmd=5256 e2e=530848 pend_prev=0 ack_us=0 brake=1
+   153.489 P2 j=189 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=300409 rsp2cmd=5256 e2e=526607 pend_prev=0 ack_us=0 brake=1
+   153.570 P2 j=190 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=295813 rsp2cmd=5256 e2e=521961 pend_prev=0 ack_us=0 brake=1
+   153.692 P2 j=191 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=291520 rsp2cmd=5256 e2e=517690 pend_prev=0 ack_us=0 brake=1
+   153.752 P2 j=192 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=287387 rsp2cmd=5256 e2e=513530 pend_prev=0 ack_us=0 brake=1
+   153.925 P2 j=193 f=33 late_us=0 rsp=00a8000647 plan=4053138 pack=59234 fifo=124427 decide=360733 rsp2cmd=5256 e2e=5115567 pend_prev=0 ack_us=0 brake=1
+   153.925 P2 j=194 f=0 late_us=42218 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=360729 rsp2cmd=5256 e2e=586894 pend_prev=0 ack_us=0 brake=1
+   153.985 P2 j=195 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=362160 rsp2cmd=5256 e2e=588327 pend_prev=0 ack_us=0 brake=1
+   154.047 P2 j=196 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=363187 rsp2cmd=5256 e2e=589366 pend_prev=0 ack_us=0 brake=1
+   154.195 P2 j=197 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=363389 rsp2cmd=5256 e2e=589543 pend_prev=0 ack_us=0 brake=1
+   154.256 P2 j=198 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=364820 rsp2cmd=5256 e2e=590976 pend_prev=0 ack_us=0 brake=1
+   154.425 P2 j=199 f=34 late_us=0 rsp=2014000447 plan=4053138 pack=52738 fifo=124427 decide=745656 rsp2cmd=5256 e2e=5494002 pend_prev=0 ack_us=0 brake=1
+   154.425 P2 j=200 f=0 late_us=46001 rsp=006800063d plan=0 pack=0 fifo=124427 decide=359519 rsp2cmd=5256 e2e=585687 pend_prev=0 ack_us=0 brake=1
+   154.484 P2 j=201 f=0 late_us=0 rsp=0068000647 plan=0 pack=0 fifo=124427 decide=359418 rsp2cmd=5256 e2e=585534 pend_prev=0 ack_us=0 brake=1
+   154.546 P2 j=202 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=353694 rsp2cmd=5256 e2e=579824 pend_prev=0 ack_us=0 brake=1
+   154.695 P2 j=203 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=349965 rsp2cmd=5256 e2e=576082 pend_prev=0 ack_us=0 brake=1
+   154.756 P2 j=204 f=0 late_us=0 rsp=0048000647 plan=0 pack=0 fifo=124427 decide=349763 rsp2cmd=5256 e2e=575870 pend_prev=0 ack_us=0 brake=1
+   154.926 P2 j=205 f=35 late_us=0 rsp=2014000447 plan=4053141 pack=52701 fifo=124427 decide=759324 rsp2cmd=5256 e2e=5507636 pend_prev=0 ack_us=0 brake=1
+   154.927 P2 j=206 f=0 late_us=46136 rsp=006800063d plan=0 pack=0 fifo=124427 decide=362388 rsp2cmd=5256 e2e=588526 pend_prev=0 ack_us=0 brake=1
+   154.927 PASS2_SUMMARY jobs=207 late_jobs=35
+   171.851 PRD_BAD count=243
+   171.852 JOINT_DONE

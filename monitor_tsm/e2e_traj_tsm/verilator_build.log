@@ -1,0 +1,717 @@
+%Warning-WIDTHEXPAND: ../rtl/geom/m_tsmx_geom.sv:160:28: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'reg_cell' generates 8 bits.
+                                                       : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health_bist.u_tsmx_geom'
+  160 |   assign w_row = (reg_cell < PARA_MAX_CELLS
+      |                            ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.053
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: ../rtl/geom/m_tsmx_geom.sv:163:28: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'reg_cell' generates 8 bits.
+                                                       : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health_bist.u_tsmx_geom'
+  163 |   assign w_nxt = (reg_cell < PARA_MAX_CELLS
+      |                            ^
+%Warning-WIDTHEXPAND: ../rtl/geom/m_tsmx_geom.sv:179:19: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'reg_actor' generates 8 bits.
+                                                       : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health_bist.u_tsmx_geom'
+  179 |     if (reg_actor < PARA_MAX_OBJ) w_object = w_ord;
+      |                   ^
+%Warning-WIDTHCONCAT: ../rtl/geom/m_tsmx_geom.sv:436:18: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                       : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health_bist.u_tsmx_geom'
+  436 |       reg_world<='0;
+      |                  ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHCONCAT?v=5.053
+                      ... Use "/* verilator lint_off WIDTHCONCAT */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/fp32_units.sv:261:16: Operator LTS expects 32 bits on the LHS, but LHS's VARREF 'v' generates 27 bits.
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2.u_sm.u_p'
+  261 |     else if (v < LO)           r <= 16'(LO);
+      |                ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/fp32_units.sv:260:16: Operator GTS expects 32 bits on the LHS, but LHS's VARREF 'v' generates 27 bits.
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2.u_sm.u_p'
+  260 |     else if (v > HI)           r <= 16'(HI);
+      |                ^
+%Warning-WIDTHCONCAT: ../rtl/health/m_tsmx_health.sv:90:15: Replication of more that --replication-limit 8192 is suspect: 8584
+                                                          : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health'
+   90 |     o_b3_data='0; o_b3_valid=1'b0; o_b3_ready=1'b0;
+      |               ^~
+%Warning-WIDTHCONCAT: ../rtl/health/m_tsmx_health.sv:91:13: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                          : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health'
+   91 |     w_world='0; w_lane={64'hffffffffffe488c0,64'd1800000,64'd0,
+      |             ^~
+%Warning-WIDTHCONCAT: ../rtl/health/m_tsmx_health.sv:168:16: Replication of more that --replication-limit 8192 is suspect: 33824
+                                                           : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_health.u_tsmx_health'
+  168 |       reg_req<='0; reg_idx<='0; reg_good<=1'b0;
+      |                ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/mac_array_tp.sv:95:53: Operator ADD expects 32 bits on the RHS, but RHS's SEL generates 6 bits.
+                                                                                             : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2.u_mm.u_mac'
+   95 |     for (int q = 0; q < 8; q++) ra_m[q] <= cap[q*64 + ridx[5:0]];
+      |                                                     ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/fp32_special.sv:35:35: Operator GT expects 32 bits on the LHS, but LHS's SEL generates 31 bits.
+                                                                                             : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2.u_sm.u_exp'
+   35 |     s4_under <= t[31] && (t[30:0] > 32'h42FC0000);      
+      |                                   ^
+%Warning-WIDTHTRUNC: ../rtl/top/m_tsmx_sweep.sv:125:25: Bit extraction of var[15:0] requires 4 bit index, not 8 bits.
+                                                      : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_sweep_1'
+  125 |               w_mask_nxt[reg_base+8'(idx)]=w_geom_resp_data[81*idx+80];
+      |                         ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.053
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_sweep.sv:157:20: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                       : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_sweep_1'
+  157 |       reg_world <= '0;
+      |                    ^~
+%Warning-WIDTHTRUNC: ../rtl/rec/m_tsmx_rec.sv:189:69: Bit extraction of array[63:0] requires 6 bit index, not 10 bits.
+                                                    : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_rec'
+  189 |       if ({1'b0, i_log_idx} < reg_count) w_log_data_nxt = reg_events[w_rd_addr];
+      |                                                                     ^
+%Warning-WIDTHTRUNC: ../rtl/rec/m_tsmx_rec.sv:207:28: Bit extraction of array[63:0] requires 6 bit index, not 10 bits.
+                                                    : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_rec'
+  207 |     if (w_wr_en) reg_events[w_wr_addr] <= i_req_data;
+      |                            ^
+%Warning-WIDTHEXPAND: ../rtl/top/m_tsmx_math.sv:189:9: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h0' generates 2 bits.
+                                                     : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_math'
+  189 |         case(reg_op)
+      |         ^~~~
+%Warning-WIDTHEXPAND: ../rtl/top/m_tsmx_math.sv:189:9: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h2' generates 2 bits.
+                                                     : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_math'
+  189 |         case(reg_op)
+      |         ^~~~
+%Warning-WIDTHEXPAND: ../rtl/top/m_tsmx_math.sv:189:9: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h3' generates 2 bits.
+                                                     : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_math'
+  189 |         case(reg_op)
+      |         ^~~~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_math.sv:443:37: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                      : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_math'
+  443 |     if (!i_rst_n_core) reg_world <= '0;
+      |                                     ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_hash.sv:85:19: Replication of more that --replication-limit 8192 is suspect: 8416
+                                                     : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_tsmx_hash'
+   85 |       reg_data <= '0;
+      |                   ^~
+%Warning-WIDTHEXPAND: ../rtl/arb/m_tsmx_arb.sv:131:58: Bit extraction of var[31:0] requires 5 bit index, not 4 bits.
+                                                     : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine.u_arb'
+  131 |           if (w_cand < 8'(LPARA_PROFILES) && LPARA_FINITE[w_cand[3:0]] && w_label == ENUM_LABEL_COND) begin
+      |                                                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/mm_engine.sv:180:32: Operator ADD expects 12 bits on the RHS, but RHS's REPLICATE generates 9 bits.
+                                                                                           : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2.u_mm'
+  180 |     v8_raddr  = {k[5:0], 6'd0} + {3'd0, head, g[2:0]};
+      |                                ^
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_engine.sv:592:89: Replication of more that --replication-limit 8192 is suspect: 33824
+                                                        : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine'
+  592 |     w_rec_req_valid=1'b0; w_rec_req_data='0; w_health_req_valid=1'b0; w_health_req_data='0;
+      |                                                                                         ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_engine.sv:655:23: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                        : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine'
+  655 |           w_world_nxt='0;
+      |                       ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_engine.sv:1178:18: Replication of more that --replication-limit 8192 is suspect: 44673
+                                                         : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine'
+ 1178 |       reg_req <= '0;
+      |                  ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_engine.sv:1200:20: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                         : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine'
+ 1200 |       reg_world <= '0;
+      |                    ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_engine.sv:1202:19: Replication of more that --replication-limit 8192 is suspect: 8200
+                                                         : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_engine'
+ 1202 |       reg_lead <= '0;
+      |                   ^~
+%Warning-WIDTHCONCAT: ../rtl/top/m_tsmx_io.sv:96:54: Replication of more that --replication-limit 8192 is suspect: 44673
+                                                   : ... note: In instance 'tb_e2e_traj_tsm.tsm.dut.u_tsmx_io'
+   96 |     o_req_ready=1'b0; o_core_valid=1'b0; o_core_data='0; o_core_reason='0;
+      |                                                      ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:170:26: Operator ADD expects 32 bits on the LHS, but LHS's CONST '8'h3' generates 8 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  170 |     (MAX_SEQ_LEN > (8'd3 + {3'd0, wm_num_lanes})) ?
+      |                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:170:26: Operator ADD expects 32 bits on the RHS, but RHS's REPLICATE generates 8 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  170 |     (MAX_SEQ_LEN > (8'd3 + {3'd0, wm_num_lanes})) ?
+      |                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:171:20: Operator SUB expects 32 bits on the RHS, but RHS's CONST '8'h3' generates 8 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  171 |       (MAX_SEQ_LEN - 8'd3 - {3'd0, wm_num_lanes}) : 8'd0;
+      |                    ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:171:27: Operator SUB expects 32 bits on the RHS, but RHS's REPLICATE generates 8 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  171 |       (MAX_SEQ_LEN - 8'd3 - {3'd0, wm_num_lanes}) : 8'd0;
+      |                           ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:170:51: Operator COND expects 32 bits on the Conditional False, but Conditional False's CONST '8'h0' generates 8 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  170 |     (MAX_SEQ_LEN > (8'd3 + {3'd0, wm_num_lanes})) ?
+      |                                                   ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:169:21: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  169 |   assign obj_budget =
+      |                     ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:287:26: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  287 |             attn_mask_reg[tok_seq_id] <= 1'b1;
+      |                          ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:306:26: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  306 |             attn_mask_reg[tok_seq_id] <= 1'b1;
+      |                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:329:24: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'rd_issue' generates 4 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  329 |           if (rd_issue < OBJ_NWORDS) begin
+      |                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:337:18: Bit extraction of array[5:0] requires 3 bit index, not 4 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  337 |             obj_w[rp_i2] <= obj_rd_data;
+      |                  ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:376:26: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  376 |             attn_mask_reg[tok_seq_id] <= 1'b1;
+      |                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:397:24: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'rd_issue' generates 4 bits.
+                                                                                                    : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  397 |           if (rd_issue < LANE_NREADS) begin
+      |                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:405:19: Bit extraction of array[4:0] requires 3 bit index, not 4 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  405 |             lane_w[rp_i2] <= lane_rd_data;
+      |                   ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:422:26: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  422 |             attn_mask_reg[tok_seq_id] <= 1'b1;
+      |                          ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/parsers/world_model_parser.sv:451:26: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_wmp'
+  451 |             attn_mask_reg[tok_seq_id] <= 1'b1;
+      |                          ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:76:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 31 bits.
+                                                                                                       : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+   76 |     if (!a[30:0] && !b[30:0]) return 1'b0;         
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:76:21: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 31 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+   76 |     if (!a[30:0] && !b[30:0]) return 1'b0;         
+      |                     ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:129:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_a' generates 8 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  129 |     if (!e_a) begin p.is_special = 1'b1; p.special_val = b; return p; end
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:130:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_b' generates 8 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  130 |     if (!e_b) begin p.is_special = 1'b1; p.special_val = a; return p; end
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:163:11: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 25 bits.
+                                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  163 |       if (!s_sum[24:0]) return 32'b0;
+      |           ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:219:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_a' generates 8 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  219 |     if (!e_a || !e_b)                      return {s_r, 31'b0};  
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:219:17: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_b' generates 8 bits.
+                                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  219 |     if (!e_a || !e_b)                      return {s_r, 31'b0};  
+      |                 ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:259:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_a' generates 8 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  259 |     if (!e_a) return b;    
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:260:9: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'e_b' generates 8 bits.
+                                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  260 |     if (!e_b) return a;    
+      |         ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:291:11: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's SEL generates 25 bits.
+                                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  291 |       if (!s_sum[24:0]) return 32'b0;  
+      |           ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:716:25: Operator LT expects 5 bits on the LHS, but LHS's VARREF 'idx_obj_r' generates 4 bits.
+                                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  716 |           if (idx_obj_r < obj_cnt) begin
+      |                         ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/output/trajectory_sanity_checker.sv:730:25: Operator LT expects 5 bits on the LHS, but LHS's VARREF 'idx_obj_r' generates 4 bits.
+                                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_sanity'
+  730 |           if (idx_obj_r < obj_cnt && fp32_lt(coll_dist_sq_r, coll_min_sq_r))
+      |                         ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/input/input_adapter.sv:38:62: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'token_write_idx' generates 8 bits.
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_ia'
+   38 |     bw_v   <= token_valid && token_ready && (token_write_idx < MAX_SEQ_LEN) && !clear_frame;
+      |                                                              ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/input/input_adapter.sv:65:22: Bit extraction of var[63:0] requires 6 bit index, not 8 bits.
+                                                                                           : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_ia'
+   65 |           mask_buffer[token_write_idx]  <= 1'b1;
+      |                      ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/input/input_adapter.sv:63:29: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'token_write_idx' generates 8 bits.
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_ia'
+   63 |         if (token_write_idx < MAX_SEQ_LEN) begin
+      |                             ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/input/input_adapter.sv:80:46: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'token_write_idx' generates 8 bits.
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_ia'
+   80 |   assign token_ready      = (token_write_idx < MAX_SEQ_LEN) && ~frame_complete;
+      |                                              ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:318:31: Bit extraction of array[95:0] requires 7 bit index, not 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  318 |       assign scr_qc[gsb] = mem[{3'b0, col_cnt[9:5]}];
+      |                               ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:319:31: Bit extraction of array[95:0] requires 7 bit index, not 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  319 |       assign scr_qd[gsb] = mem[7'd80 + {3'b0, row_cnt[9:5]}];
+      |                               ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:639:37: Bit extraction of array[15:0] requires 4 bit index, not 5 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  639 |       cls_local[cls_ld_addr_d1[4:0]][{1'b0, cls_ld_addr_d1[8:5]}]
+      |                                     ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 67:64 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+                   ... For warning description see https://verilator.org/warn/SELRANGE?v=5.053
+                   ... Use "/* verilator lint_off SELRANGE */" and lint_on around source to disable this message.
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 71:68 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 75:72 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 79:76 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 83:80 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 87:84 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 91:88 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 95:92 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 99:96 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 103:100 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 107:104 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 111:108 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 115:112 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 119:116 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 123:120 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-SELRANGE: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:707:55: Selection index out of range: 127:124 outside 63:0
+                                                                                               : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  707 |       assign dq_w_int4[k] = (k < 16) ? uram_beat_a_reg[k*4 +: 4]
+      |                                                       ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:842:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  842 |           3'd0 : if (post_cnt == 6'd0)  begin scr_we = 1'b1; scr_waddr = 7'd16 + {3'b0, row_cnt[9:5]}; scr_wdata = acc_row;    end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:843:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  843 |           3'd1 : if (post_cnt == 6'd18) begin scr_we = 1'b1; scr_waddr = 7'd16 + {3'b0, row_cnt[9:5]}; scr_wdata = sig_z_out;  end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:844:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  844 |           3'd2 : if (post_cnt == 6'd0)  begin scr_we = 1'b1; scr_waddr = 7'd32 + {3'b0, row_cnt[9:5]}; scr_wdata = acc_row;    end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:845:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  845 |           3'd3 : if (post_cnt == 6'd18) begin scr_we = 1'b1; scr_waddr = 7'd32 + {3'b0, row_cnt[9:5]}; scr_wdata = sig_r_out;  end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:846:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  846 |           3'd4 : if (post_cnt == 6'd6)  begin scr_we = 1'b1; scr_waddr = 7'd48 + {3'b0, row_cnt[9:5]}; scr_wdata = fp_add_out; end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:848:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  848 |             if (post_cnt == 6'd6)       begin scr_we = 1'b1; scr_waddr = 7'd64 + {3'b0, row_cnt[9:5]}; scr_wdata = fp_add_out; end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:849:72: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  849 |             if (post_cnt == 6'd32)      begin scr_we = 1'b1; scr_waddr = 7'd80 + {3'b0, row_cnt[9:5]}; scr_wdata = fp_add_out; end
+      |                                                                        ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:859:19: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's REPLICATE generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  859 |         scr_waddr = {3'b0, row_cnt[9:5]};
+      |                   ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:867:21: Operator ASSIGN expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  867 |           scr_waddr = 7'd80 + {3'b0, wp_cnt[9:5]};
+      |                     ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:887:25: Operator ASSIGNDLY expects 6 bits on the Assign RHS, but Assign RHS's CONST '5'h0' generates 5 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+  887 |       post_cnt          <= 5'd0;
+      |                         ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1106:22: Operator ASSIGNDLY expects 6 bits on the Assign RHS, but Assign RHS's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1106 |             post_cnt <= 5'd0;
+      |                      ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1147:28: Operator EQ expects 6 bits on the RHS, but RHS's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1147 |               if (post_cnt == 5'd0) begin
+      |                            ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1158:28: Operator EQ expects 6 bits on the RHS, but RHS's CONST '5'h1' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1158 |               if (post_cnt == 5'd1) begin
+      |                            ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1202:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1202 |                   scr_rd_baddr <= 7'd16 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1198:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1198 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1198:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h1' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1198 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1198:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h2' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1198 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1198:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h6' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1198 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1198:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'ha' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1198 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1278:28: Operator EQ expects 6 bits on the RHS, but RHS's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1278 |               if (post_cnt == 5'd0) begin
+      |                            ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1289:28: Operator EQ expects 6 bits on the RHS, but RHS's CONST '5'h1' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1289 |               if (post_cnt == 5'd1) begin
+      |                            ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1318:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1318 |                   scr_rd_baddr <= 7'd32 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1315:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1315 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1315:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h1' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1315 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1315:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h2' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1315 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1315:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h6' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1315 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1315:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'ha' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1315 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1377:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1377 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1377:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h2' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1377 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1377:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h6' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1377 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1377:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h7' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1377 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1473:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1473 |                   scr_rd_baddr <= 7'd64 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1478:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1478 |                   scr_rd_baddr <= 7'd32 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1484:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1484 |                   scr_rd_baddr <= 7'd48 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1490:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's REPLICATE generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1490 |                   scr_rd_baddr <= {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1496:32: Operator ASSIGNDLY expects 7 bits on the Assign RHS, but Assign RHS's ADD generates 8 bits.
+                                                                                                  : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1496 |                   scr_rd_baddr <= 7'd16 + {3'b0, row_cnt[9:5]};
+      |                                ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h2' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h6' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h7' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h8' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h9' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'ha' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'hb' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'hc' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'he' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1459:15: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h12' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1459 |               case (post_cnt)
+      |               ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1599:33: Operator ASSIGNDLY expects 11 bits on the Assign RHS, but Assign RHS's REPLICATE generates 10 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1599 |             wout_bram_addr      <= {wout_row, 9'd0};
+      |                                 ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1646:23: Operator ASSIGNDLY expects 5 bits on the Assign RHS, but Assign RHS's CONST '3'h0' generates 3 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1646 |             drain_cnt <= 3'd0;
+      |                       ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1710:29: Operator ASSIGNDLY expects 6 bits on the Assign RHS, but Assign RHS's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1710 |                 post_cnt    <= 5'd0;
+      |                             ^~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1677:11: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h0' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1677 |           case (post_cnt)
+      |           ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1677:11: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h1' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1677 |           case (post_cnt)
+      |           ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1677:11: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h2' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1677 |           case (post_cnt)
+      |           ^~~~
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:1677:11: Operator CASE expects 6 bits on the Case Item, but Case Item's CONST '5'h6' generates 5 bits.
+                                                                                                   : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+ 1677 |           case (post_cnt)
+      |           ^~~~
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/dma/weight_loader.sv:222:27: Operator ASSIGNW expects 7 bits on the Assign RHS, but Assign RHS's COND generates 8 bits.
+                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.wl_inst'
+  222 |   assign wl_gru_abs_block = uram_wr_cnt[0]
+      |                           ^
+%Warning-WIDTHTRUNC: ../../../rtl/src/bert_v2/../../../rtl/src/bert_v2/bert_v2.sv:247:42: Bit extraction of array[63:0] requires 6 bit index, not 7 bits.
+                                                                                        : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_bv2'
+  247 |       if (ld_v[2] && ld_ii[2] >= 7'd7) gw[ld_ii[2] - 7'd7] <= pma_rd;
+      |                                          ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/top/planning_top.sv:527:47: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'uram_porta_addr_w' generates 19 bits.
+                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut'
+  527 |   assign porta_in_range  = (uram_porta_addr_w < URAM_TOTAL_DEPTH);
+      |                                               ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/top/planning_top.sv:528:47: Operator LT expects 32 bits on the LHS, but LHS's VARREF 'uram_portb_addr_w' generates 19 bits.
+                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut'
+  528 |   assign portb_in_range  = (uram_portb_addr_w < URAM_TOTAL_DEPTH);
+      |                                               ^
+%Warning-WIDTHEXPAND: ../../../rtl/src/bert_v2/../../../rtl/src/top/planning_top.sv:955:29: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's REPLICATE generates 31 bits.
+                                                                                          : ... note: In instance 'tb_e2e_traj_tsm.planner.dut'
+  955 |           8'h38: axil_rdata <= {24'd0, 2'd0, bert_layer_idx, phase[2:0]};
+      |                             ^~
+%Warning-WIDTHTRUNC: tsm_tasks.svh:96:14: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's COND generates 32 bits.
+                                        : ... note: In instance 'tb_e2e_traj_tsm.tsm'
+   96 |     i_log_idx=(idx>=64 ? 63:idx);i_log_valid=1;
+      |              ^
+                     e2e_tsm_driver.sv:172:1: ... note: In file included from 'e2e_tsm_driver.sv'
+%Warning-WIDTHEXPAND: tb_e2e_traj_tsm.sv:34:30: Operator XOR expects 32 bits on the RHS, but RHS's VARREF 'b' generates 8 bits.
+                                              : ... note: In instance 'tb_e2e_traj_tsm'
+   34 |       b=body[687-8*k -:8];c=c^b;
+      |                              ^
+%Warning-WIDTHEXPAND: tb_e2e_traj_tsm.sv:44:31: Operator ASSIGN expects 64 bits on the Assign RHS, but Assign RHS's SIGNED generates 32 bits.
+                                              : ... note: In instance 'tb_e2e_traj_tsm'
+   44 |     x=$signed(snap[223:160]);v=$signed(snap[159:128]);a=$signed(snap[127:96]);
+      |                               ^
+%Warning-WIDTHEXPAND: tb_e2e_traj_tsm.sv:44:56: Operator ASSIGN expects 64 bits on the Assign RHS, but Assign RHS's SIGNED generates 32 bits.
+                                              : ... note: In instance 'tb_e2e_traj_tsm'
+   44 |     x=$signed(snap[223:160]);v=$signed(snap[159:128]);a=$signed(snap[127:96]);
+      |                                                        ^
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:823:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'scr_we'
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:823:5: 
+  823 |     scr_we     = 1'b0;
+      |     ^~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:289:29: ... Location of other write
+  289 |   logic        scr_we     = 1'b0;    
+      |                             ^~~~
+                      ... For warning description see https://verilator.org/warn/MULTIDRIVEN?v=5.053
+                      ... Use "/* verilator lint_off MULTIDRIVEN */" and lint_on around source to disable this message.
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:824:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'scr_we_all'
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:824:5: 
+  824 |     scr_we_all = 1'b0;
+      |     ^~~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:290:29: ... Location of other write
+  290 |   logic        scr_we_all = 1'b0;    
+      |                             ^~~~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:825:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'scr_wbank'
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:825:5: 
+  825 |     scr_wbank  = 5'd0;
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:291:29: ... Location of other write
+  291 |   logic [4:0]  scr_wbank  = '0;
+      |                             ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:826:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'scr_waddr'
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:826:5: 
+  826 |     scr_waddr  = 7'd0;
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:292:29: ... Location of other write
+  292 |   logic [6:0]  scr_waddr  = '0;
+      |                             ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:827:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'scr_wdata'
+                                                                                                 : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:827:5: 
+  827 |     scr_wdata  = FP32_ZERO;
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/gru_waypoint_decoder.sv:293:29: ... Location of other write
+  293 |   fp32_t       scr_wdata  = '0;
+      |                             ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:80:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'is_nan_in'
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_sigmoid_r'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:80:5: 
+   80 |     is_nan_in  = (x_in[30:23] == 8'hFF) && (x_in[22:0] != 23'h0);
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:73:54: ... Location of other write
+   73 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                                                      ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:81:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'clamp_low'
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_sigmoid_r'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:81:5: 
+   81 |     clamp_low  = !is_nan_in && fp32_lt(x_in, X_MIN);
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:73:21: ... Location of other write
+   73 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                     ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:82:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'clamp_high'
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_sigmoid_r'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:82:5: 
+   82 |     clamp_high = !is_nan_in && fp32_lt(X_MAX, x_in);
+      |     ^~~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:73:38: ... Location of other write
+   73 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                                      ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:84:7: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'x_sat'
+                                                                                            : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_sigmoid_r'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:84:7: 
+   84 |       x_sat = X_MIN;
+      |       ^~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:71:18: ... Location of other write
+   71 |   fp32_t x_sat = '0;
+      |                  ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:263:35: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'lut_idx_s6'
+                                                                                              : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_sigmoid_r'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:263:35: 
+  263 |     if (idx_signed_s6 < 0)        lut_idx_s6 = 8'd0;
+      |                                   ^~~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_sigmoid_lut.sv:254:28: ... Location of other write
+  254 |   logic [7:0] lut_idx_s6 = '0;
+      |                            ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:59:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'is_nan_in'
+                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_tanh'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:59:5: 
+   59 |     is_nan_in  = (x_in[30:23] == 8'hFF) && (x_in[22:0] != 23'h0);
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:52:54: ... Location of other write
+   52 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                                                      ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:60:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'clamp_low'
+                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_tanh'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:60:5: 
+   60 |     clamp_low  = !is_nan_in && fp32_lt(x_in, X_MIN);
+      |     ^~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:52:21: ... Location of other write
+   52 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                     ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:61:5: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'clamp_high'
+                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_tanh'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:61:5: 
+   61 |     clamp_high = !is_nan_in && fp32_lt(X_MAX, x_in);
+      |     ^~~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:52:38: ... Location of other write
+   52 |   logic clamp_low = '0, clamp_high = '0, is_nan_in = '0;
+      |                                      ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:63:7: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'x_sat'
+                                                                                         : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_tanh'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:63:7: 
+   63 |       x_sat = X_MIN;
+      |       ^~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:50:18: ... Location of other write
+   50 |   fp32_t x_sat = '0;
+      |                  ^~
+%Warning-MULTIDRIVEN: ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:177:35: Variable written to in always_comb also written by other process (IEEE 1800-2023 9.2.2.2): 'lut_idx_s4'
+                                                                                           : ... note: In instance 'tb_e2e_traj_tsm.planner.dut.u_gru.u_tanh'
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:177:35: 
+  177 |     if (idx_signed_s3 < 0)        lut_idx_s4 = 8'd0;
+      |                                   ^~~~~~~~~~
+                      ../../../rtl/src/bert_v2/../../../rtl/src/gru/fp32_tanh_lut.sv:170:28: ... Location of other write
+  170 |   logic [7:0] lut_idx_s4 = '0;
+      |                            ^~
+make: Entering directory '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/e2e_traj_tsm/obj_e2e'
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /home/ngoducanh/oss-cad-suite/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /home/ngoducanh/oss-cad-suite/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /home/ngoducanh/oss-cad-suite/share/verilator/include/verilated_threads.cpp
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -x c++-header Vtb_e2e_traj_tsm__pch.h -o Vtb_e2e_traj_tsm__pch.h.fast.gch
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -x c++-header Vtb_e2e_traj_tsm__pch.h -o Vtb_e2e_traj_tsm__pch.h.slow.gch
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.fast -c Vtb_e2e_traj_tsm_vm_classes_0.cpp
+g++ -Os  -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.fast -c Vtb_e2e_traj_tsm_vm_classes_1.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm__ConstPool__0__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__0__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__1__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__2__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__3__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm___024root__4__Slow.cpp
+g++   -I.  -MMD -I/home/ngoducanh/oss-cad-suite/share/verilator/include -I/home/ngoducanh/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_e2e_traj_tsm.h>"   -DVL_TIME_CONTEXT   -fcoroutines -include Vtb_e2e_traj_tsm__pch.h.slow -c Vtb_e2e_traj_tsm__Syms__Slow.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vtb_e2e_traj_tsm__ALL.a    -pthread -lpthread -latomic   -o Vtb_e2e_traj_tsm
+rm Vtb_e2e_traj_tsm__ALL.verilator_deplist.tmp
+make: Leaving directory '/mnt/c/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/e2e_traj_tsm/obj_e2e'
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-586-g1838b6ed0 (mod)
+- Verilator: Built from 22.131 MB sources in 71 modules, into 47.626 MB in 30 C++ files needing 0.032 MB
+- Verilator: Walltime 302.692 s (elab=1.060, cvt=26.812, bld=270.080); cpu 31.655 s on 2 threads; allocated 570.656 MB

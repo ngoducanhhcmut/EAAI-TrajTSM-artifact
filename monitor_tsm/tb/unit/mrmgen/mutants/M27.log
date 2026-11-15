@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\sim.vvp +MUTANT=27 +LIMIT=2
+INJECT 27 S5_3_B4_terminal_stop_valid sampled DUT output bit flip
+ASSERT_FAIL 27 S5_3_B4_terminal_stop_valid job=0 cycle=2579 actual=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 expected=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\mrmgen\tb_m_tsmx_mrmgen.sv:42: R-025 assertion failure
+       Time: 28375000  Scope: tb_m_tsmx_mrmgen.check
+
+EXIT 1

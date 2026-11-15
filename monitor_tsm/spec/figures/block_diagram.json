@@ -1,0 +1,192 @@
+{
+  "title": "TSM-X v1: core clock 187.5 MHz",
+  "blocks": [
+    {
+      "id": "in",
+      "label": "Ingress",
+      "col": 0,
+      "row": 1
+    },
+    {
+      "id": "b1",
+      "label": "B1 integrity",
+      "col": 1,
+      "row": 1
+    },
+    {
+      "id": "b2",
+      "label": "B2 splice",
+      "col": 2,
+      "row": 1
+    },
+    {
+      "id": "b4",
+      "label": "B4 generator x4",
+      "col": 1,
+      "row": 2
+    },
+    {
+      "id": "b3",
+      "label": "B3 geometry x4",
+      "col": 2,
+      "row": 2
+    },
+    {
+      "id": "b7",
+      "label": "B7 selector",
+      "col": 3,
+      "row": 2
+    },
+    {
+      "id": "b8",
+      "label": "B8 supervisor",
+      "col": 3,
+      "row": 1
+    },
+    {
+      "id": "b9",
+      "label": "B9 certificate",
+      "col": 2,
+      "row": 0
+    },
+    {
+      "id": "arb",
+      "label": "Command arbiter",
+      "col": 4,
+      "row": 1
+    },
+    {
+      "id": "out",
+      "label": "Executor",
+      "col": 5,
+      "row": 1
+    },
+    {
+      "id": "b10",
+      "label": "B10 event ring",
+      "col": 4,
+      "row": 2
+    },
+    {
+      "id": "b13",
+      "label": "B13 health",
+      "col": 3,
+      "row": 3
+    },
+    {
+      "id": "csr",
+      "label": "AXI4-Lite CSR",
+      "col": 4,
+      "row": 3
+    },
+    {
+      "id": "codec",
+      "label": "Canonical codec",
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "arith",
+      "label": "Integer arithmetic",
+      "col": 0,
+      "row": 3
+    }
+  ],
+  "groups": [
+    {
+      "label": "core clock / reset domain",
+      "blocks": [
+        "b1",
+        "b2",
+        "b4",
+        "b3",
+        "b7",
+        "b8",
+        "b9",
+        "arb",
+        "b10",
+        "b13",
+        "csr",
+        "codec",
+        "arith"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "in",
+      "to": "b1",
+      "label": "packet"
+    },
+    {
+      "from": "b1",
+      "to": "b2",
+      "label": "admitted"
+    },
+    {
+      "from": "b2",
+      "to": "b8",
+      "label": "splice"
+    },
+    {
+      "from": "b4",
+      "to": "b3",
+      "label": "rows"
+    },
+    {
+      "from": "b3",
+      "to": "b7",
+      "label": "results"
+    },
+    {
+      "from": "b7",
+      "to": "b8",
+      "label": "candidate"
+    },
+    {
+      "from": "b9",
+      "to": "b8",
+      "label": "commit/reuse"
+    },
+    {
+      "from": "b8",
+      "to": "arb",
+      "label": "mode"
+    },
+    {
+      "from": "b9",
+      "to": "arb",
+      "label": "pending/backup"
+    },
+    {
+      "from": "arb",
+      "to": "out",
+      "label": "command"
+    },
+    {
+      "from": "b8",
+      "to": "b10",
+      "label": "event"
+    },
+    {
+      "from": "b13",
+      "to": "b8",
+      "label": "health"
+    },
+    {
+      "from": "csr",
+      "to": "b13",
+      "label": "BIST"
+    },
+    {
+      "from": "codec",
+      "to": "b9",
+      "label": "hash"
+    },
+    {
+      "from": "arith",
+      "to": "b4",
+      "label": "rational"
+    }
+  ]
+}

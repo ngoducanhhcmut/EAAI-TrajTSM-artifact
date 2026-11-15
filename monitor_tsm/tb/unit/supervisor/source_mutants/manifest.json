@@ -1,0 +1,22 @@
+[
+  [
+    "recovery_threshold_two",
+    "LPARA_RECOVERY_GOOD = 32'd3",
+    "LPARA_RECOVERY_GOOD = 32'd2"
+  ],
+  [
+    "reuse_routes_l2",
+    "5'b0001?: w_result = {3'(LPARA_MODE_L1)",
+    "5'b0001?: w_result = {3'(LPARA_MODE_L2)"
+  ],
+  [
+    "health_ignored",
+    "!i_req_data[0]",
+    "1'b0"
+  ],
+  [
+    "response_ignores_stall",
+    "if (i_rsp_ready)",
+    "if (1'b1)"
+  ]
+]

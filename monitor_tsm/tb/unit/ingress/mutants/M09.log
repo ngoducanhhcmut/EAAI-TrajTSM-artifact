@@ -1,0 +1,9 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\sim.vvp +MUTANT=9
+JOB 1 cycles=8 latency=4
+INJECT 9 stall_blocks_req output bit inversion
+ASSERT_FAIL 9 stall_blocks_req spec5.3/7 job=1 cycle=9 actual=8000000040000000200000001fffffffffd706cf2001ab320ffd80dc40f00000000fffffffffd6d8e4e00 expected=8000000040000000200000001fffffffffd706cf2001ab320ffd80dc40f00000000fffffffffd6d8e4e00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\tb_m_tsmx_ingress.sv:160: R-025 assertion failure
+       Time: 95000  Scope: tb_m_tsmx_ingress.tick
+
+EXIT 1
+SECONDS 0.236

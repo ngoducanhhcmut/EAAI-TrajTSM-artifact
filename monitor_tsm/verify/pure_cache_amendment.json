@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-29T11:05:56Z",
+  "old_sha256": "e3d0332ffdb5447c351d401be88bc9d1ba12fa22e065c1d4dcc1cb6dc46a8351",
+  "new_sha256": "0d748b00c3c912a31ef02fef1b4fa6edf12953bd10465e55abcc812511dbf2c0",
+  "golden_source_sha256": "209d296d80dda8abfa44941271e5e3863f0aca2d7ebe49ef0c3ed6d11f9fe473",
+  "cert_body_ast_identical": true,
+  "reason": "Performance-only bounded memoization to respect 6h budget. No collision scores consulted for the change. Frozen p/c keys include scalar names, types and signed zero; geometry delegates the unchanged integer function. No policy, arithmetic, seed or sampling changes.",
+  "proof": "Cache hit has equal immutable scalar values, field names, numeric types and zero signs, hence identical canonical JSON and exact same uncached result. Geometry key is the immutable integer Plan plus lead. Unhashable malformed input falls back to original function. Both caches clear at IC boundary.",
+  "validation": "One complete existing IC replay hash required before resume."
+}

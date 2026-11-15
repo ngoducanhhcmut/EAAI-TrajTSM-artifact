@@ -1,0 +1,2 @@
+PASS geom_su v0.4==v0.3 lock-step vectors=1000000 faults=500519
+tb_eq.sv:58: $finish called at 135392130000 (1ps)

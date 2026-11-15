@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\sim.vvp +MUTANT=19
+INJECT 19 B10_saturation: DUT output data stuck-X
+ASSERT_FAIL 19 B10_saturation cycle=10633 actual=xxxxxxxx expected=ffffffff
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\rec\tb_m_tsmx_rec.sv:311: R-025 assertion failed
+       Time: 117089000  Scope: tb_m_tsmx_rec.tick
+
+EXIT 1

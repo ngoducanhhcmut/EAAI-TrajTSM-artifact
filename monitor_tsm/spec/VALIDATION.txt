@@ -1,0 +1,8 @@
+Native vlsit_spec_tool.py check: BLOCKED (FileNotFoundError for original template).
+Original VLSIT Markdown template absent; exact-title equivalence cannot be verified.
+PASS: 0 error(s), 22 section(s)
+Baseline used: tsmx_hw\spec\VLSIT_recovered_structure.md
+This is the unchanged skill validation logic with an explicit local template-path override.
+No RTL simulation, synthesis, WCET proof, AXI standard conformance or LaTeX compilation claimed.
+Artifact checks: all diagram/wave JSON and SVG pairs parse; waveform data counts match.
+Specification length: 1185 lines (limit 1500).

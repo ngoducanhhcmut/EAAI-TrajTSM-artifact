@@ -1,0 +1,122 @@
+[
+  {
+    "id": 0,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 1,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 2,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 3,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 4,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 5,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 6,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 7,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 8,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 9,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 10,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 11,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 12,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 13,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 14,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 15,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 16,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 17,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 18,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  },
+  {
+    "id": 19,
+    "killed": true,
+    "exit": 1,
+    "kind": "sampled DUT-output observation fault"
+  }
+]

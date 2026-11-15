@@ -1,0 +1,8 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\sim.vvp +MUTANT=12
+INJECT 12 no_unsolicited output bit inversion
+ASSERT_FAIL 12 no_unsolicited spec5.3/7 job=0 cycle=3 actual=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 expected=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\ingress\tb_m_tsmx_ingress.sv:193: R-025 assertion failure
+       Time: 29000  Scope: tb_m_tsmx_ingress.tick
+
+EXIT 1
+SECONDS 0.195

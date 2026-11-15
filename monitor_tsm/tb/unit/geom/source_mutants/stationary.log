@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\source_mutants\stationary.vvp +START=138 +LIMIT=10
+JOB 138 cycles=33 rows=2 objects=1
+ASSERT_FAIL 15 REQ007_atomic_result job=138 cycle=36 got=0fffffffffffff82f1801 expected=0ffffffffffffee6b1801
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:256: R-025 assertion failed
+       Time: 355000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

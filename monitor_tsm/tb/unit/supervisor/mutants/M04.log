@@ -1,0 +1,7 @@
+COMMAND C:\iverilog\bin\vvp.exe C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\sim.vvp +MUTANT=4
+INJECT 4 S5_3_ready_known: DUT output ready stuck-X
+ASSERT_FAIL 4 S5_3_ready_known cycle=3 actual=00 expected=00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\supervisor\tb_m_tsmx_supervisor.sv:99: R-025 assertion failed
+       Time: 29000  Scope: tb_m_tsmx_supervisor.tick
+
+EXIT 1

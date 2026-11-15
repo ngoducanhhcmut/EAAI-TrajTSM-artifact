@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\sim.vvp +MUTANT=3 +START=0 +LIMIT=40
+INJECT 3 S5_3_reset_valid DUT output bit flip
+ASSERT_FAIL 3 S5_3_reset_valid job=0 cycle=1 got=000000000000000000000 expected=000000000000000000000
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\geom\tb_m_tsmx_geom.sv:112: R-025 assertion failed
+       Time: 6000  Scope: tb_m_tsmx_geom.tick
+
+EXIT 1

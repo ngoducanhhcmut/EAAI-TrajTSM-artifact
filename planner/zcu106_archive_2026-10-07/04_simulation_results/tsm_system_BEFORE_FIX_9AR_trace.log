@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  6 01:39:41 2026
+# Process ID: 26280
+# Current directory: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log sim_diag.log -mode tcl -source {xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl}
+# Log file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim/sim_diag.log
+# Journal file: C:/Users/TransformerDA/Downloads/vla_new_arch/sim_sysbd/prj/tsm_sysbd.sim/sim_1/behav/xsim\xsim.jou
+# Running On: LAPTOP-D1JJHVR7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 16312 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tsm_sysbd_behav/xsim_script.tcl
+# xsim {tb_tsm_sysbd_behav} -autoloadwcfg -tclbatch {tb_tsm_sysbd.tcl}
+Time resolution is 1 ps
+source tb_tsm_sysbd.tcl
+## run all
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_cpu.inst
+XilinxAXIVIP: Found at Path: tb_tsm_sysbd.u_bd.tsm_ifc_i.axi_vip_mem.inst
+=== TSM SYSBD: RTL, 2 ca
+    AR #1 t=1507 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #2 t=1518 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #3 t=1528 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #4 t=1539 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #5 t=1550 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #6 t=1560 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #7 t=1571 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #8 t=1582 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    AR #9 t=1592 ns addr=0x70300000 len=43 size=2 (beat da nhan=0)
+    RLAST t=1822 ns sau 44 beat
+    RLAST t=2056 ns sau 88 beat
+    RLAST t=2291 ns sau 132 beat
+    RLAST t=2526 ns sau 176 beat
+    RLAST t=2760 ns sau 220 beat
+    RLAST t=2995 ns sau 264 beat
+    RLAST t=3230 ns sau 308 beat
+    RLAST t=3464 ns sau 352 beat
+[ 0]       H0261 truoc start GPIO1=0x00000000 | GPIO1=0x0000c802 -> VETO  fault=0x48 step=0 obs=0 | 8.002 ms | AR hep=9 rong=0 beat=353 rerr=0 | mong doi VETO  fault=0x00  FAIL
+    RLAST t=8024195 ns sau 43 beat
+    AR #1 t=8024206 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #2 t=8024216 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #3 t=8024227 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #4 t=8024238 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #5 t=8024248 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #6 t=8024259 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #7 t=8024270 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    AR #8 t=8024280 ns addr=0x703000b0 len=43 size=2 (beat da nhan=43)
+    RLAST t=8024515 ns sau 87 beat
+    RLAST t=8024750 ns sau 131 beat
+    RLAST t=8024984 ns sau 175 beat
+    RLAST t=8025219 ns sau 219 beat
+[ 6]       H0102 truoc start GPIO1=0x0000c000 | GPIO1=0x0000c002 -> VETO  fault=0x40 step=0 obs=0 | 0.001 ms | AR hep=8 rong=0 beat=259 rerr=0 | mong doi GRANT fault=0x00  FAIL
+    RLAST t=8025454 ns sau 263 beat
+    RLAST t=8025688 ns sau 307 beat
+    RLAST t=8025923 ns sau 351 beat
+=== KET QUA: PASS 0 / FAIL 2 / 2 ca
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+$finish called at time : 8045775 ns : File "C:/Users/TransformerDA/Downloads/vla_new_arch/tb/system/tb_tsm_sysbd.sv" Line 196
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:20:15 . Memory (MB): peak = 205.020 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 280164 KB (Peak: 280164 KB), Simulation CPU Usage: 1183733 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct  6 01:59:59 2026...

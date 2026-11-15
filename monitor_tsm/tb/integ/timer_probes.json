@@ -1,0 +1,173 @@
+[
+  {
+    "id": 0,
+    "now": 39999,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "pending",
+    "name": "boundary"
+  },
+  {
+    "id": 1,
+    "now": 40000,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "ack_timeout",
+    "name": "boundary"
+  },
+  {
+    "id": 2,
+    "now": 40001,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "ack_timeout",
+    "name": "boundary"
+  },
+  {
+    "id": 3,
+    "now": 99999,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "ack_timeout",
+    "name": "boundary"
+  },
+  {
+    "id": 4,
+    "now": 100000,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "expiry_at_executor",
+    "name": "boundary"
+  },
+  {
+    "id": 5,
+    "now": 100001,
+    "tick": 0,
+    "ack": false,
+    "seq": 7,
+    "expected": "expiry_at_executor",
+    "name": "boundary"
+  },
+  {
+    "id": 6,
+    "now": 39999,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "committed",
+    "name": "boundary"
+  },
+  {
+    "id": 7,
+    "now": 40000,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "committed",
+    "name": "boundary"
+  },
+  {
+    "id": 8,
+    "now": 40001,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "committed",
+    "name": "boundary"
+  },
+  {
+    "id": 9,
+    "now": 99999,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "committed",
+    "name": "boundary"
+  },
+  {
+    "id": 10,
+    "now": 100000,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "expiry_at_executor",
+    "name": "boundary"
+  },
+  {
+    "id": 11,
+    "now": 100001,
+    "tick": 0,
+    "ack": true,
+    "seq": 7,
+    "expected": "expiry_at_executor",
+    "name": "boundary"
+  },
+  {
+    "id": 12,
+    "now": 39999,
+    "tick": 20000,
+    "ack": false,
+    "seq": 7,
+    "expected": "pending",
+    "name": "no_tick"
+  },
+  {
+    "id": 13,
+    "now": 40000,
+    "tick": 20000,
+    "ack": false,
+    "seq": 7,
+    "expected": "ack_timeout",
+    "name": "aligned_tick"
+  },
+  {
+    "id": 14,
+    "now": 39999,
+    "tick": 0,
+    "ack": true,
+    "seq": 99,
+    "expected": "pending",
+    "name": "wrong_ack_before_timeout"
+  },
+  {
+    "id": 15,
+    "now": 40000,
+    "tick": 0,
+    "ack": true,
+    "seq": 99,
+    "expected": "ack_timeout",
+    "name": "wrong_ack_at_timeout"
+  },
+  {
+    "id": 16,
+    "now": 39999,
+    "tick": 0,
+    "ack": true,
+    "seq": 8,
+    "expected": "pending",
+    "name": "early_ack_not_retained"
+  },
+  {
+    "id": 17,
+    "now": 40000,
+    "tick": 0,
+    "ack": true,
+    "seq": 8,
+    "expected": "pending",
+    "name": "early_ack_not_retained"
+  },
+  {
+    "id": 18,
+    "now": 40001,
+    "tick": 0,
+    "ack": true,
+    "seq": 8,
+    "expected": "pending",
+    "name": "early_ack_not_retained"
+  }
+]

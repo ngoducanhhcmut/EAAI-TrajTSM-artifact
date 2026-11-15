@@ -1,0 +1,6 @@
+check rc=0
+full2 rc=1
+worst8 rc=0
+control8 rc=0
+system8 rc=1
+DONE

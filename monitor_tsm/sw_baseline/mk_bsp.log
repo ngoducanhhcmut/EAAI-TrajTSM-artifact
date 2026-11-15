@@ -1,0 +1,500 @@
+ECHO is off.
+ECHO is off.
+Opening the hardware design, this may take few seconds.
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Vivado/Vitis/2023.2/data/embeddedsw) loading 1 seconds
+INFO: Populating the default qemu data for the domain "standalone_domain" from the install location C:/Vivado/Vitis/2023.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_S_AXI4_HIGHADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_CSUDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DMATYPE' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_CSUDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_IRQ_F2P_MODE' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_DIST_BASEADDR' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.REF_FREQMHZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.DEVICE_ID' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.IS_CACHE_COHERENT' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'CONFIG.C_ZDMA_CLK_FREQ_HZ' because this property is not valid in conjunction with other property setting on this object.
+INFO: [Common 17-14] Message 'Common 17-673' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Starting vitis.bat. This could take few seconds...ECHO is off.
+ECHO is off.
+WARNING: Default location for XILINX_HLS not found: 
+Building the BSP Library for domain  - standalone_domain on processor psu_cortexa53_0
+make --no-print-directory seq_libs
+
+'Finished building libraries sequentially.'
+
+make -j 10 --no-print-directory par_libs
+
+"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_10/src"
+
+"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_5/src"
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_10/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distri
+bute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_9/src"
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_1/src"
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
+h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop
+-distribute-patterns"
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-d
+istribute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_14/src"
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_14/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_5/src"
+
+"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_12/src"
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_14/src"
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_14/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/llfifo_v5_6/src"
+
+make -C psu_cortexa53_0/libsrc/llfifo_v5_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_13/src"
+
+"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_6/src"
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_2/src"
+
+make -C psu_cortexa53_0/libsrc/scugic_v5_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_9/src"
+
+"Running Make include in psu_cortexa53_0/libsrc/standalone_v9_0/src"
+
+"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_17/src"
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+ibute-patterns"
+
+make -C psu_cortexa53_0/libsrc/standalone_v9_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dist
+ribute-patterns"
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+e-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_10/src"
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_10/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+e-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_9/src"
+
+"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_1/src"
+
+"Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_5/src"
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-di
+stribute-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_14/src"
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dist
+ribute-patterns"
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_14/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_5/src"
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_14/src"
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_14/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_12/src"
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/llfifo_v5_6/src"
+
+make -C psu_cortexa53_0/libsrc/llfifo_v5_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+patterns"
+
+In file included from xclockps.h:52,
+                 from xclockps_mux.c:26:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+xaxipmon_g.c:43:9: warning: missing initializer for field 'IntId' of 'XAxiPmon_Config' [-Wmissing-field-initializers]
+   43 |         },
+      |         ^
+In file included from xaxipmon_g.c:17:
+xaxipmon.h:447:13: note: 'IntId' declared here
+  447 |         u32 IntId; /**< Interrupt ID on GIC **/
+      |             ^~~~~
+xaxipmon_g.c:62:9: warning: missing initializer for field 'IntId' of 'XAxiPmon_Config' [-Wmissing-field-initializers]
+   62 |         },
+      |         ^
+xaxipmon.h:447:13: note: 'IntId' declared here
+  447 |         u32 IntId; /**< Interrupt ID on GIC **/
+      |             ^~~~~
+xaxipmon_g.c:81:9: warning: missing initializer for field 'IntId' of 'XAxiPmon_Config' [-Wmissing-field-initializers]
+   81 |         },
+      |         ^
+xaxipmon.h:447:13: note: 'IntId' declared here
+  447 |         u32 IntId; /**< Interrupt ID on GIC **/
+      |             ^~~~~
+xaxipmon_g.c:100:9: warning: missing initializer for field 'IntId' of 'XAxiPmon_Config' [-Wmissing-field-initializers]
+  100 |         }
+      |         ^
+xaxipmon.h:447:13: note: 'IntId' declared here
+  447 |         u32 IntId; /**< Interrupt ID on GIC **/
+      |             ^~~~~
+"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_6/src"
+
+In file included from xclockps.h:52,
+                 from xclockps_fixedfactor.c:26:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+make -C psu_cortexa53_0/libsrc/resetps_v1_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+In file included from xresetps.h:52,
+                 from xresetps_g.c:32:
+xresetps_hw.h:41: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   41 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from xresetps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+In file included from xclockps.h:52,
+                 from xclockps_divider.c:27:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_13/src"
+
+In file included from xresetps.h:52,
+                 from xresetps.c:33:
+xresetps_hw.h:41: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   41 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from xresetps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+In file included from xclockps.h:52,
+                 from xclockps_gate.c:26:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+In file included from xresetps.h:52,
+                 from xresetps_sinit.c:31:
+xresetps_hw.h:41: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   41 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from xresetps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+"Running Make libs in psu_cortexa53_0/libsrc/scugic_v5_2/src"
+
+In file included from xclockps.h:52,
+                 from xclockps_pll.c:26:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+make -C psu_cortexa53_0/libsrc/scugic_v5_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/standalone_v9_0/src"
+
+make -C psu_cortexa53_0/libsrc/standalone_v9_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+In file included from xclockps.h:52,
+                 from xclockps_g.c:28:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+In file included from xclockps.h:52,
+                 from xclockps.c:32:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_9/src"
+
+In file included from xclockps.h:52,
+                 from xclockps_sinit.c:27:
+xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from ../../../include/xil_types.h:51,
+                 from ../../../include/xstatus.h:33,
+                 from xclockps.h:49:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_17/src"
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+atterns"
+
+xtime_l.c:49:9: note: '#pragma message: For the sleep routines, Global timer is being used'
+   49 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~
+In file included from ../../../include/xclockps.h:52,
+                 from xil_clocking.h:44,
+                 from xil_clocking.c:27:
+../../../include/xclockps_hw.h:35: warning: "XPAR_PSU_PSS_REF_CLK_FREQ_HZ" redefined
+   35 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ            33330000U
+      | 
+In file included from xil_types.h:51,
+                 from xil_printf.h:16,
+                 from xdebug.h:15,
+                 from xil_clocking.h:37:
+../../../include/xparameters.h:22: note: this is the location of the previous definition
+   22 | #define XPAR_PSU_PSS_REF_CLK_FREQ_HZ 33333333U
+      | 
+translation_table.S:137:2: warning: #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined" [-Wcpp]
+  137 | #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined"
+      |  ^~~~~~~
+'Finished building libraries parallelly.'
+
+make --no-print-directory archive
+
+aarch64-none-elf-ar -r  psu_cortexa53_0/lib/libxil.a psu_cortexa53_0/lib/_exit.o psu_cortexa53_0/lib/_open.o psu_cortexa53_0/li
+b/_sbrk.o psu_cortexa53_0/lib/abort.o psu_cortexa53_0/lib/asm_vectors.o psu_cortexa53_0/lib/boot.o psu_cortexa53_0/lib/close.o 
+psu_cortexa53_0/lib/cpputest_time.o psu_cortexa53_0/lib/errno.o psu_cortexa53_0/lib/fcntl.o psu_cortexa53_0/lib/fstat.o psu_cor
+texa53_0/lib/getentropy.o psu_cortexa53_0/lib/getpid.o psu_cortexa53_0/lib/inbyte.o psu_cortexa53_0/lib/initialise_monitor_hand
+les.o psu_cortexa53_0/lib/isatty.o psu_cortexa53_0/lib/kill.o psu_cortexa53_0/lib/lseek.o psu_cortexa53_0/lib/open.o psu_cortex
+a53_0/lib/outbyte.o psu_cortexa53_0/lib/print.o psu_cortexa53_0/lib/putnum.o psu_cortexa53_0/lib/read.o psu_cortexa53_0/lib/sbr
+k.o psu_cortexa53_0/lib/sleep.o psu_cortexa53_0/lib/time.o psu_cortexa53_0/lib/translation_table.o psu_cortexa53_0/lib/unlink.o
+ psu_cortexa53_0/lib/vectors.o psu_cortexa53_0/lib/write.o psu_cortexa53_0/lib/xaxipmon.o psu_cortexa53_0/lib/xaxipmon_g.o psu_
+cortexa53_0/lib/xaxipmon_selftest.o psu_cortexa53_0/lib/xaxipmon_sinit.o psu_cortexa53_0/lib/xclockps.o psu_cortexa53_0/lib/xcl
+ockps_divider.o psu_cortexa53_0/lib/xclockps_fixedfactor.o psu_cortexa53_0/lib/xclockps_g.o psu_cortexa53_0/lib/xclockps_gate.o
+ psu_cortexa53_0/lib/xclockps_mux.o psu_cortexa53_0/lib/xclockps_pll.o psu_cortexa53_0/lib/xclockps_sinit.o psu_cortexa53_0/lib
+/xcoresightpsdcc.o psu_cortexa53_0/lib/xcsudma.o psu_cortexa53_0/lib/xcsudma_g.o psu_cortexa53_0/lib/xcsudma_intr.o psu_cortexa
+53_0/lib/xcsudma_selftest.o psu_cortexa53_0/lib/xcsudma_sinit.o psu_cortexa53_0/lib/xddrcpsu.o psu_cortexa53_0/lib/xddrcpsu_sin
+it.o psu_cortexa53_0/lib/xgpiops.o psu_cortexa53_0/lib/xgpiops_g.o psu_cortexa53_0/lib/xgpiops_hw.o psu_cortexa53_0/lib/xgpiops
+_intr.o psu_cortexa53_0/lib/xgpiops_selftest.o psu_cortexa53_0/lib/xgpiops_sinit.o psu_cortexa53_0/lib/xil-crt0.o psu_cortexa53
+_0/lib/xil_assert.o psu_cortexa53_0/lib/xil_cache.o psu_cortexa53_0/lib/xil_clocking.o psu_cortexa53_0/lib/xil_exception.o psu_
+cortexa53_0/lib/xil_mem.o psu_cortexa53_0/lib/xil_mmu.o psu_cortexa53_0/lib/xil_printf.o psu_cortexa53_0/lib/xil_sleepcommon.o 
+psu_cortexa53_0/lib/xil_sleeptimer.o psu_cortexa53_0/lib/xil_smc.o psu_cortexa53_0/lib/xil_spinlock.o psu_cortexa53_0/lib/xil_t
+estcache.o psu_cortexa53_0/lib/xil_testio.o psu_cortexa53_0/lib/xil_testmem.o psu_cortexa53_0/lib/xil_util.o psu_cortexa53_0/li
+b/xinterrupt_wrap.o psu_cortexa53_0/lib/xipipsu.o psu_cortexa53_0/lib/xipipsu_buf.o psu_cortexa53_0/lib/xipipsu_g.o psu_cortexa
+53_0/lib/xipipsu_helper.o psu_cortexa53_0/lib/xipipsu_sinit.o psu_cortexa53_0/lib/xllfifo.o psu_cortexa53_0/lib/xllfifo_g.o psu
+_cortexa53_0/lib/xllfifo_sinit.o psu_cortexa53_0/lib/xplatform_info.o psu_cortexa53_0/lib/xpm_counter.o psu_cortexa53_0/lib/xpm
+_init.o psu_cortexa53_0/lib/xresetps.o psu_cortexa53_0/lib/xresetps_g.o psu_cortexa53_0/lib/xresetps_sinit.o psu_cortexa53_0/li
+b/xrtcpsu.o psu_cortexa53_0/lib/xrtcpsu_g.o psu_cortexa53_0/lib/xrtcpsu_intr.o psu_cortexa53_0/lib/xrtcpsu_selftest.o psu_corte
+xa53_0/lib/xrtcpsu_sinit.o psu_cortexa53_0/lib/xscugic.o psu_cortexa53_0/lib/xscugic_g.o psu_cortexa53_0/lib/xscugic_hw.o psu_c
+ortexa53_0/lib/xscugic_intr.o psu_cortexa53_0/lib/xscugic_selftest.o psu_cortexa53_0/lib/xscugic_sinit.o psu_cortexa53_0/lib/xs
+treamer.o psu_cortexa53_0/lib/xsysmonpsu.o psu_cortexa53_0/lib/xsysmonpsu_g.o psu_cortexa53_0/lib/xsysmonpsu_intr.o psu_cortexa
+53_0/lib/xsysmonpsu_selftest.o psu_cortexa53_0/lib/xsysmonpsu_sinit.o psu_cortexa53_0/lib/xtime_l.o psu_cortexa53_0/lib/xzdma.o
+ psu_cortexa53_0/lib/xzdma_g.o psu_cortexa53_0/lib/xzdma_intr.o psu_cortexa53_0/lib/xzdma_selftest.o psu_cortexa53_0/lib/xzdma_
+sinit.o
+
+aarch64-none-elf-ar: creating psu_cortexa53_0/lib/libxil.a
+'Finished building libraries'
+
+Starting vitis.bat. This could take few seconds...ECHO is off.
+ECHO is off.
+WARNING: Default location for XILINX_HLS not found: 
+###BSP_DONE

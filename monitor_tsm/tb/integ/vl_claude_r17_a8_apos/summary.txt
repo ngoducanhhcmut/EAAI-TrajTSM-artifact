@@ -1,0 +1,12 @@
+check rc=0
+control8 rc=0
+reg300 rc=0
+worst2 rc=0
+apos rc=1
+worst_apos rc=1
+DONE_REG
+== rerun Mon Nov  2 23:32:39 +07 2026
+worst2b rc=0
+apos rc=0
+worst_apos rc=0
+DONE_REG2

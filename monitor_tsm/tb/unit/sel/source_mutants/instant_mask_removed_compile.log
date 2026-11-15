@@ -1,0 +1,3 @@
+COMMAND C:\iverilog\bin\iverilog.exe -g2012 -s tb_m_tsmx_sel -I C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel -o C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\source_mutants\instant_mask_removed.vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\source_mutants\instant_mask_removed.sv C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\sel\tb_m_tsmx_sel.sv
+
+EXIT 0

@@ -1,0 +1,22 @@
+{
+  "total": 3439,
+  "rows": 59519,
+  "sources": {
+    "golden": 128,
+    "legacy": 128,
+    "directed": 144,
+    "boundary": 39,
+    "random": 2200,
+    "random_apos": 800
+  },
+  "reasons": {
+    "ok": 1385,
+    "range": 194,
+    "horizon": 1860
+  },
+  "seed": 6006,
+  "sha256": {
+    "b4.ports.jsonl": "024dd846ded791a1413214d441899e74d856d252513a652d02665a9cd5cc27ab",
+    "edges.ports.jsonl": "ddd288a57d8da8330990ccdcaf4579412fb3c93b0326c4f19856048eb6458ef6"
+  }
+}

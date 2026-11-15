@@ -1,0 +1,7 @@
+COMMAND vvp C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\sim.vvp +MUTANT=8
+EXIT 1
+BOOT complete
+INJECT 8 bounded_completion
+ASSERT_FAIL 8 bounded_completion spec5.3 cycle=41 got=00 expected=00
+FATAL: C:\Users\TransformerDA\Downloads\vla_new_arch\journalQ1\tsmx_hw\tb\unit\cert\tb_m_tsmx_cert.sv:143: R-025 assertion failed
+       Time: 449001  Scope: tb_m_tsmx_cert.tick

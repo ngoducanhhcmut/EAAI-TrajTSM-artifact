@@ -1,0 +1,1 @@
+COMMAND ["C:\\iverilog\\bin\\vvp.EXE", "-i", "C:\\Users\\TransformerDA\\Downloads\\vla_new_arch\\journalQ1\\tsmx_hw\\fault\\fault.vvp", "+FILE=job0.mem"]

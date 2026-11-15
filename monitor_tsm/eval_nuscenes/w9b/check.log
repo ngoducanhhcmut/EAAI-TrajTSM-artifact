@@ -1,0 +1,1 @@
+{'cosim_0103': {'jobs': 207, 'accepted': 5, 'committed': 5, 'all_bits_regenerated_exactly': True}, 'replay_rtl_subset': {'jobs': 2513, 'accepted': 142, 'committed': 142, 'all_bits_regenerated_exactly': True}, 'analytic_quadratic_and_b1_b2': True}

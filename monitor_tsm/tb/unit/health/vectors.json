@@ -1,0 +1,16 @@
+{
+  "total": 2586,
+  "sources": {
+    "golden": 128,
+    "legacy": 128,
+    "directed": 68,
+    "boundary": 60,
+    "random": 2200,
+    "budget": 2
+  },
+  "sha256": {
+    "b13.ports.jsonl": "33c2c463d2290c40949840acdd0ca4e76c59dedf653cf78a3d4c15703b3aba12",
+    "edges.ports.jsonl": "ae64b588bdafcb44725544132ec42588d522b1a362513fd7c36becb8977a9a8c"
+  },
+  "seed": 1113
+}

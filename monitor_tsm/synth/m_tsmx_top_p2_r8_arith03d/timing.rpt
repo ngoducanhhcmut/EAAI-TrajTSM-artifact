@@ -1,0 +1,1442 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date              : Sat Oct 31 06:37:35 2026
+| Host              : LAPTOP-D1JJHVR7 running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 5 -file C:/Users/TransformerDA/Downloads/vla_new_arch/journalQ1/tsmx_hw/synth/m_tsmx_top_p2/timing.rpt
+| Design            : m_tsmx_top
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (191)
+6. checking no_output_delay (313)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (191)
+--------------------------------
+ There are 191 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (313)
+---------------------------------
+ There are 313 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.666        0.000                      0               656214        0.018        0.000                      0               656214        2.135        0.000                       0                207449  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 2.667}        5.333           187.512         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                 0.666        0.000                      0               488597        0.018        0.000                      0               488597        2.135        0.000                       0                207449  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  clk                clk                      4.331        0.000                      0               167617        0.438        0.000                      0               167617  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.666ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.018ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.135ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.666ns  (required time - arrival time)
+  Source:                 u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[491]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.648ns  (logic 1.583ns (34.058%)  route 3.065ns (65.942%))
+  Logic Levels:           25  (CARRY8=13 LUT2=3 LUT3=1 LUT4=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/Q
+                         net (fo=37, unplaced)        0.217     0.324    u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.474 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1/O
+                         net (fo=4, unplaced)         0.198     0.672    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.709 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1/O
+                         net (fo=1, unplaced)         0.032     0.741    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.911 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.916    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.938 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.943    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.059 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1/O[5]
+                         net (fo=6, unplaced)         0.163     1.222    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.321 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1/O
+                         net (fo=1, unplaced)         0.245     1.566    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.683 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.688    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.710 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.715    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.737 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_27__1/CO[7]
+                         net (fo=116, unplaced)       0.204     1.941    u_tsmx_engine/u_tsmx_math/u_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.979 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1/O
+                         net (fo=82, unplaced)        0.267     2.246    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.284 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1/O
+                         net (fo=1, unplaced)         0.233     2.517    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.657 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.662    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.684 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.689    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.711 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1/CO[7]
+                         net (fo=46, unplaced)        0.183     2.894    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.932 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1/O
+                         net (fo=80, unplaced)        0.266     3.198    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.236 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1/O
+                         net (fo=3, unplaced)         0.192     3.428    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.466 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1/O
+                         net (fo=1, unplaced)         0.117     3.583    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.680 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.685    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.707 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.712    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.734 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.739    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.761 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_6__1/CO[7]
+                         net (fo=46, unplaced)        0.183     3.944    u_tsmx_engine/u_tsmx_math/u_arith/f_lt640_return0
+                         LUT4 (Prop_LUT4_I3_O)        0.070     4.014 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1/O
+                         net (fo=4, unplaced)         0.198     4.212    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1_n_0
+                         LUT6 (Prop_LUT6_I0_O)        0.038     4.250 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_5__1/O
+                         net (fo=1, unplaced)         0.137     4.387    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_5__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.053     4.440 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_3__1/O
+                         net (fo=1, unplaced)         0.137     4.577    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_3__1_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.053     4.630 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_1__2/O
+                         net (fo=1, unplaced)         0.048     4.678    u_tsmx_engine/u_tsmx_math/u_arith/w_resp_nxt[491]
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[491]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[491]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[491]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.678    
+  -------------------------------------------------------------------
+                         slack                                  0.666    
+
+Slack (MET) :             0.666ns  (required time - arrival time)
+  Source:                 u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[496]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.648ns  (logic 1.583ns (34.058%)  route 3.065ns (65.942%))
+  Logic Levels:           25  (CARRY8=13 LUT2=3 LUT3=1 LUT4=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/Q
+                         net (fo=37, unplaced)        0.217     0.324    u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.474 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1/O
+                         net (fo=4, unplaced)         0.198     0.672    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.709 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1/O
+                         net (fo=1, unplaced)         0.032     0.741    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.911 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.916    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.938 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.943    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.059 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1/O[5]
+                         net (fo=6, unplaced)         0.163     1.222    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.321 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1/O
+                         net (fo=1, unplaced)         0.245     1.566    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.683 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.688    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.710 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.715    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.737 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_27__1/CO[7]
+                         net (fo=116, unplaced)       0.204     1.941    u_tsmx_engine/u_tsmx_math/u_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.979 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1/O
+                         net (fo=82, unplaced)        0.267     2.246    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.284 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1/O
+                         net (fo=1, unplaced)         0.233     2.517    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.657 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.662    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.684 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.689    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.711 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1/CO[7]
+                         net (fo=46, unplaced)        0.183     2.894    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.932 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1/O
+                         net (fo=80, unplaced)        0.266     3.198    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.236 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1/O
+                         net (fo=3, unplaced)         0.192     3.428    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.466 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1/O
+                         net (fo=1, unplaced)         0.117     3.583    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.680 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.685    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.707 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.712    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.734 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.739    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.761 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_6__1/CO[7]
+                         net (fo=46, unplaced)        0.183     3.944    u_tsmx_engine/u_tsmx_math/u_arith/f_lt640_return0
+                         LUT4 (Prop_LUT4_I3_O)        0.070     4.014 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1/O
+                         net (fo=4, unplaced)         0.198     4.212    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.038     4.250 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[496]_i_5__1/O
+                         net (fo=1, unplaced)         0.137     4.387    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[496]_i_5__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.053     4.440 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[496]_i_3__1/O
+                         net (fo=1, unplaced)         0.137     4.577    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[496]_i_3__1_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.053     4.630 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[496]_i_1__2/O
+                         net (fo=1, unplaced)         0.048     4.678    u_tsmx_engine/u_tsmx_math/u_arith/w_resp_nxt[496]
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[496]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[496]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[496]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.678    
+  -------------------------------------------------------------------
+                         slack                                  0.666    
+
+Slack (MET) :             0.666ns  (required time - arrival time)
+  Source:                 u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[501]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.648ns  (logic 1.583ns (34.058%)  route 3.065ns (65.942%))
+  Logic Levels:           25  (CARRY8=13 LUT2=3 LUT3=1 LUT4=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/Q
+                         net (fo=37, unplaced)        0.217     0.324    u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.474 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1/O
+                         net (fo=4, unplaced)         0.198     0.672    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.709 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1/O
+                         net (fo=1, unplaced)         0.032     0.741    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.911 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.916    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.938 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.943    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.059 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1/O[5]
+                         net (fo=6, unplaced)         0.163     1.222    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.321 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1/O
+                         net (fo=1, unplaced)         0.245     1.566    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.683 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.688    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.710 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.715    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.737 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_27__1/CO[7]
+                         net (fo=116, unplaced)       0.204     1.941    u_tsmx_engine/u_tsmx_math/u_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.979 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1/O
+                         net (fo=82, unplaced)        0.267     2.246    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.284 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1/O
+                         net (fo=1, unplaced)         0.233     2.517    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.657 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.662    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.684 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.689    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.711 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1/CO[7]
+                         net (fo=46, unplaced)        0.183     2.894    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.932 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1/O
+                         net (fo=80, unplaced)        0.266     3.198    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.236 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1/O
+                         net (fo=3, unplaced)         0.192     3.428    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.466 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1/O
+                         net (fo=1, unplaced)         0.117     3.583    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.680 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.685    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.707 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.712    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.734 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.739    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.761 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_6__1/CO[7]
+                         net (fo=46, unplaced)        0.183     3.944    u_tsmx_engine/u_tsmx_math/u_arith/f_lt640_return0
+                         LUT4 (Prop_LUT4_I3_O)        0.070     4.014 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1/O
+                         net (fo=4, unplaced)         0.198     4.212    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     4.250 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[501]_i_5__1/O
+                         net (fo=1, unplaced)         0.137     4.387    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[501]_i_5__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.053     4.440 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[501]_i_3__1/O
+                         net (fo=1, unplaced)         0.137     4.577    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[501]_i_3__1_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.053     4.630 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[501]_i_1__2/O
+                         net (fo=1, unplaced)         0.048     4.678    u_tsmx_engine/u_tsmx_math/u_arith/w_resp_nxt[501]
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[501]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[501]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[501]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.678    
+  -------------------------------------------------------------------
+                         slack                                  0.666    
+
+Slack (MET) :             0.666ns  (required time - arrival time)
+  Source:                 u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[502]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.648ns  (logic 1.583ns (34.058%)  route 3.065ns (65.942%))
+  Logic Levels:           25  (CARRY8=13 LUT2=3 LUT3=1 LUT4=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg[1][0]/Q
+                         net (fo=37, unplaced)        0.217     0.324    u_tsmx_engine/u_tsmx_math/u_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.474 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1/O
+                         net (fo=4, unplaced)         0.198     0.672    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[486]_i_27__1_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.709 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1/O
+                         net (fo=1, unplaced)         0.032     0.741    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[487]_i_28__1_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.911 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.916    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[487]_i_23__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.938 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1/CO[7]
+                         net (fo=1, unplaced)         0.005     0.943    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[495]_i_24__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.059 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1/O[5]
+                         net (fo=6, unplaced)         0.163     1.222    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[503]_i_24__1_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.321 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1/O
+                         net (fo=1, unplaced)         0.245     1.566    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_155__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.683 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.688    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_106__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.710 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.715    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_63__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.737 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_27__1/CO[7]
+                         net (fo=116, unplaced)       0.204     1.941    u_tsmx_engine/u_tsmx_math/u_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.979 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1/O
+                         net (fo=82, unplaced)        0.267     2.246    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[497]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.284 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1/O
+                         net (fo=1, unplaced)         0.233     2.517    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_144__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.657 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.662    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_89__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.684 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.689    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_46__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.711 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1/CO[7]
+                         net (fo=46, unplaced)        0.183     2.894    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_26__1_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.932 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1/O
+                         net (fo=80, unplaced)        0.266     3.198    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[500]_i_8__1_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.236 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1/O
+                         net (fo=3, unplaced)         0.192     3.428    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[491]_i_6__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.466 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1/O
+                         net (fo=1, unplaced)         0.117     3.583    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[542]_i_117__1_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.680 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.685    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_72__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.707 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.712    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_29__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.734 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1/CO[7]
+                         net (fo=1, unplaced)         0.005     3.739    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_9__1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.761 f  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[542]_i_6__1/CO[7]
+                         net (fo=46, unplaced)        0.183     3.944    u_tsmx_engine/u_tsmx_math/u_arith/f_lt640_return0
+                         LUT4 (Prop_LUT4_I3_O)        0.070     4.014 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1/O
+                         net (fo=4, unplaced)         0.198     4.212    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_7__1_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     4.250 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_5__1/O
+                         net (fo=1, unplaced)         0.137     4.387    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_5__1_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.053     4.440 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_3__1/O
+                         net (fo=1, unplaced)         0.137     4.577    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_3__1_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.053     4.630 r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp[502]_i_1__2/O
+                         net (fo=1, unplaced)         0.048     4.678    u_tsmx_engine/u_tsmx_math/u_arith/w_resp_nxt[502]
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[502]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    u_tsmx_engine/u_tsmx_math/u_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[502]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_engine/u_tsmx_math/u_arith/reg_resp_reg[502]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.678    
+  -------------------------------------------------------------------
+                         slack                                  0.666    
+
+Slack (MET) :             0.667ns  (required time - arrival time)
+  Source:                 u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_q_reg[1][0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[491]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        4.647ns  (logic 1.583ns (34.065%)  route 3.064ns (65.935%))
+  Logic Levels:           25  (CARRY8=13 LUT2=3 LUT3=1 LUT4=1 LUT6=7)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_q_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_q_reg[1][0]/Q
+                         net (fo=36, unplaced)        0.216     0.323    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_q_reg_n_0_[1][0]
+                         LUT6 (Prop_LUT6_I0_O)        0.150     0.473 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[486]_i_27__0/O
+                         net (fo=4, unplaced)         0.198     0.671    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[486]_i_27__0_n_0
+                         LUT2 (Prop_LUT2_I1_O)        0.037     0.708 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[487]_i_28__0/O
+                         net (fo=1, unplaced)         0.032     0.740    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[487]_i_28__0_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_CO[7])
+                                                      0.170     0.910 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[487]_i_23__0/CO[7]
+                         net (fo=1, unplaced)         0.005     0.915    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[487]_i_23__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     0.937 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[495]_i_24__0/CO[7]
+                         net (fo=1, unplaced)         0.005     0.942    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[495]_i_24__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.058 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[503]_i_24__0/O[5]
+                         net (fo=6, unplaced)         0.163     1.221    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[503]_i_24__0_n_10
+                         LUT3 (Prop_LUT3_I1_O)        0.099     1.320 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_155__0/O
+                         net (fo=1, unplaced)         0.245     1.565    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_155__0_n_0
+                         CARRY8 (Prop_CARRY8_DI[2]_CO[7])
+                                                      0.117     1.682 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_106__0/CO[7]
+                         net (fo=1, unplaced)         0.005     1.687    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_106__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.709 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_63__0/CO[7]
+                         net (fo=1, unplaced)         0.005     1.714    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_63__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.736 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_27__0/CO[7]
+                         net (fo=116, unplaced)       0.204     1.940    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/f_lt64_return0
+                         LUT2 (Prop_LUT2_I1_O)        0.038     1.978 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[497]_i_8__0/O
+                         net (fo=82, unplaced)        0.267     2.245    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[497]_i_8__0_n_0
+                         LUT6 (Prop_LUT6_I3_O)        0.038     2.283 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_144__0/O
+                         net (fo=1, unplaced)         0.233     2.516    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_144__0_n_0
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     2.656 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_89__0/CO[7]
+                         net (fo=1, unplaced)         0.005     2.661    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_89__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.683 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_46__0/CO[7]
+                         net (fo=1, unplaced)         0.005     2.688    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_46__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     2.710 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_26__0/CO[7]
+                         net (fo=46, unplaced)        0.183     2.893    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_26__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.038     2.931 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[500]_i_8__0/O
+                         net (fo=80, unplaced)        0.266     3.197    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[500]_i_8__0_n_0
+                         LUT6 (Prop_LUT6_I1_O)        0.038     3.235 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_6__0/O
+                         net (fo=3, unplaced)         0.192     3.427    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_6__0_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     3.465 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_117__0/O
+                         net (fo=1, unplaced)         0.117     3.582    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[542]_i_117__0_n_0
+                         CARRY8 (Prop_CARRY8_DI[5]_CO[7])
+                                                      0.097     3.679 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_72__0/CO[7]
+                         net (fo=1, unplaced)         0.005     3.684    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_72__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.706 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_29__0/CO[7]
+                         net (fo=1, unplaced)         0.005     3.711    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_29__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.733 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_9__0/CO[7]
+                         net (fo=1, unplaced)         0.005     3.738    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_9__0_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     3.760 f  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[542]_i_6__0/CO[7]
+                         net (fo=46, unplaced)        0.183     3.943    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/f_lt640_return0
+                         LUT4 (Prop_LUT4_I3_O)        0.070     4.013 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[502]_i_7__0/O
+                         net (fo=4, unplaced)         0.198     4.211    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[502]_i_7__0_n_0
+                         LUT6 (Prop_LUT6_I0_O)        0.038     4.249 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_5__0/O
+                         net (fo=1, unplaced)         0.137     4.386    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_5__0_n_0
+                         LUT6 (Prop_LUT6_I5_O)        0.053     4.439 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_3__0/O
+                         net (fo=1, unplaced)         0.137     4.576    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_3__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.053     4.629 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp[491]_i_1__1/O
+                         net (fo=1, unplaced)         0.048     4.677    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/w_resp_nxt[491]
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[491]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[491]/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Setup_FDCE_C_D)        0.025     5.344    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_mrmgen/u_tsmx_arith/reg_resp_reg[491]
+  -------------------------------------------------------------------
+                         required time                          5.344    
+                         arrival time                          -4.677    
+  -------------------------------------------------------------------
+                         slack                                  0.667    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.018ns  (arrival time - required time)
+  Source:                 u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/SP/ADR2
+                            (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.106ns  (logic 0.038ns (35.849%)  route 0.068ns (64.151%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[2]/Q
+                         net (fo=13, unplaced)        0.068     0.119    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/A2
+                         RAMS32                                       r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/SP/ADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.039     0.039    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/WCLK
+                         RAMS32                                       r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/SP/CLK
+                         clock pessimism              0.000     0.039    
+                         RAMS32 (Hold_RAMS32_CLK_ADR2)
+                                                      0.062     0.101    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_113_113/SP
+  -------------------------------------------------------------------
+                         required time                         -0.101    
+                         arrival time                           0.119    
+  -------------------------------------------------------------------
+                         slack                                  0.018    
+
+Slack (MET) :             0.028ns  (arrival time - required time)
+  Source:                 u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/SP/ADR0
+                            (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.113ns  (logic 0.038ns (33.628%)  route 0.075ns (66.372%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_actor_reg[0]/Q
+                         net (fo=14, unplaced)        0.075     0.126    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/A0
+                         RAMS32                                       r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/SP/ADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.039     0.039    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/WCLK
+                         RAMS32                                       r  u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/SP/CLK
+                         clock pessimism              0.000     0.039    
+                         RAMS32 (Hold_RAMS32_CLK_ADR0)
+                                                      0.059     0.098    u_tsmx_engine/u_tsmx_sweep_0/gen_geom[0].u_tsmx_geom/reg_motion_reg_0_31_127_127/SP
+  -------------------------------------------------------------------
+                         required time                         -0.098    
+                         arrival time                           0.126    
+  -------------------------------------------------------------------
+                         slack                                  0.028    
+
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/SP/ADR2
+                            (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.129ns  (logic 0.038ns (29.457%)  route 0.091ns (70.543%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/Q
+                         net (fo=104, unplaced)       0.091     0.142    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/A2
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/SP/ADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.039     0.039    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/WCLK
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/SP/CLK
+                         clock pessimism              0.000     0.039    
+                         RAMS32 (Hold_RAMS32_CLK_ADR2)
+                                                      0.062     0.101    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_10_10/SP
+  -------------------------------------------------------------------
+                         required time                         -0.101    
+                         arrival time                           0.142    
+  -------------------------------------------------------------------
+                         slack                                  0.041    
+
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/SP/ADR2
+                            (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.129ns  (logic 0.038ns (29.457%)  route 0.091ns (70.543%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/Q
+                         net (fo=104, unplaced)       0.091     0.142    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/A2
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/SP/ADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.039     0.039    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/WCLK
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/SP/CLK
+                         clock pessimism              0.000     0.039    
+                         RAMS32 (Hold_RAMS32_CLK_ADR2)
+                                                      0.062     0.101    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_11_11/SP
+  -------------------------------------------------------------------
+                         required time                         -0.101    
+                         arrival time                           0.142    
+  -------------------------------------------------------------------
+                         slack                                  0.041    
+
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/SP/ADR2
+                            (rising edge-triggered cell RAMS32 clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.129ns  (logic 0.038ns (29.457%)  route 0.091ns (70.543%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/i_clk_core
+                         FDCE                                         r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_actor_reg[2]_rep/Q
+                         net (fo=104, unplaced)       0.091     0.142    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/A2
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/SP/ADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.039     0.039    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/WCLK
+                         RAMS32                                       r  u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/SP/CLK
+                         clock pessimism              0.000     0.039    
+                         RAMS32 (Hold_RAMS32_CLK_ADR2)
+                                                      0.062     0.101    u_tsmx_engine/u_health/u_tsmx_health_bist/u_tsmx_geom/reg_motion_reg_0_31_128_128/SP
+  -------------------------------------------------------------------
+                         required time                         -0.101    
+                         arrival time                           0.142    
+  -------------------------------------------------------------------
+                         slack                                  0.041    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 2.667 }
+Period(ns):         5.333
+Sources:            { i_clk_core }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     SRLC32E/CLK  n/a            1.064         5.333       4.269                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[130]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Min Period        n/a     SRLC32E/CLK  n/a            1.064         5.333       4.269                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[131]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Min Period        n/a     SRLC32E/CLK  n/a            1.064         5.333       4.269                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[154]_srl12_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_74/CLK
+Min Period        n/a     SRLC32E/CLK  n/a            1.064         5.333       4.269                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[155]_srl12_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_74/CLK
+Min Period        n/a     SRLC32E/CLK  n/a            1.064         5.333       4.269                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[66]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_30/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.532         2.666       2.134                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[130]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[130]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.532         2.666       2.134                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[131]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[131]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.532         2.666       2.134                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[154]_srl12_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_74/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[130]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+High Pulse Width  Fast    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[130]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[131]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+High Pulse Width  Fast    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[131]_srl32_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_62/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.532         2.667       2.135                u_tsmx_engine/u_b1/u_tsmx_arith/reg_dnum_reg[154]_srl12_u_tsmx_engine_u_b1_u_tsmx_arith_reg_dnum_reg_c_74/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.331ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.438ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.331ns  (required time - arrival time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        0.892ns  (logic 0.115ns (12.892%)  route 0.777ns (87.108%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.337     0.444    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.038     0.482 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.440     0.922    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Recov_FDCE_C_CLR)     -0.066     5.253    reg_macc_reg[100]_i_19
+  -------------------------------------------------------------------
+                         required time                          5.253    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                  4.331    
+
+Slack (MET) :             4.331ns  (required time - arrival time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__0/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        0.892ns  (logic 0.115ns (12.892%)  route 0.777ns (87.108%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.337     0.444    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.038     0.482 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.440     0.922    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__0/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__0/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Recov_FDCE_C_CLR)     -0.066     5.253    reg_macc_reg[100]_i_19__0
+  -------------------------------------------------------------------
+                         required time                          5.253    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                  4.331    
+
+Slack (MET) :             4.331ns  (required time - arrival time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__1/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        0.892ns  (logic 0.115ns (12.892%)  route 0.777ns (87.108%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.337     0.444    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.038     0.482 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.440     0.922    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__1/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__1/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Recov_FDCE_C_CLR)     -0.066     5.253    reg_macc_reg[100]_i_19__1
+  -------------------------------------------------------------------
+                         required time                          5.253    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                  4.331    
+
+Slack (MET) :             4.331ns  (required time - arrival time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__2/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        0.892ns  (logic 0.115ns (12.892%)  route 0.777ns (87.108%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.337     0.444    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.038     0.482 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.440     0.922    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__2/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__2/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Recov_FDCE_C_CLR)     -0.066     5.253    reg_macc_reg[100]_i_19__2
+  -------------------------------------------------------------------
+                         required time                          5.253    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                  4.331    
+
+Slack (MET) :             4.331ns  (required time - arrival time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__3/CLR
+                            (recovery check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.333ns  (clk rise@5.333ns - clk rise@0.000ns)
+  Data Path Delay:        0.892ns  (logic 0.115ns (12.892%)  route 0.777ns (87.108%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 5.354 - 5.333 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.030     0.030    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.077     0.107 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.337     0.444    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.038     0.482 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.440     0.922    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__3/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.333     5.333 r  
+                                                      0.000     5.333 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.021     5.354    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__3/C
+                         clock pessimism              0.000     5.354    
+                         clock uncertainty           -0.035     5.319    
+                         FDCE (Recov_FDCE_C_CLR)     -0.066     5.253    reg_macc_reg[100]_i_19__3
+  -------------------------------------------------------------------
+                         required time                          5.253    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                  4.331    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.438ns  (arrival time - required time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.052ns (12.264%)  route 0.372ns (87.736%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.168     0.219    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.014     0.233 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.204     0.437    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.019     0.019    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Remov_FDCE_C_CLR)     -0.020    -0.001    reg_macc_reg[100]_i_19
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.437    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+Slack (MET) :             0.438ns  (arrival time - required time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__0/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.052ns (12.264%)  route 0.372ns (87.736%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.168     0.219    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.014     0.233 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.204     0.437    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__0/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.019     0.019    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__0/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Remov_FDCE_C_CLR)     -0.020    -0.001    reg_macc_reg[100]_i_19__0
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.437    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+Slack (MET) :             0.438ns  (arrival time - required time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__1/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.052ns (12.264%)  route 0.372ns (87.736%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.168     0.219    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.014     0.233 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.204     0.437    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__1/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.019     0.019    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__1/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Remov_FDCE_C_CLR)     -0.020    -0.001    reg_macc_reg[100]_i_19__1
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.437    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+Slack (MET) :             0.438ns  (arrival time - required time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__2/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.052ns (12.264%)  route 0.372ns (87.736%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.168     0.219    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.014     0.233 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.204     0.437    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__2/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.019     0.019    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__2/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Remov_FDCE_C_CLR)     -0.020    -0.001    reg_macc_reg[100]_i_19__2
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.437    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+Slack (MET) :             0.438ns  (arrival time - required time)
+  Source:                 u_tsmx_rst/reg_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Destination:            reg_macc_reg[100]_i_19__3/CLR
+                            (removal check against rising-edge clock clk  {rise@0.000ns fall@2.667ns period=5.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.052ns (12.264%)  route 0.372ns (87.736%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.013     0.013    u_tsmx_rst/i_clk_core
+                         FDCE                                         r  u_tsmx_rst/reg_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_FDCE_C_Q)         0.038     0.051 r  u_tsmx_rst/reg_release_reg[1]/Q
+                         net (fo=15713, unplaced)     0.168     0.219    u_tsmx_rst/Q[0]
+                         LUT1 (Prop_LUT1_I0_O)        0.014     0.233 f  u_tsmx_rst/reg_fsm_ctrl_current_state[1]_i_3/O
+                         net (fo=167617, unplaced)    0.204     0.437    u_tsmx_rst_n_0
+                         FDCE                                         f  reg_macc_reg[100]_i_19__3/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  i_clk_core (IN)
+                         net (fo=208491, unset)       0.019     0.019    i_clk_core
+                         FDCE                                         r  reg_macc_reg[100]_i_19__3/C
+                         clock pessimism              0.000     0.019    
+                         FDCE (Remov_FDCE_C_CLR)     -0.020    -0.001    reg_macc_reg[100]_i_19__3
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.437    
+  -------------------------------------------------------------------
+                         slack                                  0.438    
+
+
+
+
+

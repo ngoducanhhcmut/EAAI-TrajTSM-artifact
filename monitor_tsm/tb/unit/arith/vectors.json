@@ -1,0 +1,36 @@
+{
+  "total": 69404,
+  "sources": {
+    "boundary": 1473,
+    "random": 19800,
+    "fault_boundary": 248,
+    "padding_fault": 9,
+    "rational_boundary": 128,
+    "opcode_fault": 1,
+    "fixture_helper": 47745
+  },
+  "ops": {
+    "0": 20776,
+    "1": 14064,
+    "3": 4428,
+    "5": 6101,
+    "8": 2369,
+    "2": 3388,
+    "4": 2243,
+    "6": 9550,
+    "7": 6484,
+    "255": 1
+  },
+  "fixtures": {
+    "b2": 146,
+    "b3": 162,
+    "b4": 128
+  },
+  "fixture_sha256": {
+    "b2.ports.jsonl": "34cfc5df1339ea54891b3418789176e6376f06b27976b122072ee7fe90d95429",
+    "b3.ports.jsonl": "e0d074b2533c36a3de9483e83718312cd54fa7d4ce321a08c46cb0583de20971",
+    "b4.ports.jsonl": "024dd846ded791a1413214d441899e74d856d252513a652d02665a9cd5cc27ab",
+    "edges.ports.jsonl": "ddd288a57d8da8330990ccdcaf4579412fb3c93b0326c4f19856048eb6458ef6"
+  },
+  "seed": 1381258061
+}

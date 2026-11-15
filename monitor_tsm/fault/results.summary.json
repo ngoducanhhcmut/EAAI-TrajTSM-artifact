@@ -1,0 +1,129 @@
+{
+  "overall": {
+    "attempts": 3,
+    "counts": {
+      "MASKED": 3
+    },
+    "n": 3,
+    "unsafe_rate": 0.0,
+    "cp95": [
+      0.0,
+      0.7075982261787133
+    ],
+    "dc": null
+  },
+  "units": {
+    "arith": {
+      "attempts": 1,
+      "counts": {
+        "MASKED": 1
+      },
+      "n": 1,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.9750000000000001
+      ],
+      "dc": null
+    },
+    "cert": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "codec": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "engine": {
+      "attempts": 1,
+      "counts": {
+        "MASKED": 1
+      },
+      "n": 1,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.9750000000000001
+      ],
+      "dc": null
+    },
+    "geom": {
+      "attempts": 1,
+      "counts": {
+        "MASKED": 1
+      },
+      "n": 1,
+      "unsafe_rate": 0.0,
+      "cp95": [
+        0.0,
+        0.9750000000000001
+      ],
+      "dc": null
+    },
+    "geom_su": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "health": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "ingress": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "mrmgen": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "selection": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "supervisor": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    },
+    "sweep": {
+      "attempts": 0,
+      "counts": {},
+      "n": 0,
+      "unsafe_rate": null,
+      "cp95": null,
+      "dc": null
+    }
+  },
+  "unsafe": []
+}

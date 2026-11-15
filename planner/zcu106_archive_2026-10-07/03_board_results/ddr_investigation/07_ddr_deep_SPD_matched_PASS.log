@@ -1,0 +1,32 @@
+# 07/10/2026 — board_test_ddr_deep.tcl voi psu_init_zcu106_ram_x16_8gb.tcl (khop SPD): 0/5376 sai, khong trung lap => DDR TOT.
+# ----- NGUYEN VAN (khong chinh sua) -----
+psu_init dung: C:/Users/TransformerDA/Downloads/vla_new_arch/deliverables/zcu106/psu_init_zcu106_ram_x16_8gb.tcl
+DDRC STAT=0x00000001 (che do 1)  PHY PGSR0=0x80004FFF  loi training: khong
+=== TRUNG LAP DIA CHI ===
+Khong trung lap: 28 dia chi luy thua 2 tu 0x10 toi 0x4000_0000 doc dung
+=== DU LIEU (256 word / vung) ===
+vung 0x00100000 mau addr:   0/256 sai
+vung 0x00100000 mau inv :   0/256 sai
+vung 0x00100000 mau walk:   0/256 sai
+vung 0x01000000 mau addr:   0/256 sai
+vung 0x01000000 mau inv :   0/256 sai
+vung 0x01000000 mau walk:   0/256 sai
+vung 0x10000000 mau addr:   0/256 sai
+vung 0x10000000 mau inv :   0/256 sai
+vung 0x10000000 mau walk:   0/256 sai
+vung 0x40000000 mau addr:   0/256 sai
+vung 0x40000000 mau inv :   0/256 sai
+vung 0x40000000 mau walk:   0/256 sai
+vung 0x60000000 mau addr:   0/256 sai
+vung 0x60000000 mau inv :   0/256 sai
+vung 0x60000000 mau walk:   0/256 sai
+vung 0x70300000 mau addr:   0/256 sai
+vung 0x70300000 mau inv :   0/256 sai
+vung 0x70300000 mau walk:   0/256 sai
+vung 0x7E000000 mau addr:   0/256 sai
+vung 0x7E000000 mau inv :   0/256 sai
+vung 0x7E000000 mau walk:   0/256 sai
+Tong: 0/5376 word sai
+Loi theo lan byte (trong word 32 bit) [0..3]: 0 0 0 0
+Loi theo bit [0..31]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+==== DDR: DAT ====
